@@ -1,8 +1,7 @@
 <h1>Python API Reference</h1>
 
 !!! important
-		This document provides the list of the CyberRT APIs for Python. For the source please switch to the 
-    [CyberRT for Python](https://github.com/ApolloAuto/apollo/tree/master/cyber/python).
+		This document provides the list of the CyberRT APIs for Python. For the source please switch to the [CyberRT for Python](https://github.com/ApolloAuto/apollo/tree/master/cyber/python).
 
 ## `cyber`
 
