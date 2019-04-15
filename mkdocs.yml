@@ -1,3 +1,28 @@
 site_name: CARLA Simulator2
-docs_dir: Docs
+#repo_url: https://github.com/carla-simulator/carla
+docs_dir: docs
 theme: readthedocs
+
+nav:
+- Home: 'index.md'
+- Quick start:
+  - 'Getting started': 'CyberRT_Quick_Start.md'
+  - 'CyberRT API tutorial': 'CyberRT_API_for_Developers.md'
+  - 'CyberRT Developer Tools': 'CyberRT_Developer_Tools.md'
+  - 'Configuring the simulation': 'configuring_the_simulation.md'
+  # - 'Measurements': 'measurements.md'
+  - 'F.A.Q.': 'CyberRT_FAQs.md'
+- Building from source:
+  - 'How to build on Linux': 'how_to_build_on_linux.md'
+  - 'How to build on Windows': 'how_to_build_on_windows.md'
+- Advanced topics:
+  #- 'Python API reference': 'python_api.md'
+    #- 'Running without display and selecting GPUs': 'carla_headless.md'
+  - 'How to migrate from Apollo ROS to CyberRT': 'CyberRT_Migration_Guide.md'
+    #- "How to make a new map with RoadRunner": 'how_to_make_a_new_map.md'
+    #- "How to link Epic's Automotive Materials": 'epic_automotive_materials.md'
+    # - "How to automatically generate a map from RoadRunner": 'generate_map_from_fbx.md'
+    #- "How to export and import maps to distribution builds": 'export_import_dist.md'
+
+markdown_extensions:
+  - admonition
