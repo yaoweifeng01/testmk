@@ -10,5 +10,6 @@
 
 * [Apollo Cyber RT Terms](CyberRT_Terms.md): Commonly used terminologies in Cyber RT documentation and code.
 
-
+* [Python API](out/html/index.html)
+* [Python API2](https://github.com/yaoweifeng01/apollo/blob/py_docs_dev/cyber/out/html/index.html)
 More documents to come soon!
