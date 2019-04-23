@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classapollo_1_1cyber_1_1transport_1_1ListenerHandlerBase" kind="class" prot="public" abstract="yes">
+    <compoundname>apollo::cyber::transport::ListenerHandlerBase</compoundname>
+    <derivedcompoundref refid="classapollo_1_1cyber_1_1transport_1_1ListenerHandler" prot="public" virt="non-virtual">apollo::cyber::transport::ListenerHandler&lt; MessageT &gt;</derivedcompoundref>
+    <includes refid="listener__handler_8h" local="no">listener_handler.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1transport_1_1ListenerHandlerBase_1a566139fbf45bb82f3120159f34bb60d5" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool apollo::cyber::transport::ListenerHandlerBase::is_raw_message_</definition>
+        <argsstring></argsstring>
+        <name>is_raw_message_</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/message/listener_handler.h" line="52" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/message/listener_handler.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1ListenerHandlerBase_1a81d575ab9ccab7f0251c5af9d2d83fcb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::transport::ListenerHandlerBase::ListenerHandlerBase</definition>
+        <argsstring>()</argsstring>
+        <name>ListenerHandlerBase</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/message/listener_handler.h" line="44" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/message/listener_handler.h" bodystart="44" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1ListenerHandlerBase_1aa0b311470262f7c36de7e46abf1b1ac5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual apollo::cyber::transport::ListenerHandlerBase::~ListenerHandlerBase</definition>
+        <argsstring>()</argsstring>
+        <name>~ListenerHandlerBase</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/message/listener_handler.h" line="45" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/message/listener_handler.h" bodystart="45" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1ListenerHandlerBase_1ae66df407b61383d946788ff7a37e9b20" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void apollo::cyber::transport::ListenerHandlerBase::Disconnect</definition>
+        <argsstring>(uint64_t self_id)=0</argsstring>
+        <name>Disconnect</name>
+        <reimplementedby refid="classapollo_1_1cyber_1_1transport_1_1ListenerHandler_1a49732b06a8186e67f648efedca552224">Disconnect</reimplementedby>
+        <param>
+          <type>uint64_t</type>
+          <declname>self_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/message/listener_handler.h" line="47" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1ListenerHandlerBase_1afa2a7202373e5756b631d3f7dd325b09" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void apollo::cyber::transport::ListenerHandlerBase::Disconnect</definition>
+        <argsstring>(uint64_t self_id, uint64_t oppo_id)=0</argsstring>
+        <name>Disconnect</name>
+        <reimplementedby refid="classapollo_1_1cyber_1_1transport_1_1ListenerHandler_1a5bf12aac3e98dc9b1ba3f33e6170cad8">Disconnect</reimplementedby>
+        <param>
+          <type>uint64_t</type>
+          <declname>self_id</declname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>oppo_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/message/listener_handler.h" line="48" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1ListenerHandlerBase_1a43cc98c3b19d658bae964432c0b75d41" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::transport::ListenerHandlerBase::IsRawMessage</definition>
+        <argsstring>() const </argsstring>
+        <name>IsRawMessage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/message/listener_handler.h" line="49" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/message/listener_handler.h" bodystart="49" bodyend="49"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="446">
+        <label>apollo::cyber::transport::ListenerHandler&lt; MessageT &gt;</label>
+        <link refid="classapollo_1_1cyber_1_1transport_1_1ListenerHandler"/>
+        <childnode refid="445" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="445">
+        <label>apollo::cyber::transport::ListenerHandlerBase</label>
+        <link refid="classapollo_1_1cyber_1_1transport_1_1ListenerHandlerBase"/>
+      </node>
+    </inheritancegraph>
+    <location file="/home/work/apollo-fork/apollo/cyber/transport/message/listener_handler.h" line="42" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/message/listener_handler.h" bodystart="42" bodyend="53"/>
+    <listofallmembers>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1ListenerHandlerBase_1ae66df407b61383d946788ff7a37e9b20" prot="public" virt="pure-virtual"><scope>apollo::cyber::transport::ListenerHandlerBase</scope><name>Disconnect</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1ListenerHandlerBase_1afa2a7202373e5756b631d3f7dd325b09" prot="public" virt="pure-virtual"><scope>apollo::cyber::transport::ListenerHandlerBase</scope><name>Disconnect</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1ListenerHandlerBase_1a566139fbf45bb82f3120159f34bb60d5" prot="protected" virt="non-virtual"><scope>apollo::cyber::transport::ListenerHandlerBase</scope><name>is_raw_message_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1ListenerHandlerBase_1a43cc98c3b19d658bae964432c0b75d41" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::ListenerHandlerBase</scope><name>IsRawMessage</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1ListenerHandlerBase_1a81d575ab9ccab7f0251c5af9d2d83fcb" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::ListenerHandlerBase</scope><name>ListenerHandlerBase</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1ListenerHandlerBase_1aa0b311470262f7c36de7e46abf1b1ac5" prot="public" virt="virtual"><scope>apollo::cyber::transport::ListenerHandlerBase</scope><name>~ListenerHandlerBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

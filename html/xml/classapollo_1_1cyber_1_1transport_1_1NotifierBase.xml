@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classapollo_1_1cyber_1_1transport_1_1NotifierBase" kind="class" prot="public" abstract="yes">
+    <compoundname>apollo::cyber::transport::NotifierBase</compoundname>
+    <derivedcompoundref refid="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier" prot="public" virt="non-virtual">apollo::cyber::transport::ConditionNotifier</derivedcompoundref>
+    <derivedcompoundref refid="classapollo_1_1cyber_1_1transport_1_1MulticastNotifier" prot="public" virt="non-virtual">apollo::cyber::transport::MulticastNotifier</derivedcompoundref>
+    <includes refid="notifier__base_8h" local="no">notifier_base.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1NotifierBase_1ab1f83a69f899c80831045278da0a11ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual apollo::cyber::transport::NotifierBase::~NotifierBase</definition>
+        <argsstring>()=default</argsstring>
+        <name>~NotifierBase</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/notifier_base.h" line="33" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1NotifierBase_1a48e05bdc97d573893234846fcbd9be46" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void apollo::cyber::transport::NotifierBase::Shutdown</definition>
+        <argsstring>()=0</argsstring>
+        <name>Shutdown</name>
+        <reimplementedby refid="classapollo_1_1cyber_1_1transport_1_1MulticastNotifier_1ad93fdda54a6d3064dc613ea558f3be2b">Shutdown</reimplementedby>
+        <reimplementedby refid="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1a057d3f71a69a9913107416166a01a81b">Shutdown</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/notifier_base.h" line="35" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1NotifierBase_1aef2741bc38fa6b7aca8c1cfb012975dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool apollo::cyber::transport::NotifierBase::Notify</definition>
+        <argsstring>(const ReadableInfo &amp;info)=0</argsstring>
+        <name>Notify</name>
+        <reimplementedby refid="classapollo_1_1cyber_1_1transport_1_1MulticastNotifier_1a646ced665934a2f9748d2739badf862b">Notify</reimplementedby>
+        <reimplementedby refid="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1ad9d938243de75dc7b015ca2ca9819f01">Notify</reimplementedby>
+        <param>
+          <type>const <ref refid="classapollo_1_1cyber_1_1transport_1_1ReadableInfo" kindref="compound">ReadableInfo</ref> &amp;</type>
+          <declname>info</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/notifier_base.h" line="36" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1NotifierBase_1aa42f5b65d60d3b61a919f09b7605775b" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool apollo::cyber::transport::NotifierBase::Listen</definition>
+        <argsstring>(int timeout_ms, ReadableInfo *info)=0</argsstring>
+        <name>Listen</name>
+        <reimplementedby refid="classapollo_1_1cyber_1_1transport_1_1MulticastNotifier_1a6b30e7919744b11f756870428cf6ea8f">Listen</reimplementedby>
+        <reimplementedby refid="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1a961bd6d94fdae4ffa6a7413a95932db5">Listen</reimplementedby>
+        <param>
+          <type>int</type>
+          <declname>timeout_ms</declname>
+        </param>
+        <param>
+          <type><ref refid="classapollo_1_1cyber_1_1transport_1_1ReadableInfo" kindref="compound">ReadableInfo</ref> *</type>
+          <declname>info</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/notifier_base.h" line="37" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="520">
+        <label>apollo::cyber::transport::ConditionNotifier</label>
+        <link refid="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier"/>
+        <childnode refid="519" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="519">
+        <label>apollo::cyber::transport::NotifierBase</label>
+        <link refid="classapollo_1_1cyber_1_1transport_1_1NotifierBase"/>
+      </node>
+      <node id="521">
+        <label>apollo::cyber::transport::MulticastNotifier</label>
+        <link refid="classapollo_1_1cyber_1_1transport_1_1MulticastNotifier"/>
+        <childnode refid="519" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/notifier_base.h" line="31" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/shm/notifier_base.h" bodystart="31" bodyend="38"/>
+    <listofallmembers>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1NotifierBase_1aa42f5b65d60d3b61a919f09b7605775b" prot="public" virt="pure-virtual"><scope>apollo::cyber::transport::NotifierBase</scope><name>Listen</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1NotifierBase_1aef2741bc38fa6b7aca8c1cfb012975dd" prot="public" virt="pure-virtual"><scope>apollo::cyber::transport::NotifierBase</scope><name>Notify</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1NotifierBase_1a48e05bdc97d573893234846fcbd9be46" prot="public" virt="pure-virtual"><scope>apollo::cyber::transport::NotifierBase</scope><name>Shutdown</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1NotifierBase_1ab1f83a69f899c80831045278da0a11ba" prot="public" virt="virtual"><scope>apollo::cyber::transport::NotifierBase</scope><name>~NotifierBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

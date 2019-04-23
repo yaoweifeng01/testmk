@@ -1,0 +1,422 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classapollo_1_1cyber_1_1logger_1_1LogFileObject" kind="class" prot="public">
+    <compoundname>apollo::cyber::logger::LogFileObject</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Logger</basecompoundref>
+    <includes refid="log__file__object_8h" local="no">log_file_object.h</includes>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a22a58c8d3d04ab9beaf28e5aa28601c9" prot="private" static="yes" mutable="no">
+        <type>const uint32_t</type>
+        <definition>const uint32_t apollo::cyber::logger::LogFileObject::kRolloverAttemptFrequency</definition>
+        <argsstring></argsstring>
+        <name>kRolloverAttemptFrequency</name>
+        <initializer>= 0x20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/logger/log_file_object.h" line="54" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/logger/log_file_object.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a963d7f19da516b4ef514e37c4d926761" prot="private" static="no" mutable="no">
+        <type>std::mutex</type>
+        <definition>std::mutex apollo::cyber::logger::LogFileObject::lock_</definition>
+        <argsstring></argsstring>
+        <name>lock_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/logger/log_file_object.h" line="55" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/logger/log_file_object.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1aaa83cf494797e8bcfaf70ba841890628" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool apollo::cyber::logger::LogFileObject::base_filename_selected_</definition>
+        <argsstring></argsstring>
+        <name>base_filename_selected_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/logger/log_file_object.h" line="56" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/logger/log_file_object.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a2ddb3d2bcce49c4367a18eb59bdced97" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string apollo::cyber::logger::LogFileObject::base_filename_</definition>
+        <argsstring></argsstring>
+        <name>base_filename_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/logger/log_file_object.h" line="57" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/logger/log_file_object.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a74857bfefb3231e64de3c43c05e6609d" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string apollo::cyber::logger::LogFileObject::base_filepath_</definition>
+        <argsstring></argsstring>
+        <name>base_filepath_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/logger/log_file_object.h" line="58" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/logger/log_file_object.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a5eab9f067f8b03af6d6fad057e85d063" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string apollo::cyber::logger::LogFileObject::symlink_basename_</definition>
+        <argsstring></argsstring>
+        <name>symlink_basename_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/logger/log_file_object.h" line="59" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/logger/log_file_object.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a90ef513fcb9261914726fc5481725dcc" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string apollo::cyber::logger::LogFileObject::filename_extension_</definition>
+        <argsstring></argsstring>
+        <name>filename_extension_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/logger/log_file_object.h" line="60" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/logger/log_file_object.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a76d70145494f68e1aa844f7013d5a7b2" prot="private" static="no" mutable="no">
+        <type>FILE *</type>
+        <definition>FILE* apollo::cyber::logger::LogFileObject::file_</definition>
+        <argsstring></argsstring>
+        <name>file_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/logger/log_file_object.h" line="61" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/logger/log_file_object.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a55b503945f312ba3315099707efee8c4" prot="private" static="no" mutable="no">
+        <type>google::LogSeverity</type>
+        <definition>google::LogSeverity apollo::cyber::logger::LogFileObject::severity_</definition>
+        <argsstring></argsstring>
+        <name>severity_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/logger/log_file_object.h" line="62" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/logger/log_file_object.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a29647683fc52c6fb388f4662b5248805" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t apollo::cyber::logger::LogFileObject::bytes_since_flush_</definition>
+        <argsstring></argsstring>
+        <name>bytes_since_flush_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/logger/log_file_object.h" line="63" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/logger/log_file_object.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a7edba80c0f9d4b4fd4c38a775ffe8416" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t apollo::cyber::logger::LogFileObject::dropped_mem_length_</definition>
+        <argsstring></argsstring>
+        <name>dropped_mem_length_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/logger/log_file_object.h" line="64" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/logger/log_file_object.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1acadfc2b256c6c7f1d06ea76e406379eb" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t apollo::cyber::logger::LogFileObject::file_length_</definition>
+        <argsstring></argsstring>
+        <name>file_length_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/logger/log_file_object.h" line="65" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/logger/log_file_object.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a6a8883b31139aeaf0473eeaff7a71e3a" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int apollo::cyber::logger::LogFileObject::rollover_attempt_</definition>
+        <argsstring></argsstring>
+        <name>rollover_attempt_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/logger/log_file_object.h" line="66" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/logger/log_file_object.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a3b16662e6a2caf874be92e22ee1cb706" prot="private" static="no" mutable="no">
+        <type>int64_t</type>
+        <definition>int64_t apollo::cyber::logger::LogFileObject::next_flush_time_</definition>
+        <argsstring></argsstring>
+        <name>next_flush_time_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/logger/log_file_object.h" line="67" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/logger/log_file_object.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a833a101b1328a34ff04b98c85f191721" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::logger::LogFileObject::LogFileObject</definition>
+        <argsstring>(google::LogSeverity severity, const char *base_filename)</argsstring>
+        <name>LogFileObject</name>
+        <param>
+          <type>google::LogSeverity</type>
+          <declname>severity</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>base_filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/logger/log_file_object.h" line="32" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a03a476423210920b568648da3f80d3f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::logger::LogFileObject::~LogFileObject</definition>
+        <argsstring>()</argsstring>
+        <name>~LogFileObject</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/logger/log_file_object.h" line="33" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a9ba7a234cc8702170c305e0de970b012" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::logger::LogFileObject::Write</definition>
+        <argsstring>(bool force_flush, time_t timestamp, const char *message, int message_len) override</argsstring>
+        <name>Write</name>
+        <param>
+          <type>bool</type>
+          <declname>force_flush</declname>
+        </param>
+        <param>
+          <type>time_t</type>
+          <declname>timestamp</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>message_len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/logger/log_file_object.h" line="35" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a7757684686f25c4ad6b552eb8d2d7457" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::logger::LogFileObject::SetBasename</definition>
+        <argsstring>(const char *basename)</argsstring>
+        <name>SetBasename</name>
+        <param>
+          <type>const char *</type>
+          <declname>basename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/logger/log_file_object.h" line="38" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a5d4e55c263bd8e49b4882360cec74f78" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::logger::LogFileObject::SetExtension</definition>
+        <argsstring>(const char *ext)</argsstring>
+        <name>SetExtension</name>
+        <param>
+          <type>const char *</type>
+          <declname>ext</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/logger/log_file_object.h" line="39" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1ae04342c963cd10bdc5bb2bbec192144f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::logger::LogFileObject::SetSymlinkBasename</definition>
+        <argsstring>(const char *symlink_basename)</argsstring>
+        <name>SetSymlinkBasename</name>
+        <param>
+          <type>const char *</type>
+          <declname>symlink_basename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/logger/log_file_object.h" line="40" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1ab398b6843a9302ef00b2817687d61f27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::logger::LogFileObject::Flush</definition>
+        <argsstring>() override</argsstring>
+        <name>Flush</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/logger/log_file_object.h" line="42" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a380638b75320fe715433f87d522c543d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>uint32_t</type>
+        <definition>virtual uint32_t apollo::cyber::logger::LogFileObject::LogSize</definition>
+        <argsstring>()</argsstring>
+        <name>LogSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/logger/log_file_object.h" line="45" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/logger/log_file_object.h" bodystart="45" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a50388bac680858687619b981a42dc502" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::logger::LogFileObject::FlushUnlocked</definition>
+        <argsstring>()</argsstring>
+        <name>FlushUnlocked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/logger/log_file_object.h" line="50" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1abbb5038197a577095037fac0e621a54b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::logger::LogFileObject::CreateLogfile</definition>
+        <argsstring>(const std::string &amp;time_pid_string)</argsstring>
+        <name>CreateLogfile</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>time_pid_string</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/logger/log_file_object.h" line="53" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="449">
+        <label>Logger</label>
+      </node>
+      <node id="448">
+        <label>apollo::cyber::logger::LogFileObject</label>
+        <link refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject"/>
+        <childnode refid="449" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="451">
+        <label>Logger</label>
+      </node>
+      <node id="450">
+        <label>apollo::cyber::logger::LogFileObject</label>
+        <link refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject"/>
+        <childnode refid="451" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/work/apollo-fork/apollo/cyber/logger/log_file_object.h" line="30" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/logger/log_file_object.h" bodystart="30" bodyend="68"/>
+    <listofallmembers>
+      <member refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a2ddb3d2bcce49c4367a18eb59bdced97" prot="private" virt="non-virtual"><scope>apollo::cyber::logger::LogFileObject</scope><name>base_filename_</name></member>
+      <member refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1aaa83cf494797e8bcfaf70ba841890628" prot="private" virt="non-virtual"><scope>apollo::cyber::logger::LogFileObject</scope><name>base_filename_selected_</name></member>
+      <member refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a74857bfefb3231e64de3c43c05e6609d" prot="private" virt="non-virtual"><scope>apollo::cyber::logger::LogFileObject</scope><name>base_filepath_</name></member>
+      <member refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a29647683fc52c6fb388f4662b5248805" prot="private" virt="non-virtual"><scope>apollo::cyber::logger::LogFileObject</scope><name>bytes_since_flush_</name></member>
+      <member refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1abbb5038197a577095037fac0e621a54b" prot="private" virt="non-virtual"><scope>apollo::cyber::logger::LogFileObject</scope><name>CreateLogfile</name></member>
+      <member refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a7edba80c0f9d4b4fd4c38a775ffe8416" prot="private" virt="non-virtual"><scope>apollo::cyber::logger::LogFileObject</scope><name>dropped_mem_length_</name></member>
+      <member refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a76d70145494f68e1aa844f7013d5a7b2" prot="private" virt="non-virtual"><scope>apollo::cyber::logger::LogFileObject</scope><name>file_</name></member>
+      <member refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1acadfc2b256c6c7f1d06ea76e406379eb" prot="private" virt="non-virtual"><scope>apollo::cyber::logger::LogFileObject</scope><name>file_length_</name></member>
+      <member refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a90ef513fcb9261914726fc5481725dcc" prot="private" virt="non-virtual"><scope>apollo::cyber::logger::LogFileObject</scope><name>filename_extension_</name></member>
+      <member refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1ab398b6843a9302ef00b2817687d61f27" prot="public" virt="non-virtual"><scope>apollo::cyber::logger::LogFileObject</scope><name>Flush</name></member>
+      <member refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a50388bac680858687619b981a42dc502" prot="public" virt="non-virtual"><scope>apollo::cyber::logger::LogFileObject</scope><name>FlushUnlocked</name></member>
+      <member refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a22a58c8d3d04ab9beaf28e5aa28601c9" prot="private" virt="non-virtual"><scope>apollo::cyber::logger::LogFileObject</scope><name>kRolloverAttemptFrequency</name></member>
+      <member refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a963d7f19da516b4ef514e37c4d926761" prot="private" virt="non-virtual"><scope>apollo::cyber::logger::LogFileObject</scope><name>lock_</name></member>
+      <member refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a833a101b1328a34ff04b98c85f191721" prot="public" virt="non-virtual"><scope>apollo::cyber::logger::LogFileObject</scope><name>LogFileObject</name></member>
+      <member refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a380638b75320fe715433f87d522c543d" prot="public" virt="virtual"><scope>apollo::cyber::logger::LogFileObject</scope><name>LogSize</name></member>
+      <member refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a3b16662e6a2caf874be92e22ee1cb706" prot="private" virt="non-virtual"><scope>apollo::cyber::logger::LogFileObject</scope><name>next_flush_time_</name></member>
+      <member refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a6a8883b31139aeaf0473eeaff7a71e3a" prot="private" virt="non-virtual"><scope>apollo::cyber::logger::LogFileObject</scope><name>rollover_attempt_</name></member>
+      <member refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a7757684686f25c4ad6b552eb8d2d7457" prot="public" virt="non-virtual"><scope>apollo::cyber::logger::LogFileObject</scope><name>SetBasename</name></member>
+      <member refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a5d4e55c263bd8e49b4882360cec74f78" prot="public" virt="non-virtual"><scope>apollo::cyber::logger::LogFileObject</scope><name>SetExtension</name></member>
+      <member refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1ae04342c963cd10bdc5bb2bbec192144f" prot="public" virt="non-virtual"><scope>apollo::cyber::logger::LogFileObject</scope><name>SetSymlinkBasename</name></member>
+      <member refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a55b503945f312ba3315099707efee8c4" prot="private" virt="non-virtual"><scope>apollo::cyber::logger::LogFileObject</scope><name>severity_</name></member>
+      <member refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a5eab9f067f8b03af6d6fad057e85d063" prot="private" virt="non-virtual"><scope>apollo::cyber::logger::LogFileObject</scope><name>symlink_basename_</name></member>
+      <member refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a9ba7a234cc8702170c305e0de970b012" prot="public" virt="non-virtual"><scope>apollo::cyber::logger::LogFileObject</scope><name>Write</name></member>
+      <member refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a03a476423210920b568648da3f80d3f2" prot="public" virt="non-virtual"><scope>apollo::cyber::logger::LogFileObject</scope><name>~LogFileObject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

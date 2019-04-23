@@ -1,0 +1,394 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classapollo_1_1cyber_1_1transport_1_1ListenerHandler" kind="class" prot="public">
+    <compoundname>apollo::cyber::transport::ListenerHandler</compoundname>
+    <basecompoundref refid="classapollo_1_1cyber_1_1transport_1_1ListenerHandlerBase" prot="public" virt="non-virtual">apollo::cyber::transport::ListenerHandlerBase</basecompoundref>
+    <includes refid="listener__handler_8h" local="no">listener_handler.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename MessageT</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classapollo_1_1cyber_1_1transport_1_1ListenerHandler_1a52a658e4523db4704b6d7e97f326d774" prot="public" static="no">
+        <type>std::shared_ptr&lt; MessageT &gt;</type>
+        <definition>using apollo::cyber::transport::ListenerHandler&lt; MessageT &gt;::Message =  std::shared_ptr&lt;MessageT&gt;</definition>
+        <argsstring></argsstring>
+        <name>Message</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/message/listener_handler.h" line="58" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/message/listener_handler.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classapollo_1_1cyber_1_1transport_1_1ListenerHandler_1a9ca5ce35c021aae1145e8e25a5fda0a0" prot="public" static="no">
+        <type><ref refid="classapollo_1_1cyber_1_1base_1_1Signal" kindref="compound">base::Signal</ref>&lt; const <ref refid="classapollo_1_1cyber_1_1transport_1_1ListenerHandler_1a52a658e4523db4704b6d7e97f326d774" kindref="member">Message</ref> &amp;, const <ref refid="classapollo_1_1cyber_1_1transport_1_1MessageInfo" kindref="compound">MessageInfo</ref> &amp; &gt;</type>
+        <definition>using apollo::cyber::transport::ListenerHandler&lt; MessageT &gt;::MessageSignal =  base::Signal&lt;const Message&amp;, const MessageInfo&amp;&gt;</definition>
+        <argsstring></argsstring>
+        <name>MessageSignal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/message/listener_handler.h" line="59" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/message/listener_handler.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classapollo_1_1cyber_1_1transport_1_1ListenerHandler_1a96764e623a89ce8a872d2e43b6408d98" prot="public" static="no">
+        <type>std::function&lt; void(const <ref refid="classapollo_1_1cyber_1_1transport_1_1ListenerHandler_1a52a658e4523db4704b6d7e97f326d774" kindref="member">Message</ref> &amp;, const <ref refid="classapollo_1_1cyber_1_1transport_1_1MessageInfo" kindref="compound">MessageInfo</ref> &amp;)&gt;</type>
+        <definition>using apollo::cyber::transport::ListenerHandler&lt; MessageT &gt;::Listener =  std::function&lt;void(const Message&amp;, const MessageInfo&amp;)&gt;</definition>
+        <argsstring></argsstring>
+        <name>Listener</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/message/listener_handler.h" line="61" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/message/listener_handler.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classapollo_1_1cyber_1_1transport_1_1ListenerHandler_1a6f33e5f36f457a51129671f22c159ddf" prot="public" static="no">
+        <type><ref refid="classapollo_1_1cyber_1_1base_1_1Connection" kindref="compound">base::Connection</ref>&lt; const <ref refid="classapollo_1_1cyber_1_1transport_1_1ListenerHandler_1a52a658e4523db4704b6d7e97f326d774" kindref="member">Message</ref> &amp;, const <ref refid="classapollo_1_1cyber_1_1transport_1_1MessageInfo" kindref="compound">MessageInfo</ref> &amp; &gt;</type>
+        <definition>using apollo::cyber::transport::ListenerHandler&lt; MessageT &gt;::MessageConnection =  base::Connection&lt;const Message&amp;, const MessageInfo&amp;&gt;</definition>
+        <argsstring></argsstring>
+        <name>MessageConnection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/message/listener_handler.h" line="62" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/message/listener_handler.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classapollo_1_1cyber_1_1transport_1_1ListenerHandler_1a5a6f5bc05280412183b1d0f65ce5e683" prot="public" static="no">
+        <type>std::unordered_map&lt; uint64_t, <ref refid="classapollo_1_1cyber_1_1transport_1_1ListenerHandler_1a6f33e5f36f457a51129671f22c159ddf" kindref="member">MessageConnection</ref> &gt;</type>
+        <definition>using apollo::cyber::transport::ListenerHandler&lt; MessageT &gt;::ConnectionMap =  std::unordered_map&lt;uint64_t, MessageConnection&gt;</definition>
+        <argsstring></argsstring>
+        <name>ConnectionMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/message/listener_handler.h" line="64" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/message/listener_handler.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classapollo_1_1cyber_1_1transport_1_1ListenerHandler_1adbbec4596a920f50c937047a31c7019d" prot="private" static="no">
+        <type>std::shared_ptr&lt; <ref refid="classapollo_1_1cyber_1_1transport_1_1ListenerHandler_1a9ca5ce35c021aae1145e8e25a5fda0a0" kindref="member">MessageSignal</ref> &gt;</type>
+        <definition>using apollo::cyber::transport::ListenerHandler&lt; MessageT &gt;::SignalPtr =  std::shared_ptr&lt;MessageSignal&gt;</definition>
+        <argsstring></argsstring>
+        <name>SignalPtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/message/listener_handler.h" line="78" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/message/listener_handler.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classapollo_1_1cyber_1_1transport_1_1ListenerHandler_1ab534f02021dc0d897b0f1161a604b835" prot="private" static="no">
+        <type>std::unordered_map&lt; uint64_t, <ref refid="classapollo_1_1cyber_1_1transport_1_1ListenerHandler_1adbbec4596a920f50c937047a31c7019d" kindref="member">SignalPtr</ref> &gt;</type>
+        <definition>using apollo::cyber::transport::ListenerHandler&lt; MessageT &gt;::MessageSignalMap =  std::unordered_map&lt;uint64_t, SignalPtr&gt;</definition>
+        <argsstring></argsstring>
+        <name>MessageSignalMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/message/listener_handler.h" line="79" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/message/listener_handler.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1transport_1_1ListenerHandler_1ac43fe4e3f5d7bbd16f21606f19cb349e" prot="private" static="no" mutable="no">
+        <type><ref refid="classapollo_1_1cyber_1_1transport_1_1ListenerHandler_1a9ca5ce35c021aae1145e8e25a5fda0a0" kindref="member">MessageSignal</ref></type>
+        <definition>MessageSignal apollo::cyber::transport::ListenerHandler&lt; MessageT &gt;::signal_</definition>
+        <argsstring></argsstring>
+        <name>signal_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/message/listener_handler.h" line="81" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/message/listener_handler.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1transport_1_1ListenerHandler_1a305d0d57ad20695d87607abc21d50d37" prot="private" static="no" mutable="no">
+        <type><ref refid="classapollo_1_1cyber_1_1transport_1_1ListenerHandler_1a5a6f5bc05280412183b1d0f65ce5e683" kindref="member">ConnectionMap</ref></type>
+        <definition>ConnectionMap apollo::cyber::transport::ListenerHandler&lt; MessageT &gt;::signal_conns_</definition>
+        <argsstring></argsstring>
+        <name>signal_conns_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/message/listener_handler.h" line="82" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/message/listener_handler.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1transport_1_1ListenerHandler_1ac550b705bbbc6a60cb13d5208db3a716" prot="private" static="no" mutable="no">
+        <type><ref refid="classapollo_1_1cyber_1_1transport_1_1ListenerHandler_1ab534f02021dc0d897b0f1161a604b835" kindref="member">MessageSignalMap</ref></type>
+        <definition>MessageSignalMap apollo::cyber::transport::ListenerHandler&lt; MessageT &gt;::signals_</definition>
+        <argsstring></argsstring>
+        <name>signals_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/message/listener_handler.h" line="85" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/message/listener_handler.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1transport_1_1ListenerHandler_1aae870e557a50628cfe739df1a8ab6547" prot="private" static="no" mutable="no">
+        <type>std::unordered_map&lt; uint64_t, <ref refid="classapollo_1_1cyber_1_1transport_1_1ListenerHandler_1a5a6f5bc05280412183b1d0f65ce5e683" kindref="member">ConnectionMap</ref> &gt;</type>
+        <definition>std::unordered_map&lt;uint64_t, ConnectionMap&gt; apollo::cyber::transport::ListenerHandler&lt; MessageT &gt;::signals_conns_</definition>
+        <argsstring></argsstring>
+        <name>signals_conns_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/message/listener_handler.h" line="87" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/message/listener_handler.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1transport_1_1ListenerHandler_1adc3e16ad07f7ae7fd46fcd905880f216" prot="private" static="no" mutable="no">
+        <type><ref refid="classapollo_1_1cyber_1_1base_1_1AtomicRWLock" kindref="compound">base::AtomicRWLock</ref></type>
+        <definition>base::AtomicRWLock apollo::cyber::transport::ListenerHandler&lt; MessageT &gt;::rw_lock_</definition>
+        <argsstring></argsstring>
+        <name>rw_lock_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/message/listener_handler.h" line="89" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/message/listener_handler.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1ListenerHandler_1a7030c8148e7194124974615d18b6c713" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::transport::ListenerHandler&lt; MessageT &gt;::ListenerHandler</definition>
+        <argsstring>()</argsstring>
+        <name>ListenerHandler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/message/listener_handler.h" line="66" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/message/listener_handler.h" bodystart="66" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1ListenerHandler_1a08c179bc5a9e22cb8a7184e85c9ee43b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual apollo::cyber::transport::ListenerHandler&lt; MessageT &gt;::~ListenerHandler</definition>
+        <argsstring>()</argsstring>
+        <name>~ListenerHandler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/message/listener_handler.h" line="67" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/message/listener_handler.h" bodystart="67" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1ListenerHandler_1a55db7d72212c0fb491a23cb867183c9c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::transport::ListenerHandler&lt; MessageT &gt;::Connect</definition>
+        <argsstring>(uint64_t self_id, const Listener &amp;listener)</argsstring>
+        <name>Connect</name>
+        <param>
+          <type>uint64_t</type>
+          <declname>self_id</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classapollo_1_1cyber_1_1transport_1_1ListenerHandler_1a96764e623a89ce8a872d2e43b6408d98" kindref="member">Listener</ref> &amp;</type>
+          <declname>listener</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/message/listener_handler.h" line="69" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/message/listener_handler.h" bodystart="98" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1ListenerHandler_1a653c56feedf335a9854241425f466b10" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::transport::ListenerHandler&lt; MessageT &gt;::Connect</definition>
+        <argsstring>(uint64_t self_id, uint64_t oppo_id, const Listener &amp;listener)</argsstring>
+        <name>Connect</name>
+        <param>
+          <type>uint64_t</type>
+          <declname>self_id</declname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>oppo_id</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classapollo_1_1cyber_1_1transport_1_1ListenerHandler_1a96764e623a89ce8a872d2e43b6408d98" kindref="member">Listener</ref> &amp;</type>
+          <declname>listener</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/message/listener_handler.h" line="70" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/message/listener_handler.h" bodystart="110" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1ListenerHandler_1a49732b06a8186e67f648efedca552224" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::transport::ListenerHandler&lt; MessageT &gt;::Disconnect</definition>
+        <argsstring>(uint64_t self_id) override</argsstring>
+        <name>Disconnect</name>
+        <reimplements refid="classapollo_1_1cyber_1_1transport_1_1ListenerHandlerBase_1ae66df407b61383d946788ff7a37e9b20">Disconnect</reimplements>
+        <param>
+          <type>uint64_t</type>
+          <declname>self_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/message/listener_handler.h" line="72" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/message/listener_handler.h" bodystart="131" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1ListenerHandler_1a5bf12aac3e98dc9b1ba3f33e6170cad8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::transport::ListenerHandler&lt; MessageT &gt;::Disconnect</definition>
+        <argsstring>(uint64_t self_id, uint64_t oppo_id) override</argsstring>
+        <name>Disconnect</name>
+        <reimplements refid="classapollo_1_1cyber_1_1transport_1_1ListenerHandlerBase_1afa2a7202373e5756b631d3f7dd325b09">Disconnect</reimplements>
+        <param>
+          <type>uint64_t</type>
+          <declname>self_id</declname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>oppo_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/message/listener_handler.h" line="73" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/message/listener_handler.h" bodystart="142" bodyend="154"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1ListenerHandler_1a60da04ecf96ee8b5f669e3d598136441" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::transport::ListenerHandler&lt; MessageT &gt;::Run</definition>
+        <argsstring>(const Message &amp;msg, const MessageInfo &amp;msg_info)</argsstring>
+        <name>Run</name>
+        <param>
+          <type>const <ref refid="classapollo_1_1cyber_1_1transport_1_1ListenerHandler_1a52a658e4523db4704b6d7e97f326d774" kindref="member">Message</ref> &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classapollo_1_1cyber_1_1transport_1_1MessageInfo" kindref="compound">MessageInfo</ref> &amp;</type>
+          <declname>msg_info</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/message/listener_handler.h" line="75" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/message/listener_handler.h" bodystart="157" bodyend="167"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1ListenerHandler_1ab6f903ef1495188f830e7b1bff8f1622" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type></type>
+        <definition>apollo::cyber::transport::ListenerHandler&lt; message::RawMessage &gt;::ListenerHandler</definition>
+        <argsstring>()</argsstring>
+        <name>ListenerHandler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/message/listener_handler.h" line="93" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/message/listener_handler.h" bodystart="93" bodyend="95"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="439">
+        <label>apollo::cyber::transport::ListenerHandler&lt; MessageT &gt;</label>
+        <link refid="classapollo_1_1cyber_1_1transport_1_1ListenerHandler"/>
+        <childnode refid="440" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="440">
+        <label>apollo::cyber::transport::ListenerHandlerBase</label>
+        <link refid="classapollo_1_1cyber_1_1transport_1_1ListenerHandlerBase"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="441">
+        <label>apollo::cyber::transport::ListenerHandler&lt; MessageT &gt;</label>
+        <link refid="classapollo_1_1cyber_1_1transport_1_1ListenerHandler"/>
+        <childnode refid="442" relation="public-inheritance">
+        </childnode>
+        <childnode refid="443" relation="usage">
+          <edgelabel>rw_lock_</edgelabel>
+        </childnode>
+        <childnode refid="444" relation="usage">
+          <edgelabel>signal_</edgelabel>
+        </childnode>
+      </node>
+      <node id="442">
+        <label>apollo::cyber::transport::ListenerHandlerBase</label>
+        <link refid="classapollo_1_1cyber_1_1transport_1_1ListenerHandlerBase"/>
+      </node>
+      <node id="444">
+        <label>apollo::cyber::base::Signal&lt; const Message &amp;, const MessageInfo &amp; &gt;</label>
+        <link refid="classapollo_1_1cyber_1_1base_1_1Signal"/>
+      </node>
+      <node id="443">
+        <label>apollo::cyber::base::AtomicRWLock</label>
+        <link refid="classapollo_1_1cyber_1_1base_1_1AtomicRWLock"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/work/apollo-fork/apollo/cyber/transport/message/listener_handler.h" line="56" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/message/listener_handler.h" bodystart="56" bodyend="90"/>
+    <listofallmembers>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1ListenerHandler_1a55db7d72212c0fb491a23cb867183c9c" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::ListenerHandler</scope><name>Connect</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1ListenerHandler_1a653c56feedf335a9854241425f466b10" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::ListenerHandler</scope><name>Connect</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1ListenerHandler_1a5a6f5bc05280412183b1d0f65ce5e683" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::ListenerHandler</scope><name>ConnectionMap</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1ListenerHandler_1a49732b06a8186e67f648efedca552224" prot="public" virt="virtual"><scope>apollo::cyber::transport::ListenerHandler</scope><name>Disconnect</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1ListenerHandler_1a5bf12aac3e98dc9b1ba3f33e6170cad8" prot="public" virt="virtual"><scope>apollo::cyber::transport::ListenerHandler</scope><name>Disconnect</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1ListenerHandlerBase_1a566139fbf45bb82f3120159f34bb60d5" prot="protected" virt="non-virtual"><scope>apollo::cyber::transport::ListenerHandler</scope><name>is_raw_message_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1ListenerHandlerBase_1a43cc98c3b19d658bae964432c0b75d41" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::ListenerHandler</scope><name>IsRawMessage</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1ListenerHandler_1a96764e623a89ce8a872d2e43b6408d98" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::ListenerHandler</scope><name>Listener</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1ListenerHandler_1a7030c8148e7194124974615d18b6c713" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::ListenerHandler</scope><name>ListenerHandler</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1ListenerHandler_1ab6f903ef1495188f830e7b1bff8f1622" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::ListenerHandler</scope><name>ListenerHandler</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1ListenerHandlerBase_1a81d575ab9ccab7f0251c5af9d2d83fcb" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::ListenerHandler</scope><name>ListenerHandlerBase</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1ListenerHandler_1a52a658e4523db4704b6d7e97f326d774" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::ListenerHandler</scope><name>Message</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1ListenerHandler_1a6f33e5f36f457a51129671f22c159ddf" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::ListenerHandler</scope><name>MessageConnection</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1ListenerHandler_1a9ca5ce35c021aae1145e8e25a5fda0a0" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::ListenerHandler</scope><name>MessageSignal</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1ListenerHandler_1ab534f02021dc0d897b0f1161a604b835" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::ListenerHandler</scope><name>MessageSignalMap</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1ListenerHandler_1a60da04ecf96ee8b5f669e3d598136441" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::ListenerHandler</scope><name>Run</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1ListenerHandler_1adc3e16ad07f7ae7fd46fcd905880f216" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::ListenerHandler</scope><name>rw_lock_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1ListenerHandler_1ac43fe4e3f5d7bbd16f21606f19cb349e" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::ListenerHandler</scope><name>signal_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1ListenerHandler_1a305d0d57ad20695d87607abc21d50d37" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::ListenerHandler</scope><name>signal_conns_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1ListenerHandler_1adbbec4596a920f50c937047a31c7019d" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::ListenerHandler</scope><name>SignalPtr</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1ListenerHandler_1ac550b705bbbc6a60cb13d5208db3a716" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::ListenerHandler</scope><name>signals_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1ListenerHandler_1aae870e557a50628cfe739df1a8ab6547" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::ListenerHandler</scope><name>signals_conns_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1ListenerHandler_1a08c179bc5a9e22cb8a7184e85c9ee43b" prot="public" virt="virtual"><scope>apollo::cyber::transport::ListenerHandler</scope><name>~ListenerHandler</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1ListenerHandlerBase_1aa0b311470262f7c36de7e46abf1b1ac5" prot="public" virt="virtual"><scope>apollo::cyber::transport::ListenerHandler</scope><name>~ListenerHandlerBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

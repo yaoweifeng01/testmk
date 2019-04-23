@@ -1,0 +1,392 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classapollo_1_1cyber_1_1record_1_1RecordReader" kind="class" prot="public">
+    <compoundname>apollo::cyber::record::RecordReader</compoundname>
+    <basecompoundref refid="classapollo_1_1cyber_1_1record_1_1RecordBase" prot="public" virt="non-virtual">apollo::cyber::record::RecordBase</basecompoundref>
+    <includes refid="record__reader_8h" local="no">record_reader.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classapollo_1_1cyber_1_1record_1_1RecordReader_1a99d60a127dc557823804ea7a38f2b337" prot="public" static="no">
+        <type>std::unique_ptr&lt; <ref refid="classapollo_1_1cyber_1_1record_1_1RecordFileReader" kindref="compound">RecordFileReader</ref> &gt;</type>
+        <definition>using apollo::cyber::record::RecordReader::FileReaderPtr =  std::unique_ptr&lt;RecordFileReader&gt;</definition>
+        <argsstring></argsstring>
+        <name>FileReaderPtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/record/record_reader.h" line="36" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/record/record_reader.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classapollo_1_1cyber_1_1record_1_1RecordReader_1a3eb18b9cfa2630f3e4680e89d4ac50be" prot="public" static="no">
+        <type>std::unordered_map&lt; std::string, proto::ChannelCache &gt;</type>
+        <definition>using apollo::cyber::record::RecordReader::ChannelInfoMap =  std::unordered_map&lt;std::string, proto::ChannelCache&gt;</definition>
+        <argsstring></argsstring>
+        <name>ChannelInfoMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/record/record_reader.h" line="37" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/record/record_reader.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1RecordReader_1a7b09eca07e6b20666b8a7b260c528a60" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool apollo::cyber::record::RecordReader::is_valid_</definition>
+        <argsstring></argsstring>
+        <name>is_valid_</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/record/record_reader.h" line="64" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/record/record_reader.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1RecordReader_1a16344f4c5f6fd93fdc159adf7dcd433c" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool apollo::cyber::record::RecordReader::reach_end_</definition>
+        <argsstring></argsstring>
+        <name>reach_end_</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/record/record_reader.h" line="65" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/record/record_reader.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1RecordReader_1a2673e36c9e33db44fddb73daf8d284e5" prot="private" static="no" mutable="no">
+        <type>proto::ChunkBody</type>
+        <definition>proto::ChunkBody apollo::cyber::record::RecordReader::chunk_</definition>
+        <argsstring></argsstring>
+        <name>chunk_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/record/record_reader.h" line="66" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/record/record_reader.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1RecordReader_1ae635c9dafdc75111943a91e468c91cd1" prot="private" static="no" mutable="no">
+        <type>proto::Index</type>
+        <definition>proto::Index apollo::cyber::record::RecordReader::index_</definition>
+        <argsstring></argsstring>
+        <name>index_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/record/record_reader.h" line="67" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/record/record_reader.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1RecordReader_1abd93e0d06b76c3551a60e6d1dbe3e618" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int apollo::cyber::record::RecordReader::message_index_</definition>
+        <argsstring></argsstring>
+        <name>message_index_</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/record/record_reader.h" line="68" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/record/record_reader.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1RecordReader_1a944ca769f9707697dc6efeca9b27eab6" prot="private" static="no" mutable="no">
+        <type><ref refid="classapollo_1_1cyber_1_1record_1_1RecordReader_1a3eb18b9cfa2630f3e4680e89d4ac50be" kindref="member">ChannelInfoMap</ref></type>
+        <definition>ChannelInfoMap apollo::cyber::record::RecordReader::channel_info_</definition>
+        <argsstring></argsstring>
+        <name>channel_info_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/record/record_reader.h" line="69" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/record/record_reader.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1RecordReader_1ae87637a1484db67ccdff1f970ae7d317" prot="private" static="no" mutable="no">
+        <type><ref refid="classapollo_1_1cyber_1_1record_1_1RecordReader_1a99d60a127dc557823804ea7a38f2b337" kindref="member">FileReaderPtr</ref></type>
+        <definition>FileReaderPtr apollo::cyber::record::RecordReader::file_reader_</definition>
+        <argsstring></argsstring>
+        <name>file_reader_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/record/record_reader.h" line="70" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/record/record_reader.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1RecordReader_1aa87c1931b92dfde42e412d6ad9d6bf2f" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::record::RecordReader::RecordReader</definition>
+        <argsstring>(const std::string &amp;file)</argsstring>
+        <name>RecordReader</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/record/record_reader.h" line="39" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1RecordReader_1ae4c7635d67b06eefabc036e6830458d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual apollo::cyber::record::RecordReader::~RecordReader</definition>
+        <argsstring>()</argsstring>
+        <name>~RecordReader</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/record/record_reader.h" line="40" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1RecordReader_1aa36b991b065d89b0eaeab25f1537828d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::record::RecordReader::IsValid</definition>
+        <argsstring>() const </argsstring>
+        <name>IsValid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/record/record_reader.h" line="42" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/record/record_reader.h" bodystart="42" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1RecordReader_1a608943803f7feb1bdac5cf66477c4b0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::record::RecordReader::ReadMessage</definition>
+        <argsstring>(RecordMessage *message, uint64_t begin_time=0, uint64_t end_time=UINT64_MAX)</argsstring>
+        <name>ReadMessage</name>
+        <param>
+          <type><ref refid="structapollo_1_1cyber_1_1record_1_1RecordMessage" kindref="compound">RecordMessage</ref> *</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>begin_time</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>end_time</declname>
+          <defval>UINT64_MAX</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/record/record_reader.h" line="44" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1RecordReader_1a1b397349667341f7d100f1a61eee6c3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::record::RecordReader::Reset</definition>
+        <argsstring>()</argsstring>
+        <name>Reset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/record/record_reader.h" line="46" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1RecordReader_1aac1723c2d51a327d3e36899c3f15319b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t apollo::cyber::record::RecordReader::GetMessageNumber</definition>
+        <argsstring>(const std::string &amp;channel_name) const override</argsstring>
+        <name>GetMessageNumber</name>
+        <reimplements refid="classapollo_1_1cyber_1_1record_1_1RecordBase_1a82d12447e8d34553c42e4225b9359a1b">GetMessageNumber</reimplements>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>channel_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/record/record_reader.h" line="48" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1RecordReader_1a722df636d4f17d66c908bb3433a0b1cf" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const std::string &amp;</type>
+        <definition>const std::string&amp; apollo::cyber::record::RecordReader::GetMessageType</definition>
+        <argsstring>(const std::string &amp;channel_name) const override</argsstring>
+        <name>GetMessageType</name>
+        <reimplements refid="classapollo_1_1cyber_1_1record_1_1RecordBase_1ad1883d8a1ce2f90046b18eb6fd9306e3">GetMessageType</reimplements>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>channel_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/record/record_reader.h" line="50" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1RecordReader_1a5618fb95fdcf0660dc9ebdff3a14a869" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const std::string &amp;</type>
+        <definition>const std::string&amp; apollo::cyber::record::RecordReader::GetProtoDesc</definition>
+        <argsstring>(const std::string &amp;channel_name) const override</argsstring>
+        <name>GetProtoDesc</name>
+        <reimplements refid="classapollo_1_1cyber_1_1record_1_1RecordBase_1a0044d679cdfd10e56199f597446e912d">GetProtoDesc</reimplements>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>channel_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/record/record_reader.h" line="53" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1RecordReader_1af0c4ee41b2ede4245a826762b4d32a5f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::set&lt; std::string &gt;</type>
+        <definition>std::set&lt;std::string&gt; apollo::cyber::record::RecordReader::GetChannelList</definition>
+        <argsstring>() const </argsstring>
+        <name>GetChannelList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/record/record_reader.h" line="56" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1RecordReader_1ada984304d256257ebb52211b22bc16b5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const proto::Header &amp;</type>
+        <definition>const proto::Header&amp; apollo::cyber::record::RecordReader::header</definition>
+        <argsstring>() const </argsstring>
+        <name>header</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/record/record_reader.h" line="58" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/record/record_reader.h" bodystart="58" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1RecordReader_1af483fb03206fb8a4a6d54d84f9756b40" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classapollo_1_1cyber_1_1record_1_1RecordReader_1a3eb18b9cfa2630f3e4680e89d4ac50be" kindref="member">ChannelInfoMap</ref> &amp;</type>
+        <definition>const ChannelInfoMap&amp; apollo::cyber::record::RecordReader::channel_info</definition>
+        <argsstring>() const </argsstring>
+        <name>channel_info</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/record/record_reader.h" line="59" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/record/record_reader.h" bodystart="59" bodyend="59"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1RecordReader_1a5ee21479dcfbf60ee126a18a9481b0b4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::record::RecordReader::ReadNextChunk</definition>
+        <argsstring>(uint64_t begin_time, uint64_t end_time)</argsstring>
+        <name>ReadNextChunk</name>
+        <param>
+          <type>uint64_t</type>
+          <declname>begin_time</declname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>end_time</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/record/record_reader.h" line="62" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="696">
+        <label>apollo::cyber::record::RecordReader</label>
+        <link refid="classapollo_1_1cyber_1_1record_1_1RecordReader"/>
+        <childnode refid="697" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="697">
+        <label>apollo::cyber::record::RecordBase</label>
+        <link refid="classapollo_1_1cyber_1_1record_1_1RecordBase"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="698">
+        <label>apollo::cyber::record::RecordReader</label>
+        <link refid="classapollo_1_1cyber_1_1record_1_1RecordReader"/>
+        <childnode refid="699" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="699">
+        <label>apollo::cyber::record::RecordBase</label>
+        <link refid="classapollo_1_1cyber_1_1record_1_1RecordBase"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/work/apollo-fork/apollo/cyber/record/record_reader.h" line="34" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/record/record_reader.h" bodystart="34" bodyend="71"/>
+    <listofallmembers>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordReader_1af483fb03206fb8a4a6d54d84f9756b40" prot="public" virt="non-virtual"><scope>apollo::cyber::record::RecordReader</scope><name>channel_info</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordReader_1a944ca769f9707697dc6efeca9b27eab6" prot="private" virt="non-virtual"><scope>apollo::cyber::record::RecordReader</scope><name>channel_info_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordReader_1a3eb18b9cfa2630f3e4680e89d4ac50be" prot="public" virt="non-virtual"><scope>apollo::cyber::record::RecordReader</scope><name>ChannelInfoMap</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordReader_1a2673e36c9e33db44fddb73daf8d284e5" prot="private" virt="non-virtual"><scope>apollo::cyber::record::RecordReader</scope><name>chunk_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordBase_1a3ce26ca2d17eec9a3d4e47749ace66b2" prot="protected" virt="non-virtual"><scope>apollo::cyber::record::RecordReader</scope><name>file_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordReader_1ae87637a1484db67ccdff1f970ae7d317" prot="private" virt="non-virtual"><scope>apollo::cyber::record::RecordReader</scope><name>file_reader_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordReader_1a99d60a127dc557823804ea7a38f2b337" prot="public" virt="non-virtual"><scope>apollo::cyber::record::RecordReader</scope><name>FileReaderPtr</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordReader_1af0c4ee41b2ede4245a826762b4d32a5f" prot="public" virt="non-virtual"><scope>apollo::cyber::record::RecordReader</scope><name>GetChannelList</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordBase_1ad51ac494bc2e2a5922b792558789d602" prot="public" virt="non-virtual"><scope>apollo::cyber::record::RecordReader</scope><name>GetFile</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordBase_1af627ca03e16834e5be16fdbbba9317c4" prot="public" virt="non-virtual"><scope>apollo::cyber::record::RecordReader</scope><name>GetHeader</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordReader_1aac1723c2d51a327d3e36899c3f15319b" prot="public" virt="virtual"><scope>apollo::cyber::record::RecordReader</scope><name>GetMessageNumber</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordReader_1a722df636d4f17d66c908bb3433a0b1cf" prot="public" virt="virtual"><scope>apollo::cyber::record::RecordReader</scope><name>GetMessageType</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordReader_1a5618fb95fdcf0660dc9ebdff3a14a869" prot="public" virt="virtual"><scope>apollo::cyber::record::RecordReader</scope><name>GetProtoDesc</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordReader_1ada984304d256257ebb52211b22bc16b5" prot="public" virt="non-virtual"><scope>apollo::cyber::record::RecordReader</scope><name>header</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordBase_1af4b08d823c058d17eb38abe92d0ac7e7" prot="protected" virt="non-virtual"><scope>apollo::cyber::record::RecordReader</scope><name>header_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordReader_1ae635c9dafdc75111943a91e468c91cd1" prot="private" virt="non-virtual"><scope>apollo::cyber::record::RecordReader</scope><name>index_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordBase_1a122b01307f078dbb0e1baa5d57226c5f" prot="protected" virt="non-virtual"><scope>apollo::cyber::record::RecordReader</scope><name>is_opened_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordReader_1a7b09eca07e6b20666b8a7b260c528a60" prot="private" virt="non-virtual"><scope>apollo::cyber::record::RecordReader</scope><name>is_valid_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordReader_1aa36b991b065d89b0eaeab25f1537828d" prot="public" virt="non-virtual"><scope>apollo::cyber::record::RecordReader</scope><name>IsValid</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordReader_1abd93e0d06b76c3551a60e6d1dbe3e618" prot="private" virt="non-virtual"><scope>apollo::cyber::record::RecordReader</scope><name>message_index_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordBase_1a57cd95944aa2d3ddc216d3e9539db590" prot="protected" virt="non-virtual"><scope>apollo::cyber::record::RecordReader</scope><name>null_type_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordReader_1a16344f4c5f6fd93fdc159adf7dcd433c" prot="private" virt="non-virtual"><scope>apollo::cyber::record::RecordReader</scope><name>reach_end_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordReader_1a608943803f7feb1bdac5cf66477c4b0e" prot="public" virt="non-virtual"><scope>apollo::cyber::record::RecordReader</scope><name>ReadMessage</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordReader_1a5ee21479dcfbf60ee126a18a9481b0b4" prot="private" virt="non-virtual"><scope>apollo::cyber::record::RecordReader</scope><name>ReadNextChunk</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordReader_1aa87c1931b92dfde42e412d6ad9d6bf2f" prot="public" virt="non-virtual"><scope>apollo::cyber::record::RecordReader</scope><name>RecordReader</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordReader_1a1b397349667341f7d100f1a61eee6c3b" prot="public" virt="non-virtual"><scope>apollo::cyber::record::RecordReader</scope><name>Reset</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordBase_1a95c06bb77a60dfc827592777030f84de" prot="public" virt="virtual"><scope>apollo::cyber::record::RecordReader</scope><name>~RecordBase</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordReader_1ae4c7635d67b06eefabc036e6830458d7" prot="public" virt="virtual"><scope>apollo::cyber::record::RecordReader</scope><name>~RecordReader</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

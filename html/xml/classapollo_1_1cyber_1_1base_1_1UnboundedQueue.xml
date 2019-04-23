@@ -1,0 +1,208 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classapollo_1_1cyber_1_1base_1_1UnboundedQueue" kind="class" prot="public">
+    <compoundname>apollo::cyber::base::UnboundedQueue</compoundname>
+    <includes refid="unbounded__queue_8h" local="no">unbounded_queue.h</includes>
+    <innerclass refid="structapollo_1_1cyber_1_1base_1_1UnboundedQueue_1_1Node" prot="private">apollo::cyber::base::UnboundedQueue::Node</innerclass>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1base_1_1UnboundedQueue_1a7c0a5f75842513dc8d24006b1b8a3eae" prot="private" static="no" mutable="no">
+        <type>std::atomic&lt; <ref refid="structapollo_1_1cyber_1_1base_1_1UnboundedQueue_1_1Node" kindref="compound">Node</ref> * &gt;</type>
+        <definition>std::atomic&lt;Node*&gt; apollo::cyber::base::UnboundedQueue&lt; T &gt;::head_</definition>
+        <argsstring></argsstring>
+        <name>head_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/unbounded_queue.h" line="102" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/unbounded_queue.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1base_1_1UnboundedQueue_1a80ad0d76375f5c6d12108e93eaecb315" prot="private" static="no" mutable="no">
+        <type>std::atomic&lt; <ref refid="structapollo_1_1cyber_1_1base_1_1UnboundedQueue_1_1Node" kindref="compound">Node</ref> * &gt;</type>
+        <definition>std::atomic&lt;Node*&gt; apollo::cyber::base::UnboundedQueue&lt; T &gt;::tail_</definition>
+        <argsstring></argsstring>
+        <name>tail_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/unbounded_queue.h" line="103" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/unbounded_queue.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1base_1_1UnboundedQueue_1af8a71c42222607d17ed82706ca166e08" prot="private" static="no" mutable="no">
+        <type>std::atomic&lt; size_t &gt;</type>
+        <definition>std::atomic&lt;size_t&gt; apollo::cyber::base::UnboundedQueue&lt; T &gt;::size_</definition>
+        <argsstring></argsstring>
+        <name>size_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/unbounded_queue.h" line="104" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/unbounded_queue.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1base_1_1UnboundedQueue_1a4ed05702de2a1380547b9db09439ca86" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::base::UnboundedQueue&lt; T &gt;::UnboundedQueue</definition>
+        <argsstring>()</argsstring>
+        <name>UnboundedQueue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/unbounded_queue.h" line="32" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/unbounded_queue.h" bodystart="32" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1base_1_1UnboundedQueue_1a9121ebd82ee007ec07d9bc7ab201f00a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classapollo_1_1cyber_1_1base_1_1UnboundedQueue" kindref="compound">UnboundedQueue</ref> &amp;</type>
+        <definition>UnboundedQueue&amp; apollo::cyber::base::UnboundedQueue&lt; T &gt;::operator=</definition>
+        <argsstring>(const UnboundedQueue &amp;other)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classapollo_1_1cyber_1_1base_1_1UnboundedQueue" kindref="compound">UnboundedQueue</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/unbounded_queue.h" line="38" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1base_1_1UnboundedQueue_1a3ee4d400be23a70630a08487abef1f2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::base::UnboundedQueue&lt; T &gt;::UnboundedQueue</definition>
+        <argsstring>(const UnboundedQueue &amp;other)=delete</argsstring>
+        <name>UnboundedQueue</name>
+        <param>
+          <type>const <ref refid="classapollo_1_1cyber_1_1base_1_1UnboundedQueue" kindref="compound">UnboundedQueue</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/unbounded_queue.h" line="39" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1base_1_1UnboundedQueue_1aa2801eb47524124080686b11a207a074" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::base::UnboundedQueue&lt; T &gt;::~UnboundedQueue</definition>
+        <argsstring>()</argsstring>
+        <name>~UnboundedQueue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/unbounded_queue.h" line="41" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/unbounded_queue.h" bodystart="41" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1base_1_1UnboundedQueue_1a4fae8d8e2b261d505a303086e3907bf6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::base::UnboundedQueue&lt; T &gt;::Clear</definition>
+        <argsstring>()</argsstring>
+        <name>Clear</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/unbounded_queue.h" line="43" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/unbounded_queue.h" bodystart="43" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1base_1_1UnboundedQueue_1a449aa1a73e6a33cd8e1a5506fc2b2334" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::base::UnboundedQueue&lt; T &gt;::Enqueue</definition>
+        <argsstring>(const T &amp;element)</argsstring>
+        <name>Enqueue</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>element</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/unbounded_queue.h" line="53" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/unbounded_queue.h" bodystart="53" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1base_1_1UnboundedQueue_1a59dfffdb79da27f745c2bf067190d360" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::base::UnboundedQueue&lt; T &gt;::Dequeue</definition>
+        <argsstring>(T *element)</argsstring>
+        <name>Dequeue</name>
+        <param>
+          <type>T *</type>
+          <declname>element</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/unbounded_queue.h" line="68" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/unbounded_queue.h" bodystart="68" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1base_1_1UnboundedQueue_1a3eb8bea3e74d61667516d5984288a4d8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t apollo::cyber::base::UnboundedQueue&lt; T &gt;::Size</definition>
+        <argsstring>()</argsstring>
+        <name>Size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/unbounded_queue.h" line="84" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/unbounded_queue.h" bodystart="84" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1base_1_1UnboundedQueue_1a7ba37a0f3d6c5b6c7a9f8881af947635" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::base::UnboundedQueue&lt; T &gt;::Empty</definition>
+        <argsstring>()</argsstring>
+        <name>Empty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/unbounded_queue.h" line="86" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/unbounded_queue.h" bodystart="86" bodyend="86"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/work/apollo-fork/apollo/cyber/base/unbounded_queue.h" line="30" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/unbounded_queue.h" bodystart="30" bodyend="105"/>
+    <listofallmembers>
+      <member refid="classapollo_1_1cyber_1_1base_1_1UnboundedQueue_1a4fae8d8e2b261d505a303086e3907bf6" prot="public" virt="non-virtual"><scope>apollo::cyber::base::UnboundedQueue</scope><name>Clear</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1UnboundedQueue_1a59dfffdb79da27f745c2bf067190d360" prot="public" virt="non-virtual"><scope>apollo::cyber::base::UnboundedQueue</scope><name>Dequeue</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1UnboundedQueue_1a7ba37a0f3d6c5b6c7a9f8881af947635" prot="public" virt="non-virtual"><scope>apollo::cyber::base::UnboundedQueue</scope><name>Empty</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1UnboundedQueue_1a449aa1a73e6a33cd8e1a5506fc2b2334" prot="public" virt="non-virtual"><scope>apollo::cyber::base::UnboundedQueue</scope><name>Enqueue</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1UnboundedQueue_1a7c0a5f75842513dc8d24006b1b8a3eae" prot="private" virt="non-virtual"><scope>apollo::cyber::base::UnboundedQueue</scope><name>head_</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1UnboundedQueue_1a9121ebd82ee007ec07d9bc7ab201f00a" prot="public" virt="non-virtual"><scope>apollo::cyber::base::UnboundedQueue</scope><name>operator=</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1UnboundedQueue_1a3eb8bea3e74d61667516d5984288a4d8" prot="public" virt="non-virtual"><scope>apollo::cyber::base::UnboundedQueue</scope><name>Size</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1UnboundedQueue_1af8a71c42222607d17ed82706ca166e08" prot="private" virt="non-virtual"><scope>apollo::cyber::base::UnboundedQueue</scope><name>size_</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1UnboundedQueue_1a80ad0d76375f5c6d12108e93eaecb315" prot="private" virt="non-virtual"><scope>apollo::cyber::base::UnboundedQueue</scope><name>tail_</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1UnboundedQueue_1a4ed05702de2a1380547b9db09439ca86" prot="public" virt="non-virtual"><scope>apollo::cyber::base::UnboundedQueue</scope><name>UnboundedQueue</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1UnboundedQueue_1a3ee4d400be23a70630a08487abef1f2c" prot="public" virt="non-virtual"><scope>apollo::cyber::base::UnboundedQueue</scope><name>UnboundedQueue</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1UnboundedQueue_1aa2801eb47524124080686b11a207a074" prot="public" virt="non-virtual"><scope>apollo::cyber::base::UnboundedQueue</scope><name>~UnboundedQueue</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

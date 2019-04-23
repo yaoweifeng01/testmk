@@ -1,0 +1,163 @@
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1NodeManager}{\section{apollo\-:\-:cyber\-:\-:service\-\_\-discovery\-:\-:Node\-Manager Class Reference}
+\label{classapollo_1_1cyber_1_1service__discovery_1_1NodeManager}\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Node\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Node\-Manager}}
+}
+
+
+{\ttfamily \#include $<$node\-\_\-manager.\-h$>$}
+
+Inheritance diagram for apollo\-:\-:cyber\-:\-:service\-\_\-discovery\-:\-:Node\-Manager\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classapollo_1_1cyber_1_1service__discovery_1_1NodeManager}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1NodeManager_a796b7cfdc0e321399e31300f224d80e0}{Role\-Attr\-Vec} = std\-::vector$<$ Role\-Attributes $>$
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1NodeManager_a3482319db4df86634ca8459c794c3d0e}{Node\-Warehouse} = \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1SingleValueWarehouse}{Single\-Value\-Warehouse}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1NodeManager_aba168c7a1303300bfd95e5754583f38f}{Node\-Manager} ()
+\item 
+virtual \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1NodeManager_a22460c63286ab14c9610248e3d989a7c}{$\sim$\-Node\-Manager} ()
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1NodeManager_a90bd5fcc2d6bce0c78a27bd421262bf8}{Has\-Node} (const std\-::string \&node\-\_\-name)
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1NodeManager_a13ef3fdcf4c138dd984e0cfc1089ae3a}{Get\-Nodes} (\hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1NodeManager_a796b7cfdc0e321399e31300f224d80e0}{Role\-Attr\-Vec} $\ast$nodes)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1NodeManager_affa8f0c21cffc2ff647f6823acc928e2}{Check} (const Role\-Attributes \&attr) override
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1NodeManager_a908f3fca225735f0277f1a9801f71334}{Dispose} (const Change\-Msg \&msg) override
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1NodeManager_ae397dee1edf09f1c89bd546b36f6c3cf}{On\-Topo\-Module\-Leave} (const std\-::string \&host\-\_\-name, int process\-\_\-id) override
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1NodeManager_abfd94763b5059c77cfd761e53a2e7439}{Dispose\-Join} (const Change\-Msg \&msg)
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1NodeManager_accf089b16771c1d874c0293ce994f1cf}{Dispose\-Leave} (const Change\-Msg \&msg)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1NodeManager_a3482319db4df86634ca8459c794c3d0e}{Node\-Warehouse} \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1NodeManager_a62b25f2a35068e34963f8faa0faa9509}{nodes\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1NodeManager_ae83aaddaeb682129a07c148e01291cdd}{Topology\-Manager}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1NodeManager_a3482319db4df86634ca8459c794c3d0e}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Node\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Node\-Manager}!Node\-Warehouse@{Node\-Warehouse}}
+\index{Node\-Warehouse@{Node\-Warehouse}!apollo::cyber::service_discovery::NodeManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Node\-Manager}}
+\subsubsection[{Node\-Warehouse}]{\setlength{\rightskip}{0pt plus 5cm}using {\bf apollo\-::cyber\-::service\-\_\-discovery\-::\-Node\-Manager\-::\-Node\-Warehouse} =  {\bf Single\-Value\-Warehouse}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1NodeManager_a3482319db4df86634ca8459c794c3d0e}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1NodeManager_a796b7cfdc0e321399e31300f224d80e0}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Node\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Node\-Manager}!Role\-Attr\-Vec@{Role\-Attr\-Vec}}
+\index{Role\-Attr\-Vec@{Role\-Attr\-Vec}!apollo::cyber::service_discovery::NodeManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Node\-Manager}}
+\subsubsection[{Role\-Attr\-Vec}]{\setlength{\rightskip}{0pt plus 5cm}using {\bf apollo\-::cyber\-::service\-\_\-discovery\-::\-Node\-Manager\-::\-Role\-Attr\-Vec} =  std\-::vector$<$Role\-Attributes$>$}}\label{classapollo_1_1cyber_1_1service__discovery_1_1NodeManager_a796b7cfdc0e321399e31300f224d80e0}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1NodeManager_aba168c7a1303300bfd95e5754583f38f}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Node\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Node\-Manager}!Node\-Manager@{Node\-Manager}}
+\index{Node\-Manager@{Node\-Manager}!apollo::cyber::service_discovery::NodeManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Node\-Manager}}
+\subsubsection[{Node\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::service\-\_\-discovery\-::\-Node\-Manager\-::\-Node\-Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1service__discovery_1_1NodeManager_aba168c7a1303300bfd95e5754583f38f}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1NodeManager_a22460c63286ab14c9610248e3d989a7c}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Node\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Node\-Manager}!$\sim$\-Node\-Manager@{$\sim$\-Node\-Manager}}
+\index{$\sim$\-Node\-Manager@{$\sim$\-Node\-Manager}!apollo::cyber::service_discovery::NodeManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Node\-Manager}}
+\subsubsection[{$\sim$\-Node\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}virtual apollo\-::cyber\-::service\-\_\-discovery\-::\-Node\-Manager\-::$\sim$\-Node\-Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1NodeManager_a22460c63286ab14c9610248e3d989a7c}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1NodeManager_affa8f0c21cffc2ff647f6823acc928e2}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Node\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Node\-Manager}!Check@{Check}}
+\index{Check@{Check}!apollo::cyber::service_discovery::NodeManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Node\-Manager}}
+\subsubsection[{Check}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::service\-\_\-discovery\-::\-Node\-Manager\-::\-Check (
+\begin{DoxyParamCaption}
+\item[{const Role\-Attributes \&}]{attr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1NodeManager_affa8f0c21cffc2ff647f6823acc928e2}
+
+
+Implements \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1Manager_acfa0224581a6722daf4861f34e4c11ef}{apollo\-::cyber\-::service\-\_\-discovery\-::\-Manager}.
+
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1NodeManager_a908f3fca225735f0277f1a9801f71334}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Node\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Node\-Manager}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!apollo::cyber::service_discovery::NodeManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Node\-Manager}}
+\subsubsection[{Dispose}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::service\-\_\-discovery\-::\-Node\-Manager\-::\-Dispose (
+\begin{DoxyParamCaption}
+\item[{const Change\-Msg \&}]{msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1NodeManager_a908f3fca225735f0277f1a9801f71334}
+
+
+Implements \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1Manager_a6e36e4095291597364ce4b37ee1c897b}{apollo\-::cyber\-::service\-\_\-discovery\-::\-Manager}.
+
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1NodeManager_abfd94763b5059c77cfd761e53a2e7439}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Node\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Node\-Manager}!Dispose\-Join@{Dispose\-Join}}
+\index{Dispose\-Join@{Dispose\-Join}!apollo::cyber::service_discovery::NodeManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Node\-Manager}}
+\subsubsection[{Dispose\-Join}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::service\-\_\-discovery\-::\-Node\-Manager\-::\-Dispose\-Join (
+\begin{DoxyParamCaption}
+\item[{const Change\-Msg \&}]{msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1NodeManager_abfd94763b5059c77cfd761e53a2e7439}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1NodeManager_accf089b16771c1d874c0293ce994f1cf}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Node\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Node\-Manager}!Dispose\-Leave@{Dispose\-Leave}}
+\index{Dispose\-Leave@{Dispose\-Leave}!apollo::cyber::service_discovery::NodeManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Node\-Manager}}
+\subsubsection[{Dispose\-Leave}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::service\-\_\-discovery\-::\-Node\-Manager\-::\-Dispose\-Leave (
+\begin{DoxyParamCaption}
+\item[{const Change\-Msg \&}]{msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1NodeManager_accf089b16771c1d874c0293ce994f1cf}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1NodeManager_a13ef3fdcf4c138dd984e0cfc1089ae3a}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Node\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Node\-Manager}!Get\-Nodes@{Get\-Nodes}}
+\index{Get\-Nodes@{Get\-Nodes}!apollo::cyber::service_discovery::NodeManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Node\-Manager}}
+\subsubsection[{Get\-Nodes}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::service\-\_\-discovery\-::\-Node\-Manager\-::\-Get\-Nodes (
+\begin{DoxyParamCaption}
+\item[{{\bf Role\-Attr\-Vec} $\ast$}]{nodes}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1service__discovery_1_1NodeManager_a13ef3fdcf4c138dd984e0cfc1089ae3a}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1NodeManager_a90bd5fcc2d6bce0c78a27bd421262bf8}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Node\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Node\-Manager}!Has\-Node@{Has\-Node}}
+\index{Has\-Node@{Has\-Node}!apollo::cyber::service_discovery::NodeManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Node\-Manager}}
+\subsubsection[{Has\-Node}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::service\-\_\-discovery\-::\-Node\-Manager\-::\-Has\-Node (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{node\-\_\-name}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1service__discovery_1_1NodeManager_a90bd5fcc2d6bce0c78a27bd421262bf8}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1NodeManager_ae397dee1edf09f1c89bd546b36f6c3cf}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Node\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Node\-Manager}!On\-Topo\-Module\-Leave@{On\-Topo\-Module\-Leave}}
+\index{On\-Topo\-Module\-Leave@{On\-Topo\-Module\-Leave}!apollo::cyber::service_discovery::NodeManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Node\-Manager}}
+\subsubsection[{On\-Topo\-Module\-Leave}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::service\-\_\-discovery\-::\-Node\-Manager\-::\-On\-Topo\-Module\-Leave (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{host\-\_\-name, }
+\item[{int}]{process\-\_\-id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1NodeManager_ae397dee1edf09f1c89bd546b36f6c3cf}
+
+
+Implements \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1Manager_a95a679e0fc7904e6f1a8b2fdd139cc03}{apollo\-::cyber\-::service\-\_\-discovery\-::\-Manager}.
+
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1NodeManager_ae83aaddaeb682129a07c148e01291cdd}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Node\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Node\-Manager}!Topology\-Manager@{Topology\-Manager}}
+\index{Topology\-Manager@{Topology\-Manager}!apollo::cyber::service_discovery::NodeManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Node\-Manager}}
+\subsubsection[{Topology\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Topology\-Manager}\hspace{0.3cm}{\ttfamily [friend]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1NodeManager_ae83aaddaeb682129a07c148e01291cdd}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1NodeManager_a62b25f2a35068e34963f8faa0faa9509}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Node\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Node\-Manager}!nodes\-\_\-@{nodes\-\_\-}}
+\index{nodes\-\_\-@{nodes\-\_\-}!apollo::cyber::service_discovery::NodeManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Node\-Manager}}
+\subsubsection[{nodes\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Node\-Warehouse} apollo\-::cyber\-::service\-\_\-discovery\-::\-Node\-Manager\-::nodes\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1NodeManager_a62b25f2a35068e34963f8faa0faa9509}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+service\-\_\-discovery/specific\-\_\-manager/\hyperlink{node__manager_8h}{node\-\_\-manager.\-h}\end{DoxyCompactItemize}

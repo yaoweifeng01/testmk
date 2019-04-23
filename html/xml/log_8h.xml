@@ -1,0 +1,1379 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="log_8h" kind="file">
+    <compoundname>log.h</compoundname>
+    <includes local="no">stdarg.h</includes>
+    <includes refid="binary_8h" local="yes">cyber/binary.h</includes>
+    <includes local="yes">glog/logging.h</includes>
+    <includes local="yes">glog/raw_logging.h</includes>
+    <includedby refid="intra__reader_8h" local="yes">blocker/intra_reader.h</includedby>
+    <includedby refid="class__loader__utility_8h" local="yes">class_loader/utility/class_loader_utility.h</includedby>
+    <includedby refid="environment_8h" local="yes">common/environment.h</includedby>
+    <includedby refid="file_8h" local="yes">common/file.h</includedby>
+    <includedby refid="global__data_8h" local="yes">common/global_data.h</includedby>
+    <includedby refid="croutine_8h" local="yes">croutine/croutine.h</includedby>
+    <includedby refid="routine__context_8h" local="yes">croutine/detail/routine_context.h</includedby>
+    <includedby refid="routine__factory_8h" local="yes">croutine/routine_factory.h</includedby>
+    <includedby refid="cyber_8h" local="yes">cyber.h</includedby>
+    <includedby refid="channel__buffer_8h" local="yes">data/channel_buffer.h</includedby>
+    <includedby refid="data__dispatcher_8h" local="yes">data/data_dispatcher.h</includedby>
+    <includedby refid="data__notifier_8h" local="yes">data/data_notifier.h</includedby>
+    <includedby refid="data__visitor_8h" local="yes">data/data_visitor.h</includedby>
+    <includedby refid="data__visitor__base_8h" local="yes">data/data_visitor_base.h</includedby>
+    <includedby refid="init_8h" local="yes">init.h</includedby>
+    <includedby refid="module__argument_8h" local="yes">mainboard/module_argument.h</includedby>
+    <includedby refid="message__traits_8h" local="yes">message/message_traits.h</includedby>
+    <includedby refid="writer_8h" local="yes">node/writer.h</includedby>
+    <includedby refid="parameter_8h" local="yes">parameter/parameter.h</includedby>
+    <includedby refid="record__file__reader_8h" local="yes">record/file/record_file_reader.h</includedby>
+    <includedby refid="record__file__writer_8h" local="yes">record/file/record_file_writer.h</includedby>
+    <includedby refid="record__writer_8h" local="yes">record/record_writer.h</includedby>
+    <includedby refid="scheduler_8h" local="yes">scheduler/scheduler.h</includedby>
+    <includedby refid="client_8h" local="yes">service/client.h</includedby>
+    <includedby refid="state_8h" local="yes">state.h</includedby>
+    <includedby refid="recoverer_8h" local="yes">tools/cyber_recorder/recoverer.h</includedby>
+    <includedby refid="spliter_8h" local="yes">tools/cyber_recorder/spliter.h</includedby>
+    <includedby refid="dispatcher_8h" local="yes">transport/dispatcher/dispatcher.h</includedby>
+    <includedby refid="intra__dispatcher_8h" local="yes">transport/dispatcher/intra_dispatcher.h</includedby>
+    <includedby refid="rtps__dispatcher_8h" local="yes">transport/dispatcher/rtps_dispatcher.h</includedby>
+    <includedby refid="shm__dispatcher_8h" local="yes">transport/dispatcher/shm_dispatcher.h</includedby>
+    <includedby refid="listener__handler_8h" local="yes">transport/message/listener_handler.h</includedby>
+    <includedby refid="hybrid__receiver_8h" local="yes">transport/receiver/hybrid_receiver.h</includedby>
+    <includedby refid="intra__receiver_8h" local="yes">transport/receiver/intra_receiver.h</includedby>
+    <includedby refid="rtps__receiver_8h" local="yes">transport/receiver/rtps_receiver.h</includedby>
+    <includedby refid="shm__receiver_8h" local="yes">transport/receiver/shm_receiver.h</includedby>
+    <includedby refid="hybrid__transmitter_8h" local="yes">transport/transmitter/hybrid_transmitter.h</includedby>
+    <includedby refid="intra__transmitter_8h" local="yes">transport/transmitter/intra_transmitter.h</includedby>
+    <includedby refid="rtps__transmitter_8h" local="yes">transport/transmitter/rtps_transmitter.h</includedby>
+    <includedby refid="shm__transmitter_8h" local="yes">transport/transmitter/shm_transmitter.h</includedby>
+    <incdepgraph>
+      <node id="1683">
+        <label>stdarg.h</label>
+      </node>
+      <node id="1684">
+        <label>cyber/binary.h</label>
+        <link refid="binary_8h"/>
+        <childnode refid="1685" relation="include">
+        </childnode>
+      </node>
+      <node id="1686">
+        <label>glog/logging.h</label>
+      </node>
+      <node id="1685">
+        <label>string</label>
+      </node>
+      <node id="1682">
+        <label>common/log.h</label>
+        <link refid="log.h"/>
+        <childnode refid="1683" relation="include">
+        </childnode>
+        <childnode refid="1684" relation="include">
+        </childnode>
+        <childnode refid="1686" relation="include">
+        </childnode>
+        <childnode refid="1687" relation="include">
+        </childnode>
+      </node>
+      <node id="1687">
+        <label>glog/raw_logging.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1715">
+        <label>class_loader/utility/class_loader_utility.h</label>
+        <link refid="class__loader__utility_8h"/>
+        <childnode refid="1716" relation="include">
+        </childnode>
+      </node>
+      <node id="1717">
+        <label>class_loader/class_loader.h</label>
+        <link refid="class__loader_8h"/>
+        <childnode refid="1718" relation="include">
+        </childnode>
+        <childnode refid="1692" relation="include">
+        </childnode>
+        <childnode refid="1704" relation="include">
+        </childnode>
+        <childnode refid="1705" relation="include">
+        </childnode>
+      </node>
+      <node id="1782">
+        <label>state.h</label>
+        <link refid="state_8h"/>
+        <childnode refid="1740" relation="include">
+        </childnode>
+        <childnode refid="1770" relation="include">
+        </childnode>
+      </node>
+      <node id="1766">
+        <label>scheduler/policy/classic_context.h</label>
+        <link refid="classic__context_8h"/>
+      </node>
+      <node id="1698">
+        <label>py_wrapper/py_timer.h</label>
+        <link refid="py__timer_8h"/>
+      </node>
+      <node id="1696">
+        <label>py_wrapper/py_node.h</label>
+        <link refid="py__node_8h"/>
+      </node>
+      <node id="1709">
+        <label>tools/cyber_recorder/player/player.h</label>
+        <link refid="player_8h"/>
+      </node>
+      <node id="1775">
+        <label>py_wrapper/py_record.h</label>
+        <link refid="py__record_8h"/>
+      </node>
+      <node id="1689">
+        <label>blocker/intra_reader.h</label>
+        <link refid="intra__reader_8h"/>
+        <childnode refid="1690" relation="include">
+        </childnode>
+      </node>
+      <node id="1700">
+        <label>tools/cyber_monitor/general_message_base.h</label>
+        <link refid="general__message__base_8h"/>
+        <childnode refid="1701" relation="include">
+        </childnode>
+        <childnode refid="1702" relation="include">
+        </childnode>
+      </node>
+      <node id="1705">
+        <label>examples/timer_component_example/timer_component_example.h</label>
+        <link refid="timer__component__example_8h"/>
+      </node>
+      <node id="1758">
+        <label>transport/dispatcher/shm_dispatcher.h</label>
+        <link refid="shm__dispatcher_8h"/>
+        <childnode refid="1759" relation="include">
+        </childnode>
+        <childnode refid="1725" relation="include">
+        </childnode>
+      </node>
+      <node id="1772">
+        <label>parameter/parameter.h</label>
+        <link refid="parameter_8h"/>
+        <childnode refid="1712" relation="include">
+        </childnode>
+        <childnode refid="1714" relation="include">
+        </childnode>
+      </node>
+      <node id="1734">
+        <label>common/global_data.h</label>
+        <link refid="global__data_8h"/>
+        <childnode refid="1693" relation="include">
+        </childnode>
+        <childnode refid="1735" relation="include">
+        </childnode>
+        <childnode refid="1739" relation="include">
+        </childnode>
+        <childnode refid="1743" relation="include">
+        </childnode>
+        <childnode refid="1744" relation="include">
+        </childnode>
+        <childnode refid="1751" relation="include">
+        </childnode>
+        <childnode refid="1752" relation="include">
+        </childnode>
+        <childnode refid="1690" relation="include">
+        </childnode>
+        <childnode refid="1711" relation="include">
+        </childnode>
+        <childnode refid="1721" relation="include">
+        </childnode>
+        <childnode refid="1720" relation="include">
+        </childnode>
+        <childnode refid="1753" relation="include">
+        </childnode>
+        <childnode refid="1754" relation="include">
+        </childnode>
+        <childnode refid="1758" relation="include">
+        </childnode>
+        <childnode refid="1760" relation="include">
+        </childnode>
+        <childnode refid="1724" relation="include">
+        </childnode>
+        <childnode refid="1732" relation="include">
+        </childnode>
+        <childnode refid="1750" relation="include">
+        </childnode>
+      </node>
+      <node id="1695">
+        <label>py_wrapper/py_init.h</label>
+        <link refid="py__init_8h"/>
+      </node>
+      <node id="1765">
+        <label>scheduler/policy/choreography_context.h</label>
+        <link refid="choreography__context_8h"/>
+      </node>
+      <node id="1703">
+        <label>tools/cyber_recorder/recorder.h</label>
+        <link refid="recorder_8h"/>
+      </node>
+      <node id="1729">
+        <label>tools/cyber_recorder/player/play_task.h</label>
+        <link refid="play__task_8h"/>
+        <childnode refid="1730" relation="include">
+        </childnode>
+      </node>
+      <node id="1691">
+        <label>node/node.h</label>
+        <link refid="node_8h"/>
+        <childnode refid="1692" relation="include">
+        </childnode>
+        <childnode refid="1694" relation="include">
+        </childnode>
+        <childnode refid="1696" relation="include">
+        </childnode>
+        <childnode refid="1708" relation="include">
+        </childnode>
+      </node>
+      <node id="1783">
+        <label>transport/message/listener_handler.h</label>
+        <link refid="listener__handler_8h"/>
+        <childnode refid="1753" relation="include">
+        </childnode>
+      </node>
+      <node id="1736">
+        <label>scheduler/scheduler.h</label>
+        <link refid="scheduler_8h"/>
+        <childnode refid="1693" relation="include">
+        </childnode>
+        <childnode refid="1692" relation="include">
+        </childnode>
+        <childnode refid="1737" relation="include">
+        </childnode>
+        <childnode refid="1738" relation="include">
+        </childnode>
+        <childnode refid="1720" relation="include">
+        </childnode>
+        <childnode refid="1713" relation="include">
+        </childnode>
+      </node>
+      <node id="1690">
+        <label>node/node_channel_impl.h</label>
+        <link refid="node__channel__impl_8h"/>
+        <childnode refid="1691" relation="include">
+        </childnode>
+        <childnode refid="1710" relation="include">
+        </childnode>
+        <childnode refid="1713" relation="include">
+        </childnode>
+      </node>
+      <node id="1726">
+        <label>node/reader_base.h</label>
+        <link refid="reader__base_8h"/>
+        <childnode refid="1721" relation="include">
+        </childnode>
+      </node>
+      <node id="1694">
+        <label>cyber.h</label>
+        <link refid="cyber_8h"/>
+        <childnode refid="1695" relation="include">
+        </childnode>
+        <childnode refid="1696" relation="include">
+        </childnode>
+        <childnode refid="1697" relation="include">
+        </childnode>
+        <childnode refid="1698" relation="include">
+        </childnode>
+        <childnode refid="1699" relation="include">
+        </childnode>
+        <childnode refid="1700" relation="include">
+        </childnode>
+        <childnode refid="1702" relation="include">
+        </childnode>
+        <childnode refid="1703" relation="include">
+        </childnode>
+      </node>
+      <node id="1768">
+        <label>scheduler/processor_context.h</label>
+        <link refid="processor__context_8h"/>
+        <childnode refid="1765" relation="include">
+        </childnode>
+        <childnode refid="1766" relation="include">
+        </childnode>
+      </node>
+      <node id="1742">
+        <label>data/fusion/all_latest.h</label>
+        <link refid="all__latest_8h"/>
+        <childnode refid="1741" relation="include">
+        </childnode>
+      </node>
+      <node id="1712">
+        <label>parameter/parameter_client.h</label>
+        <link refid="parameter__client_8h"/>
+      </node>
+      <node id="1738">
+        <label>scheduler/policy/scheduler_classic.h</label>
+        <link refid="scheduler__classic_8h"/>
+        <childnode refid="1720" relation="include">
+        </childnode>
+      </node>
+      <node id="1735">
+        <label>croutine/routine_factory.h</label>
+        <link refid="routine__factory_8h"/>
+        <childnode refid="1693" relation="include">
+        </childnode>
+        <childnode refid="1721" relation="include">
+        </childnode>
+        <childnode refid="1736" relation="include">
+        </childnode>
+      </node>
+      <node id="1746">
+        <label>data/data_notifier.h</label>
+        <link refid="data__notifier_8h"/>
+        <childnode refid="1739" relation="include">
+        </childnode>
+        <childnode refid="1743" relation="include">
+        </childnode>
+      </node>
+      <node id="1749">
+        <label>transport/transmitter/rtps_transmitter.h</label>
+        <link refid="rtps__transmitter_8h"/>
+        <childnode refid="1732" relation="include">
+        </childnode>
+        <childnode refid="1725" relation="include">
+        </childnode>
+      </node>
+      <node id="1708">
+        <label>tools/cyber_recorder/player/play_task_producer.h</label>
+        <link refid="play__task__producer_8h"/>
+        <childnode refid="1709" relation="include">
+        </childnode>
+      </node>
+      <node id="1719">
+        <label>common/environment.h</label>
+        <link refid="environment_8h"/>
+        <childnode refid="1692" relation="include">
+        </childnode>
+        <childnode refid="1720" relation="include">
+        </childnode>
+      </node>
+      <node id="1779">
+        <label>tools/cyber_recorder/spliter.h</label>
+        <link refid="spliter_8h"/>
+      </node>
+      <node id="1751">
+        <label>logger/logger_util.h</label>
+        <link refid="logger__util_8h"/>
+      </node>
+      <node id="1780">
+        <label>record/file/record_file_writer.h</label>
+        <link refid="record__file__writer_8h"/>
+        <childnode refid="1781" relation="include">
+        </childnode>
+        <childnode refid="1778" relation="include">
+        </childnode>
+        <childnode refid="1779" relation="include">
+        </childnode>
+      </node>
+      <node id="1744">
+        <label>event/perf_event.h</label>
+        <link refid="perf__event_8h"/>
+        <childnode refid="1745" relation="include">
+        </childnode>
+      </node>
+      <node id="1748">
+        <label>transport/transmitter/intra_transmitter.h</label>
+        <link refid="intra__transmitter_8h"/>
+        <childnode refid="1732" relation="include">
+        </childnode>
+        <childnode refid="1725" relation="include">
+        </childnode>
+      </node>
+      <node id="1754">
+        <label>transport/dispatcher/intra_dispatcher.h</label>
+        <link refid="intra__dispatcher_8h"/>
+        <childnode refid="1755" relation="include">
+        </childnode>
+        <childnode refid="1748" relation="include">
+        </childnode>
+        <childnode refid="1725" relation="include">
+        </childnode>
+      </node>
+      <node id="1769">
+        <label>croutine/detail/routine_context.h</label>
+        <link refid="routine__context_8h"/>
+        <childnode refid="1762" relation="include">
+        </childnode>
+      </node>
+      <node id="1743">
+        <label>data/data_visitor_base.h</label>
+        <link refid="data__visitor__base_8h"/>
+        <childnode refid="1741" relation="include">
+        </childnode>
+      </node>
+      <node id="1699">
+        <label>py_wrapper/py_topology_manager.h</label>
+        <link refid="py__topology__manager_8h"/>
+      </node>
+      <node id="1733">
+        <label>common/file.h</label>
+        <link refid="file_8h"/>
+        <childnode refid="1692" relation="include">
+        </childnode>
+        <childnode refid="1720" relation="include">
+        </childnode>
+      </node>
+      <node id="1761">
+        <label>transport/receiver/receiver.h</label>
+        <link refid="receiver_8h"/>
+        <childnode refid="1755" relation="include">
+        </childnode>
+        <childnode refid="1757" relation="include">
+        </childnode>
+        <childnode refid="1759" relation="include">
+        </childnode>
+        <childnode refid="1725" relation="include">
+        </childnode>
+      </node>
+      <node id="1693">
+        <label>component/component.h</label>
+        <link refid="component_8h"/>
+        <childnode refid="1694" relation="include">
+        </childnode>
+        <childnode refid="1704" relation="include">
+        </childnode>
+        <childnode refid="1705" relation="include">
+        </childnode>
+        <childnode refid="1706" relation="include">
+        </childnode>
+      </node>
+      <node id="1720">
+        <label>scheduler/scheduler_factory.h</label>
+        <link refid="scheduler__factory_8h"/>
+        <childnode refid="1721" relation="include">
+        </childnode>
+        <childnode refid="1722" relation="include">
+        </childnode>
+      </node>
+      <node id="1756">
+        <label>transport/dispatcher/rtps_dispatcher.h</label>
+        <link refid="rtps__dispatcher_8h"/>
+        <childnode refid="1757" relation="include">
+        </childnode>
+        <childnode refid="1725" relation="include">
+        </childnode>
+      </node>
+      <node id="1777">
+        <label>tools/cyber_recorder/info.h</label>
+        <link refid="info_8h"/>
+      </node>
+      <node id="1740">
+        <label>data/data_dispatcher.h</label>
+        <link refid="data__dispatcher_8h"/>
+        <childnode refid="1741" relation="include">
+        </childnode>
+      </node>
+      <node id="1781">
+        <label>record/record_writer.h</label>
+        <link refid="record__writer_8h"/>
+        <childnode refid="1775" relation="include">
+        </childnode>
+        <childnode refid="1703" relation="include">
+        </childnode>
+      </node>
+      <node id="1724">
+        <label>transport/receiver/hybrid_receiver.h</label>
+        <link refid="hybrid__receiver_8h"/>
+        <childnode refid="1725" relation="include">
+        </childnode>
+      </node>
+      <node id="1711">
+        <label>node/node_service_impl.h</label>
+        <link refid="node__service__impl_8h"/>
+        <childnode refid="1691" relation="include">
+        </childnode>
+      </node>
+      <node id="1770">
+        <label>init.h</label>
+        <link refid="init_8h"/>
+        <childnode refid="1694" relation="include">
+        </childnode>
+        <childnode refid="1695" relation="include">
+        </childnode>
+        <childnode refid="1696" relation="include">
+        </childnode>
+        <childnode refid="1697" relation="include">
+        </childnode>
+        <childnode refid="1698" relation="include">
+        </childnode>
+        <childnode refid="1699" relation="include">
+        </childnode>
+      </node>
+      <node id="1731">
+        <label>tools/cyber_recorder/player/play_task_consumer.h</label>
+        <link refid="play__task__consumer_8h"/>
+        <childnode refid="1709" relation="include">
+        </childnode>
+      </node>
+      <node id="1714">
+        <label>parameter/parameter_server.h</label>
+        <link refid="parameter__server_8h"/>
+      </node>
+      <node id="1702">
+        <label>tools/cyber_monitor/general_message.h</label>
+        <link refid="general__message_8h"/>
+      </node>
+      <node id="1706">
+        <label>mainboard/module_controller.h</label>
+        <link refid="module__controller_8h"/>
+      </node>
+      <node id="1692">
+        <label>component/component_base.h</label>
+        <link refid="component__base_8h"/>
+        <childnode refid="1693" relation="include">
+        </childnode>
+        <childnode refid="1707" relation="include">
+        </childnode>
+      </node>
+      <node id="1722">
+        <label>task/task_manager.h</label>
+        <link refid="task__manager_8h"/>
+        <childnode refid="1723" relation="include">
+        </childnode>
+      </node>
+      <node id="1747">
+        <label>transport/transmitter/transmitter.h</label>
+        <link refid="transmitter_8h"/>
+        <childnode refid="1732" relation="include">
+        </childnode>
+        <childnode refid="1748" relation="include">
+        </childnode>
+        <childnode refid="1749" relation="include">
+        </childnode>
+        <childnode refid="1750" relation="include">
+        </childnode>
+        <childnode refid="1725" relation="include">
+        </childnode>
+      </node>
+      <node id="1767">
+        <label>scheduler/processor.h</label>
+        <link refid="processor_8h"/>
+      </node>
+      <node id="1764">
+        <label>io/session.h</label>
+        <link refid="session_8h"/>
+      </node>
+      <node id="1688">
+        <label>common/log.h</label>
+        <link refid="log.h"/>
+        <childnode refid="1689" relation="include">
+        </childnode>
+        <childnode refid="1715" relation="include">
+        </childnode>
+        <childnode refid="1719" relation="include">
+        </childnode>
+        <childnode refid="1733" relation="include">
+        </childnode>
+        <childnode refid="1734" relation="include">
+        </childnode>
+        <childnode refid="1762" relation="include">
+        </childnode>
+        <childnode refid="1769" relation="include">
+        </childnode>
+        <childnode refid="1735" relation="include">
+        </childnode>
+        <childnode refid="1694" relation="include">
+        </childnode>
+        <childnode refid="1739" relation="include">
+        </childnode>
+        <childnode refid="1740" relation="include">
+        </childnode>
+        <childnode refid="1746" relation="include">
+        </childnode>
+        <childnode refid="1741" relation="include">
+        </childnode>
+        <childnode refid="1743" relation="include">
+        </childnode>
+        <childnode refid="1770" relation="include">
+        </childnode>
+        <childnode refid="1752" relation="include">
+        </childnode>
+        <childnode refid="1771" relation="include">
+        </childnode>
+        <childnode refid="1727" relation="include">
+        </childnode>
+        <childnode refid="1772" relation="include">
+        </childnode>
+        <childnode refid="1773" relation="include">
+        </childnode>
+        <childnode refid="1780" relation="include">
+        </childnode>
+        <childnode refid="1781" relation="include">
+        </childnode>
+        <childnode refid="1736" relation="include">
+        </childnode>
+        <childnode refid="1710" relation="include">
+        </childnode>
+        <childnode refid="1782" relation="include">
+        </childnode>
+        <childnode refid="1778" relation="include">
+        </childnode>
+        <childnode refid="1779" relation="include">
+        </childnode>
+        <childnode refid="1753" relation="include">
+        </childnode>
+        <childnode refid="1754" relation="include">
+        </childnode>
+        <childnode refid="1756" relation="include">
+        </childnode>
+        <childnode refid="1758" relation="include">
+        </childnode>
+        <childnode refid="1783" relation="include">
+        </childnode>
+        <childnode refid="1724" relation="include">
+        </childnode>
+        <childnode refid="1755" relation="include">
+        </childnode>
+        <childnode refid="1757" relation="include">
+        </childnode>
+        <childnode refid="1759" relation="include">
+        </childnode>
+        <childnode refid="1732" relation="include">
+        </childnode>
+        <childnode refid="1748" relation="include">
+        </childnode>
+        <childnode refid="1749" relation="include">
+        </childnode>
+        <childnode refid="1750" relation="include">
+        </childnode>
+      </node>
+      <node id="1752">
+        <label>mainboard/module_argument.h</label>
+        <link refid="module__argument_8h"/>
+        <childnode refid="1706" relation="include">
+        </childnode>
+      </node>
+      <node id="1759">
+        <label>transport/receiver/shm_receiver.h</label>
+        <link refid="shm__receiver_8h"/>
+        <childnode refid="1724" relation="include">
+        </childnode>
+        <childnode refid="1725" relation="include">
+        </childnode>
+      </node>
+      <node id="1763">
+        <label>io/poll_handler.h</label>
+        <link refid="poll__handler_8h"/>
+        <childnode refid="1764" relation="include">
+        </childnode>
+      </node>
+      <node id="1774">
+        <label>record/record_reader.h</label>
+        <link refid="record__reader_8h"/>
+        <childnode refid="1775" relation="include">
+        </childnode>
+        <childnode refid="1776" relation="include">
+        </childnode>
+        <childnode refid="1708" relation="include">
+        </childnode>
+      </node>
+      <node id="1701">
+        <label>tools/cyber_monitor/general_channel_message.h</label>
+        <link refid="general__channel__message_8h"/>
+      </node>
+      <node id="1745">
+        <label>event/perf_event_cache.h</label>
+        <link refid="perf__event__cache_8h"/>
+        <childnode refid="1735" relation="include">
+        </childnode>
+        <childnode refid="1746" relation="include">
+        </childnode>
+        <childnode refid="1726" relation="include">
+        </childnode>
+        <childnode refid="1747" relation="include">
+        </childnode>
+      </node>
+      <node id="1750">
+        <label>transport/transmitter/shm_transmitter.h</label>
+        <link refid="shm__transmitter_8h"/>
+        <childnode refid="1732" relation="include">
+        </childnode>
+        <childnode refid="1725" relation="include">
+        </childnode>
+      </node>
+      <node id="1727">
+        <label>node/writer.h</label>
+        <link refid="writer_8h"/>
+        <childnode refid="1728" relation="include">
+        </childnode>
+        <childnode refid="1690" relation="include">
+        </childnode>
+        <childnode refid="1696" relation="include">
+        </childnode>
+        <childnode refid="1729" relation="include">
+        </childnode>
+        <childnode refid="1708" relation="include">
+        </childnode>
+      </node>
+      <node id="1741">
+        <label>data/data_visitor.h</label>
+        <link refid="data__visitor_8h"/>
+        <childnode refid="1693" relation="include">
+        </childnode>
+        <childnode refid="1735" relation="include">
+        </childnode>
+        <childnode refid="1721" relation="include">
+        </childnode>
+      </node>
+      <node id="1707">
+        <label>component/timer_component.h</label>
+        <link refid="timer__component_8h"/>
+        <childnode refid="1705" relation="include">
+        </childnode>
+      </node>
+      <node id="1778">
+        <label>tools/cyber_recorder/recoverer.h</label>
+        <link refid="recoverer_8h"/>
+      </node>
+      <node id="1721">
+        <label>node/reader.h</label>
+        <link refid="reader_8h"/>
+        <childnode refid="1689" relation="include">
+        </childnode>
+        <childnode refid="1690" relation="include">
+        </childnode>
+        <childnode refid="1696" relation="include">
+        </childnode>
+      </node>
+      <node id="1757">
+        <label>transport/receiver/rtps_receiver.h</label>
+        <link refid="rtps__receiver_8h"/>
+        <childnode refid="1724" relation="include">
+        </childnode>
+        <childnode refid="1725" relation="include">
+        </childnode>
+      </node>
+      <node id="1710">
+        <label>service/client.h</label>
+        <link refid="client_8h"/>
+        <childnode refid="1711" relation="include">
+        </childnode>
+        <childnode refid="1712" relation="include">
+        </childnode>
+      </node>
+      <node id="1728">
+        <label>blocker/intra_writer.h</label>
+        <link refid="intra__writer_8h"/>
+        <childnode refid="1690" relation="include">
+        </childnode>
+      </node>
+      <node id="1773">
+        <label>record/file/record_file_reader.h</label>
+        <link refid="record__file__reader_8h"/>
+        <childnode refid="1774" relation="include">
+        </childnode>
+        <childnode refid="1777" relation="include">
+        </childnode>
+        <childnode refid="1778" relation="include">
+        </childnode>
+        <childnode refid="1779" relation="include">
+        </childnode>
+      </node>
+      <node id="1753">
+        <label>transport/dispatcher/dispatcher.h</label>
+        <link refid="dispatcher_8h"/>
+        <childnode refid="1754" relation="include">
+        </childnode>
+        <childnode refid="1756" relation="include">
+        </childnode>
+        <childnode refid="1758" relation="include">
+        </childnode>
+      </node>
+      <node id="1725">
+        <label>transport/transport.h</label>
+        <link refid="transport_8h"/>
+        <childnode refid="1721" relation="include">
+        </childnode>
+        <childnode refid="1726" relation="include">
+        </childnode>
+        <childnode refid="1727" relation="include">
+        </childnode>
+      </node>
+      <node id="1718">
+        <label>class_loader/class_loader_manager.h</label>
+        <link refid="class__loader__manager_8h"/>
+        <childnode refid="1706" relation="include">
+        </childnode>
+      </node>
+      <node id="1760">
+        <label>transport/message/history.h</label>
+        <link refid="history_8h"/>
+        <childnode refid="1761" relation="include">
+        </childnode>
+        <childnode refid="1732" relation="include">
+        </childnode>
+      </node>
+      <node id="1716">
+        <label>class_loader/class_loader_register_macro.h</label>
+        <link refid="class__loader__register__macro_8h"/>
+        <childnode refid="1717" relation="include">
+        </childnode>
+      </node>
+      <node id="1776">
+        <label>record/record_viewer.h</label>
+        <link refid="record__viewer_8h"/>
+      </node>
+      <node id="1704">
+        <label>examples/common_component_example/common_component_example.h</label>
+        <link refid="common__component__example_8h"/>
+      </node>
+      <node id="1771">
+        <label>message/message_traits.h</label>
+        <link refid="message__traits_8h"/>
+        <childnode refid="1690" relation="include">
+        </childnode>
+        <childnode refid="1754" relation="include">
+        </childnode>
+        <childnode refid="1756" relation="include">
+        </childnode>
+        <childnode refid="1758" relation="include">
+        </childnode>
+        <childnode refid="1749" relation="include">
+        </childnode>
+        <childnode refid="1750" relation="include">
+        </childnode>
+      </node>
+      <node id="1732">
+        <label>transport/transmitter/hybrid_transmitter.h</label>
+        <link refid="hybrid__transmitter_8h"/>
+        <childnode refid="1725" relation="include">
+        </childnode>
+      </node>
+      <node id="1739">
+        <label>data/channel_buffer.h</label>
+        <link refid="channel__buffer_8h"/>
+        <childnode refid="1740" relation="include">
+        </childnode>
+        <childnode refid="1741" relation="include">
+        </childnode>
+        <childnode refid="1742" relation="include">
+        </childnode>
+      </node>
+      <node id="1755">
+        <label>transport/receiver/intra_receiver.h</label>
+        <link refid="intra__receiver_8h"/>
+        <childnode refid="1724" relation="include">
+        </childnode>
+        <childnode refid="1725" relation="include">
+        </childnode>
+      </node>
+      <node id="1713">
+        <label>service/service.h</label>
+        <link refid="service_8h"/>
+        <childnode refid="1711" relation="include">
+        </childnode>
+        <childnode refid="1714" relation="include">
+        </childnode>
+      </node>
+      <node id="1737">
+        <label>scheduler/policy/scheduler_choreography.h</label>
+        <link refid="scheduler__choreography_8h"/>
+        <childnode refid="1720" relation="include">
+        </childnode>
+      </node>
+      <node id="1723">
+        <label>task/task.h</label>
+        <link refid="task_8h"/>
+        <childnode refid="1694" relation="include">
+        </childnode>
+        <childnode refid="1724" relation="include">
+        </childnode>
+        <childnode refid="1732" relation="include">
+        </childnode>
+      </node>
+      <node id="1697">
+        <label>py_wrapper/py_time.h</label>
+        <link refid="py__time_8h"/>
+      </node>
+      <node id="1762">
+        <label>croutine/croutine.h</label>
+        <link refid="croutine_8h"/>
+        <childnode refid="1735" relation="include">
+        </childnode>
+        <childnode refid="1763" relation="include">
+        </childnode>
+        <childnode refid="1765" relation="include">
+        </childnode>
+        <childnode refid="1766" relation="include">
+        </childnode>
+        <childnode refid="1737" relation="include">
+        </childnode>
+        <childnode refid="1738" relation="include">
+        </childnode>
+        <childnode refid="1767" relation="include">
+        </childnode>
+        <childnode refid="1768" relation="include">
+        </childnode>
+        <childnode refid="1736" relation="include">
+        </childnode>
+      </node>
+      <node id="1730">
+        <label>tools/cyber_recorder/player/play_task_buffer.h</label>
+        <link refid="play__task__buffer_8h"/>
+        <childnode refid="1731" relation="include">
+        </childnode>
+        <childnode refid="1708" relation="include">
+        </childnode>
+        <childnode refid="1709" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="log_8h_1a06b0e1e8ddcfd2814093f36c89b22c9f" prot="public" static="no">
+        <name>LEFT_BRACKET</name>
+        <initializer>&quot;[&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/common/log.h" line="30" column="9" bodyfile="/home/work/apollo-fork/apollo/cyber/common/log.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="log_8h_1a16e508532d8c4c3111ae31ff25076955" prot="public" static="no">
+        <name>RIGHT_BRACKET</name>
+        <initializer>&quot;] &quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/common/log.h" line="31" column="9" bodyfile="/home/work/apollo-fork/apollo/cyber/common/log.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="log_8h_1a14ded244c47bbba850a8a4be6d16c7e3" prot="public" static="no">
+        <name>MODULE_NAME</name>
+        <initializer><ref refid="classapollo_1_1cyber_1_1Binary_1a50d15e631b94618a48cb83daaadf6478" kindref="member">apollo::cyber::Binary::GetName</ref>().c_str()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/common/log.h" line="34" column="9" bodyfile="/home/work/apollo-fork/apollo/cyber/common/log.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="log_8h_1a69757a0a471cbc15b61466c16dcc076a" prot="public" static="no">
+        <name>ADEBUG_MODULE</name>
+        <param><defname>module</defname></param>
+        <initializer>VLOG(4) &lt;&lt; <ref refid="log_8h_1a06b0e1e8ddcfd2814093f36c89b22c9f" kindref="member">LEFT_BRACKET</ref> &lt;&lt; <ref refid="log_8h_1a14ded244c47bbba850a8a4be6d16c7e3" kindref="member">MODULE_NAME</ref> &lt;&lt; <ref refid="log_8h_1a16e508532d8c4c3111ae31ff25076955" kindref="member">RIGHT_BRACKET</ref> &lt;&lt; &quot;[DEBUG] &quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/common/log.h" line="37" column="9" bodyfile="/home/work/apollo-fork/apollo/cyber/common/log.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="log_8h_1a60e57c8fd39594209e4a91527cda7aa2" prot="public" static="no">
+        <name>ADEBUG</name>
+        <initializer><ref refid="log_8h_1a69757a0a471cbc15b61466c16dcc076a" kindref="member">ADEBUG_MODULE</ref>(<ref refid="log_8h_1a14ded244c47bbba850a8a4be6d16c7e3" kindref="member">MODULE_NAME</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/common/log.h" line="39" column="9" bodyfile="/home/work/apollo-fork/apollo/cyber/common/log.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="log_8h_1af1a972c64154fbc2f9b56766c89add01" prot="public" static="no">
+        <name>AINFO</name>
+        <initializer><ref refid="log_8h_1ab6942659714de0a0ef81e74459a18aea" kindref="member">ALOG_MODULE</ref>(<ref refid="log_8h_1a14ded244c47bbba850a8a4be6d16c7e3" kindref="member">MODULE_NAME</ref>, INFO)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/common/log.h" line="40" column="9" bodyfile="/home/work/apollo-fork/apollo/cyber/common/log.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="log_8h_1af620ea1a7c081ef231428d61fb6eb0b9" prot="public" static="no">
+        <name>AWARN</name>
+        <initializer><ref refid="log_8h_1ab6942659714de0a0ef81e74459a18aea" kindref="member">ALOG_MODULE</ref>(<ref refid="log_8h_1a14ded244c47bbba850a8a4be6d16c7e3" kindref="member">MODULE_NAME</ref>, WARN)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/common/log.h" line="41" column="9" bodyfile="/home/work/apollo-fork/apollo/cyber/common/log.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="log_8h_1a6f0289102fe6b16c585ca7d18eae701e" prot="public" static="no">
+        <name>AERROR</name>
+        <initializer><ref refid="log_8h_1ab6942659714de0a0ef81e74459a18aea" kindref="member">ALOG_MODULE</ref>(<ref refid="log_8h_1a14ded244c47bbba850a8a4be6d16c7e3" kindref="member">MODULE_NAME</ref>, ERROR)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/common/log.h" line="42" column="9" bodyfile="/home/work/apollo-fork/apollo/cyber/common/log.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="log_8h_1aef229602e267b24ff76e53abd2ab1d0b" prot="public" static="no">
+        <name>AFATAL</name>
+        <initializer><ref refid="log_8h_1ab6942659714de0a0ef81e74459a18aea" kindref="member">ALOG_MODULE</ref>(<ref refid="log_8h_1a14ded244c47bbba850a8a4be6d16c7e3" kindref="member">MODULE_NAME</ref>, FATAL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/common/log.h" line="43" column="9" bodyfile="/home/work/apollo-fork/apollo/cyber/common/log.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="log_8h_1aedf27550cdbbcc6dca517f76c5472472" prot="public" static="no">
+        <name>ALOG_MODULE_STREAM</name>
+        <param><defname>log_severity</defname></param>
+        <initializer>ALOG_MODULE_STREAM_##log_severity</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/common/log.h" line="46" column="9" bodyfile="/home/work/apollo-fork/apollo/cyber/common/log.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="log_8h_1ab6942659714de0a0ef81e74459a18aea" prot="public" static="no">
+        <name>ALOG_MODULE</name>
+        <param><defname>module</defname></param>
+        <param><defname>log_severity</defname></param>
+        <initializer><ref refid="log_8h_1aedf27550cdbbcc6dca517f76c5472472" kindref="member">ALOG_MODULE_STREAM</ref>(log_severity)(module)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/common/log.h" line="50" column="9" bodyfile="/home/work/apollo-fork/apollo/cyber/common/log.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="log_8h_1a8dcd8a81060f06ccd37618a1349779a1" prot="public" static="no">
+        <name>ALOG_MODULE_STREAM_INFO</name>
+        <param><defname>module</defname></param>
+        <initializer>google::LogMessage(__FILE__, __LINE__, google::INFO).stream() \
+      &lt;&lt; <ref refid="log_8h_1a06b0e1e8ddcfd2814093f36c89b22c9f" kindref="member">LEFT_BRACKET</ref> &lt;&lt; module &lt;&lt; <ref refid="log_8h_1a16e508532d8c4c3111ae31ff25076955" kindref="member">RIGHT_BRACKET</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/common/log.h" line="54" column="9" bodyfile="/home/work/apollo-fork/apollo/cyber/common/log.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="log_8h_1a84632050849abf87d49e4c751c5c8899" prot="public" static="no">
+        <name>ALOG_MODULE_STREAM_WARN</name>
+        <param><defname>module</defname></param>
+        <initializer>google::LogMessage(__FILE__, __LINE__, google::WARNING).stream() \
+      &lt;&lt; <ref refid="log_8h_1a06b0e1e8ddcfd2814093f36c89b22c9f" kindref="member">LEFT_BRACKET</ref> &lt;&lt; module &lt;&lt; <ref refid="log_8h_1a16e508532d8c4c3111ae31ff25076955" kindref="member">RIGHT_BRACKET</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/common/log.h" line="58" column="9" bodyfile="/home/work/apollo-fork/apollo/cyber/common/log.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="log_8h_1a1e116bbcd19b37e84c162f65c4d24268" prot="public" static="no">
+        <name>ALOG_MODULE_STREAM_ERROR</name>
+        <param><defname>module</defname></param>
+        <initializer>google::LogMessage(__FILE__, __LINE__, google::ERROR).stream() \
+      &lt;&lt; <ref refid="log_8h_1a06b0e1e8ddcfd2814093f36c89b22c9f" kindref="member">LEFT_BRACKET</ref> &lt;&lt; module &lt;&lt; <ref refid="log_8h_1a16e508532d8c4c3111ae31ff25076955" kindref="member">RIGHT_BRACKET</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/common/log.h" line="62" column="9" bodyfile="/home/work/apollo-fork/apollo/cyber/common/log.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="log_8h_1a31df74f8c9e1f5e00c4cf3b62af40a3b" prot="public" static="no">
+        <name>ALOG_MODULE_STREAM_FATAL</name>
+        <param><defname>module</defname></param>
+        <initializer>google::LogMessage(__FILE__, __LINE__, google::FATAL).stream() \
+      &lt;&lt; <ref refid="log_8h_1a06b0e1e8ddcfd2814093f36c89b22c9f" kindref="member">LEFT_BRACKET</ref> &lt;&lt; module &lt;&lt; <ref refid="log_8h_1a16e508532d8c4c3111ae31ff25076955" kindref="member">RIGHT_BRACKET</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/common/log.h" line="66" column="9" bodyfile="/home/work/apollo-fork/apollo/cyber/common/log.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="log_8h_1aa099b160ce0a218f3be2e2e4cef35e5b" prot="public" static="no">
+        <name>AINFO_IF</name>
+        <param><defname>cond</defname></param>
+        <initializer><ref refid="log_8h_1a21c61202f06cdecf6ac3ea4345bb74b0" kindref="member">ALOG_IF</ref>(INFO, cond, <ref refid="log_8h_1a14ded244c47bbba850a8a4be6d16c7e3" kindref="member">MODULE_NAME</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/common/log.h" line="70" column="9" bodyfile="/home/work/apollo-fork/apollo/cyber/common/log.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="log_8h_1a90914189475828af797d855923224e20" prot="public" static="no">
+        <name>AWARN_IF</name>
+        <param><defname>cond</defname></param>
+        <initializer><ref refid="log_8h_1a21c61202f06cdecf6ac3ea4345bb74b0" kindref="member">ALOG_IF</ref>(WARN, cond, <ref refid="log_8h_1a14ded244c47bbba850a8a4be6d16c7e3" kindref="member">MODULE_NAME</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/common/log.h" line="71" column="9" bodyfile="/home/work/apollo-fork/apollo/cyber/common/log.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="log_8h_1ace2f1fa1061e03a2ae820c1064384e2b" prot="public" static="no">
+        <name>AERROR_IF</name>
+        <param><defname>cond</defname></param>
+        <initializer><ref refid="log_8h_1a21c61202f06cdecf6ac3ea4345bb74b0" kindref="member">ALOG_IF</ref>(ERROR, cond, <ref refid="log_8h_1a14ded244c47bbba850a8a4be6d16c7e3" kindref="member">MODULE_NAME</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/common/log.h" line="72" column="9" bodyfile="/home/work/apollo-fork/apollo/cyber/common/log.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="log_8h_1a21c61202f06cdecf6ac3ea4345bb74b0" prot="public" static="no">
+        <name>ALOG_IF</name>
+        <param><defname>severity</defname></param>
+        <param><defname>cond</defname></param>
+        <param><defname>module</defname></param>
+        <initializer>!(cond) ? (void)0                     \
+          : google::LogMessageVoidify() &amp; <ref refid="log_8h_1ab6942659714de0a0ef81e74459a18aea" kindref="member">ALOG_MODULE</ref>(module, severity)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/common/log.h" line="73" column="9" bodyfile="/home/work/apollo-fork/apollo/cyber/common/log.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="log_8h_1a435b49f7a6132a35b996a9125bd13a45" prot="public" static="no">
+        <name>ACHECK</name>
+        <param><defname>cond</defname></param>
+        <initializer>CHECK(cond) &lt;&lt; <ref refid="log_8h_1a06b0e1e8ddcfd2814093f36c89b22c9f" kindref="member">LEFT_BRACKET</ref> &lt;&lt; <ref refid="log_8h_1a14ded244c47bbba850a8a4be6d16c7e3" kindref="member">MODULE_NAME</ref> &lt;&lt; <ref refid="log_8h_1a16e508532d8c4c3111ae31ff25076955" kindref="member">RIGHT_BRACKET</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/common/log.h" line="77" column="9" bodyfile="/home/work/apollo-fork/apollo/cyber/common/log.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="log_8h_1a6a484d4fdcb13115ee328903f6999841" prot="public" static="no">
+        <name>AINFO_EVERY</name>
+        <param><defname>freq</defname></param>
+        <initializer>LOG_EVERY_N(INFO, freq) &lt;&lt; <ref refid="log_8h_1a06b0e1e8ddcfd2814093f36c89b22c9f" kindref="member">LEFT_BRACKET</ref> &lt;&lt; <ref refid="log_8h_1a14ded244c47bbba850a8a4be6d16c7e3" kindref="member">MODULE_NAME</ref> &lt;&lt; <ref refid="log_8h_1a16e508532d8c4c3111ae31ff25076955" kindref="member">RIGHT_BRACKET</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/common/log.h" line="79" column="9" bodyfile="/home/work/apollo-fork/apollo/cyber/common/log.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="log_8h_1ac0a40434519cbccc0f0d9b6a65873b14" prot="public" static="no">
+        <name>AWARN_EVERY</name>
+        <param><defname>freq</defname></param>
+        <initializer>LOG_EVERY_N(WARNING, freq) &lt;&lt; <ref refid="log_8h_1a06b0e1e8ddcfd2814093f36c89b22c9f" kindref="member">LEFT_BRACKET</ref> &lt;&lt; <ref refid="log_8h_1a14ded244c47bbba850a8a4be6d16c7e3" kindref="member">MODULE_NAME</ref> &lt;&lt; <ref refid="log_8h_1a16e508532d8c4c3111ae31ff25076955" kindref="member">RIGHT_BRACKET</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/common/log.h" line="81" column="9" bodyfile="/home/work/apollo-fork/apollo/cyber/common/log.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="log_8h_1aa001adbb1038173db631737dccfeb71d" prot="public" static="no">
+        <name>AERROR_EVERY</name>
+        <param><defname>freq</defname></param>
+        <initializer>LOG_EVERY_N(ERROR, freq) &lt;&lt; <ref refid="log_8h_1a06b0e1e8ddcfd2814093f36c89b22c9f" kindref="member">LEFT_BRACKET</ref> &lt;&lt; <ref refid="log_8h_1a14ded244c47bbba850a8a4be6d16c7e3" kindref="member">MODULE_NAME</ref> &lt;&lt; <ref refid="log_8h_1a16e508532d8c4c3111ae31ff25076955" kindref="member">RIGHT_BRACKET</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/common/log.h" line="83" column="9" bodyfile="/home/work/apollo-fork/apollo/cyber/common/log.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="log_8h_1a2ca3c85499cd15c074d1ad060e24ae7b" prot="public" static="no">
+        <name>RETURN_IF_NULL</name>
+        <param><defname>ptr</defname></param>
+        <initializer>if (ptr == nullptr) {              \
+    <ref refid="log_8h_1af620ea1a7c081ef231428d61fb6eb0b9" kindref="member">AWARN</ref> &lt;&lt; #ptr &lt;&lt; &quot; is nullptr.&quot;; \
+    return;                          \
+  }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/common/log.h" line="86" column="9" bodyfile="/home/work/apollo-fork/apollo/cyber/common/log.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="log_8h_1a1b6ceb6c99079f0a79e486e614717821" prot="public" static="no">
+        <name>RETURN_VAL_IF_NULL</name>
+        <param><defname>ptr</defname></param>
+        <param><defname>val</defname></param>
+        <initializer>if (ptr == nullptr) {              \
+    <ref refid="log_8h_1af620ea1a7c081ef231428d61fb6eb0b9" kindref="member">AWARN</ref> &lt;&lt; #ptr &lt;&lt; &quot; is nullptr.&quot;; \
+    return val;                      \
+  }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/common/log.h" line="92" column="9" bodyfile="/home/work/apollo-fork/apollo/cyber/common/log.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="log_8h_1a7268d48c9ee6c4a4389adb69283ed28c" prot="public" static="no">
+        <name>RETURN_IF</name>
+        <param><defname>condition</defname></param>
+        <initializer>if (condition) {                         \
+    <ref refid="log_8h_1af620ea1a7c081ef231428d61fb6eb0b9" kindref="member">AWARN</ref> &lt;&lt; #condition &lt;&lt; &quot; is not met.&quot;; \
+    return;                                \
+  }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/common/log.h" line="98" column="9" bodyfile="/home/work/apollo-fork/apollo/cyber/common/log.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="log_8h_1a49ca310f5cfa3c491ed674835ca1272f" prot="public" static="no">
+        <name>RETURN_VAL_IF</name>
+        <param><defname>condition</defname></param>
+        <param><defname>val</defname></param>
+        <initializer>if (condition) {                         \
+    <ref refid="log_8h_1af620ea1a7c081ef231428d61fb6eb0b9" kindref="member">AWARN</ref> &lt;&lt; #condition &lt;&lt; &quot; is not met.&quot;; \
+    return val;                            \
+  }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/common/log.h" line="104" column="9" bodyfile="/home/work/apollo-fork/apollo/cyber/common/log.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2018<sp/>The<sp/>Apollo<sp/>Authors.<sp/>All<sp/>Rights<sp/>Reserved.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="preprocessor">#ifndef<sp/>CYBER_COMMON_LOG_H_</highlight></codeline>
+<codeline lineno="22"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CYBER_COMMON_LOG_H_</highlight></codeline>
+<codeline lineno="23"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdarg.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="binary_8h" kindref="compound">cyber/binary.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;glog/logging.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;glog/raw_logging.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="log_8h_1a06b0e1e8ddcfd2814093f36c89b22c9f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LEFT_BRACKET<sp/>&quot;[&quot;</highlight></codeline>
+<codeline lineno="31" refid="log_8h_1a16e508532d8c4c3111ae31ff25076955" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>RIGHT_BRACKET<sp/>&quot;]<sp/>&quot;</highlight></codeline>
+<codeline lineno="32"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MODULE_NAME</highlight></codeline>
+<codeline lineno="34" refid="log_8h_1a14ded244c47bbba850a8a4be6d16c7e3" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MODULE_NAME<sp/>apollo::cyber::Binary::GetName().c_str()</highlight></codeline>
+<codeline lineno="35"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="36"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="log_8h_1a69757a0a471cbc15b61466c16dcc076a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADEBUG_MODULE(module)<sp/>\</highlight></codeline>
+<codeline lineno="38"><highlight class="preprocessor"><sp/><sp/>VLOG(4)<sp/>&lt;&lt;<sp/>LEFT_BRACKET<sp/>&lt;&lt;<sp/>MODULE_NAME<sp/>&lt;&lt;<sp/>RIGHT_BRACKET<sp/>&lt;&lt;<sp/>&quot;[DEBUG]<sp/>&quot;</highlight></codeline>
+<codeline lineno="39" refid="log_8h_1a60e57c8fd39594209e4a91527cda7aa2" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>ADEBUG<sp/>ADEBUG_MODULE(MODULE_NAME)</highlight></codeline>
+<codeline lineno="40" refid="log_8h_1af1a972c64154fbc2f9b56766c89add01" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>AINFO<sp/>ALOG_MODULE(MODULE_NAME,<sp/>INFO)</highlight></codeline>
+<codeline lineno="41" refid="log_8h_1af620ea1a7c081ef231428d61fb6eb0b9" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>AWARN<sp/>ALOG_MODULE(MODULE_NAME,<sp/>WARN)</highlight></codeline>
+<codeline lineno="42" refid="log_8h_1a6f0289102fe6b16c585ca7d18eae701e" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>AERROR<sp/>ALOG_MODULE(MODULE_NAME,<sp/>ERROR)</highlight></codeline>
+<codeline lineno="43" refid="log_8h_1aef229602e267b24ff76e53abd2ab1d0b" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>AFATAL<sp/>ALOG_MODULE(MODULE_NAME,<sp/>FATAL)</highlight></codeline>
+<codeline lineno="44"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>ALOG_MODULE_STREAM</highlight></codeline>
+<codeline lineno="46" refid="log_8h_1aedf27550cdbbcc6dca517f76c5472472" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>ALOG_MODULE_STREAM(log_severity)<sp/>ALOG_MODULE_STREAM_##log_severity</highlight></codeline>
+<codeline lineno="47"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="48"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>ALOG_MODULE</highlight></codeline>
+<codeline lineno="50" refid="log_8h_1ab6942659714de0a0ef81e74459a18aea" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>ALOG_MODULE(module,<sp/>log_severity)<sp/>\</highlight></codeline>
+<codeline lineno="51"><highlight class="preprocessor"><sp/><sp/>ALOG_MODULE_STREAM(log_severity)(module)</highlight></codeline>
+<codeline lineno="52"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="53"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="log_8h_1a8dcd8a81060f06ccd37618a1349779a1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ALOG_MODULE_STREAM_INFO(module)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="55"><highlight class="preprocessor"><sp/><sp/>google::LogMessage(__FILE__,<sp/>__LINE__,<sp/>google::INFO).stream()<sp/>\</highlight></codeline>
+<codeline lineno="56"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>LEFT_BRACKET<sp/>&lt;&lt;<sp/>module<sp/>&lt;&lt;<sp/>RIGHT_BRACKET</highlight></codeline>
+<codeline lineno="57"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="log_8h_1a84632050849abf87d49e4c751c5c8899" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ALOG_MODULE_STREAM_WARN(module)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="59"><highlight class="preprocessor"><sp/><sp/>google::LogMessage(__FILE__,<sp/>__LINE__,<sp/>google::WARNING).stream()<sp/>\</highlight></codeline>
+<codeline lineno="60"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>LEFT_BRACKET<sp/>&lt;&lt;<sp/>module<sp/>&lt;&lt;<sp/>RIGHT_BRACKET</highlight></codeline>
+<codeline lineno="61"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="log_8h_1a1e116bbcd19b37e84c162f65c4d24268" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ALOG_MODULE_STREAM_ERROR(module)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="63"><highlight class="preprocessor"><sp/><sp/>google::LogMessage(__FILE__,<sp/>__LINE__,<sp/>google::ERROR).stream()<sp/>\</highlight></codeline>
+<codeline lineno="64"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>LEFT_BRACKET<sp/>&lt;&lt;<sp/>module<sp/>&lt;&lt;<sp/>RIGHT_BRACKET</highlight></codeline>
+<codeline lineno="65"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="log_8h_1a31df74f8c9e1f5e00c4cf3b62af40a3b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ALOG_MODULE_STREAM_FATAL(module)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="67"><highlight class="preprocessor"><sp/><sp/>google::LogMessage(__FILE__,<sp/>__LINE__,<sp/>google::FATAL).stream()<sp/>\</highlight></codeline>
+<codeline lineno="68"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>LEFT_BRACKET<sp/>&lt;&lt;<sp/>module<sp/>&lt;&lt;<sp/>RIGHT_BRACKET</highlight></codeline>
+<codeline lineno="69"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="log_8h_1aa099b160ce0a218f3be2e2e4cef35e5b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AINFO_IF(cond)<sp/>ALOG_IF(INFO,<sp/>cond,<sp/>MODULE_NAME)</highlight></codeline>
+<codeline lineno="71" refid="log_8h_1a90914189475828af797d855923224e20" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>AWARN_IF(cond)<sp/>ALOG_IF(WARN,<sp/>cond,<sp/>MODULE_NAME)</highlight></codeline>
+<codeline lineno="72" refid="log_8h_1ace2f1fa1061e03a2ae820c1064384e2b" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>AERROR_IF(cond)<sp/>ALOG_IF(ERROR,<sp/>cond,<sp/>MODULE_NAME)</highlight></codeline>
+<codeline lineno="73" refid="log_8h_1a21c61202f06cdecf6ac3ea4345bb74b0" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>ALOG_IF(severity,<sp/>cond,<sp/>module)<sp/>\</highlight></codeline>
+<codeline lineno="74"><highlight class="preprocessor"><sp/><sp/>!(cond)<sp/>?<sp/>(void)0<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="75"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>google::LogMessageVoidify()<sp/>&amp;<sp/>ALOG_MODULE(module,<sp/>severity)</highlight></codeline>
+<codeline lineno="76"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="log_8h_1a435b49f7a6132a35b996a9125bd13a45" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ACHECK(cond)<sp/>CHECK(cond)<sp/>&lt;&lt;<sp/>LEFT_BRACKET<sp/>&lt;&lt;<sp/>MODULE_NAME<sp/>&lt;&lt;<sp/>RIGHT_BRACKET</highlight></codeline>
+<codeline lineno="78"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="log_8h_1a6a484d4fdcb13115ee328903f6999841" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AINFO_EVERY(freq)<sp/>\</highlight></codeline>
+<codeline lineno="80"><highlight class="preprocessor"><sp/><sp/>LOG_EVERY_N(INFO,<sp/>freq)<sp/>&lt;&lt;<sp/>LEFT_BRACKET<sp/>&lt;&lt;<sp/>MODULE_NAME<sp/>&lt;&lt;<sp/>RIGHT_BRACKET</highlight></codeline>
+<codeline lineno="81" refid="log_8h_1ac0a40434519cbccc0f0d9b6a65873b14" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>AWARN_EVERY(freq)<sp/>\</highlight></codeline>
+<codeline lineno="82"><highlight class="preprocessor"><sp/><sp/>LOG_EVERY_N(WARNING,<sp/>freq)<sp/>&lt;&lt;<sp/>LEFT_BRACKET<sp/>&lt;&lt;<sp/>MODULE_NAME<sp/>&lt;&lt;<sp/>RIGHT_BRACKET</highlight></codeline>
+<codeline lineno="83" refid="log_8h_1aa001adbb1038173db631737dccfeb71d" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>AERROR_EVERY(freq)<sp/>\</highlight></codeline>
+<codeline lineno="84"><highlight class="preprocessor"><sp/><sp/>LOG_EVERY_N(ERROR,<sp/>freq)<sp/>&lt;&lt;<sp/>LEFT_BRACKET<sp/>&lt;&lt;<sp/>MODULE_NAME<sp/>&lt;&lt;<sp/>RIGHT_BRACKET</highlight></codeline>
+<codeline lineno="85"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="log_8h_1a2ca3c85499cd15c074d1ad060e24ae7b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RETURN_IF_NULL(ptr)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="87"><highlight class="preprocessor"><sp/><sp/>if<sp/>(ptr<sp/>==<sp/>nullptr)<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="88"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>AWARN<sp/>&lt;&lt;<sp/>#ptr<sp/>&lt;&lt;<sp/>&quot;<sp/>is<sp/>nullptr.&quot;;<sp/>\</highlight></codeline>
+<codeline lineno="89"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>return;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="90"><highlight class="preprocessor"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="91"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="log_8h_1a1b6ceb6c99079f0a79e486e614717821" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RETURN_VAL_IF_NULL(ptr,<sp/>val)<sp/>\</highlight></codeline>
+<codeline lineno="93"><highlight class="preprocessor"><sp/><sp/>if<sp/>(ptr<sp/>==<sp/>nullptr)<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="94"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>AWARN<sp/>&lt;&lt;<sp/>#ptr<sp/>&lt;&lt;<sp/>&quot;<sp/>is<sp/>nullptr.&quot;;<sp/>\</highlight></codeline>
+<codeline lineno="95"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>return<sp/>val;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="96"><highlight class="preprocessor"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="97"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98" refid="log_8h_1a7268d48c9ee6c4a4389adb69283ed28c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RETURN_IF(condition)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="99"><highlight class="preprocessor"><sp/><sp/>if<sp/>(condition)<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="100"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>AWARN<sp/>&lt;&lt;<sp/>#condition<sp/>&lt;&lt;<sp/>&quot;<sp/>is<sp/>not<sp/>met.&quot;;<sp/>\</highlight></codeline>
+<codeline lineno="101"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>return;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="102"><highlight class="preprocessor"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="103"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104" refid="log_8h_1a49ca310f5cfa3c491ed674835ca1272f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RETURN_VAL_IF(condition,<sp/>val)<sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="105"><highlight class="preprocessor"><sp/><sp/>if<sp/>(condition)<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="106"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>AWARN<sp/>&lt;&lt;<sp/>#condition<sp/>&lt;&lt;<sp/>&quot;<sp/>is<sp/>not<sp/>met.&quot;;<sp/>\</highlight></codeline>
+<codeline lineno="107"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>return<sp/>val;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="108"><highlight class="preprocessor"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>CYBER_COMMON_LOG_H_</highlight></codeline>
+    </programlisting>
+    <location file="/home/work/apollo-fork/apollo/cyber/common/log.h"/>
+  </compounddef>
+</doxygen>

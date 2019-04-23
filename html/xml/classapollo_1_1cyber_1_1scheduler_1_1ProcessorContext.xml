@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classapollo_1_1cyber_1_1scheduler_1_1ProcessorContext" kind="class" prot="public" abstract="yes">
+    <compoundname>apollo::cyber::scheduler::ProcessorContext</compoundname>
+    <derivedcompoundref refid="classapollo_1_1cyber_1_1scheduler_1_1ChoreographyContext" prot="public" virt="non-virtual">apollo::cyber::scheduler::ChoreographyContext</derivedcompoundref>
+    <derivedcompoundref refid="classapollo_1_1cyber_1_1scheduler_1_1ClassicContext" prot="public" virt="non-virtual">apollo::cyber::scheduler::ClassicContext</derivedcompoundref>
+    <includes refid="processor__context_8h" local="no">processor_context.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1scheduler_1_1ProcessorContext_1a19eebaac060d52fb252077f59762a97e" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool apollo::cyber::scheduler::ProcessorContext::stop_</definition>
+        <argsstring></argsstring>
+        <name>stop_</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/scheduler/processor_context.h" line="42" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/scheduler/processor_context.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1scheduler_1_1ProcessorContext_1ad4e0ac53246d1d65b4d14a1f438715e3" prot="protected" static="no" mutable="no">
+        <type>std::atomic_flag</type>
+        <definition>std::atomic_flag apollo::cyber::scheduler::ProcessorContext::notified_</definition>
+        <argsstring></argsstring>
+        <name>notified_</name>
+        <initializer>= ATOMIC_FLAG_INIT</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/scheduler/processor_context.h" line="43" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/scheduler/processor_context.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1scheduler_1_1ProcessorContext_1ab36b8e9524ea0e02cba88b7d4e0e3079" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void apollo::cyber::scheduler::ProcessorContext::Shutdown</definition>
+        <argsstring>()</argsstring>
+        <name>Shutdown</name>
+        <reimplementedby refid="classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_1aa6c94b93d17fb4f546c8f2f7e74f832a">Shutdown</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/scheduler/processor_context.h" line="37" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1scheduler_1_1ProcessorContext_1a0923b50903b11612234355566ab573e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::shared_ptr&lt; <ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine" kindref="compound">CRoutine</ref> &gt;</type>
+        <definition>virtual std::shared_ptr&lt;CRoutine&gt; apollo::cyber::scheduler::ProcessorContext::NextRoutine</definition>
+        <argsstring>()=0</argsstring>
+        <name>NextRoutine</name>
+        <reimplementedby refid="classapollo_1_1cyber_1_1scheduler_1_1ChoreographyContext_1aab1c6b9f912a43e1339fa99f2e3631b6">NextRoutine</reimplementedby>
+        <reimplementedby refid="classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_1a6a9ffd7b5fb645a97b7daf93d4973025">NextRoutine</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/scheduler/processor_context.h" line="38" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1scheduler_1_1ProcessorContext_1a0a2e1914277be7a5fe81f459c83b6644" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void apollo::cyber::scheduler::ProcessorContext::Wait</definition>
+        <argsstring>()=0</argsstring>
+        <name>Wait</name>
+        <reimplementedby refid="classapollo_1_1cyber_1_1scheduler_1_1ChoreographyContext_1a895fb1717d71bb0e53abfdc5f9a7a768">Wait</reimplementedby>
+        <reimplementedby refid="classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_1ac32e655ea3689a0bc06c9003852fd0a3">Wait</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/scheduler/processor_context.h" line="39" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="582">
+        <label>apollo::cyber::scheduler::ClassicContext</label>
+        <link refid="classapollo_1_1cyber_1_1scheduler_1_1ClassicContext"/>
+        <childnode refid="580" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="581">
+        <label>apollo::cyber::scheduler::ChoreographyContext</label>
+        <link refid="classapollo_1_1cyber_1_1scheduler_1_1ChoreographyContext"/>
+        <childnode refid="580" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="580">
+        <label>apollo::cyber::scheduler::ProcessorContext</label>
+        <link refid="classapollo_1_1cyber_1_1scheduler_1_1ProcessorContext"/>
+      </node>
+    </inheritancegraph>
+    <location file="/home/work/apollo-fork/apollo/cyber/scheduler/processor_context.h" line="35" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/scheduler/processor_context.h" bodystart="35" bodyend="44"/>
+    <listofallmembers>
+      <member refid="classapollo_1_1cyber_1_1scheduler_1_1ProcessorContext_1a0923b50903b11612234355566ab573e0" prot="public" virt="pure-virtual"><scope>apollo::cyber::scheduler::ProcessorContext</scope><name>NextRoutine</name></member>
+      <member refid="classapollo_1_1cyber_1_1scheduler_1_1ProcessorContext_1ad4e0ac53246d1d65b4d14a1f438715e3" prot="protected" virt="non-virtual"><scope>apollo::cyber::scheduler::ProcessorContext</scope><name>notified_</name></member>
+      <member refid="classapollo_1_1cyber_1_1scheduler_1_1ProcessorContext_1ab36b8e9524ea0e02cba88b7d4e0e3079" prot="public" virt="virtual"><scope>apollo::cyber::scheduler::ProcessorContext</scope><name>Shutdown</name></member>
+      <member refid="classapollo_1_1cyber_1_1scheduler_1_1ProcessorContext_1a19eebaac060d52fb252077f59762a97e" prot="protected" virt="non-virtual"><scope>apollo::cyber::scheduler::ProcessorContext</scope><name>stop_</name></member>
+      <member refid="classapollo_1_1cyber_1_1scheduler_1_1ProcessorContext_1a0a2e1914277be7a5fe81f459c83b6644" prot="public" virt="pure-virtual"><scope>apollo::cyber::scheduler::ProcessorContext</scope><name>Wait</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

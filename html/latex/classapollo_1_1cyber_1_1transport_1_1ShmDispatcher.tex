@@ -1,0 +1,170 @@
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1ShmDispatcher}{\section{apollo\-:\-:cyber\-:\-:transport\-:\-:Shm\-Dispatcher Class Reference}
+\label{classapollo_1_1cyber_1_1transport_1_1ShmDispatcher}\index{apollo\-::cyber\-::transport\-::\-Shm\-Dispatcher@{apollo\-::cyber\-::transport\-::\-Shm\-Dispatcher}}
+}
+
+
+{\ttfamily \#include $<$shm\-\_\-dispatcher.\-h$>$}
+
+Inheritance diagram for apollo\-:\-:cyber\-:\-:transport\-:\-:Shm\-Dispatcher\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classapollo_1_1cyber_1_1transport_1_1ShmDispatcher}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_af4b802d682732bf22e6f0d04fe0bb620}{Segment\-Container} = std\-::unordered\-\_\-map$<$ uint64\-\_\-t, \hyperlink{namespaceapollo_1_1cyber_1_1transport_ae92e21f5ec6b011ba398cd6907465406}{Segment\-Ptr} $>$
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_a10fe3a6434f0385a11ca390dc7037503}{$\sim$\-Shm\-Dispatcher} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_a8924e420134ea725eb03a680bb98abd7}{Shutdown} () override
+\item 
+{\footnotesize template$<$typename Message\-T $>$ }\\void \hyperlink{classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_a752dd5b2c4f1b566d32160937161063d}{Add\-Listener} (const Role\-Attributes \&self\-\_\-attr, const \hyperlink{namespaceapollo_1_1cyber_1_1transport_aade3f4d41770972ae44166cdde27e2d8}{Message\-Listener}$<$ Message\-T $>$ \&listener)
+\item 
+{\footnotesize template$<$typename Message\-T $>$ }\\void \hyperlink{classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_a5f2ee158930e0225422f75d5e72c71b6}{Add\-Listener} (const Role\-Attributes \&self\-\_\-attr, const Role\-Attributes \&opposite\-\_\-attr, const \hyperlink{namespaceapollo_1_1cyber_1_1transport_aade3f4d41770972ae44166cdde27e2d8}{Message\-Listener}$<$ Message\-T $>$ \&listener)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_a30b5a72d09a9f2e490011763bc434ef4}{Add\-Segment} (const Role\-Attributes \&self\-\_\-attr)
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_a379e1e4f7c592f606b3f1e0e39333c64}{Read\-Message} (uint64\-\_\-t channel\-\_\-id, uint32\-\_\-t block\-\_\-index)
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_ac91a401dc4c06f6e00cb33c5be24ab20}{On\-Message} (uint64\-\_\-t channel\-\_\-id, const std\-::shared\-\_\-ptr$<$ \hyperlink{namespaceapollo_1_1cyber_1_1transport_a38f70b996ac896a1bc06d4598f1d0070}{Readable\-Block} $>$ \&rb, const \hyperlink{classapollo_1_1cyber_1_1transport_1_1MessageInfo}{Message\-Info} \&msg\-\_\-info)
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_a7d6e4e96c0604330fb2aea3284d5d362}{Thread\-Func} ()
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_affe533d42be32ee45ffc80630c24111a}{Init} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint64\-\_\-t \hyperlink{classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_a82f0599420023c170f75a7416d64cbae}{host\-\_\-id\-\_\-}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_af4b802d682732bf22e6f0d04fe0bb620}{Segment\-Container} \hyperlink{classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_a8b86c460d2e97b8930092bb6ab340e8c}{segments\-\_\-}
+\item 
+std\-::unordered\-\_\-map$<$ uint64\-\_\-t, \\*
+uint32\-\_\-t $>$ \hyperlink{classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_a47df1c1d054a9cc0c90c7d01233eee1f}{previous\-\_\-indexes\-\_\-}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1base_1_1AtomicRWLock}{Atomic\-R\-W\-Lock} \hyperlink{classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_a23aa8263a8498b815f2b60afff385abd}{segments\-\_\-lock\-\_\-}
+\item 
+std\-::thread \hyperlink{classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_a88cab9f1044db26107a7e44fb9a7955b}{thread\-\_\-}
+\item 
+\hyperlink{namespaceapollo_1_1cyber_1_1transport_ad7de1bbf34457c17c4d04b9bbfe152b4}{Notifier\-Ptr} \hyperlink{classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_a2ca1a561c8b73f6f41f32422eb466eaa}{notifier\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_af4b802d682732bf22e6f0d04fe0bb620}{\index{apollo\-::cyber\-::transport\-::\-Shm\-Dispatcher@{apollo\-::cyber\-::transport\-::\-Shm\-Dispatcher}!Segment\-Container@{Segment\-Container}}
+\index{Segment\-Container@{Segment\-Container}!apollo::cyber::transport::ShmDispatcher@{apollo\-::cyber\-::transport\-::\-Shm\-Dispatcher}}
+\subsubsection[{Segment\-Container}]{\setlength{\rightskip}{0pt plus 5cm}using {\bf apollo\-::cyber\-::transport\-::\-Shm\-Dispatcher\-::\-Segment\-Container} =  std\-::unordered\-\_\-map$<$uint64\-\_\-t, {\bf Segment\-Ptr}$>$}}\label{classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_af4b802d682732bf22e6f0d04fe0bb620}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_a10fe3a6434f0385a11ca390dc7037503}{\index{apollo\-::cyber\-::transport\-::\-Shm\-Dispatcher@{apollo\-::cyber\-::transport\-::\-Shm\-Dispatcher}!$\sim$\-Shm\-Dispatcher@{$\sim$\-Shm\-Dispatcher}}
+\index{$\sim$\-Shm\-Dispatcher@{$\sim$\-Shm\-Dispatcher}!apollo::cyber::transport::ShmDispatcher@{apollo\-::cyber\-::transport\-::\-Shm\-Dispatcher}}
+\subsubsection[{$\sim$\-Shm\-Dispatcher}]{\setlength{\rightskip}{0pt plus 5cm}virtual apollo\-::cyber\-::transport\-::\-Shm\-Dispatcher\-::$\sim$\-Shm\-Dispatcher (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_a10fe3a6434f0385a11ca390dc7037503}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_a752dd5b2c4f1b566d32160937161063d}{\index{apollo\-::cyber\-::transport\-::\-Shm\-Dispatcher@{apollo\-::cyber\-::transport\-::\-Shm\-Dispatcher}!Add\-Listener@{Add\-Listener}}
+\index{Add\-Listener@{Add\-Listener}!apollo::cyber::transport::ShmDispatcher@{apollo\-::cyber\-::transport\-::\-Shm\-Dispatcher}}
+\subsubsection[{Add\-Listener}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Message\-T $>$ void apollo\-::cyber\-::transport\-::\-Shm\-Dispatcher\-::\-Add\-Listener (
+\begin{DoxyParamCaption}
+\item[{const Role\-Attributes \&}]{self\-\_\-attr, }
+\item[{const {\bf Message\-Listener}$<$ Message\-T $>$ \&}]{listener}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_a752dd5b2c4f1b566d32160937161063d}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_a5f2ee158930e0225422f75d5e72c71b6}{\index{apollo\-::cyber\-::transport\-::\-Shm\-Dispatcher@{apollo\-::cyber\-::transport\-::\-Shm\-Dispatcher}!Add\-Listener@{Add\-Listener}}
+\index{Add\-Listener@{Add\-Listener}!apollo::cyber::transport::ShmDispatcher@{apollo\-::cyber\-::transport\-::\-Shm\-Dispatcher}}
+\subsubsection[{Add\-Listener}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Message\-T $>$ void apollo\-::cyber\-::transport\-::\-Shm\-Dispatcher\-::\-Add\-Listener (
+\begin{DoxyParamCaption}
+\item[{const Role\-Attributes \&}]{self\-\_\-attr, }
+\item[{const Role\-Attributes \&}]{opposite\-\_\-attr, }
+\item[{const {\bf Message\-Listener}$<$ Message\-T $>$ \&}]{listener}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_a5f2ee158930e0225422f75d5e72c71b6}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_a30b5a72d09a9f2e490011763bc434ef4}{\index{apollo\-::cyber\-::transport\-::\-Shm\-Dispatcher@{apollo\-::cyber\-::transport\-::\-Shm\-Dispatcher}!Add\-Segment@{Add\-Segment}}
+\index{Add\-Segment@{Add\-Segment}!apollo::cyber::transport::ShmDispatcher@{apollo\-::cyber\-::transport\-::\-Shm\-Dispatcher}}
+\subsubsection[{Add\-Segment}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::transport\-::\-Shm\-Dispatcher\-::\-Add\-Segment (
+\begin{DoxyParamCaption}
+\item[{const Role\-Attributes \&}]{self\-\_\-attr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_a30b5a72d09a9f2e490011763bc434ef4}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_affe533d42be32ee45ffc80630c24111a}{\index{apollo\-::cyber\-::transport\-::\-Shm\-Dispatcher@{apollo\-::cyber\-::transport\-::\-Shm\-Dispatcher}!Init@{Init}}
+\index{Init@{Init}!apollo::cyber::transport::ShmDispatcher@{apollo\-::cyber\-::transport\-::\-Shm\-Dispatcher}}
+\subsubsection[{Init}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::transport\-::\-Shm\-Dispatcher\-::\-Init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_affe533d42be32ee45ffc80630c24111a}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_ac91a401dc4c06f6e00cb33c5be24ab20}{\index{apollo\-::cyber\-::transport\-::\-Shm\-Dispatcher@{apollo\-::cyber\-::transport\-::\-Shm\-Dispatcher}!On\-Message@{On\-Message}}
+\index{On\-Message@{On\-Message}!apollo::cyber::transport::ShmDispatcher@{apollo\-::cyber\-::transport\-::\-Shm\-Dispatcher}}
+\subsubsection[{On\-Message}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::transport\-::\-Shm\-Dispatcher\-::\-On\-Message (
+\begin{DoxyParamCaption}
+\item[{uint64\-\_\-t}]{channel\-\_\-id, }
+\item[{const std\-::shared\-\_\-ptr$<$ {\bf Readable\-Block} $>$ \&}]{rb, }
+\item[{const {\bf Message\-Info} \&}]{msg\-\_\-info}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_ac91a401dc4c06f6e00cb33c5be24ab20}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_a379e1e4f7c592f606b3f1e0e39333c64}{\index{apollo\-::cyber\-::transport\-::\-Shm\-Dispatcher@{apollo\-::cyber\-::transport\-::\-Shm\-Dispatcher}!Read\-Message@{Read\-Message}}
+\index{Read\-Message@{Read\-Message}!apollo::cyber::transport::ShmDispatcher@{apollo\-::cyber\-::transport\-::\-Shm\-Dispatcher}}
+\subsubsection[{Read\-Message}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::transport\-::\-Shm\-Dispatcher\-::\-Read\-Message (
+\begin{DoxyParamCaption}
+\item[{uint64\-\_\-t}]{channel\-\_\-id, }
+\item[{uint32\-\_\-t}]{block\-\_\-index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_a379e1e4f7c592f606b3f1e0e39333c64}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_a8924e420134ea725eb03a680bb98abd7}{\index{apollo\-::cyber\-::transport\-::\-Shm\-Dispatcher@{apollo\-::cyber\-::transport\-::\-Shm\-Dispatcher}!Shutdown@{Shutdown}}
+\index{Shutdown@{Shutdown}!apollo::cyber::transport::ShmDispatcher@{apollo\-::cyber\-::transport\-::\-Shm\-Dispatcher}}
+\subsubsection[{Shutdown}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::transport\-::\-Shm\-Dispatcher\-::\-Shutdown (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_a8924e420134ea725eb03a680bb98abd7}
+
+
+Reimplemented from \hyperlink{classapollo_1_1cyber_1_1transport_1_1Dispatcher_a87c80d37d0b6218218ad888888ad0d08}{apollo\-::cyber\-::transport\-::\-Dispatcher}.
+
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_a7d6e4e96c0604330fb2aea3284d5d362}{\index{apollo\-::cyber\-::transport\-::\-Shm\-Dispatcher@{apollo\-::cyber\-::transport\-::\-Shm\-Dispatcher}!Thread\-Func@{Thread\-Func}}
+\index{Thread\-Func@{Thread\-Func}!apollo::cyber::transport::ShmDispatcher@{apollo\-::cyber\-::transport\-::\-Shm\-Dispatcher}}
+\subsubsection[{Thread\-Func}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::transport\-::\-Shm\-Dispatcher\-::\-Thread\-Func (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_a7d6e4e96c0604330fb2aea3284d5d362}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_a82f0599420023c170f75a7416d64cbae}{\index{apollo\-::cyber\-::transport\-::\-Shm\-Dispatcher@{apollo\-::cyber\-::transport\-::\-Shm\-Dispatcher}!host\-\_\-id\-\_\-@{host\-\_\-id\-\_\-}}
+\index{host\-\_\-id\-\_\-@{host\-\_\-id\-\_\-}!apollo::cyber::transport::ShmDispatcher@{apollo\-::cyber\-::transport\-::\-Shm\-Dispatcher}}
+\subsubsection[{host\-\_\-id\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}uint64\-\_\-t apollo\-::cyber\-::transport\-::\-Shm\-Dispatcher\-::host\-\_\-id\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_a82f0599420023c170f75a7416d64cbae}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_a2ca1a561c8b73f6f41f32422eb466eaa}{\index{apollo\-::cyber\-::transport\-::\-Shm\-Dispatcher@{apollo\-::cyber\-::transport\-::\-Shm\-Dispatcher}!notifier\-\_\-@{notifier\-\_\-}}
+\index{notifier\-\_\-@{notifier\-\_\-}!apollo::cyber::transport::ShmDispatcher@{apollo\-::cyber\-::transport\-::\-Shm\-Dispatcher}}
+\subsubsection[{notifier\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Notifier\-Ptr} apollo\-::cyber\-::transport\-::\-Shm\-Dispatcher\-::notifier\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_a2ca1a561c8b73f6f41f32422eb466eaa}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_a47df1c1d054a9cc0c90c7d01233eee1f}{\index{apollo\-::cyber\-::transport\-::\-Shm\-Dispatcher@{apollo\-::cyber\-::transport\-::\-Shm\-Dispatcher}!previous\-\_\-indexes\-\_\-@{previous\-\_\-indexes\-\_\-}}
+\index{previous\-\_\-indexes\-\_\-@{previous\-\_\-indexes\-\_\-}!apollo::cyber::transport::ShmDispatcher@{apollo\-::cyber\-::transport\-::\-Shm\-Dispatcher}}
+\subsubsection[{previous\-\_\-indexes\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::unordered\-\_\-map$<$uint64\-\_\-t, uint32\-\_\-t$>$ apollo\-::cyber\-::transport\-::\-Shm\-Dispatcher\-::previous\-\_\-indexes\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_a47df1c1d054a9cc0c90c7d01233eee1f}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_a8b86c460d2e97b8930092bb6ab340e8c}{\index{apollo\-::cyber\-::transport\-::\-Shm\-Dispatcher@{apollo\-::cyber\-::transport\-::\-Shm\-Dispatcher}!segments\-\_\-@{segments\-\_\-}}
+\index{segments\-\_\-@{segments\-\_\-}!apollo::cyber::transport::ShmDispatcher@{apollo\-::cyber\-::transport\-::\-Shm\-Dispatcher}}
+\subsubsection[{segments\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Segment\-Container} apollo\-::cyber\-::transport\-::\-Shm\-Dispatcher\-::segments\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_a8b86c460d2e97b8930092bb6ab340e8c}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_a23aa8263a8498b815f2b60afff385abd}{\index{apollo\-::cyber\-::transport\-::\-Shm\-Dispatcher@{apollo\-::cyber\-::transport\-::\-Shm\-Dispatcher}!segments\-\_\-lock\-\_\-@{segments\-\_\-lock\-\_\-}}
+\index{segments\-\_\-lock\-\_\-@{segments\-\_\-lock\-\_\-}!apollo::cyber::transport::ShmDispatcher@{apollo\-::cyber\-::transport\-::\-Shm\-Dispatcher}}
+\subsubsection[{segments\-\_\-lock\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Atomic\-R\-W\-Lock} apollo\-::cyber\-::transport\-::\-Shm\-Dispatcher\-::segments\-\_\-lock\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_a23aa8263a8498b815f2b60afff385abd}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_a88cab9f1044db26107a7e44fb9a7955b}{\index{apollo\-::cyber\-::transport\-::\-Shm\-Dispatcher@{apollo\-::cyber\-::transport\-::\-Shm\-Dispatcher}!thread\-\_\-@{thread\-\_\-}}
+\index{thread\-\_\-@{thread\-\_\-}!apollo::cyber::transport::ShmDispatcher@{apollo\-::cyber\-::transport\-::\-Shm\-Dispatcher}}
+\subsubsection[{thread\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::thread apollo\-::cyber\-::transport\-::\-Shm\-Dispatcher\-::thread\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_a88cab9f1044db26107a7e44fb9a7955b}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+transport/dispatcher/\hyperlink{shm__dispatcher_8h}{shm\-\_\-dispatcher.\-h}\end{DoxyCompactItemize}

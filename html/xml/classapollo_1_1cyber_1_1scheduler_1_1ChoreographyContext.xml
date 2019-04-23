@@ -1,0 +1,188 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classapollo_1_1cyber_1_1scheduler_1_1ChoreographyContext" kind="class" prot="public">
+    <compoundname>apollo::cyber::scheduler::ChoreographyContext</compoundname>
+    <basecompoundref refid="classapollo_1_1cyber_1_1scheduler_1_1ProcessorContext" prot="public" virt="non-virtual">apollo::cyber::scheduler::ProcessorContext</basecompoundref>
+    <includes refid="choreography__context_8h" local="no">choreography_context.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1scheduler_1_1ChoreographyContext_1a4955bd10541d5f68187f69a5c9c25f2f" prot="private" static="no" mutable="no">
+        <type>std::mutex</type>
+        <definition>std::mutex apollo::cyber::scheduler::ChoreographyContext::mtx_wq_</definition>
+        <argsstring></argsstring>
+        <name>mtx_wq_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/scheduler/policy/choreography_context.h" line="48" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/scheduler/policy/choreography_context.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1scheduler_1_1ChoreographyContext_1a6089935be7f61f7231d1e0d822562d71" prot="private" static="no" mutable="no">
+        <type>std::condition_variable</type>
+        <definition>std::condition_variable apollo::cyber::scheduler::ChoreographyContext::cv_wq_</definition>
+        <argsstring></argsstring>
+        <name>cv_wq_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/scheduler/policy/choreography_context.h" line="49" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/scheduler/policy/choreography_context.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1scheduler_1_1ChoreographyContext_1a758b50ddb206c4792e855afaa15f6f2c" prot="private" static="no" mutable="no">
+        <type><ref refid="classapollo_1_1cyber_1_1base_1_1AtomicRWLock" kindref="compound">AtomicRWLock</ref></type>
+        <definition>AtomicRWLock apollo::cyber::scheduler::ChoreographyContext::rq_lk_</definition>
+        <argsstring></argsstring>
+        <name>rq_lk_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/scheduler/policy/choreography_context.h" line="51" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/scheduler/policy/choreography_context.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1scheduler_1_1ChoreographyContext_1a9a1cbbf369ba6b3343f48d8b7fe062ad" prot="private" static="no" mutable="no">
+        <type>std::multimap&lt; uint32_t, std::shared_ptr&lt; <ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine" kindref="compound">CRoutine</ref> &gt;, std::greater&lt; uint32_t &gt; &gt;</type>
+        <definition>std::multimap&lt;uint32_t, std::shared_ptr&lt;CRoutine&gt;, std::greater&lt;uint32_t&gt; &gt; apollo::cyber::scheduler::ChoreographyContext::cr_queue_</definition>
+        <argsstring></argsstring>
+        <name>cr_queue_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/scheduler/policy/choreography_context.h" line="53" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/scheduler/policy/choreography_context.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1scheduler_1_1ChoreographyContext_1ab56d352881d30f192738920ec4809e32" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::scheduler::ChoreographyContext::RemoveCRoutine</definition>
+        <argsstring>(uint64_t crid)</argsstring>
+        <name>RemoveCRoutine</name>
+        <param>
+          <type>uint64_t</type>
+          <declname>crid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/scheduler/policy/choreography_context.h" line="40" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1scheduler_1_1ChoreographyContext_1aab1c6b9f912a43e1339fa99f2e3631b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>std::shared_ptr&lt; <ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine" kindref="compound">CRoutine</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;CRoutine&gt; apollo::cyber::scheduler::ChoreographyContext::NextRoutine</definition>
+        <argsstring>() override</argsstring>
+        <name>NextRoutine</name>
+        <reimplements refid="classapollo_1_1cyber_1_1scheduler_1_1ProcessorContext_1a0923b50903b11612234355566ab573e0">NextRoutine</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/scheduler/policy/choreography_context.h" line="41" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1scheduler_1_1ChoreographyContext_1a68bf8c57755cb932518ae9fe8b6fa196" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::scheduler::ChoreographyContext::Enqueue</definition>
+        <argsstring>(const std::shared_ptr&lt; CRoutine &gt; &amp;)</argsstring>
+        <name>Enqueue</name>
+        <param>
+          <type>const std::shared_ptr&lt; <ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine" kindref="compound">CRoutine</ref> &gt; &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/scheduler/policy/choreography_context.h" line="43" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1scheduler_1_1ChoreographyContext_1a7ee909ed845a79cdc00a649504d15174" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::scheduler::ChoreographyContext::Notify</definition>
+        <argsstring>()</argsstring>
+        <name>Notify</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/scheduler/policy/choreography_context.h" line="44" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1scheduler_1_1ChoreographyContext_1a895fb1717d71bb0e53abfdc5f9a7a768" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::scheduler::ChoreographyContext::Wait</definition>
+        <argsstring>() override</argsstring>
+        <name>Wait</name>
+        <reimplements refid="classapollo_1_1cyber_1_1scheduler_1_1ProcessorContext_1a0a2e1914277be7a5fe81f459c83b6644">Wait</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/scheduler/policy/choreography_context.h" line="45" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="103">
+        <label>apollo::cyber::scheduler::ChoreographyContext</label>
+        <link refid="classapollo_1_1cyber_1_1scheduler_1_1ChoreographyContext"/>
+        <childnode refid="104" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="104">
+        <label>apollo::cyber::scheduler::ProcessorContext</label>
+        <link refid="classapollo_1_1cyber_1_1scheduler_1_1ProcessorContext"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="107">
+        <label>apollo::cyber::base::AtomicRWLock</label>
+        <link refid="classapollo_1_1cyber_1_1base_1_1AtomicRWLock"/>
+      </node>
+      <node id="105">
+        <label>apollo::cyber::scheduler::ChoreographyContext</label>
+        <link refid="classapollo_1_1cyber_1_1scheduler_1_1ChoreographyContext"/>
+        <childnode refid="106" relation="public-inheritance">
+        </childnode>
+        <childnode refid="107" relation="usage">
+          <edgelabel>rq_lk_</edgelabel>
+        </childnode>
+      </node>
+      <node id="106">
+        <label>apollo::cyber::scheduler::ProcessorContext</label>
+        <link refid="classapollo_1_1cyber_1_1scheduler_1_1ProcessorContext"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/work/apollo-fork/apollo/cyber/scheduler/policy/choreography_context.h" line="38" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/scheduler/policy/choreography_context.h" bodystart="38" bodyend="54"/>
+    <listofallmembers>
+      <member refid="classapollo_1_1cyber_1_1scheduler_1_1ChoreographyContext_1a9a1cbbf369ba6b3343f48d8b7fe062ad" prot="private" virt="non-virtual"><scope>apollo::cyber::scheduler::ChoreographyContext</scope><name>cr_queue_</name></member>
+      <member refid="classapollo_1_1cyber_1_1scheduler_1_1ChoreographyContext_1a6089935be7f61f7231d1e0d822562d71" prot="private" virt="non-virtual"><scope>apollo::cyber::scheduler::ChoreographyContext</scope><name>cv_wq_</name></member>
+      <member refid="classapollo_1_1cyber_1_1scheduler_1_1ChoreographyContext_1a68bf8c57755cb932518ae9fe8b6fa196" prot="public" virt="non-virtual"><scope>apollo::cyber::scheduler::ChoreographyContext</scope><name>Enqueue</name></member>
+      <member refid="classapollo_1_1cyber_1_1scheduler_1_1ChoreographyContext_1a4955bd10541d5f68187f69a5c9c25f2f" prot="private" virt="non-virtual"><scope>apollo::cyber::scheduler::ChoreographyContext</scope><name>mtx_wq_</name></member>
+      <member refid="classapollo_1_1cyber_1_1scheduler_1_1ChoreographyContext_1aab1c6b9f912a43e1339fa99f2e3631b6" prot="public" virt="virtual"><scope>apollo::cyber::scheduler::ChoreographyContext</scope><name>NextRoutine</name></member>
+      <member refid="classapollo_1_1cyber_1_1scheduler_1_1ProcessorContext_1ad4e0ac53246d1d65b4d14a1f438715e3" prot="protected" virt="non-virtual"><scope>apollo::cyber::scheduler::ChoreographyContext</scope><name>notified_</name></member>
+      <member refid="classapollo_1_1cyber_1_1scheduler_1_1ChoreographyContext_1a7ee909ed845a79cdc00a649504d15174" prot="public" virt="non-virtual"><scope>apollo::cyber::scheduler::ChoreographyContext</scope><name>Notify</name></member>
+      <member refid="classapollo_1_1cyber_1_1scheduler_1_1ChoreographyContext_1ab56d352881d30f192738920ec4809e32" prot="public" virt="non-virtual"><scope>apollo::cyber::scheduler::ChoreographyContext</scope><name>RemoveCRoutine</name></member>
+      <member refid="classapollo_1_1cyber_1_1scheduler_1_1ChoreographyContext_1a758b50ddb206c4792e855afaa15f6f2c" prot="private" virt="non-virtual"><scope>apollo::cyber::scheduler::ChoreographyContext</scope><name>rq_lk_</name></member>
+      <member refid="classapollo_1_1cyber_1_1scheduler_1_1ProcessorContext_1ab36b8e9524ea0e02cba88b7d4e0e3079" prot="public" virt="virtual"><scope>apollo::cyber::scheduler::ChoreographyContext</scope><name>Shutdown</name></member>
+      <member refid="classapollo_1_1cyber_1_1scheduler_1_1ProcessorContext_1a19eebaac060d52fb252077f59762a97e" prot="protected" virt="non-virtual"><scope>apollo::cyber::scheduler::ChoreographyContext</scope><name>stop_</name></member>
+      <member refid="classapollo_1_1cyber_1_1scheduler_1_1ChoreographyContext_1a895fb1717d71bb0e53abfdc5f9a7a768" prot="public" virt="virtual"><scope>apollo::cyber::scheduler::ChoreographyContext</scope><name>Wait</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

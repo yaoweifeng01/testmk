@@ -1,0 +1,239 @@
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager}{\section{apollo\-:\-:cyber\-:\-:service\-\_\-discovery\-:\-:Topology\-Manager Class Reference}
+\label{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager}\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager}}
+}
+
+
+{\ttfamily \#include $<$topology\-\_\-manager.\-h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_a7ba67fa3500a132796c24cd4aa7356f6}{Change\-Signal} = \hyperlink{classapollo_1_1cyber_1_1base_1_1Signal}{base\-::\-Signal}$<$ const Change\-Msg \& $>$
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_a50328f9e6813bf53a9e974bb39f716f5}{Change\-Func} = std\-::function$<$ void(const Change\-Msg \&)$>$
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_a9e207f3236b725d74eb37e5d27551ae6}{Change\-Connection} = \hyperlink{classapollo_1_1cyber_1_1base_1_1Connection}{base\-::\-Connection}$<$ const Change\-Msg \& $>$
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_ab64bea3df8dfe44534854c87b84925a2}{Part\-Name\-Container} = std\-::map$<$ eprosima\-::fastrtps\-::rtps\-::\-G\-U\-I\-D\-\_\-t, std\-::string $>$
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_aa25acdf39ae101851911d7562d332cdf}{Part\-Info} = eprosima\-::fastrtps\-::\-Participant\-Discovery\-Info
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_a20db67d81617386524f5a64b1d678806}{$\sim$\-Topology\-Manager} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_a63f75445d72c3e01fc87429b0356ba6e}{Shutdown} ()
+\item 
+\hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_a9e207f3236b725d74eb37e5d27551ae6}{Change\-Connection} \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_a2a223b8391a9b739040957c044dd9033}{Add\-Change\-Listener} (const \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_a50328f9e6813bf53a9e974bb39f716f5}{Change\-Func} \&func)
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_a20f4728bef31bd0894b6fee951c9580c}{Remove\-Change\-Listener} (const \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_a9e207f3236b725d74eb37e5d27551ae6}{Change\-Connection} \&conn)
+\item 
+\hyperlink{namespaceapollo_1_1cyber_1_1service__discovery_a1e5adf7bd56b68299dae8d202f20bc81}{Node\-Manager\-Ptr} \& \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_a94b6ab1c670e49315afeed6269c60714}{node\-\_\-manager} ()
+\item 
+\hyperlink{namespaceapollo_1_1cyber_1_1service__discovery_a12c2dfc39551ef96e3110dae235ab609}{Channel\-Manager\-Ptr} \& \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_a7ca771e869399d565596c43d3f73ce6b}{channel\-\_\-manager} ()
+\item 
+\hyperlink{namespaceapollo_1_1cyber_1_1service__discovery_a257bddadfae4c3b6efbc25c6d63c28f9}{Service\-Manager\-Ptr} \& \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_ac1d46063cd465d606b188884b4be2269}{service\-\_\-manager} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_a885ec7c446c523cdceb0c7e798741131}{Init} ()
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_a216abf40b6b6716c940bd91ae7c23688}{Init\-Node\-Manager} ()
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_a15e2df0ff19069acc674c47a7a04cfcf}{Init\-Channel\-Manager} ()
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_a5c57484d3ea7174ca98120799293e045}{Init\-Service\-Manager} ()
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_aa3c636e9eb33231d29bd938aa694407a}{Create\-Participant} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_aa2ef6e89d81cf8650d7d4a680eb79fab}{On\-Participant\-Change} (const \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_aa25acdf39ae101851911d7562d332cdf}{Part\-Info} \&info)
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_a114ead053c70644fdcec30729c466f80}{Convert} (const \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_aa25acdf39ae101851911d7562d332cdf}{Part\-Info} \&info, Change\-Msg $\ast$change\-\_\-msg)
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_a6e55fb327092fe74b4a48573a9231951}{Parse\-Participant\-Name} (const std\-::string \&participant\-\_\-name, std\-::string $\ast$host\-\_\-name, int $\ast$process\-\_\-id)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\-::atomic$<$ bool $>$ \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_a70da9ef8dbc059cffe18669195632946}{init\-\_\-}
+\item 
+\hyperlink{namespaceapollo_1_1cyber_1_1service__discovery_a1e5adf7bd56b68299dae8d202f20bc81}{Node\-Manager\-Ptr} \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_aeba928170db72639cf54c81f3a4fc650}{node\-\_\-manager\-\_\-}
+\item 
+\hyperlink{namespaceapollo_1_1cyber_1_1service__discovery_a12c2dfc39551ef96e3110dae235ab609}{Channel\-Manager\-Ptr} \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_a665115924a374ff7710355bd514fa14d}{channel\-\_\-manager\-\_\-}
+\item 
+\hyperlink{namespaceapollo_1_1cyber_1_1service__discovery_a257bddadfae4c3b6efbc25c6d63c28f9}{Service\-Manager\-Ptr} \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_a9048b410bdf762de9345a7f94d2253da}{service\-\_\-manager\-\_\-}
+\item 
+\hyperlink{namespaceapollo_1_1cyber_1_1transport_a4214d0780331276d0384d0b57e3bc688}{transport\-::\-Participant\-Ptr} \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_afe612355674bd772cbc5540980870a62}{participant\-\_\-}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ParticipantListener}{Participant\-Listener} $\ast$ \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_ae177b9dbd4aa56a6bf5c3ff0388ffc36}{participant\-\_\-listener\-\_\-}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_a7ba67fa3500a132796c24cd4aa7356f6}{Change\-Signal} \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_a8c65f2ecdb5418c86e58ba3251982616}{change\-\_\-signal\-\_\-}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_ab64bea3df8dfe44534854c87b84925a2}{Part\-Name\-Container} \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_a1197be9a9fda7d19f7a8ddb01867f864}{participant\-\_\-names\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_a9e207f3236b725d74eb37e5d27551ae6}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager}!Change\-Connection@{Change\-Connection}}
+\index{Change\-Connection@{Change\-Connection}!apollo::cyber::service_discovery::TopologyManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager}}
+\subsubsection[{Change\-Connection}]{\setlength{\rightskip}{0pt plus 5cm}using {\bf apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager\-::\-Change\-Connection} =  {\bf base\-::\-Connection}$<$const Change\-Msg\&$>$}}\label{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_a9e207f3236b725d74eb37e5d27551ae6}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_a50328f9e6813bf53a9e974bb39f716f5}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager}!Change\-Func@{Change\-Func}}
+\index{Change\-Func@{Change\-Func}!apollo::cyber::service_discovery::TopologyManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager}}
+\subsubsection[{Change\-Func}]{\setlength{\rightskip}{0pt plus 5cm}using {\bf apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager\-::\-Change\-Func} =  std\-::function$<$void(const Change\-Msg\&)$>$}}\label{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_a50328f9e6813bf53a9e974bb39f716f5}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_a7ba67fa3500a132796c24cd4aa7356f6}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager}!Change\-Signal@{Change\-Signal}}
+\index{Change\-Signal@{Change\-Signal}!apollo::cyber::service_discovery::TopologyManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager}}
+\subsubsection[{Change\-Signal}]{\setlength{\rightskip}{0pt plus 5cm}using {\bf apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager\-::\-Change\-Signal} =  {\bf base\-::\-Signal}$<$const Change\-Msg\&$>$}}\label{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_a7ba67fa3500a132796c24cd4aa7356f6}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_aa25acdf39ae101851911d7562d332cdf}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager}!Part\-Info@{Part\-Info}}
+\index{Part\-Info@{Part\-Info}!apollo::cyber::service_discovery::TopologyManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager}}
+\subsubsection[{Part\-Info}]{\setlength{\rightskip}{0pt plus 5cm}using {\bf apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager\-::\-Part\-Info} =  eprosima\-::fastrtps\-::\-Participant\-Discovery\-Info}}\label{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_aa25acdf39ae101851911d7562d332cdf}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_ab64bea3df8dfe44534854c87b84925a2}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager}!Part\-Name\-Container@{Part\-Name\-Container}}
+\index{Part\-Name\-Container@{Part\-Name\-Container}!apollo::cyber::service_discovery::TopologyManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager}}
+\subsubsection[{Part\-Name\-Container}]{\setlength{\rightskip}{0pt plus 5cm}using {\bf apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager\-::\-Part\-Name\-Container} =  std\-::map$<$eprosima\-::fastrtps\-::rtps\-::\-G\-U\-I\-D\-\_\-t, std\-::string$>$}}\label{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_ab64bea3df8dfe44534854c87b84925a2}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_a20db67d81617386524f5a64b1d678806}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager}!$\sim$\-Topology\-Manager@{$\sim$\-Topology\-Manager}}
+\index{$\sim$\-Topology\-Manager@{$\sim$\-Topology\-Manager}!apollo::cyber::service_discovery::TopologyManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager}}
+\subsubsection[{$\sim$\-Topology\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}virtual apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager\-::$\sim$\-Topology\-Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_a20db67d81617386524f5a64b1d678806}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_a2a223b8391a9b739040957c044dd9033}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager}!Add\-Change\-Listener@{Add\-Change\-Listener}}
+\index{Add\-Change\-Listener@{Add\-Change\-Listener}!apollo::cyber::service_discovery::TopologyManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager}}
+\subsubsection[{Add\-Change\-Listener}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Change\-Connection} apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager\-::\-Add\-Change\-Listener (
+\begin{DoxyParamCaption}
+\item[{const {\bf Change\-Func} \&}]{func}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_a2a223b8391a9b739040957c044dd9033}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_a7ca771e869399d565596c43d3f73ce6b}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager}!channel\-\_\-manager@{channel\-\_\-manager}}
+\index{channel\-\_\-manager@{channel\-\_\-manager}!apollo::cyber::service_discovery::TopologyManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager}}
+\subsubsection[{channel\-\_\-manager}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Channel\-Manager\-Ptr}\& apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager\-::channel\-\_\-manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_a7ca771e869399d565596c43d3f73ce6b}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_a114ead053c70644fdcec30729c466f80}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager}!Convert@{Convert}}
+\index{Convert@{Convert}!apollo::cyber::service_discovery::TopologyManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager}}
+\subsubsection[{Convert}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager\-::\-Convert (
+\begin{DoxyParamCaption}
+\item[{const {\bf Part\-Info} \&}]{info, }
+\item[{Change\-Msg $\ast$}]{change\-\_\-msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_a114ead053c70644fdcec30729c466f80}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_aa3c636e9eb33231d29bd938aa694407a}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager}!Create\-Participant@{Create\-Participant}}
+\index{Create\-Participant@{Create\-Participant}!apollo::cyber::service_discovery::TopologyManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager}}
+\subsubsection[{Create\-Participant}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager\-::\-Create\-Participant (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_aa3c636e9eb33231d29bd938aa694407a}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_a885ec7c446c523cdceb0c7e798741131}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager}!Init@{Init}}
+\index{Init@{Init}!apollo::cyber::service_discovery::TopologyManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager}}
+\subsubsection[{Init}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager\-::\-Init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_a885ec7c446c523cdceb0c7e798741131}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_a15e2df0ff19069acc674c47a7a04cfcf}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager}!Init\-Channel\-Manager@{Init\-Channel\-Manager}}
+\index{Init\-Channel\-Manager@{Init\-Channel\-Manager}!apollo::cyber::service_discovery::TopologyManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager}}
+\subsubsection[{Init\-Channel\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager\-::\-Init\-Channel\-Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_a15e2df0ff19069acc674c47a7a04cfcf}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_a216abf40b6b6716c940bd91ae7c23688}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager}!Init\-Node\-Manager@{Init\-Node\-Manager}}
+\index{Init\-Node\-Manager@{Init\-Node\-Manager}!apollo::cyber::service_discovery::TopologyManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager}}
+\subsubsection[{Init\-Node\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager\-::\-Init\-Node\-Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_a216abf40b6b6716c940bd91ae7c23688}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_a5c57484d3ea7174ca98120799293e045}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager}!Init\-Service\-Manager@{Init\-Service\-Manager}}
+\index{Init\-Service\-Manager@{Init\-Service\-Manager}!apollo::cyber::service_discovery::TopologyManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager}}
+\subsubsection[{Init\-Service\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager\-::\-Init\-Service\-Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_a5c57484d3ea7174ca98120799293e045}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_a94b6ab1c670e49315afeed6269c60714}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager}!node\-\_\-manager@{node\-\_\-manager}}
+\index{node\-\_\-manager@{node\-\_\-manager}!apollo::cyber::service_discovery::TopologyManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager}}
+\subsubsection[{node\-\_\-manager}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Node\-Manager\-Ptr}\& apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager\-::node\-\_\-manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_a94b6ab1c670e49315afeed6269c60714}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_aa2ef6e89d81cf8650d7d4a680eb79fab}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager}!On\-Participant\-Change@{On\-Participant\-Change}}
+\index{On\-Participant\-Change@{On\-Participant\-Change}!apollo::cyber::service_discovery::TopologyManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager}}
+\subsubsection[{On\-Participant\-Change}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager\-::\-On\-Participant\-Change (
+\begin{DoxyParamCaption}
+\item[{const {\bf Part\-Info} \&}]{info}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_aa2ef6e89d81cf8650d7d4a680eb79fab}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_a6e55fb327092fe74b4a48573a9231951}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager}!Parse\-Participant\-Name@{Parse\-Participant\-Name}}
+\index{Parse\-Participant\-Name@{Parse\-Participant\-Name}!apollo::cyber::service_discovery::TopologyManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager}}
+\subsubsection[{Parse\-Participant\-Name}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager\-::\-Parse\-Participant\-Name (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{participant\-\_\-name, }
+\item[{std\-::string $\ast$}]{host\-\_\-name, }
+\item[{int $\ast$}]{process\-\_\-id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_a6e55fb327092fe74b4a48573a9231951}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_a20f4728bef31bd0894b6fee951c9580c}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager}!Remove\-Change\-Listener@{Remove\-Change\-Listener}}
+\index{Remove\-Change\-Listener@{Remove\-Change\-Listener}!apollo::cyber::service_discovery::TopologyManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager}}
+\subsubsection[{Remove\-Change\-Listener}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager\-::\-Remove\-Change\-Listener (
+\begin{DoxyParamCaption}
+\item[{const {\bf Change\-Connection} \&}]{conn}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_a20f4728bef31bd0894b6fee951c9580c}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_ac1d46063cd465d606b188884b4be2269}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager}!service\-\_\-manager@{service\-\_\-manager}}
+\index{service\-\_\-manager@{service\-\_\-manager}!apollo::cyber::service_discovery::TopologyManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager}}
+\subsubsection[{service\-\_\-manager}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Service\-Manager\-Ptr}\& apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager\-::service\-\_\-manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_ac1d46063cd465d606b188884b4be2269}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_a63f75445d72c3e01fc87429b0356ba6e}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager}!Shutdown@{Shutdown}}
+\index{Shutdown@{Shutdown}!apollo::cyber::service_discovery::TopologyManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager}}
+\subsubsection[{Shutdown}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager\-::\-Shutdown (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_a63f75445d72c3e01fc87429b0356ba6e}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_a8c65f2ecdb5418c86e58ba3251982616}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager}!change\-\_\-signal\-\_\-@{change\-\_\-signal\-\_\-}}
+\index{change\-\_\-signal\-\_\-@{change\-\_\-signal\-\_\-}!apollo::cyber::service_discovery::TopologyManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager}}
+\subsubsection[{change\-\_\-signal\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Change\-Signal} apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager\-::change\-\_\-signal\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_a8c65f2ecdb5418c86e58ba3251982616}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_a665115924a374ff7710355bd514fa14d}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager}!channel\-\_\-manager\-\_\-@{channel\-\_\-manager\-\_\-}}
+\index{channel\-\_\-manager\-\_\-@{channel\-\_\-manager\-\_\-}!apollo::cyber::service_discovery::TopologyManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager}}
+\subsubsection[{channel\-\_\-manager\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Channel\-Manager\-Ptr} apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager\-::channel\-\_\-manager\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_a665115924a374ff7710355bd514fa14d}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_a70da9ef8dbc059cffe18669195632946}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager}!init\-\_\-@{init\-\_\-}}
+\index{init\-\_\-@{init\-\_\-}!apollo::cyber::service_discovery::TopologyManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager}}
+\subsubsection[{init\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::atomic$<$bool$>$ apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager\-::init\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_a70da9ef8dbc059cffe18669195632946}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_aeba928170db72639cf54c81f3a4fc650}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager}!node\-\_\-manager\-\_\-@{node\-\_\-manager\-\_\-}}
+\index{node\-\_\-manager\-\_\-@{node\-\_\-manager\-\_\-}!apollo::cyber::service_discovery::TopologyManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager}}
+\subsubsection[{node\-\_\-manager\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Node\-Manager\-Ptr} apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager\-::node\-\_\-manager\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_aeba928170db72639cf54c81f3a4fc650}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_afe612355674bd772cbc5540980870a62}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager}!participant\-\_\-@{participant\-\_\-}}
+\index{participant\-\_\-@{participant\-\_\-}!apollo::cyber::service_discovery::TopologyManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager}}
+\subsubsection[{participant\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf transport\-::\-Participant\-Ptr} apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager\-::participant\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_afe612355674bd772cbc5540980870a62}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_ae177b9dbd4aa56a6bf5c3ff0388ffc36}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager}!participant\-\_\-listener\-\_\-@{participant\-\_\-listener\-\_\-}}
+\index{participant\-\_\-listener\-\_\-@{participant\-\_\-listener\-\_\-}!apollo::cyber::service_discovery::TopologyManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager}}
+\subsubsection[{participant\-\_\-listener\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Participant\-Listener}$\ast$ apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager\-::participant\-\_\-listener\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_ae177b9dbd4aa56a6bf5c3ff0388ffc36}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_a1197be9a9fda7d19f7a8ddb01867f864}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager}!participant\-\_\-names\-\_\-@{participant\-\_\-names\-\_\-}}
+\index{participant\-\_\-names\-\_\-@{participant\-\_\-names\-\_\-}!apollo::cyber::service_discovery::TopologyManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager}}
+\subsubsection[{participant\-\_\-names\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Part\-Name\-Container} apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager\-::participant\-\_\-names\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_a1197be9a9fda7d19f7a8ddb01867f864}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_a9048b410bdf762de9345a7f94d2253da}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager}!service\-\_\-manager\-\_\-@{service\-\_\-manager\-\_\-}}
+\index{service\-\_\-manager\-\_\-@{service\-\_\-manager\-\_\-}!apollo::cyber::service_discovery::TopologyManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager}}
+\subsubsection[{service\-\_\-manager\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Service\-Manager\-Ptr} apollo\-::cyber\-::service\-\_\-discovery\-::\-Topology\-Manager\-::service\-\_\-manager\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1TopologyManager_a9048b410bdf762de9345a7f94d2253da}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+service\-\_\-discovery/\hyperlink{topology__manager_8h}{topology\-\_\-manager.\-h}\end{DoxyCompactItemize}

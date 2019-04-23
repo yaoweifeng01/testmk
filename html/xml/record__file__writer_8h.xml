@@ -1,0 +1,393 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="record__file__writer_8h" kind="file">
+    <compoundname>record_file_writer.h</compoundname>
+    <includes local="no">google/protobuf/io/zero_copy_stream_impl.h</includes>
+    <includes local="no">google/protobuf/message.h</includes>
+    <includes local="no">google/protobuf/text_format.h</includes>
+    <includes local="no">condition_variable</includes>
+    <includes local="no">fstream</includes>
+    <includes local="no">memory</includes>
+    <includes local="no">string</includes>
+    <includes local="no">thread</includes>
+    <includes local="no">type_traits</includes>
+    <includes local="no">unordered_map</includes>
+    <includes local="no">utility</includes>
+    <includes refid="log_8h" local="yes">cyber/common/log.h</includes>
+    <includes refid="record__file__base_8h" local="yes">cyber/record/file/record_file_base.h</includes>
+    <includes refid="section_8h" local="yes">cyber/record/file/section.h</includes>
+    <includes refid="time_8h" local="yes">cyber/time/time.h</includes>
+    <includedby refid="record__writer_8h" local="yes">record/record_writer.h</includedby>
+    <includedby refid="recoverer_8h" local="yes">tools/cyber_recorder/recoverer.h</includedby>
+    <includedby refid="spliter_8h" local="yes">tools/cyber_recorder/spliter.h</includedby>
+    <incdepgraph>
+      <node id="8054">
+        <label>stdarg.h</label>
+      </node>
+      <node id="8063">
+        <label>limits</label>
+      </node>
+      <node id="8055">
+        <label>cyber/binary.h</label>
+        <link refid="binary_8h"/>
+        <childnode refid="8048" relation="include">
+        </childnode>
+      </node>
+      <node id="8056">
+        <label>glog/logging.h</label>
+      </node>
+      <node id="8058">
+        <label>cyber/record/file/record_file_base.h</label>
+        <link refid="record__file__base_8h"/>
+        <childnode refid="8059" relation="include">
+        </childnode>
+        <childnode refid="8048" relation="include">
+        </childnode>
+        <childnode refid="8060" relation="include">
+        </childnode>
+      </node>
+      <node id="8066">
+        <label>stdint.h</label>
+      </node>
+      <node id="8044">
+        <label>google/protobuf/text_format.h</label>
+      </node>
+      <node id="8062">
+        <label>cyber/time/time.h</label>
+        <link refid="time_8h"/>
+        <childnode refid="8063" relation="include">
+        </childnode>
+        <childnode refid="8048" relation="include">
+        </childnode>
+        <childnode refid="8064" relation="include">
+        </childnode>
+      </node>
+      <node id="8069">
+        <label>stdexcept</label>
+      </node>
+      <node id="8061">
+        <label>cyber/record/file/section.h</label>
+        <link refid="section_8h"/>
+      </node>
+      <node id="8048">
+        <label>string</label>
+      </node>
+      <node id="8060">
+        <label>cyber/proto/record.pb.h</label>
+      </node>
+      <node id="8046">
+        <label>fstream</label>
+      </node>
+      <node id="8041">
+        <label>record/file/record_file_writer.h</label>
+        <link refid="record_file_writer.h"/>
+        <childnode refid="8042" relation="include">
+        </childnode>
+        <childnode refid="8043" relation="include">
+        </childnode>
+        <childnode refid="8044" relation="include">
+        </childnode>
+        <childnode refid="8045" relation="include">
+        </childnode>
+        <childnode refid="8046" relation="include">
+        </childnode>
+        <childnode refid="8047" relation="include">
+        </childnode>
+        <childnode refid="8048" relation="include">
+        </childnode>
+        <childnode refid="8049" relation="include">
+        </childnode>
+        <childnode refid="8050" relation="include">
+        </childnode>
+        <childnode refid="8051" relation="include">
+        </childnode>
+        <childnode refid="8052" relation="include">
+        </childnode>
+        <childnode refid="8053" relation="include">
+        </childnode>
+        <childnode refid="8058" relation="include">
+        </childnode>
+        <childnode refid="8061" relation="include">
+        </childnode>
+        <childnode refid="8062" relation="include">
+        </childnode>
+      </node>
+      <node id="8045">
+        <label>condition_variable</label>
+      </node>
+      <node id="8042">
+        <label>google/protobuf/io/zero_copy_stream_impl.h</label>
+      </node>
+      <node id="8053">
+        <label>cyber/common/log.h</label>
+        <link refid="log_8h"/>
+        <childnode refid="8054" relation="include">
+        </childnode>
+        <childnode refid="8055" relation="include">
+        </childnode>
+        <childnode refid="8056" relation="include">
+        </childnode>
+        <childnode refid="8057" relation="include">
+        </childnode>
+      </node>
+      <node id="8052">
+        <label>utility</label>
+      </node>
+      <node id="8065">
+        <label>math.h</label>
+      </node>
+      <node id="8068">
+        <label>iostream</label>
+      </node>
+      <node id="8064">
+        <label>cyber/time/duration.h</label>
+        <link refid="duration_8h"/>
+        <childnode refid="8065" relation="include">
+        </childnode>
+        <childnode refid="8066" relation="include">
+        </childnode>
+        <childnode refid="8067" relation="include">
+        </childnode>
+        <childnode refid="8068" relation="include">
+        </childnode>
+        <childnode refid="8069" relation="include">
+        </childnode>
+      </node>
+      <node id="8051">
+        <label>unordered_map</label>
+      </node>
+      <node id="8067">
+        <label>climits</label>
+      </node>
+      <node id="8059">
+        <label>mutex</label>
+      </node>
+      <node id="8057">
+        <label>glog/raw_logging.h</label>
+      </node>
+      <node id="8049">
+        <label>thread</label>
+      </node>
+      <node id="8050">
+        <label>type_traits</label>
+      </node>
+      <node id="8043">
+        <label>google/protobuf/message.h</label>
+      </node>
+      <node id="8047">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="8072">
+        <label>py_wrapper/py_record.h</label>
+        <link refid="py__record_8h"/>
+      </node>
+      <node id="8073">
+        <label>tools/cyber_recorder/recorder.h</label>
+        <link refid="recorder_8h"/>
+      </node>
+      <node id="8075">
+        <label>tools/cyber_recorder/spliter.h</label>
+        <link refid="spliter_8h"/>
+      </node>
+      <node id="8070">
+        <label>record/file/record_file_writer.h</label>
+        <link refid="record_file_writer.h"/>
+        <childnode refid="8071" relation="include">
+        </childnode>
+        <childnode refid="8074" relation="include">
+        </childnode>
+        <childnode refid="8075" relation="include">
+        </childnode>
+      </node>
+      <node id="8071">
+        <label>record/record_writer.h</label>
+        <link refid="record__writer_8h"/>
+        <childnode refid="8072" relation="include">
+        </childnode>
+        <childnode refid="8073" relation="include">
+        </childnode>
+      </node>
+      <node id="8074">
+        <label>tools/cyber_recorder/recoverer.h</label>
+        <link refid="recoverer_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structapollo_1_1cyber_1_1record_1_1Chunk" prot="public">apollo::cyber::record::Chunk</innerclass>
+    <innerclass refid="classapollo_1_1cyber_1_1record_1_1RecordFileWriter" prot="public">apollo::cyber::record::RecordFileWriter</innerclass>
+    <innernamespace refid="namespaceapollo">apollo</innernamespace>
+    <innernamespace refid="namespaceapollo_1_1cyber">apollo::cyber</innernamespace>
+    <innernamespace refid="namespaceapollo_1_1cyber_1_1record">apollo::cyber::record</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2018<sp/>The<sp/>Apollo<sp/>Authors.<sp/>All<sp/>Rights<sp/>Reserved.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CYBER_RECORD_FILE_RECORD_FILE_WRITER_H_</highlight></codeline>
+<codeline lineno="18"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CYBER_RECORD_FILE_RECORD_FILE_WRITER_H_</highlight></codeline>
+<codeline lineno="19"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;google/protobuf/io/zero_copy_stream_impl.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;google/protobuf/message.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;google/protobuf/text_format.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;condition_variable&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;thread&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;type_traits&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;unordered_map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;utility&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="log_8h" kindref="compound">cyber/common/log.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="record__file__base_8h" kindref="compound">cyber/record/file/record_file_base.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="section_8h" kindref="compound">cyber/record/file/section.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="time_8h" kindref="compound">cyber/time/time.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">apollo<sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">cyber<sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">record<sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>google::protobuf::io::FileOutputStream;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>google::protobuf::io::ZeroCopyOutputStream;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="structapollo_1_1cyber_1_1record_1_1Chunk" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structapollo_1_1cyber_1_1record_1_1Chunk" kindref="compound">Chunk</ref><sp/>{</highlight></codeline>
+<codeline lineno="45" refid="structapollo_1_1cyber_1_1record_1_1Chunk_1a2cf02bb8d216f44ecff00f4e08c07897" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structapollo_1_1cyber_1_1record_1_1Chunk_1a2cf02bb8d216f44ecff00f4e08c07897" kindref="member">Chunk</ref>()<sp/>{<sp/><ref refid="structapollo_1_1cyber_1_1record_1_1Chunk_1a05ac768236d95c41080758f19b7d5a98" kindref="member">clear</ref>();<sp/>}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="structapollo_1_1cyber_1_1record_1_1Chunk_1a05ac768236d95c41080758f19b7d5a98" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structapollo_1_1cyber_1_1record_1_1Chunk_1a05ac768236d95c41080758f19b7d5a98" kindref="member">clear</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structapollo_1_1cyber_1_1record_1_1Chunk_1a00672597f6ebfdf2dbeaabd580d9909b" kindref="member">body_</ref>.clear_messages();</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structapollo_1_1cyber_1_1record_1_1Chunk_1a8dbd3eaef5f4c44b84b4003acaa2fc0b" kindref="member">header_</ref>.set_begin_time(0);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structapollo_1_1cyber_1_1record_1_1Chunk_1a8dbd3eaef5f4c44b84b4003acaa2fc0b" kindref="member">header_</ref>.set_end_time(0);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structapollo_1_1cyber_1_1record_1_1Chunk_1a8dbd3eaef5f4c44b84b4003acaa2fc0b" kindref="member">header_</ref>.set_message_number(0);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structapollo_1_1cyber_1_1record_1_1Chunk_1a8dbd3eaef5f4c44b84b4003acaa2fc0b" kindref="member">header_</ref>.set_raw_size(0);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="structapollo_1_1cyber_1_1record_1_1Chunk_1a9f06f76b5e1ea3609f8314cf52dc0899" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structapollo_1_1cyber_1_1record_1_1Chunk_1a9f06f76b5e1ea3609f8314cf52dc0899" kindref="member">add</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SingleMessage&amp;<sp/>message)<sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>std::lock_guard&lt;std::mutex&gt;<sp/>lock(<ref refid="structapollo_1_1cyber_1_1record_1_1Chunk_1af89d9a0952404a4d3f3877da67b40128" kindref="member">mutex_</ref>);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>SingleMessage*<sp/>p_message<sp/>=<sp/><ref refid="structapollo_1_1cyber_1_1record_1_1Chunk_1a00672597f6ebfdf2dbeaabd580d9909b" kindref="member">body_</ref>.add_messages();</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>*p_message<sp/>=<sp/>message;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(0<sp/>==<sp/><ref refid="structapollo_1_1cyber_1_1record_1_1Chunk_1a8dbd3eaef5f4c44b84b4003acaa2fc0b" kindref="member">header_</ref>.begin_time())<sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structapollo_1_1cyber_1_1record_1_1Chunk_1a8dbd3eaef5f4c44b84b4003acaa2fc0b" kindref="member">header_</ref>.set_begin_time(message.time());</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="structapollo_1_1cyber_1_1record_1_1Chunk_1a8dbd3eaef5f4c44b84b4003acaa2fc0b" kindref="member">header_</ref>.begin_time()<sp/>&gt;<sp/>message.time())<sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structapollo_1_1cyber_1_1record_1_1Chunk_1a8dbd3eaef5f4c44b84b4003acaa2fc0b" kindref="member">header_</ref>.set_begin_time(message.time());</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="structapollo_1_1cyber_1_1record_1_1Chunk_1a8dbd3eaef5f4c44b84b4003acaa2fc0b" kindref="member">header_</ref>.end_time()<sp/>&lt;<sp/>message.time())<sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structapollo_1_1cyber_1_1record_1_1Chunk_1a8dbd3eaef5f4c44b84b4003acaa2fc0b" kindref="member">header_</ref>.set_end_time(message.time());</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structapollo_1_1cyber_1_1record_1_1Chunk_1a8dbd3eaef5f4c44b84b4003acaa2fc0b" kindref="member">header_</ref>.set_message_number(<ref refid="structapollo_1_1cyber_1_1record_1_1Chunk_1a8dbd3eaef5f4c44b84b4003acaa2fc0b" kindref="member">header_</ref>.message_number()<sp/>+<sp/>1);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structapollo_1_1cyber_1_1record_1_1Chunk_1a8dbd3eaef5f4c44b84b4003acaa2fc0b" kindref="member">header_</ref>.set_raw_size(<ref refid="structapollo_1_1cyber_1_1record_1_1Chunk_1a8dbd3eaef5f4c44b84b4003acaa2fc0b" kindref="member">header_</ref>.raw_size()<sp/>+<sp/>message.content().size());</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="structapollo_1_1cyber_1_1record_1_1Chunk_1a9cc10421521b0bb0b3e0c92f3bf5dfed" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structapollo_1_1cyber_1_1record_1_1Chunk_1a9cc10421521b0bb0b3e0c92f3bf5dfed" kindref="member">empty</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structapollo_1_1cyber_1_1record_1_1Chunk_1a8dbd3eaef5f4c44b84b4003acaa2fc0b" kindref="member">header_</ref>.message_number()<sp/>==<sp/>0;<sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="structapollo_1_1cyber_1_1record_1_1Chunk_1af89d9a0952404a4d3f3877da67b40128" refkind="member"><highlight class="normal"><sp/><sp/>std::mutex<sp/><ref refid="structapollo_1_1cyber_1_1record_1_1Chunk_1af89d9a0952404a4d3f3877da67b40128" kindref="member">mutex_</ref>;</highlight></codeline>
+<codeline lineno="75" refid="structapollo_1_1cyber_1_1record_1_1Chunk_1a8dbd3eaef5f4c44b84b4003acaa2fc0b" refkind="member"><highlight class="normal"><sp/><sp/>ChunkHeader<sp/><ref refid="structapollo_1_1cyber_1_1record_1_1Chunk_1a8dbd3eaef5f4c44b84b4003acaa2fc0b" kindref="member">header_</ref>;</highlight></codeline>
+<codeline lineno="76" refid="structapollo_1_1cyber_1_1record_1_1Chunk_1a00672597f6ebfdf2dbeaabd580d9909b" refkind="member"><highlight class="normal"><sp/><sp/>ChunkBody<sp/><ref refid="structapollo_1_1cyber_1_1record_1_1Chunk_1a00672597f6ebfdf2dbeaabd580d9909b" kindref="member">body_</ref>;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="classapollo_1_1cyber_1_1record_1_1RecordFileWriter" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classapollo_1_1cyber_1_1record_1_1RecordFileWriter" kindref="compound">RecordFileWriter</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordFileBase" kindref="compound">RecordFileBase</ref><sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordFileWriter_1ad6c9371e27b506c1e916b9122f2fd3f8" kindref="member">RecordFileWriter</ref>();</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordFileWriter_1a823790f4cd9cad56cc12670209137179" kindref="member">~RecordFileWriter</ref>();</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordFileWriter_1a1ad9eb3d567f7864612c452a75b0c967" kindref="member">Open</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>path)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordFileWriter_1aa0eadfe8e1f3f91c17babefb0d5e4c7e" kindref="member">Close</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordFileWriter_1a4d4cc68925f8d527aa6a141b46abead7" kindref="member">WriteHeader</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Header&amp;<sp/>header);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordFileWriter_1ae59c16317fbababad7f2b8044ad070b3" kindref="member">WriteChannel</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Channel&amp;<sp/>channel);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordFileWriter_1adc065061c2b2153d359545a331c524c9" kindref="member">WriteMessage</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SingleMessage&amp;<sp/>message);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/>uint64_t<sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordFileWriter_1aa396513459032609d20eb98dd5c0d758" kindref="member">GetMessageNumber</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>channel_name)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordFileWriter_1a4b89c153e22c9f7304fe902d1f54df7d" kindref="member">WriteChunk</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ChunkHeader&amp;<sp/>chunk_header,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ChunkBody&amp;<sp/>chunk_body);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordFileWriter_1a1d5ab4981b71ae0ee82edfed00ac3aab" kindref="member">WriteSection</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/>message);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordFileWriter_1ad219175016997c7bc038117723460341" kindref="member">WriteIndex</ref>();</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordFileWriter_1add82a05fc9a0d63e6ff91120bdfe3947" kindref="member">Flush</ref>();</highlight></codeline>
+<codeline lineno="96" refid="classapollo_1_1cyber_1_1record_1_1RecordFileWriter_1a3594172acf9d83c7276cd387c4f62b7f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordFileWriter_1a3594172acf9d83c7276cd387c4f62b7f" kindref="member">is_writing_</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="97" refid="classapollo_1_1cyber_1_1record_1_1RecordFileWriter_1a70eb9d380cca0c9e9e277c9903d338fc" refkind="member"><highlight class="normal"><sp/><sp/>std::unique_ptr&lt;Chunk&gt;<sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordFileWriter_1a70eb9d380cca0c9e9e277c9903d338fc" kindref="member">chunk_active_</ref><sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="98" refid="classapollo_1_1cyber_1_1record_1_1RecordFileWriter_1a4e115eea29809bec0a280350e3193969" refkind="member"><highlight class="normal"><sp/><sp/>std::unique_ptr&lt;Chunk&gt;<sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordFileWriter_1a4e115eea29809bec0a280350e3193969" kindref="member">chunk_flush_</ref><sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="99" refid="classapollo_1_1cyber_1_1record_1_1RecordFileWriter_1aa8f0f4f7fe1d8da5b01a5079a16452a9" refkind="member"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;std::thread&gt;<sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordFileWriter_1aa8f0f4f7fe1d8da5b01a5079a16452a9" kindref="member">flush_thread_</ref><sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="100" refid="classapollo_1_1cyber_1_1record_1_1RecordFileWriter_1a6e1e0d90c3ce75d4c19a74bec5e82ef5" refkind="member"><highlight class="normal"><sp/><sp/>std::mutex<sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordFileWriter_1a6e1e0d90c3ce75d4c19a74bec5e82ef5" kindref="member">flush_mutex_</ref>;</highlight></codeline>
+<codeline lineno="101" refid="classapollo_1_1cyber_1_1record_1_1RecordFileWriter_1a60b937f5a912b7f1b6dd16b7ee67a249" refkind="member"><highlight class="normal"><sp/><sp/>std::condition_variable<sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordFileWriter_1a60b937f5a912b7f1b6dd16b7ee67a249" kindref="member">flush_cv_</ref>;</highlight></codeline>
+<codeline lineno="102" refid="classapollo_1_1cyber_1_1record_1_1RecordFileWriter_1a88068ed84f3d00bfa066b921ad48948c" refkind="member"><highlight class="normal"><sp/><sp/>std::unordered_map&lt;std::string,<sp/>uint64_t&gt;<sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordFileWriter_1a88068ed84f3d00bfa066b921ad48948c" kindref="member">channel_message_number_map_</ref>;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="106" refid="classapollo_1_1cyber_1_1record_1_1RecordFileWriter_1a1d5ab4981b71ae0ee82edfed00ac3aab" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordFileWriter_1a1d5ab4981b71ae0ee82edfed00ac3aab" kindref="member">RecordFileWriter::WriteSection</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/>message)<sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/>SectionType<sp/>type;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="namespaceapollo_1_1cyber_1_1base_1aa3e2fff9b18a1214af4a70546fb7120f" kindref="member">std::is_same&lt;T, ChunkHeader&gt;::value</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>type<sp/>=<sp/>SectionType::SECTION_CHUNK_HEADER;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="namespaceapollo_1_1cyber_1_1base_1aa3e2fff9b18a1214af4a70546fb7120f" kindref="member">std::is_same&lt;T, ChunkBody&gt;::value</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>type<sp/>=<sp/>SectionType::SECTION_CHUNK_BODY;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="namespaceapollo_1_1cyber_1_1base_1aa3e2fff9b18a1214af4a70546fb7120f" kindref="member">std::is_same&lt;T, Channel&gt;::value</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>type<sp/>=<sp/>SectionType::SECTION_CHANNEL;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="namespaceapollo_1_1cyber_1_1base_1aa3e2fff9b18a1214af4a70546fb7120f" kindref="member">std::is_same&lt;T, Header&gt;::value</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>type<sp/>=<sp/>SectionType::SECTION_HEADER;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="classapollo_1_1cyber_1_1record_1_1RecordFileBase_1a5349dcfbdbc71a784e7eef98504c04ea" kindref="member">SetPosition</ref>(0))<sp/>{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="log_8h_1a6f0289102fe6b16c585ca7d18eae701e" kindref="member">AERROR</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Jump<sp/>to<sp/>position<sp/>#0<sp/>failed&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="namespaceapollo_1_1cyber_1_1base_1aa3e2fff9b18a1214af4a70546fb7120f" kindref="member">std::is_same&lt;T, Index&gt;::value</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>type<sp/>=<sp/>SectionType::SECTION_INDEX;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="log_8h_1a6f0289102fe6b16c585ca7d18eae701e" kindref="member">AERROR</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Do<sp/>not<sp/>support<sp/>this<sp/>template<sp/>typename.&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><ref refid="structapollo_1_1cyber_1_1record_1_1Section" kindref="compound">Section</ref><sp/>section<sp/>=<sp/>{type,<sp/>message.ByteSize()};</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/>ssize_t<sp/>count<sp/>=<sp/>write(<ref refid="classapollo_1_1cyber_1_1record_1_1RecordFileBase_1aaa370e96b2b0fde778dc514652a0a912" kindref="member">fd_</ref>,<sp/>&amp;section,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(section));</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(count<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="log_8h_1a6f0289102fe6b16c585ca7d18eae701e" kindref="member">AERROR</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Write<sp/>fd<sp/>failed,<sp/>fd:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordFileBase_1aaa370e96b2b0fde778dc514652a0a912" kindref="member">fd_</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;,<sp/>errno:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>errno;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(count<sp/>!=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(section))<sp/>{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="log_8h_1a6f0289102fe6b16c585ca7d18eae701e" kindref="member">AERROR</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Write<sp/>fd<sp/>failed,<sp/>fd:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordFileBase_1aaa370e96b2b0fde778dc514652a0a912" kindref="member">fd_</ref></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;,<sp/>expect<sp/>count:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(section)</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;,<sp/>actual<sp/>count:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>count;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/>ZeroCopyOutputStream*<sp/>raw_output<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>FileOutputStream(<ref refid="classapollo_1_1cyber_1_1record_1_1RecordFileBase_1aaa370e96b2b0fde778dc514652a0a912" kindref="member">fd_</ref>);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/>message.SerializeToZeroCopyStream(raw_output);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>raw_output;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(type<sp/>==<sp/>SectionType::SECTION_HEADER)<sp/>{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>blank[<ref refid="namespaceapollo_1_1cyber_1_1record_1afa8c164e9d516ce65e39bcc9d3689a05" kindref="member">HEADER_LENGTH</ref>]<sp/>=<sp/>{</highlight><highlight class="charliteral">&apos;0&apos;</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>count<sp/>=<sp/>write(<ref refid="classapollo_1_1cyber_1_1record_1_1RecordFileBase_1aaa370e96b2b0fde778dc514652a0a912" kindref="member">fd_</ref>,<sp/>&amp;blank,<sp/><ref refid="namespaceapollo_1_1cyber_1_1record_1afa8c164e9d516ce65e39bcc9d3689a05" kindref="member">HEADER_LENGTH</ref><sp/>-<sp/>message.ByteSize());</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(count<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="log_8h_1a6f0289102fe6b16c585ca7d18eae701e" kindref="member">AERROR</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Write<sp/>fd<sp/>failed,<sp/>fd:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordFileBase_1aaa370e96b2b0fde778dc514652a0a912" kindref="member">fd_</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;,<sp/>errno:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>errno;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(count<sp/>!=<sp/><ref refid="namespaceapollo_1_1cyber_1_1record_1afa8c164e9d516ce65e39bcc9d3689a05" kindref="member">HEADER_LENGTH</ref><sp/>-<sp/>message.ByteSize())<sp/>{</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="log_8h_1a6f0289102fe6b16c585ca7d18eae701e" kindref="member">AERROR</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Write<sp/>fd<sp/>failed,<sp/>fd:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordFileBase_1aaa370e96b2b0fde778dc514652a0a912" kindref="member">fd_</ref></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;,<sp/>expect<sp/>count:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(section)</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;,<sp/>actual<sp/>count:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>count;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordFileBase_1af6940c8d8e756da009bee5e0188da259" kindref="member">header_</ref>.set_size(<ref refid="classapollo_1_1cyber_1_1record_1_1RecordFileBase_1ae9ab782e3a023c522ccb2de275622559" kindref="member">CurrentPosition</ref>());</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>record</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>cyber</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>apollo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>CYBER_RECORD_FILE_RECORD_FILE_WRITER_H_</highlight></codeline>
+    </programlisting>
+    <location file="/home/work/apollo-fork/apollo/cyber/record/file/record_file_writer.h"/>
+  </compounddef>
+</doxygen>

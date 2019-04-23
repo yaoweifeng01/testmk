@@ -1,0 +1,184 @@
+\hypertarget{classapollo_1_1cyber_1_1TimingWheel}{\section{apollo\-:\-:cyber\-:\-:Timing\-Wheel Class Reference}
+\label{classapollo_1_1cyber_1_1TimingWheel}\index{apollo\-::cyber\-::\-Timing\-Wheel@{apollo\-::cyber\-::\-Timing\-Wheel}}
+}
+
+
+{\ttfamily \#include $<$timing\-\_\-wheel.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1TimingWheel_ae79b915a0b8517bafe4390392428b434}{Timing\-Wheel} ()
+\item 
+\hyperlink{classapollo_1_1cyber_1_1TimingWheel_a0ae9c0f8a599ebd537441871832e492d}{Timing\-Wheel} (const \hyperlink{classapollo_1_1cyber_1_1Duration}{Duration} \&tick\-\_\-duration)
+\item 
+\hyperlink{classapollo_1_1cyber_1_1TimingWheel_aeb70bca6295f6f13455b8dce0b20e32a}{$\sim$\-Timing\-Wheel} ()=default
+\item 
+uint64\-\_\-t \hyperlink{classapollo_1_1cyber_1_1TimingWheel_a34dd74d1a19b281fc76cea4816288cf9}{Start\-Timer} (uint64\-\_\-t interval, \hyperlink{namespaceapollo_1_1cyber_a73f7b365c4d923725c0a03bfb8c97978}{Call\-Handler} handler, bool oneshot)
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1TimingWheel_aa8f2eb8d8bb10b5ec0dcb6dc318fd340}{Stop\-Timer} (uint64\-\_\-t timer\-\_\-id)
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1TimingWheel_ad21b93b1440bf76cac885f01f67bb730}{Step} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1TimingWheel_adecc7f4db3d9abad0ccb5ef738d27b8e}{Fill\-Add\-Slot} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1TimingWheel_a76133e3a7948b702e7fb008a9a0f48bb}{Fill\-Repeat\-Slot} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1TimingWheel_a2a839c737caf05cfb58f6bdcb19dd4d9}{Fill\-Slot} (const std\-::shared\-\_\-ptr$<$ \hyperlink{classapollo_1_1cyber_1_1TimerTask}{Timer\-Task} $>$ \&task)
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1TimingWheel_a797d44ac4f49e013c89fe0d07217a9af}{Remove\-Cancelled\-Tasks} (uint64\-\_\-t slot\-\_\-index)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint64\-\_\-t \hyperlink{classapollo_1_1cyber_1_1TimingWheel_a7272e1fa44240d3d33321eff5d441fe1}{id\-\_\-counter\-\_\-} = 0
+\item 
+uint64\-\_\-t \hyperlink{classapollo_1_1cyber_1_1TimingWheel_aad6f68c7f2482a7332f2a25feacc57ea}{tick\-\_\-} = 0
+\item 
+uint64\-\_\-t \hyperlink{classapollo_1_1cyber_1_1TimingWheel_ad65efbe24adcdf04dd52aa9eec5a7762}{start\-\_\-time\-\_\-} = 0
+\item 
+\hyperlink{classapollo_1_1cyber_1_1TimingSlot}{Timing\-Slot} \hyperlink{classapollo_1_1cyber_1_1TimingWheel_a9dbb67035af423a67b8b725d80ba2920}{time\-\_\-slots\-\_\-} \mbox{[}\hyperlink{namespaceapollo_1_1cyber_a708c544333efd71eb0b9439a18a297bf}{T\-I\-M\-I\-N\-G\-\_\-\-W\-H\-E\-E\-L\-\_\-\-S\-I\-Z\-E}\mbox{]}
+\item 
+uint64\-\_\-t \hyperlink{classapollo_1_1cyber_1_1TimingWheel_ae6970ce0519654e6b35376b0c305af22}{mask\-\_\-} = \hyperlink{namespaceapollo_1_1cyber_a708c544333efd71eb0b9439a18a297bf}{T\-I\-M\-I\-N\-G\-\_\-\-W\-H\-E\-E\-L\-\_\-\-S\-I\-Z\-E} -\/ 1
+\item 
+uint64\-\_\-t \hyperlink{classapollo_1_1cyber_1_1TimingWheel_adc7be44d7a193c980ee29aebe6153d14}{tick\-\_\-duration\-\_\-} = 10 $\ast$ 1000 $\ast$ 1000
+\item 
+uint64\-\_\-t \hyperlink{classapollo_1_1cyber_1_1TimingWheel_a8575c041956dc3bbb58bc1289af64339}{resolution\-\_\-} = 10
+\item 
+std\-::list$<$ uint64\-\_\-t $>$ \hyperlink{classapollo_1_1cyber_1_1TimingWheel_a27a4106601246fcdbeec1e73d470138f}{cancelled\-\_\-list\-\_\-}
+\item 
+std\-::mutex \hyperlink{classapollo_1_1cyber_1_1TimingWheel_a09c73b028934c0770a436942e5cf08c4}{cancelled\-\_\-mutex\-\_\-}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1base_1_1BoundedQueue}{Bounded\-Queue}$<$ std\-::shared\-\_\-ptr\\*
+$<$ \hyperlink{classapollo_1_1cyber_1_1TimerTask}{Timer\-Task} $>$ $>$ \hyperlink{classapollo_1_1cyber_1_1TimingWheel_a0ffa403e6ddc38490dfc17dc1a76fa90}{add\-\_\-queue\-\_\-}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1base_1_1BoundedQueue}{Bounded\-Queue}$<$ std\-::shared\-\_\-ptr\\*
+$<$ \hyperlink{classapollo_1_1cyber_1_1TimerTask}{Timer\-Task} $>$ $>$ \hyperlink{classapollo_1_1cyber_1_1TimingWheel_ada62c50c8f74816280c5a67bacd13c29}{repeat\-\_\-queue\-\_\-}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1base_1_1BoundedQueue}{Bounded\-Queue}$<$ \hyperlink{structapollo_1_1cyber_1_1HandlePackage}{Handle\-Package} $>$ \hyperlink{classapollo_1_1cyber_1_1TimingWheel_aa090a8f5dcd4b1e420a7c621e133906f}{handler\-\_\-queue\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classapollo_1_1cyber_1_1TimingWheel_ae79b915a0b8517bafe4390392428b434}{\index{apollo\-::cyber\-::\-Timing\-Wheel@{apollo\-::cyber\-::\-Timing\-Wheel}!Timing\-Wheel@{Timing\-Wheel}}
+\index{Timing\-Wheel@{Timing\-Wheel}!apollo::cyber::TimingWheel@{apollo\-::cyber\-::\-Timing\-Wheel}}
+\subsubsection[{Timing\-Wheel}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::\-Timing\-Wheel\-::\-Timing\-Wheel (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1TimingWheel_ae79b915a0b8517bafe4390392428b434}
+\hypertarget{classapollo_1_1cyber_1_1TimingWheel_a0ae9c0f8a599ebd537441871832e492d}{\index{apollo\-::cyber\-::\-Timing\-Wheel@{apollo\-::cyber\-::\-Timing\-Wheel}!Timing\-Wheel@{Timing\-Wheel}}
+\index{Timing\-Wheel@{Timing\-Wheel}!apollo::cyber::TimingWheel@{apollo\-::cyber\-::\-Timing\-Wheel}}
+\subsubsection[{Timing\-Wheel}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::\-Timing\-Wheel\-::\-Timing\-Wheel (
+\begin{DoxyParamCaption}
+\item[{const {\bf Duration} \&}]{tick\-\_\-duration}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}}\label{classapollo_1_1cyber_1_1TimingWheel_a0ae9c0f8a599ebd537441871832e492d}
+\hypertarget{classapollo_1_1cyber_1_1TimingWheel_aeb70bca6295f6f13455b8dce0b20e32a}{\index{apollo\-::cyber\-::\-Timing\-Wheel@{apollo\-::cyber\-::\-Timing\-Wheel}!$\sim$\-Timing\-Wheel@{$\sim$\-Timing\-Wheel}}
+\index{$\sim$\-Timing\-Wheel@{$\sim$\-Timing\-Wheel}!apollo::cyber::TimingWheel@{apollo\-::cyber\-::\-Timing\-Wheel}}
+\subsubsection[{$\sim$\-Timing\-Wheel}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::\-Timing\-Wheel\-::$\sim$\-Timing\-Wheel (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [default]}}}\label{classapollo_1_1cyber_1_1TimingWheel_aeb70bca6295f6f13455b8dce0b20e32a}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1TimingWheel_adecc7f4db3d9abad0ccb5ef738d27b8e}{\index{apollo\-::cyber\-::\-Timing\-Wheel@{apollo\-::cyber\-::\-Timing\-Wheel}!Fill\-Add\-Slot@{Fill\-Add\-Slot}}
+\index{Fill\-Add\-Slot@{Fill\-Add\-Slot}!apollo::cyber::TimingWheel@{apollo\-::cyber\-::\-Timing\-Wheel}}
+\subsubsection[{Fill\-Add\-Slot}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::\-Timing\-Wheel\-::\-Fill\-Add\-Slot (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1TimingWheel_adecc7f4db3d9abad0ccb5ef738d27b8e}
+\hypertarget{classapollo_1_1cyber_1_1TimingWheel_a76133e3a7948b702e7fb008a9a0f48bb}{\index{apollo\-::cyber\-::\-Timing\-Wheel@{apollo\-::cyber\-::\-Timing\-Wheel}!Fill\-Repeat\-Slot@{Fill\-Repeat\-Slot}}
+\index{Fill\-Repeat\-Slot@{Fill\-Repeat\-Slot}!apollo::cyber::TimingWheel@{apollo\-::cyber\-::\-Timing\-Wheel}}
+\subsubsection[{Fill\-Repeat\-Slot}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::\-Timing\-Wheel\-::\-Fill\-Repeat\-Slot (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1TimingWheel_a76133e3a7948b702e7fb008a9a0f48bb}
+\hypertarget{classapollo_1_1cyber_1_1TimingWheel_a2a839c737caf05cfb58f6bdcb19dd4d9}{\index{apollo\-::cyber\-::\-Timing\-Wheel@{apollo\-::cyber\-::\-Timing\-Wheel}!Fill\-Slot@{Fill\-Slot}}
+\index{Fill\-Slot@{Fill\-Slot}!apollo::cyber::TimingWheel@{apollo\-::cyber\-::\-Timing\-Wheel}}
+\subsubsection[{Fill\-Slot}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::\-Timing\-Wheel\-::\-Fill\-Slot (
+\begin{DoxyParamCaption}
+\item[{const std\-::shared\-\_\-ptr$<$ {\bf Timer\-Task} $>$ \&}]{task}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1TimingWheel_a2a839c737caf05cfb58f6bdcb19dd4d9}
+\hypertarget{classapollo_1_1cyber_1_1TimingWheel_a797d44ac4f49e013c89fe0d07217a9af}{\index{apollo\-::cyber\-::\-Timing\-Wheel@{apollo\-::cyber\-::\-Timing\-Wheel}!Remove\-Cancelled\-Tasks@{Remove\-Cancelled\-Tasks}}
+\index{Remove\-Cancelled\-Tasks@{Remove\-Cancelled\-Tasks}!apollo::cyber::TimingWheel@{apollo\-::cyber\-::\-Timing\-Wheel}}
+\subsubsection[{Remove\-Cancelled\-Tasks}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::\-Timing\-Wheel\-::\-Remove\-Cancelled\-Tasks (
+\begin{DoxyParamCaption}
+\item[{uint64\-\_\-t}]{slot\-\_\-index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1TimingWheel_a797d44ac4f49e013c89fe0d07217a9af}
+\hypertarget{classapollo_1_1cyber_1_1TimingWheel_a34dd74d1a19b281fc76cea4816288cf9}{\index{apollo\-::cyber\-::\-Timing\-Wheel@{apollo\-::cyber\-::\-Timing\-Wheel}!Start\-Timer@{Start\-Timer}}
+\index{Start\-Timer@{Start\-Timer}!apollo::cyber::TimingWheel@{apollo\-::cyber\-::\-Timing\-Wheel}}
+\subsubsection[{Start\-Timer}]{\setlength{\rightskip}{0pt plus 5cm}uint64\-\_\-t apollo\-::cyber\-::\-Timing\-Wheel\-::\-Start\-Timer (
+\begin{DoxyParamCaption}
+\item[{uint64\-\_\-t}]{interval, }
+\item[{{\bf Call\-Handler}}]{handler, }
+\item[{bool}]{oneshot}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1TimingWheel_a34dd74d1a19b281fc76cea4816288cf9}
+\hypertarget{classapollo_1_1cyber_1_1TimingWheel_ad21b93b1440bf76cac885f01f67bb730}{\index{apollo\-::cyber\-::\-Timing\-Wheel@{apollo\-::cyber\-::\-Timing\-Wheel}!Step@{Step}}
+\index{Step@{Step}!apollo::cyber::TimingWheel@{apollo\-::cyber\-::\-Timing\-Wheel}}
+\subsubsection[{Step}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::\-Timing\-Wheel\-::\-Step (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1TimingWheel_ad21b93b1440bf76cac885f01f67bb730}
+\hypertarget{classapollo_1_1cyber_1_1TimingWheel_aa8f2eb8d8bb10b5ec0dcb6dc318fd340}{\index{apollo\-::cyber\-::\-Timing\-Wheel@{apollo\-::cyber\-::\-Timing\-Wheel}!Stop\-Timer@{Stop\-Timer}}
+\index{Stop\-Timer@{Stop\-Timer}!apollo::cyber::TimingWheel@{apollo\-::cyber\-::\-Timing\-Wheel}}
+\subsubsection[{Stop\-Timer}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::\-Timing\-Wheel\-::\-Stop\-Timer (
+\begin{DoxyParamCaption}
+\item[{uint64\-\_\-t}]{timer\-\_\-id}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1TimingWheel_aa8f2eb8d8bb10b5ec0dcb6dc318fd340}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classapollo_1_1cyber_1_1TimingWheel_a0ffa403e6ddc38490dfc17dc1a76fa90}{\index{apollo\-::cyber\-::\-Timing\-Wheel@{apollo\-::cyber\-::\-Timing\-Wheel}!add\-\_\-queue\-\_\-@{add\-\_\-queue\-\_\-}}
+\index{add\-\_\-queue\-\_\-@{add\-\_\-queue\-\_\-}!apollo::cyber::TimingWheel@{apollo\-::cyber\-::\-Timing\-Wheel}}
+\subsubsection[{add\-\_\-queue\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Bounded\-Queue}$<$std\-::shared\-\_\-ptr$<${\bf Timer\-Task}$>$ $>$ apollo\-::cyber\-::\-Timing\-Wheel\-::add\-\_\-queue\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1TimingWheel_a0ffa403e6ddc38490dfc17dc1a76fa90}
+\hypertarget{classapollo_1_1cyber_1_1TimingWheel_a27a4106601246fcdbeec1e73d470138f}{\index{apollo\-::cyber\-::\-Timing\-Wheel@{apollo\-::cyber\-::\-Timing\-Wheel}!cancelled\-\_\-list\-\_\-@{cancelled\-\_\-list\-\_\-}}
+\index{cancelled\-\_\-list\-\_\-@{cancelled\-\_\-list\-\_\-}!apollo::cyber::TimingWheel@{apollo\-::cyber\-::\-Timing\-Wheel}}
+\subsubsection[{cancelled\-\_\-list\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::list$<$uint64\-\_\-t$>$ apollo\-::cyber\-::\-Timing\-Wheel\-::cancelled\-\_\-list\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1TimingWheel_a27a4106601246fcdbeec1e73d470138f}
+\hypertarget{classapollo_1_1cyber_1_1TimingWheel_a09c73b028934c0770a436942e5cf08c4}{\index{apollo\-::cyber\-::\-Timing\-Wheel@{apollo\-::cyber\-::\-Timing\-Wheel}!cancelled\-\_\-mutex\-\_\-@{cancelled\-\_\-mutex\-\_\-}}
+\index{cancelled\-\_\-mutex\-\_\-@{cancelled\-\_\-mutex\-\_\-}!apollo::cyber::TimingWheel@{apollo\-::cyber\-::\-Timing\-Wheel}}
+\subsubsection[{cancelled\-\_\-mutex\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::mutex apollo\-::cyber\-::\-Timing\-Wheel\-::cancelled\-\_\-mutex\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1TimingWheel_a09c73b028934c0770a436942e5cf08c4}
+\hypertarget{classapollo_1_1cyber_1_1TimingWheel_aa090a8f5dcd4b1e420a7c621e133906f}{\index{apollo\-::cyber\-::\-Timing\-Wheel@{apollo\-::cyber\-::\-Timing\-Wheel}!handler\-\_\-queue\-\_\-@{handler\-\_\-queue\-\_\-}}
+\index{handler\-\_\-queue\-\_\-@{handler\-\_\-queue\-\_\-}!apollo::cyber::TimingWheel@{apollo\-::cyber\-::\-Timing\-Wheel}}
+\subsubsection[{handler\-\_\-queue\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Bounded\-Queue}$<${\bf Handle\-Package}$>$ apollo\-::cyber\-::\-Timing\-Wheel\-::handler\-\_\-queue\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1TimingWheel_aa090a8f5dcd4b1e420a7c621e133906f}
+\hypertarget{classapollo_1_1cyber_1_1TimingWheel_a7272e1fa44240d3d33321eff5d441fe1}{\index{apollo\-::cyber\-::\-Timing\-Wheel@{apollo\-::cyber\-::\-Timing\-Wheel}!id\-\_\-counter\-\_\-@{id\-\_\-counter\-\_\-}}
+\index{id\-\_\-counter\-\_\-@{id\-\_\-counter\-\_\-}!apollo::cyber::TimingWheel@{apollo\-::cyber\-::\-Timing\-Wheel}}
+\subsubsection[{id\-\_\-counter\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}uint64\-\_\-t apollo\-::cyber\-::\-Timing\-Wheel\-::id\-\_\-counter\-\_\- = 0\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1TimingWheel_a7272e1fa44240d3d33321eff5d441fe1}
+\hypertarget{classapollo_1_1cyber_1_1TimingWheel_ae6970ce0519654e6b35376b0c305af22}{\index{apollo\-::cyber\-::\-Timing\-Wheel@{apollo\-::cyber\-::\-Timing\-Wheel}!mask\-\_\-@{mask\-\_\-}}
+\index{mask\-\_\-@{mask\-\_\-}!apollo::cyber::TimingWheel@{apollo\-::cyber\-::\-Timing\-Wheel}}
+\subsubsection[{mask\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}uint64\-\_\-t apollo\-::cyber\-::\-Timing\-Wheel\-::mask\-\_\- = {\bf T\-I\-M\-I\-N\-G\-\_\-\-W\-H\-E\-E\-L\-\_\-\-S\-I\-Z\-E} -\/ 1\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1TimingWheel_ae6970ce0519654e6b35376b0c305af22}
+\hypertarget{classapollo_1_1cyber_1_1TimingWheel_ada62c50c8f74816280c5a67bacd13c29}{\index{apollo\-::cyber\-::\-Timing\-Wheel@{apollo\-::cyber\-::\-Timing\-Wheel}!repeat\-\_\-queue\-\_\-@{repeat\-\_\-queue\-\_\-}}
+\index{repeat\-\_\-queue\-\_\-@{repeat\-\_\-queue\-\_\-}!apollo::cyber::TimingWheel@{apollo\-::cyber\-::\-Timing\-Wheel}}
+\subsubsection[{repeat\-\_\-queue\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Bounded\-Queue}$<$std\-::shared\-\_\-ptr$<${\bf Timer\-Task}$>$ $>$ apollo\-::cyber\-::\-Timing\-Wheel\-::repeat\-\_\-queue\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1TimingWheel_ada62c50c8f74816280c5a67bacd13c29}
+\hypertarget{classapollo_1_1cyber_1_1TimingWheel_a8575c041956dc3bbb58bc1289af64339}{\index{apollo\-::cyber\-::\-Timing\-Wheel@{apollo\-::cyber\-::\-Timing\-Wheel}!resolution\-\_\-@{resolution\-\_\-}}
+\index{resolution\-\_\-@{resolution\-\_\-}!apollo::cyber::TimingWheel@{apollo\-::cyber\-::\-Timing\-Wheel}}
+\subsubsection[{resolution\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}uint64\-\_\-t apollo\-::cyber\-::\-Timing\-Wheel\-::resolution\-\_\- = 10\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1TimingWheel_a8575c041956dc3bbb58bc1289af64339}
+\hypertarget{classapollo_1_1cyber_1_1TimingWheel_ad65efbe24adcdf04dd52aa9eec5a7762}{\index{apollo\-::cyber\-::\-Timing\-Wheel@{apollo\-::cyber\-::\-Timing\-Wheel}!start\-\_\-time\-\_\-@{start\-\_\-time\-\_\-}}
+\index{start\-\_\-time\-\_\-@{start\-\_\-time\-\_\-}!apollo::cyber::TimingWheel@{apollo\-::cyber\-::\-Timing\-Wheel}}
+\subsubsection[{start\-\_\-time\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}uint64\-\_\-t apollo\-::cyber\-::\-Timing\-Wheel\-::start\-\_\-time\-\_\- = 0\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1TimingWheel_ad65efbe24adcdf04dd52aa9eec5a7762}
+\hypertarget{classapollo_1_1cyber_1_1TimingWheel_aad6f68c7f2482a7332f2a25feacc57ea}{\index{apollo\-::cyber\-::\-Timing\-Wheel@{apollo\-::cyber\-::\-Timing\-Wheel}!tick\-\_\-@{tick\-\_\-}}
+\index{tick\-\_\-@{tick\-\_\-}!apollo::cyber::TimingWheel@{apollo\-::cyber\-::\-Timing\-Wheel}}
+\subsubsection[{tick\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}uint64\-\_\-t apollo\-::cyber\-::\-Timing\-Wheel\-::tick\-\_\- = 0\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1TimingWheel_aad6f68c7f2482a7332f2a25feacc57ea}
+\hypertarget{classapollo_1_1cyber_1_1TimingWheel_adc7be44d7a193c980ee29aebe6153d14}{\index{apollo\-::cyber\-::\-Timing\-Wheel@{apollo\-::cyber\-::\-Timing\-Wheel}!tick\-\_\-duration\-\_\-@{tick\-\_\-duration\-\_\-}}
+\index{tick\-\_\-duration\-\_\-@{tick\-\_\-duration\-\_\-}!apollo::cyber::TimingWheel@{apollo\-::cyber\-::\-Timing\-Wheel}}
+\subsubsection[{tick\-\_\-duration\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}uint64\-\_\-t apollo\-::cyber\-::\-Timing\-Wheel\-::tick\-\_\-duration\-\_\- = 10 $\ast$ 1000 $\ast$ 1000\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1TimingWheel_adc7be44d7a193c980ee29aebe6153d14}
+\hypertarget{classapollo_1_1cyber_1_1TimingWheel_a9dbb67035af423a67b8b725d80ba2920}{\index{apollo\-::cyber\-::\-Timing\-Wheel@{apollo\-::cyber\-::\-Timing\-Wheel}!time\-\_\-slots\-\_\-@{time\-\_\-slots\-\_\-}}
+\index{time\-\_\-slots\-\_\-@{time\-\_\-slots\-\_\-}!apollo::cyber::TimingWheel@{apollo\-::cyber\-::\-Timing\-Wheel}}
+\subsubsection[{time\-\_\-slots\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Timing\-Slot} apollo\-::cyber\-::\-Timing\-Wheel\-::time\-\_\-slots\-\_\-\mbox{[}{\bf T\-I\-M\-I\-N\-G\-\_\-\-W\-H\-E\-E\-L\-\_\-\-S\-I\-Z\-E}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1TimingWheel_a9dbb67035af423a67b8b725d80ba2920}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+timer/\hyperlink{timing__wheel_8h}{timing\-\_\-wheel.\-h}\end{DoxyCompactItemize}

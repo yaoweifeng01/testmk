@@ -1,0 +1,314 @@
+\hypertarget{classapollo_1_1cyber_1_1record_1_1RecordWriter}{\section{apollo\-:\-:cyber\-:\-:record\-:\-:Record\-Writer Class Reference}
+\label{classapollo_1_1cyber_1_1record_1_1RecordWriter}\index{apollo\-::cyber\-::record\-::\-Record\-Writer@{apollo\-::cyber\-::record\-::\-Record\-Writer}}
+}
+
+
+{\ttfamily \#include $<$record\-\_\-writer.\-h$>$}
+
+Inheritance diagram for apollo\-:\-:cyber\-:\-:record\-:\-:Record\-Writer\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classapollo_1_1cyber_1_1record_1_1RecordWriter}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1record_1_1RecordWriter_a2eee5f400e4db03ec9101258d8e819ab}{Message\-Number\-Map} = std\-::unordered\-\_\-map$<$ std\-::string, uint64\-\_\-t $>$
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1record_1_1RecordWriter_a199b00d29dde82c7a061b4ee2b6204d3}{Message\-Type\-Map} = std\-::unordered\-\_\-map$<$ std\-::string, std\-::string $>$
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1record_1_1RecordWriter_a19879e77c64a35d8e8d49d39798c25cb}{Message\-Proto\-Desc\-Map} = std\-::unordered\-\_\-map$<$ std\-::string, std\-::string $>$
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1record_1_1RecordWriter_a9711b0e51bbbd4dbe54e44c3d1fbd9da}{File\-Writer\-Ptr} = std\-::unique\-\_\-ptr$<$ \hyperlink{classapollo_1_1cyber_1_1record_1_1RecordFileWriter}{Record\-File\-Writer} $>$
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1record_1_1RecordWriter_a88286f6474eee87f0790523ff870c65a}{Record\-Writer} ()
+\item 
+\hyperlink{classapollo_1_1cyber_1_1record_1_1RecordWriter_a53d830c597e5874a7304b13f5f15283b}{Record\-Writer} (const proto\-::\-Header \&header)
+\item 
+virtual \hyperlink{classapollo_1_1cyber_1_1record_1_1RecordWriter_a24af86f0bc084759c1be3a9f4676539e}{$\sim$\-Record\-Writer} ()
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1record_1_1RecordWriter_a659682af6dd6b22c5f470470929a0fee}{Open} (const std\-::string \&file)
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1record_1_1RecordWriter_aeeb301a117dd331fc6fcd5d7c901edef}{Close} ()
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1record_1_1RecordWriter_aff50d522ad22bcfb6ecc8affe837f048}{Write\-Channel} (const std\-::string \&channel\-\_\-name, const std\-::string \&message\-\_\-type, const std\-::string \&proto\-\_\-desc)
+\item 
+{\footnotesize template$<$typename Message\-T $>$ }\\bool \hyperlink{classapollo_1_1cyber_1_1record_1_1RecordWriter_a9f8c8aa8c692d90fe5463930b440493e}{Write\-Message} (const std\-::string \&channel\-\_\-name, const Message\-T \&message, const uint64\-\_\-t time\-\_\-nanosec, const std\-::string \&proto\-\_\-desc=\char`\"{}\char`\"{})
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1record_1_1RecordWriter_a5fa79eae0201d4f3334b069b24a080b9}{Set\-Size\-Of\-File\-Segmentation} (uint64\-\_\-t size\-\_\-kilobytes)
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1record_1_1RecordWriter_a5e64257c68b872bc9bbb35874d9cdc40}{Set\-Interval\-Of\-File\-Segmentation} (uint64\-\_\-t time\-\_\-sec)
+\item 
+uint64\-\_\-t \hyperlink{classapollo_1_1cyber_1_1record_1_1RecordWriter_a2f0637a10532fd3d721ec27dec9aab05}{Get\-Message\-Number} (const std\-::string \&channel\-\_\-name) const override
+\item 
+const std\-::string \& \hyperlink{classapollo_1_1cyber_1_1record_1_1RecordWriter_a7bab92d44a94ea9c97546ff809c05064}{Get\-Message\-Type} (const std\-::string \&channel\-\_\-name) const override
+\item 
+const std\-::string \& \hyperlink{classapollo_1_1cyber_1_1record_1_1RecordWriter_a1f547541dfc6df5803f1032e4f39fb3c}{Get\-Proto\-Desc} (const std\-::string \&channel\-\_\-name) const override
+\item 
+{\footnotesize template$<$$>$ }\\bool \hyperlink{classapollo_1_1cyber_1_1record_1_1RecordWriter_aafe567af96e0770740544c54d388e4c8}{Write\-Message} (const std\-::string \&channel\-\_\-name, const std\-::string \&content, const uint64\-\_\-t time\-\_\-nanosec, const std\-::string \&proto\-\_\-desc)
+\item 
+{\footnotesize template$<$$>$ }\\bool \hyperlink{classapollo_1_1cyber_1_1record_1_1RecordWriter_a28694d46c58b507e13571e66ad1b5215}{Write\-Message} (const std\-::string \&channel\-\_\-name, const std\-::shared\-\_\-ptr$<$ \hyperlink{structapollo_1_1cyber_1_1message_1_1RawMessage}{message\-::\-Raw\-Message} $>$ \&message, const uint64\-\_\-t time\-\_\-nanosec, const std\-::string \&proto\-\_\-desc)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1record_1_1RecordWriter_a0667d7e33d4d062ddbd942753b71c061}{Write\-Message} (const proto\-::\-Single\-Message \&single\-\_\-msg)
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1record_1_1RecordWriter_aef5d2cfdfff48cd23f430c0d4a20f5c2}{Split\-Outfile} ()
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1record_1_1RecordWriter_a2ea4f80202e28292900382ca60ec9b71}{Is\-New\-Channel} (const std\-::string \&channel\-\_\-name)
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1record_1_1RecordWriter_a96843b877960edcf89da30a5ea0807d2}{On\-New\-Channel} (const std\-::string \&channel\-\_\-name, const std\-::string \&message\-\_\-type, const std\-::string \&proto\-\_\-desc)
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1record_1_1RecordWriter_aa997a88b0c59f25f8f5b52aab1c76229}{On\-New\-Message} (const std\-::string \&channel\-\_\-name)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\-::string \hyperlink{classapollo_1_1cyber_1_1record_1_1RecordWriter_a2dd230e28b838aef212051c69d1959b5}{path\-\_\-}
+\item 
+uint64\-\_\-t \hyperlink{classapollo_1_1cyber_1_1record_1_1RecordWriter_a93dde89dc680e3e6bddf15ee9a798619}{segment\-\_\-raw\-\_\-size\-\_\-} = 0
+\item 
+uint64\-\_\-t \hyperlink{classapollo_1_1cyber_1_1record_1_1RecordWriter_aeb5e15610f58a30bf82b7cc72ad0a9e8}{segment\-\_\-begin\-\_\-time\-\_\-} = 0
+\item 
+uint32\-\_\-t \hyperlink{classapollo_1_1cyber_1_1record_1_1RecordWriter_af5094adbd45ce47753dff6b5fc0a79c8}{file\-\_\-index\-\_\-} = 0
+\item 
+\hyperlink{classapollo_1_1cyber_1_1record_1_1RecordWriter_a2eee5f400e4db03ec9101258d8e819ab}{Message\-Number\-Map} \hyperlink{classapollo_1_1cyber_1_1record_1_1RecordWriter_af60d36f6e755729d5b0c49c4900a75c2}{channel\-\_\-message\-\_\-number\-\_\-map\-\_\-}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1record_1_1RecordWriter_a199b00d29dde82c7a061b4ee2b6204d3}{Message\-Type\-Map} \hyperlink{classapollo_1_1cyber_1_1record_1_1RecordWriter_a3697130c4b69f46f1420f33b238a36ea}{channel\-\_\-message\-\_\-type\-\_\-map\-\_\-}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1record_1_1RecordWriter_a19879e77c64a35d8e8d49d39798c25cb}{Message\-Proto\-Desc\-Map} \hyperlink{classapollo_1_1cyber_1_1record_1_1RecordWriter_a9f5fde8dcd26af2dff253a0b95e15211}{channel\-\_\-proto\-\_\-desc\-\_\-map\-\_\-}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1record_1_1RecordWriter_a9711b0e51bbbd4dbe54e44c3d1fbd9da}{File\-Writer\-Ptr} \hyperlink{classapollo_1_1cyber_1_1record_1_1RecordWriter_aa2df27a2d2944227aa8f38593a018c2e}{file\-\_\-writer\-\_\-} = nullptr
+\item 
+\hyperlink{classapollo_1_1cyber_1_1record_1_1RecordWriter_a9711b0e51bbbd4dbe54e44c3d1fbd9da}{File\-Writer\-Ptr} \hyperlink{classapollo_1_1cyber_1_1record_1_1RecordWriter_a12e4edaffd51705cd928e1a9925303c5}{file\-\_\-writer\-\_\-backup\-\_\-} = nullptr
+\item 
+std\-::mutex \hyperlink{classapollo_1_1cyber_1_1record_1_1RecordWriter_ab309369671e53408b88782b68f897be0}{mutex\-\_\-}
+\item 
+std\-::stringstream \hyperlink{classapollo_1_1cyber_1_1record_1_1RecordWriter_a6ebe2f54d4185936811d045e0135b513}{sstream\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1RecordWriter_a9711b0e51bbbd4dbe54e44c3d1fbd9da}{\index{apollo\-::cyber\-::record\-::\-Record\-Writer@{apollo\-::cyber\-::record\-::\-Record\-Writer}!File\-Writer\-Ptr@{File\-Writer\-Ptr}}
+\index{File\-Writer\-Ptr@{File\-Writer\-Ptr}!apollo::cyber::record::RecordWriter@{apollo\-::cyber\-::record\-::\-Record\-Writer}}
+\subsubsection[{File\-Writer\-Ptr}]{\setlength{\rightskip}{0pt plus 5cm}using {\bf apollo\-::cyber\-::record\-::\-Record\-Writer\-::\-File\-Writer\-Ptr} =  std\-::unique\-\_\-ptr$<${\bf Record\-File\-Writer}$>$}}\label{classapollo_1_1cyber_1_1record_1_1RecordWriter_a9711b0e51bbbd4dbe54e44c3d1fbd9da}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1RecordWriter_a2eee5f400e4db03ec9101258d8e819ab}{\index{apollo\-::cyber\-::record\-::\-Record\-Writer@{apollo\-::cyber\-::record\-::\-Record\-Writer}!Message\-Number\-Map@{Message\-Number\-Map}}
+\index{Message\-Number\-Map@{Message\-Number\-Map}!apollo::cyber::record::RecordWriter@{apollo\-::cyber\-::record\-::\-Record\-Writer}}
+\subsubsection[{Message\-Number\-Map}]{\setlength{\rightskip}{0pt plus 5cm}using {\bf apollo\-::cyber\-::record\-::\-Record\-Writer\-::\-Message\-Number\-Map} =  std\-::unordered\-\_\-map$<$std\-::string, uint64\-\_\-t$>$}}\label{classapollo_1_1cyber_1_1record_1_1RecordWriter_a2eee5f400e4db03ec9101258d8e819ab}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1RecordWriter_a19879e77c64a35d8e8d49d39798c25cb}{\index{apollo\-::cyber\-::record\-::\-Record\-Writer@{apollo\-::cyber\-::record\-::\-Record\-Writer}!Message\-Proto\-Desc\-Map@{Message\-Proto\-Desc\-Map}}
+\index{Message\-Proto\-Desc\-Map@{Message\-Proto\-Desc\-Map}!apollo::cyber::record::RecordWriter@{apollo\-::cyber\-::record\-::\-Record\-Writer}}
+\subsubsection[{Message\-Proto\-Desc\-Map}]{\setlength{\rightskip}{0pt plus 5cm}using {\bf apollo\-::cyber\-::record\-::\-Record\-Writer\-::\-Message\-Proto\-Desc\-Map} =  std\-::unordered\-\_\-map$<$std\-::string, std\-::string$>$}}\label{classapollo_1_1cyber_1_1record_1_1RecordWriter_a19879e77c64a35d8e8d49d39798c25cb}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1RecordWriter_a199b00d29dde82c7a061b4ee2b6204d3}{\index{apollo\-::cyber\-::record\-::\-Record\-Writer@{apollo\-::cyber\-::record\-::\-Record\-Writer}!Message\-Type\-Map@{Message\-Type\-Map}}
+\index{Message\-Type\-Map@{Message\-Type\-Map}!apollo::cyber::record::RecordWriter@{apollo\-::cyber\-::record\-::\-Record\-Writer}}
+\subsubsection[{Message\-Type\-Map}]{\setlength{\rightskip}{0pt plus 5cm}using {\bf apollo\-::cyber\-::record\-::\-Record\-Writer\-::\-Message\-Type\-Map} =  std\-::unordered\-\_\-map$<$std\-::string, std\-::string$>$}}\label{classapollo_1_1cyber_1_1record_1_1RecordWriter_a199b00d29dde82c7a061b4ee2b6204d3}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1RecordWriter_a88286f6474eee87f0790523ff870c65a}{\index{apollo\-::cyber\-::record\-::\-Record\-Writer@{apollo\-::cyber\-::record\-::\-Record\-Writer}!Record\-Writer@{Record\-Writer}}
+\index{Record\-Writer@{Record\-Writer}!apollo::cyber::record::RecordWriter@{apollo\-::cyber\-::record\-::\-Record\-Writer}}
+\subsubsection[{Record\-Writer}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::record\-::\-Record\-Writer\-::\-Record\-Writer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1record_1_1RecordWriter_a88286f6474eee87f0790523ff870c65a}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1RecordWriter_a53d830c597e5874a7304b13f5f15283b}{\index{apollo\-::cyber\-::record\-::\-Record\-Writer@{apollo\-::cyber\-::record\-::\-Record\-Writer}!Record\-Writer@{Record\-Writer}}
+\index{Record\-Writer@{Record\-Writer}!apollo::cyber::record::RecordWriter@{apollo\-::cyber\-::record\-::\-Record\-Writer}}
+\subsubsection[{Record\-Writer}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::record\-::\-Record\-Writer\-::\-Record\-Writer (
+\begin{DoxyParamCaption}
+\item[{const proto\-::\-Header \&}]{header}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}}\label{classapollo_1_1cyber_1_1record_1_1RecordWriter_a53d830c597e5874a7304b13f5f15283b}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1RecordWriter_a24af86f0bc084759c1be3a9f4676539e}{\index{apollo\-::cyber\-::record\-::\-Record\-Writer@{apollo\-::cyber\-::record\-::\-Record\-Writer}!$\sim$\-Record\-Writer@{$\sim$\-Record\-Writer}}
+\index{$\sim$\-Record\-Writer@{$\sim$\-Record\-Writer}!apollo::cyber::record::RecordWriter@{apollo\-::cyber\-::record\-::\-Record\-Writer}}
+\subsubsection[{$\sim$\-Record\-Writer}]{\setlength{\rightskip}{0pt plus 5cm}virtual apollo\-::cyber\-::record\-::\-Record\-Writer\-::$\sim$\-Record\-Writer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1record_1_1RecordWriter_a24af86f0bc084759c1be3a9f4676539e}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1RecordWriter_aeeb301a117dd331fc6fcd5d7c901edef}{\index{apollo\-::cyber\-::record\-::\-Record\-Writer@{apollo\-::cyber\-::record\-::\-Record\-Writer}!Close@{Close}}
+\index{Close@{Close}!apollo::cyber::record::RecordWriter@{apollo\-::cyber\-::record\-::\-Record\-Writer}}
+\subsubsection[{Close}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::record\-::\-Record\-Writer\-::\-Close (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1record_1_1RecordWriter_aeeb301a117dd331fc6fcd5d7c901edef}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1RecordWriter_a2f0637a10532fd3d721ec27dec9aab05}{\index{apollo\-::cyber\-::record\-::\-Record\-Writer@{apollo\-::cyber\-::record\-::\-Record\-Writer}!Get\-Message\-Number@{Get\-Message\-Number}}
+\index{Get\-Message\-Number@{Get\-Message\-Number}!apollo::cyber::record::RecordWriter@{apollo\-::cyber\-::record\-::\-Record\-Writer}}
+\subsubsection[{Get\-Message\-Number}]{\setlength{\rightskip}{0pt plus 5cm}uint64\-\_\-t apollo\-::cyber\-::record\-::\-Record\-Writer\-::\-Get\-Message\-Number (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{channel\-\_\-name}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1record_1_1RecordWriter_a2f0637a10532fd3d721ec27dec9aab05}
+
+
+Implements \hyperlink{classapollo_1_1cyber_1_1record_1_1RecordBase_a82d12447e8d34553c42e4225b9359a1b}{apollo\-::cyber\-::record\-::\-Record\-Base}.
+
+\hypertarget{classapollo_1_1cyber_1_1record_1_1RecordWriter_a7bab92d44a94ea9c97546ff809c05064}{\index{apollo\-::cyber\-::record\-::\-Record\-Writer@{apollo\-::cyber\-::record\-::\-Record\-Writer}!Get\-Message\-Type@{Get\-Message\-Type}}
+\index{Get\-Message\-Type@{Get\-Message\-Type}!apollo::cyber::record::RecordWriter@{apollo\-::cyber\-::record\-::\-Record\-Writer}}
+\subsubsection[{Get\-Message\-Type}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::string\& apollo\-::cyber\-::record\-::\-Record\-Writer\-::\-Get\-Message\-Type (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{channel\-\_\-name}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1record_1_1RecordWriter_a7bab92d44a94ea9c97546ff809c05064}
+
+
+Implements \hyperlink{classapollo_1_1cyber_1_1record_1_1RecordBase_ad1883d8a1ce2f90046b18eb6fd9306e3}{apollo\-::cyber\-::record\-::\-Record\-Base}.
+
+\hypertarget{classapollo_1_1cyber_1_1record_1_1RecordWriter_a1f547541dfc6df5803f1032e4f39fb3c}{\index{apollo\-::cyber\-::record\-::\-Record\-Writer@{apollo\-::cyber\-::record\-::\-Record\-Writer}!Get\-Proto\-Desc@{Get\-Proto\-Desc}}
+\index{Get\-Proto\-Desc@{Get\-Proto\-Desc}!apollo::cyber::record::RecordWriter@{apollo\-::cyber\-::record\-::\-Record\-Writer}}
+\subsubsection[{Get\-Proto\-Desc}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::string\& apollo\-::cyber\-::record\-::\-Record\-Writer\-::\-Get\-Proto\-Desc (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{channel\-\_\-name}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1record_1_1RecordWriter_a1f547541dfc6df5803f1032e4f39fb3c}
+
+
+Implements \hyperlink{classapollo_1_1cyber_1_1record_1_1RecordBase_a0044d679cdfd10e56199f597446e912d}{apollo\-::cyber\-::record\-::\-Record\-Base}.
+
+\hypertarget{classapollo_1_1cyber_1_1record_1_1RecordWriter_a2ea4f80202e28292900382ca60ec9b71}{\index{apollo\-::cyber\-::record\-::\-Record\-Writer@{apollo\-::cyber\-::record\-::\-Record\-Writer}!Is\-New\-Channel@{Is\-New\-Channel}}
+\index{Is\-New\-Channel@{Is\-New\-Channel}!apollo::cyber::record::RecordWriter@{apollo\-::cyber\-::record\-::\-Record\-Writer}}
+\subsubsection[{Is\-New\-Channel}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::record\-::\-Record\-Writer\-::\-Is\-New\-Channel (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{channel\-\_\-name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1record_1_1RecordWriter_a2ea4f80202e28292900382ca60ec9b71}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1RecordWriter_a96843b877960edcf89da30a5ea0807d2}{\index{apollo\-::cyber\-::record\-::\-Record\-Writer@{apollo\-::cyber\-::record\-::\-Record\-Writer}!On\-New\-Channel@{On\-New\-Channel}}
+\index{On\-New\-Channel@{On\-New\-Channel}!apollo::cyber::record::RecordWriter@{apollo\-::cyber\-::record\-::\-Record\-Writer}}
+\subsubsection[{On\-New\-Channel}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::record\-::\-Record\-Writer\-::\-On\-New\-Channel (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{channel\-\_\-name, }
+\item[{const std\-::string \&}]{message\-\_\-type, }
+\item[{const std\-::string \&}]{proto\-\_\-desc}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1record_1_1RecordWriter_a96843b877960edcf89da30a5ea0807d2}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1RecordWriter_aa997a88b0c59f25f8f5b52aab1c76229}{\index{apollo\-::cyber\-::record\-::\-Record\-Writer@{apollo\-::cyber\-::record\-::\-Record\-Writer}!On\-New\-Message@{On\-New\-Message}}
+\index{On\-New\-Message@{On\-New\-Message}!apollo::cyber::record::RecordWriter@{apollo\-::cyber\-::record\-::\-Record\-Writer}}
+\subsubsection[{On\-New\-Message}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::record\-::\-Record\-Writer\-::\-On\-New\-Message (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{channel\-\_\-name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1record_1_1RecordWriter_aa997a88b0c59f25f8f5b52aab1c76229}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1RecordWriter_a659682af6dd6b22c5f470470929a0fee}{\index{apollo\-::cyber\-::record\-::\-Record\-Writer@{apollo\-::cyber\-::record\-::\-Record\-Writer}!Open@{Open}}
+\index{Open@{Open}!apollo::cyber::record::RecordWriter@{apollo\-::cyber\-::record\-::\-Record\-Writer}}
+\subsubsection[{Open}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::record\-::\-Record\-Writer\-::\-Open (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{file}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1record_1_1RecordWriter_a659682af6dd6b22c5f470470929a0fee}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1RecordWriter_a5e64257c68b872bc9bbb35874d9cdc40}{\index{apollo\-::cyber\-::record\-::\-Record\-Writer@{apollo\-::cyber\-::record\-::\-Record\-Writer}!Set\-Interval\-Of\-File\-Segmentation@{Set\-Interval\-Of\-File\-Segmentation}}
+\index{Set\-Interval\-Of\-File\-Segmentation@{Set\-Interval\-Of\-File\-Segmentation}!apollo::cyber::record::RecordWriter@{apollo\-::cyber\-::record\-::\-Record\-Writer}}
+\subsubsection[{Set\-Interval\-Of\-File\-Segmentation}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::record\-::\-Record\-Writer\-::\-Set\-Interval\-Of\-File\-Segmentation (
+\begin{DoxyParamCaption}
+\item[{uint64\-\_\-t}]{time\-\_\-sec}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1record_1_1RecordWriter_a5e64257c68b872bc9bbb35874d9cdc40}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1RecordWriter_a5fa79eae0201d4f3334b069b24a080b9}{\index{apollo\-::cyber\-::record\-::\-Record\-Writer@{apollo\-::cyber\-::record\-::\-Record\-Writer}!Set\-Size\-Of\-File\-Segmentation@{Set\-Size\-Of\-File\-Segmentation}}
+\index{Set\-Size\-Of\-File\-Segmentation@{Set\-Size\-Of\-File\-Segmentation}!apollo::cyber::record::RecordWriter@{apollo\-::cyber\-::record\-::\-Record\-Writer}}
+\subsubsection[{Set\-Size\-Of\-File\-Segmentation}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::record\-::\-Record\-Writer\-::\-Set\-Size\-Of\-File\-Segmentation (
+\begin{DoxyParamCaption}
+\item[{uint64\-\_\-t}]{size\-\_\-kilobytes}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1record_1_1RecordWriter_a5fa79eae0201d4f3334b069b24a080b9}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1RecordWriter_aef5d2cfdfff48cd23f430c0d4a20f5c2}{\index{apollo\-::cyber\-::record\-::\-Record\-Writer@{apollo\-::cyber\-::record\-::\-Record\-Writer}!Split\-Outfile@{Split\-Outfile}}
+\index{Split\-Outfile@{Split\-Outfile}!apollo::cyber::record::RecordWriter@{apollo\-::cyber\-::record\-::\-Record\-Writer}}
+\subsubsection[{Split\-Outfile}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::record\-::\-Record\-Writer\-::\-Split\-Outfile (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1record_1_1RecordWriter_aef5d2cfdfff48cd23f430c0d4a20f5c2}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1RecordWriter_aff50d522ad22bcfb6ecc8affe837f048}{\index{apollo\-::cyber\-::record\-::\-Record\-Writer@{apollo\-::cyber\-::record\-::\-Record\-Writer}!Write\-Channel@{Write\-Channel}}
+\index{Write\-Channel@{Write\-Channel}!apollo::cyber::record::RecordWriter@{apollo\-::cyber\-::record\-::\-Record\-Writer}}
+\subsubsection[{Write\-Channel}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::record\-::\-Record\-Writer\-::\-Write\-Channel (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{channel\-\_\-name, }
+\item[{const std\-::string \&}]{message\-\_\-type, }
+\item[{const std\-::string \&}]{proto\-\_\-desc}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1record_1_1RecordWriter_aff50d522ad22bcfb6ecc8affe837f048}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1RecordWriter_a9f8c8aa8c692d90fe5463930b440493e}{\index{apollo\-::cyber\-::record\-::\-Record\-Writer@{apollo\-::cyber\-::record\-::\-Record\-Writer}!Write\-Message@{Write\-Message}}
+\index{Write\-Message@{Write\-Message}!apollo::cyber::record::RecordWriter@{apollo\-::cyber\-::record\-::\-Record\-Writer}}
+\subsubsection[{Write\-Message}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Message\-T $>$ bool apollo\-::cyber\-::record\-::\-Record\-Writer\-::\-Write\-Message (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{channel\-\_\-name, }
+\item[{const Message\-T \&}]{message, }
+\item[{const uint64\-\_\-t}]{time\-\_\-nanosec, }
+\item[{const std\-::string \&}]{proto\-\_\-desc = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1record_1_1RecordWriter_a9f8c8aa8c692d90fe5463930b440493e}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1RecordWriter_a0667d7e33d4d062ddbd942753b71c061}{\index{apollo\-::cyber\-::record\-::\-Record\-Writer@{apollo\-::cyber\-::record\-::\-Record\-Writer}!Write\-Message@{Write\-Message}}
+\index{Write\-Message@{Write\-Message}!apollo::cyber::record::RecordWriter@{apollo\-::cyber\-::record\-::\-Record\-Writer}}
+\subsubsection[{Write\-Message}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::record\-::\-Record\-Writer\-::\-Write\-Message (
+\begin{DoxyParamCaption}
+\item[{const proto\-::\-Single\-Message \&}]{single\-\_\-msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1record_1_1RecordWriter_a0667d7e33d4d062ddbd942753b71c061}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1RecordWriter_aafe567af96e0770740544c54d388e4c8}{\index{apollo\-::cyber\-::record\-::\-Record\-Writer@{apollo\-::cyber\-::record\-::\-Record\-Writer}!Write\-Message@{Write\-Message}}
+\index{Write\-Message@{Write\-Message}!apollo::cyber::record::RecordWriter@{apollo\-::cyber\-::record\-::\-Record\-Writer}}
+\subsubsection[{Write\-Message}]{\setlength{\rightskip}{0pt plus 5cm}template$<$$>$ bool apollo\-::cyber\-::record\-::\-Record\-Writer\-::\-Write\-Message (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{channel\-\_\-name, }
+\item[{const std\-::string \&}]{content, }
+\item[{const uint64\-\_\-t}]{time\-\_\-nanosec, }
+\item[{const std\-::string \&}]{proto\-\_\-desc}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1record_1_1RecordWriter_aafe567af96e0770740544c54d388e4c8}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1RecordWriter_a28694d46c58b507e13571e66ad1b5215}{\index{apollo\-::cyber\-::record\-::\-Record\-Writer@{apollo\-::cyber\-::record\-::\-Record\-Writer}!Write\-Message@{Write\-Message}}
+\index{Write\-Message@{Write\-Message}!apollo::cyber::record::RecordWriter@{apollo\-::cyber\-::record\-::\-Record\-Writer}}
+\subsubsection[{Write\-Message}]{\setlength{\rightskip}{0pt plus 5cm}template$<$$>$ bool apollo\-::cyber\-::record\-::\-Record\-Writer\-::\-Write\-Message (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{channel\-\_\-name, }
+\item[{const std\-::shared\-\_\-ptr$<$ {\bf message\-::\-Raw\-Message} $>$ \&}]{message, }
+\item[{const uint64\-\_\-t}]{time\-\_\-nanosec, }
+\item[{const std\-::string \&}]{proto\-\_\-desc}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1record_1_1RecordWriter_a28694d46c58b507e13571e66ad1b5215}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1RecordWriter_af60d36f6e755729d5b0c49c4900a75c2}{\index{apollo\-::cyber\-::record\-::\-Record\-Writer@{apollo\-::cyber\-::record\-::\-Record\-Writer}!channel\-\_\-message\-\_\-number\-\_\-map\-\_\-@{channel\-\_\-message\-\_\-number\-\_\-map\-\_\-}}
+\index{channel\-\_\-message\-\_\-number\-\_\-map\-\_\-@{channel\-\_\-message\-\_\-number\-\_\-map\-\_\-}!apollo::cyber::record::RecordWriter@{apollo\-::cyber\-::record\-::\-Record\-Writer}}
+\subsubsection[{channel\-\_\-message\-\_\-number\-\_\-map\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Message\-Number\-Map} apollo\-::cyber\-::record\-::\-Record\-Writer\-::channel\-\_\-message\-\_\-number\-\_\-map\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1record_1_1RecordWriter_af60d36f6e755729d5b0c49c4900a75c2}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1RecordWriter_a3697130c4b69f46f1420f33b238a36ea}{\index{apollo\-::cyber\-::record\-::\-Record\-Writer@{apollo\-::cyber\-::record\-::\-Record\-Writer}!channel\-\_\-message\-\_\-type\-\_\-map\-\_\-@{channel\-\_\-message\-\_\-type\-\_\-map\-\_\-}}
+\index{channel\-\_\-message\-\_\-type\-\_\-map\-\_\-@{channel\-\_\-message\-\_\-type\-\_\-map\-\_\-}!apollo::cyber::record::RecordWriter@{apollo\-::cyber\-::record\-::\-Record\-Writer}}
+\subsubsection[{channel\-\_\-message\-\_\-type\-\_\-map\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Message\-Type\-Map} apollo\-::cyber\-::record\-::\-Record\-Writer\-::channel\-\_\-message\-\_\-type\-\_\-map\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1record_1_1RecordWriter_a3697130c4b69f46f1420f33b238a36ea}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1RecordWriter_a9f5fde8dcd26af2dff253a0b95e15211}{\index{apollo\-::cyber\-::record\-::\-Record\-Writer@{apollo\-::cyber\-::record\-::\-Record\-Writer}!channel\-\_\-proto\-\_\-desc\-\_\-map\-\_\-@{channel\-\_\-proto\-\_\-desc\-\_\-map\-\_\-}}
+\index{channel\-\_\-proto\-\_\-desc\-\_\-map\-\_\-@{channel\-\_\-proto\-\_\-desc\-\_\-map\-\_\-}!apollo::cyber::record::RecordWriter@{apollo\-::cyber\-::record\-::\-Record\-Writer}}
+\subsubsection[{channel\-\_\-proto\-\_\-desc\-\_\-map\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Message\-Proto\-Desc\-Map} apollo\-::cyber\-::record\-::\-Record\-Writer\-::channel\-\_\-proto\-\_\-desc\-\_\-map\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1record_1_1RecordWriter_a9f5fde8dcd26af2dff253a0b95e15211}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1RecordWriter_af5094adbd45ce47753dff6b5fc0a79c8}{\index{apollo\-::cyber\-::record\-::\-Record\-Writer@{apollo\-::cyber\-::record\-::\-Record\-Writer}!file\-\_\-index\-\_\-@{file\-\_\-index\-\_\-}}
+\index{file\-\_\-index\-\_\-@{file\-\_\-index\-\_\-}!apollo::cyber::record::RecordWriter@{apollo\-::cyber\-::record\-::\-Record\-Writer}}
+\subsubsection[{file\-\_\-index\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t apollo\-::cyber\-::record\-::\-Record\-Writer\-::file\-\_\-index\-\_\- = 0\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1record_1_1RecordWriter_af5094adbd45ce47753dff6b5fc0a79c8}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1RecordWriter_aa2df27a2d2944227aa8f38593a018c2e}{\index{apollo\-::cyber\-::record\-::\-Record\-Writer@{apollo\-::cyber\-::record\-::\-Record\-Writer}!file\-\_\-writer\-\_\-@{file\-\_\-writer\-\_\-}}
+\index{file\-\_\-writer\-\_\-@{file\-\_\-writer\-\_\-}!apollo::cyber::record::RecordWriter@{apollo\-::cyber\-::record\-::\-Record\-Writer}}
+\subsubsection[{file\-\_\-writer\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf File\-Writer\-Ptr} apollo\-::cyber\-::record\-::\-Record\-Writer\-::file\-\_\-writer\-\_\- = nullptr\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1record_1_1RecordWriter_aa2df27a2d2944227aa8f38593a018c2e}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1RecordWriter_a12e4edaffd51705cd928e1a9925303c5}{\index{apollo\-::cyber\-::record\-::\-Record\-Writer@{apollo\-::cyber\-::record\-::\-Record\-Writer}!file\-\_\-writer\-\_\-backup\-\_\-@{file\-\_\-writer\-\_\-backup\-\_\-}}
+\index{file\-\_\-writer\-\_\-backup\-\_\-@{file\-\_\-writer\-\_\-backup\-\_\-}!apollo::cyber::record::RecordWriter@{apollo\-::cyber\-::record\-::\-Record\-Writer}}
+\subsubsection[{file\-\_\-writer\-\_\-backup\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf File\-Writer\-Ptr} apollo\-::cyber\-::record\-::\-Record\-Writer\-::file\-\_\-writer\-\_\-backup\-\_\- = nullptr\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1record_1_1RecordWriter_a12e4edaffd51705cd928e1a9925303c5}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1RecordWriter_ab309369671e53408b88782b68f897be0}{\index{apollo\-::cyber\-::record\-::\-Record\-Writer@{apollo\-::cyber\-::record\-::\-Record\-Writer}!mutex\-\_\-@{mutex\-\_\-}}
+\index{mutex\-\_\-@{mutex\-\_\-}!apollo::cyber::record::RecordWriter@{apollo\-::cyber\-::record\-::\-Record\-Writer}}
+\subsubsection[{mutex\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::mutex apollo\-::cyber\-::record\-::\-Record\-Writer\-::mutex\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1record_1_1RecordWriter_ab309369671e53408b88782b68f897be0}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1RecordWriter_a2dd230e28b838aef212051c69d1959b5}{\index{apollo\-::cyber\-::record\-::\-Record\-Writer@{apollo\-::cyber\-::record\-::\-Record\-Writer}!path\-\_\-@{path\-\_\-}}
+\index{path\-\_\-@{path\-\_\-}!apollo::cyber::record::RecordWriter@{apollo\-::cyber\-::record\-::\-Record\-Writer}}
+\subsubsection[{path\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string apollo\-::cyber\-::record\-::\-Record\-Writer\-::path\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1record_1_1RecordWriter_a2dd230e28b838aef212051c69d1959b5}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1RecordWriter_aeb5e15610f58a30bf82b7cc72ad0a9e8}{\index{apollo\-::cyber\-::record\-::\-Record\-Writer@{apollo\-::cyber\-::record\-::\-Record\-Writer}!segment\-\_\-begin\-\_\-time\-\_\-@{segment\-\_\-begin\-\_\-time\-\_\-}}
+\index{segment\-\_\-begin\-\_\-time\-\_\-@{segment\-\_\-begin\-\_\-time\-\_\-}!apollo::cyber::record::RecordWriter@{apollo\-::cyber\-::record\-::\-Record\-Writer}}
+\subsubsection[{segment\-\_\-begin\-\_\-time\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}uint64\-\_\-t apollo\-::cyber\-::record\-::\-Record\-Writer\-::segment\-\_\-begin\-\_\-time\-\_\- = 0\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1record_1_1RecordWriter_aeb5e15610f58a30bf82b7cc72ad0a9e8}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1RecordWriter_a93dde89dc680e3e6bddf15ee9a798619}{\index{apollo\-::cyber\-::record\-::\-Record\-Writer@{apollo\-::cyber\-::record\-::\-Record\-Writer}!segment\-\_\-raw\-\_\-size\-\_\-@{segment\-\_\-raw\-\_\-size\-\_\-}}
+\index{segment\-\_\-raw\-\_\-size\-\_\-@{segment\-\_\-raw\-\_\-size\-\_\-}!apollo::cyber::record::RecordWriter@{apollo\-::cyber\-::record\-::\-Record\-Writer}}
+\subsubsection[{segment\-\_\-raw\-\_\-size\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}uint64\-\_\-t apollo\-::cyber\-::record\-::\-Record\-Writer\-::segment\-\_\-raw\-\_\-size\-\_\- = 0\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1record_1_1RecordWriter_a93dde89dc680e3e6bddf15ee9a798619}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1RecordWriter_a6ebe2f54d4185936811d045e0135b513}{\index{apollo\-::cyber\-::record\-::\-Record\-Writer@{apollo\-::cyber\-::record\-::\-Record\-Writer}!sstream\-\_\-@{sstream\-\_\-}}
+\index{sstream\-\_\-@{sstream\-\_\-}!apollo::cyber::record::RecordWriter@{apollo\-::cyber\-::record\-::\-Record\-Writer}}
+\subsubsection[{sstream\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::stringstream apollo\-::cyber\-::record\-::\-Record\-Writer\-::sstream\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1record_1_1RecordWriter_a6ebe2f54d4185936811d045e0135b513}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+record/\hyperlink{record__writer_8h}{record\-\_\-writer.\-h}\end{DoxyCompactItemize}

@@ -1,0 +1,532 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classapollo_1_1cyber_1_1transport_1_1HybridReceiver" kind="class" prot="public">
+    <compoundname>apollo::cyber::transport::HybridReceiver</compoundname>
+    <basecompoundref refid="classapollo_1_1cyber_1_1transport_1_1Receiver" prot="public" virt="non-virtual">apollo::cyber::transport::Receiver&lt; M &gt;</basecompoundref>
+    <includes refid="hybrid__receiver_8h" local="no">hybrid_receiver.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename M</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classapollo_1_1cyber_1_1transport_1_1HybridReceiver_1a29d008855b7b25d060137a19da928c53" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="classapollo_1_1cyber_1_1transport_1_1History" kindref="compound">History</ref>&lt; M &gt;&gt;</type>
+        <definition>using apollo::cyber::transport::HybridReceiver&lt; M &gt;::HistoryPtr =  std::shared_ptr&lt;History&lt;M&gt;&gt;</definition>
+        <argsstring></argsstring>
+        <name>HistoryPtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/receiver/hybrid_receiver.h" line="51" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/receiver/hybrid_receiver.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classapollo_1_1cyber_1_1transport_1_1HybridReceiver_1aa59a9c5e8a30dd56cd84e1a463d05e7c" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="classapollo_1_1cyber_1_1transport_1_1Receiver" kindref="compound">Receiver</ref>&lt; M &gt;&gt;</type>
+        <definition>using apollo::cyber::transport::HybridReceiver&lt; M &gt;::ReceiverPtr =  std::shared_ptr&lt;Receiver&lt;M&gt;&gt;</definition>
+        <argsstring></argsstring>
+        <name>ReceiverPtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/receiver/hybrid_receiver.h" line="52" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/receiver/hybrid_receiver.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classapollo_1_1cyber_1_1transport_1_1HybridReceiver_1a70475c40e8f9c33ebd8126df3ab71e18" prot="public" static="no">
+        <type>std::unordered_map&lt; OptionalMode, <ref refid="classapollo_1_1cyber_1_1transport_1_1HybridReceiver_1aa59a9c5e8a30dd56cd84e1a463d05e7c" kindref="member">ReceiverPtr</ref>, std::hash&lt; int &gt;&gt;</type>
+        <definition>using apollo::cyber::transport::HybridReceiver&lt; M &gt;::ReceiverContainer =  std::unordered_map&lt;OptionalMode, ReceiverPtr, std::hash&lt;int&gt;&gt;</definition>
+        <argsstring></argsstring>
+        <name>ReceiverContainer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/receiver/hybrid_receiver.h" line="53" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/receiver/hybrid_receiver.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classapollo_1_1cyber_1_1transport_1_1HybridReceiver_1a6295cabae20a58ee02454f59d9c09986" prot="public" static="no">
+        <type>std::unordered_map&lt; OptionalMode, std::unordered_map&lt; uint64_t, RoleAttributes &gt;, std::hash&lt; int &gt;&gt;</type>
+        <definition>using apollo::cyber::transport::HybridReceiver&lt; M &gt;::TransmitterContainer =  std::unordered_map&lt;OptionalMode, std::unordered_map&lt;uint64_t, RoleAttributes&gt;, std::hash&lt;int&gt;&gt;</definition>
+        <argsstring></argsstring>
+        <name>TransmitterContainer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/receiver/hybrid_receiver.h" line="55" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/receiver/hybrid_receiver.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classapollo_1_1cyber_1_1transport_1_1HybridReceiver_1aec763c6c2f52e839f873b00193627626" prot="public" static="no">
+        <type>std::shared_ptr&lt; proto::CommunicationMode &gt;</type>
+        <definition>using apollo::cyber::transport::HybridReceiver&lt; M &gt;::CommunicationModePtr =  std::shared_ptr&lt;proto::CommunicationMode&gt;</definition>
+        <argsstring></argsstring>
+        <name>CommunicationModePtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/receiver/hybrid_receiver.h" line="59" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/receiver/hybrid_receiver.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classapollo_1_1cyber_1_1transport_1_1HybridReceiver_1abefb4dc42db917f5891670997814231c" prot="public" static="no">
+        <type>std::unordered_map&lt; <ref refid="namespaceapollo_1_1cyber_1a688ac951fd0a3965da4acdc34c92e50f" kindref="member">Relation</ref>, OptionalMode, std::hash&lt; int &gt;&gt;</type>
+        <definition>using apollo::cyber::transport::HybridReceiver&lt; M &gt;::MappingTable =  std::unordered_map&lt;Relation, OptionalMode, std::hash&lt;int&gt;&gt;</definition>
+        <argsstring></argsstring>
+        <name>MappingTable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/receiver/hybrid_receiver.h" line="60" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/receiver/hybrid_receiver.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1transport_1_1HybridReceiver_1a71fe92773a83ee153382b6b7f9e8c8a7" prot="private" static="no" mutable="no">
+        <type><ref refid="classapollo_1_1cyber_1_1transport_1_1HybridReceiver_1a29d008855b7b25d060137a19da928c53" kindref="member">HistoryPtr</ref></type>
+        <definition>HistoryPtr apollo::cyber::transport::HybridReceiver&lt; M &gt;::history_</definition>
+        <argsstring></argsstring>
+        <name>history_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/receiver/hybrid_receiver.h" line="86" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/receiver/hybrid_receiver.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1transport_1_1HybridReceiver_1a1f74e7e19cf92397729389922da60d57" prot="private" static="no" mutable="no">
+        <type><ref refid="classapollo_1_1cyber_1_1transport_1_1HybridReceiver_1a70475c40e8f9c33ebd8126df3ab71e18" kindref="member">ReceiverContainer</ref></type>
+        <definition>ReceiverContainer apollo::cyber::transport::HybridReceiver&lt; M &gt;::receivers_</definition>
+        <argsstring></argsstring>
+        <name>receivers_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/receiver/hybrid_receiver.h" line="87" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/receiver/hybrid_receiver.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1transport_1_1HybridReceiver_1a0763ec6d7247a952123cdc5a0c2fa7f2" prot="private" static="no" mutable="no">
+        <type><ref refid="classapollo_1_1cyber_1_1transport_1_1HybridReceiver_1a6295cabae20a58ee02454f59d9c09986" kindref="member">TransmitterContainer</ref></type>
+        <definition>TransmitterContainer apollo::cyber::transport::HybridReceiver&lt; M &gt;::transmitters_</definition>
+        <argsstring></argsstring>
+        <name>transmitters_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/receiver/hybrid_receiver.h" line="88" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/receiver/hybrid_receiver.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1transport_1_1HybridReceiver_1acd72be19a7680b7c7e87593e7803f016" prot="private" static="no" mutable="no">
+        <type>std::mutex</type>
+        <definition>std::mutex apollo::cyber::transport::HybridReceiver&lt; M &gt;::mutex_</definition>
+        <argsstring></argsstring>
+        <name>mutex_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/receiver/hybrid_receiver.h" line="89" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/receiver/hybrid_receiver.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1transport_1_1HybridReceiver_1a2b1451e2a1668ed26172ebaf33520e58" prot="private" static="no" mutable="no">
+        <type><ref refid="classapollo_1_1cyber_1_1transport_1_1HybridReceiver_1aec763c6c2f52e839f873b00193627626" kindref="member">CommunicationModePtr</ref></type>
+        <definition>CommunicationModePtr apollo::cyber::transport::HybridReceiver&lt; M &gt;::mode_</definition>
+        <argsstring></argsstring>
+        <name>mode_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/receiver/hybrid_receiver.h" line="91" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/receiver/hybrid_receiver.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1transport_1_1HybridReceiver_1aee5d1880835e3edba742fbcf89478e2d" prot="private" static="no" mutable="no">
+        <type><ref refid="classapollo_1_1cyber_1_1transport_1_1HybridReceiver_1abefb4dc42db917f5891670997814231c" kindref="member">MappingTable</ref></type>
+        <definition>MappingTable apollo::cyber::transport::HybridReceiver&lt; M &gt;::mapping_table_</definition>
+        <argsstring></argsstring>
+        <name>mapping_table_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/receiver/hybrid_receiver.h" line="92" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/receiver/hybrid_receiver.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1transport_1_1HybridReceiver_1ae166879e80acc07e56f178f50eac3fd4" prot="private" static="no" mutable="no">
+        <type><ref refid="namespaceapollo_1_1cyber_1_1transport_1a4214d0780331276d0384d0b57e3bc688" kindref="member">ParticipantPtr</ref></type>
+        <definition>ParticipantPtr apollo::cyber::transport::HybridReceiver&lt; M &gt;::participant_</definition>
+        <argsstring></argsstring>
+        <name>participant_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/receiver/hybrid_receiver.h" line="94" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/receiver/hybrid_receiver.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1HybridReceiver_1a626fda476274421711a50146d6218a69" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::transport::HybridReceiver&lt; M &gt;::HybridReceiver</definition>
+        <argsstring>(const RoleAttributes &amp;attr, const typename Receiver&lt; M &gt;::MessageListener &amp;msg_listener, const ParticipantPtr &amp;participant)</argsstring>
+        <name>HybridReceiver</name>
+        <param>
+          <type>const RoleAttributes &amp;</type>
+          <declname>attr</declname>
+        </param>
+        <param>
+          <type>const typename <ref refid="classapollo_1_1cyber_1_1transport_1_1Receiver" kindref="compound">Receiver</ref>&lt; M &gt;::<ref refid="classapollo_1_1cyber_1_1transport_1_1Receiver_1abd906fd03582b49acbdc81b48a8974aa" kindref="member">MessageListener</ref> &amp;</type>
+          <declname>msg_listener</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespaceapollo_1_1cyber_1_1transport_1a4214d0780331276d0384d0b57e3bc688" kindref="member">ParticipantPtr</ref> &amp;</type>
+          <declname>participant</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/receiver/hybrid_receiver.h" line="63" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/receiver/hybrid_receiver.h" bodystart="98" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1HybridReceiver_1ade26db508c0a771c4bf26ef3077d3fd9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>apollo::cyber::transport::HybridReceiver&lt; M &gt;::~HybridReceiver</definition>
+        <argsstring>()</argsstring>
+        <name>~HybridReceiver</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/receiver/hybrid_receiver.h" line="66" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/receiver/hybrid_receiver.h" bodystart="113" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1HybridReceiver_1a38add467c1fe59a584dac3a31b141c7c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::transport::HybridReceiver&lt; M &gt;::Enable</definition>
+        <argsstring>() override</argsstring>
+        <name>Enable</name>
+        <reimplements refid="classapollo_1_1cyber_1_1transport_1_1Receiver_1a77c93406c2ab9254562d595bfaecabbc">Enable</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/receiver/hybrid_receiver.h" line="68" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/receiver/hybrid_receiver.h" bodystart="119" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1HybridReceiver_1a90ed14fc589847bd9d5c7b8e1f3e4fd6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::transport::HybridReceiver&lt; M &gt;::Disable</definition>
+        <argsstring>() override</argsstring>
+        <name>Disable</name>
+        <reimplements refid="classapollo_1_1cyber_1_1transport_1_1Receiver_1af9f317df425a33bc364662a59be28bf5">Disable</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/receiver/hybrid_receiver.h" line="69" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/receiver/hybrid_receiver.h" bodystart="127" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1HybridReceiver_1aa4ec9837875d4f508be7f9098a69e5cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::transport::HybridReceiver&lt; M &gt;::Enable</definition>
+        <argsstring>(const RoleAttributes &amp;opposite_attr) override</argsstring>
+        <name>Enable</name>
+        <reimplements refid="classapollo_1_1cyber_1_1transport_1_1Receiver_1a2436ecca6981d910911d359cd1df4610">Enable</reimplements>
+        <param>
+          <type>const RoleAttributes &amp;</type>
+          <declname>opposite_attr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/receiver/hybrid_receiver.h" line="71" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/receiver/hybrid_receiver.h" bodystart="135" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1HybridReceiver_1ae4c99434d96215e60580dd14622c4482" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::transport::HybridReceiver&lt; M &gt;::Disable</definition>
+        <argsstring>(const RoleAttributes &amp;opposite_attr) override</argsstring>
+        <name>Disable</name>
+        <reimplements refid="classapollo_1_1cyber_1_1transport_1_1Receiver_1a26a4b466924d472f830f856b675bb44a">Disable</reimplements>
+        <param>
+          <type>const RoleAttributes &amp;</type>
+          <declname>opposite_attr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/receiver/hybrid_receiver.h" line="72" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/receiver/hybrid_receiver.h" bodystart="150" bodyend="160"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1HybridReceiver_1a1eb6243268daf94d62199f2b5d20a4b4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::transport::HybridReceiver&lt; M &gt;::InitMode</definition>
+        <argsstring>()</argsstring>
+        <name>InitMode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/receiver/hybrid_receiver.h" line="75" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/receiver/hybrid_receiver.h" bodystart="163" bodyend="168"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1HybridReceiver_1a8dad1a54fe3805615e08aeba16392ef6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::transport::HybridReceiver&lt; M &gt;::ObtainConfig</definition>
+        <argsstring>()</argsstring>
+        <name>ObtainConfig</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/receiver/hybrid_receiver.h" line="76" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/receiver/hybrid_receiver.h" bodystart="171" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1HybridReceiver_1ac144d497bd484cb2e9882776eb7e0076" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::transport::HybridReceiver&lt; M &gt;::InitHistory</definition>
+        <argsstring>()</argsstring>
+        <name>InitHistory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/receiver/hybrid_receiver.h" line="77" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/receiver/hybrid_receiver.h" bodystart="187" bodyend="195"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1HybridReceiver_1a4e2c7f8785a008d9264582b16d19c61e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::transport::HybridReceiver&lt; M &gt;::InitReceivers</definition>
+        <argsstring>()</argsstring>
+        <name>InitReceivers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/receiver/hybrid_receiver.h" line="78" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/receiver/hybrid_receiver.h" bodystart="198" bodyend="221"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1HybridReceiver_1a8952919c3a6b3b0bf7b7b8b0f0d79f5a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::transport::HybridReceiver&lt; M &gt;::ClearReceivers</definition>
+        <argsstring>()</argsstring>
+        <name>ClearReceivers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/receiver/hybrid_receiver.h" line="79" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/receiver/hybrid_receiver.h" bodystart="224" bodyend="226"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1HybridReceiver_1acadee13b8b6a22395f46b21fe7549614" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::transport::HybridReceiver&lt; M &gt;::InitTransmitters</definition>
+        <argsstring>()</argsstring>
+        <name>InitTransmitters</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/receiver/hybrid_receiver.h" line="80" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/receiver/hybrid_receiver.h" bodystart="229" bodyend="234"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1HybridReceiver_1a16139e677ea56e82a51c78bd72587ae8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::transport::HybridReceiver&lt; M &gt;::ClearTransmitters</definition>
+        <argsstring>()</argsstring>
+        <name>ClearTransmitters</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/receiver/hybrid_receiver.h" line="81" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/receiver/hybrid_receiver.h" bodystart="237" bodyend="244"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1HybridReceiver_1a67017f9439548f98a30c6dcc1f7431f9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::transport::HybridReceiver&lt; M &gt;::ReceiveHistoryMsg</definition>
+        <argsstring>(const RoleAttributes &amp;opposite_attr)</argsstring>
+        <name>ReceiveHistoryMsg</name>
+        <param>
+          <type>const RoleAttributes &amp;</type>
+          <declname>opposite_attr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/receiver/hybrid_receiver.h" line="82" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/receiver/hybrid_receiver.h" bodystart="247" bodyend="256"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1HybridReceiver_1a300e68502aada5c5d92fe47d50b4c153" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::transport::HybridReceiver&lt; M &gt;::ThreadFunc</definition>
+        <argsstring>(const RoleAttributes &amp;opposite_attr)</argsstring>
+        <name>ThreadFunc</name>
+        <param>
+          <type>const RoleAttributes &amp;</type>
+          <declname>opposite_attr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/receiver/hybrid_receiver.h" line="83" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/receiver/hybrid_receiver.h" bodystart="259" bodyend="288"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1HybridReceiver_1ac899b765428d18b737c5bc40b5fdde7d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespaceapollo_1_1cyber_1a688ac951fd0a3965da4acdc34c92e50f" kindref="member">Relation</ref></type>
+        <definition>Relation apollo::cyber::transport::HybridReceiver&lt; M &gt;::GetRelation</definition>
+        <argsstring>(const RoleAttributes &amp;opposite_attr)</argsstring>
+        <name>GetRelation</name>
+        <param>
+          <type>const RoleAttributes &amp;</type>
+          <declname>opposite_attr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/receiver/hybrid_receiver.h" line="84" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/receiver/hybrid_receiver.h" bodystart="291" bodyend="305"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="356">
+        <label>apollo::cyber::transport::Endpoint</label>
+        <link refid="classapollo_1_1cyber_1_1transport_1_1Endpoint"/>
+      </node>
+      <node id="354">
+        <label>apollo::cyber::transport::HybridReceiver&lt; M &gt;</label>
+        <link refid="classapollo_1_1cyber_1_1transport_1_1HybridReceiver"/>
+        <childnode refid="355" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="355">
+        <label>apollo::cyber::transport::Receiver&lt; M &gt;</label>
+        <link refid="classapollo_1_1cyber_1_1transport_1_1Receiver"/>
+        <childnode refid="356" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="360">
+        <label>RoleAttributes</label>
+      </node>
+      <node id="359">
+        <label>apollo::cyber::transport::Endpoint</label>
+        <link refid="classapollo_1_1cyber_1_1transport_1_1Endpoint"/>
+        <childnode refid="360" relation="usage">
+          <edgelabel>attr_</edgelabel>
+        </childnode>
+        <childnode refid="361" relation="usage">
+          <edgelabel>id_</edgelabel>
+        </childnode>
+      </node>
+      <node id="361">
+        <label>apollo::cyber::transport::Identity</label>
+        <link refid="classapollo_1_1cyber_1_1transport_1_1Identity"/>
+      </node>
+      <node id="357">
+        <label>apollo::cyber::transport::HybridReceiver&lt; M &gt;</label>
+        <link refid="classapollo_1_1cyber_1_1transport_1_1HybridReceiver"/>
+        <childnode refid="358" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="358">
+        <label>apollo::cyber::transport::Receiver&lt; M &gt;</label>
+        <link refid="classapollo_1_1cyber_1_1transport_1_1Receiver"/>
+        <childnode refid="359" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/work/apollo-fork/apollo/cyber/transport/receiver/hybrid_receiver.h" line="49" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/receiver/hybrid_receiver.h" bodystart="49" bodyend="95"/>
+    <listofallmembers>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Endpoint_1ae5eef9d783a55addf75c73f3b2d3d922" prot="protected" virt="non-virtual"><scope>apollo::cyber::transport::HybridReceiver</scope><name>attr_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Endpoint_1a618711f01e375eab74b46845b193fa77" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::HybridReceiver</scope><name>attributes</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1HybridReceiver_1a8952919c3a6b3b0bf7b7b8b0f0d79f5a" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::HybridReceiver</scope><name>ClearReceivers</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1HybridReceiver_1a16139e677ea56e82a51c78bd72587ae8" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::HybridReceiver</scope><name>ClearTransmitters</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1HybridReceiver_1aec763c6c2f52e839f873b00193627626" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::HybridReceiver</scope><name>CommunicationModePtr</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1HybridReceiver_1a90ed14fc589847bd9d5c7b8e1f3e4fd6" prot="public" virt="virtual"><scope>apollo::cyber::transport::HybridReceiver</scope><name>Disable</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1HybridReceiver_1ae4c99434d96215e60580dd14622c4482" prot="public" virt="virtual"><scope>apollo::cyber::transport::HybridReceiver</scope><name>Disable</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1HybridReceiver_1a38add467c1fe59a584dac3a31b141c7c" prot="public" virt="virtual"><scope>apollo::cyber::transport::HybridReceiver</scope><name>Enable</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1HybridReceiver_1aa4ec9837875d4f508be7f9098a69e5cb" prot="public" virt="virtual"><scope>apollo::cyber::transport::HybridReceiver</scope><name>Enable</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Endpoint_1a018bd12d292d6f46e97bb34d3054d5d2" prot="protected" virt="non-virtual"><scope>apollo::cyber::transport::HybridReceiver</scope><name>enabled_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Endpoint_1a9ac289b2b1952934f326ab80bc63beb2" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::HybridReceiver</scope><name>Endpoint</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1HybridReceiver_1ac899b765428d18b737c5bc40b5fdde7d" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::HybridReceiver</scope><name>GetRelation</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1HybridReceiver_1a71fe92773a83ee153382b6b7f9e8c8a7" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::HybridReceiver</scope><name>history_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1HybridReceiver_1a29d008855b7b25d060137a19da928c53" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::HybridReceiver</scope><name>HistoryPtr</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1HybridReceiver_1a626fda476274421711a50146d6218a69" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::HybridReceiver</scope><name>HybridReceiver</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Endpoint_1aa362f1ca16c50755e20e6f59362a37fc" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::HybridReceiver</scope><name>id</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Endpoint_1ab13e5b3e9b7b614f687159ad7ff07655" prot="protected" virt="non-virtual"><scope>apollo::cyber::transport::HybridReceiver</scope><name>id_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1HybridReceiver_1ac144d497bd484cb2e9882776eb7e0076" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::HybridReceiver</scope><name>InitHistory</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1HybridReceiver_1a1eb6243268daf94d62199f2b5d20a4b4" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::HybridReceiver</scope><name>InitMode</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1HybridReceiver_1a4e2c7f8785a008d9264582b16d19c61e" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::HybridReceiver</scope><name>InitReceivers</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1HybridReceiver_1acadee13b8b6a22395f46b21fe7549614" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::HybridReceiver</scope><name>InitTransmitters</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1HybridReceiver_1aee5d1880835e3edba742fbcf89478e2d" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::HybridReceiver</scope><name>mapping_table_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1HybridReceiver_1abefb4dc42db917f5891670997814231c" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::HybridReceiver</scope><name>MappingTable</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Receiver_1abd906fd03582b49acbdc81b48a8974aa" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::HybridReceiver</scope><name>MessageListener</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Receiver_1af02a7bde2d210b5e2e122ba3810933d1" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::HybridReceiver</scope><name>MessagePtr</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1HybridReceiver_1a2b1451e2a1668ed26172ebaf33520e58" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::HybridReceiver</scope><name>mode_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Receiver_1a89ce9185e2eabed8eb189d7917fdb746" prot="protected" virt="non-virtual"><scope>apollo::cyber::transport::HybridReceiver</scope><name>msg_listener_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1HybridReceiver_1acd72be19a7680b7c7e87593e7803f016" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::HybridReceiver</scope><name>mutex_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1HybridReceiver_1a8dad1a54fe3805615e08aeba16392ef6" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::HybridReceiver</scope><name>ObtainConfig</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Receiver_1ab6db34cf266f899c426ed37d8410ecc2" prot="protected" virt="non-virtual"><scope>apollo::cyber::transport::HybridReceiver</scope><name>OnNewMessage</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1HybridReceiver_1ae166879e80acc07e56f178f50eac3fd4" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::HybridReceiver</scope><name>participant_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1HybridReceiver_1a67017f9439548f98a30c6dcc1f7431f9" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::HybridReceiver</scope><name>ReceiveHistoryMsg</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Receiver_1a5c95fdfe9d06a15f5474541a1b9ea2f5" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::HybridReceiver</scope><name>Receiver</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1HybridReceiver_1a70475c40e8f9c33ebd8126df3ab71e18" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::HybridReceiver</scope><name>ReceiverContainer</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1HybridReceiver_1aa59a9c5e8a30dd56cd84e1a463d05e7c" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::HybridReceiver</scope><name>ReceiverPtr</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1HybridReceiver_1a1f74e7e19cf92397729389922da60d57" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::HybridReceiver</scope><name>receivers_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1HybridReceiver_1a300e68502aada5c5d92fe47d50b4c153" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::HybridReceiver</scope><name>ThreadFunc</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1HybridReceiver_1a6295cabae20a58ee02454f59d9c09986" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::HybridReceiver</scope><name>TransmitterContainer</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1HybridReceiver_1a0763ec6d7247a952123cdc5a0c2fa7f2" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::HybridReceiver</scope><name>transmitters_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Endpoint_1ace4552dd897f8ec3a8276529061c2ca4" prot="public" virt="virtual"><scope>apollo::cyber::transport::HybridReceiver</scope><name>~Endpoint</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1HybridReceiver_1ade26db508c0a771c4bf26ef3077d3fd9" prot="public" virt="virtual"><scope>apollo::cyber::transport::HybridReceiver</scope><name>~HybridReceiver</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Receiver_1a9a21bfe1f325ad8af46c9eb702f4429b" prot="public" virt="virtual"><scope>apollo::cyber::transport::HybridReceiver</scope><name>~Receiver</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

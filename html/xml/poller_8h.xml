@@ -1,0 +1,259 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="poller_8h" kind="file">
+    <compoundname>poller.h</compoundname>
+    <includes local="no">atomic</includes>
+    <includes local="no">list</includes>
+    <includes local="no">memory</includes>
+    <includes local="no">mutex</includes>
+    <includes local="no">thread</includes>
+    <includes local="no">unordered_map</includes>
+    <includes local="no">vector</includes>
+    <includes refid="atomic__rw__lock_8h" local="yes">cyber/base/atomic_rw_lock.h</includes>
+    <includes refid="common_2macros_8h" local="yes">cyber/common/macros.h</includes>
+    <includes refid="poll__data_8h" local="yes">cyber/io/poll_data.h</includes>
+    <incdepgraph>
+      <node id="4314">
+        <label>list</label>
+      </node>
+      <node id="4313">
+        <label>atomic</label>
+      </node>
+      <node id="4334">
+        <label>functional</label>
+      </node>
+      <node id="4321">
+        <label>stdint.h</label>
+      </node>
+      <node id="4326">
+        <label>cyber/base/rw_lock_guard.h</label>
+        <link refid="rw__lock__guard_8h"/>
+        <childnode refid="4321" relation="include">
+        </childnode>
+        <childnode refid="4322" relation="include">
+        </childnode>
+        <childnode refid="4313" relation="include">
+        </childnode>
+        <childnode refid="4323" relation="include">
+        </childnode>
+        <childnode refid="4324" relation="include">
+        </childnode>
+        <childnode refid="4325" relation="include">
+        </childnode>
+        <childnode refid="4316" relation="include">
+        </childnode>
+        <childnode refid="4317" relation="include">
+        </childnode>
+      </node>
+      <node id="4327">
+        <label>cyber/common/macros.h</label>
+        <link refid="common_2macros_8h"/>
+        <childnode refid="4325" relation="include">
+        </childnode>
+        <childnode refid="4315" relation="include">
+        </childnode>
+        <childnode refid="4316" relation="include">
+        </childnode>
+        <childnode refid="4328" relation="include">
+        </childnode>
+        <childnode refid="4329" relation="include">
+        </childnode>
+        <childnode refid="4330" relation="include">
+        </childnode>
+      </node>
+      <node id="4312">
+        <label>io/poller.h</label>
+        <link refid="poller.h"/>
+        <childnode refid="4313" relation="include">
+        </childnode>
+        <childnode refid="4314" relation="include">
+        </childnode>
+        <childnode refid="4315" relation="include">
+        </childnode>
+        <childnode refid="4316" relation="include">
+        </childnode>
+        <childnode refid="4317" relation="include">
+        </childnode>
+        <childnode refid="4318" relation="include">
+        </childnode>
+        <childnode refid="4319" relation="include">
+        </childnode>
+        <childnode refid="4320" relation="include">
+        </childnode>
+        <childnode refid="4327" relation="include">
+        </childnode>
+        <childnode refid="4332" relation="include">
+        </childnode>
+      </node>
+      <node id="4323">
+        <label>condition_variable</label>
+      </node>
+      <node id="4320">
+        <label>cyber/base/atomic_rw_lock.h</label>
+        <link refid="atomic__rw__lock_8h"/>
+        <childnode refid="4321" relation="include">
+        </childnode>
+        <childnode refid="4322" relation="include">
+        </childnode>
+        <childnode refid="4313" relation="include">
+        </childnode>
+        <childnode refid="4323" relation="include">
+        </childnode>
+        <childnode refid="4324" relation="include">
+        </childnode>
+        <childnode refid="4325" relation="include">
+        </childnode>
+        <childnode refid="4316" relation="include">
+        </childnode>
+        <childnode refid="4317" relation="include">
+        </childnode>
+        <childnode refid="4326" relation="include">
+        </childnode>
+      </node>
+      <node id="4322">
+        <label>unistd.h</label>
+      </node>
+      <node id="4332">
+        <label>cyber/io/poll_data.h</label>
+        <link refid="poll__data_8h"/>
+        <childnode refid="4321" relation="include">
+        </childnode>
+        <childnode refid="4333" relation="include">
+        </childnode>
+        <childnode refid="4334" relation="include">
+        </childnode>
+      </node>
+      <node id="4319">
+        <label>vector</label>
+      </node>
+      <node id="4331">
+        <label>new</label>
+      </node>
+      <node id="4329">
+        <label>utility</label>
+      </node>
+      <node id="4324">
+        <label>cstdlib</label>
+      </node>
+      <node id="4325">
+        <label>iostream</label>
+      </node>
+      <node id="4318">
+        <label>unordered_map</label>
+      </node>
+      <node id="4316">
+        <label>mutex</label>
+      </node>
+      <node id="4317">
+        <label>thread</label>
+      </node>
+      <node id="4328">
+        <label>type_traits</label>
+      </node>
+      <node id="4333">
+        <label>sys/epoll.h</label>
+      </node>
+      <node id="4330">
+        <label>cyber/base/macros.h</label>
+        <link refid="base_2macros_8h"/>
+        <childnode refid="4324" relation="include">
+        </childnode>
+        <childnode refid="4331" relation="include">
+        </childnode>
+      </node>
+      <node id="4315">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classapollo_1_1cyber_1_1io_1_1Poller" prot="public">apollo::cyber::io::Poller</innerclass>
+    <innernamespace refid="namespaceapollo">apollo</innernamespace>
+    <innernamespace refid="namespaceapollo_1_1cyber">apollo::cyber</innernamespace>
+    <innernamespace refid="namespaceapollo_1_1cyber_1_1io">apollo::cyber::io</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2018<sp/>The<sp/>Apollo<sp/>Authors.<sp/>All<sp/>Rights<sp/>Reserved.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CYBER_IO_POLLER_H_</highlight></codeline>
+<codeline lineno="18"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CYBER_IO_POLLER_H_</highlight></codeline>
+<codeline lineno="19"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;atomic&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;list&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;mutex&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;thread&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;unordered_map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="atomic__rw__lock_8h" kindref="compound">cyber/base/atomic_rw_lock.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="common_2macros_8h" kindref="compound">cyber/common/macros.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="poll__data_8h" kindref="compound">cyber/io/poll_data.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">apollo<sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">cyber<sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">io<sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="classapollo_1_1cyber_1_1io_1_1Poller" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classapollo_1_1cyber_1_1io_1_1Poller" kindref="compound">Poller</ref><sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="38" refid="classapollo_1_1cyber_1_1io_1_1Poller_1afca2e09142da5f57cfca966402953bf2" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1io_1_1Poller_1afca2e09142da5f57cfca966402953bf2" kindref="member">RequestPtr</ref><sp/>=<sp/>std::shared_ptr&lt;PollRequest&gt;;</highlight></codeline>
+<codeline lineno="39" refid="classapollo_1_1cyber_1_1io_1_1Poller_1a46cf3c8b1cd0c34c0daf7dd076cddc63" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1io_1_1Poller_1a46cf3c8b1cd0c34c0daf7dd076cddc63" kindref="member">RequestMap</ref><sp/>=<sp/>std::unordered_map&lt;int,<sp/>RequestPtr&gt;;</highlight></codeline>
+<codeline lineno="40" refid="classapollo_1_1cyber_1_1io_1_1Poller_1a8b5069a91f056c7b473bcfd02ff2aaad" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1io_1_1Poller_1a8b5069a91f056c7b473bcfd02ff2aaad" kindref="member">CtrlParamMap</ref><sp/>=<sp/>std::unordered_map&lt;int,<sp/>PollCtrlParam&gt;;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1io_1_1Poller_1a3d4410cd424c87e76f258e3b41d37ab5" kindref="member">~Poller</ref>();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1io_1_1Poller_1a0eec83658cd929f9c2515d5779e3e129" kindref="member">Shutdown</ref>();</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1io_1_1Poller_1ae403021b629890022daceda8640c5a9c" kindref="member">Register</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structapollo_1_1cyber_1_1io_1_1PollRequest" kindref="compound">PollRequest</ref>&amp;<sp/>req);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1io_1_1Poller_1a3a1f73729383b8840bc797f83e3f9518" kindref="member">Unregister</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structapollo_1_1cyber_1_1io_1_1PollRequest" kindref="compound">PollRequest</ref>&amp;<sp/>req);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1io_1_1Poller_1a3d904d64d3a2f4f0a29695a0263f9f82" kindref="member">Init</ref>();</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1io_1_1Poller_1aa3e2338ecaeb8cb5ce0cbfdb15d7eb79" kindref="member">Clear</ref>();</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1io_1_1Poller_1ae2d156bf9966263391597b959c9515ab" kindref="member">Poll</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>timeout_ms);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1io_1_1Poller_1ab5de085f3ce0d9030d02a81b17f21d7e" kindref="member">ThreadFunc</ref>();</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1io_1_1Poller_1a32b96845dcf187f57eb322ceb8b76c89" kindref="member">HandleChanges</ref>();</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1io_1_1Poller_1ad106607e755fc50c05d81a91fccca9d8" kindref="member">GetTimeoutMs</ref>();</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1io_1_1Poller_1a5a8bb1e33405acb498772bc02fa816bf" kindref="member">Notify</ref>();</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="classapollo_1_1cyber_1_1io_1_1Poller_1af669bb62157becf9016f69df5b1b5660" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1io_1_1Poller_1af669bb62157becf9016f69df5b1b5660" kindref="member">epoll_fd_</ref><sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="59" refid="classapollo_1_1cyber_1_1io_1_1Poller_1a2145143a3849794f4faf3aa7c5c0b841" refkind="member"><highlight class="normal"><sp/><sp/>std::thread<sp/><ref refid="classapollo_1_1cyber_1_1io_1_1Poller_1a2145143a3849794f4faf3aa7c5c0b841" kindref="member">thread_</ref>;</highlight></codeline>
+<codeline lineno="60" refid="classapollo_1_1cyber_1_1io_1_1Poller_1a5792d1208ae12538fe5b26d40fd6ca45" refkind="member"><highlight class="normal"><sp/><sp/>std::atomic&lt;bool&gt;<sp/><ref refid="classapollo_1_1cyber_1_1io_1_1Poller_1a5792d1208ae12538fe5b26d40fd6ca45" kindref="member">is_shutdown_</ref><sp/>=<sp/>{</highlight><highlight class="keyword">true</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="classapollo_1_1cyber_1_1io_1_1Poller_1aa75b020f05c88884f277c2f2e7d7e6be" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1io_1_1Poller_1aa75b020f05c88884f277c2f2e7d7e6be" kindref="member">pipe_fd_</ref>[2]<sp/>=<sp/>{-1,<sp/>-1};</highlight></codeline>
+<codeline lineno="63" refid="classapollo_1_1cyber_1_1io_1_1Poller_1a3df124c7d788692895df721bc51cc70e" refkind="member"><highlight class="normal"><sp/><sp/>std::mutex<sp/><ref refid="classapollo_1_1cyber_1_1io_1_1Poller_1a3df124c7d788692895df721bc51cc70e" kindref="member">pipe_mutex_</ref>;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="classapollo_1_1cyber_1_1io_1_1Poller_1a23832294a91e3659fd279314aa351612" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classapollo_1_1cyber_1_1io_1_1Poller_1a46cf3c8b1cd0c34c0daf7dd076cddc63" kindref="member">RequestMap</ref><sp/><ref refid="classapollo_1_1cyber_1_1io_1_1Poller_1a23832294a91e3659fd279314aa351612" kindref="member">requests_</ref>;</highlight></codeline>
+<codeline lineno="66" refid="classapollo_1_1cyber_1_1io_1_1Poller_1a4f0f2b3d4c68325fc3cefb0a4cdddfa9" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classapollo_1_1cyber_1_1io_1_1Poller_1a8b5069a91f056c7b473bcfd02ff2aaad" kindref="member">CtrlParamMap</ref><sp/><ref refid="classapollo_1_1cyber_1_1io_1_1Poller_1a4f0f2b3d4c68325fc3cefb0a4cdddfa9" kindref="member">ctrl_params_</ref>;</highlight></codeline>
+<codeline lineno="67" refid="classapollo_1_1cyber_1_1io_1_1Poller_1a3f852093b8de045b394577a4c8a833eb" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1AtomicRWLock" kindref="compound">base::AtomicRWLock</ref><sp/><ref refid="classapollo_1_1cyber_1_1io_1_1Poller_1a3f852093b8de045b394577a4c8a833eb" kindref="member">poll_data_lock_</ref>;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="classapollo_1_1cyber_1_1io_1_1Poller_1a68e2ded7a858f416c9bd248e61af1b66" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1io_1_1Poller_1a68e2ded7a858f416c9bd248e61af1b66" kindref="member">kPollSize</ref><sp/>=<sp/>32;</highlight></codeline>
+<codeline lineno="70" refid="classapollo_1_1cyber_1_1io_1_1Poller_1ad4c45237b9d3db1d4efb8d1cc7fe5a6d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1io_1_1Poller_1ad4c45237b9d3db1d4efb8d1cc7fe5a6d" kindref="member">kPollTimeoutMs</ref><sp/>=<sp/>100;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><ref refid="common_2macros_8h_1ae064c360d998527ea6031d4e129b709d" kindref="member">DECLARE_SINGLETON</ref>(<ref refid="classapollo_1_1cyber_1_1io_1_1Poller" kindref="compound">Poller</ref>)</highlight></codeline>
+<codeline lineno="73"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>io</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>cyber</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>apollo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>CYBER_IO_POLLER_H_</highlight></codeline>
+    </programlisting>
+    <location file="/home/work/apollo-fork/apollo/cyber/io/poller.h"/>
+  </compounddef>
+</doxygen>

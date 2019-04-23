@@ -1,0 +1,82 @@
+\hypertarget{classapollo_1_1cyber_1_1data_1_1DataDispatcher}{\section{apollo\-:\-:cyber\-:\-:data\-:\-:Data\-Dispatcher$<$ T $>$ Class Template Reference}
+\label{classapollo_1_1cyber_1_1data_1_1DataDispatcher}\index{apollo\-::cyber\-::data\-::\-Data\-Dispatcher$<$ T $>$@{apollo\-::cyber\-::data\-::\-Data\-Dispatcher$<$ T $>$}}
+}
+
+
+{\ttfamily \#include $<$data\-\_\-dispatcher.\-h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1data_1_1DataDispatcher_a705b3d7e33c176168be27202c1e9269f}{Buffer\-Vector} = std\-::vector$<$ std\-::weak\-\_\-ptr$<$ \hyperlink{classapollo_1_1cyber_1_1data_1_1CacheBuffer}{Cache\-Buffer}$<$ std\-::shared\-\_\-ptr$<$ T $>$$>$$>$$>$
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1data_1_1DataDispatcher_a00fbebfb574538bd47f427f48aa2cb8d}{$\sim$\-Data\-Dispatcher} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1data_1_1DataDispatcher_a5c25d4ea21bfc0f7333c07a7da9b27d2}{Add\-Buffer} (const \hyperlink{classapollo_1_1cyber_1_1data_1_1ChannelBuffer}{Channel\-Buffer}$<$ T $>$ \&channel\-\_\-buffer)
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1data_1_1DataDispatcher_a96935453604a6f47112f417897c07aeb}{Dispatch} (const uint64\-\_\-t channel\-\_\-id, const std\-::shared\-\_\-ptr$<$ T $>$ \&msg)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1data_1_1DataNotifier}{Data\-Notifier} $\ast$ \hyperlink{classapollo_1_1cyber_1_1data_1_1DataDispatcher_a171868a783ef9a7fb75739c9910b5157}{notifier\-\_\-} = Data\-Notifier\-::\-Instance()
+\item 
+std\-::mutex \hyperlink{classapollo_1_1cyber_1_1data_1_1DataDispatcher_ad6c0557358e14fb05e07a04cf3e026cb}{buffers\-\_\-map\-\_\-mutex\-\_\-}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1base_1_1AtomicHashMap}{Atomic\-Hash\-Map}$<$ uint64\-\_\-t, \\*
+\hyperlink{classapollo_1_1cyber_1_1data_1_1DataDispatcher_a705b3d7e33c176168be27202c1e9269f}{Buffer\-Vector} $>$ \hyperlink{classapollo_1_1cyber_1_1data_1_1DataDispatcher_ad7468b681e765b85516f17a34553eece}{buffers\-\_\-map\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classapollo_1_1cyber_1_1data_1_1DataDispatcher_a705b3d7e33c176168be27202c1e9269f}{\index{apollo\-::cyber\-::data\-::\-Data\-Dispatcher@{apollo\-::cyber\-::data\-::\-Data\-Dispatcher}!Buffer\-Vector@{Buffer\-Vector}}
+\index{Buffer\-Vector@{Buffer\-Vector}!apollo::cyber::data::DataDispatcher@{apollo\-::cyber\-::data\-::\-Data\-Dispatcher}}
+\subsubsection[{Buffer\-Vector}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ using {\bf apollo\-::cyber\-::data\-::\-Data\-Dispatcher}$<$ T $>$\-::{\bf Buffer\-Vector} =  std\-::vector$<$std\-::weak\-\_\-ptr$<${\bf Cache\-Buffer}$<$std\-::shared\-\_\-ptr$<$T$>$$>$$>$$>$}}\label{classapollo_1_1cyber_1_1data_1_1DataDispatcher_a705b3d7e33c176168be27202c1e9269f}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classapollo_1_1cyber_1_1data_1_1DataDispatcher_a00fbebfb574538bd47f427f48aa2cb8d}{\index{apollo\-::cyber\-::data\-::\-Data\-Dispatcher@{apollo\-::cyber\-::data\-::\-Data\-Dispatcher}!$\sim$\-Data\-Dispatcher@{$\sim$\-Data\-Dispatcher}}
+\index{$\sim$\-Data\-Dispatcher@{$\sim$\-Data\-Dispatcher}!apollo::cyber::data::DataDispatcher@{apollo\-::cyber\-::data\-::\-Data\-Dispatcher}}
+\subsubsection[{$\sim$\-Data\-Dispatcher}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf apollo\-::cyber\-::data\-::\-Data\-Dispatcher}$<$ T $>$\-::$\sim${\bf Data\-Dispatcher} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1data_1_1DataDispatcher_a00fbebfb574538bd47f427f48aa2cb8d}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1data_1_1DataDispatcher_a5c25d4ea21bfc0f7333c07a7da9b27d2}{\index{apollo\-::cyber\-::data\-::\-Data\-Dispatcher@{apollo\-::cyber\-::data\-::\-Data\-Dispatcher}!Add\-Buffer@{Add\-Buffer}}
+\index{Add\-Buffer@{Add\-Buffer}!apollo::cyber::data::DataDispatcher@{apollo\-::cyber\-::data\-::\-Data\-Dispatcher}}
+\subsubsection[{Add\-Buffer}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf apollo\-::cyber\-::data\-::\-Data\-Dispatcher}$<$ T $>$\-::Add\-Buffer (
+\begin{DoxyParamCaption}
+\item[{const {\bf Channel\-Buffer}$<$ T $>$ \&}]{channel\-\_\-buffer}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1data_1_1DataDispatcher_a5c25d4ea21bfc0f7333c07a7da9b27d2}
+\hypertarget{classapollo_1_1cyber_1_1data_1_1DataDispatcher_a96935453604a6f47112f417897c07aeb}{\index{apollo\-::cyber\-::data\-::\-Data\-Dispatcher@{apollo\-::cyber\-::data\-::\-Data\-Dispatcher}!Dispatch@{Dispatch}}
+\index{Dispatch@{Dispatch}!apollo::cyber::data::DataDispatcher@{apollo\-::cyber\-::data\-::\-Data\-Dispatcher}}
+\subsubsection[{Dispatch}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool {\bf apollo\-::cyber\-::data\-::\-Data\-Dispatcher}$<$ T $>$\-::Dispatch (
+\begin{DoxyParamCaption}
+\item[{const uint64\-\_\-t}]{channel\-\_\-id, }
+\item[{const std\-::shared\-\_\-ptr$<$ T $>$ \&}]{msg}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1data_1_1DataDispatcher_a96935453604a6f47112f417897c07aeb}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classapollo_1_1cyber_1_1data_1_1DataDispatcher_ad7468b681e765b85516f17a34553eece}{\index{apollo\-::cyber\-::data\-::\-Data\-Dispatcher@{apollo\-::cyber\-::data\-::\-Data\-Dispatcher}!buffers\-\_\-map\-\_\-@{buffers\-\_\-map\-\_\-}}
+\index{buffers\-\_\-map\-\_\-@{buffers\-\_\-map\-\_\-}!apollo::cyber::data::DataDispatcher@{apollo\-::cyber\-::data\-::\-Data\-Dispatcher}}
+\subsubsection[{buffers\-\_\-map\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Atomic\-Hash\-Map}$<$uint64\-\_\-t, {\bf Buffer\-Vector}$>$ {\bf apollo\-::cyber\-::data\-::\-Data\-Dispatcher}$<$ T $>$\-::buffers\-\_\-map\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1data_1_1DataDispatcher_ad7468b681e765b85516f17a34553eece}
+\hypertarget{classapollo_1_1cyber_1_1data_1_1DataDispatcher_ad6c0557358e14fb05e07a04cf3e026cb}{\index{apollo\-::cyber\-::data\-::\-Data\-Dispatcher@{apollo\-::cyber\-::data\-::\-Data\-Dispatcher}!buffers\-\_\-map\-\_\-mutex\-\_\-@{buffers\-\_\-map\-\_\-mutex\-\_\-}}
+\index{buffers\-\_\-map\-\_\-mutex\-\_\-@{buffers\-\_\-map\-\_\-mutex\-\_\-}!apollo::cyber::data::DataDispatcher@{apollo\-::cyber\-::data\-::\-Data\-Dispatcher}}
+\subsubsection[{buffers\-\_\-map\-\_\-mutex\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\-::mutex {\bf apollo\-::cyber\-::data\-::\-Data\-Dispatcher}$<$ T $>$\-::buffers\-\_\-map\-\_\-mutex\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1data_1_1DataDispatcher_ad6c0557358e14fb05e07a04cf3e026cb}
+\hypertarget{classapollo_1_1cyber_1_1data_1_1DataDispatcher_a171868a783ef9a7fb75739c9910b5157}{\index{apollo\-::cyber\-::data\-::\-Data\-Dispatcher@{apollo\-::cyber\-::data\-::\-Data\-Dispatcher}!notifier\-\_\-@{notifier\-\_\-}}
+\index{notifier\-\_\-@{notifier\-\_\-}!apollo::cyber::data::DataDispatcher@{apollo\-::cyber\-::data\-::\-Data\-Dispatcher}}
+\subsubsection[{notifier\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Data\-Notifier}$\ast$ {\bf apollo\-::cyber\-::data\-::\-Data\-Dispatcher}$<$ T $>$\-::notifier\-\_\- = Data\-Notifier\-::\-Instance()\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1data_1_1DataDispatcher_a171868a783ef9a7fb75739c9910b5157}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+data/\hyperlink{data__dispatcher_8h}{data\-\_\-dispatcher.\-h}\end{DoxyCompactItemize}

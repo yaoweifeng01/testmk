@@ -1,0 +1,105 @@
+\hypertarget{classapollo_1_1cyber_1_1data_1_1ChannelBuffer}{\section{apollo\-:\-:cyber\-:\-:data\-:\-:Channel\-Buffer$<$ T $>$ Class Template Reference}
+\label{classapollo_1_1cyber_1_1data_1_1ChannelBuffer}\index{apollo\-::cyber\-::data\-::\-Channel\-Buffer$<$ T $>$@{apollo\-::cyber\-::data\-::\-Channel\-Buffer$<$ T $>$}}
+}
+
+
+{\ttfamily \#include $<$channel\-\_\-buffer.\-h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1data_1_1ChannelBuffer_a4d0e8b23e4b308b61ca0154970cec77f}{Buffer\-Type} = \hyperlink{classapollo_1_1cyber_1_1data_1_1CacheBuffer}{Cache\-Buffer}$<$ std\-::shared\-\_\-ptr$<$ T $>$$>$
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1data_1_1ChannelBuffer_af90aee7c0f697fc64c495829816d28fd}{Channel\-Buffer} (uint64\-\_\-t \hyperlink{classapollo_1_1cyber_1_1data_1_1ChannelBuffer_abb1ae153da4014b45a4c5591e3209a53}{channel\-\_\-id}, \hyperlink{classapollo_1_1cyber_1_1data_1_1ChannelBuffer_a4d0e8b23e4b308b61ca0154970cec77f}{Buffer\-Type} $\ast$buffer)
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1data_1_1ChannelBuffer_a8f82b68889d1cc8f68760103fcfdb4ed}{Fetch} (uint64\-\_\-t $\ast$index, std\-::shared\-\_\-ptr$<$ T $>$ \&m)
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1data_1_1ChannelBuffer_a29071a969030a646c7d7becd894e8767}{Latest} (std\-::shared\-\_\-ptr$<$ T $>$ \&m)
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1data_1_1ChannelBuffer_a6e58caceefc98711d66d4bbeb07b51d8}{Fetch\-Multi} (uint64\-\_\-t fetch\-\_\-size, std\-::vector$<$ std\-::shared\-\_\-ptr$<$ T $>$$>$ $\ast$vec)
+\item 
+uint64\-\_\-t \hyperlink{classapollo_1_1cyber_1_1data_1_1ChannelBuffer_abb1ae153da4014b45a4c5591e3209a53}{channel\-\_\-id} () const 
+\item 
+std\-::shared\-\_\-ptr$<$ \hyperlink{classapollo_1_1cyber_1_1data_1_1ChannelBuffer_a4d0e8b23e4b308b61ca0154970cec77f}{Buffer\-Type} $>$ \hyperlink{classapollo_1_1cyber_1_1data_1_1ChannelBuffer_abb9e4babe4169c9b3cd3125f84a7da1f}{Buffer} () const 
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint64\-\_\-t \hyperlink{classapollo_1_1cyber_1_1data_1_1ChannelBuffer_a019c648fb3ffbc85bd2639878b70e120}{channel\-\_\-id\-\_\-}
+\item 
+std\-::shared\-\_\-ptr$<$ \hyperlink{classapollo_1_1cyber_1_1data_1_1ChannelBuffer_a4d0e8b23e4b308b61ca0154970cec77f}{Buffer\-Type} $>$ \hyperlink{classapollo_1_1cyber_1_1data_1_1ChannelBuffer_a5db350f9adda047d243e1ea696b13ccc}{buffer\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classapollo_1_1cyber_1_1data_1_1ChannelBuffer_a4d0e8b23e4b308b61ca0154970cec77f}{\index{apollo\-::cyber\-::data\-::\-Channel\-Buffer@{apollo\-::cyber\-::data\-::\-Channel\-Buffer}!Buffer\-Type@{Buffer\-Type}}
+\index{Buffer\-Type@{Buffer\-Type}!apollo::cyber::data::ChannelBuffer@{apollo\-::cyber\-::data\-::\-Channel\-Buffer}}
+\subsubsection[{Buffer\-Type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ using {\bf apollo\-::cyber\-::data\-::\-Channel\-Buffer}$<$ T $>$\-::{\bf Buffer\-Type} =  {\bf Cache\-Buffer}$<$std\-::shared\-\_\-ptr$<$T$>$$>$}}\label{classapollo_1_1cyber_1_1data_1_1ChannelBuffer_a4d0e8b23e4b308b61ca0154970cec77f}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classapollo_1_1cyber_1_1data_1_1ChannelBuffer_af90aee7c0f697fc64c495829816d28fd}{\index{apollo\-::cyber\-::data\-::\-Channel\-Buffer@{apollo\-::cyber\-::data\-::\-Channel\-Buffer}!Channel\-Buffer@{Channel\-Buffer}}
+\index{Channel\-Buffer@{Channel\-Buffer}!apollo::cyber::data::ChannelBuffer@{apollo\-::cyber\-::data\-::\-Channel\-Buffer}}
+\subsubsection[{Channel\-Buffer}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf apollo\-::cyber\-::data\-::\-Channel\-Buffer}$<$ T $>$\-::{\bf Channel\-Buffer} (
+\begin{DoxyParamCaption}
+\item[{uint64\-\_\-t}]{channel\-\_\-id, }
+\item[{{\bf Buffer\-Type} $\ast$}]{buffer}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1data_1_1ChannelBuffer_af90aee7c0f697fc64c495829816d28fd}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1data_1_1ChannelBuffer_abb9e4babe4169c9b3cd3125f84a7da1f}{\index{apollo\-::cyber\-::data\-::\-Channel\-Buffer@{apollo\-::cyber\-::data\-::\-Channel\-Buffer}!Buffer@{Buffer}}
+\index{Buffer@{Buffer}!apollo::cyber::data::ChannelBuffer@{apollo\-::cyber\-::data\-::\-Channel\-Buffer}}
+\subsubsection[{Buffer}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ std\-::shared\-\_\-ptr$<${\bf Buffer\-Type}$>$ {\bf apollo\-::cyber\-::data\-::\-Channel\-Buffer}$<$ T $>$\-::Buffer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1data_1_1ChannelBuffer_abb9e4babe4169c9b3cd3125f84a7da1f}
+\hypertarget{classapollo_1_1cyber_1_1data_1_1ChannelBuffer_abb1ae153da4014b45a4c5591e3209a53}{\index{apollo\-::cyber\-::data\-::\-Channel\-Buffer@{apollo\-::cyber\-::data\-::\-Channel\-Buffer}!channel\-\_\-id@{channel\-\_\-id}}
+\index{channel\-\_\-id@{channel\-\_\-id}!apollo::cyber::data::ChannelBuffer@{apollo\-::cyber\-::data\-::\-Channel\-Buffer}}
+\subsubsection[{channel\-\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ uint64\-\_\-t {\bf apollo\-::cyber\-::data\-::\-Channel\-Buffer}$<$ T $>$\-::channel\-\_\-id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1data_1_1ChannelBuffer_abb1ae153da4014b45a4c5591e3209a53}
+\hypertarget{classapollo_1_1cyber_1_1data_1_1ChannelBuffer_a8f82b68889d1cc8f68760103fcfdb4ed}{\index{apollo\-::cyber\-::data\-::\-Channel\-Buffer@{apollo\-::cyber\-::data\-::\-Channel\-Buffer}!Fetch@{Fetch}}
+\index{Fetch@{Fetch}!apollo::cyber::data::ChannelBuffer@{apollo\-::cyber\-::data\-::\-Channel\-Buffer}}
+\subsubsection[{Fetch}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ bool {\bf apollo\-::cyber\-::data\-::\-Channel\-Buffer}$<$ T $>$\-::Fetch (
+\begin{DoxyParamCaption}
+\item[{uint64\-\_\-t $\ast$}]{index, }
+\item[{std\-::shared\-\_\-ptr$<$ T $>$ \&}]{m}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1data_1_1ChannelBuffer_a8f82b68889d1cc8f68760103fcfdb4ed}
+\hypertarget{classapollo_1_1cyber_1_1data_1_1ChannelBuffer_a6e58caceefc98711d66d4bbeb07b51d8}{\index{apollo\-::cyber\-::data\-::\-Channel\-Buffer@{apollo\-::cyber\-::data\-::\-Channel\-Buffer}!Fetch\-Multi@{Fetch\-Multi}}
+\index{Fetch\-Multi@{Fetch\-Multi}!apollo::cyber::data::ChannelBuffer@{apollo\-::cyber\-::data\-::\-Channel\-Buffer}}
+\subsubsection[{Fetch\-Multi}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ bool {\bf apollo\-::cyber\-::data\-::\-Channel\-Buffer}$<$ T $>$\-::Fetch\-Multi (
+\begin{DoxyParamCaption}
+\item[{uint64\-\_\-t}]{fetch\-\_\-size, }
+\item[{std\-::vector$<$ std\-::shared\-\_\-ptr$<$ T $>$$>$ $\ast$}]{vec}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1data_1_1ChannelBuffer_a6e58caceefc98711d66d4bbeb07b51d8}
+\hypertarget{classapollo_1_1cyber_1_1data_1_1ChannelBuffer_a29071a969030a646c7d7becd894e8767}{\index{apollo\-::cyber\-::data\-::\-Channel\-Buffer@{apollo\-::cyber\-::data\-::\-Channel\-Buffer}!Latest@{Latest}}
+\index{Latest@{Latest}!apollo::cyber::data::ChannelBuffer@{apollo\-::cyber\-::data\-::\-Channel\-Buffer}}
+\subsubsection[{Latest}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ bool {\bf apollo\-::cyber\-::data\-::\-Channel\-Buffer}$<$ T $>$\-::Latest (
+\begin{DoxyParamCaption}
+\item[{std\-::shared\-\_\-ptr$<$ T $>$ \&}]{m}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1data_1_1ChannelBuffer_a29071a969030a646c7d7becd894e8767}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classapollo_1_1cyber_1_1data_1_1ChannelBuffer_a5db350f9adda047d243e1ea696b13ccc}{\index{apollo\-::cyber\-::data\-::\-Channel\-Buffer@{apollo\-::cyber\-::data\-::\-Channel\-Buffer}!buffer\-\_\-@{buffer\-\_\-}}
+\index{buffer\-\_\-@{buffer\-\_\-}!apollo::cyber::data::ChannelBuffer@{apollo\-::cyber\-::data\-::\-Channel\-Buffer}}
+\subsubsection[{buffer\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ std\-::shared\-\_\-ptr$<${\bf Buffer\-Type}$>$ {\bf apollo\-::cyber\-::data\-::\-Channel\-Buffer}$<$ T $>$\-::buffer\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1data_1_1ChannelBuffer_a5db350f9adda047d243e1ea696b13ccc}
+\hypertarget{classapollo_1_1cyber_1_1data_1_1ChannelBuffer_a019c648fb3ffbc85bd2639878b70e120}{\index{apollo\-::cyber\-::data\-::\-Channel\-Buffer@{apollo\-::cyber\-::data\-::\-Channel\-Buffer}!channel\-\_\-id\-\_\-@{channel\-\_\-id\-\_\-}}
+\index{channel\-\_\-id\-\_\-@{channel\-\_\-id\-\_\-}!apollo::cyber::data::ChannelBuffer@{apollo\-::cyber\-::data\-::\-Channel\-Buffer}}
+\subsubsection[{channel\-\_\-id\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ uint64\-\_\-t {\bf apollo\-::cyber\-::data\-::\-Channel\-Buffer}$<$ T $>$\-::channel\-\_\-id\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1data_1_1ChannelBuffer_a019c648fb3ffbc85bd2639878b70e120}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+data/\hyperlink{channel__buffer_8h}{channel\-\_\-buffer.\-h}\end{DoxyCompactItemize}

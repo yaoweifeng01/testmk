@@ -1,0 +1,143 @@
+\hypertarget{classapollo_1_1cyber_1_1io_1_1PollHandler}{\section{apollo\-:\-:cyber\-:\-:io\-:\-:Poll\-Handler Class Reference}
+\label{classapollo_1_1cyber_1_1io_1_1PollHandler}\index{apollo\-::cyber\-::io\-::\-Poll\-Handler@{apollo\-::cyber\-::io\-::\-Poll\-Handler}}
+}
+
+
+{\ttfamily \#include $<$poll\-\_\-handler.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1io_1_1PollHandler_a76ca72e5b1d11a8637c25780cde5a4f9}{Poll\-Handler} (int \hyperlink{classapollo_1_1cyber_1_1io_1_1PollHandler_a96bc89096b9d14e90757aa45c718dc7e}{fd})
+\item 
+virtual \hyperlink{classapollo_1_1cyber_1_1io_1_1PollHandler_a8297452d3e48919663e1321037bb2dd5}{$\sim$\-Poll\-Handler} ()=default
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1io_1_1PollHandler_aa961d347555371be6a427b4486c3fbee}{Block} (int timeout\-\_\-ms, bool is\-\_\-read)
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1io_1_1PollHandler_aa2495fb2fefe8a3d177d3cbd8a0747e3}{Unblock} ()
+\item 
+int \hyperlink{classapollo_1_1cyber_1_1io_1_1PollHandler_a96bc89096b9d14e90757aa45c718dc7e}{fd} () const 
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1io_1_1PollHandler_a3a87743decf43bacbc7ee33020897af7}{set\-\_\-fd} (int \hyperlink{classapollo_1_1cyber_1_1io_1_1PollHandler_a96bc89096b9d14e90757aa45c718dc7e}{fd})
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1io_1_1PollHandler_a27097ea224090326391a17873b5aaeac}{Check} (int timeout\-\_\-ms)
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1io_1_1PollHandler_a88c449c8d5906053d201128b17a7bfb3}{Fill} (int timeout\-\_\-ms, bool is\-\_\-read)
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1io_1_1PollHandler_a5e401e4bbca6a9b81787816c9e89cc6c}{Response\-Callback} (const \hyperlink{structapollo_1_1cyber_1_1io_1_1PollResponse}{Poll\-Response} \&rsp)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classapollo_1_1cyber_1_1io_1_1PollHandler_a27290227ef927a9299dff726b8c3058f}{fd\-\_\-}
+\item 
+\hyperlink{structapollo_1_1cyber_1_1io_1_1PollRequest}{Poll\-Request} \hyperlink{classapollo_1_1cyber_1_1io_1_1PollHandler_a2115ffe4a901a60ff4d6ad036d67688b}{request\-\_\-}
+\item 
+\hyperlink{structapollo_1_1cyber_1_1io_1_1PollResponse}{Poll\-Response} \hyperlink{classapollo_1_1cyber_1_1io_1_1PollHandler_afcceaca4a6ad4d3c40407d40a21acc50}{response\-\_\-}
+\item 
+std\-::atomic$<$ bool $>$ \hyperlink{classapollo_1_1cyber_1_1io_1_1PollHandler_a7a5305d7ce1c7821bed181b40cbd20d9}{is\-\_\-read\-\_\-}
+\item 
+std\-::atomic$<$ bool $>$ \hyperlink{classapollo_1_1cyber_1_1io_1_1PollHandler_a3f00c1b8f8024207f125e5c05b156048}{is\-\_\-blocking\-\_\-}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1croutine_1_1CRoutine}{croutine\-::\-C\-Routine} $\ast$ \hyperlink{classapollo_1_1cyber_1_1io_1_1PollHandler_a25783e7da986f5414a3d8120a391c16c}{routine\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classapollo_1_1cyber_1_1io_1_1PollHandler_a76ca72e5b1d11a8637c25780cde5a4f9}{\index{apollo\-::cyber\-::io\-::\-Poll\-Handler@{apollo\-::cyber\-::io\-::\-Poll\-Handler}!Poll\-Handler@{Poll\-Handler}}
+\index{Poll\-Handler@{Poll\-Handler}!apollo::cyber::io::PollHandler@{apollo\-::cyber\-::io\-::\-Poll\-Handler}}
+\subsubsection[{Poll\-Handler}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::io\-::\-Poll\-Handler\-::\-Poll\-Handler (
+\begin{DoxyParamCaption}
+\item[{int}]{fd}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}}\label{classapollo_1_1cyber_1_1io_1_1PollHandler_a76ca72e5b1d11a8637c25780cde5a4f9}
+\hypertarget{classapollo_1_1cyber_1_1io_1_1PollHandler_a8297452d3e48919663e1321037bb2dd5}{\index{apollo\-::cyber\-::io\-::\-Poll\-Handler@{apollo\-::cyber\-::io\-::\-Poll\-Handler}!$\sim$\-Poll\-Handler@{$\sim$\-Poll\-Handler}}
+\index{$\sim$\-Poll\-Handler@{$\sim$\-Poll\-Handler}!apollo::cyber::io::PollHandler@{apollo\-::cyber\-::io\-::\-Poll\-Handler}}
+\subsubsection[{$\sim$\-Poll\-Handler}]{\setlength{\rightskip}{0pt plus 5cm}virtual apollo\-::cyber\-::io\-::\-Poll\-Handler\-::$\sim$\-Poll\-Handler (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}}\label{classapollo_1_1cyber_1_1io_1_1PollHandler_a8297452d3e48919663e1321037bb2dd5}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1io_1_1PollHandler_aa961d347555371be6a427b4486c3fbee}{\index{apollo\-::cyber\-::io\-::\-Poll\-Handler@{apollo\-::cyber\-::io\-::\-Poll\-Handler}!Block@{Block}}
+\index{Block@{Block}!apollo::cyber::io::PollHandler@{apollo\-::cyber\-::io\-::\-Poll\-Handler}}
+\subsubsection[{Block}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::io\-::\-Poll\-Handler\-::\-Block (
+\begin{DoxyParamCaption}
+\item[{int}]{timeout\-\_\-ms, }
+\item[{bool}]{is\-\_\-read}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1io_1_1PollHandler_aa961d347555371be6a427b4486c3fbee}
+\hypertarget{classapollo_1_1cyber_1_1io_1_1PollHandler_a27097ea224090326391a17873b5aaeac}{\index{apollo\-::cyber\-::io\-::\-Poll\-Handler@{apollo\-::cyber\-::io\-::\-Poll\-Handler}!Check@{Check}}
+\index{Check@{Check}!apollo::cyber::io::PollHandler@{apollo\-::cyber\-::io\-::\-Poll\-Handler}}
+\subsubsection[{Check}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::io\-::\-Poll\-Handler\-::\-Check (
+\begin{DoxyParamCaption}
+\item[{int}]{timeout\-\_\-ms}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1io_1_1PollHandler_a27097ea224090326391a17873b5aaeac}
+\hypertarget{classapollo_1_1cyber_1_1io_1_1PollHandler_a96bc89096b9d14e90757aa45c718dc7e}{\index{apollo\-::cyber\-::io\-::\-Poll\-Handler@{apollo\-::cyber\-::io\-::\-Poll\-Handler}!fd@{fd}}
+\index{fd@{fd}!apollo::cyber::io::PollHandler@{apollo\-::cyber\-::io\-::\-Poll\-Handler}}
+\subsubsection[{fd}]{\setlength{\rightskip}{0pt plus 5cm}int apollo\-::cyber\-::io\-::\-Poll\-Handler\-::fd (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1io_1_1PollHandler_a96bc89096b9d14e90757aa45c718dc7e}
+\hypertarget{classapollo_1_1cyber_1_1io_1_1PollHandler_a88c449c8d5906053d201128b17a7bfb3}{\index{apollo\-::cyber\-::io\-::\-Poll\-Handler@{apollo\-::cyber\-::io\-::\-Poll\-Handler}!Fill@{Fill}}
+\index{Fill@{Fill}!apollo::cyber::io::PollHandler@{apollo\-::cyber\-::io\-::\-Poll\-Handler}}
+\subsubsection[{Fill}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::io\-::\-Poll\-Handler\-::\-Fill (
+\begin{DoxyParamCaption}
+\item[{int}]{timeout\-\_\-ms, }
+\item[{bool}]{is\-\_\-read}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1io_1_1PollHandler_a88c449c8d5906053d201128b17a7bfb3}
+\hypertarget{classapollo_1_1cyber_1_1io_1_1PollHandler_a5e401e4bbca6a9b81787816c9e89cc6c}{\index{apollo\-::cyber\-::io\-::\-Poll\-Handler@{apollo\-::cyber\-::io\-::\-Poll\-Handler}!Response\-Callback@{Response\-Callback}}
+\index{Response\-Callback@{Response\-Callback}!apollo::cyber::io::PollHandler@{apollo\-::cyber\-::io\-::\-Poll\-Handler}}
+\subsubsection[{Response\-Callback}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::io\-::\-Poll\-Handler\-::\-Response\-Callback (
+\begin{DoxyParamCaption}
+\item[{const {\bf Poll\-Response} \&}]{rsp}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1io_1_1PollHandler_a5e401e4bbca6a9b81787816c9e89cc6c}
+\hypertarget{classapollo_1_1cyber_1_1io_1_1PollHandler_a3a87743decf43bacbc7ee33020897af7}{\index{apollo\-::cyber\-::io\-::\-Poll\-Handler@{apollo\-::cyber\-::io\-::\-Poll\-Handler}!set\-\_\-fd@{set\-\_\-fd}}
+\index{set\-\_\-fd@{set\-\_\-fd}!apollo::cyber::io::PollHandler@{apollo\-::cyber\-::io\-::\-Poll\-Handler}}
+\subsubsection[{set\-\_\-fd}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::io\-::\-Poll\-Handler\-::set\-\_\-fd (
+\begin{DoxyParamCaption}
+\item[{int}]{fd}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1io_1_1PollHandler_a3a87743decf43bacbc7ee33020897af7}
+\hypertarget{classapollo_1_1cyber_1_1io_1_1PollHandler_aa2495fb2fefe8a3d177d3cbd8a0747e3}{\index{apollo\-::cyber\-::io\-::\-Poll\-Handler@{apollo\-::cyber\-::io\-::\-Poll\-Handler}!Unblock@{Unblock}}
+\index{Unblock@{Unblock}!apollo::cyber::io::PollHandler@{apollo\-::cyber\-::io\-::\-Poll\-Handler}}
+\subsubsection[{Unblock}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::io\-::\-Poll\-Handler\-::\-Unblock (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1io_1_1PollHandler_aa2495fb2fefe8a3d177d3cbd8a0747e3}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classapollo_1_1cyber_1_1io_1_1PollHandler_a27290227ef927a9299dff726b8c3058f}{\index{apollo\-::cyber\-::io\-::\-Poll\-Handler@{apollo\-::cyber\-::io\-::\-Poll\-Handler}!fd\-\_\-@{fd\-\_\-}}
+\index{fd\-\_\-@{fd\-\_\-}!apollo::cyber::io::PollHandler@{apollo\-::cyber\-::io\-::\-Poll\-Handler}}
+\subsubsection[{fd\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int apollo\-::cyber\-::io\-::\-Poll\-Handler\-::fd\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1io_1_1PollHandler_a27290227ef927a9299dff726b8c3058f}
+\hypertarget{classapollo_1_1cyber_1_1io_1_1PollHandler_a3f00c1b8f8024207f125e5c05b156048}{\index{apollo\-::cyber\-::io\-::\-Poll\-Handler@{apollo\-::cyber\-::io\-::\-Poll\-Handler}!is\-\_\-blocking\-\_\-@{is\-\_\-blocking\-\_\-}}
+\index{is\-\_\-blocking\-\_\-@{is\-\_\-blocking\-\_\-}!apollo::cyber::io::PollHandler@{apollo\-::cyber\-::io\-::\-Poll\-Handler}}
+\subsubsection[{is\-\_\-blocking\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::atomic$<$bool$>$ apollo\-::cyber\-::io\-::\-Poll\-Handler\-::is\-\_\-blocking\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1io_1_1PollHandler_a3f00c1b8f8024207f125e5c05b156048}
+\hypertarget{classapollo_1_1cyber_1_1io_1_1PollHandler_a7a5305d7ce1c7821bed181b40cbd20d9}{\index{apollo\-::cyber\-::io\-::\-Poll\-Handler@{apollo\-::cyber\-::io\-::\-Poll\-Handler}!is\-\_\-read\-\_\-@{is\-\_\-read\-\_\-}}
+\index{is\-\_\-read\-\_\-@{is\-\_\-read\-\_\-}!apollo::cyber::io::PollHandler@{apollo\-::cyber\-::io\-::\-Poll\-Handler}}
+\subsubsection[{is\-\_\-read\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::atomic$<$bool$>$ apollo\-::cyber\-::io\-::\-Poll\-Handler\-::is\-\_\-read\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1io_1_1PollHandler_a7a5305d7ce1c7821bed181b40cbd20d9}
+\hypertarget{classapollo_1_1cyber_1_1io_1_1PollHandler_a2115ffe4a901a60ff4d6ad036d67688b}{\index{apollo\-::cyber\-::io\-::\-Poll\-Handler@{apollo\-::cyber\-::io\-::\-Poll\-Handler}!request\-\_\-@{request\-\_\-}}
+\index{request\-\_\-@{request\-\_\-}!apollo::cyber::io::PollHandler@{apollo\-::cyber\-::io\-::\-Poll\-Handler}}
+\subsubsection[{request\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Poll\-Request} apollo\-::cyber\-::io\-::\-Poll\-Handler\-::request\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1io_1_1PollHandler_a2115ffe4a901a60ff4d6ad036d67688b}
+\hypertarget{classapollo_1_1cyber_1_1io_1_1PollHandler_afcceaca4a6ad4d3c40407d40a21acc50}{\index{apollo\-::cyber\-::io\-::\-Poll\-Handler@{apollo\-::cyber\-::io\-::\-Poll\-Handler}!response\-\_\-@{response\-\_\-}}
+\index{response\-\_\-@{response\-\_\-}!apollo::cyber::io::PollHandler@{apollo\-::cyber\-::io\-::\-Poll\-Handler}}
+\subsubsection[{response\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Poll\-Response} apollo\-::cyber\-::io\-::\-Poll\-Handler\-::response\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1io_1_1PollHandler_afcceaca4a6ad4d3c40407d40a21acc50}
+\hypertarget{classapollo_1_1cyber_1_1io_1_1PollHandler_a25783e7da986f5414a3d8120a391c16c}{\index{apollo\-::cyber\-::io\-::\-Poll\-Handler@{apollo\-::cyber\-::io\-::\-Poll\-Handler}!routine\-\_\-@{routine\-\_\-}}
+\index{routine\-\_\-@{routine\-\_\-}!apollo::cyber::io::PollHandler@{apollo\-::cyber\-::io\-::\-Poll\-Handler}}
+\subsubsection[{routine\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf croutine\-::\-C\-Routine}$\ast$ apollo\-::cyber\-::io\-::\-Poll\-Handler\-::routine\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1io_1_1PollHandler_a25783e7da986f5414a3d8120a391c16c}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+io/\hyperlink{poll__handler_8h}{poll\-\_\-handler.\-h}\end{DoxyCompactItemize}

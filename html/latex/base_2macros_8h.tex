@@ -1,0 +1,95 @@
+\hypertarget{base_2macros_8h}{\section{base/macros.h File Reference}
+\label{base_2macros_8h}\index{base/macros.\-h@{base/macros.\-h}}
+}
+{\ttfamily \#include $<$cstdlib$>$}\\*
+{\ttfamily \#include $<$new$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{base_2macros_8h_a217a0bd562b98ae8c2ffce44935351e1}{likely}(x)~(x)
+\item 
+\#define \hyperlink{base_2macros_8h_ac6c45889010c1bd68631771b64f18101}{unlikely}(x)~(x)
+\item 
+\#define \hyperlink{base_2macros_8h_ae05da5eff6babaf91257a4accdf8e0b6}{C\-A\-C\-H\-E\-L\-I\-N\-E\-\_\-\-S\-I\-Z\-E}~64
+\item 
+\#define \hyperlink{base_2macros_8h_a1715330270e60c0d3c67af37123d7fc8}{D\-E\-F\-I\-N\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-T\-R\-A\-I\-T}(name, func)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{base_2macros_8h_a4a51ff55d9dd4c7ccbac7519b456b130}{cpu\-\_\-relax} ()
+\item 
+void $\ast$ \hyperlink{base_2macros_8h_a41b0050eef3c4286296d1f866ebda3ca}{Checked\-Malloc} (size\-\_\-t size)
+\item 
+void $\ast$ \hyperlink{base_2macros_8h_a0e7fc2e10b57be4534b77c0e6d4e4d93}{Checked\-Calloc} (size\-\_\-t num, size\-\_\-t size)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{base_2macros_8h_ae05da5eff6babaf91257a4accdf8e0b6}{\index{base/macros.\-h@{base/macros.\-h}!C\-A\-C\-H\-E\-L\-I\-N\-E\-\_\-\-S\-I\-Z\-E@{C\-A\-C\-H\-E\-L\-I\-N\-E\-\_\-\-S\-I\-Z\-E}}
+\index{C\-A\-C\-H\-E\-L\-I\-N\-E\-\_\-\-S\-I\-Z\-E@{C\-A\-C\-H\-E\-L\-I\-N\-E\-\_\-\-S\-I\-Z\-E}!base/macros.h@{base/macros.\-h}}
+\subsubsection[{C\-A\-C\-H\-E\-L\-I\-N\-E\-\_\-\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-A\-C\-H\-E\-L\-I\-N\-E\-\_\-\-S\-I\-Z\-E~64}}\label{base_2macros_8h_ae05da5eff6babaf91257a4accdf8e0b6}
+\hypertarget{base_2macros_8h_a1715330270e60c0d3c67af37123d7fc8}{\index{base/macros.\-h@{base/macros.\-h}!D\-E\-F\-I\-N\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-T\-R\-A\-I\-T@{D\-E\-F\-I\-N\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-T\-R\-A\-I\-T}}
+\index{D\-E\-F\-I\-N\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-T\-R\-A\-I\-T@{D\-E\-F\-I\-N\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-T\-R\-A\-I\-T}!base/macros.h@{base/macros.\-h}}
+\subsubsection[{D\-E\-F\-I\-N\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-T\-R\-A\-I\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-E\-F\-I\-N\-E\-\_\-\-T\-Y\-P\-E\-\_\-\-T\-R\-A\-I\-T(
+\begin{DoxyParamCaption}
+\item[{}]{name, }
+\item[{}]{func}
+\end{DoxyParamCaption}
+)}}\label{base_2macros_8h_a1715330270e60c0d3c67af37123d7fc8}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\textcolor{keyword}{template} <\textcolor{keyword}{typename} T>                                          \(\backslash\)
+  class name \{                                                   \(\backslash\)
+   private:                                                      \(\backslash\)
+    template <typename Class>                                    \(\backslash\)
+    static \textcolor{keywordtype}{char} Test(decltype(&\hyperlink{namespaceapollo_1_1cyber_1_1croutine_a10b1486257a9f9174f905a6f4a54523f}{Class::func})*);                   \(\backslash\)
+    template <typename>                                          \(\backslash\)
+    static \textcolor{keywordtype}{int} Test(...);                                        \(\backslash\)
+                                                                 \(\backslash\)
+   public:                                                       \(\backslash\)
+    static constexpr \textcolor{keywordtype}{bool} \hyperlink{namespaceapollo_1_1cyber_1_1base_aa3e2fff9b18a1214af4a70546fb7120f}{value} = \textcolor{keyword}{sizeof}(Test<T>(\textcolor{keyword}{nullptr})) == 1; \(\backslash\)
+  \};                                                             \(\backslash\)
+                                                                 \(\backslash\)
+  template <typename T>                                          \(\backslash\)
+  constexpr \textcolor{keywordtype}{bool} \hyperlink{namespaceapollo_1_1cyber_1_1base_aa3e2fff9b18a1214af4a70546fb7120f}{name<T>::value};
+\end{DoxyCode}
+\hypertarget{base_2macros_8h_a217a0bd562b98ae8c2ffce44935351e1}{\index{base/macros.\-h@{base/macros.\-h}!likely@{likely}}
+\index{likely@{likely}!base/macros.h@{base/macros.\-h}}
+\subsubsection[{likely}]{\setlength{\rightskip}{0pt plus 5cm}\#define likely(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~(x)}}\label{base_2macros_8h_a217a0bd562b98ae8c2ffce44935351e1}
+\hypertarget{base_2macros_8h_ac6c45889010c1bd68631771b64f18101}{\index{base/macros.\-h@{base/macros.\-h}!unlikely@{unlikely}}
+\index{unlikely@{unlikely}!base/macros.h@{base/macros.\-h}}
+\subsubsection[{unlikely}]{\setlength{\rightskip}{0pt plus 5cm}\#define unlikely(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~(x)}}\label{base_2macros_8h_ac6c45889010c1bd68631771b64f18101}
+
+
+\subsection{Function Documentation}
+\hypertarget{base_2macros_8h_a0e7fc2e10b57be4534b77c0e6d4e4d93}{\index{base/macros.\-h@{base/macros.\-h}!Checked\-Calloc@{Checked\-Calloc}}
+\index{Checked\-Calloc@{Checked\-Calloc}!base/macros.h@{base/macros.\-h}}
+\subsubsection[{Checked\-Calloc}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ Checked\-Calloc (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{num, }
+\item[{size\-\_\-t}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{base_2macros_8h_a0e7fc2e10b57be4534b77c0e6d4e4d93}
+\hypertarget{base_2macros_8h_a41b0050eef3c4286296d1f866ebda3ca}{\index{base/macros.\-h@{base/macros.\-h}!Checked\-Malloc@{Checked\-Malloc}}
+\index{Checked\-Malloc@{Checked\-Malloc}!base/macros.h@{base/macros.\-h}}
+\subsubsection[{Checked\-Malloc}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ Checked\-Malloc (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{base_2macros_8h_a41b0050eef3c4286296d1f866ebda3ca}
+\hypertarget{base_2macros_8h_a4a51ff55d9dd4c7ccbac7519b456b130}{\index{base/macros.\-h@{base/macros.\-h}!cpu\-\_\-relax@{cpu\-\_\-relax}}
+\index{cpu\-\_\-relax@{cpu\-\_\-relax}!base/macros.h@{base/macros.\-h}}
+\subsubsection[{cpu\-\_\-relax}]{\setlength{\rightskip}{0pt plus 5cm}void cpu\-\_\-relax (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{base_2macros_8h_a4a51ff55d9dd4c7ccbac7519b456b130}

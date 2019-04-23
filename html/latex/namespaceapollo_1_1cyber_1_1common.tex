@@ -1,0 +1,563 @@
+\hypertarget{namespaceapollo_1_1cyber_1_1common}{\section{apollo\-:\-:cyber\-:\-:common Namespace Reference}
+\label{namespaceapollo_1_1cyber_1_1common}\index{apollo\-::cyber\-::common@{apollo\-::cyber\-::common}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classapollo_1_1cyber_1_1common_1_1GlobalData}{Global\-Data}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+const std\-::string \hyperlink{namespaceapollo_1_1cyber_1_1common_ac11a48ee837182876019fa8bd82138bd}{Get\-Env} (const std\-::string \&var\-\_\-name)
+\item 
+const std\-::string \hyperlink{namespaceapollo_1_1cyber_1_1common_ab1eeabd2bf7cd7ef2f34792af34196dd}{Work\-Root} ()
+\item 
+bool \hyperlink{namespaceapollo_1_1cyber_1_1common_a88247de6540a5a213e6f78f62ce60872}{Set\-Proto\-To\-A\-S\-C\-I\-I\-File} (const google\-::protobuf\-::\-Message \&message, int file\-\_\-descriptor)
+\item 
+bool \hyperlink{namespaceapollo_1_1cyber_1_1common_a0eb160d53ebe7c2f6b215f95081fb0ab}{Set\-Proto\-To\-A\-S\-C\-I\-I\-File} (const google\-::protobuf\-::\-Message \&message, const std\-::string \&file\-\_\-name)
+\begin{DoxyCompactList}\small\item\em Sets the content of the file specified by the file\-\_\-name to be the ascii representation of the input protobuf. \end{DoxyCompactList}\item 
+bool \hyperlink{namespaceapollo_1_1cyber_1_1common_a1d5f4e053ba687197ebdaf4eb7cf8aa1}{Get\-Proto\-From\-A\-S\-C\-I\-I\-File} (const std\-::string \&file\-\_\-name, google\-::protobuf\-::\-Message $\ast$message)
+\begin{DoxyCompactList}\small\item\em Parses the content of the file specified by the file\-\_\-name as ascii representation of protobufs, and merges the parsed content to the proto. \end{DoxyCompactList}\item 
+bool \hyperlink{namespaceapollo_1_1cyber_1_1common_a70ff11d21d9657f5d4b8be612cac79f0}{Set\-Proto\-To\-Binary\-File} (const google\-::protobuf\-::\-Message \&message, const std\-::string \&file\-\_\-name)
+\begin{DoxyCompactList}\small\item\em Sets the content of the file specified by the file\-\_\-name to be the binary representation of the input protobuf. \end{DoxyCompactList}\item 
+bool \hyperlink{namespaceapollo_1_1cyber_1_1common_ac40b1321abdcb5bee04ecc5a1754996e}{Get\-Proto\-From\-Binary\-File} (const std\-::string \&file\-\_\-name, google\-::protobuf\-::\-Message $\ast$message)
+\begin{DoxyCompactList}\small\item\em Parses the content of the file specified by the file\-\_\-name as binary representation of protobufs, and merges the parsed content to the proto. \end{DoxyCompactList}\item 
+bool \hyperlink{namespaceapollo_1_1cyber_1_1common_a26b275efbad46e735071e540445b19a9}{Get\-Proto\-From\-File} (const std\-::string \&file\-\_\-name, google\-::protobuf\-::\-Message $\ast$message)
+\begin{DoxyCompactList}\small\item\em Parses the content of the file specified by the file\-\_\-name as a representation of protobufs, and merges the parsed content to the proto. \end{DoxyCompactList}\item 
+bool \hyperlink{namespaceapollo_1_1cyber_1_1common_acd43c697ce645990ee9373683f10b1bd}{Get\-Content} (const std\-::string \&file\-\_\-name, std\-::string $\ast$content)
+\begin{DoxyCompactList}\small\item\em Get file content as string. \end{DoxyCompactList}\item 
+std\-::string \hyperlink{namespaceapollo_1_1cyber_1_1common_a8948fca1037f8256c7c62ac2dbc378c3}{Get\-Absolute\-Path} (const std\-::string \&prefix, const std\-::string \&relative\-\_\-path)
+\begin{DoxyCompactList}\small\item\em Get absolute path by concatenating prefix and relative\-\_\-path. \end{DoxyCompactList}\item 
+bool \hyperlink{namespaceapollo_1_1cyber_1_1common_a2461aa999fa88dc32c4ef41a9fae95ae}{Path\-Exists} (const std\-::string \&path)
+\begin{DoxyCompactList}\small\item\em Check if the path exists. \end{DoxyCompactList}\item 
+bool \hyperlink{namespaceapollo_1_1cyber_1_1common_ac3aa31e012b08343b8d71f7c1d68ee79}{Directory\-Exists} (const std\-::string \&directory\-\_\-path)
+\begin{DoxyCompactList}\small\item\em Check if the directory specified by directory\-\_\-path exists and is indeed a directory. \end{DoxyCompactList}\item 
+std\-::vector$<$ std\-::string $>$ \hyperlink{namespaceapollo_1_1cyber_1_1common_a9641469fee4f575ee274054d5f3efd73}{Glob} (const std\-::string \&pattern)
+\begin{DoxyCompactList}\small\item\em Expand path pattern to matched pathes. \end{DoxyCompactList}\item 
+bool \hyperlink{namespaceapollo_1_1cyber_1_1common_a222bd281a29c75f00ed9e66a986ed674}{Copy\-File} (const std\-::string \&from, const std\-::string \&to)
+\begin{DoxyCompactList}\small\item\em Copy a file. \end{DoxyCompactList}\item 
+bool \hyperlink{namespaceapollo_1_1cyber_1_1common_a327d27353ef7e5d2f50c809c3b05648c}{Copy\-Dir} (const std\-::string \&from, const std\-::string \&to)
+\begin{DoxyCompactList}\small\item\em Copy a directory. \end{DoxyCompactList}\item 
+bool \hyperlink{namespaceapollo_1_1cyber_1_1common_a6eb038dc356389e7f1d1e6ab4932c4f0}{Copy} (const std\-::string \&from, const std\-::string \&to)
+\begin{DoxyCompactList}\small\item\em Copy a file or directory. \end{DoxyCompactList}\item 
+bool \hyperlink{namespaceapollo_1_1cyber_1_1common_ada31727aa6860a122a2f6876e84ae950}{Ensure\-Directory} (const std\-::string \&directory\-\_\-path)
+\begin{DoxyCompactList}\small\item\em Check if a specified directory specified by directory\-\_\-path exists. If not, recursively create the directory (and its parents). \end{DoxyCompactList}\item 
+bool \hyperlink{namespaceapollo_1_1cyber_1_1common_aa18872a33740ca001df7cf11bdf1d891}{Remove\-All\-Files} (const std\-::string \&directory\-\_\-path)
+\begin{DoxyCompactList}\small\item\em Remove all the files under a specified directory. Note that sub-\/directories are N\-O\-T affected. \end{DoxyCompactList}\item 
+std\-::vector$<$ std\-::string $>$ \hyperlink{namespaceapollo_1_1cyber_1_1common_a785184e21861f27284d8531610b550ae}{List\-Sub\-Paths} (const std\-::string \&directory\-\_\-path, const unsigned char d\-\_\-type=D\-T\-\_\-\-D\-I\-R)
+\begin{DoxyCompactList}\small\item\em List sub-\/paths. \end{DoxyCompactList}\item 
+std\-::string \hyperlink{namespaceapollo_1_1cyber_1_1common_abf75455f4ea35d3113ed616ccec49974}{Get\-File\-Name} (const std\-::string \&path, const bool remove\-\_\-extension=false)
+\item 
+std\-::string \hyperlink{namespaceapollo_1_1cyber_1_1common_a3c4f6eae973c96a359e8620a45943a13}{Get\-Current\-Path} ()
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \hyperlink{namespaceapollo_1_1cyber_1_1common_aae9936d10af030dfdfb551c342688b99}{Unix\-To\-Gps\-Seconds} (T unix\-\_\-seconds)
+\item 
+int64\-\_\-t \hyperlink{namespaceapollo_1_1cyber_1_1common_ac5b4d836080b5baad92dea31f5f4b3af}{Unix\-To\-Gps\-Microseconds} (int64\-\_\-t unix\-\_\-microseconds)
+\item 
+int64\-\_\-t \hyperlink{namespaceapollo_1_1cyber_1_1common_a4e68216c17c0ec2340ea6cf2ee06c4a6}{Unix\-To\-Gps\-Nanoseconds} (int64\-\_\-t unix\-\_\-nanoseconds)
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \hyperlink{namespaceapollo_1_1cyber_1_1common_ad41923eb52c1c917c93e36a7daf0e3ff}{Gps\-To\-Unix\-Seconds} (T gps\-\_\-seconds)
+\item 
+int64\-\_\-t \hyperlink{namespaceapollo_1_1cyber_1_1common_a4f505d81ccc49b22947c435e8b7ca8d2}{Gps\-To\-Unix\-Microseconds} (int64\-\_\-t gps\-\_\-microseconds)
+\item 
+int64\-\_\-t \hyperlink{namespaceapollo_1_1cyber_1_1common_a2c8e6b4200784b7d24fdde19f6061f53}{Gps\-To\-Unix\-Nanoseconds} (int64\-\_\-t gps\-\_\-nanoseconds)
+\item 
+uint64\-\_\-t \hyperlink{namespaceapollo_1_1cyber_1_1common_aff2ca6b1b682c4cba3a03f6f54808dd0}{Gps\-To\-Unix\-Microseconds} (uint64\-\_\-t gps\-\_\-microseconds)
+\item 
+uint64\-\_\-t \hyperlink{namespaceapollo_1_1cyber_1_1common_af4740302b111b7839dd864274ea8624d}{Gps\-To\-Unix\-Nanoseconds} (uint64\-\_\-t gps\-\_\-nanoseconds)
+\item 
+uint64\-\_\-t \hyperlink{namespaceapollo_1_1cyber_1_1common_ab24dac790adc76ec3b14042dd5acf9f9}{String\-To\-Unix\-Seconds} (const std\-::string \&time\-\_\-str, const std\-::string \&format\-\_\-str=\char`\"{}\%Y-\/\%m-\/\%d \%H\-:\%M\-:\%S\char`\"{})
+\item 
+std\-::string \hyperlink{namespaceapollo_1_1cyber_1_1common_a090af70bab8d5e3c722443f39841e2da}{Unix\-Seconds\-To\-String} (uint64\-\_\-t unix\-\_\-seconds, const std\-::string \&format\-\_\-str=\char`\"{}\%Y-\/\%m-\/\%d \%H\-:\%M\-:\%S\char`\"{})
+\item 
+std\-::size\-\_\-t \hyperlink{namespaceapollo_1_1cyber_1_1common_a704695bad5b604167a9921e7fe9e65f2}{Hash} (const std\-::string \&key)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static const std\-::vector\\*
+$<$ std\-::pair$<$ int32\-\_\-t, int32\-\_\-t $>$ $>$ \hyperlink{namespaceapollo_1_1cyber_1_1common_a48c0d45777e43c24f3d4f9e3f083e913}{L\-E\-A\-P\-\_\-\-S\-E\-C\-O\-N\-D\-S}
+\item 
+constexpr int32\-\_\-t \hyperlink{namespaceapollo_1_1cyber_1_1common_a06841a03cb5e9b8ea5e98d62eb91410a}{U\-N\-I\-X\-\_\-\-G\-P\-S\-\_\-\-D\-I\-F\-F} = 315964800
+\item 
+constexpr int64\-\_\-t \hyperlink{namespaceapollo_1_1cyber_1_1common_a3e61850fe7f6e4161edd0407d2905b1e}{O\-N\-E\-\_\-\-M\-I\-L\-L\-I\-O\-N} = 1000000\-L
+\item 
+constexpr int64\-\_\-t \hyperlink{namespaceapollo_1_1cyber_1_1common_a907a999b5e563a182644d11496beb6fe}{O\-N\-E\-\_\-\-B\-I\-L\-L\-I\-O\-N} = 1000000000\-L
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{namespaceapollo_1_1cyber_1_1common_a6eb038dc356389e7f1d1e6ab4932c4f0}{\index{apollo\-::cyber\-::common@{apollo\-::cyber\-::common}!Copy@{Copy}}
+\index{Copy@{Copy}!apollo::cyber::common@{apollo\-::cyber\-::common}}
+\subsubsection[{Copy}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::common\-::\-Copy (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{from, }
+\item[{const std\-::string \&}]{to}
+\end{DoxyParamCaption}
+)}}\label{namespaceapollo_1_1cyber_1_1common_a6eb038dc356389e7f1d1e6ab4932c4f0}
+
+
+Copy a file or directory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em from} & The path to copy from. \\
+\hline
+{\em to} & The path to copy to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If the action is successful. 
+\end{DoxyReturn}
+\hypertarget{namespaceapollo_1_1cyber_1_1common_a327d27353ef7e5d2f50c809c3b05648c}{\index{apollo\-::cyber\-::common@{apollo\-::cyber\-::common}!Copy\-Dir@{Copy\-Dir}}
+\index{Copy\-Dir@{Copy\-Dir}!apollo::cyber::common@{apollo\-::cyber\-::common}}
+\subsubsection[{Copy\-Dir}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::common\-::\-Copy\-Dir (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{from, }
+\item[{const std\-::string \&}]{to}
+\end{DoxyParamCaption}
+)}}\label{namespaceapollo_1_1cyber_1_1common_a327d27353ef7e5d2f50c809c3b05648c}
+
+
+Copy a directory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em from} & The path to copy from. \\
+\hline
+{\em to} & The path to copy to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If the action is successful. 
+\end{DoxyReturn}
+\hypertarget{namespaceapollo_1_1cyber_1_1common_a222bd281a29c75f00ed9e66a986ed674}{\index{apollo\-::cyber\-::common@{apollo\-::cyber\-::common}!Copy\-File@{Copy\-File}}
+\index{Copy\-File@{Copy\-File}!apollo::cyber::common@{apollo\-::cyber\-::common}}
+\subsubsection[{Copy\-File}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::common\-::\-Copy\-File (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{from, }
+\item[{const std\-::string \&}]{to}
+\end{DoxyParamCaption}
+)}}\label{namespaceapollo_1_1cyber_1_1common_a222bd281a29c75f00ed9e66a986ed674}
+
+
+Copy a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em from} & The file path to copy from. \\
+\hline
+{\em to} & The file path to copy to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If the action is successful. 
+\end{DoxyReturn}
+\hypertarget{namespaceapollo_1_1cyber_1_1common_ac3aa31e012b08343b8d71f7c1d68ee79}{\index{apollo\-::cyber\-::common@{apollo\-::cyber\-::common}!Directory\-Exists@{Directory\-Exists}}
+\index{Directory\-Exists@{Directory\-Exists}!apollo::cyber::common@{apollo\-::cyber\-::common}}
+\subsubsection[{Directory\-Exists}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::common\-::\-Directory\-Exists (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{directory\-\_\-path}
+\end{DoxyParamCaption}
+)}}\label{namespaceapollo_1_1cyber_1_1common_ac3aa31e012b08343b8d71f7c1d68ee79}
+
+
+Check if the directory specified by directory\-\_\-path exists and is indeed a directory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em directory\-\_\-path} & Directory path. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If the directory specified by directory\-\_\-path exists and is indeed a directory. 
+\end{DoxyReturn}
+\hypertarget{namespaceapollo_1_1cyber_1_1common_ada31727aa6860a122a2f6876e84ae950}{\index{apollo\-::cyber\-::common@{apollo\-::cyber\-::common}!Ensure\-Directory@{Ensure\-Directory}}
+\index{Ensure\-Directory@{Ensure\-Directory}!apollo::cyber::common@{apollo\-::cyber\-::common}}
+\subsubsection[{Ensure\-Directory}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::common\-::\-Ensure\-Directory (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{directory\-\_\-path}
+\end{DoxyParamCaption}
+)}}\label{namespaceapollo_1_1cyber_1_1common_ada31727aa6860a122a2f6876e84ae950}
+
+
+Check if a specified directory specified by directory\-\_\-path exists. If not, recursively create the directory (and its parents). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em directory\-\_\-path} & Directory path. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If the directory does exist or its creation is successful. 
+\end{DoxyReturn}
+\hypertarget{namespaceapollo_1_1cyber_1_1common_a8948fca1037f8256c7c62ac2dbc378c3}{\index{apollo\-::cyber\-::common@{apollo\-::cyber\-::common}!Get\-Absolute\-Path@{Get\-Absolute\-Path}}
+\index{Get\-Absolute\-Path@{Get\-Absolute\-Path}!apollo::cyber::common@{apollo\-::cyber\-::common}}
+\subsubsection[{Get\-Absolute\-Path}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string apollo\-::cyber\-::common\-::\-Get\-Absolute\-Path (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{prefix, }
+\item[{const std\-::string \&}]{relative\-\_\-path}
+\end{DoxyParamCaption}
+)}}\label{namespaceapollo_1_1cyber_1_1common_a8948fca1037f8256c7c62ac2dbc378c3}
+
+
+Get absolute path by concatenating prefix and relative\-\_\-path. 
+
+\begin{DoxyReturn}{Returns}
+The absolute path. 
+\end{DoxyReturn}
+\hypertarget{namespaceapollo_1_1cyber_1_1common_acd43c697ce645990ee9373683f10b1bd}{\index{apollo\-::cyber\-::common@{apollo\-::cyber\-::common}!Get\-Content@{Get\-Content}}
+\index{Get\-Content@{Get\-Content}!apollo::cyber::common@{apollo\-::cyber\-::common}}
+\subsubsection[{Get\-Content}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::common\-::\-Get\-Content (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{file\-\_\-name, }
+\item[{std\-::string $\ast$}]{content}
+\end{DoxyParamCaption}
+)}}\label{namespaceapollo_1_1cyber_1_1common_acd43c697ce645990ee9373683f10b1bd}
+
+
+Get file content as string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\-\_\-name} & The name of the file to read content. \\
+\hline
+{\em content} & The file content. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If the action is successful. 
+\end{DoxyReturn}
+\hypertarget{namespaceapollo_1_1cyber_1_1common_a3c4f6eae973c96a359e8620a45943a13}{\index{apollo\-::cyber\-::common@{apollo\-::cyber\-::common}!Get\-Current\-Path@{Get\-Current\-Path}}
+\index{Get\-Current\-Path@{Get\-Current\-Path}!apollo::cyber::common@{apollo\-::cyber\-::common}}
+\subsubsection[{Get\-Current\-Path}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string apollo\-::cyber\-::common\-::\-Get\-Current\-Path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{namespaceapollo_1_1cyber_1_1common_a3c4f6eae973c96a359e8620a45943a13}
+\hypertarget{namespaceapollo_1_1cyber_1_1common_ac11a48ee837182876019fa8bd82138bd}{\index{apollo\-::cyber\-::common@{apollo\-::cyber\-::common}!Get\-Env@{Get\-Env}}
+\index{Get\-Env@{Get\-Env}!apollo::cyber::common@{apollo\-::cyber\-::common}}
+\subsubsection[{Get\-Env}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::string apollo\-::cyber\-::common\-::\-Get\-Env (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{var\-\_\-name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespaceapollo_1_1cyber_1_1common_ac11a48ee837182876019fa8bd82138bd}
+\hypertarget{namespaceapollo_1_1cyber_1_1common_abf75455f4ea35d3113ed616ccec49974}{\index{apollo\-::cyber\-::common@{apollo\-::cyber\-::common}!Get\-File\-Name@{Get\-File\-Name}}
+\index{Get\-File\-Name@{Get\-File\-Name}!apollo::cyber::common@{apollo\-::cyber\-::common}}
+\subsubsection[{Get\-File\-Name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string apollo\-::cyber\-::common\-::\-Get\-File\-Name (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{path, }
+\item[{const bool}]{remove\-\_\-extension = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}}\label{namespaceapollo_1_1cyber_1_1common_abf75455f4ea35d3113ed616ccec49974}
+\hypertarget{namespaceapollo_1_1cyber_1_1common_a1d5f4e053ba687197ebdaf4eb7cf8aa1}{\index{apollo\-::cyber\-::common@{apollo\-::cyber\-::common}!Get\-Proto\-From\-A\-S\-C\-I\-I\-File@{Get\-Proto\-From\-A\-S\-C\-I\-I\-File}}
+\index{Get\-Proto\-From\-A\-S\-C\-I\-I\-File@{Get\-Proto\-From\-A\-S\-C\-I\-I\-File}!apollo::cyber::common@{apollo\-::cyber\-::common}}
+\subsubsection[{Get\-Proto\-From\-A\-S\-C\-I\-I\-File}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::common\-::\-Get\-Proto\-From\-A\-S\-C\-I\-I\-File (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{file\-\_\-name, }
+\item[{google\-::protobuf\-::\-Message $\ast$}]{message}
+\end{DoxyParamCaption}
+)}}\label{namespaceapollo_1_1cyber_1_1common_a1d5f4e053ba687197ebdaf4eb7cf8aa1}
+
+
+Parses the content of the file specified by the file\-\_\-name as ascii representation of protobufs, and merges the parsed content to the proto. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\-\_\-name} & The name of the file to parse whose content. \\
+\hline
+{\em message} & The proto to carry the parsed content in the specified file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If the action is successful. 
+\end{DoxyReturn}
+\hypertarget{namespaceapollo_1_1cyber_1_1common_ac40b1321abdcb5bee04ecc5a1754996e}{\index{apollo\-::cyber\-::common@{apollo\-::cyber\-::common}!Get\-Proto\-From\-Binary\-File@{Get\-Proto\-From\-Binary\-File}}
+\index{Get\-Proto\-From\-Binary\-File@{Get\-Proto\-From\-Binary\-File}!apollo::cyber::common@{apollo\-::cyber\-::common}}
+\subsubsection[{Get\-Proto\-From\-Binary\-File}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::common\-::\-Get\-Proto\-From\-Binary\-File (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{file\-\_\-name, }
+\item[{google\-::protobuf\-::\-Message $\ast$}]{message}
+\end{DoxyParamCaption}
+)}}\label{namespaceapollo_1_1cyber_1_1common_ac40b1321abdcb5bee04ecc5a1754996e}
+
+
+Parses the content of the file specified by the file\-\_\-name as binary representation of protobufs, and merges the parsed content to the proto. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\-\_\-name} & The name of the file to parse whose content. \\
+\hline
+{\em message} & The proto to carry the parsed content in the specified file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If the action is successful. 
+\end{DoxyReturn}
+\hypertarget{namespaceapollo_1_1cyber_1_1common_a26b275efbad46e735071e540445b19a9}{\index{apollo\-::cyber\-::common@{apollo\-::cyber\-::common}!Get\-Proto\-From\-File@{Get\-Proto\-From\-File}}
+\index{Get\-Proto\-From\-File@{Get\-Proto\-From\-File}!apollo::cyber::common@{apollo\-::cyber\-::common}}
+\subsubsection[{Get\-Proto\-From\-File}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::common\-::\-Get\-Proto\-From\-File (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{file\-\_\-name, }
+\item[{google\-::protobuf\-::\-Message $\ast$}]{message}
+\end{DoxyParamCaption}
+)}}\label{namespaceapollo_1_1cyber_1_1common_a26b275efbad46e735071e540445b19a9}
+
+
+Parses the content of the file specified by the file\-\_\-name as a representation of protobufs, and merges the parsed content to the proto. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\-\_\-name} & The name of the file to parse whose content. \\
+\hline
+{\em message} & The proto to carry the parsed content in the specified file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If the action is successful. 
+\end{DoxyReturn}
+\hypertarget{namespaceapollo_1_1cyber_1_1common_a9641469fee4f575ee274054d5f3efd73}{\index{apollo\-::cyber\-::common@{apollo\-::cyber\-::common}!Glob@{Glob}}
+\index{Glob@{Glob}!apollo::cyber::common@{apollo\-::cyber\-::common}}
+\subsubsection[{Glob}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$std\-::string$>$ apollo\-::cyber\-::common\-::\-Glob (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{pattern}
+\end{DoxyParamCaption}
+)}}\label{namespaceapollo_1_1cyber_1_1common_a9641469fee4f575ee274054d5f3efd73}
+
+
+Expand path pattern to matched pathes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pattern} & Path pattern, which may contain wildcards \mbox{[}?$\ast$\mbox{]}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Matched path list. 
+\end{DoxyReturn}
+\hypertarget{namespaceapollo_1_1cyber_1_1common_a4f505d81ccc49b22947c435e8b7ca8d2}{\index{apollo\-::cyber\-::common@{apollo\-::cyber\-::common}!Gps\-To\-Unix\-Microseconds@{Gps\-To\-Unix\-Microseconds}}
+\index{Gps\-To\-Unix\-Microseconds@{Gps\-To\-Unix\-Microseconds}!apollo::cyber::common@{apollo\-::cyber\-::common}}
+\subsubsection[{Gps\-To\-Unix\-Microseconds}]{\setlength{\rightskip}{0pt plus 5cm}int64\-\_\-t apollo\-::cyber\-::common\-::\-Gps\-To\-Unix\-Microseconds (
+\begin{DoxyParamCaption}
+\item[{int64\-\_\-t}]{gps\-\_\-microseconds}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespaceapollo_1_1cyber_1_1common_a4f505d81ccc49b22947c435e8b7ca8d2}
+\hypertarget{namespaceapollo_1_1cyber_1_1common_aff2ca6b1b682c4cba3a03f6f54808dd0}{\index{apollo\-::cyber\-::common@{apollo\-::cyber\-::common}!Gps\-To\-Unix\-Microseconds@{Gps\-To\-Unix\-Microseconds}}
+\index{Gps\-To\-Unix\-Microseconds@{Gps\-To\-Unix\-Microseconds}!apollo::cyber::common@{apollo\-::cyber\-::common}}
+\subsubsection[{Gps\-To\-Unix\-Microseconds}]{\setlength{\rightskip}{0pt plus 5cm}uint64\-\_\-t apollo\-::cyber\-::common\-::\-Gps\-To\-Unix\-Microseconds (
+\begin{DoxyParamCaption}
+\item[{uint64\-\_\-t}]{gps\-\_\-microseconds}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespaceapollo_1_1cyber_1_1common_aff2ca6b1b682c4cba3a03f6f54808dd0}
+\hypertarget{namespaceapollo_1_1cyber_1_1common_a2c8e6b4200784b7d24fdde19f6061f53}{\index{apollo\-::cyber\-::common@{apollo\-::cyber\-::common}!Gps\-To\-Unix\-Nanoseconds@{Gps\-To\-Unix\-Nanoseconds}}
+\index{Gps\-To\-Unix\-Nanoseconds@{Gps\-To\-Unix\-Nanoseconds}!apollo::cyber::common@{apollo\-::cyber\-::common}}
+\subsubsection[{Gps\-To\-Unix\-Nanoseconds}]{\setlength{\rightskip}{0pt plus 5cm}int64\-\_\-t apollo\-::cyber\-::common\-::\-Gps\-To\-Unix\-Nanoseconds (
+\begin{DoxyParamCaption}
+\item[{int64\-\_\-t}]{gps\-\_\-nanoseconds}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespaceapollo_1_1cyber_1_1common_a2c8e6b4200784b7d24fdde19f6061f53}
+\hypertarget{namespaceapollo_1_1cyber_1_1common_af4740302b111b7839dd864274ea8624d}{\index{apollo\-::cyber\-::common@{apollo\-::cyber\-::common}!Gps\-To\-Unix\-Nanoseconds@{Gps\-To\-Unix\-Nanoseconds}}
+\index{Gps\-To\-Unix\-Nanoseconds@{Gps\-To\-Unix\-Nanoseconds}!apollo::cyber::common@{apollo\-::cyber\-::common}}
+\subsubsection[{Gps\-To\-Unix\-Nanoseconds}]{\setlength{\rightskip}{0pt plus 5cm}uint64\-\_\-t apollo\-::cyber\-::common\-::\-Gps\-To\-Unix\-Nanoseconds (
+\begin{DoxyParamCaption}
+\item[{uint64\-\_\-t}]{gps\-\_\-nanoseconds}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespaceapollo_1_1cyber_1_1common_af4740302b111b7839dd864274ea8624d}
+\hypertarget{namespaceapollo_1_1cyber_1_1common_ad41923eb52c1c917c93e36a7daf0e3ff}{\index{apollo\-::cyber\-::common@{apollo\-::cyber\-::common}!Gps\-To\-Unix\-Seconds@{Gps\-To\-Unix\-Seconds}}
+\index{Gps\-To\-Unix\-Seconds@{Gps\-To\-Unix\-Seconds}!apollo::cyber::common@{apollo\-::cyber\-::common}}
+\subsubsection[{Gps\-To\-Unix\-Seconds}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ T apollo\-::cyber\-::common\-::\-Gps\-To\-Unix\-Seconds (
+\begin{DoxyParamCaption}
+\item[{T}]{gps\-\_\-seconds}
+\end{DoxyParamCaption}
+)}}\label{namespaceapollo_1_1cyber_1_1common_ad41923eb52c1c917c93e36a7daf0e3ff}
+\hypertarget{namespaceapollo_1_1cyber_1_1common_a704695bad5b604167a9921e7fe9e65f2}{\index{apollo\-::cyber\-::common@{apollo\-::cyber\-::common}!Hash@{Hash}}
+\index{Hash@{Hash}!apollo::cyber::common@{apollo\-::cyber\-::common}}
+\subsubsection[{Hash}]{\setlength{\rightskip}{0pt plus 5cm}std\-::size\-\_\-t apollo\-::cyber\-::common\-::\-Hash (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespaceapollo_1_1cyber_1_1common_a704695bad5b604167a9921e7fe9e65f2}
+\hypertarget{namespaceapollo_1_1cyber_1_1common_a785184e21861f27284d8531610b550ae}{\index{apollo\-::cyber\-::common@{apollo\-::cyber\-::common}!List\-Sub\-Paths@{List\-Sub\-Paths}}
+\index{List\-Sub\-Paths@{List\-Sub\-Paths}!apollo::cyber::common@{apollo\-::cyber\-::common}}
+\subsubsection[{List\-Sub\-Paths}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$std\-::string$>$ apollo\-::cyber\-::common\-::\-List\-Sub\-Paths (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{directory\-\_\-path, }
+\item[{const unsigned char}]{d\-\_\-type = {\ttfamily DT\-\_\-DIR}}
+\end{DoxyParamCaption}
+)}}\label{namespaceapollo_1_1cyber_1_1common_a785184e21861f27284d8531610b550ae}
+
+
+List sub-\/paths. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em directory\-\_\-path} & Directory path. \\
+\hline
+{\em d\-\_\-type} & Sub-\/path type, D\-T\-\_\-\-D\-I\-R for directory, or D\-T\-\_\-\-R\-E\-G for file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of sub-\/paths, without the directory\-\_\-path prefix. 
+\end{DoxyReturn}
+\hypertarget{namespaceapollo_1_1cyber_1_1common_a2461aa999fa88dc32c4ef41a9fae95ae}{\index{apollo\-::cyber\-::common@{apollo\-::cyber\-::common}!Path\-Exists@{Path\-Exists}}
+\index{Path\-Exists@{Path\-Exists}!apollo::cyber::common@{apollo\-::cyber\-::common}}
+\subsubsection[{Path\-Exists}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::common\-::\-Path\-Exists (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{path}
+\end{DoxyParamCaption}
+)}}\label{namespaceapollo_1_1cyber_1_1common_a2461aa999fa88dc32c4ef41a9fae95ae}
+
+
+Check if the path exists. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & a file name, such as /a/b/c.txt \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If the path exists. 
+\end{DoxyReturn}
+\hypertarget{namespaceapollo_1_1cyber_1_1common_aa18872a33740ca001df7cf11bdf1d891}{\index{apollo\-::cyber\-::common@{apollo\-::cyber\-::common}!Remove\-All\-Files@{Remove\-All\-Files}}
+\index{Remove\-All\-Files@{Remove\-All\-Files}!apollo::cyber::common@{apollo\-::cyber\-::common}}
+\subsubsection[{Remove\-All\-Files}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::common\-::\-Remove\-All\-Files (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{directory\-\_\-path}
+\end{DoxyParamCaption}
+)}}\label{namespaceapollo_1_1cyber_1_1common_aa18872a33740ca001df7cf11bdf1d891}
+
+
+Remove all the files under a specified directory. Note that sub-\/directories are N\-O\-T affected. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em directory\-\_\-path} & Directory path. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If the action is successful. 
+\end{DoxyReturn}
+\hypertarget{namespaceapollo_1_1cyber_1_1common_a88247de6540a5a213e6f78f62ce60872}{\index{apollo\-::cyber\-::common@{apollo\-::cyber\-::common}!Set\-Proto\-To\-A\-S\-C\-I\-I\-File@{Set\-Proto\-To\-A\-S\-C\-I\-I\-File}}
+\index{Set\-Proto\-To\-A\-S\-C\-I\-I\-File@{Set\-Proto\-To\-A\-S\-C\-I\-I\-File}!apollo::cyber::common@{apollo\-::cyber\-::common}}
+\subsubsection[{Set\-Proto\-To\-A\-S\-C\-I\-I\-File}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::common\-::\-Set\-Proto\-To\-A\-S\-C\-I\-I\-File (
+\begin{DoxyParamCaption}
+\item[{const google\-::protobuf\-::\-Message \&}]{message, }
+\item[{int}]{file\-\_\-descriptor}
+\end{DoxyParamCaption}
+)}}\label{namespaceapollo_1_1cyber_1_1common_a88247de6540a5a213e6f78f62ce60872}
+\hypertarget{namespaceapollo_1_1cyber_1_1common_a0eb160d53ebe7c2f6b215f95081fb0ab}{\index{apollo\-::cyber\-::common@{apollo\-::cyber\-::common}!Set\-Proto\-To\-A\-S\-C\-I\-I\-File@{Set\-Proto\-To\-A\-S\-C\-I\-I\-File}}
+\index{Set\-Proto\-To\-A\-S\-C\-I\-I\-File@{Set\-Proto\-To\-A\-S\-C\-I\-I\-File}!apollo::cyber::common@{apollo\-::cyber\-::common}}
+\subsubsection[{Set\-Proto\-To\-A\-S\-C\-I\-I\-File}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::common\-::\-Set\-Proto\-To\-A\-S\-C\-I\-I\-File (
+\begin{DoxyParamCaption}
+\item[{const google\-::protobuf\-::\-Message \&}]{message, }
+\item[{const std\-::string \&}]{file\-\_\-name}
+\end{DoxyParamCaption}
+)}}\label{namespaceapollo_1_1cyber_1_1common_a0eb160d53ebe7c2f6b215f95081fb0ab}
+
+
+Sets the content of the file specified by the file\-\_\-name to be the ascii representation of the input protobuf. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The proto to output to the specified file. \\
+\hline
+{\em file\-\_\-name} & The name of the target file to set the content. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If the action is successful. 
+\end{DoxyReturn}
+\hypertarget{namespaceapollo_1_1cyber_1_1common_a70ff11d21d9657f5d4b8be612cac79f0}{\index{apollo\-::cyber\-::common@{apollo\-::cyber\-::common}!Set\-Proto\-To\-Binary\-File@{Set\-Proto\-To\-Binary\-File}}
+\index{Set\-Proto\-To\-Binary\-File@{Set\-Proto\-To\-Binary\-File}!apollo::cyber::common@{apollo\-::cyber\-::common}}
+\subsubsection[{Set\-Proto\-To\-Binary\-File}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::common\-::\-Set\-Proto\-To\-Binary\-File (
+\begin{DoxyParamCaption}
+\item[{const google\-::protobuf\-::\-Message \&}]{message, }
+\item[{const std\-::string \&}]{file\-\_\-name}
+\end{DoxyParamCaption}
+)}}\label{namespaceapollo_1_1cyber_1_1common_a70ff11d21d9657f5d4b8be612cac79f0}
+
+
+Sets the content of the file specified by the file\-\_\-name to be the binary representation of the input protobuf. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The proto to output to the specified file. \\
+\hline
+{\em file\-\_\-name} & The name of the target file to set the content. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If the action is successful. 
+\end{DoxyReturn}
+\hypertarget{namespaceapollo_1_1cyber_1_1common_ab24dac790adc76ec3b14042dd5acf9f9}{\index{apollo\-::cyber\-::common@{apollo\-::cyber\-::common}!String\-To\-Unix\-Seconds@{String\-To\-Unix\-Seconds}}
+\index{String\-To\-Unix\-Seconds@{String\-To\-Unix\-Seconds}!apollo::cyber::common@{apollo\-::cyber\-::common}}
+\subsubsection[{String\-To\-Unix\-Seconds}]{\setlength{\rightskip}{0pt plus 5cm}uint64\-\_\-t apollo\-::cyber\-::common\-::\-String\-To\-Unix\-Seconds (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{time\-\_\-str, }
+\item[{const std\-::string \&}]{format\-\_\-str = {\ttfamily \char`\"{}\%Y-\/\%m-\/\%d~\%H\-:\%M\-:\%S\char`\"{}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespaceapollo_1_1cyber_1_1common_ab24dac790adc76ec3b14042dd5acf9f9}
+\hypertarget{namespaceapollo_1_1cyber_1_1common_a090af70bab8d5e3c722443f39841e2da}{\index{apollo\-::cyber\-::common@{apollo\-::cyber\-::common}!Unix\-Seconds\-To\-String@{Unix\-Seconds\-To\-String}}
+\index{Unix\-Seconds\-To\-String@{Unix\-Seconds\-To\-String}!apollo::cyber::common@{apollo\-::cyber\-::common}}
+\subsubsection[{Unix\-Seconds\-To\-String}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string apollo\-::cyber\-::common\-::\-Unix\-Seconds\-To\-String (
+\begin{DoxyParamCaption}
+\item[{uint64\-\_\-t}]{unix\-\_\-seconds, }
+\item[{const std\-::string \&}]{format\-\_\-str = {\ttfamily \char`\"{}\%Y-\/\%m-\/\%d~\%H\-:\%M\-:\%S\char`\"{}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespaceapollo_1_1cyber_1_1common_a090af70bab8d5e3c722443f39841e2da}
+\hypertarget{namespaceapollo_1_1cyber_1_1common_ac5b4d836080b5baad92dea31f5f4b3af}{\index{apollo\-::cyber\-::common@{apollo\-::cyber\-::common}!Unix\-To\-Gps\-Microseconds@{Unix\-To\-Gps\-Microseconds}}
+\index{Unix\-To\-Gps\-Microseconds@{Unix\-To\-Gps\-Microseconds}!apollo::cyber::common@{apollo\-::cyber\-::common}}
+\subsubsection[{Unix\-To\-Gps\-Microseconds}]{\setlength{\rightskip}{0pt plus 5cm}int64\-\_\-t apollo\-::cyber\-::common\-::\-Unix\-To\-Gps\-Microseconds (
+\begin{DoxyParamCaption}
+\item[{int64\-\_\-t}]{unix\-\_\-microseconds}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespaceapollo_1_1cyber_1_1common_ac5b4d836080b5baad92dea31f5f4b3af}
+\hypertarget{namespaceapollo_1_1cyber_1_1common_a4e68216c17c0ec2340ea6cf2ee06c4a6}{\index{apollo\-::cyber\-::common@{apollo\-::cyber\-::common}!Unix\-To\-Gps\-Nanoseconds@{Unix\-To\-Gps\-Nanoseconds}}
+\index{Unix\-To\-Gps\-Nanoseconds@{Unix\-To\-Gps\-Nanoseconds}!apollo::cyber::common@{apollo\-::cyber\-::common}}
+\subsubsection[{Unix\-To\-Gps\-Nanoseconds}]{\setlength{\rightskip}{0pt plus 5cm}int64\-\_\-t apollo\-::cyber\-::common\-::\-Unix\-To\-Gps\-Nanoseconds (
+\begin{DoxyParamCaption}
+\item[{int64\-\_\-t}]{unix\-\_\-nanoseconds}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespaceapollo_1_1cyber_1_1common_a4e68216c17c0ec2340ea6cf2ee06c4a6}
+\hypertarget{namespaceapollo_1_1cyber_1_1common_aae9936d10af030dfdfb551c342688b99}{\index{apollo\-::cyber\-::common@{apollo\-::cyber\-::common}!Unix\-To\-Gps\-Seconds@{Unix\-To\-Gps\-Seconds}}
+\index{Unix\-To\-Gps\-Seconds@{Unix\-To\-Gps\-Seconds}!apollo::cyber::common@{apollo\-::cyber\-::common}}
+\subsubsection[{Unix\-To\-Gps\-Seconds}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ T apollo\-::cyber\-::common\-::\-Unix\-To\-Gps\-Seconds (
+\begin{DoxyParamCaption}
+\item[{T}]{unix\-\_\-seconds}
+\end{DoxyParamCaption}
+)}}\label{namespaceapollo_1_1cyber_1_1common_aae9936d10af030dfdfb551c342688b99}
+\hypertarget{namespaceapollo_1_1cyber_1_1common_ab1eeabd2bf7cd7ef2f34792af34196dd}{\index{apollo\-::cyber\-::common@{apollo\-::cyber\-::common}!Work\-Root@{Work\-Root}}
+\index{Work\-Root@{Work\-Root}!apollo::cyber::common@{apollo\-::cyber\-::common}}
+\subsubsection[{Work\-Root}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::string apollo\-::cyber\-::common\-::\-Work\-Root (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespaceapollo_1_1cyber_1_1common_ab1eeabd2bf7cd7ef2f34792af34196dd}
+
+
+\subsection{Variable Documentation}
+\hypertarget{namespaceapollo_1_1cyber_1_1common_a48c0d45777e43c24f3d4f9e3f083e913}{\index{apollo\-::cyber\-::common@{apollo\-::cyber\-::common}!L\-E\-A\-P\-\_\-\-S\-E\-C\-O\-N\-D\-S@{L\-E\-A\-P\-\_\-\-S\-E\-C\-O\-N\-D\-S}}
+\index{L\-E\-A\-P\-\_\-\-S\-E\-C\-O\-N\-D\-S@{L\-E\-A\-P\-\_\-\-S\-E\-C\-O\-N\-D\-S}!apollo::cyber::common@{apollo\-::cyber\-::common}}
+\subsubsection[{L\-E\-A\-P\-\_\-\-S\-E\-C\-O\-N\-D\-S}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::vector$<$std\-::pair$<$int32\-\_\-t, int32\-\_\-t$>$ $>$ apollo\-::cyber\-::common\-::\-L\-E\-A\-P\-\_\-\-S\-E\-C\-O\-N\-D\-S\hspace{0.3cm}{\ttfamily [static]}}}\label{namespaceapollo_1_1cyber_1_1common_a48c0d45777e43c24f3d4f9e3f083e913}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+= \{
+    
+    
+    \{1483228800, 18\},  
+    \{1435708800, 17\},  
+    \{1341100800, 16\},  
+    \{1230768000, 15\},  
+    \{1136073600, 14\},  
+\}
+\end{DoxyCode}
+\hypertarget{namespaceapollo_1_1cyber_1_1common_a907a999b5e563a182644d11496beb6fe}{\index{apollo\-::cyber\-::common@{apollo\-::cyber\-::common}!O\-N\-E\-\_\-\-B\-I\-L\-L\-I\-O\-N@{O\-N\-E\-\_\-\-B\-I\-L\-L\-I\-O\-N}}
+\index{O\-N\-E\-\_\-\-B\-I\-L\-L\-I\-O\-N@{O\-N\-E\-\_\-\-B\-I\-L\-L\-I\-O\-N}!apollo::cyber::common@{apollo\-::cyber\-::common}}
+\subsubsection[{O\-N\-E\-\_\-\-B\-I\-L\-L\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}constexpr int64\-\_\-t apollo\-::cyber\-::common\-::\-O\-N\-E\-\_\-\-B\-I\-L\-L\-I\-O\-N = 1000000000\-L}}\label{namespaceapollo_1_1cyber_1_1common_a907a999b5e563a182644d11496beb6fe}
+\hypertarget{namespaceapollo_1_1cyber_1_1common_a3e61850fe7f6e4161edd0407d2905b1e}{\index{apollo\-::cyber\-::common@{apollo\-::cyber\-::common}!O\-N\-E\-\_\-\-M\-I\-L\-L\-I\-O\-N@{O\-N\-E\-\_\-\-M\-I\-L\-L\-I\-O\-N}}
+\index{O\-N\-E\-\_\-\-M\-I\-L\-L\-I\-O\-N@{O\-N\-E\-\_\-\-M\-I\-L\-L\-I\-O\-N}!apollo::cyber::common@{apollo\-::cyber\-::common}}
+\subsubsection[{O\-N\-E\-\_\-\-M\-I\-L\-L\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}constexpr int64\-\_\-t apollo\-::cyber\-::common\-::\-O\-N\-E\-\_\-\-M\-I\-L\-L\-I\-O\-N = 1000000\-L}}\label{namespaceapollo_1_1cyber_1_1common_a3e61850fe7f6e4161edd0407d2905b1e}
+\hypertarget{namespaceapollo_1_1cyber_1_1common_a06841a03cb5e9b8ea5e98d62eb91410a}{\index{apollo\-::cyber\-::common@{apollo\-::cyber\-::common}!U\-N\-I\-X\-\_\-\-G\-P\-S\-\_\-\-D\-I\-F\-F@{U\-N\-I\-X\-\_\-\-G\-P\-S\-\_\-\-D\-I\-F\-F}}
+\index{U\-N\-I\-X\-\_\-\-G\-P\-S\-\_\-\-D\-I\-F\-F@{U\-N\-I\-X\-\_\-\-G\-P\-S\-\_\-\-D\-I\-F\-F}!apollo::cyber::common@{apollo\-::cyber\-::common}}
+\subsubsection[{U\-N\-I\-X\-\_\-\-G\-P\-S\-\_\-\-D\-I\-F\-F}]{\setlength{\rightskip}{0pt plus 5cm}constexpr int32\-\_\-t apollo\-::cyber\-::common\-::\-U\-N\-I\-X\-\_\-\-G\-P\-S\-\_\-\-D\-I\-F\-F = 315964800}}\label{namespaceapollo_1_1cyber_1_1common_a06841a03cb5e9b8ea5e98d62eb91410a}

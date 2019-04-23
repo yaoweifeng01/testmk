@@ -1,0 +1,270 @@
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1HybridReceiver}{\section{apollo\-:\-:cyber\-:\-:transport\-:\-:Hybrid\-Receiver$<$ M $>$ Class Template Reference}
+\label{classapollo_1_1cyber_1_1transport_1_1HybridReceiver}\index{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver$<$ M $>$@{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver$<$ M $>$}}
+}
+
+
+{\ttfamily \#include $<$hybrid\-\_\-receiver.\-h$>$}
+
+Inheritance diagram for apollo\-:\-:cyber\-:\-:transport\-:\-:Hybrid\-Receiver$<$ M $>$\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classapollo_1_1cyber_1_1transport_1_1HybridReceiver}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_a29d008855b7b25d060137a19da928c53}{History\-Ptr} = std\-::shared\-\_\-ptr$<$ \hyperlink{classapollo_1_1cyber_1_1transport_1_1History}{History}$<$ M $>$$>$
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_aa59a9c5e8a30dd56cd84e1a463d05e7c}{Receiver\-Ptr} = std\-::shared\-\_\-ptr$<$ \hyperlink{classapollo_1_1cyber_1_1transport_1_1Receiver}{Receiver}$<$ M $>$$>$
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_a70475c40e8f9c33ebd8126df3ab71e18}{Receiver\-Container} = std\-::unordered\-\_\-map$<$ Optional\-Mode, \hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_aa59a9c5e8a30dd56cd84e1a463d05e7c}{Receiver\-Ptr}, std\-::hash$<$ int $>$$>$
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_a6295cabae20a58ee02454f59d9c09986}{Transmitter\-Container} = std\-::unordered\-\_\-map$<$ Optional\-Mode, std\-::unordered\-\_\-map$<$ uint64\-\_\-t, Role\-Attributes $>$, std\-::hash$<$ int $>$$>$
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_aec763c6c2f52e839f873b00193627626}{Communication\-Mode\-Ptr} = std\-::shared\-\_\-ptr$<$ proto\-::\-Communication\-Mode $>$
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_abefb4dc42db917f5891670997814231c}{Mapping\-Table} = std\-::unordered\-\_\-map$<$ \hyperlink{namespaceapollo_1_1cyber_a688ac951fd0a3965da4acdc34c92e50f}{Relation}, Optional\-Mode, std\-::hash$<$ int $>$$>$
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_a626fda476274421711a50146d6218a69}{Hybrid\-Receiver} (const Role\-Attributes \&attr, const typename \hyperlink{classapollo_1_1cyber_1_1transport_1_1Receiver}{Receiver}$<$ M $>$\-::\hyperlink{classapollo_1_1cyber_1_1transport_1_1Receiver_abd906fd03582b49acbdc81b48a8974aa}{Message\-Listener} \&msg\-\_\-listener, const \hyperlink{namespaceapollo_1_1cyber_1_1transport_a4214d0780331276d0384d0b57e3bc688}{Participant\-Ptr} \&participant)
+\item 
+virtual \hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_ade26db508c0a771c4bf26ef3077d3fd9}{$\sim$\-Hybrid\-Receiver} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_a38add467c1fe59a584dac3a31b141c7c}{Enable} () override
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_a90ed14fc589847bd9d5c7b8e1f3e4fd6}{Disable} () override
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_aa4ec9837875d4f508be7f9098a69e5cb}{Enable} (const Role\-Attributes \&opposite\-\_\-attr) override
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_ae4c99434d96215e60580dd14622c4482}{Disable} (const Role\-Attributes \&opposite\-\_\-attr) override
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_a1eb6243268daf94d62199f2b5d20a4b4}{Init\-Mode} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_a8dad1a54fe3805615e08aeba16392ef6}{Obtain\-Config} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_ac144d497bd484cb2e9882776eb7e0076}{Init\-History} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_a4e2c7f8785a008d9264582b16d19c61e}{Init\-Receivers} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_a8952919c3a6b3b0bf7b7b8b0f0d79f5a}{Clear\-Receivers} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_acadee13b8b6a22395f46b21fe7549614}{Init\-Transmitters} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_a16139e677ea56e82a51c78bd72587ae8}{Clear\-Transmitters} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_a67017f9439548f98a30c6dcc1f7431f9}{Receive\-History\-Msg} (const Role\-Attributes \&opposite\-\_\-attr)
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_a300e68502aada5c5d92fe47d50b4c153}{Thread\-Func} (const Role\-Attributes \&opposite\-\_\-attr)
+\item 
+\hyperlink{namespaceapollo_1_1cyber_a688ac951fd0a3965da4acdc34c92e50f}{Relation} \hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_ac899b765428d18b737c5bc40b5fdde7d}{Get\-Relation} (const Role\-Attributes \&opposite\-\_\-attr)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_a29d008855b7b25d060137a19da928c53}{History\-Ptr} \hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_a71fe92773a83ee153382b6b7f9e8c8a7}{history\-\_\-}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_a70475c40e8f9c33ebd8126df3ab71e18}{Receiver\-Container} \hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_a1f74e7e19cf92397729389922da60d57}{receivers\-\_\-}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_a6295cabae20a58ee02454f59d9c09986}{Transmitter\-Container} \hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_a0763ec6d7247a952123cdc5a0c2fa7f2}{transmitters\-\_\-}
+\item 
+std\-::mutex \hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_acd72be19a7680b7c7e87593e7803f016}{mutex\-\_\-}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_aec763c6c2f52e839f873b00193627626}{Communication\-Mode\-Ptr} \hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_a2b1451e2a1668ed26172ebaf33520e58}{mode\-\_\-}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_abefb4dc42db917f5891670997814231c}{Mapping\-Table} \hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_aee5d1880835e3edba742fbcf89478e2d}{mapping\-\_\-table\-\_\-}
+\item 
+\hyperlink{namespaceapollo_1_1cyber_1_1transport_a4214d0780331276d0384d0b57e3bc688}{Participant\-Ptr} \hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_ae166879e80acc07e56f178f50eac3fd4}{participant\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_aec763c6c2f52e839f873b00193627626}{\index{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver@{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}!Communication\-Mode\-Ptr@{Communication\-Mode\-Ptr}}
+\index{Communication\-Mode\-Ptr@{Communication\-Mode\-Ptr}!apollo::cyber::transport::HybridReceiver@{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}}
+\subsubsection[{Communication\-Mode\-Ptr}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ using {\bf apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}$<$ M $>$\-::{\bf Communication\-Mode\-Ptr} =  std\-::shared\-\_\-ptr$<$proto\-::\-Communication\-Mode$>$}}\label{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_aec763c6c2f52e839f873b00193627626}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_a29d008855b7b25d060137a19da928c53}{\index{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver@{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}!History\-Ptr@{History\-Ptr}}
+\index{History\-Ptr@{History\-Ptr}!apollo::cyber::transport::HybridReceiver@{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}}
+\subsubsection[{History\-Ptr}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ using {\bf apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}$<$ M $>$\-::{\bf History\-Ptr} =  std\-::shared\-\_\-ptr$<${\bf History}$<$M$>$$>$}}\label{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_a29d008855b7b25d060137a19da928c53}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_abefb4dc42db917f5891670997814231c}{\index{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver@{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}!Mapping\-Table@{Mapping\-Table}}
+\index{Mapping\-Table@{Mapping\-Table}!apollo::cyber::transport::HybridReceiver@{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}}
+\subsubsection[{Mapping\-Table}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ using {\bf apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}$<$ M $>$\-::{\bf Mapping\-Table} =  std\-::unordered\-\_\-map$<${\bf Relation}, Optional\-Mode, std\-::hash$<$int$>$$>$}}\label{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_abefb4dc42db917f5891670997814231c}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_a70475c40e8f9c33ebd8126df3ab71e18}{\index{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver@{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}!Receiver\-Container@{Receiver\-Container}}
+\index{Receiver\-Container@{Receiver\-Container}!apollo::cyber::transport::HybridReceiver@{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}}
+\subsubsection[{Receiver\-Container}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ using {\bf apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}$<$ M $>$\-::{\bf Receiver\-Container} =  std\-::unordered\-\_\-map$<$Optional\-Mode, {\bf Receiver\-Ptr}, std\-::hash$<$int$>$$>$}}\label{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_a70475c40e8f9c33ebd8126df3ab71e18}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_aa59a9c5e8a30dd56cd84e1a463d05e7c}{\index{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver@{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}!Receiver\-Ptr@{Receiver\-Ptr}}
+\index{Receiver\-Ptr@{Receiver\-Ptr}!apollo::cyber::transport::HybridReceiver@{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}}
+\subsubsection[{Receiver\-Ptr}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ using {\bf apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}$<$ M $>$\-::{\bf Receiver\-Ptr} =  std\-::shared\-\_\-ptr$<${\bf Receiver}$<$M$>$$>$}}\label{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_aa59a9c5e8a30dd56cd84e1a463d05e7c}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_a6295cabae20a58ee02454f59d9c09986}{\index{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver@{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}!Transmitter\-Container@{Transmitter\-Container}}
+\index{Transmitter\-Container@{Transmitter\-Container}!apollo::cyber::transport::HybridReceiver@{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}}
+\subsubsection[{Transmitter\-Container}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ using {\bf apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}$<$ M $>$\-::{\bf Transmitter\-Container} =  std\-::unordered\-\_\-map$<$Optional\-Mode, std\-::unordered\-\_\-map$<$uint64\-\_\-t, Role\-Attributes$>$, std\-::hash$<$int$>$$>$}}\label{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_a6295cabae20a58ee02454f59d9c09986}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_a626fda476274421711a50146d6218a69}{\index{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver@{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}!Hybrid\-Receiver@{Hybrid\-Receiver}}
+\index{Hybrid\-Receiver@{Hybrid\-Receiver}!apollo::cyber::transport::HybridReceiver@{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}}
+\subsubsection[{Hybrid\-Receiver}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ {\bf apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}$<$ M $>$\-::{\bf Hybrid\-Receiver} (
+\begin{DoxyParamCaption}
+\item[{const Role\-Attributes \&}]{attr, }
+\item[{const typename {\bf Receiver}$<$ M $>$\-::{\bf Message\-Listener} \&}]{msg\-\_\-listener, }
+\item[{const {\bf Participant\-Ptr} \&}]{participant}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_a626fda476274421711a50146d6218a69}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_ade26db508c0a771c4bf26ef3077d3fd9}{\index{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver@{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}!$\sim$\-Hybrid\-Receiver@{$\sim$\-Hybrid\-Receiver}}
+\index{$\sim$\-Hybrid\-Receiver@{$\sim$\-Hybrid\-Receiver}!apollo::cyber::transport::HybridReceiver@{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}}
+\subsubsection[{$\sim$\-Hybrid\-Receiver}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ {\bf apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}$<$ M $>$\-::$\sim${\bf Hybrid\-Receiver} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_ade26db508c0a771c4bf26ef3077d3fd9}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_a8952919c3a6b3b0bf7b7b8b0f0d79f5a}{\index{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver@{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}!Clear\-Receivers@{Clear\-Receivers}}
+\index{Clear\-Receivers@{Clear\-Receivers}!apollo::cyber::transport::HybridReceiver@{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}}
+\subsubsection[{Clear\-Receivers}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ void {\bf apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}$<$ M $>$\-::Clear\-Receivers (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_a8952919c3a6b3b0bf7b7b8b0f0d79f5a}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_a16139e677ea56e82a51c78bd72587ae8}{\index{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver@{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}!Clear\-Transmitters@{Clear\-Transmitters}}
+\index{Clear\-Transmitters@{Clear\-Transmitters}!apollo::cyber::transport::HybridReceiver@{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}}
+\subsubsection[{Clear\-Transmitters}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ void {\bf apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}$<$ M $>$\-::Clear\-Transmitters (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_a16139e677ea56e82a51c78bd72587ae8}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_a90ed14fc589847bd9d5c7b8e1f3e4fd6}{\index{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver@{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}!Disable@{Disable}}
+\index{Disable@{Disable}!apollo::cyber::transport::HybridReceiver@{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}}
+\subsubsection[{Disable}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ void {\bf apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}$<$ M $>$\-::Disable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_a90ed14fc589847bd9d5c7b8e1f3e4fd6}
+
+
+Implements \hyperlink{classapollo_1_1cyber_1_1transport_1_1Receiver_af9f317df425a33bc364662a59be28bf5}{apollo\-::cyber\-::transport\-::\-Receiver$<$ M $>$}.
+
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_ae4c99434d96215e60580dd14622c4482}{\index{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver@{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}!Disable@{Disable}}
+\index{Disable@{Disable}!apollo::cyber::transport::HybridReceiver@{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}}
+\subsubsection[{Disable}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ void {\bf apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}$<$ M $>$\-::Disable (
+\begin{DoxyParamCaption}
+\item[{const Role\-Attributes \&}]{opposite\-\_\-attr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_ae4c99434d96215e60580dd14622c4482}
+
+
+Implements \hyperlink{classapollo_1_1cyber_1_1transport_1_1Receiver_a26a4b466924d472f830f856b675bb44a}{apollo\-::cyber\-::transport\-::\-Receiver$<$ M $>$}.
+
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_a38add467c1fe59a584dac3a31b141c7c}{\index{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver@{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}!Enable@{Enable}}
+\index{Enable@{Enable}!apollo::cyber::transport::HybridReceiver@{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}}
+\subsubsection[{Enable}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ void {\bf apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}$<$ M $>$\-::Enable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_a38add467c1fe59a584dac3a31b141c7c}
+
+
+Implements \hyperlink{classapollo_1_1cyber_1_1transport_1_1Receiver_a77c93406c2ab9254562d595bfaecabbc}{apollo\-::cyber\-::transport\-::\-Receiver$<$ M $>$}.
+
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_aa4ec9837875d4f508be7f9098a69e5cb}{\index{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver@{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}!Enable@{Enable}}
+\index{Enable@{Enable}!apollo::cyber::transport::HybridReceiver@{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}}
+\subsubsection[{Enable}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ void {\bf apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}$<$ M $>$\-::Enable (
+\begin{DoxyParamCaption}
+\item[{const Role\-Attributes \&}]{opposite\-\_\-attr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_aa4ec9837875d4f508be7f9098a69e5cb}
+
+
+Implements \hyperlink{classapollo_1_1cyber_1_1transport_1_1Receiver_a2436ecca6981d910911d359cd1df4610}{apollo\-::cyber\-::transport\-::\-Receiver$<$ M $>$}.
+
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_ac899b765428d18b737c5bc40b5fdde7d}{\index{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver@{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}!Get\-Relation@{Get\-Relation}}
+\index{Get\-Relation@{Get\-Relation}!apollo::cyber::transport::HybridReceiver@{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}}
+\subsubsection[{Get\-Relation}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ {\bf Relation} {\bf apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}$<$ M $>$\-::Get\-Relation (
+\begin{DoxyParamCaption}
+\item[{const Role\-Attributes \&}]{opposite\-\_\-attr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_ac899b765428d18b737c5bc40b5fdde7d}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_ac144d497bd484cb2e9882776eb7e0076}{\index{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver@{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}!Init\-History@{Init\-History}}
+\index{Init\-History@{Init\-History}!apollo::cyber::transport::HybridReceiver@{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}}
+\subsubsection[{Init\-History}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ void {\bf apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}$<$ M $>$\-::Init\-History (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_ac144d497bd484cb2e9882776eb7e0076}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_a1eb6243268daf94d62199f2b5d20a4b4}{\index{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver@{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}!Init\-Mode@{Init\-Mode}}
+\index{Init\-Mode@{Init\-Mode}!apollo::cyber::transport::HybridReceiver@{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}}
+\subsubsection[{Init\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ void {\bf apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}$<$ M $>$\-::Init\-Mode (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_a1eb6243268daf94d62199f2b5d20a4b4}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_a4e2c7f8785a008d9264582b16d19c61e}{\index{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver@{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}!Init\-Receivers@{Init\-Receivers}}
+\index{Init\-Receivers@{Init\-Receivers}!apollo::cyber::transport::HybridReceiver@{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}}
+\subsubsection[{Init\-Receivers}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ void {\bf apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}$<$ M $>$\-::Init\-Receivers (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_a4e2c7f8785a008d9264582b16d19c61e}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_acadee13b8b6a22395f46b21fe7549614}{\index{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver@{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}!Init\-Transmitters@{Init\-Transmitters}}
+\index{Init\-Transmitters@{Init\-Transmitters}!apollo::cyber::transport::HybridReceiver@{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}}
+\subsubsection[{Init\-Transmitters}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ void {\bf apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}$<$ M $>$\-::Init\-Transmitters (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_acadee13b8b6a22395f46b21fe7549614}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_a8dad1a54fe3805615e08aeba16392ef6}{\index{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver@{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}!Obtain\-Config@{Obtain\-Config}}
+\index{Obtain\-Config@{Obtain\-Config}!apollo::cyber::transport::HybridReceiver@{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}}
+\subsubsection[{Obtain\-Config}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ void {\bf apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}$<$ M $>$\-::Obtain\-Config (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_a8dad1a54fe3805615e08aeba16392ef6}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_a67017f9439548f98a30c6dcc1f7431f9}{\index{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver@{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}!Receive\-History\-Msg@{Receive\-History\-Msg}}
+\index{Receive\-History\-Msg@{Receive\-History\-Msg}!apollo::cyber::transport::HybridReceiver@{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}}
+\subsubsection[{Receive\-History\-Msg}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ void {\bf apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}$<$ M $>$\-::Receive\-History\-Msg (
+\begin{DoxyParamCaption}
+\item[{const Role\-Attributes \&}]{opposite\-\_\-attr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_a67017f9439548f98a30c6dcc1f7431f9}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_a300e68502aada5c5d92fe47d50b4c153}{\index{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver@{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}!Thread\-Func@{Thread\-Func}}
+\index{Thread\-Func@{Thread\-Func}!apollo::cyber::transport::HybridReceiver@{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}}
+\subsubsection[{Thread\-Func}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ void {\bf apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}$<$ M $>$\-::Thread\-Func (
+\begin{DoxyParamCaption}
+\item[{const Role\-Attributes \&}]{opposite\-\_\-attr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_a300e68502aada5c5d92fe47d50b4c153}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_a71fe92773a83ee153382b6b7f9e8c8a7}{\index{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver@{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}!history\-\_\-@{history\-\_\-}}
+\index{history\-\_\-@{history\-\_\-}!apollo::cyber::transport::HybridReceiver@{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}}
+\subsubsection[{history\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ {\bf History\-Ptr} {\bf apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}$<$ M $>$\-::history\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_a71fe92773a83ee153382b6b7f9e8c8a7}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_aee5d1880835e3edba742fbcf89478e2d}{\index{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver@{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}!mapping\-\_\-table\-\_\-@{mapping\-\_\-table\-\_\-}}
+\index{mapping\-\_\-table\-\_\-@{mapping\-\_\-table\-\_\-}!apollo::cyber::transport::HybridReceiver@{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}}
+\subsubsection[{mapping\-\_\-table\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ {\bf Mapping\-Table} {\bf apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}$<$ M $>$\-::mapping\-\_\-table\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_aee5d1880835e3edba742fbcf89478e2d}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_a2b1451e2a1668ed26172ebaf33520e58}{\index{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver@{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}!mode\-\_\-@{mode\-\_\-}}
+\index{mode\-\_\-@{mode\-\_\-}!apollo::cyber::transport::HybridReceiver@{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}}
+\subsubsection[{mode\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ {\bf Communication\-Mode\-Ptr} {\bf apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}$<$ M $>$\-::mode\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_a2b1451e2a1668ed26172ebaf33520e58}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_acd72be19a7680b7c7e87593e7803f016}{\index{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver@{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}!mutex\-\_\-@{mutex\-\_\-}}
+\index{mutex\-\_\-@{mutex\-\_\-}!apollo::cyber::transport::HybridReceiver@{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}}
+\subsubsection[{mutex\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ std\-::mutex {\bf apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}$<$ M $>$\-::mutex\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_acd72be19a7680b7c7e87593e7803f016}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_ae166879e80acc07e56f178f50eac3fd4}{\index{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver@{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}!participant\-\_\-@{participant\-\_\-}}
+\index{participant\-\_\-@{participant\-\_\-}!apollo::cyber::transport::HybridReceiver@{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}}
+\subsubsection[{participant\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ {\bf Participant\-Ptr} {\bf apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}$<$ M $>$\-::participant\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_ae166879e80acc07e56f178f50eac3fd4}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_a1f74e7e19cf92397729389922da60d57}{\index{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver@{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}!receivers\-\_\-@{receivers\-\_\-}}
+\index{receivers\-\_\-@{receivers\-\_\-}!apollo::cyber::transport::HybridReceiver@{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}}
+\subsubsection[{receivers\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ {\bf Receiver\-Container} {\bf apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}$<$ M $>$\-::receivers\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_a1f74e7e19cf92397729389922da60d57}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_a0763ec6d7247a952123cdc5a0c2fa7f2}{\index{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver@{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}!transmitters\-\_\-@{transmitters\-\_\-}}
+\index{transmitters\-\_\-@{transmitters\-\_\-}!apollo::cyber::transport::HybridReceiver@{apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}}
+\subsubsection[{transmitters\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ {\bf Transmitter\-Container} {\bf apollo\-::cyber\-::transport\-::\-Hybrid\-Receiver}$<$ M $>$\-::transmitters\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1HybridReceiver_a0763ec6d7247a952123cdc5a0c2fa7f2}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+transport/receiver/\hyperlink{hybrid__receiver_8h}{hybrid\-\_\-receiver.\-h}\end{DoxyCompactItemize}

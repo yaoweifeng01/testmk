@@ -1,0 +1,213 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="processor__context_8h" kind="file">
+    <compoundname>processor_context.h</compoundname>
+    <includes local="no">limits</includes>
+    <includes local="no">memory</includes>
+    <includes local="no">mutex</includes>
+    <includes refid="base_2macros_8h" local="yes">cyber/base/macros.h</includes>
+    <includes refid="croutine_8h" local="yes">cyber/croutine/croutine.h</includes>
+    <includedby refid="choreography__context_8h" local="yes">scheduler/policy/choreography_context.h</includedby>
+    <includedby refid="classic__context_8h" local="yes">scheduler/policy/classic_context.h</includedby>
+    <incdepgraph>
+      <node id="8608">
+        <label>atomic</label>
+      </node>
+      <node id="8614">
+        <label>stdarg.h</label>
+      </node>
+      <node id="8610">
+        <label>functional</label>
+      </node>
+      <node id="8601">
+        <label>limits</label>
+      </node>
+      <node id="8615">
+        <label>cyber/binary.h</label>
+        <link refid="binary_8h"/>
+        <childnode refid="8612" relation="include">
+        </childnode>
+      </node>
+      <node id="8616">
+        <label>glog/logging.h</label>
+      </node>
+      <node id="8600">
+        <label>scheduler/processor_context.h</label>
+        <link refid="processor_context.h"/>
+        <childnode refid="8601" relation="include">
+        </childnode>
+        <childnode refid="8602" relation="include">
+        </childnode>
+        <childnode refid="8603" relation="include">
+        </childnode>
+        <childnode refid="8604" relation="include">
+        </childnode>
+        <childnode refid="8607" relation="include">
+        </childnode>
+      </node>
+      <node id="8612">
+        <label>string</label>
+      </node>
+      <node id="8618">
+        <label>cyber/croutine/detail/routine_context.h</label>
+        <link refid="routine__context_8h"/>
+        <childnode refid="8605" relation="include">
+        </childnode>
+        <childnode refid="8619" relation="include">
+        </childnode>
+        <childnode refid="8620" relation="include">
+        </childnode>
+        <childnode refid="8613" relation="include">
+        </childnode>
+      </node>
+      <node id="8606">
+        <label>new</label>
+      </node>
+      <node id="8613">
+        <label>cyber/common/log.h</label>
+        <link refid="log_8h"/>
+        <childnode refid="8614" relation="include">
+        </childnode>
+        <childnode refid="8615" relation="include">
+        </childnode>
+        <childnode refid="8616" relation="include">
+        </childnode>
+        <childnode refid="8617" relation="include">
+        </childnode>
+      </node>
+      <node id="8605">
+        <label>cstdlib</label>
+      </node>
+      <node id="8620">
+        <label>iostream</label>
+      </node>
+      <node id="8603">
+        <label>mutex</label>
+      </node>
+      <node id="8609">
+        <label>chrono</label>
+      </node>
+      <node id="8617">
+        <label>glog/raw_logging.h</label>
+      </node>
+      <node id="8611">
+        <label>set</label>
+      </node>
+      <node id="8619">
+        <label>cstring</label>
+      </node>
+      <node id="8604">
+        <label>cyber/base/macros.h</label>
+        <link refid="base_2macros_8h"/>
+        <childnode refid="8605" relation="include">
+        </childnode>
+        <childnode refid="8606" relation="include">
+        </childnode>
+      </node>
+      <node id="8602">
+        <label>memory</label>
+      </node>
+      <node id="8607">
+        <label>cyber/croutine/croutine.h</label>
+        <link refid="croutine_8h"/>
+        <childnode refid="8608" relation="include">
+        </childnode>
+        <childnode refid="8609" relation="include">
+        </childnode>
+        <childnode refid="8610" relation="include">
+        </childnode>
+        <childnode refid="8602" relation="include">
+        </childnode>
+        <childnode refid="8603" relation="include">
+        </childnode>
+        <childnode refid="8611" relation="include">
+        </childnode>
+        <childnode refid="8612" relation="include">
+        </childnode>
+        <childnode refid="8613" relation="include">
+        </childnode>
+        <childnode refid="8618" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="8623">
+        <label>scheduler/policy/classic_context.h</label>
+        <link refid="classic__context_8h"/>
+      </node>
+      <node id="8622">
+        <label>scheduler/policy/choreography_context.h</label>
+        <link refid="choreography__context_8h"/>
+      </node>
+      <node id="8621">
+        <label>scheduler/processor_context.h</label>
+        <link refid="processor_context.h"/>
+        <childnode refid="8622" relation="include">
+        </childnode>
+        <childnode refid="8623" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classapollo_1_1cyber_1_1scheduler_1_1ProcessorContext" prot="public">apollo::cyber::scheduler::ProcessorContext</innerclass>
+    <innernamespace refid="namespaceapollo">apollo</innernamespace>
+    <innernamespace refid="namespaceapollo_1_1cyber">apollo::cyber</innernamespace>
+    <innernamespace refid="namespaceapollo_1_1cyber_1_1scheduler">apollo::cyber::scheduler</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2018<sp/>The<sp/>Apollo<sp/>Authors.<sp/>All<sp/>Rights<sp/>Reserved.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CYBER_SCHEDULER_POLICY_PROCESSOR_CONTEXT_H_</highlight></codeline>
+<codeline lineno="18"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CYBER_SCHEDULER_POLICY_PROCESSOR_CONTEXT_H_</highlight></codeline>
+<codeline lineno="19"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;limits&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;mutex&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="base_2macros_8h" kindref="compound">cyber/base/macros.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="croutine_8h" kindref="compound">cyber/croutine/croutine.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">apollo<sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">cyber<sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">scheduler<sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>croutine::CRoutine;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Processor;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="classapollo_1_1cyber_1_1scheduler_1_1ProcessorContext" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classapollo_1_1cyber_1_1scheduler_1_1ProcessorContext" kindref="compound">ProcessorContext</ref><sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1scheduler_1_1ProcessorContext_1ab36b8e9524ea0e02cba88b7d4e0e3079" kindref="member">Shutdown</ref>();</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;CRoutine&gt;<sp/><ref refid="classapollo_1_1cyber_1_1scheduler_1_1ProcessorContext_1a0923b50903b11612234355566ab573e0" kindref="member">NextRoutine</ref>()<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1scheduler_1_1ProcessorContext_1a0a2e1914277be7a5fe81f459c83b6644" kindref="member">Wait</ref>()<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="42" refid="classapollo_1_1cyber_1_1scheduler_1_1ProcessorContext_1a19eebaac060d52fb252077f59762a97e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1scheduler_1_1ProcessorContext_1a19eebaac060d52fb252077f59762a97e" kindref="member">stop_</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="43" refid="classapollo_1_1cyber_1_1scheduler_1_1ProcessorContext_1ad4e0ac53246d1d65b4d14a1f438715e3" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">alignas</highlight><highlight class="normal">(<ref refid="base_2macros_8h_1ae05da5eff6babaf91257a4accdf8e0b6" kindref="member">CACHELINE_SIZE</ref>)<sp/>std::atomic_flag<sp/><ref refid="classapollo_1_1cyber_1_1scheduler_1_1ProcessorContext_1ad4e0ac53246d1d65b4d14a1f438715e3" kindref="member">notified_</ref><sp/>=<sp/>ATOMIC_FLAG_INIT;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>scheduler</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>cyber</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>apollo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>CYBER_SCHEDULER_PROCESSOR_CONTEXT_H_</highlight></codeline>
+    </programlisting>
+    <location file="/home/work/apollo-fork/apollo/cyber/scheduler/processor_context.h"/>
+  </compounddef>
+</doxygen>

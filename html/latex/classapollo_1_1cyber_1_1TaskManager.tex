@@ -1,0 +1,94 @@
+\hypertarget{classapollo_1_1cyber_1_1TaskManager}{\section{apollo\-:\-:cyber\-:\-:Task\-Manager Class Reference}
+\label{classapollo_1_1cyber_1_1TaskManager}\index{apollo\-::cyber\-::\-Task\-Manager@{apollo\-::cyber\-::\-Task\-Manager}}
+}
+
+
+{\ttfamily \#include $<$task\-\_\-manager.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classapollo_1_1cyber_1_1TaskManager_aa55e5019fbec9c1e520f54f1ded6443d}{$\sim$\-Task\-Manager} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1TaskManager_a3892ccca0dfba0f188fda070fa18a07f}{Shutdown} ()
+\item 
+{\footnotesize template$<$typename F , typename... Args$>$ }\\auto \hyperlink{classapollo_1_1cyber_1_1TaskManager_a894d368b98a01e544ccaa3c15f315496}{Enqueue} (F \&\&func, Args \&\&...args) -\/$>$ std\-::future$<$ typename std\-::result\-\_\-of$<$ F(Args...)$>$\-::type $>$
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1TaskManager_adf05b6a7d15514a9b44deb3868f15b4e}{D\-E\-C\-L\-A\-R\-E\-\_\-\-S\-I\-N\-G\-L\-E\-T\-O\-N} (\hyperlink{classapollo_1_1cyber_1_1TaskManager}{Task\-Manager})
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32\-\_\-t \hyperlink{classapollo_1_1cyber_1_1TaskManager_a7b3621cc356abfb846a781b9834b6fa6}{num\-\_\-threads\-\_\-} = 0
+\item 
+uint32\-\_\-t \hyperlink{classapollo_1_1cyber_1_1TaskManager_a7a3ac7bab5bd60004dc4ad9bed645d8c}{task\-\_\-queue\-\_\-size\-\_\-} = 1000
+\item 
+std\-::atomic$<$ bool $>$ \hyperlink{classapollo_1_1cyber_1_1TaskManager_a8893ed8020b9deec8dd6ac1ea4dd5409}{stop\-\_\-} = \{false\}
+\item 
+std\-::vector$<$ uint64\-\_\-t $>$ \hyperlink{classapollo_1_1cyber_1_1TaskManager_a8057f1e4981b8dc2a0af8c615f4d24c6}{tasks\-\_\-}
+\item 
+std\-::shared\-\_\-ptr\\*
+$<$ \hyperlink{classapollo_1_1cyber_1_1base_1_1BoundedQueue}{base\-::\-Bounded\-Queue}\\*
+$<$ std\-::function$<$ void()$>$ $>$ $>$ \hyperlink{classapollo_1_1cyber_1_1TaskManager_a9359f41900a726d1270bbf628ec2923b}{task\-\_\-queue\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classapollo_1_1cyber_1_1TaskManager_aa55e5019fbec9c1e520f54f1ded6443d}{\index{apollo\-::cyber\-::\-Task\-Manager@{apollo\-::cyber\-::\-Task\-Manager}!$\sim$\-Task\-Manager@{$\sim$\-Task\-Manager}}
+\index{$\sim$\-Task\-Manager@{$\sim$\-Task\-Manager}!apollo::cyber::TaskManager@{apollo\-::cyber\-::\-Task\-Manager}}
+\subsubsection[{$\sim$\-Task\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}virtual apollo\-::cyber\-::\-Task\-Manager\-::$\sim$\-Task\-Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1TaskManager_aa55e5019fbec9c1e520f54f1ded6443d}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1TaskManager_adf05b6a7d15514a9b44deb3868f15b4e}{\index{apollo\-::cyber\-::\-Task\-Manager@{apollo\-::cyber\-::\-Task\-Manager}!D\-E\-C\-L\-A\-R\-E\-\_\-\-S\-I\-N\-G\-L\-E\-T\-O\-N@{D\-E\-C\-L\-A\-R\-E\-\_\-\-S\-I\-N\-G\-L\-E\-T\-O\-N}}
+\index{D\-E\-C\-L\-A\-R\-E\-\_\-\-S\-I\-N\-G\-L\-E\-T\-O\-N@{D\-E\-C\-L\-A\-R\-E\-\_\-\-S\-I\-N\-G\-L\-E\-T\-O\-N}!apollo::cyber::TaskManager@{apollo\-::cyber\-::\-Task\-Manager}}
+\subsubsection[{D\-E\-C\-L\-A\-R\-E\-\_\-\-S\-I\-N\-G\-L\-E\-T\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::\-Task\-Manager\-::\-D\-E\-C\-L\-A\-R\-E\-\_\-\-S\-I\-N\-G\-L\-E\-T\-O\-N (
+\begin{DoxyParamCaption}
+\item[{{\bf Task\-Manager}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1TaskManager_adf05b6a7d15514a9b44deb3868f15b4e}
+\hypertarget{classapollo_1_1cyber_1_1TaskManager_a894d368b98a01e544ccaa3c15f315496}{\index{apollo\-::cyber\-::\-Task\-Manager@{apollo\-::cyber\-::\-Task\-Manager}!Enqueue@{Enqueue}}
+\index{Enqueue@{Enqueue}!apollo::cyber::TaskManager@{apollo\-::cyber\-::\-Task\-Manager}}
+\subsubsection[{Enqueue}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename F , typename... Args$>$ auto apollo\-::cyber\-::\-Task\-Manager\-::\-Enqueue (
+\begin{DoxyParamCaption}
+\item[{F \&\&}]{func, }
+\item[{Args \&\&...}]{args}
+\end{DoxyParamCaption}
+) -\/$>$ std\-::future$<$typename std\-::result\-\_\-of$<$F(Args...)$>$\-::type$>$ \hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1TaskManager_a894d368b98a01e544ccaa3c15f315496}
+\hypertarget{classapollo_1_1cyber_1_1TaskManager_a3892ccca0dfba0f188fda070fa18a07f}{\index{apollo\-::cyber\-::\-Task\-Manager@{apollo\-::cyber\-::\-Task\-Manager}!Shutdown@{Shutdown}}
+\index{Shutdown@{Shutdown}!apollo::cyber::TaskManager@{apollo\-::cyber\-::\-Task\-Manager}}
+\subsubsection[{Shutdown}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::\-Task\-Manager\-::\-Shutdown (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1TaskManager_a3892ccca0dfba0f188fda070fa18a07f}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classapollo_1_1cyber_1_1TaskManager_a7b3621cc356abfb846a781b9834b6fa6}{\index{apollo\-::cyber\-::\-Task\-Manager@{apollo\-::cyber\-::\-Task\-Manager}!num\-\_\-threads\-\_\-@{num\-\_\-threads\-\_\-}}
+\index{num\-\_\-threads\-\_\-@{num\-\_\-threads\-\_\-}!apollo::cyber::TaskManager@{apollo\-::cyber\-::\-Task\-Manager}}
+\subsubsection[{num\-\_\-threads\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t apollo\-::cyber\-::\-Task\-Manager\-::num\-\_\-threads\-\_\- = 0\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1TaskManager_a7b3621cc356abfb846a781b9834b6fa6}
+\hypertarget{classapollo_1_1cyber_1_1TaskManager_a8893ed8020b9deec8dd6ac1ea4dd5409}{\index{apollo\-::cyber\-::\-Task\-Manager@{apollo\-::cyber\-::\-Task\-Manager}!stop\-\_\-@{stop\-\_\-}}
+\index{stop\-\_\-@{stop\-\_\-}!apollo::cyber::TaskManager@{apollo\-::cyber\-::\-Task\-Manager}}
+\subsubsection[{stop\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::atomic$<$bool$>$ apollo\-::cyber\-::\-Task\-Manager\-::stop\-\_\- = \{false\}\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1TaskManager_a8893ed8020b9deec8dd6ac1ea4dd5409}
+\hypertarget{classapollo_1_1cyber_1_1TaskManager_a9359f41900a726d1270bbf628ec2923b}{\index{apollo\-::cyber\-::\-Task\-Manager@{apollo\-::cyber\-::\-Task\-Manager}!task\-\_\-queue\-\_\-@{task\-\_\-queue\-\_\-}}
+\index{task\-\_\-queue\-\_\-@{task\-\_\-queue\-\_\-}!apollo::cyber::TaskManager@{apollo\-::cyber\-::\-Task\-Manager}}
+\subsubsection[{task\-\_\-queue\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::shared\-\_\-ptr$<${\bf base\-::\-Bounded\-Queue}$<$std\-::function$<$void()$>$ $>$ $>$ apollo\-::cyber\-::\-Task\-Manager\-::task\-\_\-queue\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1TaskManager_a9359f41900a726d1270bbf628ec2923b}
+\hypertarget{classapollo_1_1cyber_1_1TaskManager_a7a3ac7bab5bd60004dc4ad9bed645d8c}{\index{apollo\-::cyber\-::\-Task\-Manager@{apollo\-::cyber\-::\-Task\-Manager}!task\-\_\-queue\-\_\-size\-\_\-@{task\-\_\-queue\-\_\-size\-\_\-}}
+\index{task\-\_\-queue\-\_\-size\-\_\-@{task\-\_\-queue\-\_\-size\-\_\-}!apollo::cyber::TaskManager@{apollo\-::cyber\-::\-Task\-Manager}}
+\subsubsection[{task\-\_\-queue\-\_\-size\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t apollo\-::cyber\-::\-Task\-Manager\-::task\-\_\-queue\-\_\-size\-\_\- = 1000\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1TaskManager_a7a3ac7bab5bd60004dc4ad9bed645d8c}
+\hypertarget{classapollo_1_1cyber_1_1TaskManager_a8057f1e4981b8dc2a0af8c615f4d24c6}{\index{apollo\-::cyber\-::\-Task\-Manager@{apollo\-::cyber\-::\-Task\-Manager}!tasks\-\_\-@{tasks\-\_\-}}
+\index{tasks\-\_\-@{tasks\-\_\-}!apollo::cyber::TaskManager@{apollo\-::cyber\-::\-Task\-Manager}}
+\subsubsection[{tasks\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$uint64\-\_\-t$>$ apollo\-::cyber\-::\-Task\-Manager\-::tasks\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1TaskManager_a8057f1e4981b8dc2a0af8c615f4d24c6}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+task/\hyperlink{task__manager_8h}{task\-\_\-manager.\-h}\end{DoxyCompactItemize}

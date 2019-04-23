@@ -1,0 +1,494 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classapollo_1_1cyber_1_1scheduler_1_1Scheduler" kind="class" prot="public" abstract="yes">
+    <compoundname>apollo::cyber::scheduler::Scheduler</compoundname>
+    <derivedcompoundref refid="classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography" prot="public" virt="non-virtual">apollo::cyber::scheduler::SchedulerChoreography</derivedcompoundref>
+    <derivedcompoundref refid="classapollo_1_1cyber_1_1scheduler_1_1SchedulerClassic" prot="public" virt="non-virtual">apollo::cyber::scheduler::SchedulerClassic</derivedcompoundref>
+    <includes refid="scheduler_8h" local="no">scheduler.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1scheduler_1_1Scheduler_1a92cf81e4d1c10eabc52a89d177b83c98" prot="protected" static="no" mutable="no">
+        <type><ref refid="classapollo_1_1cyber_1_1base_1_1AtomicRWLock" kindref="compound">AtomicRWLock</ref></type>
+        <definition>AtomicRWLock apollo::cyber::scheduler::Scheduler::id_cr_lock_</definition>
+        <argsstring></argsstring>
+        <name>id_cr_lock_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/scheduler/scheduler.h" line="96" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/scheduler/scheduler.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1scheduler_1_1Scheduler_1a5640ba0f6e2f95cdcd4ff2266b69944d" prot="protected" static="no" mutable="no">
+        <type><ref refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap" kindref="compound">AtomicHashMap</ref>&lt; uint64_t, <ref refid="classapollo_1_1cyber_1_1scheduler_1_1MutexWrapper" kindref="compound">MutexWrapper</ref> * &gt;</type>
+        <definition>AtomicHashMap&lt;uint64_t, MutexWrapper*&gt; apollo::cyber::scheduler::Scheduler::id_map_mutex_</definition>
+        <argsstring></argsstring>
+        <name>id_map_mutex_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/scheduler/scheduler.h" line="97" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/scheduler/scheduler.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1scheduler_1_1Scheduler_1ae5f6685ce7d231ef139c58beceb440f2" prot="protected" static="no" mutable="no">
+        <type>std::mutex</type>
+        <definition>std::mutex apollo::cyber::scheduler::Scheduler::cr_wl_mtx_</definition>
+        <argsstring></argsstring>
+        <name>cr_wl_mtx_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/scheduler/scheduler.h" line="98" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/scheduler/scheduler.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1scheduler_1_1Scheduler_1a96af50b8cefc5466a1aed958bfb75fc0" prot="protected" static="no" mutable="no">
+        <type>std::unordered_map&lt; uint64_t, std::shared_ptr&lt; <ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine" kindref="compound">CRoutine</ref> &gt; &gt;</type>
+        <definition>std::unordered_map&lt;uint64_t, std::shared_ptr&lt;CRoutine&gt; &gt; apollo::cyber::scheduler::Scheduler::id_cr_</definition>
+        <argsstring></argsstring>
+        <name>id_cr_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/scheduler/scheduler.h" line="100" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/scheduler/scheduler.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1scheduler_1_1Scheduler_1aaf7682d75a76d419afc7560331fb6917" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; std::shared_ptr&lt; <ref refid="classapollo_1_1cyber_1_1scheduler_1_1ProcessorContext" kindref="compound">ProcessorContext</ref> &gt; &gt;</type>
+        <definition>std::vector&lt;std::shared_ptr&lt;ProcessorContext&gt; &gt; apollo::cyber::scheduler::Scheduler::pctxs_</definition>
+        <argsstring></argsstring>
+        <name>pctxs_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/scheduler/scheduler.h" line="101" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/scheduler/scheduler.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1scheduler_1_1Scheduler_1a515178875e0beaede46654d5a1e0b788" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; std::shared_ptr&lt; <ref refid="classapollo_1_1cyber_1_1scheduler_1_1Processor" kindref="compound">Processor</ref> &gt; &gt;</type>
+        <definition>std::vector&lt;std::shared_ptr&lt;Processor&gt; &gt; apollo::cyber::scheduler::Scheduler::processors_</definition>
+        <argsstring></argsstring>
+        <name>processors_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/scheduler/scheduler.h" line="102" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/scheduler/scheduler.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1scheduler_1_1Scheduler_1aaa79880080f0199a7024d16f69e0b067" prot="protected" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, InnerThread &gt;</type>
+        <definition>std::unordered_map&lt;std::string, InnerThread&gt; apollo::cyber::scheduler::Scheduler::inner_thr_confs_</definition>
+        <argsstring></argsstring>
+        <name>inner_thr_confs_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/scheduler/scheduler.h" line="104" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/scheduler/scheduler.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1scheduler_1_1Scheduler_1ab1abc585150bbf9e07bad49cf5db343c" prot="protected" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t apollo::cyber::scheduler::Scheduler::proc_num_</definition>
+        <argsstring></argsstring>
+        <name>proc_num_</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/scheduler/scheduler.h" line="106" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/scheduler/scheduler.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1scheduler_1_1Scheduler_1a6bc9dcb1108028aca458f1a328484e82" prot="protected" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t apollo::cyber::scheduler::Scheduler::task_pool_size_</definition>
+        <argsstring></argsstring>
+        <name>task_pool_size_</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/scheduler/scheduler.h" line="107" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/scheduler/scheduler.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1scheduler_1_1Scheduler_1adb3d43a886f633e6fcce407ac8e1d4e0" prot="protected" static="no" mutable="no">
+        <type>std::atomic&lt; bool &gt;</type>
+        <definition>std::atomic&lt;bool&gt; apollo::cyber::scheduler::Scheduler::stop_</definition>
+        <argsstring></argsstring>
+        <name>stop_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/scheduler/scheduler.h" line="108" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/scheduler/scheduler.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1scheduler_1_1Scheduler_1a019767c67f63ccafb798b2d3d5e18971" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual apollo::cyber::scheduler::Scheduler::~Scheduler</definition>
+        <argsstring>()</argsstring>
+        <name>~Scheduler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/scheduler/scheduler.h" line="66" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/scheduler/scheduler.h" bodystart="66" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1scheduler_1_1Scheduler_1ad744c26058750fc922c5d4003a7040d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::scheduler::Scheduler::CreateTask</definition>
+        <argsstring>(const RoutineFactory &amp;factory, const std::string &amp;name)</argsstring>
+        <name>CreateTask</name>
+        <param>
+          <type>const <ref refid="classapollo_1_1cyber_1_1croutine_1_1RoutineFactory" kindref="compound">RoutineFactory</ref> &amp;</type>
+          <declname>factory</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/scheduler/scheduler.h" line="73" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1scheduler_1_1Scheduler_1a5765c94bc9a038eb55172fc0ee95ac0c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::scheduler::Scheduler::CreateTask</definition>
+        <argsstring>(std::function&lt; void()&gt; &amp;&amp;func, const std::string &amp;name, std::shared_ptr&lt; DataVisitorBase &gt; visitor=nullptr)</argsstring>
+        <name>CreateTask</name>
+        <param>
+          <type>std::function&lt; void()&gt; &amp;&amp;</type>
+          <declname>func</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classapollo_1_1cyber_1_1data_1_1DataVisitorBase" kindref="compound">DataVisitorBase</ref> &gt;</type>
+          <declname>visitor</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/scheduler/scheduler.h" line="74" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1scheduler_1_1Scheduler_1a624a4d8b6e3fa9af97abf24f2b86e8c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::scheduler::Scheduler::NotifyTask</definition>
+        <argsstring>(uint64_t crid)</argsstring>
+        <name>NotifyTask</name>
+        <param>
+          <type>uint64_t</type>
+          <declname>crid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/scheduler/scheduler.h" line="76" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1scheduler_1_1Scheduler_1a6a33fdc12c1b99936dd0ab23767569ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::scheduler::Scheduler::Shutdown</definition>
+        <argsstring>()</argsstring>
+        <name>Shutdown</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/scheduler/scheduler.h" line="78" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1scheduler_1_1Scheduler_1acb9cf2b49454c6a9ca75437e07473015" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t apollo::cyber::scheduler::Scheduler::TaskPoolSize</definition>
+        <argsstring>()</argsstring>
+        <name>TaskPoolSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/scheduler/scheduler.h" line="79" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/scheduler/scheduler.h" bodystart="79" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1scheduler_1_1Scheduler_1ad605b692e0e776ab95a19fa2ea0229e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool apollo::cyber::scheduler::Scheduler::RemoveTask</definition>
+        <argsstring>(const std::string &amp;name)=0</argsstring>
+        <name>RemoveTask</name>
+        <reimplementedby refid="classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_1ad4d0fb12a12d3dfa7c3109a2762be1fc">RemoveTask</reimplementedby>
+        <reimplementedby refid="classapollo_1_1cyber_1_1scheduler_1_1SchedulerClassic_1a2988b835fccbbe8bc55b08cc1d90c5a6">RemoveTask</reimplementedby>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/scheduler/scheduler.h" line="81" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1scheduler_1_1Scheduler_1ab74d2a01e6376d39016ae519fafa6f7c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::scheduler::Scheduler::SetInnerThreadAttr</definition>
+        <argsstring>(const std::string &amp;name, std::thread *thr)</argsstring>
+        <name>SetInnerThreadAttr</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>std::thread *</type>
+          <declname>thr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/scheduler/scheduler.h" line="82" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1scheduler_1_1Scheduler_1a71ac4be0a8f632a931a92680eb935774" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool apollo::cyber::scheduler::Scheduler::DispatchTask</definition>
+        <argsstring>(const std::shared_ptr&lt; CRoutine &gt; &amp;)=0</argsstring>
+        <name>DispatchTask</name>
+        <reimplementedby refid="classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_1af09ad84ea6f33c905ec2134c7a0b7c71">DispatchTask</reimplementedby>
+        <reimplementedby refid="classapollo_1_1cyber_1_1scheduler_1_1SchedulerClassic_1a83d92042c58df50cbfe52d70dbd72e36">DispatchTask</reimplementedby>
+        <param>
+          <type>const std::shared_ptr&lt; <ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine" kindref="compound">CRoutine</ref> &gt; &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/scheduler/scheduler.h" line="84" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1scheduler_1_1Scheduler_1abfcfe864b071e5c7d1a5a80706c11671" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool apollo::cyber::scheduler::Scheduler::NotifyProcessor</definition>
+        <argsstring>(uint64_t crid)=0</argsstring>
+        <name>NotifyProcessor</name>
+        <reimplementedby refid="classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_1a64e5f647a0c7a7adbee7d4daa12f7add">NotifyProcessor</reimplementedby>
+        <reimplementedby refid="classapollo_1_1cyber_1_1scheduler_1_1SchedulerClassic_1aa6b90709d9b5cc4228a4cade6e22cada">NotifyProcessor</reimplementedby>
+        <param>
+          <type>uint64_t</type>
+          <declname>crid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/scheduler/scheduler.h" line="85" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1scheduler_1_1Scheduler_1aeebbc8587d53f187d46016100fb67dc5" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool apollo::cyber::scheduler::Scheduler::RemoveCRoutine</definition>
+        <argsstring>(uint64_t crid)=0</argsstring>
+        <name>RemoveCRoutine</name>
+        <reimplementedby refid="classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_1adeb5e2143b5437f3e86fb741b02a7736">RemoveCRoutine</reimplementedby>
+        <reimplementedby refid="classapollo_1_1cyber_1_1scheduler_1_1SchedulerClassic_1a36977cfac2337a44dc4eca5126f2e690">RemoveCRoutine</reimplementedby>
+        <param>
+          <type>uint64_t</type>
+          <declname>crid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/scheduler/scheduler.h" line="86" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1scheduler_1_1Scheduler_1ae41a1dfeb9a7e7f2662e0fb1063903f7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::scheduler::Scheduler::SetInnerThreadConfs</definition>
+        <argsstring>(std::unordered_map&lt; std::string, InnerThread &gt; confs)</argsstring>
+        <name>SetInnerThreadConfs</name>
+        <param>
+          <type>std::unordered_map&lt; std::string, InnerThread &gt;</type>
+          <declname>confs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/scheduler/scheduler.h" line="88" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/scheduler/scheduler.h" bodystart="88" bodyend="90"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1scheduler_1_1Scheduler_1aa5e015eae469366b925d479ba0fd57be" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classapollo_1_1cyber_1_1scheduler_1_1Scheduler" kindref="compound">Scheduler</ref> *</type>
+        <definition>static Scheduler* apollo::cyber::scheduler::Scheduler::Instance</definition>
+        <argsstring>()</argsstring>
+        <name>Instance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A constructor. A more elaborate description of the constructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/scheduler/scheduler.h" line="71" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1scheduler_1_1Scheduler_1a6a9e79224fcd60eb611edd8107751f42" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::scheduler::Scheduler::Scheduler</definition>
+        <argsstring>()</argsstring>
+        <name>Scheduler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/scheduler/scheduler.h" line="93" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/scheduler/scheduler.h" bodystart="93" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1scheduler_1_1Scheduler_1ab8a015f7e4bd9481f42f7a2518bf9025" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::scheduler::Scheduler::ParseCpuset</definition>
+        <argsstring>(const std::string &amp;, std::vector&lt; int &gt; *)</argsstring>
+        <name>ParseCpuset</name>
+        <param>
+          <type>const std::string &amp;</type>
+        </param>
+        <param>
+          <type>std::vector&lt; int &gt; *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/scheduler/scheduler.h" line="94" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>A test class. A more elaborate class description. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="777">
+        <label>apollo::cyber::scheduler::SchedulerClassic</label>
+        <link refid="classapollo_1_1cyber_1_1scheduler_1_1SchedulerClassic"/>
+        <childnode refid="775" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="775">
+        <label>apollo::cyber::scheduler::Scheduler</label>
+        <link refid="classapollo_1_1cyber_1_1scheduler_1_1Scheduler"/>
+      </node>
+      <node id="776">
+        <label>apollo::cyber::scheduler::SchedulerChoreography</label>
+        <link refid="classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography"/>
+        <childnode refid="775" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="780">
+        <label>apollo::cyber::base::AtomicHashMap&lt; uint64_t, apollo::cyber::scheduler::MutexWrapper * &gt;</label>
+        <link refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap"/>
+        <childnode refid="781" relation="usage">
+          <edgelabel>table_</edgelabel>
+        </childnode>
+      </node>
+      <node id="778">
+        <label>apollo::cyber::scheduler::Scheduler</label>
+        <link refid="classapollo_1_1cyber_1_1scheduler_1_1Scheduler"/>
+        <childnode refid="779" relation="usage">
+          <edgelabel>id_cr_lock_</edgelabel>
+        </childnode>
+        <childnode refid="780" relation="usage">
+          <edgelabel>id_map_mutex_</edgelabel>
+        </childnode>
+      </node>
+      <node id="782">
+        <label>apollo::cyber::base::AtomicHashMap&lt; K, V, TableSize, std::enable_if&lt; std::is_integral&lt; K &gt;::value &amp;&amp;(TableSize &amp;(TableSize-1))==0, int &gt;::type &gt;::Entry</label>
+        <link refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry"/>
+      </node>
+      <node id="779">
+        <label>apollo::cyber::base::AtomicRWLock</label>
+        <link refid="classapollo_1_1cyber_1_1base_1_1AtomicRWLock"/>
+      </node>
+      <node id="781">
+        <label>apollo::cyber::base::AtomicHashMap&lt; K, V, TableSize, std::enable_if&lt; std::is_integral&lt; K &gt;::value &amp;&amp;(TableSize &amp;(TableSize-1))==0, int &gt;::type &gt;::Bucket</label>
+        <link refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Bucket"/>
+        <childnode refid="782" relation="usage">
+          <edgelabel>head_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/work/apollo-fork/apollo/cyber/scheduler/scheduler.h" line="64" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/scheduler/scheduler.h" bodystart="64" bodyend="109"/>
+    <listofallmembers>
+      <member refid="classapollo_1_1cyber_1_1scheduler_1_1Scheduler_1ae5f6685ce7d231ef139c58beceb440f2" prot="protected" virt="non-virtual"><scope>apollo::cyber::scheduler::Scheduler</scope><name>cr_wl_mtx_</name></member>
+      <member refid="classapollo_1_1cyber_1_1scheduler_1_1Scheduler_1ad744c26058750fc922c5d4003a7040d7" prot="public" virt="non-virtual"><scope>apollo::cyber::scheduler::Scheduler</scope><name>CreateTask</name></member>
+      <member refid="classapollo_1_1cyber_1_1scheduler_1_1Scheduler_1a5765c94bc9a038eb55172fc0ee95ac0c" prot="public" virt="non-virtual"><scope>apollo::cyber::scheduler::Scheduler</scope><name>CreateTask</name></member>
+      <member refid="classapollo_1_1cyber_1_1scheduler_1_1Scheduler_1a71ac4be0a8f632a931a92680eb935774" prot="public" virt="pure-virtual"><scope>apollo::cyber::scheduler::Scheduler</scope><name>DispatchTask</name></member>
+      <member refid="classapollo_1_1cyber_1_1scheduler_1_1Scheduler_1a96af50b8cefc5466a1aed958bfb75fc0" prot="protected" virt="non-virtual"><scope>apollo::cyber::scheduler::Scheduler</scope><name>id_cr_</name></member>
+      <member refid="classapollo_1_1cyber_1_1scheduler_1_1Scheduler_1a92cf81e4d1c10eabc52a89d177b83c98" prot="protected" virt="non-virtual"><scope>apollo::cyber::scheduler::Scheduler</scope><name>id_cr_lock_</name></member>
+      <member refid="classapollo_1_1cyber_1_1scheduler_1_1Scheduler_1a5640ba0f6e2f95cdcd4ff2266b69944d" prot="protected" virt="non-virtual"><scope>apollo::cyber::scheduler::Scheduler</scope><name>id_map_mutex_</name></member>
+      <member refid="classapollo_1_1cyber_1_1scheduler_1_1Scheduler_1aaa79880080f0199a7024d16f69e0b067" prot="protected" virt="non-virtual"><scope>apollo::cyber::scheduler::Scheduler</scope><name>inner_thr_confs_</name></member>
+      <member refid="classapollo_1_1cyber_1_1scheduler_1_1Scheduler_1aa5e015eae469366b925d479ba0fd57be" prot="public" virt="non-virtual"><scope>apollo::cyber::scheduler::Scheduler</scope><name>Instance</name></member>
+      <member refid="classapollo_1_1cyber_1_1scheduler_1_1Scheduler_1abfcfe864b071e5c7d1a5a80706c11671" prot="public" virt="pure-virtual"><scope>apollo::cyber::scheduler::Scheduler</scope><name>NotifyProcessor</name></member>
+      <member refid="classapollo_1_1cyber_1_1scheduler_1_1Scheduler_1a624a4d8b6e3fa9af97abf24f2b86e8c1" prot="public" virt="non-virtual"><scope>apollo::cyber::scheduler::Scheduler</scope><name>NotifyTask</name></member>
+      <member refid="classapollo_1_1cyber_1_1scheduler_1_1Scheduler_1ab8a015f7e4bd9481f42f7a2518bf9025" prot="protected" virt="non-virtual"><scope>apollo::cyber::scheduler::Scheduler</scope><name>ParseCpuset</name></member>
+      <member refid="classapollo_1_1cyber_1_1scheduler_1_1Scheduler_1aaf7682d75a76d419afc7560331fb6917" prot="protected" virt="non-virtual"><scope>apollo::cyber::scheduler::Scheduler</scope><name>pctxs_</name></member>
+      <member refid="classapollo_1_1cyber_1_1scheduler_1_1Scheduler_1ab1abc585150bbf9e07bad49cf5db343c" prot="protected" virt="non-virtual"><scope>apollo::cyber::scheduler::Scheduler</scope><name>proc_num_</name></member>
+      <member refid="classapollo_1_1cyber_1_1scheduler_1_1Scheduler_1a515178875e0beaede46654d5a1e0b788" prot="protected" virt="non-virtual"><scope>apollo::cyber::scheduler::Scheduler</scope><name>processors_</name></member>
+      <member refid="classapollo_1_1cyber_1_1scheduler_1_1Scheduler_1aeebbc8587d53f187d46016100fb67dc5" prot="public" virt="pure-virtual"><scope>apollo::cyber::scheduler::Scheduler</scope><name>RemoveCRoutine</name></member>
+      <member refid="classapollo_1_1cyber_1_1scheduler_1_1Scheduler_1ad605b692e0e776ab95a19fa2ea0229e7" prot="public" virt="pure-virtual"><scope>apollo::cyber::scheduler::Scheduler</scope><name>RemoveTask</name></member>
+      <member refid="classapollo_1_1cyber_1_1scheduler_1_1Scheduler_1a6a9e79224fcd60eb611edd8107751f42" prot="protected" virt="non-virtual"><scope>apollo::cyber::scheduler::Scheduler</scope><name>Scheduler</name></member>
+      <member refid="classapollo_1_1cyber_1_1scheduler_1_1Scheduler_1ab74d2a01e6376d39016ae519fafa6f7c" prot="public" virt="non-virtual"><scope>apollo::cyber::scheduler::Scheduler</scope><name>SetInnerThreadAttr</name></member>
+      <member refid="classapollo_1_1cyber_1_1scheduler_1_1Scheduler_1ae41a1dfeb9a7e7f2662e0fb1063903f7" prot="public" virt="non-virtual"><scope>apollo::cyber::scheduler::Scheduler</scope><name>SetInnerThreadConfs</name></member>
+      <member refid="classapollo_1_1cyber_1_1scheduler_1_1Scheduler_1a6a33fdc12c1b99936dd0ab23767569ac" prot="public" virt="non-virtual"><scope>apollo::cyber::scheduler::Scheduler</scope><name>Shutdown</name></member>
+      <member refid="classapollo_1_1cyber_1_1scheduler_1_1Scheduler_1adb3d43a886f633e6fcce407ac8e1d4e0" prot="protected" virt="non-virtual"><scope>apollo::cyber::scheduler::Scheduler</scope><name>stop_</name></member>
+      <member refid="classapollo_1_1cyber_1_1scheduler_1_1Scheduler_1a6bc9dcb1108028aca458f1a328484e82" prot="protected" virt="non-virtual"><scope>apollo::cyber::scheduler::Scheduler</scope><name>task_pool_size_</name></member>
+      <member refid="classapollo_1_1cyber_1_1scheduler_1_1Scheduler_1acb9cf2b49454c6a9ca75437e07473015" prot="public" virt="non-virtual"><scope>apollo::cyber::scheduler::Scheduler</scope><name>TaskPoolSize</name></member>
+      <member refid="classapollo_1_1cyber_1_1scheduler_1_1Scheduler_1a019767c67f63ccafb798b2d3d5e18971" prot="public" virt="virtual"><scope>apollo::cyber::scheduler::Scheduler</scope><name>~Scheduler</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,264 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classapollo_1_1cyber_1_1base_1_1AtomicRWLock" kind="class" prot="public">
+    <compoundname>apollo::cyber::base::AtomicRWLock</compoundname>
+    <includes refid="atomic__rw__lock_8h" local="no">atomic_rw_lock.h</includes>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classapollo_1_1cyber_1_1base_1_1AtomicRWLock_1ae3346b483392ff21d4bbdce25f722d10" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class ReadLockGuard&lt; AtomicRWLock &gt;</definition>
+        <argsstring></argsstring>
+        <name>ReadLockGuard&lt; AtomicRWLock &gt;</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/atomic_rw_lock.h" line="113" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/atomic_rw_lock.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classapollo_1_1cyber_1_1base_1_1AtomicRWLock_1a6f70f95c6312deffd395854efd15b7fd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class WriteLockGuard&lt; AtomicRWLock &gt;</definition>
+        <argsstring></argsstring>
+        <name>WriteLockGuard&lt; AtomicRWLock &gt;</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/atomic_rw_lock.h" line="113" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/atomic_rw_lock.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1base_1_1AtomicRWLock_1a85da033794c4e6cf82e6a8e89266ee40" prot="public" static="yes" mutable="no">
+        <type>const int32_t</type>
+        <definition>const int32_t apollo::cyber::base::AtomicRWLock::RW_LOCK_FREE</definition>
+        <argsstring></argsstring>
+        <name>RW_LOCK_FREE</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/atomic_rw_lock.h" line="40" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/atomic_rw_lock.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1base_1_1AtomicRWLock_1add34af0709bcc95f70afbce7a4b6c7e3" prot="public" static="yes" mutable="no">
+        <type>const int32_t</type>
+        <definition>const int32_t apollo::cyber::base::AtomicRWLock::WRITE_EXCLUSIVE</definition>
+        <argsstring></argsstring>
+        <name>WRITE_EXCLUSIVE</name>
+        <initializer>= -1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/atomic_rw_lock.h" line="41" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/atomic_rw_lock.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1base_1_1AtomicRWLock_1a16fe6c0b37ad30c852de92297798ad43" prot="public" static="yes" mutable="no">
+        <type>const uint32_t</type>
+        <definition>const uint32_t apollo::cyber::base::AtomicRWLock::MAX_RETRY_TIMES</definition>
+        <argsstring></argsstring>
+        <name>MAX_RETRY_TIMES</name>
+        <initializer>= 5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/atomic_rw_lock.h" line="42" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/atomic_rw_lock.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1base_1_1AtomicRWLock_1a1b6e55bbdbe5579f2e6285a1f56ef5f2" prot="private" static="no" mutable="no">
+        <type>std::atomic&lt; uint32_t &gt;</type>
+        <definition>std::atomic&lt;uint32_t&gt; apollo::cyber::base::AtomicRWLock::write_lock_wait_num_</definition>
+        <argsstring></argsstring>
+        <name>write_lock_wait_num_</name>
+        <initializer>= {0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/atomic_rw_lock.h" line="56" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/atomic_rw_lock.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1base_1_1AtomicRWLock_1adc27774c468c75ba9c8658ed5d194719" prot="private" static="no" mutable="no">
+        <type>std::atomic&lt; int32_t &gt;</type>
+        <definition>std::atomic&lt;int32_t&gt; apollo::cyber::base::AtomicRWLock::lock_num_</definition>
+        <argsstring></argsstring>
+        <name>lock_num_</name>
+        <initializer>= {0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/atomic_rw_lock.h" line="57" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/atomic_rw_lock.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1base_1_1AtomicRWLock_1af446ca384d8cd987ac6cd9f742004748" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool apollo::cyber::base::AtomicRWLock::write_first_</definition>
+        <argsstring></argsstring>
+        <name>write_first_</name>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/atomic_rw_lock.h" line="58" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/atomic_rw_lock.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1base_1_1AtomicRWLock_1ac95a9bd44dde5cb5478fb47f2e884ea2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::base::AtomicRWLock::AtomicRWLock</definition>
+        <argsstring>()</argsstring>
+        <name>AtomicRWLock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/atomic_rw_lock.h" line="43" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/atomic_rw_lock.h" bodystart="43" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1base_1_1AtomicRWLock_1adba8c36fa57f40852590ba1390f03427" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::base::AtomicRWLock::AtomicRWLock</definition>
+        <argsstring>(bool write_first)</argsstring>
+        <name>AtomicRWLock</name>
+        <param>
+          <type>bool</type>
+          <declname>write_first</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/atomic_rw_lock.h" line="44" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/atomic_rw_lock.h" bodystart="44" bodyend="44"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1base_1_1AtomicRWLock_1a4d45cdc1aeaaf52cf7e921ef84bc69a9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::base::AtomicRWLock::ReadLock</definition>
+        <argsstring>()</argsstring>
+        <name>ReadLock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/atomic_rw_lock.h" line="48" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/atomic_rw_lock.h" bodystart="61" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1base_1_1AtomicRWLock_1a7837026bb217ea454dc683d7b6531c00" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::base::AtomicRWLock::WriteLock</definition>
+        <argsstring>()</argsstring>
+        <name>WriteLock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/atomic_rw_lock.h" line="49" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/atomic_rw_lock.h" bodystart="93" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1base_1_1AtomicRWLock_1a5394b943ae73dea59b98882411610724" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::base::AtomicRWLock::ReadUnlock</definition>
+        <argsstring>()</argsstring>
+        <name>ReadUnlock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/atomic_rw_lock.h" line="51" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/atomic_rw_lock.h" bodystart="111" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1base_1_1AtomicRWLock_1a26e5a8629da1eef7b544c5f5639d1b2c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::base::AtomicRWLock::WriteUnlock</definition>
+        <argsstring>()</argsstring>
+        <name>WriteUnlock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/atomic_rw_lock.h" line="52" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/atomic_rw_lock.h" bodystart="113" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1base_1_1AtomicRWLock_1ae3d12c1d8676b8ad4b1174b38d3bff19" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::base::AtomicRWLock::AtomicRWLock</definition>
+        <argsstring>(const AtomicRWLock &amp;)=delete</argsstring>
+        <name>AtomicRWLock</name>
+        <param>
+          <type>const <ref refid="classapollo_1_1cyber_1_1base_1_1AtomicRWLock" kindref="compound">AtomicRWLock</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/atomic_rw_lock.h" line="54" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1base_1_1AtomicRWLock_1a8f6c54b39ff17f2ac4b4cf1c5855d484" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classapollo_1_1cyber_1_1base_1_1AtomicRWLock" kindref="compound">AtomicRWLock</ref> &amp;</type>
+        <definition>AtomicRWLock&amp; apollo::cyber::base::AtomicRWLock::operator=</definition>
+        <argsstring>(const AtomicRWLock &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classapollo_1_1cyber_1_1base_1_1AtomicRWLock" kindref="compound">AtomicRWLock</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/atomic_rw_lock.h" line="55" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/work/apollo-fork/apollo/cyber/base/atomic_rw_lock.h" line="35" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/atomic_rw_lock.h" bodystart="35" bodyend="59"/>
+    <listofallmembers>
+      <member refid="classapollo_1_1cyber_1_1base_1_1AtomicRWLock_1ac95a9bd44dde5cb5478fb47f2e884ea2" prot="public" virt="non-virtual"><scope>apollo::cyber::base::AtomicRWLock</scope><name>AtomicRWLock</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1AtomicRWLock_1adba8c36fa57f40852590ba1390f03427" prot="public" virt="non-virtual"><scope>apollo::cyber::base::AtomicRWLock</scope><name>AtomicRWLock</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1AtomicRWLock_1ae3d12c1d8676b8ad4b1174b38d3bff19" prot="private" virt="non-virtual"><scope>apollo::cyber::base::AtomicRWLock</scope><name>AtomicRWLock</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1AtomicRWLock_1adc27774c468c75ba9c8658ed5d194719" prot="private" virt="non-virtual"><scope>apollo::cyber::base::AtomicRWLock</scope><name>lock_num_</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1AtomicRWLock_1a16fe6c0b37ad30c852de92297798ad43" prot="public" virt="non-virtual"><scope>apollo::cyber::base::AtomicRWLock</scope><name>MAX_RETRY_TIMES</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1AtomicRWLock_1a8f6c54b39ff17f2ac4b4cf1c5855d484" prot="private" virt="non-virtual"><scope>apollo::cyber::base::AtomicRWLock</scope><name>operator=</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1AtomicRWLock_1a4d45cdc1aeaaf52cf7e921ef84bc69a9" prot="private" virt="non-virtual"><scope>apollo::cyber::base::AtomicRWLock</scope><name>ReadLock</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1AtomicRWLock_1ae3346b483392ff21d4bbdce25f722d10" prot="private" virt="non-virtual"><scope>apollo::cyber::base::AtomicRWLock</scope><name>ReadLockGuard&lt; AtomicRWLock &gt;</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1AtomicRWLock_1a5394b943ae73dea59b98882411610724" prot="private" virt="non-virtual"><scope>apollo::cyber::base::AtomicRWLock</scope><name>ReadUnlock</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1AtomicRWLock_1a85da033794c4e6cf82e6a8e89266ee40" prot="public" virt="non-virtual"><scope>apollo::cyber::base::AtomicRWLock</scope><name>RW_LOCK_FREE</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1AtomicRWLock_1add34af0709bcc95f70afbce7a4b6c7e3" prot="public" virt="non-virtual"><scope>apollo::cyber::base::AtomicRWLock</scope><name>WRITE_EXCLUSIVE</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1AtomicRWLock_1af446ca384d8cd987ac6cd9f742004748" prot="private" virt="non-virtual"><scope>apollo::cyber::base::AtomicRWLock</scope><name>write_first_</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1AtomicRWLock_1a1b6e55bbdbe5579f2e6285a1f56ef5f2" prot="private" virt="non-virtual"><scope>apollo::cyber::base::AtomicRWLock</scope><name>write_lock_wait_num_</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1AtomicRWLock_1a7837026bb217ea454dc683d7b6531c00" prot="private" virt="non-virtual"><scope>apollo::cyber::base::AtomicRWLock</scope><name>WriteLock</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1AtomicRWLock_1a6f70f95c6312deffd395854efd15b7fd" prot="private" virt="non-virtual"><scope>apollo::cyber::base::AtomicRWLock</scope><name>WriteLockGuard&lt; AtomicRWLock &gt;</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1AtomicRWLock_1a26e5a8629da1eef7b544c5f5639d1b2c" prot="private" virt="non-virtual"><scope>apollo::cyber::base::AtomicRWLock</scope><name>WriteUnlock</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

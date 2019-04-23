@@ -1,0 +1,114 @@
+\hypertarget{classapollo_1_1cyber_1_1base_1_1TimeoutBlockWaitStrategy}{\section{apollo\-:\-:cyber\-:\-:base\-:\-:Timeout\-Block\-Wait\-Strategy Class Reference}
+\label{classapollo_1_1cyber_1_1base_1_1TimeoutBlockWaitStrategy}\index{apollo\-::cyber\-::base\-::\-Timeout\-Block\-Wait\-Strategy@{apollo\-::cyber\-::base\-::\-Timeout\-Block\-Wait\-Strategy}}
+}
+
+
+{\ttfamily \#include $<$wait\-\_\-strategy.\-h$>$}
+
+Inheritance diagram for apollo\-:\-:cyber\-:\-:base\-:\-:Timeout\-Block\-Wait\-Strategy\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classapollo_1_1cyber_1_1base_1_1TimeoutBlockWaitStrategy}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1base_1_1TimeoutBlockWaitStrategy_ac2250cd47422b7a04fa90d1f01b64df7}{Timeout\-Block\-Wait\-Strategy} ()
+\item 
+\hyperlink{classapollo_1_1cyber_1_1base_1_1TimeoutBlockWaitStrategy_ab44d7baaa734ad8b03c049c225c017ae}{Timeout\-Block\-Wait\-Strategy} (uint64\-\_\-t timeout)
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1base_1_1TimeoutBlockWaitStrategy_a4041a8f72141780fdd6e805c793dcc51}{Notify\-One} () override
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1base_1_1TimeoutBlockWaitStrategy_a044671ac4289fdf17fc961a4919c8c7f}{Empty\-Wait} () override
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1base_1_1TimeoutBlockWaitStrategy_afbd51fc01be0cee88a3218e559d4fe81}{Break\-All\-Wait} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1base_1_1TimeoutBlockWaitStrategy_a431a2d9c252544b0b8264d13c7db8ab1}{Set\-Timeout} (uint64\-\_\-t timeout)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\-::mutex \hyperlink{classapollo_1_1cyber_1_1base_1_1TimeoutBlockWaitStrategy_a80b1e0c8b1eafa79aaf84b6bb1ff444e}{mutex\-\_\-}
+\item 
+std\-::condition\-\_\-variable \hyperlink{classapollo_1_1cyber_1_1base_1_1TimeoutBlockWaitStrategy_a8ca443c25600262b45e9edbb16b1d317}{cv\-\_\-}
+\item 
+std\-::chrono\-::milliseconds \hyperlink{classapollo_1_1cyber_1_1base_1_1TimeoutBlockWaitStrategy_a9dc28b4322af9a5dda67979eb1af0404}{time\-\_\-out\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1TimeoutBlockWaitStrategy_ac2250cd47422b7a04fa90d1f01b64df7}{\index{apollo\-::cyber\-::base\-::\-Timeout\-Block\-Wait\-Strategy@{apollo\-::cyber\-::base\-::\-Timeout\-Block\-Wait\-Strategy}!Timeout\-Block\-Wait\-Strategy@{Timeout\-Block\-Wait\-Strategy}}
+\index{Timeout\-Block\-Wait\-Strategy@{Timeout\-Block\-Wait\-Strategy}!apollo::cyber::base::TimeoutBlockWaitStrategy@{apollo\-::cyber\-::base\-::\-Timeout\-Block\-Wait\-Strategy}}
+\subsubsection[{Timeout\-Block\-Wait\-Strategy}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::base\-::\-Timeout\-Block\-Wait\-Strategy\-::\-Timeout\-Block\-Wait\-Strategy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1base_1_1TimeoutBlockWaitStrategy_ac2250cd47422b7a04fa90d1f01b64df7}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1TimeoutBlockWaitStrategy_ab44d7baaa734ad8b03c049c225c017ae}{\index{apollo\-::cyber\-::base\-::\-Timeout\-Block\-Wait\-Strategy@{apollo\-::cyber\-::base\-::\-Timeout\-Block\-Wait\-Strategy}!Timeout\-Block\-Wait\-Strategy@{Timeout\-Block\-Wait\-Strategy}}
+\index{Timeout\-Block\-Wait\-Strategy@{Timeout\-Block\-Wait\-Strategy}!apollo::cyber::base::TimeoutBlockWaitStrategy@{apollo\-::cyber\-::base\-::\-Timeout\-Block\-Wait\-Strategy}}
+\subsubsection[{Timeout\-Block\-Wait\-Strategy}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::base\-::\-Timeout\-Block\-Wait\-Strategy\-::\-Timeout\-Block\-Wait\-Strategy (
+\begin{DoxyParamCaption}
+\item[{uint64\-\_\-t}]{timeout}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}}\label{classapollo_1_1cyber_1_1base_1_1TimeoutBlockWaitStrategy_ab44d7baaa734ad8b03c049c225c017ae}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1TimeoutBlockWaitStrategy_afbd51fc01be0cee88a3218e559d4fe81}{\index{apollo\-::cyber\-::base\-::\-Timeout\-Block\-Wait\-Strategy@{apollo\-::cyber\-::base\-::\-Timeout\-Block\-Wait\-Strategy}!Break\-All\-Wait@{Break\-All\-Wait}}
+\index{Break\-All\-Wait@{Break\-All\-Wait}!apollo::cyber::base::TimeoutBlockWaitStrategy@{apollo\-::cyber\-::base\-::\-Timeout\-Block\-Wait\-Strategy}}
+\subsubsection[{Break\-All\-Wait}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::base\-::\-Timeout\-Block\-Wait\-Strategy\-::\-Break\-All\-Wait (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1base_1_1TimeoutBlockWaitStrategy_afbd51fc01be0cee88a3218e559d4fe81}
+
+
+Reimplemented from \hyperlink{classapollo_1_1cyber_1_1base_1_1WaitStrategy_a521db3e728b67be1b89e16207dce014f}{apollo\-::cyber\-::base\-::\-Wait\-Strategy}.
+
+\hypertarget{classapollo_1_1cyber_1_1base_1_1TimeoutBlockWaitStrategy_a044671ac4289fdf17fc961a4919c8c7f}{\index{apollo\-::cyber\-::base\-::\-Timeout\-Block\-Wait\-Strategy@{apollo\-::cyber\-::base\-::\-Timeout\-Block\-Wait\-Strategy}!Empty\-Wait@{Empty\-Wait}}
+\index{Empty\-Wait@{Empty\-Wait}!apollo::cyber::base::TimeoutBlockWaitStrategy@{apollo\-::cyber\-::base\-::\-Timeout\-Block\-Wait\-Strategy}}
+\subsubsection[{Empty\-Wait}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::base\-::\-Timeout\-Block\-Wait\-Strategy\-::\-Empty\-Wait (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1base_1_1TimeoutBlockWaitStrategy_a044671ac4289fdf17fc961a4919c8c7f}
+
+
+Implements \hyperlink{classapollo_1_1cyber_1_1base_1_1WaitStrategy_a5801f343cd1567ec6ee586b9845446e3}{apollo\-::cyber\-::base\-::\-Wait\-Strategy}.
+
+\hypertarget{classapollo_1_1cyber_1_1base_1_1TimeoutBlockWaitStrategy_a4041a8f72141780fdd6e805c793dcc51}{\index{apollo\-::cyber\-::base\-::\-Timeout\-Block\-Wait\-Strategy@{apollo\-::cyber\-::base\-::\-Timeout\-Block\-Wait\-Strategy}!Notify\-One@{Notify\-One}}
+\index{Notify\-One@{Notify\-One}!apollo::cyber::base::TimeoutBlockWaitStrategy@{apollo\-::cyber\-::base\-::\-Timeout\-Block\-Wait\-Strategy}}
+\subsubsection[{Notify\-One}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::base\-::\-Timeout\-Block\-Wait\-Strategy\-::\-Notify\-One (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1base_1_1TimeoutBlockWaitStrategy_a4041a8f72141780fdd6e805c793dcc51}
+
+
+Reimplemented from \hyperlink{classapollo_1_1cyber_1_1base_1_1WaitStrategy_aec07f0b6c8f19538c324c7b1e3296dc3}{apollo\-::cyber\-::base\-::\-Wait\-Strategy}.
+
+\hypertarget{classapollo_1_1cyber_1_1base_1_1TimeoutBlockWaitStrategy_a431a2d9c252544b0b8264d13c7db8ab1}{\index{apollo\-::cyber\-::base\-::\-Timeout\-Block\-Wait\-Strategy@{apollo\-::cyber\-::base\-::\-Timeout\-Block\-Wait\-Strategy}!Set\-Timeout@{Set\-Timeout}}
+\index{Set\-Timeout@{Set\-Timeout}!apollo::cyber::base::TimeoutBlockWaitStrategy@{apollo\-::cyber\-::base\-::\-Timeout\-Block\-Wait\-Strategy}}
+\subsubsection[{Set\-Timeout}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::base\-::\-Timeout\-Block\-Wait\-Strategy\-::\-Set\-Timeout (
+\begin{DoxyParamCaption}
+\item[{uint64\-\_\-t}]{timeout}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1base_1_1TimeoutBlockWaitStrategy_a431a2d9c252544b0b8264d13c7db8ab1}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1TimeoutBlockWaitStrategy_a8ca443c25600262b45e9edbb16b1d317}{\index{apollo\-::cyber\-::base\-::\-Timeout\-Block\-Wait\-Strategy@{apollo\-::cyber\-::base\-::\-Timeout\-Block\-Wait\-Strategy}!cv\-\_\-@{cv\-\_\-}}
+\index{cv\-\_\-@{cv\-\_\-}!apollo::cyber::base::TimeoutBlockWaitStrategy@{apollo\-::cyber\-::base\-::\-Timeout\-Block\-Wait\-Strategy}}
+\subsubsection[{cv\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::condition\-\_\-variable apollo\-::cyber\-::base\-::\-Timeout\-Block\-Wait\-Strategy\-::cv\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1base_1_1TimeoutBlockWaitStrategy_a8ca443c25600262b45e9edbb16b1d317}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1TimeoutBlockWaitStrategy_a80b1e0c8b1eafa79aaf84b6bb1ff444e}{\index{apollo\-::cyber\-::base\-::\-Timeout\-Block\-Wait\-Strategy@{apollo\-::cyber\-::base\-::\-Timeout\-Block\-Wait\-Strategy}!mutex\-\_\-@{mutex\-\_\-}}
+\index{mutex\-\_\-@{mutex\-\_\-}!apollo::cyber::base::TimeoutBlockWaitStrategy@{apollo\-::cyber\-::base\-::\-Timeout\-Block\-Wait\-Strategy}}
+\subsubsection[{mutex\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::mutex apollo\-::cyber\-::base\-::\-Timeout\-Block\-Wait\-Strategy\-::mutex\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1base_1_1TimeoutBlockWaitStrategy_a80b1e0c8b1eafa79aaf84b6bb1ff444e}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1TimeoutBlockWaitStrategy_a9dc28b4322af9a5dda67979eb1af0404}{\index{apollo\-::cyber\-::base\-::\-Timeout\-Block\-Wait\-Strategy@{apollo\-::cyber\-::base\-::\-Timeout\-Block\-Wait\-Strategy}!time\-\_\-out\-\_\-@{time\-\_\-out\-\_\-}}
+\index{time\-\_\-out\-\_\-@{time\-\_\-out\-\_\-}!apollo::cyber::base::TimeoutBlockWaitStrategy@{apollo\-::cyber\-::base\-::\-Timeout\-Block\-Wait\-Strategy}}
+\subsubsection[{time\-\_\-out\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::chrono\-::milliseconds apollo\-::cyber\-::base\-::\-Timeout\-Block\-Wait\-Strategy\-::time\-\_\-out\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1base_1_1TimeoutBlockWaitStrategy_a9dc28b4322af9a5dda67979eb1af0404}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+base/\hyperlink{wait__strategy_8h}{wait\-\_\-strategy.\-h}\end{DoxyCompactItemize}

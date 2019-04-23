@@ -1,0 +1,227 @@
+\hypertarget{classapollo_1_1cyber_1_1ReaderBase}{\section{apollo\-:\-:cyber\-:\-:Reader\-Base Class Reference}
+\label{classapollo_1_1cyber_1_1ReaderBase}\index{apollo\-::cyber\-::\-Reader\-Base@{apollo\-::cyber\-::\-Reader\-Base}}
+}
+
+
+{\ttfamily \#include $<$reader\-\_\-base.\-h$>$}
+
+Inheritance diagram for apollo\-:\-:cyber\-:\-:Reader\-Base\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classapollo_1_1cyber_1_1ReaderBase}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1ReaderBase_a9f7a08c0ec4ad3d007efd2b8673312fc}{Reader\-Base} (const proto\-::\-Role\-Attributes \&role\-\_\-attr)
+\item 
+virtual \hyperlink{classapollo_1_1cyber_1_1ReaderBase_a5c38479c30457a5d6509735404a5d2f3}{$\sim$\-Reader\-Base} ()
+\item 
+virtual bool \hyperlink{classapollo_1_1cyber_1_1ReaderBase_a58e95863a3ea4e744ddff5914456ad7d}{Init} ()=0
+\item 
+virtual void \hyperlink{classapollo_1_1cyber_1_1ReaderBase_a340d56ab095e4ee0789e9ae6c3097730}{Shutdown} ()=0
+\item 
+virtual void \hyperlink{classapollo_1_1cyber_1_1ReaderBase_a6bf09eafd9a155192d6e623f90c881e0}{Clear\-Data} ()=0
+\item 
+virtual void \hyperlink{classapollo_1_1cyber_1_1ReaderBase_a3cfeb975a301fe9094221f105d387e55}{Observe} ()=0
+\item 
+virtual bool \hyperlink{classapollo_1_1cyber_1_1ReaderBase_a9f70abd4ac366a0e173f210db1512ffc}{Empty} () const =0
+\item 
+virtual bool \hyperlink{classapollo_1_1cyber_1_1ReaderBase_a42a2e0a6c898cc3da881b1531a608995}{Has\-Received} () const =0
+\item 
+virtual double \hyperlink{classapollo_1_1cyber_1_1ReaderBase_abaf2320e67f5845ecef3b1b3f561b3e5}{Get\-Delay\-Sec} () const =0
+\item 
+virtual uint32\-\_\-t \hyperlink{classapollo_1_1cyber_1_1ReaderBase_aff558a596e4f289b6a5fbb52e9d69fe6}{Pending\-Queue\-Size} () const =0
+\item 
+virtual bool \hyperlink{classapollo_1_1cyber_1_1ReaderBase_a0b5792a3fbab13927087c259bf848ab1}{Has\-Writer} ()
+\item 
+virtual void \hyperlink{classapollo_1_1cyber_1_1ReaderBase_a5f3ff80c03b0353a607c703461f591f8}{Get\-Writers} (std\-::vector$<$ proto\-::\-Role\-Attributes $>$ $\ast$writers)
+\item 
+const std\-::string \& \hyperlink{classapollo_1_1cyber_1_1ReaderBase_ac41daf5e2aa167f52b5ded5d8bb38e0b}{Get\-Channel\-Name} () const 
+\item 
+uint64\-\_\-t \hyperlink{classapollo_1_1cyber_1_1ReaderBase_a5f0ebff207b12283c72280454d4a394c}{Channel\-Id} () const 
+\item 
+const proto\-::\-Qos\-Profile \& \hyperlink{classapollo_1_1cyber_1_1ReaderBase_af2980f9f85084d4a3711b86d4cb24183}{Qos\-Profile} () const 
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1ReaderBase_a84bce8de3776b33f9ccd961f6b99dc60}{Is\-Init} () const 
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+proto\-::\-Role\-Attributes \hyperlink{classapollo_1_1cyber_1_1ReaderBase_abb179fb694df505798fc959ff51614ed}{role\-\_\-attr\-\_\-}
+\item 
+std\-::atomic$<$ bool $>$ \hyperlink{classapollo_1_1cyber_1_1ReaderBase_a1069158d442f829dcfe467b45c7dd39a}{init\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classapollo_1_1cyber_1_1ReaderBase_a9f7a08c0ec4ad3d007efd2b8673312fc}{\index{apollo\-::cyber\-::\-Reader\-Base@{apollo\-::cyber\-::\-Reader\-Base}!Reader\-Base@{Reader\-Base}}
+\index{Reader\-Base@{Reader\-Base}!apollo::cyber::ReaderBase@{apollo\-::cyber\-::\-Reader\-Base}}
+\subsubsection[{Reader\-Base}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::\-Reader\-Base\-::\-Reader\-Base (
+\begin{DoxyParamCaption}
+\item[{const proto\-::\-Role\-Attributes \&}]{role\-\_\-attr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}}\label{classapollo_1_1cyber_1_1ReaderBase_a9f7a08c0ec4ad3d007efd2b8673312fc}
+\hypertarget{classapollo_1_1cyber_1_1ReaderBase_a5c38479c30457a5d6509735404a5d2f3}{\index{apollo\-::cyber\-::\-Reader\-Base@{apollo\-::cyber\-::\-Reader\-Base}!$\sim$\-Reader\-Base@{$\sim$\-Reader\-Base}}
+\index{$\sim$\-Reader\-Base@{$\sim$\-Reader\-Base}!apollo::cyber::ReaderBase@{apollo\-::cyber\-::\-Reader\-Base}}
+\subsubsection[{$\sim$\-Reader\-Base}]{\setlength{\rightskip}{0pt plus 5cm}virtual apollo\-::cyber\-::\-Reader\-Base\-::$\sim$\-Reader\-Base (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1ReaderBase_a5c38479c30457a5d6509735404a5d2f3}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1ReaderBase_a5f0ebff207b12283c72280454d4a394c}{\index{apollo\-::cyber\-::\-Reader\-Base@{apollo\-::cyber\-::\-Reader\-Base}!Channel\-Id@{Channel\-Id}}
+\index{Channel\-Id@{Channel\-Id}!apollo::cyber::ReaderBase@{apollo\-::cyber\-::\-Reader\-Base}}
+\subsubsection[{Channel\-Id}]{\setlength{\rightskip}{0pt plus 5cm}uint64\-\_\-t apollo\-::cyber\-::\-Reader\-Base\-::\-Channel\-Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1ReaderBase_a5f0ebff207b12283c72280454d4a394c}
+\hypertarget{classapollo_1_1cyber_1_1ReaderBase_a6bf09eafd9a155192d6e623f90c881e0}{\index{apollo\-::cyber\-::\-Reader\-Base@{apollo\-::cyber\-::\-Reader\-Base}!Clear\-Data@{Clear\-Data}}
+\index{Clear\-Data@{Clear\-Data}!apollo::cyber::ReaderBase@{apollo\-::cyber\-::\-Reader\-Base}}
+\subsubsection[{Clear\-Data}]{\setlength{\rightskip}{0pt plus 5cm}virtual void apollo\-::cyber\-::\-Reader\-Base\-::\-Clear\-Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classapollo_1_1cyber_1_1ReaderBase_a6bf09eafd9a155192d6e623f90c881e0}
+
+
+Implemented in \hyperlink{classapollo_1_1cyber_1_1Reader_ab286c2d587e10eadb339bcf55f4a9567}{apollo\-::cyber\-::\-Reader$<$ Message\-T $>$}, and \hyperlink{classapollo_1_1cyber_1_1blocker_1_1IntraReader_a10695c39f2444febe5963747a578df29}{apollo\-::cyber\-::blocker\-::\-Intra\-Reader$<$ Message\-T $>$}.
+
+\hypertarget{classapollo_1_1cyber_1_1ReaderBase_a9f70abd4ac366a0e173f210db1512ffc}{\index{apollo\-::cyber\-::\-Reader\-Base@{apollo\-::cyber\-::\-Reader\-Base}!Empty@{Empty}}
+\index{Empty@{Empty}!apollo::cyber::ReaderBase@{apollo\-::cyber\-::\-Reader\-Base}}
+\subsubsection[{Empty}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool apollo\-::cyber\-::\-Reader\-Base\-::\-Empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classapollo_1_1cyber_1_1ReaderBase_a9f70abd4ac366a0e173f210db1512ffc}
+
+
+Implemented in \hyperlink{classapollo_1_1cyber_1_1Reader_ab3e96bf171f2d1fbbafa40da14590548}{apollo\-::cyber\-::\-Reader$<$ Message\-T $>$}, and \hyperlink{classapollo_1_1cyber_1_1blocker_1_1IntraReader_a69f5c5029cba88c2a23528efe6a69457}{apollo\-::cyber\-::blocker\-::\-Intra\-Reader$<$ Message\-T $>$}.
+
+\hypertarget{classapollo_1_1cyber_1_1ReaderBase_ac41daf5e2aa167f52b5ded5d8bb38e0b}{\index{apollo\-::cyber\-::\-Reader\-Base@{apollo\-::cyber\-::\-Reader\-Base}!Get\-Channel\-Name@{Get\-Channel\-Name}}
+\index{Get\-Channel\-Name@{Get\-Channel\-Name}!apollo::cyber::ReaderBase@{apollo\-::cyber\-::\-Reader\-Base}}
+\subsubsection[{Get\-Channel\-Name}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::string\& apollo\-::cyber\-::\-Reader\-Base\-::\-Get\-Channel\-Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1ReaderBase_ac41daf5e2aa167f52b5ded5d8bb38e0b}
+\hypertarget{classapollo_1_1cyber_1_1ReaderBase_abaf2320e67f5845ecef3b1b3f561b3e5}{\index{apollo\-::cyber\-::\-Reader\-Base@{apollo\-::cyber\-::\-Reader\-Base}!Get\-Delay\-Sec@{Get\-Delay\-Sec}}
+\index{Get\-Delay\-Sec@{Get\-Delay\-Sec}!apollo::cyber::ReaderBase@{apollo\-::cyber\-::\-Reader\-Base}}
+\subsubsection[{Get\-Delay\-Sec}]{\setlength{\rightskip}{0pt plus 5cm}virtual double apollo\-::cyber\-::\-Reader\-Base\-::\-Get\-Delay\-Sec (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classapollo_1_1cyber_1_1ReaderBase_abaf2320e67f5845ecef3b1b3f561b3e5}
+
+
+Implemented in \hyperlink{classapollo_1_1cyber_1_1Reader_a51cdaa33430e6c1b2905336066a4b6f2}{apollo\-::cyber\-::\-Reader$<$ Message\-T $>$}.
+
+\hypertarget{classapollo_1_1cyber_1_1ReaderBase_a5f3ff80c03b0353a607c703461f591f8}{\index{apollo\-::cyber\-::\-Reader\-Base@{apollo\-::cyber\-::\-Reader\-Base}!Get\-Writers@{Get\-Writers}}
+\index{Get\-Writers@{Get\-Writers}!apollo::cyber::ReaderBase@{apollo\-::cyber\-::\-Reader\-Base}}
+\subsubsection[{Get\-Writers}]{\setlength{\rightskip}{0pt plus 5cm}virtual void apollo\-::cyber\-::\-Reader\-Base\-::\-Get\-Writers (
+\begin{DoxyParamCaption}
+\item[{std\-::vector$<$ proto\-::\-Role\-Attributes $>$ $\ast$}]{writers}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1ReaderBase_a5f3ff80c03b0353a607c703461f591f8}
+
+
+Reimplemented in \hyperlink{classapollo_1_1cyber_1_1Reader_a5d2fe028b8ba545a07621d8412a6df95}{apollo\-::cyber\-::\-Reader$<$ Message\-T $>$}.
+
+\hypertarget{classapollo_1_1cyber_1_1ReaderBase_a42a2e0a6c898cc3da881b1531a608995}{\index{apollo\-::cyber\-::\-Reader\-Base@{apollo\-::cyber\-::\-Reader\-Base}!Has\-Received@{Has\-Received}}
+\index{Has\-Received@{Has\-Received}!apollo::cyber::ReaderBase@{apollo\-::cyber\-::\-Reader\-Base}}
+\subsubsection[{Has\-Received}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool apollo\-::cyber\-::\-Reader\-Base\-::\-Has\-Received (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classapollo_1_1cyber_1_1ReaderBase_a42a2e0a6c898cc3da881b1531a608995}
+
+
+Implemented in \hyperlink{classapollo_1_1cyber_1_1Reader_aca67f3936aa209c1a73f1ca984062f3a}{apollo\-::cyber\-::\-Reader$<$ Message\-T $>$}, and \hyperlink{classapollo_1_1cyber_1_1blocker_1_1IntraReader_a398c31e1c4918adc42e771e183eb244a}{apollo\-::cyber\-::blocker\-::\-Intra\-Reader$<$ Message\-T $>$}.
+
+\hypertarget{classapollo_1_1cyber_1_1ReaderBase_a0b5792a3fbab13927087c259bf848ab1}{\index{apollo\-::cyber\-::\-Reader\-Base@{apollo\-::cyber\-::\-Reader\-Base}!Has\-Writer@{Has\-Writer}}
+\index{Has\-Writer@{Has\-Writer}!apollo::cyber::ReaderBase@{apollo\-::cyber\-::\-Reader\-Base}}
+\subsubsection[{Has\-Writer}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool apollo\-::cyber\-::\-Reader\-Base\-::\-Has\-Writer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1ReaderBase_a0b5792a3fbab13927087c259bf848ab1}
+
+
+Reimplemented in \hyperlink{classapollo_1_1cyber_1_1Reader_a9fc3587c84ebe1e483b12c2c91314786}{apollo\-::cyber\-::\-Reader$<$ Message\-T $>$}.
+
+\hypertarget{classapollo_1_1cyber_1_1ReaderBase_a58e95863a3ea4e744ddff5914456ad7d}{\index{apollo\-::cyber\-::\-Reader\-Base@{apollo\-::cyber\-::\-Reader\-Base}!Init@{Init}}
+\index{Init@{Init}!apollo::cyber::ReaderBase@{apollo\-::cyber\-::\-Reader\-Base}}
+\subsubsection[{Init}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool apollo\-::cyber\-::\-Reader\-Base\-::\-Init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classapollo_1_1cyber_1_1ReaderBase_a58e95863a3ea4e744ddff5914456ad7d}
+
+
+Implemented in \hyperlink{classapollo_1_1cyber_1_1Reader_a249fd8fc318b8f86d018d2016b926ca4}{apollo\-::cyber\-::\-Reader$<$ Message\-T $>$}, and \hyperlink{classapollo_1_1cyber_1_1blocker_1_1IntraReader_a43e61ca2814c9ca792b89c67e2a02daf}{apollo\-::cyber\-::blocker\-::\-Intra\-Reader$<$ Message\-T $>$}.
+
+\hypertarget{classapollo_1_1cyber_1_1ReaderBase_a84bce8de3776b33f9ccd961f6b99dc60}{\index{apollo\-::cyber\-::\-Reader\-Base@{apollo\-::cyber\-::\-Reader\-Base}!Is\-Init@{Is\-Init}}
+\index{Is\-Init@{Is\-Init}!apollo::cyber::ReaderBase@{apollo\-::cyber\-::\-Reader\-Base}}
+\subsubsection[{Is\-Init}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::\-Reader\-Base\-::\-Is\-Init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1ReaderBase_a84bce8de3776b33f9ccd961f6b99dc60}
+\hypertarget{classapollo_1_1cyber_1_1ReaderBase_a3cfeb975a301fe9094221f105d387e55}{\index{apollo\-::cyber\-::\-Reader\-Base@{apollo\-::cyber\-::\-Reader\-Base}!Observe@{Observe}}
+\index{Observe@{Observe}!apollo::cyber::ReaderBase@{apollo\-::cyber\-::\-Reader\-Base}}
+\subsubsection[{Observe}]{\setlength{\rightskip}{0pt plus 5cm}virtual void apollo\-::cyber\-::\-Reader\-Base\-::\-Observe (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classapollo_1_1cyber_1_1ReaderBase_a3cfeb975a301fe9094221f105d387e55}
+
+
+Implemented in \hyperlink{classapollo_1_1cyber_1_1Reader_a00b3cdc0a487ed6fe0f68e703166d391}{apollo\-::cyber\-::\-Reader$<$ Message\-T $>$}, and \hyperlink{classapollo_1_1cyber_1_1blocker_1_1IntraReader_a8f509c61e3b4b406cbe2beb53558e821}{apollo\-::cyber\-::blocker\-::\-Intra\-Reader$<$ Message\-T $>$}.
+
+\hypertarget{classapollo_1_1cyber_1_1ReaderBase_aff558a596e4f289b6a5fbb52e9d69fe6}{\index{apollo\-::cyber\-::\-Reader\-Base@{apollo\-::cyber\-::\-Reader\-Base}!Pending\-Queue\-Size@{Pending\-Queue\-Size}}
+\index{Pending\-Queue\-Size@{Pending\-Queue\-Size}!apollo::cyber::ReaderBase@{apollo\-::cyber\-::\-Reader\-Base}}
+\subsubsection[{Pending\-Queue\-Size}]{\setlength{\rightskip}{0pt plus 5cm}virtual uint32\-\_\-t apollo\-::cyber\-::\-Reader\-Base\-::\-Pending\-Queue\-Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classapollo_1_1cyber_1_1ReaderBase_aff558a596e4f289b6a5fbb52e9d69fe6}
+
+
+Implemented in \hyperlink{classapollo_1_1cyber_1_1Reader_a9f787ae54e884141d13396345b56c9e2}{apollo\-::cyber\-::\-Reader$<$ Message\-T $>$}.
+
+\hypertarget{classapollo_1_1cyber_1_1ReaderBase_af2980f9f85084d4a3711b86d4cb24183}{\index{apollo\-::cyber\-::\-Reader\-Base@{apollo\-::cyber\-::\-Reader\-Base}!Qos\-Profile@{Qos\-Profile}}
+\index{Qos\-Profile@{Qos\-Profile}!apollo::cyber::ReaderBase@{apollo\-::cyber\-::\-Reader\-Base}}
+\subsubsection[{Qos\-Profile}]{\setlength{\rightskip}{0pt plus 5cm}const proto\-::\-Qos\-Profile\& apollo\-::cyber\-::\-Reader\-Base\-::\-Qos\-Profile (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1ReaderBase_af2980f9f85084d4a3711b86d4cb24183}
+\hypertarget{classapollo_1_1cyber_1_1ReaderBase_a340d56ab095e4ee0789e9ae6c3097730}{\index{apollo\-::cyber\-::\-Reader\-Base@{apollo\-::cyber\-::\-Reader\-Base}!Shutdown@{Shutdown}}
+\index{Shutdown@{Shutdown}!apollo::cyber::ReaderBase@{apollo\-::cyber\-::\-Reader\-Base}}
+\subsubsection[{Shutdown}]{\setlength{\rightskip}{0pt plus 5cm}virtual void apollo\-::cyber\-::\-Reader\-Base\-::\-Shutdown (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classapollo_1_1cyber_1_1ReaderBase_a340d56ab095e4ee0789e9ae6c3097730}
+
+
+Implemented in \hyperlink{classapollo_1_1cyber_1_1Reader_accc21ea8144e9c577be55ca03e152769}{apollo\-::cyber\-::\-Reader$<$ Message\-T $>$}, and \hyperlink{classapollo_1_1cyber_1_1blocker_1_1IntraReader_a4f6fb242d33858198474001f855626dc}{apollo\-::cyber\-::blocker\-::\-Intra\-Reader$<$ Message\-T $>$}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classapollo_1_1cyber_1_1ReaderBase_a1069158d442f829dcfe467b45c7dd39a}{\index{apollo\-::cyber\-::\-Reader\-Base@{apollo\-::cyber\-::\-Reader\-Base}!init\-\_\-@{init\-\_\-}}
+\index{init\-\_\-@{init\-\_\-}!apollo::cyber::ReaderBase@{apollo\-::cyber\-::\-Reader\-Base}}
+\subsubsection[{init\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::atomic$<$bool$>$ apollo\-::cyber\-::\-Reader\-Base\-::init\-\_\-\hspace{0.3cm}{\ttfamily [protected]}}}\label{classapollo_1_1cyber_1_1ReaderBase_a1069158d442f829dcfe467b45c7dd39a}
+\hypertarget{classapollo_1_1cyber_1_1ReaderBase_abb179fb694df505798fc959ff51614ed}{\index{apollo\-::cyber\-::\-Reader\-Base@{apollo\-::cyber\-::\-Reader\-Base}!role\-\_\-attr\-\_\-@{role\-\_\-attr\-\_\-}}
+\index{role\-\_\-attr\-\_\-@{role\-\_\-attr\-\_\-}!apollo::cyber::ReaderBase@{apollo\-::cyber\-::\-Reader\-Base}}
+\subsubsection[{role\-\_\-attr\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}proto\-::\-Role\-Attributes apollo\-::cyber\-::\-Reader\-Base\-::role\-\_\-attr\-\_\-\hspace{0.3cm}{\ttfamily [protected]}}}\label{classapollo_1_1cyber_1_1ReaderBase_abb179fb694df505798fc959ff51614ed}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+node/\hyperlink{reader__base_8h}{reader\-\_\-base.\-h}\end{DoxyCompactItemize}

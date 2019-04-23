@@ -1,0 +1,161 @@
+\hypertarget{classapollo_1_1cyber_1_1base_1_1ReentrantRWLock}{\section{apollo\-:\-:cyber\-:\-:base\-:\-:Reentrant\-R\-W\-Lock Class Reference}
+\label{classapollo_1_1cyber_1_1base_1_1ReentrantRWLock}\index{apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock@{apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock}}
+}
+
+
+{\ttfamily \#include $<$reentrant\-\_\-rw\-\_\-lock.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_afb5cf9b3147e418d7ea56bd95faef907}{Reentrant\-R\-W\-Lock} ()
+\item 
+\hyperlink{classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_a54c6a03f86a85c28ac1b98affd4c6c77}{Reentrant\-R\-W\-Lock} (bool write\-\_\-first)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int32\-\_\-t \hyperlink{classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_a1ea3a1cbc79ba78a79fbf965b74d03e5}{R\-W\-\_\-\-L\-O\-C\-K\-\_\-\-F\-R\-E\-E} = 0
+\item 
+static const int32\-\_\-t \hyperlink{classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_af20aa8c75a72b20ab6863f77e436b04d}{W\-R\-I\-T\-E\-\_\-\-E\-X\-C\-L\-U\-S\-I\-V\-E} = -\/1
+\item 
+static const uint32\-\_\-t \hyperlink{classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_ad21e7730e6c0803b54bb17d409de3991}{M\-A\-X\-\_\-\-R\-E\-T\-R\-Y\-\_\-\-T\-I\-M\-E\-S} = 5
+\item 
+static const std\-::thread\-::id \hyperlink{classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_a77a2185c1f0ba187bd45e3fd51dd4425}{null\-\_\-thread}
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_a8549e924ba3f76d1fb517f736a358d64}{Read\-Lock} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_a02f8bf0029382f9887e7e3f9c8c3051a}{Write\-Lock} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_a07699e427dcd60975968712cdfd9bf0b}{Read\-Unlock} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_af8f6e3508b02328dcc081d72639097f4}{Write\-Unlock} ()
+\item 
+\hyperlink{classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_a9669ea9047b7b86ed6093fbe149fa833}{Reentrant\-R\-W\-Lock} (const \hyperlink{classapollo_1_1cyber_1_1base_1_1ReentrantRWLock}{Reentrant\-R\-W\-Lock} \&)=delete
+\item 
+\hyperlink{classapollo_1_1cyber_1_1base_1_1ReentrantRWLock}{Reentrant\-R\-W\-Lock} \& \hyperlink{classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_ac2862d650cda15e8c6a553ce5fe5ce66}{operator=} (const \hyperlink{classapollo_1_1cyber_1_1base_1_1ReentrantRWLock}{Reentrant\-R\-W\-Lock} \&)=delete
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\-::thread\-::id \hyperlink{classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_ad9ffc19935a572a671f094c612581473}{write\-\_\-thread\-\_\-id\-\_\-} = \{\hyperlink{namespaceapollo_1_1cyber_1_1base_a3aa2d654ab213ffe2d37fd81e951094b}{N\-U\-L\-L\-\_\-\-T\-H\-R\-E\-A\-D\-\_\-\-I\-D}\}
+\item 
+std\-::atomic$<$ uint32\-\_\-t $>$ \hyperlink{classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_a374944a50ed1bb9997bfd1665ae7c3fc}{write\-\_\-lock\-\_\-wait\-\_\-num\-\_\-} = \{0\}
+\item 
+std\-::atomic$<$ int32\-\_\-t $>$ \hyperlink{classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_a5ca32abf747615ddcd8d52d46ad434db}{lock\-\_\-num\-\_\-} = \{0\}
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_ab986769842dcde3e2dc152ee206bd16a}{write\-\_\-first\-\_\-} = true
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_a44206ff51a59b832c2629a9d04803c1b}{Read\-Lock\-Guard$<$ Reentrant\-R\-W\-Lock $>$}
+\item 
+class \hyperlink{classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_ae0e3e9a45b2e096b2706f0845459eb01}{Write\-Lock\-Guard$<$ Reentrant\-R\-W\-Lock $>$}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_afb5cf9b3147e418d7ea56bd95faef907}{\index{apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock@{apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock}!Reentrant\-R\-W\-Lock@{Reentrant\-R\-W\-Lock}}
+\index{Reentrant\-R\-W\-Lock@{Reentrant\-R\-W\-Lock}!apollo::cyber::base::ReentrantRWLock@{apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock}}
+\subsubsection[{Reentrant\-R\-W\-Lock}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock\-::\-Reentrant\-R\-W\-Lock (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_afb5cf9b3147e418d7ea56bd95faef907}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_a54c6a03f86a85c28ac1b98affd4c6c77}{\index{apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock@{apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock}!Reentrant\-R\-W\-Lock@{Reentrant\-R\-W\-Lock}}
+\index{Reentrant\-R\-W\-Lock@{Reentrant\-R\-W\-Lock}!apollo::cyber::base::ReentrantRWLock@{apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock}}
+\subsubsection[{Reentrant\-R\-W\-Lock}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock\-::\-Reentrant\-R\-W\-Lock (
+\begin{DoxyParamCaption}
+\item[{bool}]{write\-\_\-first}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}}\label{classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_a54c6a03f86a85c28ac1b98affd4c6c77}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_a9669ea9047b7b86ed6093fbe149fa833}{\index{apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock@{apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock}!Reentrant\-R\-W\-Lock@{Reentrant\-R\-W\-Lock}}
+\index{Reentrant\-R\-W\-Lock@{Reentrant\-R\-W\-Lock}!apollo::cyber::base::ReentrantRWLock@{apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock}}
+\subsubsection[{Reentrant\-R\-W\-Lock}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock\-::\-Reentrant\-R\-W\-Lock (
+\begin{DoxyParamCaption}
+\item[{const {\bf Reentrant\-R\-W\-Lock} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}}\label{classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_a9669ea9047b7b86ed6093fbe149fa833}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_ac2862d650cda15e8c6a553ce5fe5ce66}{\index{apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock@{apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock}!operator=@{operator=}}
+\index{operator=@{operator=}!apollo::cyber::base::ReentrantRWLock@{apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Reentrant\-R\-W\-Lock}\& apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Reentrant\-R\-W\-Lock} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}}\label{classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_ac2862d650cda15e8c6a553ce5fe5ce66}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_a8549e924ba3f76d1fb517f736a358d64}{\index{apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock@{apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock}!Read\-Lock@{Read\-Lock}}
+\index{Read\-Lock@{Read\-Lock}!apollo::cyber::base::ReentrantRWLock@{apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock}}
+\subsubsection[{Read\-Lock}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock\-::\-Read\-Lock (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_a8549e924ba3f76d1fb517f736a358d64}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_a07699e427dcd60975968712cdfd9bf0b}{\index{apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock@{apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock}!Read\-Unlock@{Read\-Unlock}}
+\index{Read\-Unlock@{Read\-Unlock}!apollo::cyber::base::ReentrantRWLock@{apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock}}
+\subsubsection[{Read\-Unlock}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock\-::\-Read\-Unlock (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_a07699e427dcd60975968712cdfd9bf0b}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_a02f8bf0029382f9887e7e3f9c8c3051a}{\index{apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock@{apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock}!Write\-Lock@{Write\-Lock}}
+\index{Write\-Lock@{Write\-Lock}!apollo::cyber::base::ReentrantRWLock@{apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock}}
+\subsubsection[{Write\-Lock}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock\-::\-Write\-Lock (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_a02f8bf0029382f9887e7e3f9c8c3051a}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_af8f6e3508b02328dcc081d72639097f4}{\index{apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock@{apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock}!Write\-Unlock@{Write\-Unlock}}
+\index{Write\-Unlock@{Write\-Unlock}!apollo::cyber::base::ReentrantRWLock@{apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock}}
+\subsubsection[{Write\-Unlock}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock\-::\-Write\-Unlock (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_af8f6e3508b02328dcc081d72639097f4}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_a44206ff51a59b832c2629a9d04803c1b}{\index{apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock@{apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock}!Read\-Lock\-Guard$<$ Reentrant\-R\-W\-Lock $>$@{Read\-Lock\-Guard$<$ Reentrant\-R\-W\-Lock $>$}}
+\index{Read\-Lock\-Guard$<$ Reentrant\-R\-W\-Lock $>$@{Read\-Lock\-Guard$<$ Reentrant\-R\-W\-Lock $>$}!apollo::cyber::base::ReentrantRWLock@{apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock}}
+\subsubsection[{Read\-Lock\-Guard$<$ Reentrant\-R\-W\-Lock $>$}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Read\-Lock\-Guard}$<$ {\bf Reentrant\-R\-W\-Lock} $>$\hspace{0.3cm}{\ttfamily [friend]}}}\label{classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_a44206ff51a59b832c2629a9d04803c1b}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_ae0e3e9a45b2e096b2706f0845459eb01}{\index{apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock@{apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock}!Write\-Lock\-Guard$<$ Reentrant\-R\-W\-Lock $>$@{Write\-Lock\-Guard$<$ Reentrant\-R\-W\-Lock $>$}}
+\index{Write\-Lock\-Guard$<$ Reentrant\-R\-W\-Lock $>$@{Write\-Lock\-Guard$<$ Reentrant\-R\-W\-Lock $>$}!apollo::cyber::base::ReentrantRWLock@{apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock}}
+\subsubsection[{Write\-Lock\-Guard$<$ Reentrant\-R\-W\-Lock $>$}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Write\-Lock\-Guard}$<$ {\bf Reentrant\-R\-W\-Lock} $>$\hspace{0.3cm}{\ttfamily [friend]}}}\label{classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_ae0e3e9a45b2e096b2706f0845459eb01}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_a5ca32abf747615ddcd8d52d46ad434db}{\index{apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock@{apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock}!lock\-\_\-num\-\_\-@{lock\-\_\-num\-\_\-}}
+\index{lock\-\_\-num\-\_\-@{lock\-\_\-num\-\_\-}!apollo::cyber::base::ReentrantRWLock@{apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock}}
+\subsubsection[{lock\-\_\-num\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::atomic$<$int32\-\_\-t$>$ apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock\-::lock\-\_\-num\-\_\- = \{0\}\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_a5ca32abf747615ddcd8d52d46ad434db}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_ad21e7730e6c0803b54bb17d409de3991}{\index{apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock@{apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock}!M\-A\-X\-\_\-\-R\-E\-T\-R\-Y\-\_\-\-T\-I\-M\-E\-S@{M\-A\-X\-\_\-\-R\-E\-T\-R\-Y\-\_\-\-T\-I\-M\-E\-S}}
+\index{M\-A\-X\-\_\-\-R\-E\-T\-R\-Y\-\_\-\-T\-I\-M\-E\-S@{M\-A\-X\-\_\-\-R\-E\-T\-R\-Y\-\_\-\-T\-I\-M\-E\-S}!apollo::cyber::base::ReentrantRWLock@{apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock}}
+\subsubsection[{M\-A\-X\-\_\-\-R\-E\-T\-R\-Y\-\_\-\-T\-I\-M\-E\-S}]{\setlength{\rightskip}{0pt plus 5cm}const uint32\-\_\-t apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock\-::\-M\-A\-X\-\_\-\-R\-E\-T\-R\-Y\-\_\-\-T\-I\-M\-E\-S = 5\hspace{0.3cm}{\ttfamily [static]}}}\label{classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_ad21e7730e6c0803b54bb17d409de3991}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_a77a2185c1f0ba187bd45e3fd51dd4425}{\index{apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock@{apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock}!null\-\_\-thread@{null\-\_\-thread}}
+\index{null\-\_\-thread@{null\-\_\-thread}!apollo::cyber::base::ReentrantRWLock@{apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock}}
+\subsubsection[{null\-\_\-thread}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::thread\-::id apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock\-::null\-\_\-thread\hspace{0.3cm}{\ttfamily [static]}}}\label{classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_a77a2185c1f0ba187bd45e3fd51dd4425}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_a1ea3a1cbc79ba78a79fbf965b74d03e5}{\index{apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock@{apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock}!R\-W\-\_\-\-L\-O\-C\-K\-\_\-\-F\-R\-E\-E@{R\-W\-\_\-\-L\-O\-C\-K\-\_\-\-F\-R\-E\-E}}
+\index{R\-W\-\_\-\-L\-O\-C\-K\-\_\-\-F\-R\-E\-E@{R\-W\-\_\-\-L\-O\-C\-K\-\_\-\-F\-R\-E\-E}!apollo::cyber::base::ReentrantRWLock@{apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock}}
+\subsubsection[{R\-W\-\_\-\-L\-O\-C\-K\-\_\-\-F\-R\-E\-E}]{\setlength{\rightskip}{0pt plus 5cm}const int32\-\_\-t apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock\-::\-R\-W\-\_\-\-L\-O\-C\-K\-\_\-\-F\-R\-E\-E = 0\hspace{0.3cm}{\ttfamily [static]}}}\label{classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_a1ea3a1cbc79ba78a79fbf965b74d03e5}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_af20aa8c75a72b20ab6863f77e436b04d}{\index{apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock@{apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock}!W\-R\-I\-T\-E\-\_\-\-E\-X\-C\-L\-U\-S\-I\-V\-E@{W\-R\-I\-T\-E\-\_\-\-E\-X\-C\-L\-U\-S\-I\-V\-E}}
+\index{W\-R\-I\-T\-E\-\_\-\-E\-X\-C\-L\-U\-S\-I\-V\-E@{W\-R\-I\-T\-E\-\_\-\-E\-X\-C\-L\-U\-S\-I\-V\-E}!apollo::cyber::base::ReentrantRWLock@{apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock}}
+\subsubsection[{W\-R\-I\-T\-E\-\_\-\-E\-X\-C\-L\-U\-S\-I\-V\-E}]{\setlength{\rightskip}{0pt plus 5cm}const int32\-\_\-t apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock\-::\-W\-R\-I\-T\-E\-\_\-\-E\-X\-C\-L\-U\-S\-I\-V\-E = -\/1\hspace{0.3cm}{\ttfamily [static]}}}\label{classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_af20aa8c75a72b20ab6863f77e436b04d}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_ab986769842dcde3e2dc152ee206bd16a}{\index{apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock@{apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock}!write\-\_\-first\-\_\-@{write\-\_\-first\-\_\-}}
+\index{write\-\_\-first\-\_\-@{write\-\_\-first\-\_\-}!apollo::cyber::base::ReentrantRWLock@{apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock}}
+\subsubsection[{write\-\_\-first\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock\-::write\-\_\-first\-\_\- = true\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_ab986769842dcde3e2dc152ee206bd16a}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_a374944a50ed1bb9997bfd1665ae7c3fc}{\index{apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock@{apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock}!write\-\_\-lock\-\_\-wait\-\_\-num\-\_\-@{write\-\_\-lock\-\_\-wait\-\_\-num\-\_\-}}
+\index{write\-\_\-lock\-\_\-wait\-\_\-num\-\_\-@{write\-\_\-lock\-\_\-wait\-\_\-num\-\_\-}!apollo::cyber::base::ReentrantRWLock@{apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock}}
+\subsubsection[{write\-\_\-lock\-\_\-wait\-\_\-num\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::atomic$<$uint32\-\_\-t$>$ apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock\-::write\-\_\-lock\-\_\-wait\-\_\-num\-\_\- = \{0\}\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_a374944a50ed1bb9997bfd1665ae7c3fc}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_ad9ffc19935a572a671f094c612581473}{\index{apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock@{apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock}!write\-\_\-thread\-\_\-id\-\_\-@{write\-\_\-thread\-\_\-id\-\_\-}}
+\index{write\-\_\-thread\-\_\-id\-\_\-@{write\-\_\-thread\-\_\-id\-\_\-}!apollo::cyber::base::ReentrantRWLock@{apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock}}
+\subsubsection[{write\-\_\-thread\-\_\-id\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::thread\-::id apollo\-::cyber\-::base\-::\-Reentrant\-R\-W\-Lock\-::write\-\_\-thread\-\_\-id\-\_\- = \{{\bf N\-U\-L\-L\-\_\-\-T\-H\-R\-E\-A\-D\-\_\-\-I\-D}\}\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_ad9ffc19935a572a671f094c612581473}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+base/\hyperlink{reentrant__rw__lock_8h}{reentrant\-\_\-rw\-\_\-lock.\-h}\end{DoxyCompactItemize}

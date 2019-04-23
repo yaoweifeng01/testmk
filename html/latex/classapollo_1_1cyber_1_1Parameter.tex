@@ -1,0 +1,340 @@
+\hypertarget{classapollo_1_1cyber_1_1Parameter}{\section{apollo\-:\-:cyber\-:\-:Parameter Class Reference}
+\label{classapollo_1_1cyber_1_1Parameter}\index{apollo\-::cyber\-::\-Parameter@{apollo\-::cyber\-::\-Parameter}}
+}
+
+
+{\ttfamily \#include $<$parameter.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1Parameter_a821e2ddc98cc19c985d77e0371d74366}{Parameter} ()
+\item 
+\hyperlink{classapollo_1_1cyber_1_1Parameter_a626c40f9cd316a6a5dfc136596cd8083}{Parameter} (const \hyperlink{classapollo_1_1cyber_1_1Parameter}{Parameter} \&parameter)
+\item 
+\hyperlink{classapollo_1_1cyber_1_1Parameter_afb61538a8a543f979a5787e224c66f53}{Parameter} (const std\-::string \&name)
+\item 
+\hyperlink{classapollo_1_1cyber_1_1Parameter_a5ff93d70601bac8f4ff1a0092c88f75d}{Parameter} (const std\-::string \&name, const bool bool\-\_\-value)
+\item 
+\hyperlink{classapollo_1_1cyber_1_1Parameter_aa7b936546d672590f8cd662b1ef87912}{Parameter} (const std\-::string \&name, const int int\-\_\-value)
+\item 
+\hyperlink{classapollo_1_1cyber_1_1Parameter_a2ff0fddb34b46deff5ec701c8512eb7b}{Parameter} (const std\-::string \&name, const int64\-\_\-t int\-\_\-value)
+\item 
+\hyperlink{classapollo_1_1cyber_1_1Parameter_a41d7d10b81f88c468dcbbbbe2fb8bb37}{Parameter} (const std\-::string \&name, const float double\-\_\-value)
+\item 
+\hyperlink{classapollo_1_1cyber_1_1Parameter_a73ed7f1d7e933f6bfe851a2f1b939067}{Parameter} (const std\-::string \&name, const double double\-\_\-value)
+\item 
+\hyperlink{classapollo_1_1cyber_1_1Parameter_a9e25544df18fd111ce4f678cf8463a32}{Parameter} (const std\-::string \&name, const std\-::string \&string\-\_\-value)
+\item 
+\hyperlink{classapollo_1_1cyber_1_1Parameter_a11ebed14ade310567b4c150d713f964c}{Parameter} (const std\-::string \&name, const char $\ast$string\-\_\-value)
+\item 
+\hyperlink{classapollo_1_1cyber_1_1Parameter_a6c004100b2f5c821dd54f9c643b2da5e}{Parameter} (const std\-::string \&name, const std\-::string \&msg\-\_\-str, const std\-::string \&full\-\_\-name, const std\-::string \&proto\-\_\-desc)
+\item 
+\hyperlink{classapollo_1_1cyber_1_1Parameter_ad7a3beb3bed6448d31e9143b4a244fe0}{Parameter} (const std\-::string \&name, const google\-::protobuf\-::\-Message \&msg)
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1Parameter_a3cd699d1884588eacd665cfa2070351f}{From\-Proto\-Param} (const Param \&param)
+\begin{DoxyCompactList}\small\item\em Parse a cyber\-::proto\-::\-Param object to cyber\-::parameter\-::\-Parameter object. \end{DoxyCompactList}\item 
+Param \hyperlink{classapollo_1_1cyber_1_1Parameter_a3c278e4a712d6dbc0cd1bfd37f6fea24}{To\-Proto\-Param} () const 
+\begin{DoxyCompactList}\small\item\em Parse a cyber\-::parameter\-::\-Parameter object to cyber\-::proto\-::\-Param object. \end{DoxyCompactList}\item 
+Param\-Type \hyperlink{classapollo_1_1cyber_1_1Parameter_af24b9d74e869e311a49462adefe7b918}{Type} () const 
+\begin{DoxyCompactList}\small\item\em Get the cyber\-:parameter\-:\-:Parameter\-Type of this object. \end{DoxyCompactList}\item 
+std\-::string \hyperlink{classapollo_1_1cyber_1_1Parameter_a351f1ea21333d16047249f587f937acb}{Type\-Name} () const 
+\item 
+std\-::string \hyperlink{classapollo_1_1cyber_1_1Parameter_a17f94a44576b1e90cc2f4d59e997be30}{Descriptor} () const 
+\item 
+const std\-::string \hyperlink{classapollo_1_1cyber_1_1Parameter_a1a586ca2296aca2c8d397fc4ec56a272}{Name} () const 
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1Parameter_a5b1801efef34c80376cd49cba51baea5}{As\-Bool} () const 
+\item 
+int64\-\_\-t \hyperlink{classapollo_1_1cyber_1_1Parameter_ac7b1bdfa2b1ec92990b187e17bfbf24d}{As\-Int64} () const 
+\item 
+double \hyperlink{classapollo_1_1cyber_1_1Parameter_afbfcc7a9bcf9355ebff30ce575ca3cc5}{As\-Double} () const 
+\item 
+const std\-::string \hyperlink{classapollo_1_1cyber_1_1Parameter_adfa876fd84203bb8e0301bd268260e64}{As\-String} () const 
+\item 
+std\-::string \hyperlink{classapollo_1_1cyber_1_1Parameter_a4d71bbc64ad58d2bd309d9cf2e44f640}{Debug\-String} () const 
+\item 
+{\footnotesize template$<$typename Value\-Type $>$ }\\std\-::enable\-\_\-if\\*
+$<$ std\-::is\-\_\-base\-\_\-of\\*
+$<$ google\-::protobuf\-::\-Message, \\*
+Value\-Type $>$\-::value, Value\-Type $>$\\*
+\-::type \hyperlink{classapollo_1_1cyber_1_1Parameter_a768aa5c2af5ee132b23bd1081df0b624}{value} () const 
+\item 
+{\footnotesize template$<$typename Value\-Type $>$ }\\std\-::enable\-\_\-if\\*
+$<$ std\-::is\-\_\-integral$<$ Value\-Type $>$\\*
+\-::value \&\&!std\-::is\-\_\-same\\*
+$<$ Value\-Type, bool $>$\-::value, \\*
+Value\-Type $>$\-::type \hyperlink{classapollo_1_1cyber_1_1Parameter_a09f62e5f348c2980472c63ef60aee19e}{value} () const 
+\item 
+{\footnotesize template$<$typename Value\-Type $>$ }\\std\-::enable\-\_\-if\\*
+$<$ std\-::is\-\_\-floating\-\_\-point\\*
+$<$ Value\-Type $>$\-::value, \\*
+Value\-Type $>$\-::type \hyperlink{classapollo_1_1cyber_1_1Parameter_acb21950095c7f082e53a69d185d09db6}{value} () const 
+\item 
+{\footnotesize template$<$typename Value\-Type $>$ }\\std\-::enable\-\_\-if\\*
+$<$ std\-::is\-\_\-convertible\\*
+$<$ Value\-Type, std\-::string $>$\\*
+\-::value, const std\-::string \& $>$\\*
+\-::type \hyperlink{classapollo_1_1cyber_1_1Parameter_a8f07da13a7e689fd2a05ffdb2789f8c4}{value} () const 
+\item 
+{\footnotesize template$<$typename Value\-Type $>$ }\\std\-::enable\-\_\-if$<$ std\-::is\-\_\-same\\*
+$<$ Value\-Type, bool $>$\-::value, \\*
+bool $>$\-::type \hyperlink{classapollo_1_1cyber_1_1Parameter_a380d65d34dc7d2a0c4221647316b71da}{value} () const 
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Param \hyperlink{classapollo_1_1cyber_1_1Parameter_af14040486811156fb1a4f76140623f11}{param\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classapollo_1_1cyber_1_1Parameter_a821e2ddc98cc19c985d77e0371d74366}{\index{apollo\-::cyber\-::\-Parameter@{apollo\-::cyber\-::\-Parameter}!Parameter@{Parameter}}
+\index{Parameter@{Parameter}!apollo::cyber::Parameter@{apollo\-::cyber\-::\-Parameter}}
+\subsubsection[{Parameter}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::\-Parameter\-::\-Parameter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1Parameter_a821e2ddc98cc19c985d77e0371d74366}
+\hypertarget{classapollo_1_1cyber_1_1Parameter_a626c40f9cd316a6a5dfc136596cd8083}{\index{apollo\-::cyber\-::\-Parameter@{apollo\-::cyber\-::\-Parameter}!Parameter@{Parameter}}
+\index{Parameter@{Parameter}!apollo::cyber::Parameter@{apollo\-::cyber\-::\-Parameter}}
+\subsubsection[{Parameter}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::\-Parameter\-::\-Parameter (
+\begin{DoxyParamCaption}
+\item[{const {\bf Parameter} \&}]{parameter}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}}\label{classapollo_1_1cyber_1_1Parameter_a626c40f9cd316a6a5dfc136596cd8083}
+\hypertarget{classapollo_1_1cyber_1_1Parameter_afb61538a8a543f979a5787e224c66f53}{\index{apollo\-::cyber\-::\-Parameter@{apollo\-::cyber\-::\-Parameter}!Parameter@{Parameter}}
+\index{Parameter@{Parameter}!apollo::cyber::Parameter@{apollo\-::cyber\-::\-Parameter}}
+\subsubsection[{Parameter}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::\-Parameter\-::\-Parameter (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}}\label{classapollo_1_1cyber_1_1Parameter_afb61538a8a543f979a5787e224c66f53}
+\hypertarget{classapollo_1_1cyber_1_1Parameter_a5ff93d70601bac8f4ff1a0092c88f75d}{\index{apollo\-::cyber\-::\-Parameter@{apollo\-::cyber\-::\-Parameter}!Parameter@{Parameter}}
+\index{Parameter@{Parameter}!apollo::cyber::Parameter@{apollo\-::cyber\-::\-Parameter}}
+\subsubsection[{Parameter}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::\-Parameter\-::\-Parameter (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{name, }
+\item[{const bool}]{bool\-\_\-value}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1Parameter_a5ff93d70601bac8f4ff1a0092c88f75d}
+\hypertarget{classapollo_1_1cyber_1_1Parameter_aa7b936546d672590f8cd662b1ef87912}{\index{apollo\-::cyber\-::\-Parameter@{apollo\-::cyber\-::\-Parameter}!Parameter@{Parameter}}
+\index{Parameter@{Parameter}!apollo::cyber::Parameter@{apollo\-::cyber\-::\-Parameter}}
+\subsubsection[{Parameter}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::\-Parameter\-::\-Parameter (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{name, }
+\item[{const int}]{int\-\_\-value}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1Parameter_aa7b936546d672590f8cd662b1ef87912}
+\hypertarget{classapollo_1_1cyber_1_1Parameter_a2ff0fddb34b46deff5ec701c8512eb7b}{\index{apollo\-::cyber\-::\-Parameter@{apollo\-::cyber\-::\-Parameter}!Parameter@{Parameter}}
+\index{Parameter@{Parameter}!apollo::cyber::Parameter@{apollo\-::cyber\-::\-Parameter}}
+\subsubsection[{Parameter}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::\-Parameter\-::\-Parameter (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{name, }
+\item[{const int64\-\_\-t}]{int\-\_\-value}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1Parameter_a2ff0fddb34b46deff5ec701c8512eb7b}
+\hypertarget{classapollo_1_1cyber_1_1Parameter_a41d7d10b81f88c468dcbbbbe2fb8bb37}{\index{apollo\-::cyber\-::\-Parameter@{apollo\-::cyber\-::\-Parameter}!Parameter@{Parameter}}
+\index{Parameter@{Parameter}!apollo::cyber::Parameter@{apollo\-::cyber\-::\-Parameter}}
+\subsubsection[{Parameter}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::\-Parameter\-::\-Parameter (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{name, }
+\item[{const float}]{double\-\_\-value}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1Parameter_a41d7d10b81f88c468dcbbbbe2fb8bb37}
+\hypertarget{classapollo_1_1cyber_1_1Parameter_a73ed7f1d7e933f6bfe851a2f1b939067}{\index{apollo\-::cyber\-::\-Parameter@{apollo\-::cyber\-::\-Parameter}!Parameter@{Parameter}}
+\index{Parameter@{Parameter}!apollo::cyber::Parameter@{apollo\-::cyber\-::\-Parameter}}
+\subsubsection[{Parameter}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::\-Parameter\-::\-Parameter (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{name, }
+\item[{const double}]{double\-\_\-value}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1Parameter_a73ed7f1d7e933f6bfe851a2f1b939067}
+\hypertarget{classapollo_1_1cyber_1_1Parameter_a9e25544df18fd111ce4f678cf8463a32}{\index{apollo\-::cyber\-::\-Parameter@{apollo\-::cyber\-::\-Parameter}!Parameter@{Parameter}}
+\index{Parameter@{Parameter}!apollo::cyber::Parameter@{apollo\-::cyber\-::\-Parameter}}
+\subsubsection[{Parameter}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::\-Parameter\-::\-Parameter (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{name, }
+\item[{const std\-::string \&}]{string\-\_\-value}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1Parameter_a9e25544df18fd111ce4f678cf8463a32}
+\hypertarget{classapollo_1_1cyber_1_1Parameter_a11ebed14ade310567b4c150d713f964c}{\index{apollo\-::cyber\-::\-Parameter@{apollo\-::cyber\-::\-Parameter}!Parameter@{Parameter}}
+\index{Parameter@{Parameter}!apollo::cyber::Parameter@{apollo\-::cyber\-::\-Parameter}}
+\subsubsection[{Parameter}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::\-Parameter\-::\-Parameter (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{name, }
+\item[{const char $\ast$}]{string\-\_\-value}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1Parameter_a11ebed14ade310567b4c150d713f964c}
+\hypertarget{classapollo_1_1cyber_1_1Parameter_a6c004100b2f5c821dd54f9c643b2da5e}{\index{apollo\-::cyber\-::\-Parameter@{apollo\-::cyber\-::\-Parameter}!Parameter@{Parameter}}
+\index{Parameter@{Parameter}!apollo::cyber::Parameter@{apollo\-::cyber\-::\-Parameter}}
+\subsubsection[{Parameter}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::\-Parameter\-::\-Parameter (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{name, }
+\item[{const std\-::string \&}]{msg\-\_\-str, }
+\item[{const std\-::string \&}]{full\-\_\-name, }
+\item[{const std\-::string \&}]{proto\-\_\-desc}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1Parameter_a6c004100b2f5c821dd54f9c643b2da5e}
+\hypertarget{classapollo_1_1cyber_1_1Parameter_ad7a3beb3bed6448d31e9143b4a244fe0}{\index{apollo\-::cyber\-::\-Parameter@{apollo\-::cyber\-::\-Parameter}!Parameter@{Parameter}}
+\index{Parameter@{Parameter}!apollo::cyber::Parameter@{apollo\-::cyber\-::\-Parameter}}
+\subsubsection[{Parameter}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::\-Parameter\-::\-Parameter (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{name, }
+\item[{const google\-::protobuf\-::\-Message \&}]{msg}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1Parameter_ad7a3beb3bed6448d31e9143b4a244fe0}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1Parameter_a5b1801efef34c80376cd49cba51baea5}{\index{apollo\-::cyber\-::\-Parameter@{apollo\-::cyber\-::\-Parameter}!As\-Bool@{As\-Bool}}
+\index{As\-Bool@{As\-Bool}!apollo::cyber::Parameter@{apollo\-::cyber\-::\-Parameter}}
+\subsubsection[{As\-Bool}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::\-Parameter\-::\-As\-Bool (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1Parameter_a5b1801efef34c80376cd49cba51baea5}
+\hypertarget{classapollo_1_1cyber_1_1Parameter_afbfcc7a9bcf9355ebff30ce575ca3cc5}{\index{apollo\-::cyber\-::\-Parameter@{apollo\-::cyber\-::\-Parameter}!As\-Double@{As\-Double}}
+\index{As\-Double@{As\-Double}!apollo::cyber::Parameter@{apollo\-::cyber\-::\-Parameter}}
+\subsubsection[{As\-Double}]{\setlength{\rightskip}{0pt plus 5cm}double apollo\-::cyber\-::\-Parameter\-::\-As\-Double (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1Parameter_afbfcc7a9bcf9355ebff30ce575ca3cc5}
+\hypertarget{classapollo_1_1cyber_1_1Parameter_ac7b1bdfa2b1ec92990b187e17bfbf24d}{\index{apollo\-::cyber\-::\-Parameter@{apollo\-::cyber\-::\-Parameter}!As\-Int64@{As\-Int64}}
+\index{As\-Int64@{As\-Int64}!apollo::cyber::Parameter@{apollo\-::cyber\-::\-Parameter}}
+\subsubsection[{As\-Int64}]{\setlength{\rightskip}{0pt plus 5cm}int64\-\_\-t apollo\-::cyber\-::\-Parameter\-::\-As\-Int64 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1Parameter_ac7b1bdfa2b1ec92990b187e17bfbf24d}
+\hypertarget{classapollo_1_1cyber_1_1Parameter_adfa876fd84203bb8e0301bd268260e64}{\index{apollo\-::cyber\-::\-Parameter@{apollo\-::cyber\-::\-Parameter}!As\-String@{As\-String}}
+\index{As\-String@{As\-String}!apollo::cyber::Parameter@{apollo\-::cyber\-::\-Parameter}}
+\subsubsection[{As\-String}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::string apollo\-::cyber\-::\-Parameter\-::\-As\-String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1Parameter_adfa876fd84203bb8e0301bd268260e64}
+\hypertarget{classapollo_1_1cyber_1_1Parameter_a4d71bbc64ad58d2bd309d9cf2e44f640}{\index{apollo\-::cyber\-::\-Parameter@{apollo\-::cyber\-::\-Parameter}!Debug\-String@{Debug\-String}}
+\index{Debug\-String@{Debug\-String}!apollo::cyber::Parameter@{apollo\-::cyber\-::\-Parameter}}
+\subsubsection[{Debug\-String}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string apollo\-::cyber\-::\-Parameter\-::\-Debug\-String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classapollo_1_1cyber_1_1Parameter_a4d71bbc64ad58d2bd309d9cf2e44f640}
+\hypertarget{classapollo_1_1cyber_1_1Parameter_a17f94a44576b1e90cc2f4d59e997be30}{\index{apollo\-::cyber\-::\-Parameter@{apollo\-::cyber\-::\-Parameter}!Descriptor@{Descriptor}}
+\index{Descriptor@{Descriptor}!apollo::cyber::Parameter@{apollo\-::cyber\-::\-Parameter}}
+\subsubsection[{Descriptor}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string apollo\-::cyber\-::\-Parameter\-::\-Descriptor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1Parameter_a17f94a44576b1e90cc2f4d59e997be30}
+\hypertarget{classapollo_1_1cyber_1_1Parameter_a3cd699d1884588eacd665cfa2070351f}{\index{apollo\-::cyber\-::\-Parameter@{apollo\-::cyber\-::\-Parameter}!From\-Proto\-Param@{From\-Proto\-Param}}
+\index{From\-Proto\-Param@{From\-Proto\-Param}!apollo::cyber::Parameter@{apollo\-::cyber\-::\-Parameter}}
+\subsubsection[{From\-Proto\-Param}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::\-Parameter\-::\-From\-Proto\-Param (
+\begin{DoxyParamCaption}
+\item[{const Param \&}]{param}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1Parameter_a3cd699d1884588eacd665cfa2070351f}
+
+
+Parse a cyber\-::proto\-::\-Param object to cyber\-::parameter\-::\-Parameter object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em param} & The cyber\-::proto\-::\-Param object parse from \\
+\hline
+{\em parameter} & A pointer to the target \hyperlink{classapollo_1_1cyber_1_1Parameter}{Parameter} object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if parse ok, otherwise False 
+\end{DoxyReturn}
+\hypertarget{classapollo_1_1cyber_1_1Parameter_a1a586ca2296aca2c8d397fc4ec56a272}{\index{apollo\-::cyber\-::\-Parameter@{apollo\-::cyber\-::\-Parameter}!Name@{Name}}
+\index{Name@{Name}!apollo::cyber::Parameter@{apollo\-::cyber\-::\-Parameter}}
+\subsubsection[{Name}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::string apollo\-::cyber\-::\-Parameter\-::\-Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1Parameter_a1a586ca2296aca2c8d397fc4ec56a272}
+\hypertarget{classapollo_1_1cyber_1_1Parameter_a3c278e4a712d6dbc0cd1bfd37f6fea24}{\index{apollo\-::cyber\-::\-Parameter@{apollo\-::cyber\-::\-Parameter}!To\-Proto\-Param@{To\-Proto\-Param}}
+\index{To\-Proto\-Param@{To\-Proto\-Param}!apollo::cyber::Parameter@{apollo\-::cyber\-::\-Parameter}}
+\subsubsection[{To\-Proto\-Param}]{\setlength{\rightskip}{0pt plus 5cm}Param apollo\-::cyber\-::\-Parameter\-::\-To\-Proto\-Param (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classapollo_1_1cyber_1_1Parameter_a3c278e4a712d6dbc0cd1bfd37f6fea24}
+
+
+Parse a cyber\-::parameter\-::\-Parameter object to cyber\-::proto\-::\-Param object. 
+
+\begin{DoxyReturn}{Returns}
+The target cyber\-::proto\-::\-Param object 
+\end{DoxyReturn}
+\hypertarget{classapollo_1_1cyber_1_1Parameter_af24b9d74e869e311a49462adefe7b918}{\index{apollo\-::cyber\-::\-Parameter@{apollo\-::cyber\-::\-Parameter}!Type@{Type}}
+\index{Type@{Type}!apollo::cyber::Parameter@{apollo\-::cyber\-::\-Parameter}}
+\subsubsection[{Type}]{\setlength{\rightskip}{0pt plus 5cm}Param\-Type apollo\-::cyber\-::\-Parameter\-::\-Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1Parameter_af24b9d74e869e311a49462adefe7b918}
+
+
+Get the cyber\-:parameter\-:\-:Parameter\-Type of this object. 
+
+\begin{DoxyReturn}{Returns}
+cyber\-:parameter\-:\-:Parameter\-Type 
+\end{DoxyReturn}
+\hypertarget{classapollo_1_1cyber_1_1Parameter_a351f1ea21333d16047249f587f937acb}{\index{apollo\-::cyber\-::\-Parameter@{apollo\-::cyber\-::\-Parameter}!Type\-Name@{Type\-Name}}
+\index{Type\-Name@{Type\-Name}!apollo::cyber::Parameter@{apollo\-::cyber\-::\-Parameter}}
+\subsubsection[{Type\-Name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string apollo\-::cyber\-::\-Parameter\-::\-Type\-Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1Parameter_a351f1ea21333d16047249f587f937acb}
+\hypertarget{classapollo_1_1cyber_1_1Parameter_a768aa5c2af5ee132b23bd1081df0b624}{\index{apollo\-::cyber\-::\-Parameter@{apollo\-::cyber\-::\-Parameter}!value@{value}}
+\index{value@{value}!apollo::cyber::Parameter@{apollo\-::cyber\-::\-Parameter}}
+\subsubsection[{value}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Value\-Type $>$ std\-::enable\-\_\-if$<$ std\-::is\-\_\-base\-\_\-of$<$ google\-::protobuf\-::\-Message, Value\-Type $>$\-::value, Value\-Type $>$\-::type apollo\-::cyber\-::\-Parameter\-::value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classapollo_1_1cyber_1_1Parameter_a768aa5c2af5ee132b23bd1081df0b624}
+\hypertarget{classapollo_1_1cyber_1_1Parameter_a09f62e5f348c2980472c63ef60aee19e}{\index{apollo\-::cyber\-::\-Parameter@{apollo\-::cyber\-::\-Parameter}!value@{value}}
+\index{value@{value}!apollo::cyber::Parameter@{apollo\-::cyber\-::\-Parameter}}
+\subsubsection[{value}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Value\-Type $>$ std\-::enable\-\_\-if$<$ std\-::is\-\_\-integral$<$ Value\-Type $>$\-::value \&\&!std\-::is\-\_\-same$<$ Value\-Type, bool $>$\-::value, Value\-Type $>$\-::type apollo\-::cyber\-::\-Parameter\-::value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classapollo_1_1cyber_1_1Parameter_a09f62e5f348c2980472c63ef60aee19e}
+\hypertarget{classapollo_1_1cyber_1_1Parameter_acb21950095c7f082e53a69d185d09db6}{\index{apollo\-::cyber\-::\-Parameter@{apollo\-::cyber\-::\-Parameter}!value@{value}}
+\index{value@{value}!apollo::cyber::Parameter@{apollo\-::cyber\-::\-Parameter}}
+\subsubsection[{value}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Value\-Type $>$ std\-::enable\-\_\-if$<$ std\-::is\-\_\-floating\-\_\-point$<$ Value\-Type $>$\-::value, Value\-Type $>$\-::type apollo\-::cyber\-::\-Parameter\-::value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classapollo_1_1cyber_1_1Parameter_acb21950095c7f082e53a69d185d09db6}
+\hypertarget{classapollo_1_1cyber_1_1Parameter_a8f07da13a7e689fd2a05ffdb2789f8c4}{\index{apollo\-::cyber\-::\-Parameter@{apollo\-::cyber\-::\-Parameter}!value@{value}}
+\index{value@{value}!apollo::cyber::Parameter@{apollo\-::cyber\-::\-Parameter}}
+\subsubsection[{value}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Value\-Type $>$ std\-::enable\-\_\-if$<$ std\-::is\-\_\-convertible$<$ Value\-Type, std\-::string $>$\-::value, const std\-::string \& $>$\-::type apollo\-::cyber\-::\-Parameter\-::value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classapollo_1_1cyber_1_1Parameter_a8f07da13a7e689fd2a05ffdb2789f8c4}
+\hypertarget{classapollo_1_1cyber_1_1Parameter_a380d65d34dc7d2a0c4221647316b71da}{\index{apollo\-::cyber\-::\-Parameter@{apollo\-::cyber\-::\-Parameter}!value@{value}}
+\index{value@{value}!apollo::cyber::Parameter@{apollo\-::cyber\-::\-Parameter}}
+\subsubsection[{value}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Value\-Type $>$ std\-::enable\-\_\-if$<$ std\-::is\-\_\-same$<$ Value\-Type, bool $>$\-::value, bool $>$\-::type apollo\-::cyber\-::\-Parameter\-::value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classapollo_1_1cyber_1_1Parameter_a380d65d34dc7d2a0c4221647316b71da}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classapollo_1_1cyber_1_1Parameter_af14040486811156fb1a4f76140623f11}{\index{apollo\-::cyber\-::\-Parameter@{apollo\-::cyber\-::\-Parameter}!param\-\_\-@{param\-\_\-}}
+\index{param\-\_\-@{param\-\_\-}!apollo::cyber::Parameter@{apollo\-::cyber\-::\-Parameter}}
+\subsubsection[{param\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}Param apollo\-::cyber\-::\-Parameter\-::param\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1Parameter_af14040486811156fb1a4f76140623f11}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+parameter/\hyperlink{parameter_8h}{parameter.\-h}\end{DoxyCompactItemize}

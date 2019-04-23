@@ -1,0 +1,496 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="record__writer_8h" kind="file">
+    <compoundname>record_writer.h</compoundname>
+    <includes local="no">stdint.h</includes>
+    <includes local="no">memory</includes>
+    <includes local="no">mutex</includes>
+    <includes local="no">sstream</includes>
+    <includes local="no">string</includes>
+    <includes local="no">unordered_map</includes>
+    <includes refid="log_8h" local="yes">cyber/common/log.h</includes>
+    <includes refid="raw__message_8h" local="yes">cyber/message/raw_message.h</includes>
+    <includes local="yes">cyber/proto/record.pb.h</includes>
+    <includes refid="record__file__writer_8h" local="yes">cyber/record/file/record_file_writer.h</includes>
+    <includes refid="header__builder_8h" local="yes">cyber/record/header_builder.h</includes>
+    <includes refid="record__base_8h" local="yes">cyber/record/record_base.h</includes>
+    <includedby refid="py__record_8h" local="yes">py_wrapper/py_record.h</includedby>
+    <includedby refid="recorder_8h" local="yes">tools/cyber_recorder/recorder.h</includedby>
+    <incdepgraph>
+      <node id="8198">
+        <label>stdarg.h</label>
+      </node>
+      <node id="8229">
+        <label>limits</label>
+      </node>
+      <node id="8199">
+        <label>cyber/binary.h</label>
+        <link refid="binary_8h"/>
+        <childnode refid="8195" relation="include">
+        </childnode>
+      </node>
+      <node id="8200">
+        <label>glog/logging.h</label>
+      </node>
+      <node id="8226">
+        <label>cyber/record/file/record_file_base.h</label>
+        <link refid="record__file__base_8h"/>
+        <childnode refid="8193" relation="include">
+        </childnode>
+        <childnode refid="8195" relation="include">
+        </childnode>
+        <childnode refid="8218" relation="include">
+        </childnode>
+      </node>
+      <node id="8191">
+        <label>stdint.h</label>
+      </node>
+      <node id="8235">
+        <label>cyber/record/record_base.h</label>
+        <link refid="record__base_8h"/>
+        <childnode refid="8191" relation="include">
+        </childnode>
+        <childnode refid="8195" relation="include">
+        </childnode>
+        <childnode refid="8218" relation="include">
+        </childnode>
+      </node>
+      <node id="8222">
+        <label>google/protobuf/text_format.h</label>
+      </node>
+      <node id="8214">
+        <label>google/protobuf/compiler/parser.h</label>
+      </node>
+      <node id="8204">
+        <label>cassert</label>
+      </node>
+      <node id="8228">
+        <label>cyber/time/time.h</label>
+        <link refid="time_8h"/>
+        <childnode refid="8229" relation="include">
+        </childnode>
+        <childnode refid="8195" relation="include">
+        </childnode>
+        <childnode refid="8230" relation="include">
+        </childnode>
+      </node>
+      <node id="8233">
+        <label>stdexcept</label>
+      </node>
+      <node id="8227">
+        <label>cyber/record/file/section.h</label>
+        <link refid="section_8h"/>
+      </node>
+      <node id="8207">
+        <label>cyber/common/macros.h</label>
+        <link refid="common_2macros_8h"/>
+        <childnode refid="8206" relation="include">
+        </childnode>
+        <childnode refid="8192" relation="include">
+        </childnode>
+        <childnode refid="8193" relation="include">
+        </childnode>
+        <childnode refid="8208" relation="include">
+        </childnode>
+        <childnode refid="8209" relation="include">
+        </childnode>
+        <childnode refid="8210" relation="include">
+        </childnode>
+      </node>
+      <node id="8195">
+        <label>string</label>
+      </node>
+      <node id="8218">
+        <label>cyber/proto/record.pb.h</label>
+      </node>
+      <node id="8202">
+        <label>cyber/message/raw_message.h</label>
+        <link refid="raw__message_8h"/>
+        <childnode refid="8203" relation="include">
+        </childnode>
+        <childnode refid="8204" relation="include">
+        </childnode>
+        <childnode refid="8192" relation="include">
+        </childnode>
+        <childnode refid="8195" relation="include">
+        </childnode>
+        <childnode refid="8205" relation="include">
+        </childnode>
+      </node>
+      <node id="8217">
+        <label>google/protobuf/io/tokenizer.h</label>
+      </node>
+      <node id="8224">
+        <label>fstream</label>
+      </node>
+      <node id="8205">
+        <label>cyber/message/protobuf_factory.h</label>
+        <link refid="protobuf__factory_8h"/>
+        <childnode refid="8206" relation="include">
+        </childnode>
+        <childnode refid="8192" relation="include">
+        </childnode>
+        <childnode refid="8193" relation="include">
+        </childnode>
+        <childnode refid="8195" relation="include">
+        </childnode>
+        <childnode refid="8207" relation="include">
+        </childnode>
+        <childnode refid="8213" relation="include">
+        </childnode>
+        <childnode refid="8214" relation="include">
+        </childnode>
+        <childnode refid="8215" relation="include">
+        </childnode>
+        <childnode refid="8216" relation="include">
+        </childnode>
+        <childnode refid="8217" relation="include">
+        </childnode>
+      </node>
+      <node id="8219">
+        <label>cyber/record/file/record_file_writer.h</label>
+        <link refid="record__file__writer_8h"/>
+        <childnode refid="8220" relation="include">
+        </childnode>
+        <childnode refid="8221" relation="include">
+        </childnode>
+        <childnode refid="8222" relation="include">
+        </childnode>
+        <childnode refid="8223" relation="include">
+        </childnode>
+        <childnode refid="8224" relation="include">
+        </childnode>
+        <childnode refid="8192" relation="include">
+        </childnode>
+        <childnode refid="8195" relation="include">
+        </childnode>
+        <childnode refid="8225" relation="include">
+        </childnode>
+        <childnode refid="8208" relation="include">
+        </childnode>
+        <childnode refid="8196" relation="include">
+        </childnode>
+        <childnode refid="8209" relation="include">
+        </childnode>
+        <childnode refid="8197" relation="include">
+        </childnode>
+        <childnode refid="8226" relation="include">
+        </childnode>
+        <childnode refid="8227" relation="include">
+        </childnode>
+        <childnode refid="8228" relation="include">
+        </childnode>
+      </node>
+      <node id="8216">
+        <label>google/protobuf/dynamic_message.h</label>
+      </node>
+      <node id="8223">
+        <label>condition_variable</label>
+      </node>
+      <node id="8203">
+        <label>string.h</label>
+      </node>
+      <node id="8190">
+        <label>record/record_writer.h</label>
+        <link refid="record_writer.h"/>
+        <childnode refid="8191" relation="include">
+        </childnode>
+        <childnode refid="8192" relation="include">
+        </childnode>
+        <childnode refid="8193" relation="include">
+        </childnode>
+        <childnode refid="8194" relation="include">
+        </childnode>
+        <childnode refid="8195" relation="include">
+        </childnode>
+        <childnode refid="8196" relation="include">
+        </childnode>
+        <childnode refid="8197" relation="include">
+        </childnode>
+        <childnode refid="8202" relation="include">
+        </childnode>
+        <childnode refid="8218" relation="include">
+        </childnode>
+        <childnode refid="8219" relation="include">
+        </childnode>
+        <childnode refid="8234" relation="include">
+        </childnode>
+        <childnode refid="8235" relation="include">
+        </childnode>
+      </node>
+      <node id="8220">
+        <label>google/protobuf/io/zero_copy_stream_impl.h</label>
+      </node>
+      <node id="8215">
+        <label>google/protobuf/descriptor.h</label>
+      </node>
+      <node id="8213">
+        <label>cyber/proto/proto_desc.pb.h</label>
+      </node>
+      <node id="8212">
+        <label>new</label>
+      </node>
+      <node id="8197">
+        <label>cyber/common/log.h</label>
+        <link refid="log_8h"/>
+        <childnode refid="8198" relation="include">
+        </childnode>
+        <childnode refid="8199" relation="include">
+        </childnode>
+        <childnode refid="8200" relation="include">
+        </childnode>
+        <childnode refid="8201" relation="include">
+        </childnode>
+      </node>
+      <node id="8209">
+        <label>utility</label>
+      </node>
+      <node id="8194">
+        <label>sstream</label>
+      </node>
+      <node id="8231">
+        <label>math.h</label>
+      </node>
+      <node id="8211">
+        <label>cstdlib</label>
+      </node>
+      <node id="8206">
+        <label>iostream</label>
+      </node>
+      <node id="8230">
+        <label>cyber/time/duration.h</label>
+        <link refid="duration_8h"/>
+        <childnode refid="8231" relation="include">
+        </childnode>
+        <childnode refid="8191" relation="include">
+        </childnode>
+        <childnode refid="8232" relation="include">
+        </childnode>
+        <childnode refid="8206" relation="include">
+        </childnode>
+        <childnode refid="8233" relation="include">
+        </childnode>
+      </node>
+      <node id="8196">
+        <label>unordered_map</label>
+      </node>
+      <node id="8232">
+        <label>climits</label>
+      </node>
+      <node id="8234">
+        <label>cyber/record/header_builder.h</label>
+        <link refid="header__builder_8h"/>
+        <childnode refid="8218" relation="include">
+        </childnode>
+      </node>
+      <node id="8193">
+        <label>mutex</label>
+      </node>
+      <node id="8201">
+        <label>glog/raw_logging.h</label>
+      </node>
+      <node id="8225">
+        <label>thread</label>
+      </node>
+      <node id="8208">
+        <label>type_traits</label>
+      </node>
+      <node id="8221">
+        <label>google/protobuf/message.h</label>
+      </node>
+      <node id="8210">
+        <label>cyber/base/macros.h</label>
+        <link refid="base_2macros_8h"/>
+        <childnode refid="8211" relation="include">
+        </childnode>
+        <childnode refid="8212" relation="include">
+        </childnode>
+      </node>
+      <node id="8192">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="8237">
+        <label>py_wrapper/py_record.h</label>
+        <link refid="py__record_8h"/>
+      </node>
+      <node id="8238">
+        <label>tools/cyber_recorder/recorder.h</label>
+        <link refid="recorder_8h"/>
+      </node>
+      <node id="8236">
+        <label>record/record_writer.h</label>
+        <link refid="record_writer.h"/>
+        <childnode refid="8237" relation="include">
+        </childnode>
+        <childnode refid="8238" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classapollo_1_1cyber_1_1record_1_1RecordWriter" prot="public">apollo::cyber::record::RecordWriter</innerclass>
+    <innernamespace refid="namespaceapollo">apollo</innernamespace>
+    <innernamespace refid="namespaceapollo_1_1cyber">apollo::cyber</innernamespace>
+    <innernamespace refid="namespaceapollo_1_1cyber_1_1record">apollo::cyber::record</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2018<sp/>The<sp/>Apollo<sp/>Authors.<sp/>All<sp/>Rights<sp/>Reserved.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CYBER_RECORD_RECORD_WRITER_H_</highlight></codeline>
+<codeline lineno="18"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CYBER_RECORD_RECORD_WRITER_H_</highlight></codeline>
+<codeline lineno="19"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;mutex&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;unordered_map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="log_8h" kindref="compound">cyber/common/log.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="raw__message_8h" kindref="compound">cyber/message/raw_message.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cyber/proto/record.pb.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="record__file__writer_8h" kindref="compound">cyber/record/file/record_file_writer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="header__builder_8h" kindref="compound">cyber/record/header_builder.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="record__base_8h" kindref="compound">cyber/record/record_base.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">apollo<sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">cyber<sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">record<sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="classapollo_1_1cyber_1_1record_1_1RecordWriter" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classapollo_1_1cyber_1_1record_1_1RecordWriter" kindref="compound">RecordWriter</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordBase" kindref="compound">RecordBase</ref><sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="40" refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a2eee5f400e4db03ec9101258d8e819ab" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a2eee5f400e4db03ec9101258d8e819ab" kindref="member">MessageNumberMap</ref><sp/>=<sp/>std::unordered_map&lt;std::string,<sp/>uint64_t&gt;;</highlight></codeline>
+<codeline lineno="41" refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a199b00d29dde82c7a061b4ee2b6204d3" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a199b00d29dde82c7a061b4ee2b6204d3" kindref="member">MessageTypeMap</ref><sp/>=<sp/>std::unordered_map&lt;std::string,<sp/>std::string&gt;;</highlight></codeline>
+<codeline lineno="42" refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a19879e77c64a35d8e8d49d39798c25cb" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a19879e77c64a35d8e8d49d39798c25cb" kindref="member">MessageProtoDescMap</ref><sp/>=<sp/>std::unordered_map&lt;std::string,<sp/>std::string&gt;;</highlight></codeline>
+<codeline lineno="43" refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a9711b0e51bbbd4dbe54e44c3d1fbd9da" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a9711b0e51bbbd4dbe54e44c3d1fbd9da" kindref="member">FileWriterPtr</ref><sp/>=<sp/>std::unique_ptr&lt;RecordFileWriter&gt;;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a88286f6474eee87f0790523ff870c65a" kindref="member">RecordWriter</ref>();</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a88286f6474eee87f0790523ff870c65a" kindref="member">RecordWriter</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>proto::Header&amp;<sp/>header);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a24af86f0bc084759c1be3a9f4676539e" kindref="member">~RecordWriter</ref>();</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a659682af6dd6b22c5f470470929a0fee" kindref="member">Open</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>file);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1aeeb301a117dd331fc6fcd5d7c901edef" kindref="member">Close</ref>();</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1aff50d522ad22bcfb6ecc8affe837f048" kindref="member">WriteChannel</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>channel_name,</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>message_type,</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>proto_desc);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>MessageT&gt;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a9f8c8aa8c692d90fe5463930b440493e" kindref="member">WriteMessage</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>channel_name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>MessageT&amp;<sp/>message,</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint64_t<sp/>time_nanosec,</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>proto_desc<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a5fa79eae0201d4f3334b069b24a080b9" kindref="member">SetSizeOfFileSegmentation</ref>(uint64_t<sp/>size_kilobytes);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a5e64257c68b872bc9bbb35874d9cdc40" kindref="member">SetIntervalOfFileSegmentation</ref>(uint64_t<sp/>time_sec);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/>uint64_t<sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a2f0637a10532fd3d721ec27dec9aab05" kindref="member">GetMessageNumber</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>channel_name)<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a7bab92d44a94ea9c97546ff809c05064" kindref="member">GetMessageType</ref>(</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>channel_name)<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a1f547541dfc6df5803f1032e4f39fb3c" kindref="member">GetProtoDesc</ref>(</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>channel_name)<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a9f8c8aa8c692d90fe5463930b440493e" kindref="member">WriteMessage</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>proto::SingleMessage&amp;<sp/>single_msg);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1aef5d2cfdfff48cd23f430c0d4a20f5c2" kindref="member">SplitOutfile</ref>();</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a2ea4f80202e28292900382ca60ec9b71" kindref="member">IsNewChannel</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>channel_name);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a96843b877960edcf89da30a5ea0807d2" kindref="member">OnNewChannel</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>channel_name,</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>message_type,</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>proto_desc);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1aa997a88b0c59f25f8f5b52aab1c76229" kindref="member">OnNewMessage</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>channel_name);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a2dd230e28b838aef212051c69d1959b5" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a2dd230e28b838aef212051c69d1959b5" kindref="member">path_</ref>;</highlight></codeline>
+<codeline lineno="85" refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a93dde89dc680e3e6bddf15ee9a798619" refkind="member"><highlight class="normal"><sp/><sp/>uint64_t<sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a93dde89dc680e3e6bddf15ee9a798619" kindref="member">segment_raw_size_</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="86" refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1aeb5e15610f58a30bf82b7cc72ad0a9e8" refkind="member"><highlight class="normal"><sp/><sp/>uint64_t<sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1aeb5e15610f58a30bf82b7cc72ad0a9e8" kindref="member">segment_begin_time_</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="87" refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1af5094adbd45ce47753dff6b5fc0a79c8" refkind="member"><highlight class="normal"><sp/><sp/>uint32_t<sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1af5094adbd45ce47753dff6b5fc0a79c8" kindref="member">file_index_</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="88" refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1af60d36f6e755729d5b0c49c4900a75c2" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a2eee5f400e4db03ec9101258d8e819ab" kindref="member">MessageNumberMap</ref><sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1af60d36f6e755729d5b0c49c4900a75c2" kindref="member">channel_message_number_map_</ref>;</highlight></codeline>
+<codeline lineno="89" refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a3697130c4b69f46f1420f33b238a36ea" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a199b00d29dde82c7a061b4ee2b6204d3" kindref="member">MessageTypeMap</ref><sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a3697130c4b69f46f1420f33b238a36ea" kindref="member">channel_message_type_map_</ref>;</highlight></codeline>
+<codeline lineno="90" refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a9f5fde8dcd26af2dff253a0b95e15211" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a19879e77c64a35d8e8d49d39798c25cb" kindref="member">MessageProtoDescMap</ref><sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a9f5fde8dcd26af2dff253a0b95e15211" kindref="member">channel_proto_desc_map_</ref>;</highlight></codeline>
+<codeline lineno="91" refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1aa2df27a2d2944227aa8f38593a018c2e" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a9711b0e51bbbd4dbe54e44c3d1fbd9da" kindref="member">FileWriterPtr</ref><sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1aa2df27a2d2944227aa8f38593a018c2e" kindref="member">file_writer_</ref><sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="92" refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a12e4edaffd51705cd928e1a9925303c5" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a9711b0e51bbbd4dbe54e44c3d1fbd9da" kindref="member">FileWriterPtr</ref><sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a12e4edaffd51705cd928e1a9925303c5" kindref="member">file_writer_backup_</ref><sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="93" refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1ab309369671e53408b88782b68f897be0" refkind="member"><highlight class="normal"><sp/><sp/>std::mutex<sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1ab309369671e53408b88782b68f897be0" kindref="member">mutex_</ref>;</highlight></codeline>
+<codeline lineno="94" refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a6ebe2f54d4185936811d045e0135b513" refkind="member"><highlight class="normal"><sp/><sp/>std::stringstream<sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a6ebe2f54d4185936811d045e0135b513" kindref="member">sstream_</ref>;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;&gt;</highlight></codeline>
+<codeline lineno="98" refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1aafe567af96e0770740544c54d388e4c8" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a9f8c8aa8c692d90fe5463930b440493e" kindref="member">RecordWriter::WriteMessage</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>channel_name,</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>content,</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint64_t<sp/>time_nanosec,</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>proto_desc)<sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/>proto::SingleMessage<sp/>single_msg;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/>single_msg.set_channel_name(channel_name);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/>single_msg.set_content(content);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/>single_msg.set_time(time_nanosec);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a9f8c8aa8c692d90fe5463930b440493e" kindref="member">WriteMessage</ref>(single_msg);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;&gt;</highlight></codeline>
+<codeline lineno="110" refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a28694d46c58b507e13571e66ad1b5215" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a9f8c8aa8c692d90fe5463930b440493e" kindref="member">RecordWriter::WriteMessage</ref>(</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>channel_name,</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;message::RawMessage&gt;&amp;<sp/>message,</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint64_t<sp/>time_nanosec,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>proto_desc)<sp/>{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(message<sp/>==<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="log_8h_1a6f0289102fe6b16c585ca7d18eae701e" kindref="member">AERROR</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;nullptr<sp/>error,<sp/>channel:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>channel_name;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a9f8c8aa8c692d90fe5463930b440493e" kindref="member">WriteMessage</ref>(channel_name,<sp/>message-&gt;message,<sp/>time_nanosec);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>MessageT&gt;</highlight></codeline>
+<codeline lineno="122" refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a9f8c8aa8c692d90fe5463930b440493e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a9f8c8aa8c692d90fe5463930b440493e" kindref="member">RecordWriter::WriteMessage</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>channel_name,</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>MessageT&amp;<sp/>message,</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint64_t<sp/>time_nanosec,</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>proto_desc)<sp/>{</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>message_type<sp/>=<sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a7bab92d44a94ea9c97546ff809c05064" kindref="member">GetMessageType</ref>(channel_name);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(message_type.empty())<sp/>{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1aff50d522ad22bcfb6ecc8affe837f048" kindref="member">WriteChannel</ref>(channel_name,<sp/>MessageT::descriptor()-&gt;full_name(),</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>proto_desc))<sp/>{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="log_8h_1a6f0289102fe6b16c585ca7d18eae701e" kindref="member">AERROR</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>write<sp/>meta<sp/>data<sp/>to<sp/>channel<sp/>[&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>channel_name</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;].&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(MessageT::descriptor()-&gt;full_name()<sp/>!=<sp/>message_type)<sp/>{</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="log_8h_1a6f0289102fe6b16c585ca7d18eae701e" kindref="member">AERROR</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Message<sp/>type<sp/>is<sp/>invalid,<sp/>expect:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>message_type</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;,<sp/>actual:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>MessageT::descriptor()-&gt;full_name();</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/>std::string<sp/>content(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!message.SerializeToString(&amp;content))<sp/>{</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="log_8h_1a6f0289102fe6b16c585ca7d18eae701e" kindref="member">AERROR</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>serialize<sp/>message,<sp/>channel:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>channel_name;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a9f8c8aa8c692d90fe5463930b440493e" kindref="member">WriteMessage</ref>(channel_name,<sp/>content,<sp/>time_nanosec);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>record</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>cyber</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>apollo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>CYBER_RECORD_RECORD_WRITER_H_</highlight></codeline>
+    </programlisting>
+    <location file="/home/work/apollo-fork/apollo/cyber/record/record_writer.h"/>
+  </compounddef>
+</doxygen>

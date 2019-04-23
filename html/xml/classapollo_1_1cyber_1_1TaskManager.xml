@@ -1,0 +1,170 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classapollo_1_1cyber_1_1TaskManager" kind="class" prot="public">
+    <compoundname>apollo::cyber::TaskManager</compoundname>
+    <includes refid="task__manager_8h" local="no">task_manager.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1TaskManager_1a7b3621cc356abfb846a781b9834b6fa6" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t apollo::cyber::TaskManager::num_threads_</definition>
+        <argsstring></argsstring>
+        <name>num_threads_</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/task/task_manager.h" line="57" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/task/task_manager.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1TaskManager_1a7a3ac7bab5bd60004dc4ad9bed645d8c" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t apollo::cyber::TaskManager::task_queue_size_</definition>
+        <argsstring></argsstring>
+        <name>task_queue_size_</name>
+        <initializer>= 1000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/task/task_manager.h" line="58" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/task/task_manager.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1TaskManager_1a8893ed8020b9deec8dd6ac1ea4dd5409" prot="private" static="no" mutable="no">
+        <type>std::atomic&lt; bool &gt;</type>
+        <definition>std::atomic&lt;bool&gt; apollo::cyber::TaskManager::stop_</definition>
+        <argsstring></argsstring>
+        <name>stop_</name>
+        <initializer>= {false}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/task/task_manager.h" line="59" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/task/task_manager.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1TaskManager_1a8057f1e4981b8dc2a0af8c615f4d24c6" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; uint64_t &gt;</type>
+        <definition>std::vector&lt;uint64_t&gt; apollo::cyber::TaskManager::tasks_</definition>
+        <argsstring></argsstring>
+        <name>tasks_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/task/task_manager.h" line="60" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/task/task_manager.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1TaskManager_1a9359f41900a726d1270bbf628ec2923b" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="classapollo_1_1cyber_1_1base_1_1BoundedQueue" kindref="compound">base::BoundedQueue</ref>&lt; std::function&lt; void()&gt; &gt; &gt;</type>
+        <definition>std::shared_ptr&lt;base::BoundedQueue&lt;std::function&lt;void()&gt; &gt; &gt; apollo::cyber::TaskManager::task_queue_</definition>
+        <argsstring></argsstring>
+        <name>task_queue_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/task/task_manager.h" line="61" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/task/task_manager.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1TaskManager_1aa55e5019fbec9c1e520f54f1ded6443d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual apollo::cyber::TaskManager::~TaskManager</definition>
+        <argsstring>()</argsstring>
+        <name>~TaskManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/task/task_manager.h" line="36" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1TaskManager_1a3892ccca0dfba0f188fda070fa18a07f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::TaskManager::Shutdown</definition>
+        <argsstring>()</argsstring>
+        <name>Shutdown</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/task/task_manager.h" line="38" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1TaskManager_1a894d368b98a01e544ccaa3c15f315496" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename F</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto apollo::cyber::TaskManager::Enqueue</definition>
+        <argsstring>(F &amp;&amp;func, Args &amp;&amp;...args) -&gt; std::future&lt; typename std::result_of&lt; F(Args...)&gt;::type &gt;</argsstring>
+        <name>Enqueue</name>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>func</declname>
+        </param>
+        <param>
+          <type>Args &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/task/task_manager.h" line="41" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/task/task_manager.h" bodystart="41" bodyend="54"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1TaskManager_1adf05b6a7d15514a9b44deb3868f15b4e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::TaskManager::DECLARE_SINGLETON</definition>
+        <argsstring>(TaskManager)</argsstring>
+        <name>DECLARE_SINGLETON</name>
+        <param>
+          <type><ref refid="classapollo_1_1cyber_1_1TaskManager" kindref="compound">TaskManager</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/task/task_manager.h" line="62" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/work/apollo-fork/apollo/cyber/task/task_manager.h" line="34" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/task/task_manager.h" bodystart="34" bodyend="63"/>
+    <listofallmembers>
+      <member refid="classapollo_1_1cyber_1_1TaskManager_1adf05b6a7d15514a9b44deb3868f15b4e" prot="private" virt="non-virtual"><scope>apollo::cyber::TaskManager</scope><name>DECLARE_SINGLETON</name></member>
+      <member refid="classapollo_1_1cyber_1_1TaskManager_1a894d368b98a01e544ccaa3c15f315496" prot="public" virt="non-virtual"><scope>apollo::cyber::TaskManager</scope><name>Enqueue</name></member>
+      <member refid="classapollo_1_1cyber_1_1TaskManager_1a7b3621cc356abfb846a781b9834b6fa6" prot="private" virt="non-virtual"><scope>apollo::cyber::TaskManager</scope><name>num_threads_</name></member>
+      <member refid="classapollo_1_1cyber_1_1TaskManager_1a3892ccca0dfba0f188fda070fa18a07f" prot="public" virt="non-virtual"><scope>apollo::cyber::TaskManager</scope><name>Shutdown</name></member>
+      <member refid="classapollo_1_1cyber_1_1TaskManager_1a8893ed8020b9deec8dd6ac1ea4dd5409" prot="private" virt="non-virtual"><scope>apollo::cyber::TaskManager</scope><name>stop_</name></member>
+      <member refid="classapollo_1_1cyber_1_1TaskManager_1a9359f41900a726d1270bbf628ec2923b" prot="private" virt="non-virtual"><scope>apollo::cyber::TaskManager</scope><name>task_queue_</name></member>
+      <member refid="classapollo_1_1cyber_1_1TaskManager_1a7a3ac7bab5bd60004dc4ad9bed645d8c" prot="private" virt="non-virtual"><scope>apollo::cyber::TaskManager</scope><name>task_queue_size_</name></member>
+      <member refid="classapollo_1_1cyber_1_1TaskManager_1a8057f1e4981b8dc2a0af8c615f4d24c6" prot="private" virt="non-virtual"><scope>apollo::cyber::TaskManager</scope><name>tasks_</name></member>
+      <member refid="classapollo_1_1cyber_1_1TaskManager_1aa55e5019fbec9c1e520f54f1ded6443d" prot="public" virt="virtual"><scope>apollo::cyber::TaskManager</scope><name>~TaskManager</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

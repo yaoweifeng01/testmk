@@ -1,0 +1,239 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classapollo_1_1cyber_1_1transport_1_1State" kind="class" prot="public">
+    <compoundname>apollo::cyber::transport::State</compoundname>
+    <includes refid="transport_2shm_2state_8h" local="no">state.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1transport_1_1State_1ad3abfa01572b568845992ff227afdbca" prot="private" static="no" mutable="no">
+        <type>std::atomic&lt; bool &gt;</type>
+        <definition>std::atomic&lt;bool&gt; apollo::cyber::transport::State::need_remap_</definition>
+        <argsstring></argsstring>
+        <name>need_remap_</name>
+        <initializer>= {false}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/state.h" line="57" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/shm/state.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1transport_1_1State_1a425b6f789a569327d2f09ee895c748cd" prot="private" static="no" mutable="no">
+        <type>std::atomic&lt; uint32_t &gt;</type>
+        <definition>std::atomic&lt;uint32_t&gt; apollo::cyber::transport::State::wrote_num_</definition>
+        <argsstring></argsstring>
+        <name>wrote_num_</name>
+        <initializer>= {0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/state.h" line="58" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/shm/state.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1transport_1_1State_1ad2a34718908df71e4e5e4a9b25239272" prot="private" static="no" mutable="no">
+        <type>std::atomic&lt; uint32_t &gt;</type>
+        <definition>std::atomic&lt;uint32_t&gt; apollo::cyber::transport::State::reference_count_</definition>
+        <argsstring></argsstring>
+        <name>reference_count_</name>
+        <initializer>= {0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/state.h" line="59" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/shm/state.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1transport_1_1State_1a2a76905661ce132af85088c9e7da29e7" prot="private" static="no" mutable="no">
+        <type>std::atomic&lt; uint64_t &gt;</type>
+        <definition>std::atomic&lt;uint64_t&gt; apollo::cyber::transport::State::ceiling_msg_size_</definition>
+        <argsstring></argsstring>
+        <name>ceiling_msg_size_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/state.h" line="60" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/shm/state.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1State_1a8117eb864cbff83ae76ef6419fdac008" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::transport::State::State</definition>
+        <argsstring>(const uint64_t &amp;ceiling_msg_size)</argsstring>
+        <name>State</name>
+        <param>
+          <type>const uint64_t &amp;</type>
+          <declname>ceiling_msg_size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/state.h" line="31" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1State_1a03c17c7f20aea3f065506721ba5af3ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual apollo::cyber::transport::State::~State</definition>
+        <argsstring>()</argsstring>
+        <name>~State</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/state.h" line="32" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1State_1a262eb05ecda2755a7f217a95b1796781" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::transport::State::IncreaseWroteNum</definition>
+        <argsstring>()</argsstring>
+        <name>IncreaseWroteNum</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/state.h" line="34" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/shm/state.h" bodystart="34" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1State_1a50600c0127c2078d8c7570956722c2a0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::transport::State::ResetWroteNum</definition>
+        <argsstring>()</argsstring>
+        <name>ResetWroteNum</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/state.h" line="35" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/shm/state.h" bodystart="35" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1State_1ab1c814d14a6b1d5f667ed097ac80e957" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::transport::State::DecreaseReferenceCounts</definition>
+        <argsstring>()</argsstring>
+        <name>DecreaseReferenceCounts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/state.h" line="37" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/shm/state.h" bodystart="37" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1State_1af698200fc34613e7384b178be4df771d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::transport::State::IncreaseReferenceCounts</definition>
+        <argsstring>()</argsstring>
+        <name>IncreaseReferenceCounts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/state.h" line="47" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/shm/state.h" bodystart="47" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1State_1a8836b00750bbadc2a7671647eaca7d55" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::transport::State::set_need_remap</definition>
+        <argsstring>(bool need)</argsstring>
+        <name>set_need_remap</name>
+        <param>
+          <type>bool</type>
+          <declname>need</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/state.h" line="49" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/shm/state.h" bodystart="49" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1State_1a67fd8abb622e18917a49cf6fde8262b6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::transport::State::need_remap</definition>
+        <argsstring>()</argsstring>
+        <name>need_remap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/state.h" line="50" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/shm/state.h" bodystart="50" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1State_1a980bab14ee9d5faa23eaa900068e3cac" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t apollo::cyber::transport::State::ceiling_msg_size</definition>
+        <argsstring>()</argsstring>
+        <name>ceiling_msg_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/state.h" line="52" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/shm/state.h" bodystart="52" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1State_1a3feb19b73e1ef2acd773fc63101b6445" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t apollo::cyber::transport::State::reference_counts</definition>
+        <argsstring>()</argsstring>
+        <name>reference_counts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/state.h" line="53" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/shm/state.h" bodystart="53" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1State_1ac8b8445a344578d5b68288f90be2282a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t apollo::cyber::transport::State::wrote_num</definition>
+        <argsstring>()</argsstring>
+        <name>wrote_num</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/state.h" line="54" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/shm/state.h" bodystart="54" bodyend="54"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/state.h" line="29" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/shm/state.h" bodystart="29" bodyend="61"/>
+    <listofallmembers>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1State_1a980bab14ee9d5faa23eaa900068e3cac" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::State</scope><name>ceiling_msg_size</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1State_1a2a76905661ce132af85088c9e7da29e7" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::State</scope><name>ceiling_msg_size_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1State_1ab1c814d14a6b1d5f667ed097ac80e957" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::State</scope><name>DecreaseReferenceCounts</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1State_1af698200fc34613e7384b178be4df771d" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::State</scope><name>IncreaseReferenceCounts</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1State_1a262eb05ecda2755a7f217a95b1796781" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::State</scope><name>IncreaseWroteNum</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1State_1a67fd8abb622e18917a49cf6fde8262b6" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::State</scope><name>need_remap</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1State_1ad3abfa01572b568845992ff227afdbca" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::State</scope><name>need_remap_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1State_1ad2a34718908df71e4e5e4a9b25239272" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::State</scope><name>reference_count_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1State_1a3feb19b73e1ef2acd773fc63101b6445" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::State</scope><name>reference_counts</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1State_1a50600c0127c2078d8c7570956722c2a0" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::State</scope><name>ResetWroteNum</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1State_1a8836b00750bbadc2a7671647eaca7d55" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::State</scope><name>set_need_remap</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1State_1a8117eb864cbff83ae76ef6419fdac008" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::State</scope><name>State</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1State_1ac8b8445a344578d5b68288f90be2282a" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::State</scope><name>wrote_num</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1State_1a425b6f789a569327d2f09ee895c748cd" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::State</scope><name>wrote_num_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1State_1a03c17c7f20aea3f065506721ba5af3ff" prot="public" virt="virtual"><scope>apollo::cyber::transport::State</scope><name>~State</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,47 @@
+\hypertarget{perf__event_8h}{\section{event/perf\-\_\-event.h File Reference}
+\label{perf__event_8h}\index{event/perf\-\_\-event.\-h@{event/perf\-\_\-event.\-h}}
+}
+{\ttfamily \#include $<$stdint.\-h$>$}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include \char`\"{}cyber/common/global\-\_\-data.\-h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classapollo_1_1cyber_1_1event_1_1EventBase}{apollo\-::cyber\-::event\-::\-Event\-Base}
+\item 
+class \hyperlink{classapollo_1_1cyber_1_1event_1_1SchedEvent}{apollo\-::cyber\-::event\-::\-Sched\-Event}
+\item 
+class \hyperlink{classapollo_1_1cyber_1_1event_1_1TransportEvent}{apollo\-::cyber\-::event\-::\-Transport\-Event}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespaceapollo}{apollo}
+\item 
+\hyperlink{namespaceapollo_1_1cyber}{apollo\-::cyber}
+\item 
+\hyperlink{namespaceapollo_1_1cyber_1_1event}{apollo\-::cyber\-::event}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespaceapollo_1_1cyber_1_1event_a0cd41779063293aaaa1f6afb60b75a01}{apollo\-::cyber\-::event\-::\-Event\-Type} \{ \hyperlink{namespaceapollo_1_1cyber_1_1event_a0cd41779063293aaaa1f6afb60b75a01a4b6692296d69168ca43e4fc2ff6c187a}{apollo\-::cyber\-::event\-::\-Event\-Type\-::\-S\-C\-H\-E\-D\-\_\-\-E\-V\-E\-N\-T} = 0, 
+\hyperlink{namespaceapollo_1_1cyber_1_1event_a0cd41779063293aaaa1f6afb60b75a01a71a859106fdc19e2743acead7494eb1e}{apollo\-::cyber\-::event\-::\-Event\-Type\-::\-T\-R\-A\-N\-S\-\_\-\-E\-V\-E\-N\-T} = 1, 
+\hyperlink{namespaceapollo_1_1cyber_1_1event_a0cd41779063293aaaa1f6afb60b75a01af5160dfab469cd692313343ce6ab0fd7}{apollo\-::cyber\-::event\-::\-Event\-Type\-::\-T\-R\-Y\-\_\-\-F\-E\-T\-C\-H\-\_\-\-E\-V\-E\-N\-T} = 3
+ \}
+\item 
+enum \hyperlink{namespaceapollo_1_1cyber_1_1event_a2918dc8c778172bc4a921da7fe02ad84}{apollo\-::cyber\-::event\-::\-Trans\-Perf} \{ \hyperlink{namespaceapollo_1_1cyber_1_1event_a2918dc8c778172bc4a921da7fe02ad84a4f8aa3306b40c00e2f3257586cf75bb2}{apollo\-::cyber\-::event\-::\-Trans\-Perf\-::\-T\-R\-A\-N\-S\-\_\-\-F\-R\-O\-M} = 1, 
+\hyperlink{namespaceapollo_1_1cyber_1_1event_a2918dc8c778172bc4a921da7fe02ad84a97e075f9c6fef56eb65d989b4a8a4913}{apollo\-::cyber\-::event\-::\-Trans\-Perf\-::\-T\-R\-A\-N\-S\-\_\-\-T\-O} = 2, 
+\hyperlink{namespaceapollo_1_1cyber_1_1event_a2918dc8c778172bc4a921da7fe02ad84a97563db5ce3ece3f8c8320f0aafeac66}{apollo\-::cyber\-::event\-::\-Trans\-Perf\-::\-W\-R\-I\-T\-E\-\_\-\-N\-O\-T\-I\-F\-Y} = 3
+ \}
+\item 
+enum \hyperlink{namespaceapollo_1_1cyber_1_1event_ab72445ee0247295d6699d5f251e11b83}{apollo\-::cyber\-::event\-::\-Sched\-Perf} \{ \\*
+\hyperlink{namespaceapollo_1_1cyber_1_1event_ab72445ee0247295d6699d5f251e11b83a87b0f4ed1757a6a1036e94af3849de13}{apollo\-::cyber\-::event\-::\-Sched\-Perf\-::\-S\-W\-A\-P\-\_\-\-I\-N} = 1, 
+\hyperlink{namespaceapollo_1_1cyber_1_1event_ab72445ee0247295d6699d5f251e11b83ac6f9baaf541ca8b4b7a298529141af5e}{apollo\-::cyber\-::event\-::\-Sched\-Perf\-::\-S\-W\-A\-P\-\_\-\-O\-U\-T} = 2, 
+\hyperlink{namespaceapollo_1_1cyber_1_1event_ab72445ee0247295d6699d5f251e11b83afd788afef045537064a378c476616d7e}{apollo\-::cyber\-::event\-::\-Sched\-Perf\-::\-N\-O\-T\-I\-F\-Y\-\_\-\-I\-N} = 3, 
+\hyperlink{namespaceapollo_1_1cyber_1_1event_ab72445ee0247295d6699d5f251e11b83a4acb2a89ea05800bf40c280da46bca3d}{apollo\-::cyber\-::event\-::\-Sched\-Perf\-::\-N\-E\-X\-T\-\_\-\-R\-T} = 4, 
+\\*
+\hyperlink{namespaceapollo_1_1cyber_1_1event_ab72445ee0247295d6699d5f251e11b83a6e0b2f444ee85018399819eb6ba8134b}{apollo\-::cyber\-::event\-::\-Sched\-Perf\-::\-R\-T\-\_\-\-C\-R\-E\-A\-T\-E} = 5
+ \}
+\end{DoxyCompactItemize}

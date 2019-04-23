@@ -1,0 +1,146 @@
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1State}{\section{apollo\-:\-:cyber\-:\-:transport\-:\-:State Class Reference}
+\label{classapollo_1_1cyber_1_1transport_1_1State}\index{apollo\-::cyber\-::transport\-::\-State@{apollo\-::cyber\-::transport\-::\-State}}
+}
+
+
+{\ttfamily \#include $<$state.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1transport_1_1State_a8117eb864cbff83ae76ef6419fdac008}{State} (const uint64\-\_\-t \&\hyperlink{classapollo_1_1cyber_1_1transport_1_1State_a980bab14ee9d5faa23eaa900068e3cac}{ceiling\-\_\-msg\-\_\-size})
+\item 
+virtual \hyperlink{classapollo_1_1cyber_1_1transport_1_1State_a03c17c7f20aea3f065506721ba5af3ff}{$\sim$\-State} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1transport_1_1State_a262eb05ecda2755a7f217a95b1796781}{Increase\-Wrote\-Num} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1transport_1_1State_a50600c0127c2078d8c7570956722c2a0}{Reset\-Wrote\-Num} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1transport_1_1State_ab1c814d14a6b1d5f667ed097ac80e957}{Decrease\-Reference\-Counts} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1transport_1_1State_af698200fc34613e7384b178be4df771d}{Increase\-Reference\-Counts} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1transport_1_1State_a8836b00750bbadc2a7671647eaca7d55}{set\-\_\-need\-\_\-remap} (bool need)
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1transport_1_1State_a67fd8abb622e18917a49cf6fde8262b6}{need\-\_\-remap} ()
+\item 
+uint64\-\_\-t \hyperlink{classapollo_1_1cyber_1_1transport_1_1State_a980bab14ee9d5faa23eaa900068e3cac}{ceiling\-\_\-msg\-\_\-size} ()
+\item 
+uint32\-\_\-t \hyperlink{classapollo_1_1cyber_1_1transport_1_1State_a3feb19b73e1ef2acd773fc63101b6445}{reference\-\_\-counts} ()
+\item 
+uint32\-\_\-t \hyperlink{classapollo_1_1cyber_1_1transport_1_1State_ac8b8445a344578d5b68288f90be2282a}{wrote\-\_\-num} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\-::atomic$<$ bool $>$ \hyperlink{classapollo_1_1cyber_1_1transport_1_1State_ad3abfa01572b568845992ff227afdbca}{need\-\_\-remap\-\_\-} = \{false\}
+\item 
+std\-::atomic$<$ uint32\-\_\-t $>$ \hyperlink{classapollo_1_1cyber_1_1transport_1_1State_a425b6f789a569327d2f09ee895c748cd}{wrote\-\_\-num\-\_\-} = \{0\}
+\item 
+std\-::atomic$<$ uint32\-\_\-t $>$ \hyperlink{classapollo_1_1cyber_1_1transport_1_1State_ad2a34718908df71e4e5e4a9b25239272}{reference\-\_\-count\-\_\-} = \{0\}
+\item 
+std\-::atomic$<$ uint64\-\_\-t $>$ \hyperlink{classapollo_1_1cyber_1_1transport_1_1State_a2a76905661ce132af85088c9e7da29e7}{ceiling\-\_\-msg\-\_\-size\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1State_a8117eb864cbff83ae76ef6419fdac008}{\index{apollo\-::cyber\-::transport\-::\-State@{apollo\-::cyber\-::transport\-::\-State}!State@{State}}
+\index{State@{State}!apollo::cyber::transport::State@{apollo\-::cyber\-::transport\-::\-State}}
+\subsubsection[{State}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::transport\-::\-State\-::\-State (
+\begin{DoxyParamCaption}
+\item[{const uint64\-\_\-t \&}]{ceiling\-\_\-msg\-\_\-size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}}\label{classapollo_1_1cyber_1_1transport_1_1State_a8117eb864cbff83ae76ef6419fdac008}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1State_a03c17c7f20aea3f065506721ba5af3ff}{\index{apollo\-::cyber\-::transport\-::\-State@{apollo\-::cyber\-::transport\-::\-State}!$\sim$\-State@{$\sim$\-State}}
+\index{$\sim$\-State@{$\sim$\-State}!apollo::cyber::transport::State@{apollo\-::cyber\-::transport\-::\-State}}
+\subsubsection[{$\sim$\-State}]{\setlength{\rightskip}{0pt plus 5cm}virtual apollo\-::cyber\-::transport\-::\-State\-::$\sim$\-State (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1transport_1_1State_a03c17c7f20aea3f065506721ba5af3ff}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1State_a980bab14ee9d5faa23eaa900068e3cac}{\index{apollo\-::cyber\-::transport\-::\-State@{apollo\-::cyber\-::transport\-::\-State}!ceiling\-\_\-msg\-\_\-size@{ceiling\-\_\-msg\-\_\-size}}
+\index{ceiling\-\_\-msg\-\_\-size@{ceiling\-\_\-msg\-\_\-size}!apollo::cyber::transport::State@{apollo\-::cyber\-::transport\-::\-State}}
+\subsubsection[{ceiling\-\_\-msg\-\_\-size}]{\setlength{\rightskip}{0pt plus 5cm}uint64\-\_\-t apollo\-::cyber\-::transport\-::\-State\-::ceiling\-\_\-msg\-\_\-size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1transport_1_1State_a980bab14ee9d5faa23eaa900068e3cac}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1State_ab1c814d14a6b1d5f667ed097ac80e957}{\index{apollo\-::cyber\-::transport\-::\-State@{apollo\-::cyber\-::transport\-::\-State}!Decrease\-Reference\-Counts@{Decrease\-Reference\-Counts}}
+\index{Decrease\-Reference\-Counts@{Decrease\-Reference\-Counts}!apollo::cyber::transport::State@{apollo\-::cyber\-::transport\-::\-State}}
+\subsubsection[{Decrease\-Reference\-Counts}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::transport\-::\-State\-::\-Decrease\-Reference\-Counts (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1transport_1_1State_ab1c814d14a6b1d5f667ed097ac80e957}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1State_af698200fc34613e7384b178be4df771d}{\index{apollo\-::cyber\-::transport\-::\-State@{apollo\-::cyber\-::transport\-::\-State}!Increase\-Reference\-Counts@{Increase\-Reference\-Counts}}
+\index{Increase\-Reference\-Counts@{Increase\-Reference\-Counts}!apollo::cyber::transport::State@{apollo\-::cyber\-::transport\-::\-State}}
+\subsubsection[{Increase\-Reference\-Counts}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::transport\-::\-State\-::\-Increase\-Reference\-Counts (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1transport_1_1State_af698200fc34613e7384b178be4df771d}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1State_a262eb05ecda2755a7f217a95b1796781}{\index{apollo\-::cyber\-::transport\-::\-State@{apollo\-::cyber\-::transport\-::\-State}!Increase\-Wrote\-Num@{Increase\-Wrote\-Num}}
+\index{Increase\-Wrote\-Num@{Increase\-Wrote\-Num}!apollo::cyber::transport::State@{apollo\-::cyber\-::transport\-::\-State}}
+\subsubsection[{Increase\-Wrote\-Num}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::transport\-::\-State\-::\-Increase\-Wrote\-Num (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1transport_1_1State_a262eb05ecda2755a7f217a95b1796781}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1State_a67fd8abb622e18917a49cf6fde8262b6}{\index{apollo\-::cyber\-::transport\-::\-State@{apollo\-::cyber\-::transport\-::\-State}!need\-\_\-remap@{need\-\_\-remap}}
+\index{need\-\_\-remap@{need\-\_\-remap}!apollo::cyber::transport::State@{apollo\-::cyber\-::transport\-::\-State}}
+\subsubsection[{need\-\_\-remap}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::transport\-::\-State\-::need\-\_\-remap (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1transport_1_1State_a67fd8abb622e18917a49cf6fde8262b6}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1State_a3feb19b73e1ef2acd773fc63101b6445}{\index{apollo\-::cyber\-::transport\-::\-State@{apollo\-::cyber\-::transport\-::\-State}!reference\-\_\-counts@{reference\-\_\-counts}}
+\index{reference\-\_\-counts@{reference\-\_\-counts}!apollo::cyber::transport::State@{apollo\-::cyber\-::transport\-::\-State}}
+\subsubsection[{reference\-\_\-counts}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t apollo\-::cyber\-::transport\-::\-State\-::reference\-\_\-counts (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1transport_1_1State_a3feb19b73e1ef2acd773fc63101b6445}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1State_a50600c0127c2078d8c7570956722c2a0}{\index{apollo\-::cyber\-::transport\-::\-State@{apollo\-::cyber\-::transport\-::\-State}!Reset\-Wrote\-Num@{Reset\-Wrote\-Num}}
+\index{Reset\-Wrote\-Num@{Reset\-Wrote\-Num}!apollo::cyber::transport::State@{apollo\-::cyber\-::transport\-::\-State}}
+\subsubsection[{Reset\-Wrote\-Num}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::transport\-::\-State\-::\-Reset\-Wrote\-Num (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1transport_1_1State_a50600c0127c2078d8c7570956722c2a0}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1State_a8836b00750bbadc2a7671647eaca7d55}{\index{apollo\-::cyber\-::transport\-::\-State@{apollo\-::cyber\-::transport\-::\-State}!set\-\_\-need\-\_\-remap@{set\-\_\-need\-\_\-remap}}
+\index{set\-\_\-need\-\_\-remap@{set\-\_\-need\-\_\-remap}!apollo::cyber::transport::State@{apollo\-::cyber\-::transport\-::\-State}}
+\subsubsection[{set\-\_\-need\-\_\-remap}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::transport\-::\-State\-::set\-\_\-need\-\_\-remap (
+\begin{DoxyParamCaption}
+\item[{bool}]{need}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1transport_1_1State_a8836b00750bbadc2a7671647eaca7d55}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1State_ac8b8445a344578d5b68288f90be2282a}{\index{apollo\-::cyber\-::transport\-::\-State@{apollo\-::cyber\-::transport\-::\-State}!wrote\-\_\-num@{wrote\-\_\-num}}
+\index{wrote\-\_\-num@{wrote\-\_\-num}!apollo::cyber::transport::State@{apollo\-::cyber\-::transport\-::\-State}}
+\subsubsection[{wrote\-\_\-num}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t apollo\-::cyber\-::transport\-::\-State\-::wrote\-\_\-num (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1transport_1_1State_ac8b8445a344578d5b68288f90be2282a}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1State_a2a76905661ce132af85088c9e7da29e7}{\index{apollo\-::cyber\-::transport\-::\-State@{apollo\-::cyber\-::transport\-::\-State}!ceiling\-\_\-msg\-\_\-size\-\_\-@{ceiling\-\_\-msg\-\_\-size\-\_\-}}
+\index{ceiling\-\_\-msg\-\_\-size\-\_\-@{ceiling\-\_\-msg\-\_\-size\-\_\-}!apollo::cyber::transport::State@{apollo\-::cyber\-::transport\-::\-State}}
+\subsubsection[{ceiling\-\_\-msg\-\_\-size\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::atomic$<$uint64\-\_\-t$>$ apollo\-::cyber\-::transport\-::\-State\-::ceiling\-\_\-msg\-\_\-size\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1State_a2a76905661ce132af85088c9e7da29e7}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1State_ad3abfa01572b568845992ff227afdbca}{\index{apollo\-::cyber\-::transport\-::\-State@{apollo\-::cyber\-::transport\-::\-State}!need\-\_\-remap\-\_\-@{need\-\_\-remap\-\_\-}}
+\index{need\-\_\-remap\-\_\-@{need\-\_\-remap\-\_\-}!apollo::cyber::transport::State@{apollo\-::cyber\-::transport\-::\-State}}
+\subsubsection[{need\-\_\-remap\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::atomic$<$bool$>$ apollo\-::cyber\-::transport\-::\-State\-::need\-\_\-remap\-\_\- = \{false\}\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1State_ad3abfa01572b568845992ff227afdbca}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1State_ad2a34718908df71e4e5e4a9b25239272}{\index{apollo\-::cyber\-::transport\-::\-State@{apollo\-::cyber\-::transport\-::\-State}!reference\-\_\-count\-\_\-@{reference\-\_\-count\-\_\-}}
+\index{reference\-\_\-count\-\_\-@{reference\-\_\-count\-\_\-}!apollo::cyber::transport::State@{apollo\-::cyber\-::transport\-::\-State}}
+\subsubsection[{reference\-\_\-count\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::atomic$<$uint32\-\_\-t$>$ apollo\-::cyber\-::transport\-::\-State\-::reference\-\_\-count\-\_\- = \{0\}\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1State_ad2a34718908df71e4e5e4a9b25239272}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1State_a425b6f789a569327d2f09ee895c748cd}{\index{apollo\-::cyber\-::transport\-::\-State@{apollo\-::cyber\-::transport\-::\-State}!wrote\-\_\-num\-\_\-@{wrote\-\_\-num\-\_\-}}
+\index{wrote\-\_\-num\-\_\-@{wrote\-\_\-num\-\_\-}!apollo::cyber::transport::State@{apollo\-::cyber\-::transport\-::\-State}}
+\subsubsection[{wrote\-\_\-num\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::atomic$<$uint32\-\_\-t$>$ apollo\-::cyber\-::transport\-::\-State\-::wrote\-\_\-num\-\_\- = \{0\}\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1State_a425b6f789a569327d2f09ee895c748cd}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+transport/shm/\hyperlink{transport_2shm_2state_8h}{state.\-h}\end{DoxyCompactItemize}

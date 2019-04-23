@@ -1,0 +1,336 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="namespaceapollo_1_1cyber_1_1croutine" kind="namespace">
+    <compoundname>apollo::cyber::croutine</compoundname>
+    <innerclass refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine" prot="public">apollo::cyber::croutine::CRoutine</innerclass>
+    <innerclass refid="structapollo_1_1cyber_1_1croutine_1_1RoutineContext" prot="public">apollo::cyber::croutine::RoutineContext</innerclass>
+    <innerclass refid="classapollo_1_1cyber_1_1croutine_1_1RoutineFactory" prot="public">apollo::cyber::croutine::RoutineFactory</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespaceapollo_1_1cyber_1_1croutine_1a9b2ec600d9734ed2e857a7235cec5e48" prot="public" static="no">
+        <name>RoutineState</name>
+        <enumvalue id="namespaceapollo_1_1cyber_1_1croutine_1a9b2ec600d9734ed2e857a7235cec5e48a2baa69eafc7204f3bd8648eba580c489" prot="public">
+          <name>READY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceapollo_1_1cyber_1_1croutine_1a9b2ec600d9734ed2e857a7235cec5e48a2c616b2713e2e0aed04b4c4752c88133" prot="public">
+          <name>FINISHED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceapollo_1_1cyber_1_1croutine_1a9b2ec600d9734ed2e857a7235cec5e48ab32bd403b93dc6deffdab7af55e82596" prot="public">
+          <name>SLEEP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceapollo_1_1cyber_1_1croutine_1a9b2ec600d9734ed2e857a7235cec5e48a1314a216c30bb655a0e767e250bbecd1" prot="public">
+          <name>IO_WAIT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceapollo_1_1cyber_1_1croutine_1a9b2ec600d9734ed2e857a7235cec5e48aa561d434eca3762c4cfbaee9b7dfc26c" prot="public">
+          <name>DATA_WAIT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" line="38" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" bodystart="38" bodyend="38"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespaceapollo_1_1cyber_1_1croutine_1a5c1d994c8a08504b270fd8c4ba57d282" prot="public" static="no">
+        <type>std::function&lt; void()&gt;</type>
+        <definition>using apollo::cyber::croutine::RoutineFunc = typedef std::function&lt;void()&gt;</definition>
+        <argsstring></argsstring>
+        <name>RoutineFunc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" line="35" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceapollo_1_1cyber_1_1croutine_1aae31aee73e46be40ab635496b4d9d1e2" prot="public" static="no">
+        <type>std::chrono::microseconds</type>
+        <definition>using apollo::cyber::croutine::Duration = typedef std::chrono::microseconds</definition>
+        <argsstring></argsstring>
+        <name>Duration</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" line="36" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceapollo_1_1cyber_1_1croutine_1a10b1486257a9f9174f905a6f4a54523f" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* apollo::cyber::croutine::func)(void *)</definition>
+        <argsstring>)(void *)</argsstring>
+        <name>func</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/croutine/detail/routine_context.h" line="37" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/croutine/detail/routine_context.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespaceapollo_1_1cyber_1_1croutine_1ac645ea6350d95f21980e311868f72557" prot="public" static="no" mutable="no">
+        <type>constexpr size_t</type>
+        <definition>constexpr size_t apollo::cyber::croutine::STACK_SIZE</definition>
+        <argsstring></argsstring>
+        <name>STACK_SIZE</name>
+        <initializer>= 2 * 1024 * 1024</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/croutine/detail/routine_context.h" line="34" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/croutine/detail/routine_context.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceapollo_1_1cyber_1_1croutine_1aa975ad5018ccbbb80b0cac19c50dc39f" prot="public" static="no" mutable="no">
+        <type>constexpr size_t</type>
+        <definition>constexpr size_t apollo::cyber::croutine::REGISTERS_SIZE</definition>
+        <argsstring></argsstring>
+        <name>REGISTERS_SIZE</name>
+        <initializer>= 56</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/croutine/detail/routine_context.h" line="35" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/croutine/detail/routine_context.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceapollo_1_1cyber_1_1croutine_1acf92a957d93bc7200c945d560827fb4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::croutine::MakeContext</definition>
+        <argsstring>(const func &amp;f1, const void *arg, RoutineContext *ctx)</argsstring>
+        <name>MakeContext</name>
+        <param>
+          <type>const <ref refid="namespaceapollo_1_1cyber_1_1croutine_1a10b1486257a9f9174f905a6f4a54523f" kindref="member">func</ref> &amp;</type>
+          <declname>f1</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>arg</declname>
+        </param>
+        <param>
+          <type><ref refid="structapollo_1_1cyber_1_1croutine_1_1RoutineContext" kindref="compound">RoutineContext</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/croutine/detail/routine_context.h" line="43" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceapollo_1_1cyber_1_1croutine_1a909857eec1b9f6f963de7dc22bf7cc92" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::croutine::SwapContext</definition>
+        <argsstring>(char **src_sp, char **dest_sp)</argsstring>
+        <name>SwapContext</name>
+        <param>
+          <type>char **</type>
+          <declname>src_sp</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>dest_sp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/croutine/detail/routine_context.h" line="45" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/croutine/detail/routine_context.h" bodystart="45" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceapollo_1_1cyber_1_1croutine_1a10e8cae84e11868f0b7a867b3ec07409" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename M0</type>
+          </param>
+          <param>
+            <type>typename F</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classapollo_1_1cyber_1_1croutine_1_1RoutineFactory" kindref="compound">RoutineFactory</ref></type>
+        <definition>RoutineFactory apollo::cyber::croutine::CreateRoutineFactory</definition>
+        <argsstring>(F &amp;&amp;f, const std::shared_ptr&lt; data::DataVisitor&lt; M0 &gt;&gt; &amp;dv)</argsstring>
+        <name>CreateRoutineFactory</name>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>const std::shared_ptr&lt; <ref refid="classapollo_1_1cyber_1_1data_1_1DataVisitor" kindref="compound">data::DataVisitor</ref>&lt; M0 &gt;&gt; &amp;</type>
+          <declname>dv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/croutine/routine_factory.h" line="51" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/croutine/routine_factory.h" bodystart="51" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceapollo_1_1cyber_1_1croutine_1aa78086f3d811e17add67e3f38336afe3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename M0</type>
+          </param>
+          <param>
+            <type>typename M1</type>
+          </param>
+          <param>
+            <type>typename F</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classapollo_1_1cyber_1_1croutine_1_1RoutineFactory" kindref="compound">RoutineFactory</ref></type>
+        <definition>RoutineFactory apollo::cyber::croutine::CreateRoutineFactory</definition>
+        <argsstring>(F &amp;&amp;f, const std::shared_ptr&lt; data::DataVisitor&lt; M0, M1 &gt;&gt; &amp;dv)</argsstring>
+        <name>CreateRoutineFactory</name>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>const std::shared_ptr&lt; <ref refid="classapollo_1_1cyber_1_1data_1_1DataVisitor" kindref="compound">data::DataVisitor</ref>&lt; M0, M1 &gt;&gt; &amp;</type>
+          <declname>dv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/croutine/routine_factory.h" line="73" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/croutine/routine_factory.h" bodystart="73" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceapollo_1_1cyber_1_1croutine_1af447a52b313ddec1d785c15fd7d045a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename M0</type>
+          </param>
+          <param>
+            <type>typename M1</type>
+          </param>
+          <param>
+            <type>typename M2</type>
+          </param>
+          <param>
+            <type>typename F</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classapollo_1_1cyber_1_1croutine_1_1RoutineFactory" kindref="compound">RoutineFactory</ref></type>
+        <definition>RoutineFactory apollo::cyber::croutine::CreateRoutineFactory</definition>
+        <argsstring>(F &amp;&amp;f, const std::shared_ptr&lt; data::DataVisitor&lt; M0, M1, M2 &gt;&gt; &amp;dv)</argsstring>
+        <name>CreateRoutineFactory</name>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>const std::shared_ptr&lt; <ref refid="classapollo_1_1cyber_1_1data_1_1DataVisitor" kindref="compound">data::DataVisitor</ref>&lt; M0, M1, M2 &gt;&gt; &amp;</type>
+          <declname>dv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/croutine/routine_factory.h" line="96" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/croutine/routine_factory.h" bodystart="96" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceapollo_1_1cyber_1_1croutine_1a77fe2103742e21e13e25f76f7193085c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename M0</type>
+          </param>
+          <param>
+            <type>typename M1</type>
+          </param>
+          <param>
+            <type>typename M2</type>
+          </param>
+          <param>
+            <type>typename M3</type>
+          </param>
+          <param>
+            <type>typename F</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classapollo_1_1cyber_1_1croutine_1_1RoutineFactory" kindref="compound">RoutineFactory</ref></type>
+        <definition>RoutineFactory apollo::cyber::croutine::CreateRoutineFactory</definition>
+        <argsstring>(F &amp;&amp;f, const std::shared_ptr&lt; data::DataVisitor&lt; M0, M1, M2, M3 &gt;&gt; &amp;dv)</argsstring>
+        <name>CreateRoutineFactory</name>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>const std::shared_ptr&lt; <ref refid="classapollo_1_1cyber_1_1data_1_1DataVisitor" kindref="compound">data::DataVisitor</ref>&lt; M0, M1, M2, M3 &gt;&gt; &amp;</type>
+          <declname>dv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/croutine/routine_factory.h" line="120" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/croutine/routine_factory.h" bodystart="120" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceapollo_1_1cyber_1_1croutine_1a86b2876965ee3da499523200781100a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Function</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classapollo_1_1cyber_1_1croutine_1_1RoutineFactory" kindref="compound">RoutineFactory</ref></type>
+        <definition>RoutineFactory apollo::cyber::croutine::CreateRoutineFactory</definition>
+        <argsstring>(Function &amp;&amp;f)</argsstring>
+        <name>CreateRoutineFactory</name>
+        <param>
+          <type>Function &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/croutine/routine_factory.h" line="145" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/croutine/routine_factory.h" bodystart="145" bodyend="149"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" line="33" column="1"/>
+  </compounddef>
+</doxygen>

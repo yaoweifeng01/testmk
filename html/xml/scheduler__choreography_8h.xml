@@ -1,0 +1,1008 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="scheduler__choreography_8h" kind="file">
+    <compoundname>scheduler_choreography.h</compoundname>
+    <includes local="no">memory</includes>
+    <includes local="no">string</includes>
+    <includes local="no">unordered_map</includes>
+    <includes local="no">vector</includes>
+    <includes refid="croutine_8h" local="yes">cyber/croutine/croutine.h</includes>
+    <includes local="yes">cyber/proto/choreography_conf.pb.h</includes>
+    <includes refid="scheduler_8h" local="yes">cyber/scheduler/scheduler.h</includes>
+    <includedby refid="scheduler__factory_8h" local="yes">scheduler/scheduler_factory.h</includedby>
+    <incdepgraph>
+      <node id="8416">
+        <label>list</label>
+      </node>
+      <node id="8360">
+        <label>atomic</label>
+      </node>
+      <node id="8366">
+        <label>stdarg.h</label>
+      </node>
+      <node id="8415">
+        <label>signal.h</label>
+        <link refid="signal_8h"/>
+        <childnode refid="8396" relation="include">
+        </childnode>
+        <childnode refid="8362" relation="include">
+        </childnode>
+        <childnode refid="8416" relation="include">
+        </childnode>
+        <childnode refid="8355" relation="include">
+        </childnode>
+        <childnode refid="8363" relation="include">
+        </childnode>
+      </node>
+      <node id="8414">
+        <label>cyber/state.h</label>
+        <link refid="state_8h"/>
+        <childnode refid="8415" relation="include">
+        </childnode>
+        <childnode refid="8417" relation="include">
+        </childnode>
+        <childnode refid="8376" relation="include">
+        </childnode>
+        <childnode refid="8418" relation="include">
+        </childnode>
+        <childnode refid="8390" relation="include">
+        </childnode>
+        <childnode refid="8372" relation="include">
+        </childnode>
+        <childnode refid="8378" relation="include">
+        </childnode>
+        <childnode refid="8365" relation="include">
+        </childnode>
+      </node>
+      <node id="8362">
+        <label>functional</label>
+      </node>
+      <node id="8399">
+        <label>cyber/data/cache_buffer.h</label>
+        <link refid="cache__buffer_8h"/>
+        <childnode refid="8363" relation="include">
+        </childnode>
+        <childnode refid="8358" relation="include">
+        </childnode>
+      </node>
+      <node id="8407">
+        <label>limits</label>
+      </node>
+      <node id="8367">
+        <label>cyber/binary.h</label>
+        <link refid="binary_8h"/>
+        <childnode refid="8356" relation="include">
+        </childnode>
+      </node>
+      <node id="8368">
+        <label>glog/logging.h</label>
+      </node>
+      <node id="8390">
+        <label>cstdint</label>
+      </node>
+      <node id="8392">
+        <label>cyber/common/global_data.h</label>
+        <link refid="global__data_8h"/>
+        <childnode refid="8356" relation="include">
+        </childnode>
+        <childnode refid="8357" relation="include">
+        </childnode>
+        <childnode refid="8379" relation="include">
+        </childnode>
+        <childnode refid="8383" relation="include">
+        </childnode>
+        <childnode refid="8365" relation="include">
+        </childnode>
+        <childnode refid="8386" relation="include">
+        </childnode>
+        <childnode refid="8393" relation="include">
+        </childnode>
+        <childnode refid="8394" relation="include">
+        </childnode>
+      </node>
+      <node id="8380">
+        <label>stdint.h</label>
+      </node>
+      <node id="8385">
+        <label>cyber/base/rw_lock_guard.h</label>
+        <link refid="rw__lock__guard_8h"/>
+        <childnode refid="8380" relation="include">
+        </childnode>
+        <childnode refid="8376" relation="include">
+        </childnode>
+        <childnode refid="8360" relation="include">
+        </childnode>
+        <childnode refid="8384" relation="include">
+        </childnode>
+        <childnode refid="8371" relation="include">
+        </childnode>
+        <childnode refid="8373" relation="include">
+        </childnode>
+        <childnode refid="8363" relation="include">
+        </childnode>
+        <childnode refid="8378" relation="include">
+        </childnode>
+      </node>
+      <node id="8406">
+        <label>cyber/time/time.h</label>
+        <link refid="time_8h"/>
+        <childnode refid="8407" relation="include">
+        </childnode>
+        <childnode refid="8356" relation="include">
+        </childnode>
+        <childnode refid="8408" relation="include">
+        </childnode>
+      </node>
+      <node id="8411">
+        <label>stdexcept</label>
+      </node>
+      <node id="8375">
+        <label>cyber/scheduler/scheduler.h</label>
+        <link refid="scheduler_8h"/>
+        <childnode refid="8376" relation="include">
+        </childnode>
+        <childnode refid="8360" relation="include">
+        </childnode>
+        <childnode refid="8377" relation="include">
+        </childnode>
+        <childnode refid="8355" relation="include">
+        </childnode>
+        <childnode refid="8363" relation="include">
+        </childnode>
+        <childnode refid="8356" relation="include">
+        </childnode>
+        <childnode refid="8378" relation="include">
+        </childnode>
+        <childnode refid="8357" relation="include">
+        </childnode>
+        <childnode refid="8358" relation="include">
+        </childnode>
+        <childnode refid="8379" relation="include">
+        </childnode>
+        <childnode refid="8383" relation="include">
+        </childnode>
+        <childnode refid="8365" relation="include">
+        </childnode>
+        <childnode refid="8386" relation="include">
+        </childnode>
+        <childnode refid="8389" relation="include">
+        </childnode>
+        <childnode refid="8359" relation="include">
+        </childnode>
+        <childnode refid="8391" relation="include">
+        </childnode>
+        <childnode refid="8374" relation="include">
+        </childnode>
+        <childnode refid="8424" relation="include">
+        </childnode>
+      </node>
+      <node id="8394">
+        <label>cyber/proto/cyber_conf.pb.h</label>
+      </node>
+      <node id="8386">
+        <label>cyber/common/macros.h</label>
+        <link refid="common_2macros_8h"/>
+        <childnode refid="8373" relation="include">
+        </childnode>
+        <childnode refid="8355" relation="include">
+        </childnode>
+        <childnode refid="8363" relation="include">
+        </childnode>
+        <childnode refid="8381" relation="include">
+        </childnode>
+        <childnode refid="8382" relation="include">
+        </childnode>
+        <childnode refid="8387" relation="include">
+        </childnode>
+      </node>
+      <node id="8356">
+        <label>string</label>
+      </node>
+      <node id="8420">
+        <label>cyber/data/fusion/all_latest.h</label>
+        <link refid="all__latest_8h"/>
+        <childnode refid="8421" relation="include">
+        </childnode>
+        <childnode refid="8355" relation="include">
+        </childnode>
+        <childnode refid="8356" relation="include">
+        </childnode>
+        <childnode refid="8381" relation="include">
+        </childnode>
+        <childnode refid="8422" relation="include">
+        </childnode>
+        <childnode refid="8358" relation="include">
+        </childnode>
+        <childnode refid="8389" relation="include">
+        </childnode>
+        <childnode refid="8397" relation="include">
+        </childnode>
+        <childnode refid="8423" relation="include">
+        </childnode>
+      </node>
+      <node id="8377">
+        <label>map</label>
+      </node>
+      <node id="8389">
+        <label>cyber/common/types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="8390" relation="include">
+        </childnode>
+      </node>
+      <node id="8391">
+        <label>cyber/croutine/routine_factory.h</label>
+        <link refid="routine__factory_8h"/>
+        <childnode refid="8355" relation="include">
+        </childnode>
+        <childnode refid="8382" relation="include">
+        </childnode>
+        <childnode refid="8392" relation="include">
+        </childnode>
+        <childnode refid="8365" relation="include">
+        </childnode>
+        <childnode refid="8359" relation="include">
+        </childnode>
+        <childnode refid="8395" relation="include">
+        </childnode>
+        <childnode refid="8400" relation="include">
+        </childnode>
+      </node>
+      <node id="8401">
+        <label>fstream</label>
+      </node>
+      <node id="8398">
+        <label>cyber/data/data_notifier.h</label>
+        <link refid="data__notifier_8h"/>
+        <childnode refid="8355" relation="include">
+        </childnode>
+        <childnode refid="8363" relation="include">
+        </childnode>
+        <childnode refid="8358" relation="include">
+        </childnode>
+        <childnode refid="8365" relation="include">
+        </childnode>
+        <childnode refid="8386" relation="include">
+        </childnode>
+        <childnode refid="8399" relation="include">
+        </childnode>
+        <childnode refid="8400" relation="include">
+        </childnode>
+        <childnode refid="8406" relation="include">
+        </childnode>
+      </node>
+      <node id="8404">
+        <label>cyber/event/perf_event.h</label>
+        <link refid="perf__event_8h"/>
+        <childnode refid="8380" relation="include">
+        </childnode>
+        <childnode refid="8405" relation="include">
+        </childnode>
+        <childnode refid="8356" relation="include">
+        </childnode>
+        <childnode refid="8392" relation="include">
+        </childnode>
+      </node>
+      <node id="8402">
+        <label>cyber/base/bounded_queue.h</label>
+        <link refid="bounded__queue_8h"/>
+        <childnode refid="8380" relation="include">
+        </childnode>
+        <childnode refid="8376" relation="include">
+        </childnode>
+        <childnode refid="8396" relation="include">
+        </childnode>
+        <childnode refid="8360" relation="include">
+        </childnode>
+        <childnode refid="8371" relation="include">
+        </childnode>
+        <childnode refid="8355" relation="include">
+        </childnode>
+        <childnode refid="8387" relation="include">
+        </childnode>
+        <childnode refid="8403" relation="include">
+        </childnode>
+      </node>
+      <node id="8379">
+        <label>cyber/base/atomic_hash_map.h</label>
+        <link refid="atomic__hash__map_8h"/>
+        <childnode refid="8380" relation="include">
+        </childnode>
+        <childnode refid="8360" relation="include">
+        </childnode>
+        <childnode refid="8381" relation="include">
+        </childnode>
+        <childnode refid="8382" relation="include">
+        </childnode>
+      </node>
+      <node id="8370">
+        <label>cyber/croutine/detail/routine_context.h</label>
+        <link refid="routine__context_8h"/>
+        <childnode refid="8371" relation="include">
+        </childnode>
+        <childnode refid="8372" relation="include">
+        </childnode>
+        <childnode refid="8373" relation="include">
+        </childnode>
+        <childnode refid="8365" relation="include">
+        </childnode>
+      </node>
+      <node id="8419">
+        <label>cyber/data/data_visitor_base.h</label>
+        <link refid="data__visitor__base_8h"/>
+        <childnode refid="8396" relation="include">
+        </childnode>
+        <childnode refid="8362" relation="include">
+        </childnode>
+        <childnode refid="8355" relation="include">
+        </childnode>
+        <childnode refid="8358" relation="include">
+        </childnode>
+        <childnode refid="8392" relation="include">
+        </childnode>
+        <childnode refid="8365" relation="include">
+        </childnode>
+        <childnode refid="8398" relation="include">
+        </childnode>
+        <childnode refid="8412" relation="include">
+        </childnode>
+      </node>
+      <node id="8374">
+        <label>cyber/proto/choreography_conf.pb.h</label>
+      </node>
+      <node id="8384">
+        <label>condition_variable</label>
+      </node>
+      <node id="8417">
+        <label>sys/types.h</label>
+      </node>
+      <node id="8422">
+        <label>typeinfo</label>
+      </node>
+      <node id="8413">
+        <label>cyber/data/data_dispatcher.h</label>
+        <link refid="data__dispatcher_8h"/>
+        <childnode refid="8355" relation="include">
+        </childnode>
+        <childnode refid="8363" relation="include">
+        </childnode>
+        <childnode refid="8358" relation="include">
+        </childnode>
+        <childnode refid="8365" relation="include">
+        </childnode>
+        <childnode refid="8386" relation="include">
+        </childnode>
+        <childnode refid="8397" relation="include">
+        </childnode>
+        <childnode refid="8414" relation="include">
+        </childnode>
+        <childnode refid="8406" relation="include">
+        </childnode>
+      </node>
+      <node id="8383">
+        <label>cyber/base/atomic_rw_lock.h</label>
+        <link refid="atomic__rw__lock_8h"/>
+        <childnode refid="8380" relation="include">
+        </childnode>
+        <childnode refid="8376" relation="include">
+        </childnode>
+        <childnode refid="8360" relation="include">
+        </childnode>
+        <childnode refid="8384" relation="include">
+        </childnode>
+        <childnode refid="8371" relation="include">
+        </childnode>
+        <childnode refid="8373" relation="include">
+        </childnode>
+        <childnode refid="8363" relation="include">
+        </childnode>
+        <childnode refid="8378" relation="include">
+        </childnode>
+        <childnode refid="8385" relation="include">
+        </childnode>
+      </node>
+      <node id="8376">
+        <label>unistd.h</label>
+      </node>
+      <node id="8358">
+        <label>vector</label>
+      </node>
+      <node id="8424">
+        <label>cyber/scheduler/common/mutex_wrapper.h</label>
+        <link refid="mutex__wrapper_8h"/>
+        <childnode refid="8363" relation="include">
+        </childnode>
+      </node>
+      <node id="8403">
+        <label>cyber/base/wait_strategy.h</label>
+        <link refid="wait__strategy_8h"/>
+        <childnode refid="8361" relation="include">
+        </childnode>
+        <childnode refid="8384" relation="include">
+        </childnode>
+        <childnode refid="8371" relation="include">
+        </childnode>
+        <childnode refid="8363" relation="include">
+        </childnode>
+        <childnode refid="8378" relation="include">
+        </childnode>
+      </node>
+      <node id="8388">
+        <label>new</label>
+      </node>
+      <node id="8365">
+        <label>cyber/common/log.h</label>
+        <link refid="log_8h"/>
+        <childnode refid="8366" relation="include">
+        </childnode>
+        <childnode refid="8367" relation="include">
+        </childnode>
+        <childnode refid="8368" relation="include">
+        </childnode>
+        <childnode refid="8369" relation="include">
+        </childnode>
+      </node>
+      <node id="8382">
+        <label>utility</label>
+      </node>
+      <node id="8405">
+        <label>sstream</label>
+      </node>
+      <node id="8423">
+        <label>cyber/data/fusion/data_fusion.h</label>
+        <link refid="data__fusion_8h"/>
+        <childnode refid="8421" relation="include">
+        </childnode>
+        <childnode refid="8355" relation="include">
+        </childnode>
+        <childnode refid="8356" relation="include">
+        </childnode>
+        <childnode refid="8381" relation="include">
+        </childnode>
+        <childnode refid="8422" relation="include">
+        </childnode>
+        <childnode refid="8358" relation="include">
+        </childnode>
+        <childnode refid="8389" relation="include">
+        </childnode>
+      </node>
+      <node id="8400">
+        <label>cyber/event/perf_event_cache.h</label>
+        <link refid="perf__event__cache_8h"/>
+        <childnode refid="8361" relation="include">
+        </childnode>
+        <childnode refid="8401" relation="include">
+        </childnode>
+        <childnode refid="8355" relation="include">
+        </childnode>
+        <childnode refid="8378" relation="include">
+        </childnode>
+        <childnode refid="8402" relation="include">
+        </childnode>
+        <childnode refid="8386" relation="include">
+        </childnode>
+        <childnode refid="8404" relation="include">
+        </childnode>
+      </node>
+      <node id="8409">
+        <label>math.h</label>
+      </node>
+      <node id="8412">
+        <label>cyber/proto/component_conf.pb.h</label>
+      </node>
+      <node id="8418">
+        <label>cerrno</label>
+      </node>
+      <node id="8371">
+        <label>cstdlib</label>
+      </node>
+      <node id="8395">
+        <label>cyber/data/data_visitor.h</label>
+        <link refid="data__visitor_8h"/>
+        <childnode refid="8396" relation="include">
+        </childnode>
+        <childnode refid="8362" relation="include">
+        </childnode>
+        <childnode refid="8355" relation="include">
+        </childnode>
+        <childnode refid="8358" relation="include">
+        </childnode>
+        <childnode refid="8365" relation="include">
+        </childnode>
+        <childnode refid="8397" relation="include">
+        </childnode>
+        <childnode refid="8413" relation="include">
+        </childnode>
+        <childnode refid="8419" relation="include">
+        </childnode>
+        <childnode refid="8420" relation="include">
+        </childnode>
+        <childnode refid="8423" relation="include">
+        </childnode>
+      </node>
+      <node id="8373">
+        <label>iostream</label>
+      </node>
+      <node id="8408">
+        <label>cyber/time/duration.h</label>
+        <link refid="duration_8h"/>
+        <childnode refid="8409" relation="include">
+        </childnode>
+        <childnode refid="8380" relation="include">
+        </childnode>
+        <childnode refid="8410" relation="include">
+        </childnode>
+        <childnode refid="8373" relation="include">
+        </childnode>
+        <childnode refid="8411" relation="include">
+        </childnode>
+      </node>
+      <node id="8421">
+        <label>deque</label>
+      </node>
+      <node id="8357">
+        <label>unordered_map</label>
+      </node>
+      <node id="8410">
+        <label>climits</label>
+      </node>
+      <node id="8363">
+        <label>mutex</label>
+      </node>
+      <node id="8361">
+        <label>chrono</label>
+      </node>
+      <node id="8369">
+        <label>glog/raw_logging.h</label>
+      </node>
+      <node id="8378">
+        <label>thread</label>
+      </node>
+      <node id="8381">
+        <label>type_traits</label>
+      </node>
+      <node id="8393">
+        <label>cyber/common/util.h</label>
+        <link refid="util_8h"/>
+        <childnode refid="8356" relation="include">
+        </childnode>
+      </node>
+      <node id="8364">
+        <label>set</label>
+      </node>
+      <node id="8397">
+        <label>cyber/data/channel_buffer.h</label>
+        <link refid="channel__buffer_8h"/>
+        <childnode refid="8396" relation="include">
+        </childnode>
+        <childnode refid="8362" relation="include">
+        </childnode>
+        <childnode refid="8355" relation="include">
+        </childnode>
+        <childnode refid="8358" relation="include">
+        </childnode>
+        <childnode refid="8392" relation="include">
+        </childnode>
+        <childnode refid="8365" relation="include">
+        </childnode>
+        <childnode refid="8398" relation="include">
+        </childnode>
+        <childnode refid="8412" relation="include">
+        </childnode>
+      </node>
+      <node id="8396">
+        <label>algorithm</label>
+      </node>
+      <node id="8354">
+        <label>scheduler/policy/scheduler_choreography.h</label>
+        <link refid="scheduler_choreography.h"/>
+        <childnode refid="8355" relation="include">
+        </childnode>
+        <childnode refid="8356" relation="include">
+        </childnode>
+        <childnode refid="8357" relation="include">
+        </childnode>
+        <childnode refid="8358" relation="include">
+        </childnode>
+        <childnode refid="8359" relation="include">
+        </childnode>
+        <childnode refid="8374" relation="include">
+        </childnode>
+        <childnode refid="8375" relation="include">
+        </childnode>
+      </node>
+      <node id="8372">
+        <label>cstring</label>
+      </node>
+      <node id="8387">
+        <label>cyber/base/macros.h</label>
+        <link refid="base_2macros_8h"/>
+        <childnode refid="8371" relation="include">
+        </childnode>
+        <childnode refid="8388" relation="include">
+        </childnode>
+      </node>
+      <node id="8355">
+        <label>memory</label>
+      </node>
+      <node id="8359">
+        <label>cyber/croutine/croutine.h</label>
+        <link refid="croutine_8h"/>
+        <childnode refid="8360" relation="include">
+        </childnode>
+        <childnode refid="8361" relation="include">
+        </childnode>
+        <childnode refid="8362" relation="include">
+        </childnode>
+        <childnode refid="8355" relation="include">
+        </childnode>
+        <childnode refid="8363" relation="include">
+        </childnode>
+        <childnode refid="8364" relation="include">
+        </childnode>
+        <childnode refid="8356" relation="include">
+        </childnode>
+        <childnode refid="8365" relation="include">
+        </childnode>
+        <childnode refid="8370" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="8437">
+        <label>py_wrapper/py_timer.h</label>
+        <link refid="py__timer_8h"/>
+      </node>
+      <node id="8435">
+        <label>py_wrapper/py_node.h</label>
+        <link refid="py__node_8h"/>
+      </node>
+      <node id="8448">
+        <label>tools/cyber_recorder/player/player.h</label>
+        <link refid="player_8h"/>
+      </node>
+      <node id="8428">
+        <label>blocker/intra_reader.h</label>
+        <link refid="intra__reader_8h"/>
+        <childnode refid="8429" relation="include">
+        </childnode>
+      </node>
+      <node id="8439">
+        <label>tools/cyber_monitor/general_message_base.h</label>
+        <link refid="general__message__base_8h"/>
+        <childnode refid="8440" relation="include">
+        </childnode>
+        <childnode refid="8441" relation="include">
+        </childnode>
+      </node>
+      <node id="8444">
+        <label>examples/timer_component_example/timer_component_example.h</label>
+        <link refid="timer__component__example_8h"/>
+      </node>
+      <node id="8434">
+        <label>py_wrapper/py_init.h</label>
+        <link refid="py__init_8h"/>
+      </node>
+      <node id="8442">
+        <label>tools/cyber_recorder/recorder.h</label>
+        <link refid="recorder_8h"/>
+      </node>
+      <node id="8461">
+        <label>tools/cyber_recorder/player/play_task.h</label>
+        <link refid="play__task_8h"/>
+        <childnode refid="8462" relation="include">
+        </childnode>
+      </node>
+      <node id="8430">
+        <label>node/node.h</label>
+        <link refid="node_8h"/>
+        <childnode refid="8431" relation="include">
+        </childnode>
+        <childnode refid="8433" relation="include">
+        </childnode>
+        <childnode refid="8435" relation="include">
+        </childnode>
+        <childnode refid="8447" relation="include">
+        </childnode>
+      </node>
+      <node id="8429">
+        <label>node/node_channel_impl.h</label>
+        <link refid="node__channel__impl_8h"/>
+        <childnode refid="8430" relation="include">
+        </childnode>
+        <childnode refid="8449" relation="include">
+        </childnode>
+        <childnode refid="8452" relation="include">
+        </childnode>
+      </node>
+      <node id="8458">
+        <label>node/reader_base.h</label>
+        <link refid="reader__base_8h"/>
+        <childnode refid="8427" relation="include">
+        </childnode>
+      </node>
+      <node id="8433">
+        <label>cyber.h</label>
+        <link refid="cyber_8h"/>
+        <childnode refid="8434" relation="include">
+        </childnode>
+        <childnode refid="8435" relation="include">
+        </childnode>
+        <childnode refid="8436" relation="include">
+        </childnode>
+        <childnode refid="8437" relation="include">
+        </childnode>
+        <childnode refid="8438" relation="include">
+        </childnode>
+        <childnode refid="8439" relation="include">
+        </childnode>
+        <childnode refid="8441" relation="include">
+        </childnode>
+        <childnode refid="8442" relation="include">
+        </childnode>
+      </node>
+      <node id="8451">
+        <label>parameter/parameter_client.h</label>
+        <link refid="parameter__client_8h"/>
+      </node>
+      <node id="8447">
+        <label>tools/cyber_recorder/player/play_task_producer.h</label>
+        <link refid="play__task__producer_8h"/>
+        <childnode refid="8448" relation="include">
+        </childnode>
+      </node>
+      <node id="8438">
+        <label>py_wrapper/py_topology_manager.h</label>
+        <link refid="py__topology__manager_8h"/>
+      </node>
+      <node id="8432">
+        <label>component/component.h</label>
+        <link refid="component_8h"/>
+        <childnode refid="8433" relation="include">
+        </childnode>
+        <childnode refid="8443" relation="include">
+        </childnode>
+        <childnode refid="8444" relation="include">
+        </childnode>
+        <childnode refid="8445" relation="include">
+        </childnode>
+      </node>
+      <node id="8426">
+        <label>scheduler/scheduler_factory.h</label>
+        <link refid="scheduler__factory_8h"/>
+        <childnode refid="8427" relation="include">
+        </childnode>
+        <childnode refid="8454" relation="include">
+        </childnode>
+      </node>
+      <node id="8456">
+        <label>transport/receiver/hybrid_receiver.h</label>
+        <link refid="hybrid__receiver_8h"/>
+        <childnode refid="8457" relation="include">
+        </childnode>
+      </node>
+      <node id="8450">
+        <label>node/node_service_impl.h</label>
+        <link refid="node__service__impl_8h"/>
+        <childnode refid="8430" relation="include">
+        </childnode>
+      </node>
+      <node id="8463">
+        <label>tools/cyber_recorder/player/play_task_consumer.h</label>
+        <link refid="play__task__consumer_8h"/>
+        <childnode refid="8448" relation="include">
+        </childnode>
+      </node>
+      <node id="8453">
+        <label>parameter/parameter_server.h</label>
+        <link refid="parameter__server_8h"/>
+      </node>
+      <node id="8441">
+        <label>tools/cyber_monitor/general_message.h</label>
+        <link refid="general__message_8h"/>
+      </node>
+      <node id="8445">
+        <label>mainboard/module_controller.h</label>
+        <link refid="module__controller_8h"/>
+      </node>
+      <node id="8431">
+        <label>component/component_base.h</label>
+        <link refid="component__base_8h"/>
+        <childnode refid="8432" relation="include">
+        </childnode>
+        <childnode refid="8446" relation="include">
+        </childnode>
+      </node>
+      <node id="8454">
+        <label>task/task_manager.h</label>
+        <link refid="task__manager_8h"/>
+        <childnode refid="8455" relation="include">
+        </childnode>
+      </node>
+      <node id="8440">
+        <label>tools/cyber_monitor/general_channel_message.h</label>
+        <link refid="general__channel__message_8h"/>
+      </node>
+      <node id="8459">
+        <label>node/writer.h</label>
+        <link refid="writer_8h"/>
+        <childnode refid="8460" relation="include">
+        </childnode>
+        <childnode refid="8429" relation="include">
+        </childnode>
+        <childnode refid="8435" relation="include">
+        </childnode>
+        <childnode refid="8461" relation="include">
+        </childnode>
+        <childnode refid="8447" relation="include">
+        </childnode>
+      </node>
+      <node id="8446">
+        <label>component/timer_component.h</label>
+        <link refid="timer__component_8h"/>
+        <childnode refid="8444" relation="include">
+        </childnode>
+      </node>
+      <node id="8427">
+        <label>node/reader.h</label>
+        <link refid="reader_8h"/>
+        <childnode refid="8428" relation="include">
+        </childnode>
+        <childnode refid="8429" relation="include">
+        </childnode>
+        <childnode refid="8435" relation="include">
+        </childnode>
+      </node>
+      <node id="8449">
+        <label>service/client.h</label>
+        <link refid="client_8h"/>
+        <childnode refid="8450" relation="include">
+        </childnode>
+        <childnode refid="8451" relation="include">
+        </childnode>
+      </node>
+      <node id="8460">
+        <label>blocker/intra_writer.h</label>
+        <link refid="intra__writer_8h"/>
+        <childnode refid="8429" relation="include">
+        </childnode>
+      </node>
+      <node id="8457">
+        <label>transport/transport.h</label>
+        <link refid="transport_8h"/>
+        <childnode refid="8427" relation="include">
+        </childnode>
+        <childnode refid="8458" relation="include">
+        </childnode>
+        <childnode refid="8459" relation="include">
+        </childnode>
+      </node>
+      <node id="8443">
+        <label>examples/common_component_example/common_component_example.h</label>
+        <link refid="common__component__example_8h"/>
+      </node>
+      <node id="8464">
+        <label>transport/transmitter/hybrid_transmitter.h</label>
+        <link refid="hybrid__transmitter_8h"/>
+        <childnode refid="8457" relation="include">
+        </childnode>
+      </node>
+      <node id="8452">
+        <label>service/service.h</label>
+        <link refid="service_8h"/>
+        <childnode refid="8450" relation="include">
+        </childnode>
+        <childnode refid="8453" relation="include">
+        </childnode>
+      </node>
+      <node id="8425">
+        <label>scheduler/policy/scheduler_choreography.h</label>
+        <link refid="scheduler_choreography.h"/>
+        <childnode refid="8426" relation="include">
+        </childnode>
+      </node>
+      <node id="8455">
+        <label>task/task.h</label>
+        <link refid="task_8h"/>
+        <childnode refid="8433" relation="include">
+        </childnode>
+        <childnode refid="8456" relation="include">
+        </childnode>
+        <childnode refid="8464" relation="include">
+        </childnode>
+      </node>
+      <node id="8436">
+        <label>py_wrapper/py_time.h</label>
+        <link refid="py__time_8h"/>
+      </node>
+      <node id="8462">
+        <label>tools/cyber_recorder/player/play_task_buffer.h</label>
+        <link refid="play__task__buffer_8h"/>
+        <childnode refid="8463" relation="include">
+        </childnode>
+        <childnode refid="8447" relation="include">
+        </childnode>
+        <childnode refid="8448" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography" prot="public">apollo::cyber::scheduler::SchedulerChoreography</innerclass>
+    <innernamespace refid="namespaceapollo">apollo</innernamespace>
+    <innernamespace refid="namespaceapollo_1_1cyber">apollo::cyber</innernamespace>
+    <innernamespace refid="namespaceapollo_1_1cyber_1_1scheduler">apollo::cyber::scheduler</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2018<sp/>The<sp/>Apollo<sp/>Authors.<sp/>All<sp/>Rights<sp/>Reserved.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CYBER_SCHEDULER_POLICY_SCHEDULER_CHOREOGRAPHY_H_</highlight></codeline>
+<codeline lineno="18"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CYBER_SCHEDULER_POLICY_SCHEDULER_CHOREOGRAPHY_H_</highlight></codeline>
+<codeline lineno="19"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;unordered_map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="croutine_8h" kindref="compound">cyber/croutine/croutine.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cyber/proto/choreography_conf.pb.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="scheduler_8h" kindref="compound">cyber/scheduler/scheduler.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">apollo<sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">cyber<sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">scheduler<sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine" kindref="compound">apollo::cyber::croutine::CRoutine</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>apollo::cyber::proto::ChoreographyTask;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography" kindref="compound">SchedulerChoreography</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1scheduler_1_1Scheduler" kindref="compound">Scheduler</ref><sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_1adeb5e2143b5437f3e86fb741b02a7736" kindref="member">RemoveCRoutine</ref>(uint64_t<sp/>crid)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_1ad4d0fb12a12d3dfa7c3109a2762be1fc" kindref="member">RemoveTask</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_1af09ad84ea6f33c905ec2134c7a0b7c71" kindref="member">DispatchTask</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;CRoutine&gt;&amp;)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1scheduler_1_1Scheduler" kindref="compound">Scheduler</ref>*<sp/><ref refid="classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_1a2ea2bb1f09fecdd726f87c09b726461e" kindref="member">Instance</ref>();</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><ref refid="classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_1a522dc891affe735a0415af16c8929994" kindref="member">SchedulerChoreography</ref>();</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_1a315e4898f5b03863713e5f6ade773593" kindref="member">CreateProcessor</ref>();</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_1a64e5f647a0c7a7adbee7d4daa12f7add" kindref="member">NotifyProcessor</ref>(uint64_t<sp/>crid)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_1a3100523cc34d5580b47edfb0522f41e5" refkind="member"><highlight class="normal"><sp/><sp/>std::unordered_map&lt;std::string,<sp/>ChoreographyTask&gt;<sp/><ref refid="classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_1a3100523cc34d5580b47edfb0522f41e5" kindref="member">cr_confs_</ref>;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_1a45208ca2d21e7cd6dcd93ca2da154cf5" refkind="member"><highlight class="normal"><sp/><sp/>int32_t<sp/><ref refid="classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_1a45208ca2d21e7cd6dcd93ca2da154cf5" kindref="member">choreography_processor_prio_</ref>;</highlight></codeline>
+<codeline lineno="52" refid="classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_1a7914b4df5ee5649eafed83731ef5d4cd" refkind="member"><highlight class="normal"><sp/><sp/>int32_t<sp/><ref refid="classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_1a7914b4df5ee5649eafed83731ef5d4cd" kindref="member">pool_processor_prio_</ref>;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_1aec49efce9726f395b7693523d90e7e75" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_1aec49efce9726f395b7693523d90e7e75" kindref="member">choreography_affinity_</ref>;</highlight></codeline>
+<codeline lineno="55" refid="classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_1ae1de0347c7ca14747605710ada094138" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_1ae1de0347c7ca14747605710ada094138" kindref="member">pool_affinity_</ref>;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_1afef4e6579d5243141ccfe5a0a93e4d63" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_1afef4e6579d5243141ccfe5a0a93e4d63" kindref="member">choreography_processor_policy_</ref>;</highlight></codeline>
+<codeline lineno="58" refid="classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_1a9b191db22dbd0ce253ac37faa2407585" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_1a9b191db22dbd0ce253ac37faa2407585" kindref="member">pool_processor_policy_</ref>;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_1aba359e389e80b01a60e4d55633793cdd" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;int&gt;<sp/><ref refid="classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_1aba359e389e80b01a60e4d55633793cdd" kindref="member">choreography_cpuset_</ref>;</highlight></codeline>
+<codeline lineno="61" refid="classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_1a5a5d905d92f6bcd94aa7b703cc7075db" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;int&gt;<sp/><ref refid="classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_1a5a5d905d92f6bcd94aa7b703cc7075db" kindref="member">pool_cpuset_</ref>;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>scheduler</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>cyber</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>apollo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>CYBER_SCHEDULER_POLICY_SCHEDULER_CHOREOGRAPHY_H_</highlight></codeline>
+    </programlisting>
+    <location file="/home/work/apollo-fork/apollo/cyber/scheduler/policy/scheduler_choreography.h"/>
+  </compounddef>
+</doxygen>

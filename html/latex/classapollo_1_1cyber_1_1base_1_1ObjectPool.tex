@@ -1,0 +1,138 @@
+\hypertarget{classapollo_1_1cyber_1_1base_1_1ObjectPool}{\section{apollo\-:\-:cyber\-:\-:base\-:\-:Object\-Pool$<$ T $>$ Class Template Reference}
+\label{classapollo_1_1cyber_1_1base_1_1ObjectPool}\index{apollo\-::cyber\-::base\-::\-Object\-Pool$<$ T $>$@{apollo\-::cyber\-::base\-::\-Object\-Pool$<$ T $>$}}
+}
+
+
+{\ttfamily \#include $<$object\-\_\-pool.\-h$>$}
+
+Inheritance diagram for apollo\-:\-:cyber\-:\-:base\-:\-:Object\-Pool$<$ T $>$\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classapollo_1_1cyber_1_1base_1_1ObjectPool}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structapollo_1_1cyber_1_1base_1_1ObjectPool_1_1Node}{Node}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1base_1_1ObjectPool_af46b770564c8080f800088ea25d9a830}{Init\-Func} = std\-::function$<$ void(T $\ast$)$>$
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1base_1_1ObjectPool_a40cf6e156676c64e8803be8ed930c43a}{Object\-Pool\-Ptr} = std\-::shared\-\_\-ptr$<$ \hyperlink{classapollo_1_1cyber_1_1base_1_1ObjectPool}{Object\-Pool}$<$ T $>$$>$
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename... Args$>$ }\\\hyperlink{classapollo_1_1cyber_1_1base_1_1ObjectPool_a8b01de4b6ca2c440f92828bcd98ca516}{Object\-Pool} (uint32\-\_\-t num\-\_\-objects, Args \&\&...args)
+\item 
+{\footnotesize template$<$typename... Args$>$ }\\\hyperlink{classapollo_1_1cyber_1_1base_1_1ObjectPool_ac3f237b9bc56ef248cb3b5e4a957608e}{Object\-Pool} (uint32\-\_\-t num\-\_\-objects, \hyperlink{classapollo_1_1cyber_1_1base_1_1ObjectPool_af46b770564c8080f800088ea25d9a830}{Init\-Func} f, Args \&\&...args)
+\item 
+virtual \hyperlink{classapollo_1_1cyber_1_1base_1_1ObjectPool_a3c7a5f92aecd8e99967b55036ca49fb5}{$\sim$\-Object\-Pool} ()
+\item 
+std\-::shared\-\_\-ptr$<$ T $>$ \hyperlink{classapollo_1_1cyber_1_1base_1_1ObjectPool_aff04cf85d0e04a74b5286b023d1613e2}{Get\-Object} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1base_1_1ObjectPool_ad62c5841ee350f3e81e6c79b8471d70f}{Object\-Pool} (\hyperlink{classapollo_1_1cyber_1_1base_1_1ObjectPool}{Object\-Pool} \&)=delete
+\item 
+\hyperlink{classapollo_1_1cyber_1_1base_1_1ObjectPool}{Object\-Pool} \& \hyperlink{classapollo_1_1cyber_1_1base_1_1ObjectPool_acbac34af271062daba15ea32f0f74305}{operator=} (\hyperlink{classapollo_1_1cyber_1_1base_1_1ObjectPool}{Object\-Pool} \&)=delete
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1base_1_1ObjectPool_aafd45e0efa58c46403e2a4ae066817a3}{Release\-Object} (T $\ast$)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32\-\_\-t \hyperlink{classapollo_1_1cyber_1_1base_1_1ObjectPool_a83d8b9c2acc9e54022d86a6758087ad4}{num\-\_\-objects\-\_\-} = 0
+\item 
+char $\ast$ \hyperlink{classapollo_1_1cyber_1_1base_1_1ObjectPool_a611e7b13c400c42846d870fcc668ddfb}{object\-\_\-arena\-\_\-} = nullptr
+\item 
+\hyperlink{structapollo_1_1cyber_1_1base_1_1ObjectPool_1_1Node}{Node} $\ast$ \hyperlink{classapollo_1_1cyber_1_1base_1_1ObjectPool_a2b393acf60e1b2ec7a75006af09dda23}{free\-\_\-head\-\_\-} = nullptr
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1ObjectPool_af46b770564c8080f800088ea25d9a830}{\index{apollo\-::cyber\-::base\-::\-Object\-Pool@{apollo\-::cyber\-::base\-::\-Object\-Pool}!Init\-Func@{Init\-Func}}
+\index{Init\-Func@{Init\-Func}!apollo::cyber::base::ObjectPool@{apollo\-::cyber\-::base\-::\-Object\-Pool}}
+\subsubsection[{Init\-Func}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ using {\bf apollo\-::cyber\-::base\-::\-Object\-Pool}$<$ T $>$\-::{\bf Init\-Func} =  std\-::function$<$void(T $\ast$)$>$}}\label{classapollo_1_1cyber_1_1base_1_1ObjectPool_af46b770564c8080f800088ea25d9a830}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1ObjectPool_a40cf6e156676c64e8803be8ed930c43a}{\index{apollo\-::cyber\-::base\-::\-Object\-Pool@{apollo\-::cyber\-::base\-::\-Object\-Pool}!Object\-Pool\-Ptr@{Object\-Pool\-Ptr}}
+\index{Object\-Pool\-Ptr@{Object\-Pool\-Ptr}!apollo::cyber::base::ObjectPool@{apollo\-::cyber\-::base\-::\-Object\-Pool}}
+\subsubsection[{Object\-Pool\-Ptr}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ using {\bf apollo\-::cyber\-::base\-::\-Object\-Pool}$<$ T $>$\-::{\bf Object\-Pool\-Ptr} =  std\-::shared\-\_\-ptr$<${\bf Object\-Pool}$<$T$>$$>$}}\label{classapollo_1_1cyber_1_1base_1_1ObjectPool_a40cf6e156676c64e8803be8ed930c43a}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1ObjectPool_a8b01de4b6ca2c440f92828bcd98ca516}{\index{apollo\-::cyber\-::base\-::\-Object\-Pool@{apollo\-::cyber\-::base\-::\-Object\-Pool}!Object\-Pool@{Object\-Pool}}
+\index{Object\-Pool@{Object\-Pool}!apollo::cyber::base::ObjectPool@{apollo\-::cyber\-::base\-::\-Object\-Pool}}
+\subsubsection[{Object\-Pool}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ template$<$typename... Args$>$ {\bf apollo\-::cyber\-::base\-::\-Object\-Pool}$<$ T $>$\-::{\bf Object\-Pool} (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{num\-\_\-objects, }
+\item[{Args \&\&...}]{args}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}}\label{classapollo_1_1cyber_1_1base_1_1ObjectPool_a8b01de4b6ca2c440f92828bcd98ca516}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1ObjectPool_ac3f237b9bc56ef248cb3b5e4a957608e}{\index{apollo\-::cyber\-::base\-::\-Object\-Pool@{apollo\-::cyber\-::base\-::\-Object\-Pool}!Object\-Pool@{Object\-Pool}}
+\index{Object\-Pool@{Object\-Pool}!apollo::cyber::base::ObjectPool@{apollo\-::cyber\-::base\-::\-Object\-Pool}}
+\subsubsection[{Object\-Pool}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ template$<$typename... Args$>$ {\bf apollo\-::cyber\-::base\-::\-Object\-Pool}$<$ T $>$\-::{\bf Object\-Pool} (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{num\-\_\-objects, }
+\item[{{\bf Init\-Func}}]{f, }
+\item[{Args \&\&...}]{args}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1base_1_1ObjectPool_ac3f237b9bc56ef248cb3b5e4a957608e}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1ObjectPool_a3c7a5f92aecd8e99967b55036ca49fb5}{\index{apollo\-::cyber\-::base\-::\-Object\-Pool@{apollo\-::cyber\-::base\-::\-Object\-Pool}!$\sim$\-Object\-Pool@{$\sim$\-Object\-Pool}}
+\index{$\sim$\-Object\-Pool@{$\sim$\-Object\-Pool}!apollo::cyber::base::ObjectPool@{apollo\-::cyber\-::base\-::\-Object\-Pool}}
+\subsubsection[{$\sim$\-Object\-Pool}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf apollo\-::cyber\-::base\-::\-Object\-Pool}$<$ T $>$\-::$\sim${\bf Object\-Pool} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1base_1_1ObjectPool_a3c7a5f92aecd8e99967b55036ca49fb5}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1ObjectPool_ad62c5841ee350f3e81e6c79b8471d70f}{\index{apollo\-::cyber\-::base\-::\-Object\-Pool@{apollo\-::cyber\-::base\-::\-Object\-Pool}!Object\-Pool@{Object\-Pool}}
+\index{Object\-Pool@{Object\-Pool}!apollo::cyber::base::ObjectPool@{apollo\-::cyber\-::base\-::\-Object\-Pool}}
+\subsubsection[{Object\-Pool}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf apollo\-::cyber\-::base\-::\-Object\-Pool}$<$ T $>$\-::{\bf Object\-Pool} (
+\begin{DoxyParamCaption}
+\item[{{\bf Object\-Pool}$<$ T $>$ \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}}\label{classapollo_1_1cyber_1_1base_1_1ObjectPool_ad62c5841ee350f3e81e6c79b8471d70f}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1ObjectPool_aff04cf85d0e04a74b5286b023d1613e2}{\index{apollo\-::cyber\-::base\-::\-Object\-Pool@{apollo\-::cyber\-::base\-::\-Object\-Pool}!Get\-Object@{Get\-Object}}
+\index{Get\-Object@{Get\-Object}!apollo::cyber::base::ObjectPool@{apollo\-::cyber\-::base\-::\-Object\-Pool}}
+\subsubsection[{Get\-Object}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\-::shared\-\_\-ptr$<$ T $>$ {\bf apollo\-::cyber\-::base\-::\-Object\-Pool}$<$ T $>$\-::Get\-Object (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1base_1_1ObjectPool_aff04cf85d0e04a74b5286b023d1613e2}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1ObjectPool_acbac34af271062daba15ea32f0f74305}{\index{apollo\-::cyber\-::base\-::\-Object\-Pool@{apollo\-::cyber\-::base\-::\-Object\-Pool}!operator=@{operator=}}
+\index{operator=@{operator=}!apollo::cyber::base::ObjectPool@{apollo\-::cyber\-::base\-::\-Object\-Pool}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Object\-Pool}\& {\bf apollo\-::cyber\-::base\-::\-Object\-Pool}$<$ T $>$\-::operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf Object\-Pool}$<$ T $>$ \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}}\label{classapollo_1_1cyber_1_1base_1_1ObjectPool_acbac34af271062daba15ea32f0f74305}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1ObjectPool_aafd45e0efa58c46403e2a4ae066817a3}{\index{apollo\-::cyber\-::base\-::\-Object\-Pool@{apollo\-::cyber\-::base\-::\-Object\-Pool}!Release\-Object@{Release\-Object}}
+\index{Release\-Object@{Release\-Object}!apollo::cyber::base::ObjectPool@{apollo\-::cyber\-::base\-::\-Object\-Pool}}
+\subsubsection[{Release\-Object}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf apollo\-::cyber\-::base\-::\-Object\-Pool}$<$ T $>$\-::Release\-Object (
+\begin{DoxyParamCaption}
+\item[{T $\ast$}]{object}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1base_1_1ObjectPool_aafd45e0efa58c46403e2a4ae066817a3}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1ObjectPool_a2b393acf60e1b2ec7a75006af09dda23}{\index{apollo\-::cyber\-::base\-::\-Object\-Pool@{apollo\-::cyber\-::base\-::\-Object\-Pool}!free\-\_\-head\-\_\-@{free\-\_\-head\-\_\-}}
+\index{free\-\_\-head\-\_\-@{free\-\_\-head\-\_\-}!apollo::cyber::base::ObjectPool@{apollo\-::cyber\-::base\-::\-Object\-Pool}}
+\subsubsection[{free\-\_\-head\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Node}$\ast$ {\bf apollo\-::cyber\-::base\-::\-Object\-Pool}$<$ T $>$\-::free\-\_\-head\-\_\- = nullptr\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1base_1_1ObjectPool_a2b393acf60e1b2ec7a75006af09dda23}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1ObjectPool_a83d8b9c2acc9e54022d86a6758087ad4}{\index{apollo\-::cyber\-::base\-::\-Object\-Pool@{apollo\-::cyber\-::base\-::\-Object\-Pool}!num\-\_\-objects\-\_\-@{num\-\_\-objects\-\_\-}}
+\index{num\-\_\-objects\-\_\-@{num\-\_\-objects\-\_\-}!apollo::cyber::base::ObjectPool@{apollo\-::cyber\-::base\-::\-Object\-Pool}}
+\subsubsection[{num\-\_\-objects\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ uint32\-\_\-t {\bf apollo\-::cyber\-::base\-::\-Object\-Pool}$<$ T $>$\-::num\-\_\-objects\-\_\- = 0\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1base_1_1ObjectPool_a83d8b9c2acc9e54022d86a6758087ad4}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1ObjectPool_a611e7b13c400c42846d870fcc668ddfb}{\index{apollo\-::cyber\-::base\-::\-Object\-Pool@{apollo\-::cyber\-::base\-::\-Object\-Pool}!object\-\_\-arena\-\_\-@{object\-\_\-arena\-\_\-}}
+\index{object\-\_\-arena\-\_\-@{object\-\_\-arena\-\_\-}!apollo::cyber::base::ObjectPool@{apollo\-::cyber\-::base\-::\-Object\-Pool}}
+\subsubsection[{object\-\_\-arena\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ char$\ast$ {\bf apollo\-::cyber\-::base\-::\-Object\-Pool}$<$ T $>$\-::object\-\_\-arena\-\_\- = nullptr\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1base_1_1ObjectPool_a611e7b13c400c42846d870fcc668ddfb}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+base/\hyperlink{object__pool_8h}{object\-\_\-pool.\-h}\end{DoxyCompactItemize}

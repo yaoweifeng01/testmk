@@ -1,0 +1,158 @@
+\hypertarget{namespaceapollo_1_1cyber_1_1croutine}{\section{apollo\-:\-:cyber\-:\-:croutine Namespace Reference}
+\label{namespaceapollo_1_1cyber_1_1croutine}\index{apollo\-::cyber\-::croutine@{apollo\-::cyber\-::croutine}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classapollo_1_1cyber_1_1croutine_1_1CRoutine}{C\-Routine}
+\item 
+struct \hyperlink{structapollo_1_1cyber_1_1croutine_1_1RoutineContext}{Routine\-Context}
+\item 
+class \hyperlink{classapollo_1_1cyber_1_1croutine_1_1RoutineFactory}{Routine\-Factory}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \hyperlink{namespaceapollo_1_1cyber_1_1croutine_a5c1d994c8a08504b270fd8c4ba57d282}{Routine\-Func} = std\-::function$<$ void()$>$
+\item 
+using \hyperlink{namespaceapollo_1_1cyber_1_1croutine_aae31aee73e46be40ab635496b4d9d1e2}{Duration} = std\-::chrono\-::microseconds
+\item 
+typedef void($\ast$ \hyperlink{namespaceapollo_1_1cyber_1_1croutine_a10b1486257a9f9174f905a6f4a54523f}{func} )(void $\ast$)
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespaceapollo_1_1cyber_1_1croutine_a9b2ec600d9734ed2e857a7235cec5e48}{Routine\-State} \{ \\*
+\hyperlink{namespaceapollo_1_1cyber_1_1croutine_a9b2ec600d9734ed2e857a7235cec5e48a2baa69eafc7204f3bd8648eba580c489}{Routine\-State\-::\-R\-E\-A\-D\-Y}, 
+\hyperlink{namespaceapollo_1_1cyber_1_1croutine_a9b2ec600d9734ed2e857a7235cec5e48a2c616b2713e2e0aed04b4c4752c88133}{Routine\-State\-::\-F\-I\-N\-I\-S\-H\-E\-D}, 
+\hyperlink{namespaceapollo_1_1cyber_1_1croutine_a9b2ec600d9734ed2e857a7235cec5e48ab32bd403b93dc6deffdab7af55e82596}{Routine\-State\-::\-S\-L\-E\-E\-P}, 
+\hyperlink{namespaceapollo_1_1cyber_1_1croutine_a9b2ec600d9734ed2e857a7235cec5e48a1314a216c30bb655a0e767e250bbecd1}{Routine\-State\-::\-I\-O\-\_\-\-W\-A\-I\-T}, 
+\\*
+\hyperlink{namespaceapollo_1_1cyber_1_1croutine_a9b2ec600d9734ed2e857a7235cec5e48aa561d434eca3762c4cfbaee9b7dfc26c}{Routine\-State\-::\-D\-A\-T\-A\-\_\-\-W\-A\-I\-T}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{namespaceapollo_1_1cyber_1_1croutine_acf92a957d93bc7200c945d560827fb4f}{Make\-Context} (const \hyperlink{namespaceapollo_1_1cyber_1_1croutine_a10b1486257a9f9174f905a6f4a54523f}{func} \&f1, const void $\ast$arg, \hyperlink{structapollo_1_1cyber_1_1croutine_1_1RoutineContext}{Routine\-Context} $\ast$ctx)
+\item 
+void \hyperlink{namespaceapollo_1_1cyber_1_1croutine_a909857eec1b9f6f963de7dc22bf7cc92}{Swap\-Context} (char $\ast$$\ast$src\-\_\-sp, char $\ast$$\ast$dest\-\_\-sp)
+\item 
+{\footnotesize template$<$typename M0 , typename F $>$ }\\\hyperlink{classapollo_1_1cyber_1_1croutine_1_1RoutineFactory}{Routine\-Factory} \hyperlink{namespaceapollo_1_1cyber_1_1croutine_a10e8cae84e11868f0b7a867b3ec07409}{Create\-Routine\-Factory} (F \&\&f, const std\-::shared\-\_\-ptr$<$ \hyperlink{classapollo_1_1cyber_1_1data_1_1DataVisitor}{data\-::\-Data\-Visitor}$<$ M0 $>$$>$ \&dv)
+\item 
+{\footnotesize template$<$typename M0 , typename M1 , typename F $>$ }\\\hyperlink{classapollo_1_1cyber_1_1croutine_1_1RoutineFactory}{Routine\-Factory} \hyperlink{namespaceapollo_1_1cyber_1_1croutine_aa78086f3d811e17add67e3f38336afe3}{Create\-Routine\-Factory} (F \&\&f, const std\-::shared\-\_\-ptr$<$ \hyperlink{classapollo_1_1cyber_1_1data_1_1DataVisitor}{data\-::\-Data\-Visitor}$<$ M0, M1 $>$$>$ \&dv)
+\item 
+{\footnotesize template$<$typename M0 , typename M1 , typename M2 , typename F $>$ }\\\hyperlink{classapollo_1_1cyber_1_1croutine_1_1RoutineFactory}{Routine\-Factory} \hyperlink{namespaceapollo_1_1cyber_1_1croutine_af447a52b313ddec1d785c15fd7d045a0}{Create\-Routine\-Factory} (F \&\&f, const std\-::shared\-\_\-ptr$<$ \hyperlink{classapollo_1_1cyber_1_1data_1_1DataVisitor}{data\-::\-Data\-Visitor}$<$ M0, M1, M2 $>$$>$ \&dv)
+\item 
+{\footnotesize template$<$typename M0 , typename M1 , typename M2 , typename M3 , typename F $>$ }\\\hyperlink{classapollo_1_1cyber_1_1croutine_1_1RoutineFactory}{Routine\-Factory} \hyperlink{namespaceapollo_1_1cyber_1_1croutine_a77fe2103742e21e13e25f76f7193085c}{Create\-Routine\-Factory} (F \&\&f, const std\-::shared\-\_\-ptr$<$ \hyperlink{classapollo_1_1cyber_1_1data_1_1DataVisitor}{data\-::\-Data\-Visitor}$<$ M0, M1, M2, M3 $>$$>$ \&dv)
+\item 
+{\footnotesize template$<$typename Function $>$ }\\\hyperlink{classapollo_1_1cyber_1_1croutine_1_1RoutineFactory}{Routine\-Factory} \hyperlink{namespaceapollo_1_1cyber_1_1croutine_a86b2876965ee3da499523200781100a9}{Create\-Routine\-Factory} (Function \&\&f)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+constexpr size\-\_\-t \hyperlink{namespaceapollo_1_1cyber_1_1croutine_ac645ea6350d95f21980e311868f72557}{S\-T\-A\-C\-K\-\_\-\-S\-I\-Z\-E} = 2 $\ast$ 1024 $\ast$ 1024
+\item 
+constexpr size\-\_\-t \hyperlink{namespaceapollo_1_1cyber_1_1croutine_aa975ad5018ccbbb80b0cac19c50dc39f}{R\-E\-G\-I\-S\-T\-E\-R\-S\-\_\-\-S\-I\-Z\-E} = 56
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{namespaceapollo_1_1cyber_1_1croutine_aae31aee73e46be40ab635496b4d9d1e2}{\index{apollo\-::cyber\-::croutine@{apollo\-::cyber\-::croutine}!Duration@{Duration}}
+\index{Duration@{Duration}!apollo::cyber::croutine@{apollo\-::cyber\-::croutine}}
+\subsubsection[{Duration}]{\setlength{\rightskip}{0pt plus 5cm}using {\bf apollo\-::cyber\-::croutine\-::\-Duration} = typedef std\-::chrono\-::microseconds}}\label{namespaceapollo_1_1cyber_1_1croutine_aae31aee73e46be40ab635496b4d9d1e2}
+\hypertarget{namespaceapollo_1_1cyber_1_1croutine_a10b1486257a9f9174f905a6f4a54523f}{\index{apollo\-::cyber\-::croutine@{apollo\-::cyber\-::croutine}!func@{func}}
+\index{func@{func}!apollo::cyber::croutine@{apollo\-::cyber\-::croutine}}
+\subsubsection[{func}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ apollo\-::cyber\-::croutine\-::func)(void $\ast$)}}\label{namespaceapollo_1_1cyber_1_1croutine_a10b1486257a9f9174f905a6f4a54523f}
+\hypertarget{namespaceapollo_1_1cyber_1_1croutine_a5c1d994c8a08504b270fd8c4ba57d282}{\index{apollo\-::cyber\-::croutine@{apollo\-::cyber\-::croutine}!Routine\-Func@{Routine\-Func}}
+\index{Routine\-Func@{Routine\-Func}!apollo::cyber::croutine@{apollo\-::cyber\-::croutine}}
+\subsubsection[{Routine\-Func}]{\setlength{\rightskip}{0pt plus 5cm}using {\bf apollo\-::cyber\-::croutine\-::\-Routine\-Func} = typedef std\-::function$<$void()$>$}}\label{namespaceapollo_1_1cyber_1_1croutine_a5c1d994c8a08504b270fd8c4ba57d282}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{namespaceapollo_1_1cyber_1_1croutine_a9b2ec600d9734ed2e857a7235cec5e48}{\index{apollo\-::cyber\-::croutine@{apollo\-::cyber\-::croutine}!Routine\-State@{Routine\-State}}
+\index{Routine\-State@{Routine\-State}!apollo::cyber::croutine@{apollo\-::cyber\-::croutine}}
+\subsubsection[{Routine\-State}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf apollo\-::cyber\-::croutine\-::\-Routine\-State}\hspace{0.3cm}{\ttfamily [strong]}}}\label{namespaceapollo_1_1cyber_1_1croutine_a9b2ec600d9734ed2e857a7235cec5e48}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{R\-E\-A\-D\-Y@{R\-E\-A\-D\-Y}!apollo\-::cyber\-::croutine@{apollo\-::cyber\-::croutine}}\index{apollo\-::cyber\-::croutine@{apollo\-::cyber\-::croutine}!R\-E\-A\-D\-Y@{R\-E\-A\-D\-Y}}\item[{\em 
+\hypertarget{namespaceapollo_1_1cyber_1_1croutine_a9b2ec600d9734ed2e857a7235cec5e48a2baa69eafc7204f3bd8648eba580c489}{R\-E\-A\-D\-Y}\label{namespaceapollo_1_1cyber_1_1croutine_a9b2ec600d9734ed2e857a7235cec5e48a2baa69eafc7204f3bd8648eba580c489}
+}]\index{F\-I\-N\-I\-S\-H\-E\-D@{F\-I\-N\-I\-S\-H\-E\-D}!apollo\-::cyber\-::croutine@{apollo\-::cyber\-::croutine}}\index{apollo\-::cyber\-::croutine@{apollo\-::cyber\-::croutine}!F\-I\-N\-I\-S\-H\-E\-D@{F\-I\-N\-I\-S\-H\-E\-D}}\item[{\em 
+\hypertarget{namespaceapollo_1_1cyber_1_1croutine_a9b2ec600d9734ed2e857a7235cec5e48a2c616b2713e2e0aed04b4c4752c88133}{F\-I\-N\-I\-S\-H\-E\-D}\label{namespaceapollo_1_1cyber_1_1croutine_a9b2ec600d9734ed2e857a7235cec5e48a2c616b2713e2e0aed04b4c4752c88133}
+}]\index{S\-L\-E\-E\-P@{S\-L\-E\-E\-P}!apollo\-::cyber\-::croutine@{apollo\-::cyber\-::croutine}}\index{apollo\-::cyber\-::croutine@{apollo\-::cyber\-::croutine}!S\-L\-E\-E\-P@{S\-L\-E\-E\-P}}\item[{\em 
+\hypertarget{namespaceapollo_1_1cyber_1_1croutine_a9b2ec600d9734ed2e857a7235cec5e48ab32bd403b93dc6deffdab7af55e82596}{S\-L\-E\-E\-P}\label{namespaceapollo_1_1cyber_1_1croutine_a9b2ec600d9734ed2e857a7235cec5e48ab32bd403b93dc6deffdab7af55e82596}
+}]\index{I\-O\-\_\-\-W\-A\-I\-T@{I\-O\-\_\-\-W\-A\-I\-T}!apollo\-::cyber\-::croutine@{apollo\-::cyber\-::croutine}}\index{apollo\-::cyber\-::croutine@{apollo\-::cyber\-::croutine}!I\-O\-\_\-\-W\-A\-I\-T@{I\-O\-\_\-\-W\-A\-I\-T}}\item[{\em 
+\hypertarget{namespaceapollo_1_1cyber_1_1croutine_a9b2ec600d9734ed2e857a7235cec5e48a1314a216c30bb655a0e767e250bbecd1}{I\-O\-\_\-\-W\-A\-I\-T}\label{namespaceapollo_1_1cyber_1_1croutine_a9b2ec600d9734ed2e857a7235cec5e48a1314a216c30bb655a0e767e250bbecd1}
+}]\index{D\-A\-T\-A\-\_\-\-W\-A\-I\-T@{D\-A\-T\-A\-\_\-\-W\-A\-I\-T}!apollo\-::cyber\-::croutine@{apollo\-::cyber\-::croutine}}\index{apollo\-::cyber\-::croutine@{apollo\-::cyber\-::croutine}!D\-A\-T\-A\-\_\-\-W\-A\-I\-T@{D\-A\-T\-A\-\_\-\-W\-A\-I\-T}}\item[{\em 
+\hypertarget{namespaceapollo_1_1cyber_1_1croutine_a9b2ec600d9734ed2e857a7235cec5e48aa561d434eca3762c4cfbaee9b7dfc26c}{D\-A\-T\-A\-\_\-\-W\-A\-I\-T}\label{namespaceapollo_1_1cyber_1_1croutine_a9b2ec600d9734ed2e857a7235cec5e48aa561d434eca3762c4cfbaee9b7dfc26c}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\hypertarget{namespaceapollo_1_1cyber_1_1croutine_a10e8cae84e11868f0b7a867b3ec07409}{\index{apollo\-::cyber\-::croutine@{apollo\-::cyber\-::croutine}!Create\-Routine\-Factory@{Create\-Routine\-Factory}}
+\index{Create\-Routine\-Factory@{Create\-Routine\-Factory}!apollo::cyber::croutine@{apollo\-::cyber\-::croutine}}
+\subsubsection[{Create\-Routine\-Factory}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M0 , typename F $>$ {\bf Routine\-Factory} apollo\-::cyber\-::croutine\-::\-Create\-Routine\-Factory (
+\begin{DoxyParamCaption}
+\item[{F \&\&}]{f, }
+\item[{const std\-::shared\-\_\-ptr$<$ data\-::\-Data\-Visitor$<$ M0 $>$$>$ \&}]{dv}
+\end{DoxyParamCaption}
+)}}\label{namespaceapollo_1_1cyber_1_1croutine_a10e8cae84e11868f0b7a867b3ec07409}
+\hypertarget{namespaceapollo_1_1cyber_1_1croutine_aa78086f3d811e17add67e3f38336afe3}{\index{apollo\-::cyber\-::croutine@{apollo\-::cyber\-::croutine}!Create\-Routine\-Factory@{Create\-Routine\-Factory}}
+\index{Create\-Routine\-Factory@{Create\-Routine\-Factory}!apollo::cyber::croutine@{apollo\-::cyber\-::croutine}}
+\subsubsection[{Create\-Routine\-Factory}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M0 , typename M1 , typename F $>$ {\bf Routine\-Factory} apollo\-::cyber\-::croutine\-::\-Create\-Routine\-Factory (
+\begin{DoxyParamCaption}
+\item[{F \&\&}]{f, }
+\item[{const std\-::shared\-\_\-ptr$<$ data\-::\-Data\-Visitor$<$ M0, M1 $>$$>$ \&}]{dv}
+\end{DoxyParamCaption}
+)}}\label{namespaceapollo_1_1cyber_1_1croutine_aa78086f3d811e17add67e3f38336afe3}
+\hypertarget{namespaceapollo_1_1cyber_1_1croutine_af447a52b313ddec1d785c15fd7d045a0}{\index{apollo\-::cyber\-::croutine@{apollo\-::cyber\-::croutine}!Create\-Routine\-Factory@{Create\-Routine\-Factory}}
+\index{Create\-Routine\-Factory@{Create\-Routine\-Factory}!apollo::cyber::croutine@{apollo\-::cyber\-::croutine}}
+\subsubsection[{Create\-Routine\-Factory}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M0 , typename M1 , typename M2 , typename F $>$ {\bf Routine\-Factory} apollo\-::cyber\-::croutine\-::\-Create\-Routine\-Factory (
+\begin{DoxyParamCaption}
+\item[{F \&\&}]{f, }
+\item[{const std\-::shared\-\_\-ptr$<$ data\-::\-Data\-Visitor$<$ M0, M1, M2 $>$$>$ \&}]{dv}
+\end{DoxyParamCaption}
+)}}\label{namespaceapollo_1_1cyber_1_1croutine_af447a52b313ddec1d785c15fd7d045a0}
+\hypertarget{namespaceapollo_1_1cyber_1_1croutine_a77fe2103742e21e13e25f76f7193085c}{\index{apollo\-::cyber\-::croutine@{apollo\-::cyber\-::croutine}!Create\-Routine\-Factory@{Create\-Routine\-Factory}}
+\index{Create\-Routine\-Factory@{Create\-Routine\-Factory}!apollo::cyber::croutine@{apollo\-::cyber\-::croutine}}
+\subsubsection[{Create\-Routine\-Factory}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M0 , typename M1 , typename M2 , typename M3 , typename F $>$ {\bf Routine\-Factory} apollo\-::cyber\-::croutine\-::\-Create\-Routine\-Factory (
+\begin{DoxyParamCaption}
+\item[{F \&\&}]{f, }
+\item[{const std\-::shared\-\_\-ptr$<$ data\-::\-Data\-Visitor$<$ M0, M1, M2, M3 $>$$>$ \&}]{dv}
+\end{DoxyParamCaption}
+)}}\label{namespaceapollo_1_1cyber_1_1croutine_a77fe2103742e21e13e25f76f7193085c}
+\hypertarget{namespaceapollo_1_1cyber_1_1croutine_a86b2876965ee3da499523200781100a9}{\index{apollo\-::cyber\-::croutine@{apollo\-::cyber\-::croutine}!Create\-Routine\-Factory@{Create\-Routine\-Factory}}
+\index{Create\-Routine\-Factory@{Create\-Routine\-Factory}!apollo::cyber::croutine@{apollo\-::cyber\-::croutine}}
+\subsubsection[{Create\-Routine\-Factory}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Function $>$ {\bf Routine\-Factory} apollo\-::cyber\-::croutine\-::\-Create\-Routine\-Factory (
+\begin{DoxyParamCaption}
+\item[{Function \&\&}]{f}
+\end{DoxyParamCaption}
+)}}\label{namespaceapollo_1_1cyber_1_1croutine_a86b2876965ee3da499523200781100a9}
+\hypertarget{namespaceapollo_1_1cyber_1_1croutine_acf92a957d93bc7200c945d560827fb4f}{\index{apollo\-::cyber\-::croutine@{apollo\-::cyber\-::croutine}!Make\-Context@{Make\-Context}}
+\index{Make\-Context@{Make\-Context}!apollo::cyber::croutine@{apollo\-::cyber\-::croutine}}
+\subsubsection[{Make\-Context}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::croutine\-::\-Make\-Context (
+\begin{DoxyParamCaption}
+\item[{const func \&}]{f1, }
+\item[{const void $\ast$}]{arg, }
+\item[{Routine\-Context $\ast$}]{ctx}
+\end{DoxyParamCaption}
+)}}\label{namespaceapollo_1_1cyber_1_1croutine_acf92a957d93bc7200c945d560827fb4f}
+\hypertarget{namespaceapollo_1_1cyber_1_1croutine_a909857eec1b9f6f963de7dc22bf7cc92}{\index{apollo\-::cyber\-::croutine@{apollo\-::cyber\-::croutine}!Swap\-Context@{Swap\-Context}}
+\index{Swap\-Context@{Swap\-Context}!apollo::cyber::croutine@{apollo\-::cyber\-::croutine}}
+\subsubsection[{Swap\-Context}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::croutine\-::\-Swap\-Context (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{src\-\_\-sp, }
+\item[{char $\ast$$\ast$}]{dest\-\_\-sp}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespaceapollo_1_1cyber_1_1croutine_a909857eec1b9f6f963de7dc22bf7cc92}
+
+
+\subsection{Variable Documentation}
+\hypertarget{namespaceapollo_1_1cyber_1_1croutine_aa975ad5018ccbbb80b0cac19c50dc39f}{\index{apollo\-::cyber\-::croutine@{apollo\-::cyber\-::croutine}!R\-E\-G\-I\-S\-T\-E\-R\-S\-\_\-\-S\-I\-Z\-E@{R\-E\-G\-I\-S\-T\-E\-R\-S\-\_\-\-S\-I\-Z\-E}}
+\index{R\-E\-G\-I\-S\-T\-E\-R\-S\-\_\-\-S\-I\-Z\-E@{R\-E\-G\-I\-S\-T\-E\-R\-S\-\_\-\-S\-I\-Z\-E}!apollo::cyber::croutine@{apollo\-::cyber\-::croutine}}
+\subsubsection[{R\-E\-G\-I\-S\-T\-E\-R\-S\-\_\-\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}constexpr size\-\_\-t apollo\-::cyber\-::croutine\-::\-R\-E\-G\-I\-S\-T\-E\-R\-S\-\_\-\-S\-I\-Z\-E = 56}}\label{namespaceapollo_1_1cyber_1_1croutine_aa975ad5018ccbbb80b0cac19c50dc39f}
+\hypertarget{namespaceapollo_1_1cyber_1_1croutine_ac645ea6350d95f21980e311868f72557}{\index{apollo\-::cyber\-::croutine@{apollo\-::cyber\-::croutine}!S\-T\-A\-C\-K\-\_\-\-S\-I\-Z\-E@{S\-T\-A\-C\-K\-\_\-\-S\-I\-Z\-E}}
+\index{S\-T\-A\-C\-K\-\_\-\-S\-I\-Z\-E@{S\-T\-A\-C\-K\-\_\-\-S\-I\-Z\-E}!apollo::cyber::croutine@{apollo\-::cyber\-::croutine}}
+\subsubsection[{S\-T\-A\-C\-K\-\_\-\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}constexpr size\-\_\-t apollo\-::cyber\-::croutine\-::\-S\-T\-A\-C\-K\-\_\-\-S\-I\-Z\-E = 2 $\ast$ 1024 $\ast$ 1024}}\label{namespaceapollo_1_1cyber_1_1croutine_ac645ea6350d95f21980e311868f72557}

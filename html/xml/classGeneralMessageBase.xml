@@ -1,0 +1,367 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classGeneralMessageBase" kind="class" prot="public">
+    <compoundname>GeneralMessageBase</compoundname>
+    <basecompoundref refid="classRenderableMessage" prot="public" virt="non-virtual">RenderableMessage</basecompoundref>
+    <derivedcompoundref refid="classGeneralChannelMessage" prot="public" virt="non-virtual">GeneralChannelMessage</derivedcompoundref>
+    <derivedcompoundref refid="classGeneralMessage" prot="public" virt="non-virtual">GeneralMessage</derivedcompoundref>
+    <includes refid="general__message__base_8h" local="no">general_message_base.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classGeneralMessageBase_1a5ff98bf477e95204ca2021be372d3eba" prot="protected" static="no" mutable="no">
+        <type>std::map&lt; const int, <ref refid="classGeneralMessageBase" kindref="compound">GeneralMessageBase</ref> * &gt;</type>
+        <definition>std::map&lt;const int, GeneralMessageBase*&gt; GeneralMessageBase::children_map_</definition>
+        <argsstring></argsstring>
+        <name>children_map_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_message_base.h" line="68" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_message_base.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-static-func">
+      <memberdef kind="function" id="classGeneralMessageBase_1acb22b24b458fbb199de702736e136be3" prot="protected" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void GeneralMessageBase::PrintMessage</definition>
+        <argsstring>(GeneralMessageBase *baseMsg, const google::protobuf::Message &amp;msg, int &amp;jumpLines, const Screen *s, unsigned &amp;lineNo, int indent)</argsstring>
+        <name>PrintMessage</name>
+        <param>
+          <type><ref refid="classGeneralMessageBase" kindref="compound">GeneralMessageBase</ref> *</type>
+          <declname>baseMsg</declname>
+        </param>
+        <param>
+          <type>const google::protobuf::Message &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>jumpLines</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classScreen" kindref="compound">Screen</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>unsigned &amp;</type>
+          <declname>lineNo</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>indent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_message_base.h" line="30" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classGeneralMessageBase_1abb2b6d5c8a9399cc6e3eab14a0bec0c7" prot="protected" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void GeneralMessageBase::PrintField</definition>
+        <argsstring>(GeneralMessageBase *baseMsg, const google::protobuf::Message &amp;msg, int &amp;jumpLines, const Screen *s, unsigned &amp;lineNo, int indent, const google::protobuf::Reflection *ref, const google::protobuf::FieldDescriptor *field, int index)</argsstring>
+        <name>PrintField</name>
+        <param>
+          <type><ref refid="classGeneralMessageBase" kindref="compound">GeneralMessageBase</ref> *</type>
+          <declname>baseMsg</declname>
+        </param>
+        <param>
+          <type>const google::protobuf::Message &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>jumpLines</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classScreen" kindref="compound">Screen</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>unsigned &amp;</type>
+          <declname>lineNo</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>indent</declname>
+        </param>
+        <param>
+          <type>const google::protobuf::Reflection *</type>
+          <declname>ref</declname>
+        </param>
+        <param>
+          <type>const google::protobuf::FieldDescriptor *</type>
+          <declname>field</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_message_base.h" line="33" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classGeneralMessageBase_1a3b3feba460a716d68348a54d274dd675" prot="protected" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int GeneralMessageBase::lineCount</definition>
+        <argsstring>(const google::protobuf::Message &amp;msg, int screenWidth)</argsstring>
+        <name>lineCount</name>
+        <param>
+          <type>const google::protobuf::Message &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>screenWidth</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_message_base.h" line="40" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classGeneralMessageBase_1a4af9e501c26db8741b458ab477fe9aaa" prot="protected" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int GeneralMessageBase::lineCountOfField</definition>
+        <argsstring>(const google::protobuf::Message &amp;msg, int screenWidth, const google::protobuf::FieldDescriptor *field, const google::protobuf::Reflection *reflection, bool is_folded=true)</argsstring>
+        <name>lineCountOfField</name>
+        <param>
+          <type>const google::protobuf::Message &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>screenWidth</declname>
+        </param>
+        <param>
+          <type>const google::protobuf::FieldDescriptor *</type>
+          <declname>field</declname>
+        </param>
+        <param>
+          <type>const google::protobuf::Reflection *</type>
+          <declname>reflection</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>is_folded</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_message_base.h" line="41" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classGeneralMessageBase_1a7b063ed053799b40e65b4fc36d53ffe8" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GeneralMessageBase::insertRepeatedMessage</definition>
+        <argsstring>(int lineNo, GeneralMessageBase *item)</argsstring>
+        <name>insertRepeatedMessage</name>
+        <param>
+          <type>int</type>
+          <declname>lineNo</declname>
+        </param>
+        <param>
+          <type><ref refid="classGeneralMessageBase" kindref="compound">GeneralMessageBase</ref> *</type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_message_base.h" line="47" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_message_base.h" bodystart="47" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classGeneralMessageBase_1a9ab394f1176382bbef06e1b7c37e35ee" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classRenderableMessage" kindref="compound">RenderableMessage</ref> *</type>
+        <definition>RenderableMessage* GeneralMessageBase::Child</definition>
+        <argsstring>(int lineNo) const override</argsstring>
+        <name>Child</name>
+        <reimplements refid="classRenderableMessage_1a0f933ad0befd4d3cf3a95e205c7398d6">Child</reimplements>
+        <param>
+          <type>int</type>
+          <declname>lineNo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_message_base.h" line="51" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classGeneralMessageBase_1a94b72a6e3f9cfe7204bd17f589840a77" prot="protected" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>GeneralMessageBase::GeneralMessageBase</definition>
+        <argsstring>(RenderableMessage *parent=nullptr)</argsstring>
+        <name>GeneralMessageBase</name>
+        <param>
+          <type><ref refid="classRenderableMessage" kindref="compound">RenderableMessage</ref> *</type>
+          <declname>parent</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_message_base.h" line="53" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_message_base.h" bodystart="53" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classGeneralMessageBase_1ab50f085176c924a1d08a805419499a6d" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>GeneralMessageBase::~GeneralMessageBase</definition>
+        <argsstring>(void)</argsstring>
+        <name>~GeneralMessageBase</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_message_base.h" line="55" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_message_base.h" bodystart="55" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="classGeneralMessageBase_1a30f39896e2bb072ac8f67e46e6c95e41" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GeneralMessageBase::clear</definition>
+        <argsstring>(void)</argsstring>
+        <name>clear</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_message_base.h" line="57" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_message_base.h" bodystart="57" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="classGeneralMessageBase_1af9e00565fe280e45a0155f583057ddbd" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GeneralMessageBase::GeneralMessageBase</definition>
+        <argsstring>(const GeneralMessageBase &amp;)=delete</argsstring>
+        <name>GeneralMessageBase</name>
+        <param>
+          <type>const <ref refid="classGeneralMessageBase" kindref="compound">GeneralMessageBase</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_message_base.h" line="65" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classGeneralMessageBase_1aa360714a5ea853427bfd7662f8928d8c" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classGeneralMessageBase" kindref="compound">GeneralMessageBase</ref> &amp;</type>
+        <definition>GeneralMessageBase&amp; GeneralMessageBase::operator=</definition>
+        <argsstring>(const GeneralMessageBase &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classGeneralMessageBase" kindref="compound">GeneralMessageBase</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_message_base.h" line="66" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="330">
+        <label>GeneralChannelMessage</label>
+        <link refid="classGeneralChannelMessage"/>
+        <childnode refid="328" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="329">
+        <label>RenderableMessage</label>
+        <link refid="classRenderableMessage"/>
+      </node>
+      <node id="328">
+        <label>GeneralMessageBase</label>
+        <link refid="classGeneralMessageBase"/>
+        <childnode refid="329" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="331">
+        <label>GeneralMessage</label>
+        <link refid="classGeneralMessage"/>
+        <childnode refid="328" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="333">
+        <label>RenderableMessage</label>
+        <link refid="classRenderableMessage"/>
+        <childnode refid="333" relation="usage">
+          <edgelabel>parent_</edgelabel>
+        </childnode>
+      </node>
+      <node id="332">
+        <label>GeneralMessageBase</label>
+        <link refid="classGeneralMessageBase"/>
+        <childnode refid="333" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_message_base.h" line="28" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_message_base.h" bodystart="28" bodyend="69"/>
+    <listofallmembers>
+      <member refid="classGeneralMessageBase_1a9ab394f1176382bbef06e1b7c37e35ee" prot="protected" virt="virtual"><scope>GeneralMessageBase</scope><name>Child</name></member>
+      <member refid="classGeneralMessageBase_1a5ff98bf477e95204ca2021be372d3eba" prot="protected" virt="non-virtual"><scope>GeneralMessageBase</scope><name>children_map_</name></member>
+      <member refid="classGeneralMessageBase_1a30f39896e2bb072ac8f67e46e6c95e41" prot="protected" virt="non-virtual"><scope>GeneralMessageBase</scope><name>clear</name></member>
+      <member refid="classRenderableMessage_1a7b8a1627a96d0b0658be68c1ad6b99a5" prot="public" virt="virtual"><scope>GeneralMessageBase</scope><name>frame_ratio</name></member>
+      <member refid="classRenderableMessage_1a41d8fd1e6b5f8dee768ee227783c6913" prot="protected" virt="non-virtual"><scope>GeneralMessageBase</scope><name>frame_ratio_</name></member>
+      <member refid="classRenderableMessage_1af8a50adc6f5e10a890eb435390e4e8a6" prot="public" virt="non-virtual"><scope>GeneralMessageBase</scope><name>FrameRatio_Precision</name></member>
+      <member refid="classGeneralMessageBase_1a94b72a6e3f9cfe7204bd17f589840a77" prot="protected" virt="non-virtual"><scope>GeneralMessageBase</scope><name>GeneralMessageBase</name></member>
+      <member refid="classGeneralMessageBase_1af9e00565fe280e45a0155f583057ddbd" prot="protected" virt="non-virtual"><scope>GeneralMessageBase</scope><name>GeneralMessageBase</name></member>
+      <member refid="classGeneralMessageBase_1a7b063ed053799b40e65b4fc36d53ffe8" prot="protected" virt="non-virtual"><scope>GeneralMessageBase</scope><name>insertRepeatedMessage</name></member>
+      <member refid="classRenderableMessage_1a88b81ff1a8da326284fb4732b3d33f46" prot="protected" virt="non-virtual"><scope>GeneralMessageBase</scope><name>line_no</name></member>
+      <member refid="classRenderableMessage_1ae3a742ebe02b5a7f547e97921464e8b5" prot="protected" virt="non-virtual"><scope>GeneralMessageBase</scope><name>line_no_</name></member>
+      <member refid="classGeneralMessageBase_1a3b3feba460a716d68348a54d274dd675" prot="protected" virt="non-virtual"><scope>GeneralMessageBase</scope><name>lineCount</name></member>
+      <member refid="classGeneralMessageBase_1a4af9e501c26db8741b458ab477fe9aaa" prot="protected" virt="non-virtual"><scope>GeneralMessageBase</scope><name>lineCountOfField</name></member>
+      <member refid="classGeneralMessageBase_1aa360714a5ea853427bfd7662f8928d8c" prot="protected" virt="non-virtual"><scope>GeneralMessageBase</scope><name>operator=</name></member>
+      <member refid="classRenderableMessage_1a1d6dcb391ac3d77b8b38c5e926d58375" prot="protected" virt="non-virtual"><scope>GeneralMessageBase</scope><name>page_index_</name></member>
+      <member refid="classRenderableMessage_1a6ada5869afedf204cc031e3345624017" prot="public" virt="non-virtual"><scope>GeneralMessageBase</scope><name>page_item_count</name></member>
+      <member refid="classRenderableMessage_1ac013cc75fdc393be5bf3c8e95d1b5430" prot="protected" virt="non-virtual"><scope>GeneralMessageBase</scope><name>page_item_count_</name></member>
+      <member refid="classRenderableMessage_1ac3a01804a7e180672c2a34fe2b8b0a8c" prot="protected" virt="non-virtual"><scope>GeneralMessageBase</scope><name>pages_</name></member>
+      <member refid="classRenderableMessage_1ab23728d14d9aff3efa0af7639ec6059c" prot="public" virt="non-virtual"><scope>GeneralMessageBase</scope><name>parent</name></member>
+      <member refid="classRenderableMessage_1a4745527c9b4cf149bfeccee669fd3aa8" prot="protected" virt="non-virtual"><scope>GeneralMessageBase</scope><name>parent_</name></member>
+      <member refid="classGeneralMessageBase_1abb2b6d5c8a9399cc6e3eab14a0bec0c7" prot="protected" virt="non-virtual"><scope>GeneralMessageBase</scope><name>PrintField</name></member>
+      <member refid="classGeneralMessageBase_1acb22b24b458fbb199de702736e136be3" prot="protected" virt="non-virtual"><scope>GeneralMessageBase</scope><name>PrintMessage</name></member>
+      <member refid="classRenderableMessage_1a3f65c247f5db9bb4918bca7d665bbdc6" prot="public" virt="pure-virtual"><scope>GeneralMessageBase</scope><name>Render</name></member>
+      <member refid="classRenderableMessage_1afdf4e7a3ff674f72bc6c9bba9997a422" prot="public" virt="non-virtual"><scope>GeneralMessageBase</scope><name>RenderableMessage</name></member>
+      <member refid="classRenderableMessage_1af2cbc010cd97044dee4ebb42c46ff340" prot="protected" virt="non-virtual"><scope>GeneralMessageBase</scope><name>reset_line_page</name></member>
+      <member refid="classRenderableMessage_1aa6685f59c0d7a11b7510aa0f822d1a03" prot="protected" virt="non-virtual"><scope>GeneralMessageBase</scope><name>set_line_no</name></member>
+      <member refid="classRenderableMessage_1a3313d82739bb1dc2da225a40aacfc9b6" prot="public" virt="non-virtual"><scope>GeneralMessageBase</scope><name>set_parent</name></member>
+      <member refid="classRenderableMessage_1a6ca2c5740e208cb4062fbe021ce72853" prot="protected" virt="non-virtual"><scope>GeneralMessageBase</scope><name>SplitPages</name></member>
+      <member refid="classGeneralMessageBase_1ab50f085176c924a1d08a805419499a6d" prot="protected" virt="non-virtual"><scope>GeneralMessageBase</scope><name>~GeneralMessageBase</name></member>
+      <member refid="classRenderableMessage_1a2a539566921f83ea97eed0ea8965d842" prot="public" virt="virtual"><scope>GeneralMessageBase</scope><name>~RenderableMessage</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

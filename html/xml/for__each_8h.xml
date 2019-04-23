@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="for__each_8h" kind="file">
+    <compoundname>for_each.h</compoundname>
+    <includes local="no">type_traits</includes>
+    <includes refid="base_2macros_8h" local="yes">cyber/base/macros.h</includes>
+    <includedby refid="concurrent__object__pool_8h" local="yes">base/concurrent_object_pool.h</includedby>
+    <includedby refid="object__pool_8h" local="yes">base/object_pool.h</includedby>
+    <incdepgraph>
+      <node id="254">
+        <label>new</label>
+      </node>
+      <node id="253">
+        <label>cstdlib</label>
+      </node>
+      <node id="250">
+        <label>base/for_each.h</label>
+        <link refid="for_each.h"/>
+        <childnode refid="251" relation="include">
+        </childnode>
+        <childnode refid="252" relation="include">
+        </childnode>
+      </node>
+      <node id="251">
+        <label>type_traits</label>
+      </node>
+      <node id="252">
+        <label>cyber/base/macros.h</label>
+        <link refid="base_2macros_8h"/>
+        <childnode refid="253" relation="include">
+        </childnode>
+        <childnode refid="254" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="257">
+        <label>base/object_pool.h</label>
+        <link refid="object__pool_8h"/>
+      </node>
+      <node id="255">
+        <label>base/for_each.h</label>
+        <link refid="for_each.h"/>
+        <childnode refid="256" relation="include">
+        </childnode>
+        <childnode refid="257" relation="include">
+        </childnode>
+      </node>
+      <node id="256">
+        <label>base/concurrent_object_pool.h</label>
+        <link refid="concurrent__object__pool_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classapollo_1_1cyber_1_1base_1_1std" prot="public">apollo::cyber::base::std</innerclass>
+    <innernamespace refid="namespaceapollo">apollo</innernamespace>
+    <innernamespace refid="namespaceapollo_1_1cyber">apollo::cyber</innernamespace>
+    <innernamespace refid="namespaceapollo_1_1cyber_1_1base">apollo::cyber::base</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="for__each_8h_1aa34cc41b14223834b057cbfd0f2a67db" prot="public" static="no">
+        <name>FOR_EACH</name>
+        <param><defname>i</defname></param>
+        <param><defname>begin</defname></param>
+        <param><defname>end</defname></param>
+        <initializer>for (auto i = (true ? (begin) : (end)); \
+       <ref refid="namespaceapollo_1_1cyber_1_1base_1ad32e38dcf7a608eb308aa87dea50371b" kindref="member">apollo::cyber::base::LessThan</ref>(i, (end)); ++i)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/for_each.h" line="44" column="9" bodyfile="/home/work/apollo-fork/apollo/cyber/base/for_each.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2018<sp/>The<sp/>Apollo<sp/>Authors.<sp/>All<sp/>Rights<sp/>Reserved.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CYBER_BASE_FOR_EACH_H_</highlight></codeline>
+<codeline lineno="18"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CYBER_BASE_FOR_EACH_H_</highlight></codeline>
+<codeline lineno="19"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;type_traits&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="base_2macros_8h" kindref="compound">cyber/base/macros.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">apollo<sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">cyber<sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">base<sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><ref refid="namespaceapollo_1_1cyber_1_1base_1ad57b78f03b12e4f7eb2bacacc393c99e" kindref="member">DEFINE_TYPE_TRAIT</ref>(HasLess,<sp/></highlight><highlight class="keyword">operator</highlight><highlight class="normal">&lt;)<sp/><sp/></highlight><highlight class="comment">//<sp/>NOLINT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="classapollo_1_1cyber_1_1base_1_1std" refkind="compound"><highlight class="normal">template<sp/>&lt;class<sp/><ref refid="namespaceapollo_1_1cyber_1_1base_1a432d881d5e97cf8bbb7a30004a232dbf" kindref="member">Value</ref>,<sp/>class<sp/>End&gt;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">typename<sp/><ref refid="classapollo_1_1cyber_1_1base_1_1std" kindref="compound">std</ref>::enable_if&lt;HasLess&lt;Value&gt;::<ref refid="namespaceapollo_1_1cyber_1_1base_1aa3e2fff9b18a1214af4a70546fb7120f" kindref="member">value</ref><sp/>&amp;&amp;<sp/>HasLess&lt;End&gt;::<ref refid="namespaceapollo_1_1cyber_1_1base_1aa3e2fff9b18a1214af4a70546fb7120f" kindref="member">value</ref>,</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">&gt;::type</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><ref refid="namespaceapollo_1_1cyber_1_1base_1ad32e38dcf7a608eb308aa87dea50371b" kindref="member">LessThan</ref>(const<sp/>Value&amp;<sp/>val,<sp/>const<sp/>End&amp;<sp/>end)<sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>val<sp/>&lt;<sp/>end;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>Value,<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>End&gt;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="namespaceapollo_1_1cyber_1_1base_1aa3e2fff9b18a1214af4a70546fb7120f" kindref="member">std::enable_if&lt;!HasLess&lt;Value&gt;::value</ref><sp/>||<sp/>!<ref refid="namespaceapollo_1_1cyber_1_1base_1aa3e2fff9b18a1214af4a70546fb7120f" kindref="member">HasLess&lt;End&gt;::value</ref>,</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">&gt;::type</highlight></codeline>
+<codeline lineno="40" refid="namespaceapollo_1_1cyber_1_1base_1aae0a3d399beb069cc3994933bf5d1146" refkind="member"><highlight class="normal"><ref refid="namespaceapollo_1_1cyber_1_1base_1ad32e38dcf7a608eb308aa87dea50371b" kindref="member">LessThan</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespaceapollo_1_1cyber_1_1base_1a432d881d5e97cf8bbb7a30004a232dbf" kindref="member">Value</ref>&amp;<sp/>val,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>End&amp;<sp/>end)<sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>val<sp/>!=<sp/>end;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="for__each_8h_1aa34cc41b14223834b057cbfd0f2a67db" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FOR_EACH(i,<sp/>begin,<sp/>end)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="45"><highlight class="preprocessor"><sp/><sp/>for<sp/>(auto<sp/>i<sp/>=<sp/>(true<sp/>?<sp/>(begin)<sp/>:<sp/>(end));<sp/>\</highlight></codeline>
+<codeline lineno="46"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>apollo::cyber::base::LessThan(i,<sp/>(end));<sp/>++i)</highlight></codeline>
+<codeline lineno="47"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>base</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>cyber</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>apollo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>CYBER_BASE_FOR_EACH_H_</highlight></codeline>
+    </programlisting>
+    <location file="/home/work/apollo-fork/apollo/cyber/base/for_each.h"/>
+  </compounddef>
+</doxygen>

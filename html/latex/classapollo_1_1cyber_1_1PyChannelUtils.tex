@@ -1,0 +1,69 @@
+\hypertarget{classapollo_1_1cyber_1_1PyChannelUtils}{\section{apollo\-:\-:cyber\-:\-:Py\-Channel\-Utils Class Reference}
+\label{classapollo_1_1cyber_1_1PyChannelUtils}\index{apollo\-::cyber\-::\-Py\-Channel\-Utils@{apollo\-::cyber\-::\-Py\-Channel\-Utils}}
+}
+
+
+{\ttfamily \#include $<$py\-\_\-node.\-h$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\-::string \hyperlink{classapollo_1_1cyber_1_1PyChannelUtils_a8997c2679558c43a3f0ec17c811f086d}{get\-\_\-debugstring\-\_\-by\-\_\-msgtype\-\_\-rawmsgdata} (const std\-::string \&msg\-\_\-type, const std\-::string \&rawmsgdata)
+\item 
+static std\-::string \hyperlink{classapollo_1_1cyber_1_1PyChannelUtils_a772358632a3dd2cf8b942c8f44213b02}{get\-\_\-msgtype\-\_\-by\-\_\-channelname} (const std\-::string \&channel\-\_\-name, uint8\-\_\-t sleep\-\_\-s=0)
+\item 
+static std\-::vector$<$ std\-::string $>$ \hyperlink{classapollo_1_1cyber_1_1PyChannelUtils_adb165c24a0eb5189bc344569c6c8eb30}{get\-\_\-active\-\_\-channels} (uint8\-\_\-t sleep\-\_\-s=2)
+\item 
+static std\-::unordered\-\_\-map\\*
+$<$ std\-::string, std\-::vector\\*
+$<$ std\-::string $>$ $>$ \hyperlink{classapollo_1_1cyber_1_1PyChannelUtils_a13a833541adf543076f97d6531139b1b}{get\-\_\-channels\-\_\-info} (uint8\-\_\-t sleep\-\_\-s=2)
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static google\-::protobuf\-::\-Message $\ast$ \hyperlink{classapollo_1_1cyber_1_1PyChannelUtils_a550b93539f7a24e67b3294439a69144c}{raw\-\_\-msg\-\_\-class\-\_\-} = nullptr
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1PyChannelUtils_adb165c24a0eb5189bc344569c6c8eb30}{\index{apollo\-::cyber\-::\-Py\-Channel\-Utils@{apollo\-::cyber\-::\-Py\-Channel\-Utils}!get\-\_\-active\-\_\-channels@{get\-\_\-active\-\_\-channels}}
+\index{get\-\_\-active\-\_\-channels@{get\-\_\-active\-\_\-channels}!apollo::cyber::PyChannelUtils@{apollo\-::cyber\-::\-Py\-Channel\-Utils}}
+\subsubsection[{get\-\_\-active\-\_\-channels}]{\setlength{\rightskip}{0pt plus 5cm}static std\-::vector$<$std\-::string$>$ apollo\-::cyber\-::\-Py\-Channel\-Utils\-::get\-\_\-active\-\_\-channels (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{sleep\-\_\-s = {\ttfamily 2}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classapollo_1_1cyber_1_1PyChannelUtils_adb165c24a0eb5189bc344569c6c8eb30}
+\hypertarget{classapollo_1_1cyber_1_1PyChannelUtils_a13a833541adf543076f97d6531139b1b}{\index{apollo\-::cyber\-::\-Py\-Channel\-Utils@{apollo\-::cyber\-::\-Py\-Channel\-Utils}!get\-\_\-channels\-\_\-info@{get\-\_\-channels\-\_\-info}}
+\index{get\-\_\-channels\-\_\-info@{get\-\_\-channels\-\_\-info}!apollo::cyber::PyChannelUtils@{apollo\-::cyber\-::\-Py\-Channel\-Utils}}
+\subsubsection[{get\-\_\-channels\-\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}static std\-::unordered\-\_\-map$<$std\-::string, std\-::vector$<$std\-::string$>$ $>$ apollo\-::cyber\-::\-Py\-Channel\-Utils\-::get\-\_\-channels\-\_\-info (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t}]{sleep\-\_\-s = {\ttfamily 2}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classapollo_1_1cyber_1_1PyChannelUtils_a13a833541adf543076f97d6531139b1b}
+\hypertarget{classapollo_1_1cyber_1_1PyChannelUtils_a8997c2679558c43a3f0ec17c811f086d}{\index{apollo\-::cyber\-::\-Py\-Channel\-Utils@{apollo\-::cyber\-::\-Py\-Channel\-Utils}!get\-\_\-debugstring\-\_\-by\-\_\-msgtype\-\_\-rawmsgdata@{get\-\_\-debugstring\-\_\-by\-\_\-msgtype\-\_\-rawmsgdata}}
+\index{get\-\_\-debugstring\-\_\-by\-\_\-msgtype\-\_\-rawmsgdata@{get\-\_\-debugstring\-\_\-by\-\_\-msgtype\-\_\-rawmsgdata}!apollo::cyber::PyChannelUtils@{apollo\-::cyber\-::\-Py\-Channel\-Utils}}
+\subsubsection[{get\-\_\-debugstring\-\_\-by\-\_\-msgtype\-\_\-rawmsgdata}]{\setlength{\rightskip}{0pt plus 5cm}static std\-::string apollo\-::cyber\-::\-Py\-Channel\-Utils\-::get\-\_\-debugstring\-\_\-by\-\_\-msgtype\-\_\-rawmsgdata (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{msg\-\_\-type, }
+\item[{const std\-::string \&}]{rawmsgdata}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classapollo_1_1cyber_1_1PyChannelUtils_a8997c2679558c43a3f0ec17c811f086d}
+\hypertarget{classapollo_1_1cyber_1_1PyChannelUtils_a772358632a3dd2cf8b942c8f44213b02}{\index{apollo\-::cyber\-::\-Py\-Channel\-Utils@{apollo\-::cyber\-::\-Py\-Channel\-Utils}!get\-\_\-msgtype\-\_\-by\-\_\-channelname@{get\-\_\-msgtype\-\_\-by\-\_\-channelname}}
+\index{get\-\_\-msgtype\-\_\-by\-\_\-channelname@{get\-\_\-msgtype\-\_\-by\-\_\-channelname}!apollo::cyber::PyChannelUtils@{apollo\-::cyber\-::\-Py\-Channel\-Utils}}
+\subsubsection[{get\-\_\-msgtype\-\_\-by\-\_\-channelname}]{\setlength{\rightskip}{0pt plus 5cm}static std\-::string apollo\-::cyber\-::\-Py\-Channel\-Utils\-::get\-\_\-msgtype\-\_\-by\-\_\-channelname (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{channel\-\_\-name, }
+\item[{uint8\-\_\-t}]{sleep\-\_\-s = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classapollo_1_1cyber_1_1PyChannelUtils_a772358632a3dd2cf8b942c8f44213b02}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classapollo_1_1cyber_1_1PyChannelUtils_a550b93539f7a24e67b3294439a69144c}{\index{apollo\-::cyber\-::\-Py\-Channel\-Utils@{apollo\-::cyber\-::\-Py\-Channel\-Utils}!raw\-\_\-msg\-\_\-class\-\_\-@{raw\-\_\-msg\-\_\-class\-\_\-}}
+\index{raw\-\_\-msg\-\_\-class\-\_\-@{raw\-\_\-msg\-\_\-class\-\_\-}!apollo::cyber::PyChannelUtils@{apollo\-::cyber\-::\-Py\-Channel\-Utils}}
+\subsubsection[{raw\-\_\-msg\-\_\-class\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}google\-::protobuf\-::\-Message $\ast$ apollo\-::cyber\-::\-Py\-Channel\-Utils\-::raw\-\_\-msg\-\_\-class\-\_\- = nullptr\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1PyChannelUtils_a550b93539f7a24e67b3294439a69144c}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+py\-\_\-wrapper/\hyperlink{py__node_8h}{py\-\_\-node.\-h}\end{DoxyCompactItemize}

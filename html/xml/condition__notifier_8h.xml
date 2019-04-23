@@ -1,0 +1,192 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="condition__notifier_8h" kind="file">
+    <compoundname>condition_notifier.h</compoundname>
+    <includes local="no">stdint.h</includes>
+    <includes local="no">sys/types.h</includes>
+    <includes local="no">atomic</includes>
+    <includes refid="common_2macros_8h" local="yes">cyber/common/macros.h</includes>
+    <includes refid="notifier__base_8h" local="yes">cyber/transport/shm/notifier_base.h</includes>
+    <incdepgraph>
+      <node id="14363">
+        <label>atomic</label>
+      </node>
+      <node id="14376">
+        <label>cstdint</label>
+      </node>
+      <node id="14361">
+        <label>stdint.h</label>
+      </node>
+      <node id="14377">
+        <label>string</label>
+      </node>
+      <node id="14364">
+        <label>cyber/common/macros.h</label>
+        <link refid="common_2macros_8h"/>
+        <childnode refid="14365" relation="include">
+        </childnode>
+        <childnode refid="14366" relation="include">
+        </childnode>
+        <childnode refid="14367" relation="include">
+        </childnode>
+        <childnode refid="14368" relation="include">
+        </childnode>
+        <childnode refid="14369" relation="include">
+        </childnode>
+        <childnode refid="14370" relation="include">
+        </childnode>
+      </node>
+      <node id="14374">
+        <label>cyber/transport/shm/readable_info.h</label>
+        <link refid="readable__info_8h"/>
+        <childnode refid="14375" relation="include">
+        </childnode>
+        <childnode refid="14376" relation="include">
+        </childnode>
+        <childnode refid="14366" relation="include">
+        </childnode>
+        <childnode refid="14377" relation="include">
+        </childnode>
+      </node>
+      <node id="14360">
+        <label>transport/shm/condition_notifier.h</label>
+        <link refid="condition_notifier.h"/>
+        <childnode refid="14361" relation="include">
+        </childnode>
+        <childnode refid="14362" relation="include">
+        </childnode>
+        <childnode refid="14363" relation="include">
+        </childnode>
+        <childnode refid="14364" relation="include">
+        </childnode>
+        <childnode refid="14373" relation="include">
+        </childnode>
+      </node>
+      <node id="14362">
+        <label>sys/types.h</label>
+      </node>
+      <node id="14372">
+        <label>new</label>
+      </node>
+      <node id="14369">
+        <label>utility</label>
+      </node>
+      <node id="14371">
+        <label>cstdlib</label>
+      </node>
+      <node id="14365">
+        <label>iostream</label>
+      </node>
+      <node id="14375">
+        <label>cstddef</label>
+      </node>
+      <node id="14367">
+        <label>mutex</label>
+      </node>
+      <node id="14373">
+        <label>cyber/transport/shm/notifier_base.h</label>
+        <link refid="notifier__base_8h"/>
+        <childnode refid="14366" relation="include">
+        </childnode>
+        <childnode refid="14374" relation="include">
+        </childnode>
+      </node>
+      <node id="14368">
+        <label>type_traits</label>
+      </node>
+      <node id="14370">
+        <label>cyber/base/macros.h</label>
+        <link refid="base_2macros_8h"/>
+        <childnode refid="14371" relation="include">
+        </childnode>
+        <childnode refid="14372" relation="include">
+        </childnode>
+      </node>
+      <node id="14366">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier" prot="public">apollo::cyber::transport::ConditionNotifier</innerclass>
+    <innerclass refid="structapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1_1Indicator" prot="private">apollo::cyber::transport::ConditionNotifier::Indicator</innerclass>
+    <innernamespace refid="namespaceapollo">apollo</innernamespace>
+    <innernamespace refid="namespaceapollo_1_1cyber">apollo::cyber</innernamespace>
+    <innernamespace refid="namespaceapollo_1_1cyber_1_1transport">apollo::cyber::transport</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2018<sp/>The<sp/>Apollo<sp/>Authors.<sp/>All<sp/>Rights<sp/>Reserved.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CYBER_TRANSPORT_SHM_CONDITION_NOTIFIER_H_</highlight></codeline>
+<codeline lineno="18"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CYBER_TRANSPORT_SHM_CONDITION_NOTIFIER_H_</highlight></codeline>
+<codeline lineno="19"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/types.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;atomic&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="common_2macros_8h" kindref="compound">cyber/common/macros.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="notifier__base_8h" kindref="compound">cyber/transport/shm/notifier_base.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">apollo<sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">cyber<sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">transport<sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="namespaceapollo_1_1cyber_1_1transport_1a12bcc39dba9d39eab46f409750a9e1e8" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t<sp/><ref refid="namespaceapollo_1_1cyber_1_1transport_1a12bcc39dba9d39eab46f409750a9e1e8" kindref="member">kBufLength</ref><sp/>=<sp/>4096;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier" kindref="compound">ConditionNotifier</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1transport_1_1NotifierBase" kindref="compound">NotifierBase</ref><sp/>{</highlight></codeline>
+<codeline lineno="34" refid="structapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1_1Indicator" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1_1Indicator" kindref="compound">Indicator</ref><sp/>{</highlight></codeline>
+<codeline lineno="35" refid="structapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1_1Indicator_1a1982f4b9b860d3141523143518567049" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::atomic&lt;uint64_t&gt;<sp/><ref refid="structapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1_1Indicator_1a1982f4b9b860d3141523143518567049" kindref="member">next_idx_to_write</ref><sp/>=<sp/>{0};</highlight></codeline>
+<codeline lineno="36" refid="structapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1_1Indicator_1a10e7c84d2e0c307c9c72f5160f83d8ec" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::atomic&lt;uint64_t&gt;<sp/><ref refid="structapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1_1Indicator_1a10e7c84d2e0c307c9c72f5160f83d8ec" kindref="member">written_info_num</ref><sp/>=<sp/>{0};</highlight></codeline>
+<codeline lineno="37" refid="structapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1_1Indicator_1aa5c93bf8b4d22a52019d524ef1991455" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classapollo_1_1cyber_1_1transport_1_1ReadableInfo" kindref="compound">ReadableInfo</ref><sp/><ref refid="structapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1_1Indicator_1aa5c93bf8b4d22a52019d524ef1991455" kindref="member">infos</ref>[<ref refid="namespaceapollo_1_1cyber_1_1transport_1a12bcc39dba9d39eab46f409750a9e1e8" kindref="member">kBufLength</ref>];</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1a7e4bd95c4da5a8d1e6194c255ee75eb3" kindref="member">~ConditionNotifier</ref>();</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1a057d3f71a69a9913107416166a01a81b" kindref="member">Shutdown</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1ad9d938243de75dc7b015ca2ca9819f01" kindref="member">Notify</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1transport_1_1ReadableInfo" kindref="compound">ReadableInfo</ref>&amp;<sp/>info)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1a961bd6d94fdae4ffa6a7413a95932db5" kindref="member">Listen</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>timeout_ms,<sp/><ref refid="classapollo_1_1cyber_1_1transport_1_1ReadableInfo" kindref="compound">ReadableInfo</ref>*<sp/>info)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1a176c1ca8f3cbc3c15ff2fba4eb0280e2" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1a176c1ca8f3cbc3c15ff2fba4eb0280e2" kindref="member">Type</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;condition&quot;</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1a822ee78c2f903e366f3c58cc9a9eafa1" kindref="member">Init</ref>();</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1a506f0777ddba9729af366d6df37b40ad" kindref="member">OpenOrCreate</ref>();</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1afaf6b12a6030861f6ad009b6cfd42f27" kindref="member">OpenOnly</ref>();</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1aa72b3769316e25e2d4faee6eac8c30a2" kindref="member">Remove</ref>();</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1a5094406c9605ef19b646208ae6036d77" kindref="member">Reset</ref>();</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1aa5d9958e7a5c7abc7f04ce84f0385c9a" refkind="member"><highlight class="normal"><sp/><sp/>key_t<sp/><ref refid="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1aa5d9958e7a5c7abc7f04ce84f0385c9a" kindref="member">key_</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="57" refid="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1a22cba07e5cce1d0a782c51f3bcbb09c8" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1a22cba07e5cce1d0a782c51f3bcbb09c8" kindref="member">managed_shm_</ref><sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="58" refid="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1a48fcd814d133e570bcaaed0527e72edc" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1a48fcd814d133e570bcaaed0527e72edc" kindref="member">shm_size_</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="59" refid="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1ac9867419135c8a5484cc1296a69ee7e0" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1_1Indicator" kindref="compound">Indicator</ref>*<sp/><ref refid="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1ac9867419135c8a5484cc1296a69ee7e0" kindref="member">indicator_</ref><sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="60" refid="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1a55460f4f3c02cd6cb0d5e0dcabd7576e" refkind="member"><highlight class="normal"><sp/><sp/>uint64_t<sp/><ref refid="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1a55460f4f3c02cd6cb0d5e0dcabd7576e" kindref="member">next_listen_num_</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="61" refid="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1af8e320c5121acbb3b50956ac7519fdb8" refkind="member"><highlight class="normal"><sp/><sp/>std::atomic&lt;bool&gt;<sp/><ref refid="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1af8e320c5121acbb3b50956ac7519fdb8" kindref="member">is_shutdown_</ref><sp/>=<sp/>{</highlight><highlight class="keyword">false</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><ref refid="common_2macros_8h_1ae064c360d998527ea6031d4e129b709d" kindref="member">DECLARE_SINGLETON</ref>(<ref refid="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier" kindref="compound">ConditionNotifier</ref>)</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>transport</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>cyber</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>apollo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>CYBER_TRANSPORT_SHM_CONDITION_NOTIFIER_H_</highlight></codeline>
+    </programlisting>
+    <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/condition_notifier.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,192 @@
+\hypertarget{classapollo_1_1cyber_1_1ParameterClient}{\section{apollo\-:\-:cyber\-:\-:Parameter\-Client Class Reference}
+\label{classapollo_1_1cyber_1_1ParameterClient}\index{apollo\-::cyber\-::\-Parameter\-Client@{apollo\-::cyber\-::\-Parameter\-Client}}
+}
+
+
+{\ttfamily \#include $<$parameter\-\_\-client.\-h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1ParameterClient_abbe01b23559ca1166de439023c2aacd1}{Param} = apollo\-::cyber\-::proto\-::\-Param
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1ParameterClient_ab50cca8d23f4fc3d41825d39d4d9364c}{Node\-Name} = apollo\-::cyber\-::proto\-::\-Node\-Name
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1ParameterClient_aab6e735de877c2611b2354ea1371c142}{Param\-Name} = apollo\-::cyber\-::proto\-::\-Param\-Name
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1ParameterClient_a3dd146d628d94d3705dccf625dbca038}{Bool\-Result} = apollo\-::cyber\-::proto\-::\-Bool\-Result
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1ParameterClient_ad8de8a070f7cae18effe35ee1b3defb4}{Params} = apollo\-::cyber\-::proto\-::\-Params
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1ParameterClient_a8ec0154a2d14d3852069716a4b553c5f}{Get\-Parameter\-Client} = \hyperlink{classapollo_1_1cyber_1_1Client}{Client}$<$ \hyperlink{classapollo_1_1cyber_1_1ParameterClient_aab6e735de877c2611b2354ea1371c142}{Param\-Name}, \hyperlink{classapollo_1_1cyber_1_1ParameterClient_abbe01b23559ca1166de439023c2aacd1}{Param} $>$
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1ParameterClient_a2148326d395df8bc05fa03e1c92ad8fc}{Set\-Parameter\-Client} = \hyperlink{classapollo_1_1cyber_1_1Client}{Client}$<$ \hyperlink{classapollo_1_1cyber_1_1ParameterClient_abbe01b23559ca1166de439023c2aacd1}{Param}, \hyperlink{classapollo_1_1cyber_1_1ParameterClient_a3dd146d628d94d3705dccf625dbca038}{Bool\-Result} $>$
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1ParameterClient_a5a6fef80c4ea818e6380dd49fe4843e9}{List\-Parameters\-Client} = \hyperlink{classapollo_1_1cyber_1_1Client}{Client}$<$ \hyperlink{classapollo_1_1cyber_1_1ParameterClient_ab50cca8d23f4fc3d41825d39d4d9364c}{Node\-Name}, \hyperlink{classapollo_1_1cyber_1_1ParameterClient_ad8de8a070f7cae18effe35ee1b3defb4}{Params} $>$
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1ParameterClient_a0a63cdffa8cf0a8793c964c1fad96dcb}{Parameter\-Client} (const std\-::shared\-\_\-ptr$<$ \hyperlink{classapollo_1_1cyber_1_1Node}{Node} $>$ \&node, const std\-::string \&service\-\_\-node\-\_\-name)
+\begin{DoxyCompactList}\small\item\em Construct a new \hyperlink{classapollo_1_1cyber_1_1ParameterClient}{Parameter\-Client} object. \end{DoxyCompactList}\item 
+bool \hyperlink{classapollo_1_1cyber_1_1ParameterClient_a8da3339334f14b14d89ae3c812f1a314}{Get\-Parameter} (const std\-::string \&param\-\_\-name, \hyperlink{classapollo_1_1cyber_1_1Parameter}{Parameter} $\ast$parameter)
+\begin{DoxyCompactList}\small\item\em Get the \hyperlink{classapollo_1_1cyber_1_1Parameter}{Parameter} object. \end{DoxyCompactList}\item 
+bool \hyperlink{classapollo_1_1cyber_1_1ParameterClient_a7862da312d013c50c82e4f6ae291ceb5}{Set\-Parameter} (const \hyperlink{classapollo_1_1cyber_1_1Parameter}{Parameter} \&parameter)
+\begin{DoxyCompactList}\small\item\em Set the \hyperlink{classapollo_1_1cyber_1_1Parameter}{Parameter} object. \end{DoxyCompactList}\item 
+bool \hyperlink{classapollo_1_1cyber_1_1ParameterClient_a1d8e6989c1e26d7fd3a5411171a7ccd6}{List\-Parameters} (std\-::vector$<$ \hyperlink{classapollo_1_1cyber_1_1Parameter}{Parameter} $>$ $\ast$parameters)
+\begin{DoxyCompactList}\small\item\em Get all the \hyperlink{classapollo_1_1cyber_1_1Parameter}{Parameter} objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\-::shared\-\_\-ptr$<$ \hyperlink{classapollo_1_1cyber_1_1Node}{Node} $>$ \hyperlink{classapollo_1_1cyber_1_1ParameterClient_af5b1cc3adbe4ac895b0a208156a233b9}{node\-\_\-}
+\item 
+std\-::shared\-\_\-ptr\\*
+$<$ \hyperlink{classapollo_1_1cyber_1_1ParameterClient_a8ec0154a2d14d3852069716a4b553c5f}{Get\-Parameter\-Client} $>$ \hyperlink{classapollo_1_1cyber_1_1ParameterClient_a465bd69389ab52ec3712ac9ec0e8597b}{get\-\_\-parameter\-\_\-client\-\_\-}
+\item 
+std\-::shared\-\_\-ptr\\*
+$<$ \hyperlink{classapollo_1_1cyber_1_1ParameterClient_a2148326d395df8bc05fa03e1c92ad8fc}{Set\-Parameter\-Client} $>$ \hyperlink{classapollo_1_1cyber_1_1ParameterClient_a7c2d404d40870ee96fe51ca736ca8dd0}{set\-\_\-parameter\-\_\-client\-\_\-}
+\item 
+std\-::shared\-\_\-ptr\\*
+$<$ \hyperlink{classapollo_1_1cyber_1_1ParameterClient_a5a6fef80c4ea818e6380dd49fe4843e9}{List\-Parameters\-Client} $>$ \hyperlink{classapollo_1_1cyber_1_1ParameterClient_ad8aa89ded98dc6f21245cf6145ba6888}{list\-\_\-parameters\-\_\-client\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classapollo_1_1cyber_1_1ParameterClient_a3dd146d628d94d3705dccf625dbca038}{\index{apollo\-::cyber\-::\-Parameter\-Client@{apollo\-::cyber\-::\-Parameter\-Client}!Bool\-Result@{Bool\-Result}}
+\index{Bool\-Result@{Bool\-Result}!apollo::cyber::ParameterClient@{apollo\-::cyber\-::\-Parameter\-Client}}
+\subsubsection[{Bool\-Result}]{\setlength{\rightskip}{0pt plus 5cm}using {\bf apollo\-::cyber\-::\-Parameter\-Client\-::\-Bool\-Result} =  apollo\-::cyber\-::proto\-::\-Bool\-Result}}\label{classapollo_1_1cyber_1_1ParameterClient_a3dd146d628d94d3705dccf625dbca038}
+\hypertarget{classapollo_1_1cyber_1_1ParameterClient_a8ec0154a2d14d3852069716a4b553c5f}{\index{apollo\-::cyber\-::\-Parameter\-Client@{apollo\-::cyber\-::\-Parameter\-Client}!Get\-Parameter\-Client@{Get\-Parameter\-Client}}
+\index{Get\-Parameter\-Client@{Get\-Parameter\-Client}!apollo::cyber::ParameterClient@{apollo\-::cyber\-::\-Parameter\-Client}}
+\subsubsection[{Get\-Parameter\-Client}]{\setlength{\rightskip}{0pt plus 5cm}using {\bf apollo\-::cyber\-::\-Parameter\-Client\-::\-Get\-Parameter\-Client} =  {\bf Client}$<${\bf Param\-Name}, {\bf Param}$>$}}\label{classapollo_1_1cyber_1_1ParameterClient_a8ec0154a2d14d3852069716a4b553c5f}
+\hypertarget{classapollo_1_1cyber_1_1ParameterClient_a5a6fef80c4ea818e6380dd49fe4843e9}{\index{apollo\-::cyber\-::\-Parameter\-Client@{apollo\-::cyber\-::\-Parameter\-Client}!List\-Parameters\-Client@{List\-Parameters\-Client}}
+\index{List\-Parameters\-Client@{List\-Parameters\-Client}!apollo::cyber::ParameterClient@{apollo\-::cyber\-::\-Parameter\-Client}}
+\subsubsection[{List\-Parameters\-Client}]{\setlength{\rightskip}{0pt plus 5cm}using {\bf apollo\-::cyber\-::\-Parameter\-Client\-::\-List\-Parameters\-Client} =  {\bf Client}$<${\bf Node\-Name}, {\bf Params}$>$}}\label{classapollo_1_1cyber_1_1ParameterClient_a5a6fef80c4ea818e6380dd49fe4843e9}
+\hypertarget{classapollo_1_1cyber_1_1ParameterClient_ab50cca8d23f4fc3d41825d39d4d9364c}{\index{apollo\-::cyber\-::\-Parameter\-Client@{apollo\-::cyber\-::\-Parameter\-Client}!Node\-Name@{Node\-Name}}
+\index{Node\-Name@{Node\-Name}!apollo::cyber::ParameterClient@{apollo\-::cyber\-::\-Parameter\-Client}}
+\subsubsection[{Node\-Name}]{\setlength{\rightskip}{0pt plus 5cm}using {\bf apollo\-::cyber\-::\-Parameter\-Client\-::\-Node\-Name} =  apollo\-::cyber\-::proto\-::\-Node\-Name}}\label{classapollo_1_1cyber_1_1ParameterClient_ab50cca8d23f4fc3d41825d39d4d9364c}
+\hypertarget{classapollo_1_1cyber_1_1ParameterClient_abbe01b23559ca1166de439023c2aacd1}{\index{apollo\-::cyber\-::\-Parameter\-Client@{apollo\-::cyber\-::\-Parameter\-Client}!Param@{Param}}
+\index{Param@{Param}!apollo::cyber::ParameterClient@{apollo\-::cyber\-::\-Parameter\-Client}}
+\subsubsection[{Param}]{\setlength{\rightskip}{0pt plus 5cm}using {\bf apollo\-::cyber\-::\-Parameter\-Client\-::\-Param} =  apollo\-::cyber\-::proto\-::\-Param}}\label{classapollo_1_1cyber_1_1ParameterClient_abbe01b23559ca1166de439023c2aacd1}
+\hypertarget{classapollo_1_1cyber_1_1ParameterClient_aab6e735de877c2611b2354ea1371c142}{\index{apollo\-::cyber\-::\-Parameter\-Client@{apollo\-::cyber\-::\-Parameter\-Client}!Param\-Name@{Param\-Name}}
+\index{Param\-Name@{Param\-Name}!apollo::cyber::ParameterClient@{apollo\-::cyber\-::\-Parameter\-Client}}
+\subsubsection[{Param\-Name}]{\setlength{\rightskip}{0pt plus 5cm}using {\bf apollo\-::cyber\-::\-Parameter\-Client\-::\-Param\-Name} =  apollo\-::cyber\-::proto\-::\-Param\-Name}}\label{classapollo_1_1cyber_1_1ParameterClient_aab6e735de877c2611b2354ea1371c142}
+\hypertarget{classapollo_1_1cyber_1_1ParameterClient_ad8de8a070f7cae18effe35ee1b3defb4}{\index{apollo\-::cyber\-::\-Parameter\-Client@{apollo\-::cyber\-::\-Parameter\-Client}!Params@{Params}}
+\index{Params@{Params}!apollo::cyber::ParameterClient@{apollo\-::cyber\-::\-Parameter\-Client}}
+\subsubsection[{Params}]{\setlength{\rightskip}{0pt plus 5cm}using {\bf apollo\-::cyber\-::\-Parameter\-Client\-::\-Params} =  apollo\-::cyber\-::proto\-::\-Params}}\label{classapollo_1_1cyber_1_1ParameterClient_ad8de8a070f7cae18effe35ee1b3defb4}
+\hypertarget{classapollo_1_1cyber_1_1ParameterClient_a2148326d395df8bc05fa03e1c92ad8fc}{\index{apollo\-::cyber\-::\-Parameter\-Client@{apollo\-::cyber\-::\-Parameter\-Client}!Set\-Parameter\-Client@{Set\-Parameter\-Client}}
+\index{Set\-Parameter\-Client@{Set\-Parameter\-Client}!apollo::cyber::ParameterClient@{apollo\-::cyber\-::\-Parameter\-Client}}
+\subsubsection[{Set\-Parameter\-Client}]{\setlength{\rightskip}{0pt plus 5cm}using {\bf apollo\-::cyber\-::\-Parameter\-Client\-::\-Set\-Parameter\-Client} =  {\bf Client}$<${\bf Param}, {\bf Bool\-Result}$>$}}\label{classapollo_1_1cyber_1_1ParameterClient_a2148326d395df8bc05fa03e1c92ad8fc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classapollo_1_1cyber_1_1ParameterClient_a0a63cdffa8cf0a8793c964c1fad96dcb}{\index{apollo\-::cyber\-::\-Parameter\-Client@{apollo\-::cyber\-::\-Parameter\-Client}!Parameter\-Client@{Parameter\-Client}}
+\index{Parameter\-Client@{Parameter\-Client}!apollo::cyber::ParameterClient@{apollo\-::cyber\-::\-Parameter\-Client}}
+\subsubsection[{Parameter\-Client}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::\-Parameter\-Client\-::\-Parameter\-Client (
+\begin{DoxyParamCaption}
+\item[{const std\-::shared\-\_\-ptr$<$ {\bf Node} $>$ \&}]{node, }
+\item[{const std\-::string \&}]{service\-\_\-node\-\_\-name}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1ParameterClient_a0a63cdffa8cf0a8793c964c1fad96dcb}
+
+
+Construct a new \hyperlink{classapollo_1_1cyber_1_1ParameterClient}{Parameter\-Client} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & shared\-\_\-ptr of the node handler \\
+\hline
+{\em service\-\_\-node\-\_\-name} & node name which provide a param services \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1ParameterClient_a8da3339334f14b14d89ae3c812f1a314}{\index{apollo\-::cyber\-::\-Parameter\-Client@{apollo\-::cyber\-::\-Parameter\-Client}!Get\-Parameter@{Get\-Parameter}}
+\index{Get\-Parameter@{Get\-Parameter}!apollo::cyber::ParameterClient@{apollo\-::cyber\-::\-Parameter\-Client}}
+\subsubsection[{Get\-Parameter}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::\-Parameter\-Client\-::\-Get\-Parameter (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{param\-\_\-name, }
+\item[{{\bf Parameter} $\ast$}]{parameter}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1ParameterClient_a8da3339334f14b14d89ae3c812f1a314}
+
+
+Get the \hyperlink{classapollo_1_1cyber_1_1Parameter}{Parameter} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em param\-\_\-name} & \\
+\hline
+{\em parameter} & the pointer to store \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false call service fail or timeout 
+\end{DoxyReturn}
+\hypertarget{classapollo_1_1cyber_1_1ParameterClient_a1d8e6989c1e26d7fd3a5411171a7ccd6}{\index{apollo\-::cyber\-::\-Parameter\-Client@{apollo\-::cyber\-::\-Parameter\-Client}!List\-Parameters@{List\-Parameters}}
+\index{List\-Parameters@{List\-Parameters}!apollo::cyber::ParameterClient@{apollo\-::cyber\-::\-Parameter\-Client}}
+\subsubsection[{List\-Parameters}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::\-Parameter\-Client\-::\-List\-Parameters (
+\begin{DoxyParamCaption}
+\item[{std\-::vector$<$ {\bf Parameter} $>$ $\ast$}]{parameters}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1ParameterClient_a1d8e6989c1e26d7fd3a5411171a7ccd6}
+
+
+Get all the \hyperlink{classapollo_1_1cyber_1_1Parameter}{Parameter} objects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parameters} & pointer of vector to store all the parameters \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false call service fail or timeout 
+\end{DoxyReturn}
+\hypertarget{classapollo_1_1cyber_1_1ParameterClient_a7862da312d013c50c82e4f6ae291ceb5}{\index{apollo\-::cyber\-::\-Parameter\-Client@{apollo\-::cyber\-::\-Parameter\-Client}!Set\-Parameter@{Set\-Parameter}}
+\index{Set\-Parameter@{Set\-Parameter}!apollo::cyber::ParameterClient@{apollo\-::cyber\-::\-Parameter\-Client}}
+\subsubsection[{Set\-Parameter}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::\-Parameter\-Client\-::\-Set\-Parameter (
+\begin{DoxyParamCaption}
+\item[{const {\bf Parameter} \&}]{parameter}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1ParameterClient_a7862da312d013c50c82e4f6ae291ceb5}
+
+
+Set the \hyperlink{classapollo_1_1cyber_1_1Parameter}{Parameter} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parameter} & parameter to be set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true set parameter succues 
+
+false 1. call service timeout
+\begin{DoxyEnumerate}
+\item parameter not exists The corresponding log will be recorded at the same time 
+\end{DoxyEnumerate}
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classapollo_1_1cyber_1_1ParameterClient_a465bd69389ab52ec3712ac9ec0e8597b}{\index{apollo\-::cyber\-::\-Parameter\-Client@{apollo\-::cyber\-::\-Parameter\-Client}!get\-\_\-parameter\-\_\-client\-\_\-@{get\-\_\-parameter\-\_\-client\-\_\-}}
+\index{get\-\_\-parameter\-\_\-client\-\_\-@{get\-\_\-parameter\-\_\-client\-\_\-}!apollo::cyber::ParameterClient@{apollo\-::cyber\-::\-Parameter\-Client}}
+\subsubsection[{get\-\_\-parameter\-\_\-client\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::shared\-\_\-ptr$<${\bf Get\-Parameter\-Client}$>$ apollo\-::cyber\-::\-Parameter\-Client\-::get\-\_\-parameter\-\_\-client\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1ParameterClient_a465bd69389ab52ec3712ac9ec0e8597b}
+\hypertarget{classapollo_1_1cyber_1_1ParameterClient_ad8aa89ded98dc6f21245cf6145ba6888}{\index{apollo\-::cyber\-::\-Parameter\-Client@{apollo\-::cyber\-::\-Parameter\-Client}!list\-\_\-parameters\-\_\-client\-\_\-@{list\-\_\-parameters\-\_\-client\-\_\-}}
+\index{list\-\_\-parameters\-\_\-client\-\_\-@{list\-\_\-parameters\-\_\-client\-\_\-}!apollo::cyber::ParameterClient@{apollo\-::cyber\-::\-Parameter\-Client}}
+\subsubsection[{list\-\_\-parameters\-\_\-client\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::shared\-\_\-ptr$<${\bf List\-Parameters\-Client}$>$ apollo\-::cyber\-::\-Parameter\-Client\-::list\-\_\-parameters\-\_\-client\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1ParameterClient_ad8aa89ded98dc6f21245cf6145ba6888}
+\hypertarget{classapollo_1_1cyber_1_1ParameterClient_af5b1cc3adbe4ac895b0a208156a233b9}{\index{apollo\-::cyber\-::\-Parameter\-Client@{apollo\-::cyber\-::\-Parameter\-Client}!node\-\_\-@{node\-\_\-}}
+\index{node\-\_\-@{node\-\_\-}!apollo::cyber::ParameterClient@{apollo\-::cyber\-::\-Parameter\-Client}}
+\subsubsection[{node\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::shared\-\_\-ptr$<${\bf Node}$>$ apollo\-::cyber\-::\-Parameter\-Client\-::node\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1ParameterClient_af5b1cc3adbe4ac895b0a208156a233b9}
+\hypertarget{classapollo_1_1cyber_1_1ParameterClient_a7c2d404d40870ee96fe51ca736ca8dd0}{\index{apollo\-::cyber\-::\-Parameter\-Client@{apollo\-::cyber\-::\-Parameter\-Client}!set\-\_\-parameter\-\_\-client\-\_\-@{set\-\_\-parameter\-\_\-client\-\_\-}}
+\index{set\-\_\-parameter\-\_\-client\-\_\-@{set\-\_\-parameter\-\_\-client\-\_\-}!apollo::cyber::ParameterClient@{apollo\-::cyber\-::\-Parameter\-Client}}
+\subsubsection[{set\-\_\-parameter\-\_\-client\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::shared\-\_\-ptr$<${\bf Set\-Parameter\-Client}$>$ apollo\-::cyber\-::\-Parameter\-Client\-::set\-\_\-parameter\-\_\-client\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1ParameterClient_a7c2d404d40870ee96fe51ca736ca8dd0}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+parameter/\hyperlink{parameter__client_8h}{parameter\-\_\-client.\-h}\end{DoxyCompactItemize}

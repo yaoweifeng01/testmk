@@ -1,0 +1,169 @@
+\hypertarget{classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography}{\section{apollo\-:\-:cyber\-:\-:scheduler\-:\-:Scheduler\-Choreography Class Reference}
+\label{classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography}\index{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Choreography@{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Choreography}}
+}
+
+
+{\ttfamily \#include $<$scheduler\-\_\-choreography.\-h$>$}
+
+Inheritance diagram for apollo\-:\-:cyber\-:\-:scheduler\-:\-:Scheduler\-Choreography\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_adeb5e2143b5437f3e86fb741b02a7736}{Remove\-C\-Routine} (uint64\-\_\-t crid) override
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_ad4d0fb12a12d3dfa7c3109a2762be1fc}{Remove\-Task} (const std\-::string \&name) override
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_af09ad84ea6f33c905ec2134c7a0b7c71}{Dispatch\-Task} (const std\-::shared\-\_\-ptr$<$ \hyperlink{classapollo_1_1cyber_1_1croutine_1_1CRoutine}{C\-Routine} $>$ \&) override
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_a522dc891affe735a0415af16c8929994}{Scheduler\-Choreography} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_a315e4898f5b03863713e5f6ade773593}{Create\-Processor} ()
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_a64e5f647a0c7a7adbee7d4daa12f7add}{Notify\-Processor} (uint64\-\_\-t crid) override
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\-::unordered\-\_\-map\\*
+$<$ std\-::string, \\*
+Choreography\-Task $>$ \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_a3100523cc34d5580b47edfb0522f41e5}{cr\-\_\-confs\-\_\-}
+\item 
+int32\-\_\-t \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_a45208ca2d21e7cd6dcd93ca2da154cf5}{choreography\-\_\-processor\-\_\-prio\-\_\-}
+\item 
+int32\-\_\-t \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_a7914b4df5ee5649eafed83731ef5d4cd}{pool\-\_\-processor\-\_\-prio\-\_\-}
+\item 
+std\-::string \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_aec49efce9726f395b7693523d90e7e75}{choreography\-\_\-affinity\-\_\-}
+\item 
+std\-::string \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_ae1de0347c7ca14747605710ada094138}{pool\-\_\-affinity\-\_\-}
+\item 
+std\-::string \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_afef4e6579d5243141ccfe5a0a93e4d63}{choreography\-\_\-processor\-\_\-policy\-\_\-}
+\item 
+std\-::string \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_a9b191db22dbd0ce253ac37faa2407585}{pool\-\_\-processor\-\_\-policy\-\_\-}
+\item 
+std\-::vector$<$ int $>$ \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_aba359e389e80b01a60e4d55633793cdd}{choreography\-\_\-cpuset\-\_\-}
+\item 
+std\-::vector$<$ int $>$ \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_a5a5d905d92f6bcd94aa7b703cc7075db}{pool\-\_\-cpuset\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1scheduler_1_1Scheduler}{Scheduler} $\ast$ \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_a2ea2bb1f09fecdd726f87c09b726461e}{Instance} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_a522dc891affe735a0415af16c8929994}{\index{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Choreography@{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Choreography}!Scheduler\-Choreography@{Scheduler\-Choreography}}
+\index{Scheduler\-Choreography@{Scheduler\-Choreography}!apollo::cyber::scheduler::SchedulerChoreography@{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Choreography}}
+\subsubsection[{Scheduler\-Choreography}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::scheduler\-::\-Scheduler\-Choreography\-::\-Scheduler\-Choreography (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_a522dc891affe735a0415af16c8929994}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_a315e4898f5b03863713e5f6ade773593}{\index{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Choreography@{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Choreography}!Create\-Processor@{Create\-Processor}}
+\index{Create\-Processor@{Create\-Processor}!apollo::cyber::scheduler::SchedulerChoreography@{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Choreography}}
+\subsubsection[{Create\-Processor}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::scheduler\-::\-Scheduler\-Choreography\-::\-Create\-Processor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_a315e4898f5b03863713e5f6ade773593}
+\hypertarget{classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_af09ad84ea6f33c905ec2134c7a0b7c71}{\index{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Choreography@{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Choreography}!Dispatch\-Task@{Dispatch\-Task}}
+\index{Dispatch\-Task@{Dispatch\-Task}!apollo::cyber::scheduler::SchedulerChoreography@{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Choreography}}
+\subsubsection[{Dispatch\-Task}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::scheduler\-::\-Scheduler\-Choreography\-::\-Dispatch\-Task (
+\begin{DoxyParamCaption}
+\item[{const std\-::shared\-\_\-ptr$<$ {\bf C\-Routine} $>$ \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_af09ad84ea6f33c905ec2134c7a0b7c71}
+
+
+Implements \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1Scheduler_a71ac4be0a8f632a931a92680eb935774}{apollo\-::cyber\-::scheduler\-::\-Scheduler}.
+
+\hypertarget{classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_a64e5f647a0c7a7adbee7d4daa12f7add}{\index{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Choreography@{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Choreography}!Notify\-Processor@{Notify\-Processor}}
+\index{Notify\-Processor@{Notify\-Processor}!apollo::cyber::scheduler::SchedulerChoreography@{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Choreography}}
+\subsubsection[{Notify\-Processor}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::scheduler\-::\-Scheduler\-Choreography\-::\-Notify\-Processor (
+\begin{DoxyParamCaption}
+\item[{uint64\-\_\-t}]{crid}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_a64e5f647a0c7a7adbee7d4daa12f7add}
+
+
+Implements \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1Scheduler_abfcfe864b071e5c7d1a5a80706c11671}{apollo\-::cyber\-::scheduler\-::\-Scheduler}.
+
+\hypertarget{classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_adeb5e2143b5437f3e86fb741b02a7736}{\index{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Choreography@{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Choreography}!Remove\-C\-Routine@{Remove\-C\-Routine}}
+\index{Remove\-C\-Routine@{Remove\-C\-Routine}!apollo::cyber::scheduler::SchedulerChoreography@{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Choreography}}
+\subsubsection[{Remove\-C\-Routine}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::scheduler\-::\-Scheduler\-Choreography\-::\-Remove\-C\-Routine (
+\begin{DoxyParamCaption}
+\item[{uint64\-\_\-t}]{crid}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_adeb5e2143b5437f3e86fb741b02a7736}
+
+
+Implements \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1Scheduler_aeebbc8587d53f187d46016100fb67dc5}{apollo\-::cyber\-::scheduler\-::\-Scheduler}.
+
+\hypertarget{classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_ad4d0fb12a12d3dfa7c3109a2762be1fc}{\index{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Choreography@{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Choreography}!Remove\-Task@{Remove\-Task}}
+\index{Remove\-Task@{Remove\-Task}!apollo::cyber::scheduler::SchedulerChoreography@{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Choreography}}
+\subsubsection[{Remove\-Task}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::scheduler\-::\-Scheduler\-Choreography\-::\-Remove\-Task (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_ad4d0fb12a12d3dfa7c3109a2762be1fc}
+
+
+Implements \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1Scheduler_ad605b692e0e776ab95a19fa2ea0229e7}{apollo\-::cyber\-::scheduler\-::\-Scheduler}.
+
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_a2ea2bb1f09fecdd726f87c09b726461e}{\index{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Choreography@{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Choreography}!Instance@{Instance}}
+\index{Instance@{Instance}!apollo::cyber::scheduler::SchedulerChoreography@{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Choreography}}
+\subsubsection[{Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Scheduler}$\ast$ Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_a2ea2bb1f09fecdd726f87c09b726461e}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_aec49efce9726f395b7693523d90e7e75}{\index{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Choreography@{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Choreography}!choreography\-\_\-affinity\-\_\-@{choreography\-\_\-affinity\-\_\-}}
+\index{choreography\-\_\-affinity\-\_\-@{choreography\-\_\-affinity\-\_\-}!apollo::cyber::scheduler::SchedulerChoreography@{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Choreography}}
+\subsubsection[{choreography\-\_\-affinity\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string apollo\-::cyber\-::scheduler\-::\-Scheduler\-Choreography\-::choreography\-\_\-affinity\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_aec49efce9726f395b7693523d90e7e75}
+\hypertarget{classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_aba359e389e80b01a60e4d55633793cdd}{\index{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Choreography@{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Choreography}!choreography\-\_\-cpuset\-\_\-@{choreography\-\_\-cpuset\-\_\-}}
+\index{choreography\-\_\-cpuset\-\_\-@{choreography\-\_\-cpuset\-\_\-}!apollo::cyber::scheduler::SchedulerChoreography@{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Choreography}}
+\subsubsection[{choreography\-\_\-cpuset\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$int$>$ apollo\-::cyber\-::scheduler\-::\-Scheduler\-Choreography\-::choreography\-\_\-cpuset\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_aba359e389e80b01a60e4d55633793cdd}
+\hypertarget{classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_afef4e6579d5243141ccfe5a0a93e4d63}{\index{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Choreography@{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Choreography}!choreography\-\_\-processor\-\_\-policy\-\_\-@{choreography\-\_\-processor\-\_\-policy\-\_\-}}
+\index{choreography\-\_\-processor\-\_\-policy\-\_\-@{choreography\-\_\-processor\-\_\-policy\-\_\-}!apollo::cyber::scheduler::SchedulerChoreography@{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Choreography}}
+\subsubsection[{choreography\-\_\-processor\-\_\-policy\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string apollo\-::cyber\-::scheduler\-::\-Scheduler\-Choreography\-::choreography\-\_\-processor\-\_\-policy\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_afef4e6579d5243141ccfe5a0a93e4d63}
+\hypertarget{classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_a45208ca2d21e7cd6dcd93ca2da154cf5}{\index{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Choreography@{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Choreography}!choreography\-\_\-processor\-\_\-prio\-\_\-@{choreography\-\_\-processor\-\_\-prio\-\_\-}}
+\index{choreography\-\_\-processor\-\_\-prio\-\_\-@{choreography\-\_\-processor\-\_\-prio\-\_\-}!apollo::cyber::scheduler::SchedulerChoreography@{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Choreography}}
+\subsubsection[{choreography\-\_\-processor\-\_\-prio\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int32\-\_\-t apollo\-::cyber\-::scheduler\-::\-Scheduler\-Choreography\-::choreography\-\_\-processor\-\_\-prio\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_a45208ca2d21e7cd6dcd93ca2da154cf5}
+\hypertarget{classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_a3100523cc34d5580b47edfb0522f41e5}{\index{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Choreography@{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Choreography}!cr\-\_\-confs\-\_\-@{cr\-\_\-confs\-\_\-}}
+\index{cr\-\_\-confs\-\_\-@{cr\-\_\-confs\-\_\-}!apollo::cyber::scheduler::SchedulerChoreography@{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Choreography}}
+\subsubsection[{cr\-\_\-confs\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::unordered\-\_\-map$<$std\-::string, Choreography\-Task$>$ apollo\-::cyber\-::scheduler\-::\-Scheduler\-Choreography\-::cr\-\_\-confs\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_a3100523cc34d5580b47edfb0522f41e5}
+\hypertarget{classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_ae1de0347c7ca14747605710ada094138}{\index{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Choreography@{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Choreography}!pool\-\_\-affinity\-\_\-@{pool\-\_\-affinity\-\_\-}}
+\index{pool\-\_\-affinity\-\_\-@{pool\-\_\-affinity\-\_\-}!apollo::cyber::scheduler::SchedulerChoreography@{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Choreography}}
+\subsubsection[{pool\-\_\-affinity\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string apollo\-::cyber\-::scheduler\-::\-Scheduler\-Choreography\-::pool\-\_\-affinity\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_ae1de0347c7ca14747605710ada094138}
+\hypertarget{classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_a5a5d905d92f6bcd94aa7b703cc7075db}{\index{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Choreography@{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Choreography}!pool\-\_\-cpuset\-\_\-@{pool\-\_\-cpuset\-\_\-}}
+\index{pool\-\_\-cpuset\-\_\-@{pool\-\_\-cpuset\-\_\-}!apollo::cyber::scheduler::SchedulerChoreography@{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Choreography}}
+\subsubsection[{pool\-\_\-cpuset\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$int$>$ apollo\-::cyber\-::scheduler\-::\-Scheduler\-Choreography\-::pool\-\_\-cpuset\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_a5a5d905d92f6bcd94aa7b703cc7075db}
+\hypertarget{classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_a9b191db22dbd0ce253ac37faa2407585}{\index{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Choreography@{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Choreography}!pool\-\_\-processor\-\_\-policy\-\_\-@{pool\-\_\-processor\-\_\-policy\-\_\-}}
+\index{pool\-\_\-processor\-\_\-policy\-\_\-@{pool\-\_\-processor\-\_\-policy\-\_\-}!apollo::cyber::scheduler::SchedulerChoreography@{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Choreography}}
+\subsubsection[{pool\-\_\-processor\-\_\-policy\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string apollo\-::cyber\-::scheduler\-::\-Scheduler\-Choreography\-::pool\-\_\-processor\-\_\-policy\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_a9b191db22dbd0ce253ac37faa2407585}
+\hypertarget{classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_a7914b4df5ee5649eafed83731ef5d4cd}{\index{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Choreography@{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Choreography}!pool\-\_\-processor\-\_\-prio\-\_\-@{pool\-\_\-processor\-\_\-prio\-\_\-}}
+\index{pool\-\_\-processor\-\_\-prio\-\_\-@{pool\-\_\-processor\-\_\-prio\-\_\-}!apollo::cyber::scheduler::SchedulerChoreography@{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Choreography}}
+\subsubsection[{pool\-\_\-processor\-\_\-prio\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int32\-\_\-t apollo\-::cyber\-::scheduler\-::\-Scheduler\-Choreography\-::pool\-\_\-processor\-\_\-prio\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1scheduler_1_1SchedulerChoreography_a7914b4df5ee5649eafed83731ef5d4cd}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+scheduler/policy/\hyperlink{scheduler__choreography_8h}{scheduler\-\_\-choreography.\-h}\end{DoxyCompactItemize}

@@ -1,0 +1,195 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="record__file__base_8h" kind="file">
+    <compoundname>record_file_base.h</compoundname>
+    <includes local="no">mutex</includes>
+    <includes local="no">string</includes>
+    <includes local="yes">cyber/proto/record.pb.h</includes>
+    <includedby refid="record__file__reader_8h" local="yes">record/file/record_file_reader.h</includedby>
+    <includedby refid="record__file__writer_8h" local="yes">record/file/record_file_writer.h</includedby>
+    <incdepgraph>
+      <node id="7988">
+        <label>record/file/record_file_base.h</label>
+        <link refid="record_file_base.h"/>
+        <childnode refid="7989" relation="include">
+        </childnode>
+        <childnode refid="7990" relation="include">
+        </childnode>
+        <childnode refid="7991" relation="include">
+        </childnode>
+      </node>
+      <node id="7990">
+        <label>string</label>
+      </node>
+      <node id="7991">
+        <label>cyber/proto/record.pb.h</label>
+      </node>
+      <node id="7989">
+        <label>mutex</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="7998">
+        <label>tools/cyber_recorder/player/player.h</label>
+        <link refid="player_8h"/>
+      </node>
+      <node id="7995">
+        <label>py_wrapper/py_record.h</label>
+        <link refid="py__record_8h"/>
+      </node>
+      <node id="7992">
+        <label>record/file/record_file_base.h</label>
+        <link refid="record_file_base.h"/>
+        <childnode refid="7993" relation="include">
+        </childnode>
+        <childnode refid="8002" relation="include">
+        </childnode>
+      </node>
+      <node id="8004">
+        <label>tools/cyber_recorder/recorder.h</label>
+        <link refid="recorder_8h"/>
+      </node>
+      <node id="7997">
+        <label>tools/cyber_recorder/player/play_task_producer.h</label>
+        <link refid="play__task__producer_8h"/>
+        <childnode refid="7998" relation="include">
+        </childnode>
+      </node>
+      <node id="8001">
+        <label>tools/cyber_recorder/spliter.h</label>
+        <link refid="spliter_8h"/>
+      </node>
+      <node id="8002">
+        <label>record/file/record_file_writer.h</label>
+        <link refid="record__file__writer_8h"/>
+        <childnode refid="8003" relation="include">
+        </childnode>
+        <childnode refid="8000" relation="include">
+        </childnode>
+        <childnode refid="8001" relation="include">
+        </childnode>
+      </node>
+      <node id="7999">
+        <label>tools/cyber_recorder/info.h</label>
+        <link refid="info_8h"/>
+      </node>
+      <node id="8003">
+        <label>record/record_writer.h</label>
+        <link refid="record__writer_8h"/>
+        <childnode refid="7995" relation="include">
+        </childnode>
+        <childnode refid="8004" relation="include">
+        </childnode>
+      </node>
+      <node id="7994">
+        <label>record/record_reader.h</label>
+        <link refid="record__reader_8h"/>
+        <childnode refid="7995" relation="include">
+        </childnode>
+        <childnode refid="7996" relation="include">
+        </childnode>
+        <childnode refid="7997" relation="include">
+        </childnode>
+      </node>
+      <node id="8000">
+        <label>tools/cyber_recorder/recoverer.h</label>
+        <link refid="recoverer_8h"/>
+      </node>
+      <node id="7993">
+        <label>record/file/record_file_reader.h</label>
+        <link refid="record__file__reader_8h"/>
+        <childnode refid="7994" relation="include">
+        </childnode>
+        <childnode refid="7999" relation="include">
+        </childnode>
+        <childnode refid="8000" relation="include">
+        </childnode>
+        <childnode refid="8001" relation="include">
+        </childnode>
+      </node>
+      <node id="7996">
+        <label>record/record_viewer.h</label>
+        <link refid="record__viewer_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classapollo_1_1cyber_1_1record_1_1RecordFileBase" prot="public">apollo::cyber::record::RecordFileBase</innerclass>
+    <innernamespace refid="namespaceapollo">apollo</innernamespace>
+    <innernamespace refid="namespaceapollo_1_1cyber">apollo::cyber</innernamespace>
+    <innernamespace refid="namespaceapollo_1_1cyber_1_1record">apollo::cyber::record</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2018<sp/>The<sp/>Apollo<sp/>Authors.<sp/>All<sp/>Rights<sp/>Reserved.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CYBER_RECORD_FILE_RECORD_FILE_BASE_H_</highlight></codeline>
+<codeline lineno="18"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CYBER_RECORD_FILE_RECORD_FILE_BASE_H_</highlight></codeline>
+<codeline lineno="19"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;mutex&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cyber/proto/record.pb.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">apollo<sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">cyber<sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">record<sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="namespaceapollo_1_1cyber_1_1record_1afa8c164e9d516ce65e39bcc9d3689a05" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="namespaceapollo_1_1cyber_1_1record_1afa8c164e9d516ce65e39bcc9d3689a05" kindref="member">HEADER_LENGTH</ref><sp/>=<sp/>2048;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal">using<sp/>::apollo::cyber::proto::Channel;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">using<sp/>::apollo::cyber::proto::ChannelCache;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">using<sp/>::apollo::cyber::proto::ChunkBody;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">using<sp/>::apollo::cyber::proto::ChunkBodyCache;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">using<sp/>::apollo::cyber::proto::ChunkHeader;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">using<sp/>::apollo::cyber::proto::ChunkHeaderCache;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">using<sp/>::apollo::cyber::proto::CompressType;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">using<sp/>::apollo::cyber::proto::Header;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">using<sp/>::apollo::cyber::proto::Index;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">using<sp/>::apollo::cyber::proto::SectionType;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">using<sp/>::apollo::cyber::proto::SingleIndex;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">using<sp/>::apollo::cyber::proto::SingleMessage;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="classapollo_1_1cyber_1_1record_1_1RecordFileBase" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classapollo_1_1cyber_1_1record_1_1RecordFileBase" kindref="compound">RecordFileBase</ref><sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="46" refid="classapollo_1_1cyber_1_1record_1_1RecordFileBase_1a4c7d2cb39c253bdf313cdc3b6cfce6f7" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordFileBase_1a4c7d2cb39c253bdf313cdc3b6cfce6f7" kindref="member">RecordFileBase</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="47" refid="classapollo_1_1cyber_1_1record_1_1RecordFileBase_1a1301fc8aeff24f24923230756a3a4f43" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordFileBase_1a1301fc8aeff24f24923230756a3a4f43" kindref="member">~RecordFileBase</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordFileBase_1a9128d7ad36b3331d21e0eae475632892" kindref="member">Open</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>path)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordFileBase_1a6792f98d27bf7e3d4557156122bd43ab" kindref="member">Close</ref>()<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="50" refid="classapollo_1_1cyber_1_1record_1_1RecordFileBase_1a2e9b0a25e5056a50f9b305ce52ec56cc" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordFileBase_1a2e9b0a25e5056a50f9b305ce52ec56cc" kindref="member">GetPath</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordFileBase_1a2c1132e34b786a471501e3a43f7be672" kindref="member">path_</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="51" refid="classapollo_1_1cyber_1_1record_1_1RecordFileBase_1a0b740c127e82868252be11c579a0f37d" refkind="member"><highlight class="normal"><sp/><sp/>Header<sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordFileBase_1a0b740c127e82868252be11c579a0f37d" kindref="member">GetHeader</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordFileBase_1af6940c8d8e756da009bee5e0188da259" kindref="member">header_</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="52" refid="classapollo_1_1cyber_1_1record_1_1RecordFileBase_1ae9213e1fa4c6aff79e59b5011b2232b2" refkind="member"><highlight class="normal"><sp/><sp/>Index<sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordFileBase_1ae9213e1fa4c6aff79e59b5011b2232b2" kindref="member">GetIndex</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordFileBase_1a6af38cb5f916cf9ba1d8477edc0afeb9" kindref="member">index_</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/>int64_t<sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordFileBase_1ae9ab782e3a023c522ccb2de275622559" kindref="member">CurrentPosition</ref>();</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordFileBase_1a5349dcfbdbc71a784e7eef98504c04ea" kindref="member">SetPosition</ref>(int64_t<sp/>position);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="57" refid="classapollo_1_1cyber_1_1record_1_1RecordFileBase_1a3dc8cd39b2ed0e2f28490f80923f4582" refkind="member"><highlight class="normal"><sp/><sp/>std::mutex<sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordFileBase_1a3dc8cd39b2ed0e2f28490f80923f4582" kindref="member">mutex_</ref>;</highlight></codeline>
+<codeline lineno="58" refid="classapollo_1_1cyber_1_1record_1_1RecordFileBase_1a2c1132e34b786a471501e3a43f7be672" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordFileBase_1a2c1132e34b786a471501e3a43f7be672" kindref="member">path_</ref>;</highlight></codeline>
+<codeline lineno="59" refid="classapollo_1_1cyber_1_1record_1_1RecordFileBase_1af6940c8d8e756da009bee5e0188da259" refkind="member"><highlight class="normal"><sp/><sp/>Header<sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordFileBase_1af6940c8d8e756da009bee5e0188da259" kindref="member">header_</ref>;</highlight></codeline>
+<codeline lineno="60" refid="classapollo_1_1cyber_1_1record_1_1RecordFileBase_1a6af38cb5f916cf9ba1d8477edc0afeb9" refkind="member"><highlight class="normal"><sp/><sp/>Index<sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordFileBase_1a6af38cb5f916cf9ba1d8477edc0afeb9" kindref="member">index_</ref>;</highlight></codeline>
+<codeline lineno="61" refid="classapollo_1_1cyber_1_1record_1_1RecordFileBase_1aaa370e96b2b0fde778dc514652a0a912" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1record_1_1RecordFileBase_1aaa370e96b2b0fde778dc514652a0a912" kindref="member">fd_</ref>;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>record</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>cyber</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>apollo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>CYBER_RECORD_FILE_RECORD_FILE_BASE_H_</highlight></codeline>
+    </programlisting>
+    <location file="/home/work/apollo-fork/apollo/cyber/record/file/record_file_base.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,792 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="namespaceapollo_1_1cyber_1_1message" kind="namespace">
+    <compoundname>apollo::cyber::message</compoundname>
+    <innerclass refid="classapollo_1_1cyber_1_1message_1_1IntraMessage" prot="public">apollo::cyber::message::IntraMessage</innerclass>
+    <innerclass refid="classapollo_1_1cyber_1_1message_1_1MessageHeader" prot="public">apollo::cyber::message::MessageHeader</innerclass>
+    <innerclass refid="classapollo_1_1cyber_1_1message_1_1HasSerializer" prot="public">apollo::cyber::message::HasSerializer</innerclass>
+    <innerclass refid="classapollo_1_1cyber_1_1message_1_1ErrorCollector" prot="public">apollo::cyber::message::ErrorCollector</innerclass>
+    <innerclass refid="classapollo_1_1cyber_1_1message_1_1ProtobufFactory" prot="public">apollo::cyber::message::ProtobufFactory</innerclass>
+    <innerclass refid="classapollo_1_1cyber_1_1message_1_1PyMessageWrap" prot="public">apollo::cyber::message::PyMessageWrap</innerclass>
+    <innerclass refid="structapollo_1_1cyber_1_1message_1_1RawMessage" prot="public">apollo::cyber::message::RawMessage</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespaceapollo_1_1cyber_1_1message_1a365817ca48261ee138abde4580d63af9" prot="public" static="no" mutable="no">
+        <type>const char *const</type>
+        <definition>const char* const apollo::cyber::message::PY_MESSAGE_FULLNAME</definition>
+        <argsstring></argsstring>
+        <name>PY_MESSAGE_FULLNAME</name>
+        <initializer>= &quot;apollo.cyber.message.PyMessage&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/message/py_message.h" line="31" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/message/py_message.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceapollo_1_1cyber_1_1message_1aed7a0653ea8d7791da7cf676f507a8ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename std::enable_if&lt; HasType&lt; T &gt;::value &amp;&amp;std::is_member_function_pointer&lt; decltype(&amp;T::TypeName)&gt;::value, bool &gt;::type</type>
+            <defval>0</defval>
+          </param>
+        </templateparamlist>
+        <type>std::string</type>
+        <definition>std::string apollo::cyber::message::MessageType</definition>
+        <argsstring>(const T &amp;message)</argsstring>
+        <name>MessageType</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/message/message_traits.h" line="60" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/message/message_traits.h" bodystart="60" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceapollo_1_1cyber_1_1message_1a9804d294759658408491c5b8929e8cb5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename std::enable_if&lt; HasType&lt; T &gt;::value &amp;&amp;!std::is_member_function_pointer&lt; decltype(&amp;T::TypeName)&gt;::value, bool &gt;::type</type>
+            <defval>0</defval>
+          </param>
+        </templateparamlist>
+        <type>std::string</type>
+        <definition>std::string apollo::cyber::message::MessageType</definition>
+        <argsstring>()</argsstring>
+        <name>MessageType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/message/message_traits.h" line="87" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/message/message_traits.h" bodystart="87" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceapollo_1_1cyber_1_1message_1a2b337ed960f840af58dc36a9459a4865" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; HasSetType&lt; T &gt;::value, void &gt;::type</type>
+        <definition>std::enable_if&lt;HasSetType&lt;T&gt;::value, void&gt;::type apollo::cyber::message::SetTypeName</definition>
+        <argsstring>(const std::string &amp;type_name, T *message)</argsstring>
+        <name>SetTypeName</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>type_name</declname>
+        </param>
+        <param>
+          <type>T *</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/message/message_traits.h" line="112" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/message/message_traits.h" bodystart="112" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceapollo_1_1cyber_1_1message_1aa80d580cdaf16ade14c16309e336d42e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt;!HasSetType&lt; T &gt;::value, void &gt;::type</type>
+        <definition>std::enable_if&lt;!HasSetType&lt;T&gt;::value, void&gt;::type apollo::cyber::message::SetTypeName</definition>
+        <argsstring>(const std::string &amp;type_name, T *message)</argsstring>
+        <name>SetTypeName</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>type_name</declname>
+        </param>
+        <param>
+          <type>T *</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/message/message_traits.h" line="118" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/message/message_traits.h" bodystart="118" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceapollo_1_1cyber_1_1message_1a86c5c50ba417237cb14b1bc0ef413e42" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; HasByteSize&lt; T &gt;::value, int &gt;::type</type>
+        <definition>std::enable_if&lt;HasByteSize&lt;T&gt;::value, int&gt;::type apollo::cyber::message::ByteSize</definition>
+        <argsstring>(const T &amp;message)</argsstring>
+        <name>ByteSize</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/message/message_traits.h" line="122" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/message/message_traits.h" bodystart="122" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceapollo_1_1cyber_1_1message_1a53d094570369a6e8413967cdd4025b82" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt;!HasByteSize&lt; T &gt;::value, int &gt;::type</type>
+        <definition>std::enable_if&lt;!HasByteSize&lt;T&gt;::value, int&gt;::type apollo::cyber::message::ByteSize</definition>
+        <argsstring>(const T &amp;message)</argsstring>
+        <name>ByteSize</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/message/message_traits.h" line="128" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/message/message_traits.h" bodystart="128" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceapollo_1_1cyber_1_1message_1abd3f08d8fd1f9a79b1da4d782c73fc48" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>int</type>
+        <definition>int apollo::cyber::message::FullByteSize</definition>
+        <argsstring>(const T &amp;message)</argsstring>
+        <name>FullByteSize</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/message/message_traits.h" line="135" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/message/message_traits.h" bodystart="135" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceapollo_1_1cyber_1_1message_1aeb045f496b533d2e1f405d8588f9b279" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; HasParseFromArray&lt; T &gt;::value, bool &gt;::type</type>
+        <definition>std::enable_if&lt;HasParseFromArray&lt;T&gt;::value, bool&gt;::type apollo::cyber::message::ParseFromArray</definition>
+        <argsstring>(const void *data, int size, T *message)</argsstring>
+        <name>ParseFromArray</name>
+        <param>
+          <type>const void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>T *</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/message/message_traits.h" line="144" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/message/message_traits.h" bodystart="144" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceapollo_1_1cyber_1_1message_1a5808d28d4a46e2a0ca378526c25b1e37" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt;!HasParseFromArray&lt; T &gt;::value, bool &gt;::type</type>
+        <definition>std::enable_if&lt;!HasParseFromArray&lt;T&gt;::value, bool&gt;::type apollo::cyber::message::ParseFromArray</definition>
+        <argsstring>(const void *data, int size, T *message)</argsstring>
+        <name>ParseFromArray</name>
+        <param>
+          <type>const void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>T *</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/message/message_traits.h" line="151" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/message/message_traits.h" bodystart="151" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceapollo_1_1cyber_1_1message_1ac7c65d89fac88eda8ae486507c260f39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; HasParseFromString&lt; T &gt;::value, bool &gt;::type</type>
+        <definition>std::enable_if&lt;HasParseFromString&lt;T&gt;::value, bool&gt;::type apollo::cyber::message::ParseFromString</definition>
+        <argsstring>(const std::string &amp;str, T *message)</argsstring>
+        <name>ParseFromString</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>T *</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/message/message_traits.h" line="157" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/message/message_traits.h" bodystart="157" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceapollo_1_1cyber_1_1message_1a447d1039d8ca437c0bb1a3f620154092" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt;!HasParseFromString&lt; T &gt;::value, bool &gt;::type</type>
+        <definition>std::enable_if&lt;!HasParseFromString&lt;T&gt;::value, bool&gt;::type apollo::cyber::message::ParseFromString</definition>
+        <argsstring>(const std::string &amp;str, T *message)</argsstring>
+        <name>ParseFromString</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>T *</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/message/message_traits.h" line="163" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/message/message_traits.h" bodystart="163" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceapollo_1_1cyber_1_1message_1aabb2d1760d1f1755b1682813b0f39b6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; HasParseFromArray&lt; T &gt;::value, bool &gt;::type</type>
+        <definition>std::enable_if&lt;HasParseFromArray&lt;T&gt;::value, bool&gt;::type apollo::cyber::message::ParseFromHC</definition>
+        <argsstring>(const void *data, int size, T *message)</argsstring>
+        <name>ParseFromHC</name>
+        <param>
+          <type>const void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>T *</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/message/message_traits.h" line="168" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/message/message_traits.h" bodystart="168" bodyend="178"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceapollo_1_1cyber_1_1message_1a100b9c6809db1365bf09a3c621751449" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt;!HasParseFromArray&lt; T &gt;::value, bool &gt;::type</type>
+        <definition>std::enable_if&lt;!HasParseFromArray&lt;T&gt;::value, bool&gt;::type apollo::cyber::message::ParseFromHC</definition>
+        <argsstring>(const void *data, int size, T *message)</argsstring>
+        <name>ParseFromHC</name>
+        <param>
+          <type>const void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>T *</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/message/message_traits.h" line="181" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/message/message_traits.h" bodystart="181" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceapollo_1_1cyber_1_1message_1a101dafae7968f3114fa0d27935ee0630" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; HasSerializeToArray&lt; T &gt;::value, bool &gt;::type</type>
+        <definition>std::enable_if&lt;HasSerializeToArray&lt;T&gt;::value, bool&gt;::type apollo::cyber::message::SerializeToArray</definition>
+        <argsstring>(const T &amp;message, void *data, int size)</argsstring>
+        <name>SerializeToArray</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/message/message_traits.h" line="188" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/message/message_traits.h" bodystart="188" bodyend="190"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceapollo_1_1cyber_1_1message_1a6fdb56336a64af71da0e2c79de30b949" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt;!HasSerializeToArray&lt; T &gt;::value, bool &gt;::type</type>
+        <definition>std::enable_if&lt;!HasSerializeToArray&lt;T&gt;::value, bool&gt;::type apollo::cyber::message::SerializeToArray</definition>
+        <argsstring>(const T &amp;message, void *data, int size)</argsstring>
+        <name>SerializeToArray</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/message/message_traits.h" line="194" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/message/message_traits.h" bodystart="194" bodyend="196"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceapollo_1_1cyber_1_1message_1a56be747d5d58394d96f3b997a19c47b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; HasSerializeToString&lt; T &gt;::value, bool &gt;::type</type>
+        <definition>std::enable_if&lt;HasSerializeToString&lt;T&gt;::value, bool&gt;::type apollo::cyber::message::SerializeToString</definition>
+        <argsstring>(const T &amp;message, std::string *str)</argsstring>
+        <name>SerializeToString</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>std::string *</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/message/message_traits.h" line="200" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/message/message_traits.h" bodystart="200" bodyend="202"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceapollo_1_1cyber_1_1message_1a5608a318a0ae528e1629c9cfc87e489a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt;!HasSerializeToString&lt; T &gt;::value, bool &gt;::type</type>
+        <definition>std::enable_if&lt;!HasSerializeToString&lt;T&gt;::value, bool&gt;::type apollo::cyber::message::SerializeToString</definition>
+        <argsstring>(const T &amp;message, std::string *str)</argsstring>
+        <name>SerializeToString</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>std::string *</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/message/message_traits.h" line="206" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/message/message_traits.h" bodystart="206" bodyend="208"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceapollo_1_1cyber_1_1message_1a388b614c8e6891dbfab3191e329ec7f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; HasSerializeToArray&lt; T &gt;::value, bool &gt;::type</type>
+        <definition>std::enable_if&lt;HasSerializeToArray&lt;T&gt;::value, bool&gt;::type apollo::cyber::message::SerializeToHC</definition>
+        <argsstring>(const T &amp;message, void *data, int size)</argsstring>
+        <name>SerializeToHC</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/message/message_traits.h" line="212" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/message/message_traits.h" bodystart="212" bodyend="226"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceapollo_1_1cyber_1_1message_1a4bf197cbc2ae92e0a3ff9f705af2971b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt;!HasSerializeToArray&lt; T &gt;::value, bool &gt;::type</type>
+        <definition>std::enable_if&lt;!HasSerializeToArray&lt;T&gt;::value, bool&gt;::type apollo::cyber::message::SerializeToHC</definition>
+        <argsstring>(const T &amp;message, void *data, int size)</argsstring>
+        <name>SerializeToHC</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/message/message_traits.h" line="230" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/message/message_traits.h" bodystart="230" bodyend="232"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceapollo_1_1cyber_1_1message_1adaa75b444b0befc8527210cfc29b1049" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename std::enable_if&lt; HasDescriptor&lt; T &gt;::value, bool &gt;::type</type>
+            <defval>0</defval>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void apollo::cyber::message::GetDescriptorString</definition>
+        <argsstring>(const std::string &amp;type, std::string *desc_str)</argsstring>
+        <name>GetDescriptorString</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>std::string *</type>
+          <declname>desc_str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/message/message_traits.h" line="236" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/message/message_traits.h" bodystart="236" bodyend="238"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceapollo_1_1cyber_1_1message_1ab794defc8952601237ff80cd187ecec1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename MessageT</type>
+          </param>
+          <param>
+            <type>typename std::enable_if&lt; !std::is_base_of&lt; google::protobuf::Message, MessageT &gt;::value, int &gt;::type</type>
+            <defval>0</defval>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void apollo::cyber::message::GetDescriptorString</definition>
+        <argsstring>(const MessageT &amp;message, std::string *desc_str)</argsstring>
+        <name>GetDescriptorString</name>
+        <param>
+          <type>const MessageT &amp;</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>std::string *</type>
+          <declname>desc_str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/message/message_traits.h" line="251" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/message/message_traits.h" bodystart="251" bodyend="251"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceapollo_1_1cyber_1_1message_1a2d8177d4cd8dd056aaad524b1cb4137a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename MessageT</type>
+          </param>
+          <param>
+            <type>typename std::enable_if&lt; std::is_base_of&lt; google::protobuf::Message, MessageT &gt;::value, int &gt;::type</type>
+            <defval>0</defval>
+          </param>
+        </templateparamlist>
+        <type>std::string</type>
+        <definition>std::string apollo::cyber::message::MessageType</definition>
+        <argsstring>(const MessageT &amp;message)</argsstring>
+        <name>MessageType</name>
+        <param>
+          <type>const MessageT &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/message/protobuf_traits.h" line="42" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/message/protobuf_traits.h" bodystart="42" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceapollo_1_1cyber_1_1message_1a186f9efe80c75467002d7f76509b96a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename MessageT</type>
+          </param>
+          <param>
+            <type>typename std::enable_if&lt; std::is_base_of&lt; google::protobuf::Message, MessageT &gt;::value, int &gt;::type</type>
+            <defval>0</defval>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool apollo::cyber::message::RegisterMessage</definition>
+        <argsstring>(const MessageT &amp;message)</argsstring>
+        <name>RegisterMessage</name>
+        <param>
+          <type>const MessageT &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/message/protobuf_traits.h" line="68" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/message/protobuf_traits.h" bodystart="68" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceapollo_1_1cyber_1_1message_1ab83eab8558ccf82e2af5b216c39acedd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::message::SerializeToArray</definition>
+        <argsstring>(const PyMessageWrap &amp;message, void *data, int size)</argsstring>
+        <name>SerializeToArray</name>
+        <param>
+          <type>const <ref refid="classapollo_1_1cyber_1_1message_1_1PyMessageWrap" kindref="compound">PyMessageWrap</ref> &amp;</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/message/py_message_traits.h" line="31" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/message/py_message_traits.h" bodystart="31" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceapollo_1_1cyber_1_1message_1a119266bb8560e3b93456580b373a11a9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::message::ParseFromArray</definition>
+        <argsstring>(const void *data, int size, PyMessageWrap *message)</argsstring>
+        <name>ParseFromArray</name>
+        <param>
+          <type>const void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type><ref refid="classapollo_1_1cyber_1_1message_1_1PyMessageWrap" kindref="compound">PyMessageWrap</ref> *</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/message/py_message_traits.h" line="36" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/message/py_message_traits.h" bodystart="36" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceapollo_1_1cyber_1_1message_1aa6e094242ba8c1c36c06edcc85d9fdf6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int apollo::cyber::message::ByteSize</definition>
+        <argsstring>(const PyMessageWrap &amp;message)</argsstring>
+        <name>ByteSize</name>
+        <param>
+          <type>const <ref refid="classapollo_1_1cyber_1_1message_1_1PyMessageWrap" kindref="compound">PyMessageWrap</ref> &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/message/py_message_traits.h" line="40" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/message/py_message_traits.h" bodystart="40" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceapollo_1_1cyber_1_1message_1a94bcdf7f75627047514bcbdc059c7ac6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::message::SerializeToArray</definition>
+        <argsstring>(const RawMessage &amp;message, void *data, int size)</argsstring>
+        <name>SerializeToArray</name>
+        <param>
+          <type>const <ref refid="structapollo_1_1cyber_1_1message_1_1RawMessage" kindref="compound">RawMessage</ref> &amp;</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/message/raw_message_traits.h" line="31" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/message/raw_message_traits.h" bodystart="31" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceapollo_1_1cyber_1_1message_1a76d31ca5297e7c40fbd682756159e8ff" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::message::ParseFromArray</definition>
+        <argsstring>(const void *data, int size, RawMessage *message)</argsstring>
+        <name>ParseFromArray</name>
+        <param>
+          <type>const void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type><ref refid="structapollo_1_1cyber_1_1message_1_1RawMessage" kindref="compound">RawMessage</ref> *</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/message/raw_message_traits.h" line="35" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/message/raw_message_traits.h" bodystart="35" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceapollo_1_1cyber_1_1message_1a3d9bb094a125aa150c25b2b50a40cc97" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int apollo::cyber::message::ByteSize</definition>
+        <argsstring>(const RawMessage &amp;message)</argsstring>
+        <name>ByteSize</name>
+        <param>
+          <type>const <ref refid="structapollo_1_1cyber_1_1message_1_1RawMessage" kindref="compound">RawMessage</ref> &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/message/raw_message_traits.h" line="39" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/message/raw_message_traits.h" bodystart="39" bodyend="39"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/work/apollo-fork/apollo/cyber/message/intra_message.h" line="26" column="1"/>
+  </compounddef>
+</doxygen>

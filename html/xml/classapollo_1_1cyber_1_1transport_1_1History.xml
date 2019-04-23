@@ -1,0 +1,266 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classapollo_1_1cyber_1_1transport_1_1History" kind="class" prot="public">
+    <compoundname>apollo::cyber::transport::History</compoundname>
+    <includes refid="history_8h" local="no">history.h</includes>
+    <innerclass refid="structapollo_1_1cyber_1_1transport_1_1History_1_1CachedMessage" prot="public">apollo::cyber::transport::History::CachedMessage</innerclass>
+    <templateparamlist>
+      <param>
+        <type>typename MessageT</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classapollo_1_1cyber_1_1transport_1_1History_1a4c11720b1c1d14eafb9fec5436a0d7c0" prot="public" static="no">
+        <type>std::shared_ptr&lt; MessageT &gt;</type>
+        <definition>using apollo::cyber::transport::History&lt; MessageT &gt;::MessagePtr =  std::shared_ptr&lt;MessageT&gt;</definition>
+        <argsstring></argsstring>
+        <name>MessagePtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/message/history.h" line="37" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/message/history.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1transport_1_1History_1a069e631128a251e29a0c5aa226bf6cf0" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool apollo::cyber::transport::History&lt; MessageT &gt;::enabled_</definition>
+        <argsstring></argsstring>
+        <name>enabled_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/message/history.h" line="61" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/message/history.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1transport_1_1History_1af3e8c06815f54811dbfd8c9ca57a9207" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t apollo::cyber::transport::History&lt; MessageT &gt;::depth_</definition>
+        <argsstring></argsstring>
+        <name>depth_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/message/history.h" line="62" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/message/history.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1transport_1_1History_1aa9abd9c1faa847d3f1ab18be1915d5a2" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t apollo::cyber::transport::History&lt; MessageT &gt;::max_depth_</definition>
+        <argsstring></argsstring>
+        <name>max_depth_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/message/history.h" line="63" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/message/history.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1transport_1_1History_1a6e9ef1bf010e3890b0635309c59fe9ad" prot="private" static="no" mutable="no">
+        <type>std::list&lt; <ref refid="structapollo_1_1cyber_1_1transport_1_1History_1_1CachedMessage" kindref="compound">CachedMessage</ref> &gt;</type>
+        <definition>std::list&lt;CachedMessage&gt; apollo::cyber::transport::History&lt; MessageT &gt;::msgs_</definition>
+        <argsstring></argsstring>
+        <name>msgs_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/message/history.h" line="64" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/message/history.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1transport_1_1History_1ab0d0a8c6137aad70ce16d99a0bfcf381" prot="private" static="no" mutable="yes">
+        <type>std::mutex</type>
+        <definition>std::mutex apollo::cyber::transport::History&lt; MessageT &gt;::msgs_mutex_</definition>
+        <argsstring></argsstring>
+        <name>msgs_mutex_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/message/history.h" line="65" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/message/history.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1History_1a00fc9a50f3d3f8657c36174ef1b12894" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::transport::History&lt; MessageT &gt;::History</definition>
+        <argsstring>(const HistoryAttributes &amp;attr)</argsstring>
+        <name>History</name>
+        <param>
+          <type>const <ref refid="structapollo_1_1cyber_1_1transport_1_1HistoryAttributes" kindref="compound">HistoryAttributes</ref> &amp;</type>
+          <declname>attr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/message/history.h" line="46" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/message/history.h" bodystart="69" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1History_1a587dfce1602c9b27c936144d04a95417" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>apollo::cyber::transport::History&lt; MessageT &gt;::~History</definition>
+        <argsstring>()</argsstring>
+        <name>~History</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/message/history.h" line="47" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/message/history.h" bodystart="89" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1History_1a47de5fc2f21b1dd17d2a16d530ba613a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::transport::History&lt; MessageT &gt;::Enable</definition>
+        <argsstring>()</argsstring>
+        <name>Enable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/message/history.h" line="49" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/message/history.h" bodystart="49" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1History_1a19e4751f0545392b6aeb703c74771318" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::transport::History&lt; MessageT &gt;::Disable</definition>
+        <argsstring>()</argsstring>
+        <name>Disable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/message/history.h" line="50" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/message/history.h" bodystart="50" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1History_1ad468ac9221d8cd8f647034e302af76f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::transport::History&lt; MessageT &gt;::Add</definition>
+        <argsstring>(const MessagePtr &amp;msg, const MessageInfo &amp;msg_info)</argsstring>
+        <name>Add</name>
+        <param>
+          <type>const <ref refid="classapollo_1_1cyber_1_1transport_1_1History_1a4c11720b1c1d14eafb9fec5436a0d7c0" kindref="member">MessagePtr</ref> &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classapollo_1_1cyber_1_1transport_1_1MessageInfo" kindref="compound">MessageInfo</ref> &amp;</type>
+          <declname>msg_info</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/message/history.h" line="52" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/message/history.h" bodystart="94" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1History_1a7af63e269651bd78f39ecd80b2d4f548" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::transport::History&lt; MessageT &gt;::Clear</definition>
+        <argsstring>()</argsstring>
+        <name>Clear</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/message/history.h" line="53" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/message/history.h" bodystart="107" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1History_1abd26ece6879ece861fdcbd145a6cb377" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::transport::History&lt; MessageT &gt;::GetCachedMessage</definition>
+        <argsstring>(std::vector&lt; CachedMessage &gt; *msgs) const </argsstring>
+        <name>GetCachedMessage</name>
+        <param>
+          <type>std::vector&lt; <ref refid="structapollo_1_1cyber_1_1transport_1_1History_1_1CachedMessage" kindref="compound">CachedMessage</ref> &gt; *</type>
+          <declname>msgs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/message/history.h" line="54" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/message/history.h" bodystart="113" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1History_1afe153bb3a7b9092f6e5a195b8899d2c7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t apollo::cyber::transport::History&lt; MessageT &gt;::GetSize</definition>
+        <argsstring>() const </argsstring>
+        <name>GetSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/message/history.h" line="55" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/message/history.h" bodystart="125" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1History_1ae190a8c127778cfca6d09cf22bbe06dc" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t apollo::cyber::transport::History&lt; MessageT &gt;::depth</definition>
+        <argsstring>() const </argsstring>
+        <name>depth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/message/history.h" line="57" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/message/history.h" bodystart="57" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1History_1a2002e82d861dd993254e04151ec4a97d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t apollo::cyber::transport::History&lt; MessageT &gt;::max_depth</definition>
+        <argsstring>() const </argsstring>
+        <name>max_depth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/message/history.h" line="58" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/message/history.h" bodystart="58" bodyend="58"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/work/apollo-fork/apollo/cyber/transport/message/history.h" line="35" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/message/history.h" bodystart="35" bodyend="66"/>
+    <listofallmembers>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1History_1ad468ac9221d8cd8f647034e302af76f6" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::History</scope><name>Add</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1History_1a7af63e269651bd78f39ecd80b2d4f548" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::History</scope><name>Clear</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1History_1ae190a8c127778cfca6d09cf22bbe06dc" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::History</scope><name>depth</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1History_1af3e8c06815f54811dbfd8c9ca57a9207" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::History</scope><name>depth_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1History_1a19e4751f0545392b6aeb703c74771318" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::History</scope><name>Disable</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1History_1a47de5fc2f21b1dd17d2a16d530ba613a" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::History</scope><name>Enable</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1History_1a069e631128a251e29a0c5aa226bf6cf0" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::History</scope><name>enabled_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1History_1abd26ece6879ece861fdcbd145a6cb377" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::History</scope><name>GetCachedMessage</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1History_1afe153bb3a7b9092f6e5a195b8899d2c7" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::History</scope><name>GetSize</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1History_1a00fc9a50f3d3f8657c36174ef1b12894" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::History</scope><name>History</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1History_1a2002e82d861dd993254e04151ec4a97d" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::History</scope><name>max_depth</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1History_1aa9abd9c1faa847d3f1ab18be1915d5a2" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::History</scope><name>max_depth_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1History_1a4c11720b1c1d14eafb9fec5436a0d7c0" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::History</scope><name>MessagePtr</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1History_1a6e9ef1bf010e3890b0635309c59fe9ad" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::History</scope><name>msgs_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1History_1ab0d0a8c6137aad70ce16d99a0bfcf381" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::History</scope><name>msgs_mutex_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1History_1a587dfce1602c9b27c936144d04a95417" prot="public" virt="virtual"><scope>apollo::cyber::transport::History</scope><name>~History</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

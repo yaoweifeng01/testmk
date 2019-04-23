@@ -1,0 +1,389 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classapollo_1_1cyber_1_1message_1_1ProtobufFactory" kind="class" prot="public">
+    <compoundname>apollo::cyber::message::ProtobufFactory</compoundname>
+    <includes refid="protobuf__factory_8h" local="no">protobuf_factory.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1message_1_1ProtobufFactory_1a9acd5bbdb9ef74852b7d89fa6863f109" prot="private" static="no" mutable="no">
+        <type>std::mutex</type>
+        <definition>std::mutex apollo::cyber::message::ProtobufFactory::register_mutex_</definition>
+        <argsstring></argsstring>
+        <name>register_mutex_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/message/protobuf_factory.h" line="104" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/message/protobuf_factory.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1message_1_1ProtobufFactory_1ad6c3d990545216334e424c5bb6f00d65" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; DescriptorPool &gt;</type>
+        <definition>std::unique_ptr&lt;DescriptorPool&gt; apollo::cyber::message::ProtobufFactory::pool_</definition>
+        <argsstring></argsstring>
+        <name>pool_</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/message/protobuf_factory.h" line="105" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/message/protobuf_factory.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1message_1_1ProtobufFactory_1a2c4114fa07c22295e0e79f00ce02daca" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; DynamicMessageFactory &gt;</type>
+        <definition>std::unique_ptr&lt;DynamicMessageFactory&gt; apollo::cyber::message::ProtobufFactory::factory_</definition>
+        <argsstring></argsstring>
+        <name>factory_</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/message/protobuf_factory.h" line="106" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/message/protobuf_factory.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1message_1_1ProtobufFactory_1a3fab943f6f9d2c5d7bc14aea1e1bb02f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::message::ProtobufFactory::~ProtobufFactory</definition>
+        <argsstring>()</argsstring>
+        <name>~ProtobufFactory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/message/protobuf_factory.h" line="57" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1message_1_1ProtobufFactory_1a28e6888421ed69854760067707251132" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::message::ProtobufFactory::RegisterMessage</definition>
+        <argsstring>(const std::string &amp;proto_desc_str)</argsstring>
+        <name>RegisterMessage</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>proto_desc_str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/message/protobuf_factory.h" line="61" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1message_1_1ProtobufFactory_1a7447830ef927a587f5a61e43db290116" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::message::ProtobufFactory::RegisterPythonMessage</definition>
+        <argsstring>(const std::string &amp;proto_str)</argsstring>
+        <name>RegisterPythonMessage</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>proto_str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/message/protobuf_factory.h" line="62" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1message_1_1ProtobufFactory_1a9c66829001d077097204caa85a256f35" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::message::ProtobufFactory::RegisterMessage</definition>
+        <argsstring>(const google::protobuf::Message &amp;message)</argsstring>
+        <name>RegisterMessage</name>
+        <param>
+          <type>const google::protobuf::Message &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/message/protobuf_factory.h" line="68" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1message_1_1ProtobufFactory_1a812fef889296b4c1c16adf73bb0c37d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::message::ProtobufFactory::RegisterMessage</definition>
+        <argsstring>(const Descriptor &amp;desc)</argsstring>
+        <name>RegisterMessage</name>
+        <param>
+          <type>const Descriptor &amp;</type>
+          <declname>desc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/message/protobuf_factory.h" line="69" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1message_1_1ProtobufFactory_1a9a496ef71145954a1a473bc6443c294d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::message::ProtobufFactory::RegisterMessage</definition>
+        <argsstring>(const FileDescriptorProto &amp;file_desc_proto)</argsstring>
+        <name>RegisterMessage</name>
+        <param>
+          <type>const FileDescriptorProto &amp;</type>
+          <declname>file_desc_proto</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/message/protobuf_factory.h" line="70" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1message_1_1ProtobufFactory_1a36b7f4ba5945f4c89d157a51bc8539fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::message::ProtobufFactory::GetDescriptorString</definition>
+        <argsstring>(const std::string &amp;type, std::string *desc_str)</argsstring>
+        <name>GetDescriptorString</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>std::string *</type>
+          <declname>desc_str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/message/protobuf_factory.h" line="81" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1message_1_1ProtobufFactory_1a07a04ac066aa60627656b90f49d07daa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>google::protobuf::Message *</type>
+        <definition>google::protobuf::Message* apollo::cyber::message::ProtobufFactory::GenerateMessageByType</definition>
+        <argsstring>(const std::string &amp;type) const </argsstring>
+        <name>GenerateMessageByType</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/message/protobuf_factory.h" line="85" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1message_1_1ProtobufFactory_1a374b2b507e4eba3f9eb0ce9c192242a8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const Descriptor *</type>
+        <definition>const Descriptor* apollo::cyber::message::ProtobufFactory::FindMessageTypeByName</definition>
+        <argsstring>(const std::string &amp;type) const </argsstring>
+        <name>FindMessageTypeByName</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/message/protobuf_factory.h" line="89" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1message_1_1ProtobufFactory_1a665ea192ef367b2a89a769dd4f9192e6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const google::protobuf::ServiceDescriptor *</type>
+        <definition>const google::protobuf::ServiceDescriptor* apollo::cyber::message::ProtobufFactory::FindServiceByName</definition>
+        <argsstring>(const std::string &amp;name) const </argsstring>
+        <name>FindServiceByName</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/message/protobuf_factory.h" line="92" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1message_1_1ProtobufFactory_1a8124a5e604099823afed63e56f68a8ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::message::ProtobufFactory::GetPythonDesc</definition>
+        <argsstring>(const std::string &amp;type, std::string *desc_str)</argsstring>
+        <name>GetPythonDesc</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>std::string *</type>
+          <declname>desc_str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/message/protobuf_factory.h" line="95" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1message_1_1ProtobufFactory_1aebba7fa34a0530ec76cf2fd33b3e6e3b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void apollo::cyber::message::ProtobufFactory::GetDescriptorString</definition>
+        <argsstring>(const google::protobuf::Message &amp;message, std::string *desc_str)</argsstring>
+        <name>GetDescriptorString</name>
+        <param>
+          <type>const google::protobuf::Message &amp;</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>std::string *</type>
+          <declname>desc_str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/message/protobuf_factory.h" line="73" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1message_1_1ProtobufFactory_1af86aa18822ec4d6bcc3fa0c3e44aa1ca" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void apollo::cyber::message::ProtobufFactory::GetDescriptorString</definition>
+        <argsstring>(const Descriptor *desc, std::string *desc_str)</argsstring>
+        <name>GetDescriptorString</name>
+        <param>
+          <type>const Descriptor *</type>
+          <declname>desc</declname>
+        </param>
+        <param>
+          <type>std::string *</type>
+          <declname>desc_str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/message/protobuf_factory.h" line="77" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1message_1_1ProtobufFactory_1adb2411e8d12351e71fbfd58c3dfbc1fa" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::message::ProtobufFactory::RegisterMessage</definition>
+        <argsstring>(const ProtoDesc &amp;proto_desc)</argsstring>
+        <name>RegisterMessage</name>
+        <param>
+          <type>const ProtoDesc &amp;</type>
+          <declname>proto_desc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/message/protobuf_factory.h" line="98" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1message_1_1ProtobufFactory_1a136d095376f83008b148dce9e58e1c78" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>google::protobuf::Message *</type>
+        <definition>google::protobuf::Message* apollo::cyber::message::ProtobufFactory::GetMessageByGeneratedType</definition>
+        <argsstring>(const std::string &amp;type) const </argsstring>
+        <name>GetMessageByGeneratedType</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/message/protobuf_factory.h" line="99" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1message_1_1ProtobufFactory_1a20badc63425053336d32c5db3eae9bbb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::message::ProtobufFactory::DECLARE_SINGLETON</definition>
+        <argsstring>(ProtobufFactory)</argsstring>
+        <name>DECLARE_SINGLETON</name>
+        <param>
+          <type><ref refid="classapollo_1_1cyber_1_1message_1_1ProtobufFactory" kindref="compound">ProtobufFactory</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/message/protobuf_factory.h" line="108" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1message_1_1ProtobufFactory_1a23536f75415803f0cbe42de8294a9799" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool apollo::cyber::message::ProtobufFactory::GetProtoDesc</definition>
+        <argsstring>(const FileDescriptor *file_desc, ProtoDesc *proto_desc)</argsstring>
+        <name>GetProtoDesc</name>
+        <param>
+          <type>const FileDescriptor *</type>
+          <declname>file_desc</declname>
+        </param>
+        <param>
+          <type>ProtoDesc *</type>
+          <declname>proto_desc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/message/protobuf_factory.h" line="101" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/work/apollo-fork/apollo/cyber/message/protobuf_factory.h" line="55" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/message/protobuf_factory.h" bodystart="55" bodyend="109"/>
+    <listofallmembers>
+      <member refid="classapollo_1_1cyber_1_1message_1_1ProtobufFactory_1a20badc63425053336d32c5db3eae9bbb" prot="private" virt="non-virtual"><scope>apollo::cyber::message::ProtobufFactory</scope><name>DECLARE_SINGLETON</name></member>
+      <member refid="classapollo_1_1cyber_1_1message_1_1ProtobufFactory_1a2c4114fa07c22295e0e79f00ce02daca" prot="private" virt="non-virtual"><scope>apollo::cyber::message::ProtobufFactory</scope><name>factory_</name></member>
+      <member refid="classapollo_1_1cyber_1_1message_1_1ProtobufFactory_1a374b2b507e4eba3f9eb0ce9c192242a8" prot="public" virt="non-virtual"><scope>apollo::cyber::message::ProtobufFactory</scope><name>FindMessageTypeByName</name></member>
+      <member refid="classapollo_1_1cyber_1_1message_1_1ProtobufFactory_1a665ea192ef367b2a89a769dd4f9192e6" prot="public" virt="non-virtual"><scope>apollo::cyber::message::ProtobufFactory</scope><name>FindServiceByName</name></member>
+      <member refid="classapollo_1_1cyber_1_1message_1_1ProtobufFactory_1a07a04ac066aa60627656b90f49d07daa" prot="public" virt="non-virtual"><scope>apollo::cyber::message::ProtobufFactory</scope><name>GenerateMessageByType</name></member>
+      <member refid="classapollo_1_1cyber_1_1message_1_1ProtobufFactory_1aebba7fa34a0530ec76cf2fd33b3e6e3b" prot="public" virt="non-virtual"><scope>apollo::cyber::message::ProtobufFactory</scope><name>GetDescriptorString</name></member>
+      <member refid="classapollo_1_1cyber_1_1message_1_1ProtobufFactory_1af86aa18822ec4d6bcc3fa0c3e44aa1ca" prot="public" virt="non-virtual"><scope>apollo::cyber::message::ProtobufFactory</scope><name>GetDescriptorString</name></member>
+      <member refid="classapollo_1_1cyber_1_1message_1_1ProtobufFactory_1a36b7f4ba5945f4c89d157a51bc8539fd" prot="public" virt="non-virtual"><scope>apollo::cyber::message::ProtobufFactory</scope><name>GetDescriptorString</name></member>
+      <member refid="classapollo_1_1cyber_1_1message_1_1ProtobufFactory_1a136d095376f83008b148dce9e58e1c78" prot="private" virt="non-virtual"><scope>apollo::cyber::message::ProtobufFactory</scope><name>GetMessageByGeneratedType</name></member>
+      <member refid="classapollo_1_1cyber_1_1message_1_1ProtobufFactory_1a23536f75415803f0cbe42de8294a9799" prot="private" virt="non-virtual"><scope>apollo::cyber::message::ProtobufFactory</scope><name>GetProtoDesc</name></member>
+      <member refid="classapollo_1_1cyber_1_1message_1_1ProtobufFactory_1a8124a5e604099823afed63e56f68a8ee" prot="public" virt="non-virtual"><scope>apollo::cyber::message::ProtobufFactory</scope><name>GetPythonDesc</name></member>
+      <member refid="classapollo_1_1cyber_1_1message_1_1ProtobufFactory_1ad6c3d990545216334e424c5bb6f00d65" prot="private" virt="non-virtual"><scope>apollo::cyber::message::ProtobufFactory</scope><name>pool_</name></member>
+      <member refid="classapollo_1_1cyber_1_1message_1_1ProtobufFactory_1a9acd5bbdb9ef74852b7d89fa6863f109" prot="private" virt="non-virtual"><scope>apollo::cyber::message::ProtobufFactory</scope><name>register_mutex_</name></member>
+      <member refid="classapollo_1_1cyber_1_1message_1_1ProtobufFactory_1a28e6888421ed69854760067707251132" prot="public" virt="non-virtual"><scope>apollo::cyber::message::ProtobufFactory</scope><name>RegisterMessage</name></member>
+      <member refid="classapollo_1_1cyber_1_1message_1_1ProtobufFactory_1a9c66829001d077097204caa85a256f35" prot="public" virt="non-virtual"><scope>apollo::cyber::message::ProtobufFactory</scope><name>RegisterMessage</name></member>
+      <member refid="classapollo_1_1cyber_1_1message_1_1ProtobufFactory_1a812fef889296b4c1c16adf73bb0c37d3" prot="public" virt="non-virtual"><scope>apollo::cyber::message::ProtobufFactory</scope><name>RegisterMessage</name></member>
+      <member refid="classapollo_1_1cyber_1_1message_1_1ProtobufFactory_1a9a496ef71145954a1a473bc6443c294d" prot="public" virt="non-virtual"><scope>apollo::cyber::message::ProtobufFactory</scope><name>RegisterMessage</name></member>
+      <member refid="classapollo_1_1cyber_1_1message_1_1ProtobufFactory_1adb2411e8d12351e71fbfd58c3dfbc1fa" prot="private" virt="non-virtual"><scope>apollo::cyber::message::ProtobufFactory</scope><name>RegisterMessage</name></member>
+      <member refid="classapollo_1_1cyber_1_1message_1_1ProtobufFactory_1a7447830ef927a587f5a61e43db290116" prot="public" virt="non-virtual"><scope>apollo::cyber::message::ProtobufFactory</scope><name>RegisterPythonMessage</name></member>
+      <member refid="classapollo_1_1cyber_1_1message_1_1ProtobufFactory_1a3fab943f6f9d2c5d7bc14aea1e1bb02f" prot="public" virt="non-virtual"><scope>apollo::cyber::message::ProtobufFactory</scope><name>~ProtobufFactory</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

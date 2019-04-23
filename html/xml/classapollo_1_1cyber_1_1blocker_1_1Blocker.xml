@@ -1,0 +1,634 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classapollo_1_1cyber_1_1blocker_1_1Blocker" kind="class" prot="public">
+    <compoundname>apollo::cyber::blocker::Blocker</compoundname>
+    <basecompoundref refid="classapollo_1_1cyber_1_1blocker_1_1BlockerBase" prot="public" virt="non-virtual">apollo::cyber::blocker::BlockerBase</basecompoundref>
+    <includes refid="blocker_8h" local="no">blocker.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename</type>
+        <declname>T</declname>
+        <defname>T</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classapollo_1_1cyber_1_1blocker_1_1Blocker_1ab6f5eb86a03109c66581e377a896650a" prot="public" static="no">
+        <type>T</type>
+        <definition>using apollo::cyber::blocker::Blocker&lt; T &gt;::MessageType =  T</definition>
+        <argsstring></argsstring>
+        <name>MessageType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" line="68" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classapollo_1_1cyber_1_1blocker_1_1Blocker_1acfdb26545f6e05820e043a22ed91ed1d" prot="public" static="no">
+        <type>std::shared_ptr&lt; T &gt;</type>
+        <definition>using apollo::cyber::blocker::Blocker&lt; T &gt;::MessagePtr =  std::shared_ptr&lt;T&gt;</definition>
+        <argsstring></argsstring>
+        <name>MessagePtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" line="69" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classapollo_1_1cyber_1_1blocker_1_1Blocker_1a4c973a5afc09ca2b666f9436f2e74189" prot="public" static="no">
+        <type>std::list&lt; <ref refid="classapollo_1_1cyber_1_1blocker_1_1Blocker_1acfdb26545f6e05820e043a22ed91ed1d" kindref="member">MessagePtr</ref> &gt;</type>
+        <definition>using apollo::cyber::blocker::Blocker&lt; T &gt;::MessageQueue =  std::list&lt;MessagePtr&gt;</definition>
+        <argsstring></argsstring>
+        <name>MessageQueue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" line="70" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classapollo_1_1cyber_1_1blocker_1_1Blocker_1aadf3f89fd884e1d9d2464172ede9213f" prot="public" static="no">
+        <type>std::function&lt; void(const <ref refid="classapollo_1_1cyber_1_1blocker_1_1Blocker_1acfdb26545f6e05820e043a22ed91ed1d" kindref="member">MessagePtr</ref> &amp;)&gt;</type>
+        <definition>using apollo::cyber::blocker::Blocker&lt; T &gt;::Callback =  std::function&lt;void(const MessagePtr&amp;)&gt;</definition>
+        <argsstring></argsstring>
+        <name>Callback</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" line="71" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classapollo_1_1cyber_1_1blocker_1_1Blocker_1ace3015075930b98718441655315002d5" prot="public" static="no">
+        <type>std::unordered_map&lt; std::string, <ref refid="classapollo_1_1cyber_1_1blocker_1_1Blocker_1aadf3f89fd884e1d9d2464172ede9213f" kindref="member">Callback</ref> &gt;</type>
+        <definition>using apollo::cyber::blocker::Blocker&lt; T &gt;::CallbackMap =  std::unordered_map&lt;std::string, Callback&gt;</definition>
+        <argsstring></argsstring>
+        <name>CallbackMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" line="72" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classapollo_1_1cyber_1_1blocker_1_1Blocker_1a62c6fc3bb53c24ed9dd2bc69bdad7e3d" prot="public" static="no">
+        <type>typename std::list&lt; std::shared_ptr&lt; T &gt;&gt;::const_iterator</type>
+        <definition>using apollo::cyber::blocker::Blocker&lt; T &gt;::Iterator =  typename std::list&lt;std::shared_ptr&lt;T&gt;&gt;::const_iterator</definition>
+        <argsstring></argsstring>
+        <name>Iterator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" line="73" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classapollo_1_1cyber_1_1blocker_1_1Blocker_1a125f26fb85cd399c64b22b95df83f810" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class BlockerManager</definition>
+        <argsstring></argsstring>
+        <name>BlockerManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" line="65" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1blocker_1_1Blocker_1a31770fde4b92797a07af4f3eadb824ff" prot="private" static="no" mutable="no">
+        <type><ref refid="structapollo_1_1cyber_1_1blocker_1_1BlockerAttr" kindref="compound">BlockerAttr</ref></type>
+        <definition>BlockerAttr apollo::cyber::blocker::Blocker&lt; T &gt;::attr_</definition>
+        <argsstring></argsstring>
+        <name>attr_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" line="107" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1blocker_1_1Blocker_1ae27c916e638e027b4d06e6ff5a385b07" prot="private" static="no" mutable="no">
+        <type><ref refid="classapollo_1_1cyber_1_1blocker_1_1Blocker_1a4c973a5afc09ca2b666f9436f2e74189" kindref="member">MessageQueue</ref></type>
+        <definition>MessageQueue apollo::cyber::blocker::Blocker&lt; T &gt;::observed_msg_queue_</definition>
+        <argsstring></argsstring>
+        <name>observed_msg_queue_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" line="108" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1blocker_1_1Blocker_1afeb0c15d39a0c555540858cfc86a2ce3" prot="private" static="no" mutable="no">
+        <type><ref refid="classapollo_1_1cyber_1_1blocker_1_1Blocker_1a4c973a5afc09ca2b666f9436f2e74189" kindref="member">MessageQueue</ref></type>
+        <definition>MessageQueue apollo::cyber::blocker::Blocker&lt; T &gt;::published_msg_queue_</definition>
+        <argsstring></argsstring>
+        <name>published_msg_queue_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" line="109" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1blocker_1_1Blocker_1ab6e6114fe76a04ec1b92c13482cffa00" prot="private" static="no" mutable="yes">
+        <type>std::mutex</type>
+        <definition>std::mutex apollo::cyber::blocker::Blocker&lt; T &gt;::msg_mutex_</definition>
+        <argsstring></argsstring>
+        <name>msg_mutex_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" line="110" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1blocker_1_1Blocker_1a930f027bbb0fa388b72301b376fa75b2" prot="private" static="no" mutable="no">
+        <type><ref refid="classapollo_1_1cyber_1_1blocker_1_1Blocker_1ace3015075930b98718441655315002d5" kindref="member">CallbackMap</ref></type>
+        <definition>CallbackMap apollo::cyber::blocker::Blocker&lt; T &gt;::published_callbacks_</definition>
+        <argsstring></argsstring>
+        <name>published_callbacks_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" line="112" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1blocker_1_1Blocker_1aef42b424d6fe0416c40d3ea5110cbc7f" prot="private" static="no" mutable="yes">
+        <type>std::mutex</type>
+        <definition>std::mutex apollo::cyber::blocker::Blocker&lt; T &gt;::cb_mutex_</definition>
+        <argsstring></argsstring>
+        <name>cb_mutex_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" line="113" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1blocker_1_1Blocker_1a0b66558da5f459f983f120203583e613" prot="private" static="no" mutable="no">
+        <type><ref refid="classapollo_1_1cyber_1_1blocker_1_1Blocker_1ab6f5eb86a03109c66581e377a896650a" kindref="member">MessageType</ref></type>
+        <definition>MessageType apollo::cyber::blocker::Blocker&lt; T &gt;::dummy_msg_</definition>
+        <argsstring></argsstring>
+        <name>dummy_msg_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" line="115" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1blocker_1_1Blocker_1a088532493a0783825880ed2dbf97f783" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::blocker::Blocker&lt; T &gt;::Blocker</definition>
+        <argsstring>(const BlockerAttr &amp;attr)</argsstring>
+        <name>Blocker</name>
+        <param>
+          <type>const <ref refid="structapollo_1_1cyber_1_1blocker_1_1BlockerAttr" kindref="compound">BlockerAttr</ref> &amp;</type>
+          <declname>attr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" line="75" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" bodystart="119" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1blocker_1_1Blocker_1a843112b632a8700b492e91161e3792ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>apollo::cyber::blocker::Blocker&lt; T &gt;::~Blocker</definition>
+        <argsstring>()</argsstring>
+        <name>~Blocker</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" line="76" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" bodystart="122" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1blocker_1_1Blocker_1a6c07deb7c68f3007f484048cac1ae532" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::blocker::Blocker&lt; T &gt;::Publish</definition>
+        <argsstring>(const MessageType &amp;msg)</argsstring>
+        <name>Publish</name>
+        <param>
+          <type>const <ref refid="classapollo_1_1cyber_1_1blocker_1_1Blocker_1ab6f5eb86a03109c66581e377a896650a" kindref="member">MessageType</ref> &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" line="78" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" bodystart="129" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1blocker_1_1Blocker_1a511886deab8a981a9f054d3f3622825a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::blocker::Blocker&lt; T &gt;::Publish</definition>
+        <argsstring>(const MessagePtr &amp;msg)</argsstring>
+        <name>Publish</name>
+        <param>
+          <type>const <ref refid="classapollo_1_1cyber_1_1blocker_1_1Blocker_1acfdb26545f6e05820e043a22ed91ed1d" kindref="member">MessagePtr</ref> &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" line="79" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" bodystart="134" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1blocker_1_1Blocker_1a2c1d83849cd31a60e0cd77fa20c0fb28" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::blocker::Blocker&lt; T &gt;::ClearObserved</definition>
+        <argsstring>() override</argsstring>
+        <name>ClearObserved</name>
+        <reimplements refid="classapollo_1_1cyber_1_1blocker_1_1BlockerBase_1aa644c34503729364e5742f36f4246469">ClearObserved</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" line="81" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" bodystart="153" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1blocker_1_1Blocker_1a541bf01ca37ca188743d43f0130f8ea7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::blocker::Blocker&lt; T &gt;::ClearPublished</definition>
+        <argsstring>() override</argsstring>
+        <name>ClearPublished</name>
+        <reimplements refid="classapollo_1_1cyber_1_1blocker_1_1BlockerBase_1a79270e6fab5378d6b40162fb4322d189">ClearPublished</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" line="82" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" bodystart="159" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1blocker_1_1Blocker_1aa2daeae7b6757bbe6a8066ed045dc891" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::blocker::Blocker&lt; T &gt;::Observe</definition>
+        <argsstring>() override</argsstring>
+        <name>Observe</name>
+        <reimplements refid="classapollo_1_1cyber_1_1blocker_1_1BlockerBase_1ad14b2e2e37c4436f2ef72e78505aa271">Observe</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" line="83" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" bodystart="165" bodyend="168"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1blocker_1_1Blocker_1a629bb4a79c48af5998c52036b27dbc7a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::blocker::Blocker&lt; T &gt;::IsObservedEmpty</definition>
+        <argsstring>() const override</argsstring>
+        <name>IsObservedEmpty</name>
+        <reimplements refid="classapollo_1_1cyber_1_1blocker_1_1BlockerBase_1ae362222ab521ba70e034c41a602a2f28">IsObservedEmpty</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" line="84" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" bodystart="171" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1blocker_1_1Blocker_1ac6d16f3829849b236509dde3bbae3b29" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::blocker::Blocker&lt; T &gt;::IsPublishedEmpty</definition>
+        <argsstring>() const override</argsstring>
+        <name>IsPublishedEmpty</name>
+        <reimplements refid="classapollo_1_1cyber_1_1blocker_1_1BlockerBase_1a38759de3825c1768af583bebe334aaf1">IsPublishedEmpty</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" line="85" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" bodystart="177" bodyend="180"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1blocker_1_1Blocker_1a76e6a44944c9fc6608ebb4b609fc8504" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::blocker::Blocker&lt; T &gt;::Subscribe</definition>
+        <argsstring>(const std::string &amp;callback_id, const Callback &amp;callback)</argsstring>
+        <name>Subscribe</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>callback_id</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classapollo_1_1cyber_1_1blocker_1_1Blocker_1aadf3f89fd884e1d9d2464172ede9213f" kindref="member">Callback</ref> &amp;</type>
+          <declname>callback</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" line="87" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" bodystart="183" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1blocker_1_1Blocker_1a4223c5b06e38b685fcab97605822fdc1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::blocker::Blocker&lt; T &gt;::Unsubscribe</definition>
+        <argsstring>(const std::string &amp;callback_id) override</argsstring>
+        <name>Unsubscribe</name>
+        <reimplements refid="classapollo_1_1cyber_1_1blocker_1_1BlockerBase_1a8fd56887517c5015e32cd96544cd2d6a">Unsubscribe</reimplements>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>callback_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" line="88" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" bodystart="194" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1blocker_1_1Blocker_1aa1afd44fb9b388c73c6aed51464dffe4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classapollo_1_1cyber_1_1blocker_1_1Blocker_1ab6f5eb86a03109c66581e377a896650a" kindref="member">MessageType</ref> &amp;</type>
+        <definition>auto apollo::cyber::blocker::Blocker&lt; T &gt;::GetLatestObserved</definition>
+        <argsstring>() const </argsstring>
+        <name>GetLatestObserved</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" line="90" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" bodystart="200" bodyend="206"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1blocker_1_1Blocker_1a14020fb49d3a2a52cf272ea2b7a4e971" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classapollo_1_1cyber_1_1blocker_1_1Blocker_1acfdb26545f6e05820e043a22ed91ed1d" kindref="member">MessagePtr</ref></type>
+        <definition>auto apollo::cyber::blocker::Blocker&lt; T &gt;::GetLatestObservedPtr</definition>
+        <argsstring>() const </argsstring>
+        <name>GetLatestObservedPtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" line="91" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" bodystart="209" bodyend="215"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1blocker_1_1Blocker_1a2ea6fb30c5190f2ed392bbe339ca7a9a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classapollo_1_1cyber_1_1blocker_1_1Blocker_1acfdb26545f6e05820e043a22ed91ed1d" kindref="member">MessagePtr</ref></type>
+        <definition>auto apollo::cyber::blocker::Blocker&lt; T &gt;::GetOldestObservedPtr</definition>
+        <argsstring>() const </argsstring>
+        <name>GetOldestObservedPtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" line="92" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" bodystart="218" bodyend="224"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1blocker_1_1Blocker_1ace2b23ef87620044f3931af23160f988" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classapollo_1_1cyber_1_1blocker_1_1Blocker_1acfdb26545f6e05820e043a22ed91ed1d" kindref="member">MessagePtr</ref></type>
+        <definition>auto apollo::cyber::blocker::Blocker&lt; T &gt;::GetLatestPublishedPtr</definition>
+        <argsstring>() const </argsstring>
+        <name>GetLatestPublishedPtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" line="93" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" bodystart="227" bodyend="233"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1blocker_1_1Blocker_1a679d0ffebcc4fa6f48c81f6c82f3ec92" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classapollo_1_1cyber_1_1blocker_1_1Blocker_1a62c6fc3bb53c24ed9dd2bc69bdad7e3d" kindref="member">Iterator</ref></type>
+        <definition>auto apollo::cyber::blocker::Blocker&lt; T &gt;::ObservedBegin</definition>
+        <argsstring>() const </argsstring>
+        <name>ObservedBegin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" line="95" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" bodystart="236" bodyend="238"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1blocker_1_1Blocker_1a91dea08c6179aa55994a7a842db100ef" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classapollo_1_1cyber_1_1blocker_1_1Blocker_1a62c6fc3bb53c24ed9dd2bc69bdad7e3d" kindref="member">Iterator</ref></type>
+        <definition>auto apollo::cyber::blocker::Blocker&lt; T &gt;::ObservedEnd</definition>
+        <argsstring>() const </argsstring>
+        <name>ObservedEnd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" line="96" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" bodystart="241" bodyend="243"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1blocker_1_1Blocker_1a1560ce78043183df8b2d287cdc3824ed" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>size_t</type>
+        <definition>size_t apollo::cyber::blocker::Blocker&lt; T &gt;::capacity</definition>
+        <argsstring>() const override</argsstring>
+        <name>capacity</name>
+        <reimplements refid="classapollo_1_1cyber_1_1blocker_1_1BlockerBase_1a4b38e9b2314553bfd14edc8c0f80806d">capacity</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" line="98" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" bodystart="246" bodyend="248"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1blocker_1_1Blocker_1ad2eef40f68908fc02c76be48cfc55b63" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::blocker::Blocker&lt; T &gt;::set_capacity</definition>
+        <argsstring>(size_t capacity) override</argsstring>
+        <name>set_capacity</name>
+        <reimplements refid="classapollo_1_1cyber_1_1blocker_1_1BlockerBase_1aa3db5ee03360d7d645dad38c0352e4e6">set_capacity</reimplements>
+        <param>
+          <type>size_t</type>
+          <declname>capacity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" line="99" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" bodystart="251" bodyend="257"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1blocker_1_1Blocker_1ad121ab8e1fb379cd348267cccdc62624" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const std::string &amp;</type>
+        <definition>const std::string &amp; apollo::cyber::blocker::Blocker&lt; T &gt;::channel_name</definition>
+        <argsstring>() const override</argsstring>
+        <name>channel_name</name>
+        <reimplements refid="classapollo_1_1cyber_1_1blocker_1_1BlockerBase_1aa9606bd0d65712dfd8c62bee4db5180b">channel_name</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" line="100" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" bodystart="260" bodyend="262"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1blocker_1_1Blocker_1a7372e1e554c724a5ca55de47837780da" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::blocker::Blocker&lt; T &gt;::Reset</definition>
+        <argsstring>() override</argsstring>
+        <name>Reset</name>
+        <reimplements refid="classapollo_1_1cyber_1_1blocker_1_1BlockerBase_1a32fd8d73c7d5a5e4e2521f95126934d4">Reset</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" line="103" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" bodystart="140" bodyend="150"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1blocker_1_1Blocker_1a2bb2d0e7cc2822d3898d9e374b54ee47" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::blocker::Blocker&lt; T &gt;::Enqueue</definition>
+        <argsstring>(const MessagePtr &amp;msg)</argsstring>
+        <name>Enqueue</name>
+        <param>
+          <type>const <ref refid="classapollo_1_1cyber_1_1blocker_1_1Blocker_1acfdb26545f6e05820e043a22ed91ed1d" kindref="member">MessagePtr</ref> &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" line="104" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" bodystart="265" bodyend="274"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1blocker_1_1Blocker_1a5c1c4c139f5ed9219ff22c9faf037944" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::blocker::Blocker&lt; T &gt;::Notify</definition>
+        <argsstring>(const MessagePtr &amp;msg)</argsstring>
+        <name>Notify</name>
+        <param>
+          <type>const <ref refid="classapollo_1_1cyber_1_1blocker_1_1Blocker_1acfdb26545f6e05820e043a22ed91ed1d" kindref="member">MessagePtr</ref> &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" line="105" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" bodystart="277" bodyend="282"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="49">
+        <label>apollo::cyber::blocker::BlockerBase</label>
+        <link refid="classapollo_1_1cyber_1_1blocker_1_1BlockerBase"/>
+      </node>
+      <node id="48">
+        <label>apollo::cyber::blocker::Blocker&lt; T &gt;</label>
+        <link refid="classapollo_1_1cyber_1_1blocker_1_1Blocker"/>
+        <childnode refid="49" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="51">
+        <label>apollo::cyber::blocker::BlockerBase</label>
+        <link refid="classapollo_1_1cyber_1_1blocker_1_1BlockerBase"/>
+      </node>
+      <node id="53">
+        <label>T</label>
+      </node>
+      <node id="52">
+        <label>apollo::cyber::blocker::BlockerAttr</label>
+        <link refid="structapollo_1_1cyber_1_1blocker_1_1BlockerAttr"/>
+      </node>
+      <node id="50">
+        <label>apollo::cyber::blocker::Blocker&lt; T &gt;</label>
+        <link refid="classapollo_1_1cyber_1_1blocker_1_1Blocker"/>
+        <childnode refid="51" relation="public-inheritance">
+        </childnode>
+        <childnode refid="52" relation="usage">
+          <edgelabel>attr_</edgelabel>
+        </childnode>
+        <childnode refid="53" relation="usage">
+          <edgelabel>dummy_msg_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" line="64" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/blocker/blocker.h" bodystart="64" bodyend="116"/>
+    <listofallmembers>
+      <member refid="classapollo_1_1cyber_1_1blocker_1_1Blocker_1a31770fde4b92797a07af4f3eadb824ff" prot="private" virt="non-virtual"><scope>apollo::cyber::blocker::Blocker</scope><name>attr_</name></member>
+      <member refid="classapollo_1_1cyber_1_1blocker_1_1Blocker_1a088532493a0783825880ed2dbf97f783" prot="public" virt="non-virtual"><scope>apollo::cyber::blocker::Blocker</scope><name>Blocker</name></member>
+      <member refid="classapollo_1_1cyber_1_1blocker_1_1Blocker_1a125f26fb85cd399c64b22b95df83f810" prot="private" virt="non-virtual"><scope>apollo::cyber::blocker::Blocker</scope><name>BlockerManager</name></member>
+      <member refid="classapollo_1_1cyber_1_1blocker_1_1Blocker_1aadf3f89fd884e1d9d2464172ede9213f" prot="public" virt="non-virtual"><scope>apollo::cyber::blocker::Blocker</scope><name>Callback</name></member>
+      <member refid="classapollo_1_1cyber_1_1blocker_1_1Blocker_1ace3015075930b98718441655315002d5" prot="public" virt="non-virtual"><scope>apollo::cyber::blocker::Blocker</scope><name>CallbackMap</name></member>
+      <member refid="classapollo_1_1cyber_1_1blocker_1_1Blocker_1a1560ce78043183df8b2d287cdc3824ed" prot="public" virt="virtual"><scope>apollo::cyber::blocker::Blocker</scope><name>capacity</name></member>
+      <member refid="classapollo_1_1cyber_1_1blocker_1_1Blocker_1aef42b424d6fe0416c40d3ea5110cbc7f" prot="private" virt="non-virtual"><scope>apollo::cyber::blocker::Blocker</scope><name>cb_mutex_</name></member>
+      <member refid="classapollo_1_1cyber_1_1blocker_1_1Blocker_1ad121ab8e1fb379cd348267cccdc62624" prot="public" virt="virtual"><scope>apollo::cyber::blocker::Blocker</scope><name>channel_name</name></member>
+      <member refid="classapollo_1_1cyber_1_1blocker_1_1Blocker_1a2c1d83849cd31a60e0cd77fa20c0fb28" prot="public" virt="virtual"><scope>apollo::cyber::blocker::Blocker</scope><name>ClearObserved</name></member>
+      <member refid="classapollo_1_1cyber_1_1blocker_1_1Blocker_1a541bf01ca37ca188743d43f0130f8ea7" prot="public" virt="virtual"><scope>apollo::cyber::blocker::Blocker</scope><name>ClearPublished</name></member>
+      <member refid="classapollo_1_1cyber_1_1blocker_1_1Blocker_1a0b66558da5f459f983f120203583e613" prot="private" virt="non-virtual"><scope>apollo::cyber::blocker::Blocker</scope><name>dummy_msg_</name></member>
+      <member refid="classapollo_1_1cyber_1_1blocker_1_1Blocker_1a2bb2d0e7cc2822d3898d9e374b54ee47" prot="private" virt="non-virtual"><scope>apollo::cyber::blocker::Blocker</scope><name>Enqueue</name></member>
+      <member refid="classapollo_1_1cyber_1_1blocker_1_1Blocker_1aa1afd44fb9b388c73c6aed51464dffe4" prot="public" virt="non-virtual"><scope>apollo::cyber::blocker::Blocker</scope><name>GetLatestObserved</name></member>
+      <member refid="classapollo_1_1cyber_1_1blocker_1_1Blocker_1a14020fb49d3a2a52cf272ea2b7a4e971" prot="public" virt="non-virtual"><scope>apollo::cyber::blocker::Blocker</scope><name>GetLatestObservedPtr</name></member>
+      <member refid="classapollo_1_1cyber_1_1blocker_1_1Blocker_1ace2b23ef87620044f3931af23160f988" prot="public" virt="non-virtual"><scope>apollo::cyber::blocker::Blocker</scope><name>GetLatestPublishedPtr</name></member>
+      <member refid="classapollo_1_1cyber_1_1blocker_1_1Blocker_1a2ea6fb30c5190f2ed392bbe339ca7a9a" prot="public" virt="non-virtual"><scope>apollo::cyber::blocker::Blocker</scope><name>GetOldestObservedPtr</name></member>
+      <member refid="classapollo_1_1cyber_1_1blocker_1_1Blocker_1a629bb4a79c48af5998c52036b27dbc7a" prot="public" virt="virtual"><scope>apollo::cyber::blocker::Blocker</scope><name>IsObservedEmpty</name></member>
+      <member refid="classapollo_1_1cyber_1_1blocker_1_1Blocker_1ac6d16f3829849b236509dde3bbae3b29" prot="public" virt="virtual"><scope>apollo::cyber::blocker::Blocker</scope><name>IsPublishedEmpty</name></member>
+      <member refid="classapollo_1_1cyber_1_1blocker_1_1Blocker_1a62c6fc3bb53c24ed9dd2bc69bdad7e3d" prot="public" virt="non-virtual"><scope>apollo::cyber::blocker::Blocker</scope><name>Iterator</name></member>
+      <member refid="classapollo_1_1cyber_1_1blocker_1_1Blocker_1acfdb26545f6e05820e043a22ed91ed1d" prot="public" virt="non-virtual"><scope>apollo::cyber::blocker::Blocker</scope><name>MessagePtr</name></member>
+      <member refid="classapollo_1_1cyber_1_1blocker_1_1Blocker_1a4c973a5afc09ca2b666f9436f2e74189" prot="public" virt="non-virtual"><scope>apollo::cyber::blocker::Blocker</scope><name>MessageQueue</name></member>
+      <member refid="classapollo_1_1cyber_1_1blocker_1_1Blocker_1ab6f5eb86a03109c66581e377a896650a" prot="public" virt="non-virtual"><scope>apollo::cyber::blocker::Blocker</scope><name>MessageType</name></member>
+      <member refid="classapollo_1_1cyber_1_1blocker_1_1Blocker_1ab6e6114fe76a04ec1b92c13482cffa00" prot="private" virt="non-virtual"><scope>apollo::cyber::blocker::Blocker</scope><name>msg_mutex_</name></member>
+      <member refid="classapollo_1_1cyber_1_1blocker_1_1Blocker_1a5c1c4c139f5ed9219ff22c9faf037944" prot="private" virt="non-virtual"><scope>apollo::cyber::blocker::Blocker</scope><name>Notify</name></member>
+      <member refid="classapollo_1_1cyber_1_1blocker_1_1Blocker_1aa2daeae7b6757bbe6a8066ed045dc891" prot="public" virt="virtual"><scope>apollo::cyber::blocker::Blocker</scope><name>Observe</name></member>
+      <member refid="classapollo_1_1cyber_1_1blocker_1_1Blocker_1ae27c916e638e027b4d06e6ff5a385b07" prot="private" virt="non-virtual"><scope>apollo::cyber::blocker::Blocker</scope><name>observed_msg_queue_</name></member>
+      <member refid="classapollo_1_1cyber_1_1blocker_1_1Blocker_1a679d0ffebcc4fa6f48c81f6c82f3ec92" prot="public" virt="non-virtual"><scope>apollo::cyber::blocker::Blocker</scope><name>ObservedBegin</name></member>
+      <member refid="classapollo_1_1cyber_1_1blocker_1_1Blocker_1a91dea08c6179aa55994a7a842db100ef" prot="public" virt="non-virtual"><scope>apollo::cyber::blocker::Blocker</scope><name>ObservedEnd</name></member>
+      <member refid="classapollo_1_1cyber_1_1blocker_1_1Blocker_1a6c07deb7c68f3007f484048cac1ae532" prot="public" virt="non-virtual"><scope>apollo::cyber::blocker::Blocker</scope><name>Publish</name></member>
+      <member refid="classapollo_1_1cyber_1_1blocker_1_1Blocker_1a511886deab8a981a9f054d3f3622825a" prot="public" virt="non-virtual"><scope>apollo::cyber::blocker::Blocker</scope><name>Publish</name></member>
+      <member refid="classapollo_1_1cyber_1_1blocker_1_1Blocker_1a930f027bbb0fa388b72301b376fa75b2" prot="private" virt="non-virtual"><scope>apollo::cyber::blocker::Blocker</scope><name>published_callbacks_</name></member>
+      <member refid="classapollo_1_1cyber_1_1blocker_1_1Blocker_1afeb0c15d39a0c555540858cfc86a2ce3" prot="private" virt="non-virtual"><scope>apollo::cyber::blocker::Blocker</scope><name>published_msg_queue_</name></member>
+      <member refid="classapollo_1_1cyber_1_1blocker_1_1Blocker_1a7372e1e554c724a5ca55de47837780da" prot="private" virt="virtual"><scope>apollo::cyber::blocker::Blocker</scope><name>Reset</name></member>
+      <member refid="classapollo_1_1cyber_1_1blocker_1_1Blocker_1ad2eef40f68908fc02c76be48cfc55b63" prot="public" virt="virtual"><scope>apollo::cyber::blocker::Blocker</scope><name>set_capacity</name></member>
+      <member refid="classapollo_1_1cyber_1_1blocker_1_1Blocker_1a76e6a44944c9fc6608ebb4b609fc8504" prot="public" virt="non-virtual"><scope>apollo::cyber::blocker::Blocker</scope><name>Subscribe</name></member>
+      <member refid="classapollo_1_1cyber_1_1blocker_1_1Blocker_1a4223c5b06e38b685fcab97605822fdc1" prot="public" virt="virtual"><scope>apollo::cyber::blocker::Blocker</scope><name>Unsubscribe</name></member>
+      <member refid="classapollo_1_1cyber_1_1blocker_1_1Blocker_1a843112b632a8700b492e91161e3792ea" prot="public" virt="virtual"><scope>apollo::cyber::blocker::Blocker</scope><name>~Blocker</name></member>
+      <member refid="classapollo_1_1cyber_1_1blocker_1_1BlockerBase_1a101aef7ac0d785ae7b622356c73c9a00" prot="public" virt="virtual"><scope>apollo::cyber::blocker::Blocker</scope><name>~BlockerBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

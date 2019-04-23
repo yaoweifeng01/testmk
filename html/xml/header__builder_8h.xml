@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="header__builder_8h" kind="file">
+    <compoundname>header_builder.h</compoundname>
+    <includes local="yes">cyber/proto/record.pb.h</includes>
+    <includedby refid="record__writer_8h" local="yes">record/record_writer.h</includedby>
+    <includedby refid="spliter_8h" local="yes">tools/cyber_recorder/spliter.h</includedby>
+    <incdepgraph>
+      <node id="8091">
+        <label>cyber/proto/record.pb.h</label>
+      </node>
+      <node id="8090">
+        <label>record/header_builder.h</label>
+        <link refid="header_builder.h"/>
+        <childnode refid="8091" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="8094">
+        <label>py_wrapper/py_record.h</label>
+        <link refid="py__record_8h"/>
+      </node>
+      <node id="8095">
+        <label>tools/cyber_recorder/recorder.h</label>
+        <link refid="recorder_8h"/>
+      </node>
+      <node id="8096">
+        <label>tools/cyber_recorder/spliter.h</label>
+        <link refid="spliter_8h"/>
+      </node>
+      <node id="8093">
+        <label>record/record_writer.h</label>
+        <link refid="record__writer_8h"/>
+        <childnode refid="8094" relation="include">
+        </childnode>
+        <childnode refid="8095" relation="include">
+        </childnode>
+      </node>
+      <node id="8092">
+        <label>record/header_builder.h</label>
+        <link refid="header_builder.h"/>
+        <childnode refid="8093" relation="include">
+        </childnode>
+        <childnode refid="8096" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classapollo_1_1cyber_1_1record_1_1HeaderBuilder" prot="public">apollo::cyber::record::HeaderBuilder</innerclass>
+    <innernamespace refid="namespaceapollo">apollo</innernamespace>
+    <innernamespace refid="namespaceapollo_1_1cyber">apollo::cyber</innernamespace>
+    <innernamespace refid="namespaceapollo_1_1cyber_1_1record">apollo::cyber::record</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2018<sp/>The<sp/>Apollo<sp/>Authors.<sp/>All<sp/>Rights<sp/>Reserved.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CYBER_RECORD_HEADER_BUILDER_H_</highlight></codeline>
+<codeline lineno="18"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CYBER_RECORD_HEADER_BUILDER_H_</highlight></codeline>
+<codeline lineno="19"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cyber/proto/record.pb.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">apollo<sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">cyber<sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">record<sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">using<sp/>::apollo::cyber::proto::CompressType;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">using<sp/>::apollo::cyber::proto::Header;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="classapollo_1_1cyber_1_1record_1_1HeaderBuilder" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classapollo_1_1cyber_1_1record_1_1HeaderBuilder" kindref="compound">HeaderBuilder</ref><sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>Header<sp/><ref refid="classapollo_1_1cyber_1_1record_1_1HeaderBuilder_1afdb6d4f30768fe543e20ae42c1a7f63b" kindref="member">GetHeaderWithSegmentParams</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint64_t<sp/>segment_interval,</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint64_t<sp/>segment_raw_size);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>Header<sp/><ref refid="classapollo_1_1cyber_1_1record_1_1HeaderBuilder_1af9ce70c917ba37246a9bc91e8a035e15" kindref="member">GetHeaderWithChunkParams</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint64_t<sp/>chunk_interval,</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint64_t<sp/>chunk_raw_size);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>Header<sp/><ref refid="classapollo_1_1cyber_1_1record_1_1HeaderBuilder_1a6912a76ae65bef9165f24654a02e2c8b" kindref="member">GetHeader</ref>();</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="38" refid="classapollo_1_1cyber_1_1record_1_1HeaderBuilder_1a03b1010861ba604c86b9492e31defdc3" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t<sp/><ref refid="classapollo_1_1cyber_1_1record_1_1HeaderBuilder_1a03b1010861ba604c86b9492e31defdc3" kindref="member">MAJOR_VERSION_</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="39" refid="classapollo_1_1cyber_1_1record_1_1HeaderBuilder_1ac6d71c6ce128e1a440381bc3c7b017b7" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t<sp/><ref refid="classapollo_1_1cyber_1_1record_1_1HeaderBuilder_1ac6d71c6ce128e1a440381bc3c7b017b7" kindref="member">MINOR_VERSION_</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="40" refid="classapollo_1_1cyber_1_1record_1_1HeaderBuilder_1aa639687fc14644cdccb36dc57bbf2bf2" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>CompressType<sp/><ref refid="classapollo_1_1cyber_1_1record_1_1HeaderBuilder_1aa639687fc14644cdccb36dc57bbf2bf2" kindref="member">COMPRESS_TYPE_</ref><sp/>=<sp/>CompressType::COMPRESS_NONE;</highlight></codeline>
+<codeline lineno="41" refid="classapollo_1_1cyber_1_1record_1_1HeaderBuilder_1ab38d31ea9629861522bf37f9d9f6c33b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint64_t<sp/><ref refid="classapollo_1_1cyber_1_1record_1_1HeaderBuilder_1ab38d31ea9629861522bf37f9d9f6c33b" kindref="member">CHUNK_INTERVAL_</ref><sp/>=<sp/>20<sp/>*<sp/>1000<sp/>*<sp/>1000<sp/>*<sp/>1000ULL;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>20s</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="classapollo_1_1cyber_1_1record_1_1HeaderBuilder_1a22f9572d9b028a576078790a7745cf74" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint64_t<sp/><ref refid="classapollo_1_1cyber_1_1record_1_1HeaderBuilder_1a22f9572d9b028a576078790a7745cf74" kindref="member">SEGMENT_INTERVAL_</ref><sp/>=<sp/>60<sp/>*<sp/>1000<sp/>*<sp/>1000<sp/>*<sp/>1000ULL;<sp/><sp/></highlight><highlight class="comment">//<sp/>60s</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="classapollo_1_1cyber_1_1record_1_1HeaderBuilder_1ac362989d14c7dac1a3ac2999e1995422" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint64_t<sp/><ref refid="classapollo_1_1cyber_1_1record_1_1HeaderBuilder_1ac362989d14c7dac1a3ac2999e1995422" kindref="member">CHUNK_RAW_SIZE_</ref><sp/>=<sp/>200<sp/>*<sp/>1024<sp/>*<sp/>1024ULL;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>200MB</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="classapollo_1_1cyber_1_1record_1_1HeaderBuilder_1acdaee20ce6f5c6227aefa2f09ec14f15" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint64_t<sp/><ref refid="classapollo_1_1cyber_1_1record_1_1HeaderBuilder_1acdaee20ce6f5c6227aefa2f09ec14f15" kindref="member">SEGMENT_RAW_SIZE_</ref><sp/>=<sp/>2048<sp/>*<sp/>1024<sp/>*<sp/>1024ULL;<sp/><sp/></highlight><highlight class="comment">//<sp/>2GB</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>record</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>cyber</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>apollo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>CYBER_RECORD_HEADER_BUILDER_H_</highlight></codeline>
+    </programlisting>
+    <location file="/home/work/apollo-fork/apollo/cyber/record/header_builder.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,372 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher" kind="class" prot="public">
+    <compoundname>apollo::cyber::transport::ShmDispatcher</compoundname>
+    <basecompoundref refid="classapollo_1_1cyber_1_1transport_1_1Dispatcher" prot="public" virt="non-virtual">apollo::cyber::transport::Dispatcher</basecompoundref>
+    <includes refid="shm__dispatcher_8h" local="no">shm_dispatcher.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_1af4b802d682732bf22e6f0d04fe0bb620" prot="public" static="no">
+        <type>std::unordered_map&lt; uint64_t, <ref refid="namespaceapollo_1_1cyber_1_1transport_1ae92e21f5ec6b011ba398cd6907465406" kindref="member">SegmentPtr</ref> &gt;</type>
+        <definition>using apollo::cyber::transport::ShmDispatcher::SegmentContainer =  std::unordered_map&lt;uint64_t, SegmentPtr&gt;</definition>
+        <argsstring></argsstring>
+        <name>SegmentContainer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/dispatcher/shm_dispatcher.h" line="48" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/dispatcher/shm_dispatcher.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_1a82f0599420023c170f75a7416d64cbae" prot="private" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t apollo::cyber::transport::ShmDispatcher::host_id_</definition>
+        <argsstring></argsstring>
+        <name>host_id_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/dispatcher/shm_dispatcher.h" line="71" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/dispatcher/shm_dispatcher.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_1a8b86c460d2e97b8930092bb6ab340e8c" prot="private" static="no" mutable="no">
+        <type><ref refid="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_1af4b802d682732bf22e6f0d04fe0bb620" kindref="member">SegmentContainer</ref></type>
+        <definition>SegmentContainer apollo::cyber::transport::ShmDispatcher::segments_</definition>
+        <argsstring></argsstring>
+        <name>segments_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/dispatcher/shm_dispatcher.h" line="72" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/dispatcher/shm_dispatcher.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_1a47df1c1d054a9cc0c90c7d01233eee1f" prot="private" static="no" mutable="no">
+        <type>std::unordered_map&lt; uint64_t, uint32_t &gt;</type>
+        <definition>std::unordered_map&lt;uint64_t, uint32_t&gt; apollo::cyber::transport::ShmDispatcher::previous_indexes_</definition>
+        <argsstring></argsstring>
+        <name>previous_indexes_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/dispatcher/shm_dispatcher.h" line="73" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/dispatcher/shm_dispatcher.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_1a23aa8263a8498b815f2b60afff385abd" prot="private" static="no" mutable="no">
+        <type><ref refid="classapollo_1_1cyber_1_1base_1_1AtomicRWLock" kindref="compound">AtomicRWLock</ref></type>
+        <definition>AtomicRWLock apollo::cyber::transport::ShmDispatcher::segments_lock_</definition>
+        <argsstring></argsstring>
+        <name>segments_lock_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/dispatcher/shm_dispatcher.h" line="74" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/dispatcher/shm_dispatcher.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_1a88cab9f1044db26107a7e44fb9a7955b" prot="private" static="no" mutable="no">
+        <type>std::thread</type>
+        <definition>std::thread apollo::cyber::transport::ShmDispatcher::thread_</definition>
+        <argsstring></argsstring>
+        <name>thread_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/dispatcher/shm_dispatcher.h" line="75" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/dispatcher/shm_dispatcher.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_1a2ca1a561c8b73f6f41f32422eb466eaa" prot="private" static="no" mutable="no">
+        <type><ref refid="namespaceapollo_1_1cyber_1_1transport_1ad7de1bbf34457c17c4d04b9bbfe152b4" kindref="member">NotifierPtr</ref></type>
+        <definition>NotifierPtr apollo::cyber::transport::ShmDispatcher::notifier_</definition>
+        <argsstring></argsstring>
+        <name>notifier_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/dispatcher/shm_dispatcher.h" line="76" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/dispatcher/shm_dispatcher.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_1a10fe3a6434f0385a11ca390dc7037503" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual apollo::cyber::transport::ShmDispatcher::~ShmDispatcher</definition>
+        <argsstring>()</argsstring>
+        <name>~ShmDispatcher</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/dispatcher/shm_dispatcher.h" line="50" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_1a8924e420134ea725eb03a680bb98abd7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::transport::ShmDispatcher::Shutdown</definition>
+        <argsstring>() override</argsstring>
+        <name>Shutdown</name>
+        <reimplements refid="classapollo_1_1cyber_1_1transport_1_1Dispatcher_1a87c80d37d0b6218218ad888888ad0d08">Shutdown</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/dispatcher/shm_dispatcher.h" line="52" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_1a752dd5b2c4f1b566d32160937161063d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename MessageT</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void apollo::cyber::transport::ShmDispatcher::AddListener</definition>
+        <argsstring>(const RoleAttributes &amp;self_attr, const MessageListener&lt; MessageT &gt; &amp;listener)</argsstring>
+        <name>AddListener</name>
+        <param>
+          <type>const RoleAttributes &amp;</type>
+          <declname>self_attr</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespaceapollo_1_1cyber_1_1transport_1aade3f4d41770972ae44166cdde27e2d8" kindref="member">MessageListener</ref>&lt; MessageT &gt; &amp;</type>
+          <declname>listener</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/dispatcher/shm_dispatcher.h" line="55" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/dispatcher/shm_dispatcher.h" bodystart="82" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_1a5f2ee158930e0225422f75d5e72c71b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename MessageT</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void apollo::cyber::transport::ShmDispatcher::AddListener</definition>
+        <argsstring>(const RoleAttributes &amp;self_attr, const RoleAttributes &amp;opposite_attr, const MessageListener&lt; MessageT &gt; &amp;listener)</argsstring>
+        <name>AddListener</name>
+        <param>
+          <type>const RoleAttributes &amp;</type>
+          <declname>self_attr</declname>
+        </param>
+        <param>
+          <type>const RoleAttributes &amp;</type>
+          <declname>opposite_attr</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespaceapollo_1_1cyber_1_1transport_1aade3f4d41770972ae44166cdde27e2d8" kindref="member">MessageListener</ref>&lt; MessageT &gt; &amp;</type>
+          <declname>listener</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/dispatcher/shm_dispatcher.h" line="59" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/dispatcher/shm_dispatcher.h" bodystart="98" bodyend="113"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_1a30b5a72d09a9f2e490011763bc434ef4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::transport::ShmDispatcher::AddSegment</definition>
+        <argsstring>(const RoleAttributes &amp;self_attr)</argsstring>
+        <name>AddSegment</name>
+        <param>
+          <type>const RoleAttributes &amp;</type>
+          <declname>self_attr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/dispatcher/shm_dispatcher.h" line="64" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_1a379e1e4f7c592f606b3f1e0e39333c64" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::transport::ShmDispatcher::ReadMessage</definition>
+        <argsstring>(uint64_t channel_id, uint32_t block_index)</argsstring>
+        <name>ReadMessage</name>
+        <param>
+          <type>uint64_t</type>
+          <declname>channel_id</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>block_index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/dispatcher/shm_dispatcher.h" line="65" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_1ac91a401dc4c06f6e00cb33c5be24ab20" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::transport::ShmDispatcher::OnMessage</definition>
+        <argsstring>(uint64_t channel_id, const std::shared_ptr&lt; ReadableBlock &gt; &amp;rb, const MessageInfo &amp;msg_info)</argsstring>
+        <name>OnMessage</name>
+        <param>
+          <type>uint64_t</type>
+          <declname>channel_id</declname>
+        </param>
+        <param>
+          <type>const std::shared_ptr&lt; <ref refid="namespaceapollo_1_1cyber_1_1transport_1a38f70b996ac896a1bc06d4598f1d0070" kindref="member">ReadableBlock</ref> &gt; &amp;</type>
+          <declname>rb</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classapollo_1_1cyber_1_1transport_1_1MessageInfo" kindref="compound">MessageInfo</ref> &amp;</type>
+          <declname>msg_info</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/dispatcher/shm_dispatcher.h" line="66" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_1a7d6e4e96c0604330fb2aea3284d5d362" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::transport::ShmDispatcher::ThreadFunc</definition>
+        <argsstring>()</argsstring>
+        <name>ThreadFunc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/dispatcher/shm_dispatcher.h" line="68" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_1affe533d42be32ee45ffc80630c24111a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::transport::ShmDispatcher::Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/dispatcher/shm_dispatcher.h" line="69" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="833">
+        <label>apollo::cyber::transport::ShmDispatcher</label>
+        <link refid="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher"/>
+        <childnode refid="834" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="834">
+        <label>apollo::cyber::transport::Dispatcher</label>
+        <link refid="classapollo_1_1cyber_1_1transport_1_1Dispatcher"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="835">
+        <label>apollo::cyber::transport::ShmDispatcher</label>
+        <link refid="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher"/>
+        <childnode refid="836" relation="public-inheritance">
+        </childnode>
+        <childnode refid="837" relation="usage">
+          <edgelabel>segments_lock_</edgelabel>
+        </childnode>
+        <childnode refid="841" relation="usage">
+          <edgelabel>notifier_</edgelabel>
+        </childnode>
+      </node>
+      <node id="838">
+        <label>apollo::cyber::base::AtomicHashMap&lt; uint64_t, ListenerHandlerBasePtr &gt;</label>
+        <link refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap"/>
+        <childnode refid="839" relation="usage">
+          <edgelabel>table_</edgelabel>
+        </childnode>
+      </node>
+      <node id="841">
+        <label>apollo::cyber::transport::NotifierBase</label>
+        <link refid="classapollo_1_1cyber_1_1transport_1_1NotifierBase"/>
+      </node>
+      <node id="840">
+        <label>apollo::cyber::base::AtomicHashMap&lt; K, V, TableSize, std::enable_if&lt; std::is_integral&lt; K &gt;::value &amp;&amp;(TableSize &amp;(TableSize-1))==0, int &gt;::type &gt;::Entry</label>
+        <link refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry"/>
+      </node>
+      <node id="836">
+        <label>apollo::cyber::transport::Dispatcher</label>
+        <link refid="classapollo_1_1cyber_1_1transport_1_1Dispatcher"/>
+        <childnode refid="837" relation="usage">
+          <edgelabel>rw_lock_</edgelabel>
+        </childnode>
+        <childnode refid="838" relation="usage">
+          <edgelabel>msg_listeners_</edgelabel>
+        </childnode>
+      </node>
+      <node id="837">
+        <label>apollo::cyber::base::AtomicRWLock</label>
+        <link refid="classapollo_1_1cyber_1_1base_1_1AtomicRWLock"/>
+      </node>
+      <node id="839">
+        <label>apollo::cyber::base::AtomicHashMap&lt; K, V, TableSize, std::enable_if&lt; std::is_integral&lt; K &gt;::value &amp;&amp;(TableSize &amp;(TableSize-1))==0, int &gt;::type &gt;::Bucket</label>
+        <link refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Bucket"/>
+        <childnode refid="840" relation="usage">
+          <edgelabel>head_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/work/apollo-fork/apollo/cyber/transport/dispatcher/shm_dispatcher.h" line="45" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/dispatcher/shm_dispatcher.h" bodystart="45" bodyend="79"/>
+    <listofallmembers>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_1a752dd5b2c4f1b566d32160937161063d" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::ShmDispatcher</scope><name>AddListener</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_1a5f2ee158930e0225422f75d5e72c71b6" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::ShmDispatcher</scope><name>AddListener</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_1a30b5a72d09a9f2e490011763bc434ef4" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::ShmDispatcher</scope><name>AddSegment</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Dispatcher_1a7b740666b178815f3bef327a223fe39f" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::ShmDispatcher</scope><name>Dispatcher</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Dispatcher_1a7bea7181659fa46204434dbdba90e00f" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::ShmDispatcher</scope><name>HasChannel</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_1a82f0599420023c170f75a7416d64cbae" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::ShmDispatcher</scope><name>host_id_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_1affe533d42be32ee45ffc80630c24111a" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::ShmDispatcher</scope><name>Init</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Dispatcher_1a014ad0d3a3d8830aec03c8a47a00b385" prot="protected" virt="non-virtual"><scope>apollo::cyber::transport::ShmDispatcher</scope><name>is_shutdown_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Dispatcher_1aec5b13dcc35013468812f0ea0bd0dd89" prot="protected" virt="non-virtual"><scope>apollo::cyber::transport::ShmDispatcher</scope><name>msg_listeners_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_1a2ca1a561c8b73f6f41f32422eb466eaa" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::ShmDispatcher</scope><name>notifier_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_1ac91a401dc4c06f6e00cb33c5be24ab20" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::ShmDispatcher</scope><name>OnMessage</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_1a47df1c1d054a9cc0c90c7d01233eee1f" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::ShmDispatcher</scope><name>previous_indexes_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_1a379e1e4f7c592f606b3f1e0e39333c64" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::ShmDispatcher</scope><name>ReadMessage</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Dispatcher_1a24ced235e749abc47265d6ffade4f8bc" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::ShmDispatcher</scope><name>RemoveListener</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Dispatcher_1af81d7e383f5cb1c4b92ab4dd84125997" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::ShmDispatcher</scope><name>RemoveListener</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Dispatcher_1a93d037058df25c609f9d2e24f62bd67e" prot="protected" virt="non-virtual"><scope>apollo::cyber::transport::ShmDispatcher</scope><name>rw_lock_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_1af4b802d682732bf22e6f0d04fe0bb620" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::ShmDispatcher</scope><name>SegmentContainer</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_1a8b86c460d2e97b8930092bb6ab340e8c" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::ShmDispatcher</scope><name>segments_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_1a23aa8263a8498b815f2b60afff385abd" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::ShmDispatcher</scope><name>segments_lock_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_1a8924e420134ea725eb03a680bb98abd7" prot="public" virt="virtual"><scope>apollo::cyber::transport::ShmDispatcher</scope><name>Shutdown</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_1a88cab9f1044db26107a7e44fb9a7955b" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::ShmDispatcher</scope><name>thread_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_1a7d6e4e96c0604330fb2aea3284d5d362" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::ShmDispatcher</scope><name>ThreadFunc</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Dispatcher_1a6d28df2005ee5409e4dedb0e80a6bb91" prot="public" virt="virtual"><scope>apollo::cyber::transport::ShmDispatcher</scope><name>~Dispatcher</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_1a10fe3a6434f0385a11ca390dc7037503" prot="public" virt="virtual"><scope>apollo::cyber::transport::ShmDispatcher</scope><name>~ShmDispatcher</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

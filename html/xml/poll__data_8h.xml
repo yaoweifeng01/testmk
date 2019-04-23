@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="poll__data_8h" kind="file">
+    <compoundname>poll_data.h</compoundname>
+    <includes local="no">stdint.h</includes>
+    <includes local="no">sys/epoll.h</includes>
+    <includes local="no">functional</includes>
+    <includedby refid="poll__handler_8h" local="yes">io/poll_handler.h</includedby>
+    <includedby refid="poller_8h" local="yes">io/poller.h</includedby>
+    <incdepgraph>
+      <node id="4284">
+        <label>functional</label>
+      </node>
+      <node id="4282">
+        <label>stdint.h</label>
+      </node>
+      <node id="4281">
+        <label>io/poll_data.h</label>
+        <link refid="poll_data.h"/>
+        <childnode refid="4282" relation="include">
+        </childnode>
+        <childnode refid="4283" relation="include">
+        </childnode>
+        <childnode refid="4284" relation="include">
+        </childnode>
+      </node>
+      <node id="4283">
+        <label>sys/epoll.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="4288">
+        <label>io/poller.h</label>
+        <link refid="poller_8h"/>
+      </node>
+      <node id="4285">
+        <label>io/poll_data.h</label>
+        <link refid="poll_data.h"/>
+        <childnode refid="4286" relation="include">
+        </childnode>
+        <childnode refid="4288" relation="include">
+        </childnode>
+      </node>
+      <node id="4287">
+        <label>io/session.h</label>
+        <link refid="session_8h"/>
+      </node>
+      <node id="4286">
+        <label>io/poll_handler.h</label>
+        <link refid="poll__handler_8h"/>
+        <childnode refid="4287" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structapollo_1_1cyber_1_1io_1_1PollResponse" prot="public">apollo::cyber::io::PollResponse</innerclass>
+    <innerclass refid="structapollo_1_1cyber_1_1io_1_1PollRequest" prot="public">apollo::cyber::io::PollRequest</innerclass>
+    <innerclass refid="structapollo_1_1cyber_1_1io_1_1PollCtrlParam" prot="public">apollo::cyber::io::PollCtrlParam</innerclass>
+    <innernamespace refid="namespaceapollo">apollo</innernamespace>
+    <innernamespace refid="namespaceapollo_1_1cyber">apollo::cyber</innernamespace>
+    <innernamespace refid="namespaceapollo_1_1cyber_1_1io">apollo::cyber::io</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2018<sp/>The<sp/>Apollo<sp/>Authors.<sp/>All<sp/>Rights<sp/>Reserved.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CYBER_IO_POLL_DATA_H_</highlight></codeline>
+<codeline lineno="18"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CYBER_IO_POLL_DATA_H_</highlight></codeline>
+<codeline lineno="19"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/epoll.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;functional&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">apollo<sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">cyber<sp/>{</highlight></codeline>
+<codeline lineno="26" refid="namespaceapollo_1_1cyber_1_1io" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">io<sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="structapollo_1_1cyber_1_1io_1_1PollResponse" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structapollo_1_1cyber_1_1io_1_1PollResponse" kindref="compound">PollResponse</ref><sp/>{</highlight></codeline>
+<codeline lineno="29" refid="structapollo_1_1cyber_1_1io_1_1PollResponse_1a9a5ee376a62d69c2dc9b352378db9a98" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="structapollo_1_1cyber_1_1io_1_1PollResponse_1a9a5ee376a62d69c2dc9b352378db9a98" kindref="member">PollResponse</ref>(uint32_t<sp/>e<sp/>=<sp/>0)<sp/>:<sp/><ref refid="structapollo_1_1cyber_1_1io_1_1PollResponse_1a9dd5ed052627f12b9b317d5f7e89a525" kindref="member">events</ref>(e)<sp/>{}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="structapollo_1_1cyber_1_1io_1_1PollResponse_1a9dd5ed052627f12b9b317d5f7e89a525" refkind="member"><highlight class="normal"><sp/><sp/>uint32_t<sp/><ref refid="structapollo_1_1cyber_1_1io_1_1PollResponse_1a9dd5ed052627f12b9b317d5f7e89a525" kindref="member">events</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="structapollo_1_1cyber_1_1io_1_1PollRequest" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structapollo_1_1cyber_1_1io_1_1PollRequest" kindref="compound">PollRequest</ref><sp/>{</highlight></codeline>
+<codeline lineno="35" refid="structapollo_1_1cyber_1_1io_1_1PollRequest_1ab3f2f7ba232afefcce9a9a8f398e2bf6" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structapollo_1_1cyber_1_1io_1_1PollRequest_1ab3f2f7ba232afefcce9a9a8f398e2bf6" kindref="member">fd</ref><sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="36" refid="structapollo_1_1cyber_1_1io_1_1PollRequest_1a9f3f5c8b8e95c755079f430f254d14c8" refkind="member"><highlight class="normal"><sp/><sp/>uint32_t<sp/><ref refid="structapollo_1_1cyber_1_1io_1_1PollRequest_1a9f3f5c8b8e95c755079f430f254d14c8" kindref="member">events</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="37" refid="structapollo_1_1cyber_1_1io_1_1PollRequest_1ace3df86548fb7b6a99583c5abc1cccaa" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structapollo_1_1cyber_1_1io_1_1PollRequest_1ace3df86548fb7b6a99583c5abc1cccaa" kindref="member">timeout_ms</ref><sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="38" refid="structapollo_1_1cyber_1_1io_1_1PollRequest_1a596e0d2d7684c2cc417374f4feabacdb" refkind="member"><highlight class="normal"><sp/><sp/>std::function&lt;void(const<sp/>PollResponse&amp;)&gt;<sp/><ref refid="structapollo_1_1cyber_1_1io_1_1PollRequest_1a596e0d2d7684c2cc417374f4feabacdb" kindref="member">callback</ref><sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="structapollo_1_1cyber_1_1io_1_1PollCtrlParam" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structapollo_1_1cyber_1_1io_1_1PollCtrlParam" kindref="compound">PollCtrlParam</ref><sp/>{</highlight></codeline>
+<codeline lineno="42" refid="structapollo_1_1cyber_1_1io_1_1PollCtrlParam_1acf526d6e0c32d68dca0b34e22f41afd2" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structapollo_1_1cyber_1_1io_1_1PollCtrlParam_1acf526d6e0c32d68dca0b34e22f41afd2" kindref="member">operation</ref>;</highlight></codeline>
+<codeline lineno="43" refid="structapollo_1_1cyber_1_1io_1_1PollCtrlParam_1a4cd35fd6797c3681f1267dc1f1dfd603" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structapollo_1_1cyber_1_1io_1_1PollCtrlParam_1a4cd35fd6797c3681f1267dc1f1dfd603" kindref="member">fd</ref>;</highlight></codeline>
+<codeline lineno="44" refid="structapollo_1_1cyber_1_1io_1_1PollCtrlParam_1ae485376eff2473d06a683c13681ec42d" refkind="member"><highlight class="normal"><sp/><sp/>epoll_event<sp/><ref refid="structapollo_1_1cyber_1_1io_1_1PollCtrlParam_1ae485376eff2473d06a683c13681ec42d" kindref="member">event</ref>;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>io</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>cyber</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>apollo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>CYBER_IO_POLL_DATA_H_</highlight></codeline>
+    </programlisting>
+    <location file="/home/work/apollo-fork/apollo/cyber/io/poll_data.h"/>
+  </compounddef>
+</doxygen>

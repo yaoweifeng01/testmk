@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classapollo_1_1cyber_1_1base_1_1BlockWaitStrategy" kind="class" prot="public">
+    <compoundname>apollo::cyber::base::BlockWaitStrategy</compoundname>
+    <basecompoundref refid="classapollo_1_1cyber_1_1base_1_1WaitStrategy" prot="public" virt="non-virtual">apollo::cyber::base::WaitStrategy</basecompoundref>
+    <includes refid="wait__strategy_8h" local="no">wait_strategy.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1base_1_1BlockWaitStrategy_1adca22a19b9f79e8a952001bba1286fb0" prot="private" static="no" mutable="no">
+        <type>std::mutex</type>
+        <definition>std::mutex apollo::cyber::base::BlockWaitStrategy::mutex_</definition>
+        <argsstring></argsstring>
+        <name>mutex_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/wait_strategy.h" line="52" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/wait_strategy.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1base_1_1BlockWaitStrategy_1a9bc9e755055037e813f8a180ef4f609d" prot="private" static="no" mutable="no">
+        <type>std::condition_variable</type>
+        <definition>std::condition_variable apollo::cyber::base::BlockWaitStrategy::cv_</definition>
+        <argsstring></argsstring>
+        <name>cv_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/wait_strategy.h" line="53" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/wait_strategy.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1base_1_1BlockWaitStrategy_1a3a84cd077ae77dfc1abfe13401fa4cea" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::base::BlockWaitStrategy::BlockWaitStrategy</definition>
+        <argsstring>()</argsstring>
+        <name>BlockWaitStrategy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/wait_strategy.h" line="40" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/wait_strategy.h" bodystart="40" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1base_1_1BlockWaitStrategy_1ae8f8c929ddcc0973e18337a12535eb76" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::base::BlockWaitStrategy::NotifyOne</definition>
+        <argsstring>() override</argsstring>
+        <name>NotifyOne</name>
+        <reimplements refid="classapollo_1_1cyber_1_1base_1_1WaitStrategy_1aec07f0b6c8f19538c324c7b1e3296dc3">NotifyOne</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/wait_strategy.h" line="41" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/wait_strategy.h" bodystart="41" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1base_1_1BlockWaitStrategy_1a9be79b6f4cb8f78fb1715e2f221ebdff" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::base::BlockWaitStrategy::EmptyWait</definition>
+        <argsstring>() override</argsstring>
+        <name>EmptyWait</name>
+        <reimplements refid="classapollo_1_1cyber_1_1base_1_1WaitStrategy_1a5801f343cd1567ec6ee586b9845446e3">EmptyWait</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/wait_strategy.h" line="43" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/wait_strategy.h" bodystart="43" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1base_1_1BlockWaitStrategy_1a7f883544b4a59a5b250e7f9bddd7c2b7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::base::BlockWaitStrategy::BreakAllWait</definition>
+        <argsstring>()</argsstring>
+        <name>BreakAllWait</name>
+        <reimplements refid="classapollo_1_1cyber_1_1base_1_1WaitStrategy_1a521db3e728b67be1b89e16207dce014f">BreakAllWait</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/wait_strategy.h" line="49" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/wait_strategy.h" bodystart="49" bodyend="49"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="62">
+        <label>apollo::cyber::base::WaitStrategy</label>
+        <link refid="classapollo_1_1cyber_1_1base_1_1WaitStrategy"/>
+      </node>
+      <node id="61">
+        <label>apollo::cyber::base::BlockWaitStrategy</label>
+        <link refid="classapollo_1_1cyber_1_1base_1_1BlockWaitStrategy"/>
+        <childnode refid="62" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="64">
+        <label>apollo::cyber::base::WaitStrategy</label>
+        <link refid="classapollo_1_1cyber_1_1base_1_1WaitStrategy"/>
+      </node>
+      <node id="63">
+        <label>apollo::cyber::base::BlockWaitStrategy</label>
+        <link refid="classapollo_1_1cyber_1_1base_1_1BlockWaitStrategy"/>
+        <childnode refid="64" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/work/apollo-fork/apollo/cyber/base/wait_strategy.h" line="38" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/wait_strategy.h" bodystart="38" bodyend="54"/>
+    <listofallmembers>
+      <member refid="classapollo_1_1cyber_1_1base_1_1BlockWaitStrategy_1a3a84cd077ae77dfc1abfe13401fa4cea" prot="public" virt="non-virtual"><scope>apollo::cyber::base::BlockWaitStrategy</scope><name>BlockWaitStrategy</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1BlockWaitStrategy_1a7f883544b4a59a5b250e7f9bddd7c2b7" prot="public" virt="virtual"><scope>apollo::cyber::base::BlockWaitStrategy</scope><name>BreakAllWait</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1BlockWaitStrategy_1a9bc9e755055037e813f8a180ef4f609d" prot="private" virt="non-virtual"><scope>apollo::cyber::base::BlockWaitStrategy</scope><name>cv_</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1BlockWaitStrategy_1a9be79b6f4cb8f78fb1715e2f221ebdff" prot="public" virt="virtual"><scope>apollo::cyber::base::BlockWaitStrategy</scope><name>EmptyWait</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1BlockWaitStrategy_1adca22a19b9f79e8a952001bba1286fb0" prot="private" virt="non-virtual"><scope>apollo::cyber::base::BlockWaitStrategy</scope><name>mutex_</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1BlockWaitStrategy_1ae8f8c929ddcc0973e18337a12535eb76" prot="public" virt="virtual"><scope>apollo::cyber::base::BlockWaitStrategy</scope><name>NotifyOne</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1WaitStrategy_1ad6d1289ee9a7a5a6412d93c55f974f85" prot="public" virt="virtual"><scope>apollo::cyber::base::BlockWaitStrategy</scope><name>~WaitStrategy</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

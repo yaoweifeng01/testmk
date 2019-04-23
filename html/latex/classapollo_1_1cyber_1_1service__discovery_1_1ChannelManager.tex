@@ -1,0 +1,334 @@
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager}{\section{apollo\-:\-:cyber\-:\-:service\-\_\-discovery\-:\-:Channel\-Manager Class Reference}
+\label{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager}\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}}
+}
+
+
+{\ttfamily \#include $<$channel\-\_\-manager.\-h$>$}
+
+Inheritance diagram for apollo\-:\-:cyber\-:\-:service\-\_\-discovery\-:\-:Channel\-Manager\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_a3690fc3677abdb994d1de9b996f66cf6}{Role\-Attr\-Vec} = std\-::vector$<$ proto\-::\-Role\-Attributes $>$
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_ab34e0a39795d6002f20de1388e8e099b}{Writer\-Warehouse} = \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse}{Multi\-Value\-Warehouse}
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_adf7b96601a2dec7f06fb190d1a7b537d}{Reader\-Warehouse} = \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse}{Multi\-Value\-Warehouse}
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_a5ce07d9955d5944b039583db211c2d25}{Exempted\-Message\-Types} = std\-::unordered\-\_\-set$<$ std\-::string $>$
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_af4e4908c4172f7ff1703fea322611137}{Channel\-Manager} ()
+\item 
+virtual \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_a32fb19451ed63f5bb92b4b2beb4eddcf}{$\sim$\-Channel\-Manager} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_aebc9f5fa682a8eba522a93ccebed3811}{Get\-Channel\-Names} (std\-::vector$<$ std\-::string $>$ $\ast$channels)
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_a2259a9d33b8391ffb2ec307f6c442bc8}{Get\-Proto\-Desc} (const std\-::string \&channel\-\_\-name, std\-::string $\ast$proto\-\_\-desc)
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_a06a205015433a25d5f2acf20eee4c445}{Get\-Msg\-Type} (const std\-::string \&channel\-\_\-name, std\-::string $\ast$msg\-\_\-type)
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_a2d481f65124c1cdb70b66b81055f667f}{Has\-Writer} (const std\-::string \&channel\-\_\-name)
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_ada1e428556994da13575932c6feee98b}{Get\-Writers} (\hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_a3690fc3677abdb994d1de9b996f66cf6}{Role\-Attr\-Vec} $\ast$writers)
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_a928e0afa8478cb244f3dd5d872694f38}{Get\-Writers\-Of\-Node} (const std\-::string \&node\-\_\-name, \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_a3690fc3677abdb994d1de9b996f66cf6}{Role\-Attr\-Vec} $\ast$writers)
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_a35bfdd2076a4789c23e9add4c868b5e7}{Get\-Writers\-Of\-Channel} (const std\-::string \&channel\-\_\-name, \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_a3690fc3677abdb994d1de9b996f66cf6}{Role\-Attr\-Vec} $\ast$writers)
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_aa7e63842773a5f7d2b92bd856dc553dd}{Has\-Reader} (const std\-::string \&channel\-\_\-name)
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_ae33f40f1a1e771b70e114b661bdeccd7}{Get\-Readers} (\hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_a3690fc3677abdb994d1de9b996f66cf6}{Role\-Attr\-Vec} $\ast$readers)
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_a24c51f2ba8f6cf15fb7c3f44baf496d1}{Get\-Readers\-Of\-Node} (const std\-::string \&node\-\_\-name, \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_a3690fc3677abdb994d1de9b996f66cf6}{Role\-Attr\-Vec} $\ast$readers)
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_ad20c8af51bdacf9f1a6ecf7ce7bb371d}{Get\-Readers\-Of\-Channel} (const std\-::string \&channel\-\_\-name, \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_a3690fc3677abdb994d1de9b996f66cf6}{Role\-Attr\-Vec} $\ast$readers)
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_a4d77d8400933c94b6338c9fea4b91d8b}{Get\-Upstream\-Of\-Node} (const std\-::string \&node\-\_\-name, \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_a3690fc3677abdb994d1de9b996f66cf6}{Role\-Attr\-Vec} $\ast$upstream\-\_\-nodes)
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_aff6f6c68372acdf0768804bba4a45898}{Get\-Downstream\-Of\-Node} (const std\-::string \&node\-\_\-name, \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_a3690fc3677abdb994d1de9b996f66cf6}{Role\-Attr\-Vec} $\ast$downstream\-\_\-nodes)
+\item 
+\hyperlink{namespaceapollo_1_1cyber_1_1service__discovery_a463f9fa98e31287620adc568e1299c79}{Flow\-Direction} \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_aefde1d2e4d5134dbf726fe1ad362246a}{Get\-Flow\-Direction} (const std\-::string \&lhs\-\_\-node\-\_\-name, const std\-::string \&rhs\-\_\-node\-\_\-name)
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_ad7a6a93c25b30eca132bd945f1771a59}{Is\-Message\-Type\-Matching} (const std\-::string \&lhs, const std\-::string \&rhs)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_a470b79e3a7780121ede3552956722cf7}{Check} (const Role\-Attributes \&attr) override
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_ae4ed92f11a64d7ef4bb30680dad64493}{Dispose} (const Change\-Msg \&msg) override
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_a4e39fc638d77bbe6d397299fa30ff6d6}{On\-Topo\-Module\-Leave} (const std\-::string \&host\-\_\-name, int process\-\_\-id) override
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_aea63c8f1e8d638ef930c3c7ddd3b62ab}{Dispose\-Join} (const Change\-Msg \&msg)
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_aa39a85495ea9eb83d6946405576bd1cb}{Dispose\-Leave} (const Change\-Msg \&msg)
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_af48675ed66194fca37daad411c19d589}{Scan\-Message\-Type} (const Change\-Msg \&msg)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_a5ce07d9955d5944b039583db211c2d25}{Exempted\-Message\-Types} \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_a673d2f5f6577c37ca44263f7a7295324}{exempted\-\_\-msg\-\_\-types\-\_\-}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1Graph}{Graph} \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_aee4753f128f1a79a983e065c8775294a}{node\-\_\-graph\-\_\-}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_ab34e0a39795d6002f20de1388e8e099b}{Writer\-Warehouse} \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_a964857ce80f55467c86f0abd0dbf3419}{node\-\_\-writers\-\_\-}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_adf7b96601a2dec7f06fb190d1a7b537d}{Reader\-Warehouse} \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_aa021bd1e52a883766c5691ed2695bfb4}{node\-\_\-readers\-\_\-}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_ab34e0a39795d6002f20de1388e8e099b}{Writer\-Warehouse} \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_ac88e60402cb5f9799803f993a9c85138}{channel\-\_\-writers\-\_\-}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_adf7b96601a2dec7f06fb190d1a7b537d}{Reader\-Warehouse} \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_a14272c348659973742aae0a343ba1705}{channel\-\_\-readers\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_ae83aaddaeb682129a07c148e01291cdd}{Topology\-Manager}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_a5ce07d9955d5944b039583db211c2d25}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}!Exempted\-Message\-Types@{Exempted\-Message\-Types}}
+\index{Exempted\-Message\-Types@{Exempted\-Message\-Types}!apollo::cyber::service_discovery::ChannelManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}}
+\subsubsection[{Exempted\-Message\-Types}]{\setlength{\rightskip}{0pt plus 5cm}using {\bf apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager\-::\-Exempted\-Message\-Types} =  std\-::unordered\-\_\-set$<$std\-::string$>$}}\label{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_a5ce07d9955d5944b039583db211c2d25}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_adf7b96601a2dec7f06fb190d1a7b537d}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}!Reader\-Warehouse@{Reader\-Warehouse}}
+\index{Reader\-Warehouse@{Reader\-Warehouse}!apollo::cyber::service_discovery::ChannelManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}}
+\subsubsection[{Reader\-Warehouse}]{\setlength{\rightskip}{0pt plus 5cm}using {\bf apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager\-::\-Reader\-Warehouse} =  {\bf Multi\-Value\-Warehouse}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_adf7b96601a2dec7f06fb190d1a7b537d}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_a3690fc3677abdb994d1de9b996f66cf6}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}!Role\-Attr\-Vec@{Role\-Attr\-Vec}}
+\index{Role\-Attr\-Vec@{Role\-Attr\-Vec}!apollo::cyber::service_discovery::ChannelManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}}
+\subsubsection[{Role\-Attr\-Vec}]{\setlength{\rightskip}{0pt plus 5cm}using {\bf apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager\-::\-Role\-Attr\-Vec} =  std\-::vector$<$proto\-::\-Role\-Attributes$>$}}\label{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_a3690fc3677abdb994d1de9b996f66cf6}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_ab34e0a39795d6002f20de1388e8e099b}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}!Writer\-Warehouse@{Writer\-Warehouse}}
+\index{Writer\-Warehouse@{Writer\-Warehouse}!apollo::cyber::service_discovery::ChannelManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}}
+\subsubsection[{Writer\-Warehouse}]{\setlength{\rightskip}{0pt plus 5cm}using {\bf apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager\-::\-Writer\-Warehouse} =  {\bf Multi\-Value\-Warehouse}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_ab34e0a39795d6002f20de1388e8e099b}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_af4e4908c4172f7ff1703fea322611137}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}!Channel\-Manager@{Channel\-Manager}}
+\index{Channel\-Manager@{Channel\-Manager}!apollo::cyber::service_discovery::ChannelManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}}
+\subsubsection[{Channel\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager\-::\-Channel\-Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_af4e4908c4172f7ff1703fea322611137}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_a32fb19451ed63f5bb92b4b2beb4eddcf}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}!$\sim$\-Channel\-Manager@{$\sim$\-Channel\-Manager}}
+\index{$\sim$\-Channel\-Manager@{$\sim$\-Channel\-Manager}!apollo::cyber::service_discovery::ChannelManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}}
+\subsubsection[{$\sim$\-Channel\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}virtual apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager\-::$\sim$\-Channel\-Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_a32fb19451ed63f5bb92b4b2beb4eddcf}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_a470b79e3a7780121ede3552956722cf7}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}!Check@{Check}}
+\index{Check@{Check}!apollo::cyber::service_discovery::ChannelManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}}
+\subsubsection[{Check}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager\-::\-Check (
+\begin{DoxyParamCaption}
+\item[{const Role\-Attributes \&}]{attr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_a470b79e3a7780121ede3552956722cf7}
+
+
+Implements \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1Manager_acfa0224581a6722daf4861f34e4c11ef}{apollo\-::cyber\-::service\-\_\-discovery\-::\-Manager}.
+
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_ae4ed92f11a64d7ef4bb30680dad64493}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!apollo::cyber::service_discovery::ChannelManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}}
+\subsubsection[{Dispose}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager\-::\-Dispose (
+\begin{DoxyParamCaption}
+\item[{const Change\-Msg \&}]{msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_ae4ed92f11a64d7ef4bb30680dad64493}
+
+
+Implements \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1Manager_a6e36e4095291597364ce4b37ee1c897b}{apollo\-::cyber\-::service\-\_\-discovery\-::\-Manager}.
+
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_aea63c8f1e8d638ef930c3c7ddd3b62ab}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}!Dispose\-Join@{Dispose\-Join}}
+\index{Dispose\-Join@{Dispose\-Join}!apollo::cyber::service_discovery::ChannelManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}}
+\subsubsection[{Dispose\-Join}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager\-::\-Dispose\-Join (
+\begin{DoxyParamCaption}
+\item[{const Change\-Msg \&}]{msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_aea63c8f1e8d638ef930c3c7ddd3b62ab}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_aa39a85495ea9eb83d6946405576bd1cb}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}!Dispose\-Leave@{Dispose\-Leave}}
+\index{Dispose\-Leave@{Dispose\-Leave}!apollo::cyber::service_discovery::ChannelManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}}
+\subsubsection[{Dispose\-Leave}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager\-::\-Dispose\-Leave (
+\begin{DoxyParamCaption}
+\item[{const Change\-Msg \&}]{msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_aa39a85495ea9eb83d6946405576bd1cb}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_aebc9f5fa682a8eba522a93ccebed3811}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}!Get\-Channel\-Names@{Get\-Channel\-Names}}
+\index{Get\-Channel\-Names@{Get\-Channel\-Names}!apollo::cyber::service_discovery::ChannelManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}}
+\subsubsection[{Get\-Channel\-Names}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager\-::\-Get\-Channel\-Names (
+\begin{DoxyParamCaption}
+\item[{std\-::vector$<$ std\-::string $>$ $\ast$}]{channels}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_aebc9f5fa682a8eba522a93ccebed3811}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_aff6f6c68372acdf0768804bba4a45898}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}!Get\-Downstream\-Of\-Node@{Get\-Downstream\-Of\-Node}}
+\index{Get\-Downstream\-Of\-Node@{Get\-Downstream\-Of\-Node}!apollo::cyber::service_discovery::ChannelManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}}
+\subsubsection[{Get\-Downstream\-Of\-Node}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager\-::\-Get\-Downstream\-Of\-Node (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{node\-\_\-name, }
+\item[{{\bf Role\-Attr\-Vec} $\ast$}]{downstream\-\_\-nodes}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_aff6f6c68372acdf0768804bba4a45898}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_aefde1d2e4d5134dbf726fe1ad362246a}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}!Get\-Flow\-Direction@{Get\-Flow\-Direction}}
+\index{Get\-Flow\-Direction@{Get\-Flow\-Direction}!apollo::cyber::service_discovery::ChannelManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}}
+\subsubsection[{Get\-Flow\-Direction}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Flow\-Direction} apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager\-::\-Get\-Flow\-Direction (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{lhs\-\_\-node\-\_\-name, }
+\item[{const std\-::string \&}]{rhs\-\_\-node\-\_\-name}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_aefde1d2e4d5134dbf726fe1ad362246a}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_a06a205015433a25d5f2acf20eee4c445}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}!Get\-Msg\-Type@{Get\-Msg\-Type}}
+\index{Get\-Msg\-Type@{Get\-Msg\-Type}!apollo::cyber::service_discovery::ChannelManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}}
+\subsubsection[{Get\-Msg\-Type}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager\-::\-Get\-Msg\-Type (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{channel\-\_\-name, }
+\item[{std\-::string $\ast$}]{msg\-\_\-type}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_a06a205015433a25d5f2acf20eee4c445}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_a2259a9d33b8391ffb2ec307f6c442bc8}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}!Get\-Proto\-Desc@{Get\-Proto\-Desc}}
+\index{Get\-Proto\-Desc@{Get\-Proto\-Desc}!apollo::cyber::service_discovery::ChannelManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}}
+\subsubsection[{Get\-Proto\-Desc}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager\-::\-Get\-Proto\-Desc (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{channel\-\_\-name, }
+\item[{std\-::string $\ast$}]{proto\-\_\-desc}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_a2259a9d33b8391ffb2ec307f6c442bc8}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_ae33f40f1a1e771b70e114b661bdeccd7}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}!Get\-Readers@{Get\-Readers}}
+\index{Get\-Readers@{Get\-Readers}!apollo::cyber::service_discovery::ChannelManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}}
+\subsubsection[{Get\-Readers}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager\-::\-Get\-Readers (
+\begin{DoxyParamCaption}
+\item[{{\bf Role\-Attr\-Vec} $\ast$}]{readers}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_ae33f40f1a1e771b70e114b661bdeccd7}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_ad20c8af51bdacf9f1a6ecf7ce7bb371d}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}!Get\-Readers\-Of\-Channel@{Get\-Readers\-Of\-Channel}}
+\index{Get\-Readers\-Of\-Channel@{Get\-Readers\-Of\-Channel}!apollo::cyber::service_discovery::ChannelManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}}
+\subsubsection[{Get\-Readers\-Of\-Channel}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager\-::\-Get\-Readers\-Of\-Channel (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{channel\-\_\-name, }
+\item[{{\bf Role\-Attr\-Vec} $\ast$}]{readers}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_ad20c8af51bdacf9f1a6ecf7ce7bb371d}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_a24c51f2ba8f6cf15fb7c3f44baf496d1}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}!Get\-Readers\-Of\-Node@{Get\-Readers\-Of\-Node}}
+\index{Get\-Readers\-Of\-Node@{Get\-Readers\-Of\-Node}!apollo::cyber::service_discovery::ChannelManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}}
+\subsubsection[{Get\-Readers\-Of\-Node}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager\-::\-Get\-Readers\-Of\-Node (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{node\-\_\-name, }
+\item[{{\bf Role\-Attr\-Vec} $\ast$}]{readers}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_a24c51f2ba8f6cf15fb7c3f44baf496d1}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_a4d77d8400933c94b6338c9fea4b91d8b}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}!Get\-Upstream\-Of\-Node@{Get\-Upstream\-Of\-Node}}
+\index{Get\-Upstream\-Of\-Node@{Get\-Upstream\-Of\-Node}!apollo::cyber::service_discovery::ChannelManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}}
+\subsubsection[{Get\-Upstream\-Of\-Node}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager\-::\-Get\-Upstream\-Of\-Node (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{node\-\_\-name, }
+\item[{{\bf Role\-Attr\-Vec} $\ast$}]{upstream\-\_\-nodes}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_a4d77d8400933c94b6338c9fea4b91d8b}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_ada1e428556994da13575932c6feee98b}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}!Get\-Writers@{Get\-Writers}}
+\index{Get\-Writers@{Get\-Writers}!apollo::cyber::service_discovery::ChannelManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}}
+\subsubsection[{Get\-Writers}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager\-::\-Get\-Writers (
+\begin{DoxyParamCaption}
+\item[{{\bf Role\-Attr\-Vec} $\ast$}]{writers}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_ada1e428556994da13575932c6feee98b}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_a35bfdd2076a4789c23e9add4c868b5e7}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}!Get\-Writers\-Of\-Channel@{Get\-Writers\-Of\-Channel}}
+\index{Get\-Writers\-Of\-Channel@{Get\-Writers\-Of\-Channel}!apollo::cyber::service_discovery::ChannelManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}}
+\subsubsection[{Get\-Writers\-Of\-Channel}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager\-::\-Get\-Writers\-Of\-Channel (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{channel\-\_\-name, }
+\item[{{\bf Role\-Attr\-Vec} $\ast$}]{writers}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_a35bfdd2076a4789c23e9add4c868b5e7}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_a928e0afa8478cb244f3dd5d872694f38}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}!Get\-Writers\-Of\-Node@{Get\-Writers\-Of\-Node}}
+\index{Get\-Writers\-Of\-Node@{Get\-Writers\-Of\-Node}!apollo::cyber::service_discovery::ChannelManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}}
+\subsubsection[{Get\-Writers\-Of\-Node}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager\-::\-Get\-Writers\-Of\-Node (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{node\-\_\-name, }
+\item[{{\bf Role\-Attr\-Vec} $\ast$}]{writers}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_a928e0afa8478cb244f3dd5d872694f38}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_aa7e63842773a5f7d2b92bd856dc553dd}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}!Has\-Reader@{Has\-Reader}}
+\index{Has\-Reader@{Has\-Reader}!apollo::cyber::service_discovery::ChannelManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}}
+\subsubsection[{Has\-Reader}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager\-::\-Has\-Reader (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{channel\-\_\-name}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_aa7e63842773a5f7d2b92bd856dc553dd}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_a2d481f65124c1cdb70b66b81055f667f}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}!Has\-Writer@{Has\-Writer}}
+\index{Has\-Writer@{Has\-Writer}!apollo::cyber::service_discovery::ChannelManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}}
+\subsubsection[{Has\-Writer}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager\-::\-Has\-Writer (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{channel\-\_\-name}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_a2d481f65124c1cdb70b66b81055f667f}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_ad7a6a93c25b30eca132bd945f1771a59}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}!Is\-Message\-Type\-Matching@{Is\-Message\-Type\-Matching}}
+\index{Is\-Message\-Type\-Matching@{Is\-Message\-Type\-Matching}!apollo::cyber::service_discovery::ChannelManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}}
+\subsubsection[{Is\-Message\-Type\-Matching}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager\-::\-Is\-Message\-Type\-Matching (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{lhs, }
+\item[{const std\-::string \&}]{rhs}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_ad7a6a93c25b30eca132bd945f1771a59}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_a4e39fc638d77bbe6d397299fa30ff6d6}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}!On\-Topo\-Module\-Leave@{On\-Topo\-Module\-Leave}}
+\index{On\-Topo\-Module\-Leave@{On\-Topo\-Module\-Leave}!apollo::cyber::service_discovery::ChannelManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}}
+\subsubsection[{On\-Topo\-Module\-Leave}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager\-::\-On\-Topo\-Module\-Leave (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{host\-\_\-name, }
+\item[{int}]{process\-\_\-id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_a4e39fc638d77bbe6d397299fa30ff6d6}
+
+
+Implements \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1Manager_a95a679e0fc7904e6f1a8b2fdd139cc03}{apollo\-::cyber\-::service\-\_\-discovery\-::\-Manager}.
+
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_af48675ed66194fca37daad411c19d589}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}!Scan\-Message\-Type@{Scan\-Message\-Type}}
+\index{Scan\-Message\-Type@{Scan\-Message\-Type}!apollo::cyber::service_discovery::ChannelManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}}
+\subsubsection[{Scan\-Message\-Type}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager\-::\-Scan\-Message\-Type (
+\begin{DoxyParamCaption}
+\item[{const Change\-Msg \&}]{msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_af48675ed66194fca37daad411c19d589}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_ae83aaddaeb682129a07c148e01291cdd}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}!Topology\-Manager@{Topology\-Manager}}
+\index{Topology\-Manager@{Topology\-Manager}!apollo::cyber::service_discovery::ChannelManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}}
+\subsubsection[{Topology\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Topology\-Manager}\hspace{0.3cm}{\ttfamily [friend]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_ae83aaddaeb682129a07c148e01291cdd}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_a14272c348659973742aae0a343ba1705}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}!channel\-\_\-readers\-\_\-@{channel\-\_\-readers\-\_\-}}
+\index{channel\-\_\-readers\-\_\-@{channel\-\_\-readers\-\_\-}!apollo::cyber::service_discovery::ChannelManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}}
+\subsubsection[{channel\-\_\-readers\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Reader\-Warehouse} apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager\-::channel\-\_\-readers\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_a14272c348659973742aae0a343ba1705}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_ac88e60402cb5f9799803f993a9c85138}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}!channel\-\_\-writers\-\_\-@{channel\-\_\-writers\-\_\-}}
+\index{channel\-\_\-writers\-\_\-@{channel\-\_\-writers\-\_\-}!apollo::cyber::service_discovery::ChannelManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}}
+\subsubsection[{channel\-\_\-writers\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Writer\-Warehouse} apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager\-::channel\-\_\-writers\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_ac88e60402cb5f9799803f993a9c85138}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_a673d2f5f6577c37ca44263f7a7295324}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}!exempted\-\_\-msg\-\_\-types\-\_\-@{exempted\-\_\-msg\-\_\-types\-\_\-}}
+\index{exempted\-\_\-msg\-\_\-types\-\_\-@{exempted\-\_\-msg\-\_\-types\-\_\-}!apollo::cyber::service_discovery::ChannelManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}}
+\subsubsection[{exempted\-\_\-msg\-\_\-types\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Exempted\-Message\-Types} apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager\-::exempted\-\_\-msg\-\_\-types\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_a673d2f5f6577c37ca44263f7a7295324}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_aee4753f128f1a79a983e065c8775294a}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}!node\-\_\-graph\-\_\-@{node\-\_\-graph\-\_\-}}
+\index{node\-\_\-graph\-\_\-@{node\-\_\-graph\-\_\-}!apollo::cyber::service_discovery::ChannelManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}}
+\subsubsection[{node\-\_\-graph\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Graph} apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager\-::node\-\_\-graph\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_aee4753f128f1a79a983e065c8775294a}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_aa021bd1e52a883766c5691ed2695bfb4}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}!node\-\_\-readers\-\_\-@{node\-\_\-readers\-\_\-}}
+\index{node\-\_\-readers\-\_\-@{node\-\_\-readers\-\_\-}!apollo::cyber::service_discovery::ChannelManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}}
+\subsubsection[{node\-\_\-readers\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Reader\-Warehouse} apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager\-::node\-\_\-readers\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_aa021bd1e52a883766c5691ed2695bfb4}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_a964857ce80f55467c86f0abd0dbf3419}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}!node\-\_\-writers\-\_\-@{node\-\_\-writers\-\_\-}}
+\index{node\-\_\-writers\-\_\-@{node\-\_\-writers\-\_\-}!apollo::cyber::service_discovery::ChannelManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager}}
+\subsubsection[{node\-\_\-writers\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Writer\-Warehouse} apollo\-::cyber\-::service\-\_\-discovery\-::\-Channel\-Manager\-::node\-\_\-writers\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1ChannelManager_a964857ce80f55467c86f0abd0dbf3419}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+service\-\_\-discovery/specific\-\_\-manager/\hyperlink{channel__manager_8h}{channel\-\_\-manager.\-h}\end{DoxyCompactItemize}

@@ -1,0 +1,123 @@
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1Participant}{\section{apollo\-:\-:cyber\-:\-:transport\-:\-:Participant Class Reference}
+\label{classapollo_1_1cyber_1_1transport_1_1Participant}\index{apollo\-::cyber\-::transport\-::\-Participant@{apollo\-::cyber\-::transport\-::\-Participant}}
+}
+
+
+{\ttfamily \#include $<$participant.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1transport_1_1Participant_a65fc1c33077f19a4255a9d3d77a03753}{Participant} (const std\-::string \&name, int send\-\_\-port, eprosima\-::fastrtps\-::\-Participant\-Listener $\ast$listener=nullptr)
+\item 
+virtual \hyperlink{classapollo_1_1cyber_1_1transport_1_1Participant_a5d75479a92e17008cb14d7e4db0addb0}{$\sim$\-Participant} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1transport_1_1Participant_ae794dca25344f7d22fc3b2ab2f12242e}{Shutdown} ()
+\item 
+eprosima\-::fastrtps\-::\-Participant $\ast$ \hyperlink{classapollo_1_1cyber_1_1transport_1_1Participant_a380d8eaf9b9f5d94d616fc89fc8bc81e}{fastrtps\-\_\-participant} ()
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1transport_1_1Participant_ac38b333e96db55e8aaf8aab51f2d55c8}{is\-\_\-shutdown} () const 
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1transport_1_1Participant_a49b7ddbf6944ad9ba187bb14f79d6da2}{Create\-Fast\-Rtps\-Participant} (const std\-::string \&name, int send\-\_\-port, eprosima\-::fastrtps\-::\-Participant\-Listener $\ast$listener)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\-::atomic$<$ bool $>$ \hyperlink{classapollo_1_1cyber_1_1transport_1_1Participant_a76d3249cc1e74aa3877c23900df847e8}{shutdown\-\_\-}
+\item 
+std\-::string \hyperlink{classapollo_1_1cyber_1_1transport_1_1Participant_a2625e1ae6564f0c993948f94408d30c5}{name\-\_\-}
+\item 
+int \hyperlink{classapollo_1_1cyber_1_1transport_1_1Participant_a618c13275cdd3a4efb23cb22d1dc8de1}{send\-\_\-port\-\_\-}
+\item 
+eprosima\-::fastrtps\-::\-Participant\-Listener $\ast$ \hyperlink{classapollo_1_1cyber_1_1transport_1_1Participant_a3d54979f405234c2951247230db1c179}{listener\-\_\-}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1transport_1_1UnderlayMessageType}{Underlay\-Message\-Type} \hyperlink{classapollo_1_1cyber_1_1transport_1_1Participant_ab125364c51c025db996d0ef245b4a0e0}{type\-\_\-}
+\item 
+eprosima\-::fastrtps\-::\-Participant $\ast$ \hyperlink{classapollo_1_1cyber_1_1transport_1_1Participant_a5c915b44cfcdcdb1f119d32dbd09fe09}{fastrtps\-\_\-participant\-\_\-}
+\item 
+std\-::mutex \hyperlink{classapollo_1_1cyber_1_1transport_1_1Participant_af1722d7b981059db589b92ac6f128665}{mutex\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1Participant_a65fc1c33077f19a4255a9d3d77a03753}{\index{apollo\-::cyber\-::transport\-::\-Participant@{apollo\-::cyber\-::transport\-::\-Participant}!Participant@{Participant}}
+\index{Participant@{Participant}!apollo::cyber::transport::Participant@{apollo\-::cyber\-::transport\-::\-Participant}}
+\subsubsection[{Participant}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::transport\-::\-Participant\-::\-Participant (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{name, }
+\item[{int}]{send\-\_\-port, }
+\item[{eprosima\-::fastrtps\-::\-Participant\-Listener $\ast$}]{listener = {\ttfamily nullptr}}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1transport_1_1Participant_a65fc1c33077f19a4255a9d3d77a03753}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1Participant_a5d75479a92e17008cb14d7e4db0addb0}{\index{apollo\-::cyber\-::transport\-::\-Participant@{apollo\-::cyber\-::transport\-::\-Participant}!$\sim$\-Participant@{$\sim$\-Participant}}
+\index{$\sim$\-Participant@{$\sim$\-Participant}!apollo::cyber::transport::Participant@{apollo\-::cyber\-::transport\-::\-Participant}}
+\subsubsection[{$\sim$\-Participant}]{\setlength{\rightskip}{0pt plus 5cm}virtual apollo\-::cyber\-::transport\-::\-Participant\-::$\sim$\-Participant (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1transport_1_1Participant_a5d75479a92e17008cb14d7e4db0addb0}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1Participant_a49b7ddbf6944ad9ba187bb14f79d6da2}{\index{apollo\-::cyber\-::transport\-::\-Participant@{apollo\-::cyber\-::transport\-::\-Participant}!Create\-Fast\-Rtps\-Participant@{Create\-Fast\-Rtps\-Participant}}
+\index{Create\-Fast\-Rtps\-Participant@{Create\-Fast\-Rtps\-Participant}!apollo::cyber::transport::Participant@{apollo\-::cyber\-::transport\-::\-Participant}}
+\subsubsection[{Create\-Fast\-Rtps\-Participant}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::transport\-::\-Participant\-::\-Create\-Fast\-Rtps\-Participant (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{name, }
+\item[{int}]{send\-\_\-port, }
+\item[{eprosima\-::fastrtps\-::\-Participant\-Listener $\ast$}]{listener}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1Participant_a49b7ddbf6944ad9ba187bb14f79d6da2}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1Participant_a380d8eaf9b9f5d94d616fc89fc8bc81e}{\index{apollo\-::cyber\-::transport\-::\-Participant@{apollo\-::cyber\-::transport\-::\-Participant}!fastrtps\-\_\-participant@{fastrtps\-\_\-participant}}
+\index{fastrtps\-\_\-participant@{fastrtps\-\_\-participant}!apollo::cyber::transport::Participant@{apollo\-::cyber\-::transport\-::\-Participant}}
+\subsubsection[{fastrtps\-\_\-participant}]{\setlength{\rightskip}{0pt plus 5cm}eprosima\-::fastrtps\-::\-Participant$\ast$ apollo\-::cyber\-::transport\-::\-Participant\-::fastrtps\-\_\-participant (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1transport_1_1Participant_a380d8eaf9b9f5d94d616fc89fc8bc81e}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1Participant_ac38b333e96db55e8aaf8aab51f2d55c8}{\index{apollo\-::cyber\-::transport\-::\-Participant@{apollo\-::cyber\-::transport\-::\-Participant}!is\-\_\-shutdown@{is\-\_\-shutdown}}
+\index{is\-\_\-shutdown@{is\-\_\-shutdown}!apollo::cyber::transport::Participant@{apollo\-::cyber\-::transport\-::\-Participant}}
+\subsubsection[{is\-\_\-shutdown}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::transport\-::\-Participant\-::is\-\_\-shutdown (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1transport_1_1Participant_ac38b333e96db55e8aaf8aab51f2d55c8}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1Participant_ae794dca25344f7d22fc3b2ab2f12242e}{\index{apollo\-::cyber\-::transport\-::\-Participant@{apollo\-::cyber\-::transport\-::\-Participant}!Shutdown@{Shutdown}}
+\index{Shutdown@{Shutdown}!apollo::cyber::transport::Participant@{apollo\-::cyber\-::transport\-::\-Participant}}
+\subsubsection[{Shutdown}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::transport\-::\-Participant\-::\-Shutdown (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1transport_1_1Participant_ae794dca25344f7d22fc3b2ab2f12242e}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1Participant_a5c915b44cfcdcdb1f119d32dbd09fe09}{\index{apollo\-::cyber\-::transport\-::\-Participant@{apollo\-::cyber\-::transport\-::\-Participant}!fastrtps\-\_\-participant\-\_\-@{fastrtps\-\_\-participant\-\_\-}}
+\index{fastrtps\-\_\-participant\-\_\-@{fastrtps\-\_\-participant\-\_\-}!apollo::cyber::transport::Participant@{apollo\-::cyber\-::transport\-::\-Participant}}
+\subsubsection[{fastrtps\-\_\-participant\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}eprosima\-::fastrtps\-::\-Participant$\ast$ apollo\-::cyber\-::transport\-::\-Participant\-::fastrtps\-\_\-participant\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1Participant_a5c915b44cfcdcdb1f119d32dbd09fe09}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1Participant_a3d54979f405234c2951247230db1c179}{\index{apollo\-::cyber\-::transport\-::\-Participant@{apollo\-::cyber\-::transport\-::\-Participant}!listener\-\_\-@{listener\-\_\-}}
+\index{listener\-\_\-@{listener\-\_\-}!apollo::cyber::transport::Participant@{apollo\-::cyber\-::transport\-::\-Participant}}
+\subsubsection[{listener\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}eprosima\-::fastrtps\-::\-Participant\-Listener$\ast$ apollo\-::cyber\-::transport\-::\-Participant\-::listener\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1Participant_a3d54979f405234c2951247230db1c179}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1Participant_af1722d7b981059db589b92ac6f128665}{\index{apollo\-::cyber\-::transport\-::\-Participant@{apollo\-::cyber\-::transport\-::\-Participant}!mutex\-\_\-@{mutex\-\_\-}}
+\index{mutex\-\_\-@{mutex\-\_\-}!apollo::cyber::transport::Participant@{apollo\-::cyber\-::transport\-::\-Participant}}
+\subsubsection[{mutex\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::mutex apollo\-::cyber\-::transport\-::\-Participant\-::mutex\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1Participant_af1722d7b981059db589b92ac6f128665}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1Participant_a2625e1ae6564f0c993948f94408d30c5}{\index{apollo\-::cyber\-::transport\-::\-Participant@{apollo\-::cyber\-::transport\-::\-Participant}!name\-\_\-@{name\-\_\-}}
+\index{name\-\_\-@{name\-\_\-}!apollo::cyber::transport::Participant@{apollo\-::cyber\-::transport\-::\-Participant}}
+\subsubsection[{name\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string apollo\-::cyber\-::transport\-::\-Participant\-::name\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1Participant_a2625e1ae6564f0c993948f94408d30c5}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1Participant_a618c13275cdd3a4efb23cb22d1dc8de1}{\index{apollo\-::cyber\-::transport\-::\-Participant@{apollo\-::cyber\-::transport\-::\-Participant}!send\-\_\-port\-\_\-@{send\-\_\-port\-\_\-}}
+\index{send\-\_\-port\-\_\-@{send\-\_\-port\-\_\-}!apollo::cyber::transport::Participant@{apollo\-::cyber\-::transport\-::\-Participant}}
+\subsubsection[{send\-\_\-port\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int apollo\-::cyber\-::transport\-::\-Participant\-::send\-\_\-port\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1Participant_a618c13275cdd3a4efb23cb22d1dc8de1}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1Participant_a76d3249cc1e74aa3877c23900df847e8}{\index{apollo\-::cyber\-::transport\-::\-Participant@{apollo\-::cyber\-::transport\-::\-Participant}!shutdown\-\_\-@{shutdown\-\_\-}}
+\index{shutdown\-\_\-@{shutdown\-\_\-}!apollo::cyber::transport::Participant@{apollo\-::cyber\-::transport\-::\-Participant}}
+\subsubsection[{shutdown\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::atomic$<$bool$>$ apollo\-::cyber\-::transport\-::\-Participant\-::shutdown\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1Participant_a76d3249cc1e74aa3877c23900df847e8}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1Participant_ab125364c51c025db996d0ef245b4a0e0}{\index{apollo\-::cyber\-::transport\-::\-Participant@{apollo\-::cyber\-::transport\-::\-Participant}!type\-\_\-@{type\-\_\-}}
+\index{type\-\_\-@{type\-\_\-}!apollo::cyber::transport::Participant@{apollo\-::cyber\-::transport\-::\-Participant}}
+\subsubsection[{type\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Underlay\-Message\-Type} apollo\-::cyber\-::transport\-::\-Participant\-::type\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1Participant_ab125364c51c025db996d0ef245b4a0e0}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+transport/rtps/\hyperlink{participant_8h}{participant.\-h}\end{DoxyCompactItemize}

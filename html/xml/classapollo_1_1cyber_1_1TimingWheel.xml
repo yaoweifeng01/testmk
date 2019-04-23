@@ -1,0 +1,397 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classapollo_1_1cyber_1_1TimingWheel" kind="class" prot="public">
+    <compoundname>apollo::cyber::TimingWheel</compoundname>
+    <includes refid="timing__wheel_8h" local="no">timing_wheel.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1TimingWheel_1a7272e1fa44240d3d33321eff5d441fe1" prot="private" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t apollo::cyber::TimingWheel::id_counter_</definition>
+        <argsstring></argsstring>
+        <name>id_counter_</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/timer/timing_wheel.h" line="68" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/timer/timing_wheel.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1TimingWheel_1aad6f68c7f2482a7332f2a25feacc57ea" prot="private" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t apollo::cyber::TimingWheel::tick_</definition>
+        <argsstring></argsstring>
+        <name>tick_</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/timer/timing_wheel.h" line="70" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/timer/timing_wheel.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1TimingWheel_1ad65efbe24adcdf04dd52aa9eec5a7762" prot="private" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t apollo::cyber::TimingWheel::start_time_</definition>
+        <argsstring></argsstring>
+        <name>start_time_</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/timer/timing_wheel.h" line="72" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/timer/timing_wheel.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1TimingWheel_1a9dbb67035af423a67b8b725d80ba2920" prot="private" static="no" mutable="no">
+        <type><ref refid="classapollo_1_1cyber_1_1TimingSlot" kindref="compound">TimingSlot</ref></type>
+        <definition>TimingSlot apollo::cyber::TimingWheel::time_slots_[TIMING_WHEEL_SIZE]</definition>
+        <argsstring>[TIMING_WHEEL_SIZE]</argsstring>
+        <name>time_slots_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/timer/timing_wheel.h" line="74" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/timer/timing_wheel.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1TimingWheel_1ae6970ce0519654e6b35376b0c305af22" prot="private" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t apollo::cyber::TimingWheel::mask_</definition>
+        <argsstring></argsstring>
+        <name>mask_</name>
+        <initializer>= <ref refid="namespaceapollo_1_1cyber_1a708c544333efd71eb0b9439a18a297bf" kindref="member">TIMING_WHEEL_SIZE</ref> - 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/timer/timing_wheel.h" line="76" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/timer/timing_wheel.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1TimingWheel_1adc7be44d7a193c980ee29aebe6153d14" prot="private" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t apollo::cyber::TimingWheel::tick_duration_</definition>
+        <argsstring></argsstring>
+        <name>tick_duration_</name>
+        <initializer>= 10 * 1000 * 1000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/timer/timing_wheel.h" line="78" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/timer/timing_wheel.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1TimingWheel_1a8575c041956dc3bbb58bc1289af64339" prot="private" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t apollo::cyber::TimingWheel::resolution_</definition>
+        <argsstring></argsstring>
+        <name>resolution_</name>
+        <initializer>= 10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/timer/timing_wheel.h" line="79" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/timer/timing_wheel.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1TimingWheel_1a27a4106601246fcdbeec1e73d470138f" prot="private" static="no" mutable="no">
+        <type>std::list&lt; uint64_t &gt;</type>
+        <definition>std::list&lt;uint64_t&gt; apollo::cyber::TimingWheel::cancelled_list_</definition>
+        <argsstring></argsstring>
+        <name>cancelled_list_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/timer/timing_wheel.h" line="83" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/timer/timing_wheel.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1TimingWheel_1a09c73b028934c0770a436942e5cf08c4" prot="private" static="no" mutable="no">
+        <type>std::mutex</type>
+        <definition>std::mutex apollo::cyber::TimingWheel::cancelled_mutex_</definition>
+        <argsstring></argsstring>
+        <name>cancelled_mutex_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/timer/timing_wheel.h" line="84" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/timer/timing_wheel.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1TimingWheel_1a0ffa403e6ddc38490dfc17dc1a76fa90" prot="private" static="no" mutable="no">
+        <type><ref refid="classapollo_1_1cyber_1_1base_1_1BoundedQueue" kindref="compound">BoundedQueue</ref>&lt; std::shared_ptr&lt; <ref refid="classapollo_1_1cyber_1_1TimerTask" kindref="compound">TimerTask</ref> &gt; &gt;</type>
+        <definition>BoundedQueue&lt;std::shared_ptr&lt;TimerTask&gt; &gt; apollo::cyber::TimingWheel::add_queue_</definition>
+        <argsstring></argsstring>
+        <name>add_queue_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/timer/timing_wheel.h" line="85" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/timer/timing_wheel.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1TimingWheel_1ada62c50c8f74816280c5a67bacd13c29" prot="private" static="no" mutable="no">
+        <type><ref refid="classapollo_1_1cyber_1_1base_1_1BoundedQueue" kindref="compound">BoundedQueue</ref>&lt; std::shared_ptr&lt; <ref refid="classapollo_1_1cyber_1_1TimerTask" kindref="compound">TimerTask</ref> &gt; &gt;</type>
+        <definition>BoundedQueue&lt;std::shared_ptr&lt;TimerTask&gt; &gt; apollo::cyber::TimingWheel::repeat_queue_</definition>
+        <argsstring></argsstring>
+        <name>repeat_queue_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/timer/timing_wheel.h" line="86" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/timer/timing_wheel.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1TimingWheel_1aa090a8f5dcd4b1e420a7c621e133906f" prot="private" static="no" mutable="no">
+        <type><ref refid="classapollo_1_1cyber_1_1base_1_1BoundedQueue" kindref="compound">BoundedQueue</ref>&lt; <ref refid="structapollo_1_1cyber_1_1HandlePackage" kindref="compound">HandlePackage</ref> &gt;</type>
+        <definition>BoundedQueue&lt;HandlePackage&gt; apollo::cyber::TimingWheel::handler_queue_</definition>
+        <argsstring></argsstring>
+        <name>handler_queue_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/timer/timing_wheel.h" line="87" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/timer/timing_wheel.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1TimingWheel_1ae79b915a0b8517bafe4390392428b434" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::TimingWheel::TimingWheel</definition>
+        <argsstring>()</argsstring>
+        <name>TimingWheel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/timer/timing_wheel.h" line="51" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1TimingWheel_1a0ae9c0f8a599ebd537441871832e492d" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::TimingWheel::TimingWheel</definition>
+        <argsstring>(const Duration &amp;tick_duration)</argsstring>
+        <name>TimingWheel</name>
+        <param>
+          <type>const <ref refid="classapollo_1_1cyber_1_1Duration" kindref="compound">Duration</ref> &amp;</type>
+          <declname>tick_duration</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/timer/timing_wheel.h" line="52" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1TimingWheel_1aeb70bca6295f6f13455b8dce0b20e32a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::TimingWheel::~TimingWheel</definition>
+        <argsstring>()=default</argsstring>
+        <name>~TimingWheel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/timer/timing_wheel.h" line="53" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1TimingWheel_1a34dd74d1a19b281fc76cea4816288cf9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t apollo::cyber::TimingWheel::StartTimer</definition>
+        <argsstring>(uint64_t interval, CallHandler handler, bool oneshot)</argsstring>
+        <name>StartTimer</name>
+        <param>
+          <type>uint64_t</type>
+          <declname>interval</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceapollo_1_1cyber_1a73f7b365c4d923725c0a03bfb8c97978" kindref="member">CallHandler</ref></type>
+          <declname>handler</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>oneshot</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/timer/timing_wheel.h" line="55" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1TimingWheel_1aa8f2eb8d8bb10b5ec0dcb6dc318fd340" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::TimingWheel::StopTimer</definition>
+        <argsstring>(uint64_t timer_id)</argsstring>
+        <name>StopTimer</name>
+        <param>
+          <type>uint64_t</type>
+          <declname>timer_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/timer/timing_wheel.h" line="57" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1TimingWheel_1ad21b93b1440bf76cac885f01f67bb730" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::TimingWheel::Step</definition>
+        <argsstring>()</argsstring>
+        <name>Step</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/timer/timing_wheel.h" line="59" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1TimingWheel_1adecc7f4db3d9abad0ccb5ef738d27b8e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::TimingWheel::FillAddSlot</definition>
+        <argsstring>()</argsstring>
+        <name>FillAddSlot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/timer/timing_wheel.h" line="62" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1TimingWheel_1a76133e3a7948b702e7fb008a9a0f48bb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::TimingWheel::FillRepeatSlot</definition>
+        <argsstring>()</argsstring>
+        <name>FillRepeatSlot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/timer/timing_wheel.h" line="63" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1TimingWheel_1a2a839c737caf05cfb58f6bdcb19dd4d9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::TimingWheel::FillSlot</definition>
+        <argsstring>(const std::shared_ptr&lt; TimerTask &gt; &amp;task)</argsstring>
+        <name>FillSlot</name>
+        <param>
+          <type>const std::shared_ptr&lt; <ref refid="classapollo_1_1cyber_1_1TimerTask" kindref="compound">TimerTask</ref> &gt; &amp;</type>
+          <declname>task</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/timer/timing_wheel.h" line="64" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1TimingWheel_1a797d44ac4f49e013c89fe0d07217a9af" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::TimingWheel::RemoveCancelledTasks</definition>
+        <argsstring>(uint64_t slot_index)</argsstring>
+        <name>RemoveCancelledTasks</name>
+        <param>
+          <type>uint64_t</type>
+          <declname>slot_index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/timer/timing_wheel.h" line="66" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="959">
+        <label>apollo::cyber::base::BoundedQueue&lt; std::shared_ptr&lt; apollo::cyber::TimerTask &gt; &gt;</label>
+        <link refid="classapollo_1_1cyber_1_1base_1_1BoundedQueue"/>
+      </node>
+      <node id="958">
+        <label>apollo::cyber::TimingWheel</label>
+        <link refid="classapollo_1_1cyber_1_1TimingWheel"/>
+        <childnode refid="959" relation="usage">
+          <edgelabel>repeat_queue_</edgelabel>
+          <edgelabel>add_queue_</edgelabel>
+        </childnode>
+        <childnode refid="960" relation="usage">
+          <edgelabel>handler_queue_</edgelabel>
+        </childnode>
+        <childnode refid="962" relation="usage">
+          <edgelabel>time_slots_</edgelabel>
+        </childnode>
+      </node>
+      <node id="961">
+        <label>apollo::cyber::HandlePackage</label>
+        <link refid="structapollo_1_1cyber_1_1HandlePackage"/>
+      </node>
+      <node id="960">
+        <label>apollo::cyber::base::BoundedQueue&lt; apollo::cyber::HandlePackage &gt;</label>
+        <link refid="classapollo_1_1cyber_1_1base_1_1BoundedQueue"/>
+        <childnode refid="961" relation="usage">
+          <edgelabel>pool_</edgelabel>
+        </childnode>
+      </node>
+      <node id="962">
+        <label>apollo::cyber::TimingSlot</label>
+        <link refid="classapollo_1_1cyber_1_1TimingSlot"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/work/apollo-fork/apollo/cyber/timer/timing_wheel.h" line="49" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/timer/timing_wheel.h" bodystart="49" bodyend="88"/>
+    <listofallmembers>
+      <member refid="classapollo_1_1cyber_1_1TimingWheel_1a0ffa403e6ddc38490dfc17dc1a76fa90" prot="private" virt="non-virtual"><scope>apollo::cyber::TimingWheel</scope><name>add_queue_</name></member>
+      <member refid="classapollo_1_1cyber_1_1TimingWheel_1a27a4106601246fcdbeec1e73d470138f" prot="private" virt="non-virtual"><scope>apollo::cyber::TimingWheel</scope><name>cancelled_list_</name></member>
+      <member refid="classapollo_1_1cyber_1_1TimingWheel_1a09c73b028934c0770a436942e5cf08c4" prot="private" virt="non-virtual"><scope>apollo::cyber::TimingWheel</scope><name>cancelled_mutex_</name></member>
+      <member refid="classapollo_1_1cyber_1_1TimingWheel_1adecc7f4db3d9abad0ccb5ef738d27b8e" prot="private" virt="non-virtual"><scope>apollo::cyber::TimingWheel</scope><name>FillAddSlot</name></member>
+      <member refid="classapollo_1_1cyber_1_1TimingWheel_1a76133e3a7948b702e7fb008a9a0f48bb" prot="private" virt="non-virtual"><scope>apollo::cyber::TimingWheel</scope><name>FillRepeatSlot</name></member>
+      <member refid="classapollo_1_1cyber_1_1TimingWheel_1a2a839c737caf05cfb58f6bdcb19dd4d9" prot="private" virt="non-virtual"><scope>apollo::cyber::TimingWheel</scope><name>FillSlot</name></member>
+      <member refid="classapollo_1_1cyber_1_1TimingWheel_1aa090a8f5dcd4b1e420a7c621e133906f" prot="private" virt="non-virtual"><scope>apollo::cyber::TimingWheel</scope><name>handler_queue_</name></member>
+      <member refid="classapollo_1_1cyber_1_1TimingWheel_1a7272e1fa44240d3d33321eff5d441fe1" prot="private" virt="non-virtual"><scope>apollo::cyber::TimingWheel</scope><name>id_counter_</name></member>
+      <member refid="classapollo_1_1cyber_1_1TimingWheel_1ae6970ce0519654e6b35376b0c305af22" prot="private" virt="non-virtual"><scope>apollo::cyber::TimingWheel</scope><name>mask_</name></member>
+      <member refid="classapollo_1_1cyber_1_1TimingWheel_1a797d44ac4f49e013c89fe0d07217a9af" prot="private" virt="non-virtual"><scope>apollo::cyber::TimingWheel</scope><name>RemoveCancelledTasks</name></member>
+      <member refid="classapollo_1_1cyber_1_1TimingWheel_1ada62c50c8f74816280c5a67bacd13c29" prot="private" virt="non-virtual"><scope>apollo::cyber::TimingWheel</scope><name>repeat_queue_</name></member>
+      <member refid="classapollo_1_1cyber_1_1TimingWheel_1a8575c041956dc3bbb58bc1289af64339" prot="private" virt="non-virtual"><scope>apollo::cyber::TimingWheel</scope><name>resolution_</name></member>
+      <member refid="classapollo_1_1cyber_1_1TimingWheel_1ad65efbe24adcdf04dd52aa9eec5a7762" prot="private" virt="non-virtual"><scope>apollo::cyber::TimingWheel</scope><name>start_time_</name></member>
+      <member refid="classapollo_1_1cyber_1_1TimingWheel_1a34dd74d1a19b281fc76cea4816288cf9" prot="public" virt="non-virtual"><scope>apollo::cyber::TimingWheel</scope><name>StartTimer</name></member>
+      <member refid="classapollo_1_1cyber_1_1TimingWheel_1ad21b93b1440bf76cac885f01f67bb730" prot="public" virt="non-virtual"><scope>apollo::cyber::TimingWheel</scope><name>Step</name></member>
+      <member refid="classapollo_1_1cyber_1_1TimingWheel_1aa8f2eb8d8bb10b5ec0dcb6dc318fd340" prot="public" virt="non-virtual"><scope>apollo::cyber::TimingWheel</scope><name>StopTimer</name></member>
+      <member refid="classapollo_1_1cyber_1_1TimingWheel_1aad6f68c7f2482a7332f2a25feacc57ea" prot="private" virt="non-virtual"><scope>apollo::cyber::TimingWheel</scope><name>tick_</name></member>
+      <member refid="classapollo_1_1cyber_1_1TimingWheel_1adc7be44d7a193c980ee29aebe6153d14" prot="private" virt="non-virtual"><scope>apollo::cyber::TimingWheel</scope><name>tick_duration_</name></member>
+      <member refid="classapollo_1_1cyber_1_1TimingWheel_1a9dbb67035af423a67b8b725d80ba2920" prot="private" virt="non-virtual"><scope>apollo::cyber::TimingWheel</scope><name>time_slots_</name></member>
+      <member refid="classapollo_1_1cyber_1_1TimingWheel_1ae79b915a0b8517bafe4390392428b434" prot="public" virt="non-virtual"><scope>apollo::cyber::TimingWheel</scope><name>TimingWheel</name></member>
+      <member refid="classapollo_1_1cyber_1_1TimingWheel_1a0ae9c0f8a599ebd537441871832e492d" prot="public" virt="non-virtual"><scope>apollo::cyber::TimingWheel</scope><name>TimingWheel</name></member>
+      <member refid="classapollo_1_1cyber_1_1TimingWheel_1aeb70bca6295f6f13455b8dce0b20e32a" prot="public" virt="non-virtual"><scope>apollo::cyber::TimingWheel</scope><name>~TimingWheel</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="renderable__message_8h" kind="file">
+    <compoundname>renderable_message.h</compoundname>
+    <includes local="no">string</includes>
+    <includedby refid="cyber__topology__message_8h" local="yes">tools/cyber_monitor/cyber_topology_message.h</includedby>
+    <includedby refid="general__message__base_8h" local="yes">tools/cyber_monitor/general_message_base.h</includedby>
+    <incdepgraph>
+      <node id="11354">
+        <label>string</label>
+      </node>
+      <node id="11353">
+        <label>tools/cyber_monitor/renderable_message.h</label>
+        <link refid="renderable_message.h"/>
+        <childnode refid="11354" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="11357">
+        <label>tools/cyber_monitor/general_message_base.h</label>
+        <link refid="general__message__base_8h"/>
+        <childnode refid="11358" relation="include">
+        </childnode>
+        <childnode refid="11359" relation="include">
+        </childnode>
+      </node>
+      <node id="11355">
+        <label>tools/cyber_monitor/renderable_message.h</label>
+        <link refid="renderable_message.h"/>
+        <childnode refid="11356" relation="include">
+        </childnode>
+        <childnode refid="11357" relation="include">
+        </childnode>
+      </node>
+      <node id="11356">
+        <label>tools/cyber_monitor/cyber_topology_message.h</label>
+        <link refid="cyber__topology__message_8h"/>
+      </node>
+      <node id="11359">
+        <label>tools/cyber_monitor/general_message.h</label>
+        <link refid="general__message_8h"/>
+      </node>
+      <node id="11358">
+        <label>tools/cyber_monitor/general_channel_message.h</label>
+        <link refid="general__channel__message_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classRenderableMessage" prot="public">RenderableMessage</innerclass>
+    <innernamespace refid="namespaceadu">adu</innernamespace>
+    <innernamespace refid="namespaceadu_1_1common">adu::common</innernamespace>
+    <innernamespace refid="namespaceadu_1_1common_1_1header">adu::common::header</innernamespace>
+    <innernamespace refid="namespaceadu_1_1common_1_1sensor">adu::common::sensor</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2018<sp/>The<sp/>Apollo<sp/>Authors.<sp/>All<sp/>Rights<sp/>Reserved.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>TOOLS_CVT_MONITOR_RENDERABLE_MESSAGE_H_</highlight></codeline>
+<codeline lineno="18"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>TOOLS_CVT_MONITOR_RENDERABLE_MESSAGE_H_</highlight></codeline>
+<codeline lineno="19"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="namespaceadu" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">adu<sp/>{</highlight></codeline>
+<codeline lineno="23" refid="namespaceadu_1_1common" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">common<sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Point3D;</highlight></codeline>
+<codeline lineno="26" refid="namespaceadu_1_1common_1_1header" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">header<sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Header;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>header</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="namespaceadu_1_1common_1_1sensor" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">sensor<sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">NovatelHeader;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">WheelMeasurement;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>sensor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>common</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>adu</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classScreen" kindref="compound">Screen</ref>;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="classRenderableMessage" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classRenderableMessage" kindref="compound">RenderableMessage</ref><sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="42" refid="classRenderableMessage_1af8a50adc6f5e10a890eb435390e4e8a6" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>constexpr<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classRenderableMessage_1af8a50adc6f5e10a890eb435390e4e8a6" kindref="member">FrameRatio_Precision</ref><sp/>=<sp/>2;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="classRenderableMessage_1afdf4e7a3ff674f72bc6c9bba9997a422" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classRenderableMessage_1afdf4e7a3ff674f72bc6c9bba9997a422" kindref="member">RenderableMessage</ref>(<ref refid="classRenderableMessage" kindref="compound">RenderableMessage</ref>*<sp/><ref refid="classRenderableMessage_1ab23728d14d9aff3efa0af7639ec6059c" kindref="member">parent</ref><sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>lineNo<sp/>=<sp/>0)</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/><ref refid="classRenderableMessage_1ae3a742ebe02b5a7f547e97921464e8b5" kindref="member">line_no_</ref>(lineNo),</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRenderableMessage_1ac3a01804a7e180672c2a34fe2b8b0a8c" kindref="member">pages_</ref>(1),</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRenderableMessage_1a1d6dcb391ac3d77b8b38c5e926d58375" kindref="member">page_index_</ref>(0),</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRenderableMessage_1ac013cc75fdc393be5bf3c8e95d1b5430" kindref="member">page_item_count_</ref>(24),</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRenderableMessage_1a4745527c9b4cf149bfeccee669fd3aa8" kindref="member">parent_</ref>(<ref refid="classRenderableMessage_1ab23728d14d9aff3efa0af7639ec6059c" kindref="member">parent</ref>),</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRenderableMessage_1a41d8fd1e6b5f8dee768ee227783c6913" kindref="member">frame_ratio_</ref>(0.0)<sp/>{}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="classRenderableMessage_1a2a539566921f83ea97eed0ea8965d842" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classRenderableMessage_1a2a539566921f83ea97eed0ea8965d842" kindref="member">~RenderableMessage</ref>()<sp/>{<sp/><ref refid="classRenderableMessage_1a4745527c9b4cf149bfeccee669fd3aa8" kindref="member">parent_</ref><sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classRenderableMessage_1a3f65c247f5db9bb4918bca7d665bbdc6" kindref="member">Render</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classScreen" kindref="compound">Screen</ref>*<sp/>s,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>key)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classRenderableMessage" kindref="compound">RenderableMessage</ref>*<sp/><ref refid="classRenderableMessage_1a0f933ad0befd4d3cf3a95e205c7398d6" kindref="member">Child</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">/*<sp/>lineNo<sp/>*/</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="classRenderableMessage_1a7b8a1627a96d0b0658be68c1ad6b99a5" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classRenderableMessage_1a7b8a1627a96d0b0658be68c1ad6b99a5" kindref="member">frame_ratio</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classRenderableMessage_1a41d8fd1e6b5f8dee768ee227783c6913" kindref="member">frame_ratio_</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="classRenderableMessage_1ab23728d14d9aff3efa0af7639ec6059c" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classRenderableMessage" kindref="compound">RenderableMessage</ref>*<sp/><ref refid="classRenderableMessage_1ab23728d14d9aff3efa0af7639ec6059c" kindref="member">parent</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classRenderableMessage_1a4745527c9b4cf149bfeccee669fd3aa8" kindref="member">parent_</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="61" refid="classRenderableMessage_1a3313d82739bb1dc2da225a40aacfc9b6" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classRenderableMessage_1a3313d82739bb1dc2da225a40aacfc9b6" kindref="member">set_parent</ref>(<ref refid="classRenderableMessage" kindref="compound">RenderableMessage</ref>*<sp/><ref refid="classRenderableMessage_1ab23728d14d9aff3efa0af7639ec6059c" kindref="member">parent</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(parent<sp/>==<sp/><ref refid="classRenderableMessage_1a4745527c9b4cf149bfeccee669fd3aa8" kindref="member">parent_</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRenderableMessage_1a4745527c9b4cf149bfeccee669fd3aa8" kindref="member">parent_</ref><sp/>=<sp/><ref refid="classRenderableMessage_1ab23728d14d9aff3efa0af7639ec6059c" kindref="member">parent</ref>;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="classRenderableMessage_1a6ada5869afedf204cc031e3345624017" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classRenderableMessage_1a6ada5869afedf204cc031e3345624017" kindref="member">page_item_count</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classRenderableMessage_1ac013cc75fdc393be5bf3c8e95d1b5430" kindref="member">page_item_count_</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="71" refid="classRenderableMessage_1a88b81ff1a8da326284fb4732b3d33f46" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/><ref refid="classRenderableMessage_1a88b81ff1a8da326284fb4732b3d33f46" kindref="member">line_no</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>&amp;<ref refid="classRenderableMessage_1ae3a742ebe02b5a7f547e97921464e8b5" kindref="member">line_no_</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="72" refid="classRenderableMessage_1aa6685f59c0d7a11b7510aa0f822d1a03" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classRenderableMessage_1aa6685f59c0d7a11b7510aa0f822d1a03" kindref="member">set_line_no</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>lineNo)<sp/>{<sp/><ref refid="classRenderableMessage_1ae3a742ebe02b5a7f547e97921464e8b5" kindref="member">line_no_</ref><sp/>=<sp/>lineNo;<sp/>}</highlight></codeline>
+<codeline lineno="73" refid="classRenderableMessage_1af2cbc010cd97044dee4ebb42c46ff340" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classRenderableMessage_1af2cbc010cd97044dee4ebb42c46ff340" kindref="member">reset_line_page</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRenderableMessage_1ae3a742ebe02b5a7f547e97921464e8b5" kindref="member">line_no_</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRenderableMessage_1a1d6dcb391ac3d77b8b38c5e926d58375" kindref="member">page_index_</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classRenderableMessage_1a6ca2c5740e208cb4062fbe021ce72853" kindref="member">SplitPages</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>key);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="classRenderableMessage_1ae3a742ebe02b5a7f547e97921464e8b5" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classRenderableMessage_1ae3a742ebe02b5a7f547e97921464e8b5" kindref="member">line_no_</ref>;</highlight></codeline>
+<codeline lineno="80" refid="classRenderableMessage_1ac3a01804a7e180672c2a34fe2b8b0a8c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classRenderableMessage_1ac3a01804a7e180672c2a34fe2b8b0a8c" kindref="member">pages_</ref>;</highlight></codeline>
+<codeline lineno="81" refid="classRenderableMessage_1a1d6dcb391ac3d77b8b38c5e926d58375" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classRenderableMessage_1a1d6dcb391ac3d77b8b38c5e926d58375" kindref="member">page_index_</ref>;</highlight></codeline>
+<codeline lineno="82" refid="classRenderableMessage_1ac013cc75fdc393be5bf3c8e95d1b5430" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classRenderableMessage_1ac013cc75fdc393be5bf3c8e95d1b5430" kindref="member">page_item_count_</ref>;</highlight></codeline>
+<codeline lineno="83" refid="classRenderableMessage_1a4745527c9b4cf149bfeccee669fd3aa8" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classRenderableMessage" kindref="compound">RenderableMessage</ref>*<sp/><ref refid="classRenderableMessage_1a4745527c9b4cf149bfeccee669fd3aa8" kindref="member">parent_</ref>;</highlight></codeline>
+<codeline lineno="84" refid="classRenderableMessage_1a41d8fd1e6b5f8dee768ee227783c6913" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classRenderableMessage_1a41d8fd1e6b5f8dee768ee227783c6913" kindref="member">frame_ratio_</ref>;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="classRenderableMessage_1a8d160591d071092304c2ed571901f8bb" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classScreen" kindref="compound">Screen</ref>;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal">};<sp/><sp/></highlight><highlight class="comment">//<sp/>RenderableMessage</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>TOOLS_CVT_MONITOR_RENDERABLE_MESSAGE_H_</highlight></codeline>
+    </programlisting>
+    <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/renderable_message.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="thread__safe__queue_8h" kind="file">
+    <compoundname>thread_safe_queue.h</compoundname>
+    <includes local="no">condition_variable</includes>
+    <includes local="no">mutex</includes>
+    <includes local="no">queue</includes>
+    <includes local="no">thread</includes>
+    <includes local="no">utility</includes>
+    <incdepgraph>
+      <node id="660">
+        <label>queue</label>
+      </node>
+      <node id="658">
+        <label>condition_variable</label>
+      </node>
+      <node id="662">
+        <label>utility</label>
+      </node>
+      <node id="659">
+        <label>mutex</label>
+      </node>
+      <node id="657">
+        <label>base/thread_safe_queue.h</label>
+        <link refid="thread_safe_queue.h"/>
+        <childnode refid="658" relation="include">
+        </childnode>
+        <childnode refid="659" relation="include">
+        </childnode>
+        <childnode refid="660" relation="include">
+        </childnode>
+        <childnode refid="661" relation="include">
+        </childnode>
+        <childnode refid="662" relation="include">
+        </childnode>
+      </node>
+      <node id="661">
+        <label>thread</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue" prot="public">apollo::cyber::base::ThreadSafeQueue</innerclass>
+    <innernamespace refid="namespaceapollo">apollo</innernamespace>
+    <innernamespace refid="namespaceapollo_1_1cyber">apollo::cyber</innernamespace>
+    <innernamespace refid="namespaceapollo_1_1cyber_1_1base">apollo::cyber::base</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2018<sp/>The<sp/>Apollo<sp/>Authors.<sp/>All<sp/>Rights<sp/>Reserved.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CYBER_BASE_THREAD_SAFE_QUEUE_H_</highlight></codeline>
+<codeline lineno="18"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CYBER_BASE_THREAD_SAFE_QUEUE_H_</highlight></codeline>
+<codeline lineno="19"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;condition_variable&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;mutex&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;queue&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;thread&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;utility&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">apollo<sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">cyber<sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">base<sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="31" refid="classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue" kindref="compound">ThreadSafeQueue</ref><sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="33" refid="classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_1a53faa68b0280565bc0bf19a33fc27116" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_1a53faa68b0280565bc0bf19a33fc27116" kindref="member">ThreadSafeQueue</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue" kindref="compound">ThreadSafeQueue</ref>&amp;<sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_1aa6d4c30efe955f33df9f71edcf6b1925" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue" kindref="compound">ThreadSafeQueue</ref>&amp;<sp/>other)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_1a53faa68b0280565bc0bf19a33fc27116" kindref="member">ThreadSafeQueue</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue" kindref="compound">ThreadSafeQueue</ref>&amp;<sp/>other)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_1a37ff6193b7dad424f4dd16725fa9bd94" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_1a37ff6193b7dad424f4dd16725fa9bd94" kindref="member">~ThreadSafeQueue</ref>()<sp/>{<sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_1a7bd0c67a33cb0b2bd0530370c13dc046" kindref="member">BreakAllWait</ref>();<sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_1a5addc88d4aa0df085f4ca3192f2bae84" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_1a5addc88d4aa0df085f4ca3192f2bae84" kindref="member">Enqueue</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/>element)<sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>std::lock_guard&lt;std::mutex&gt;<sp/>lock(<ref refid="classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_1ada372a404c6d74035a9c603cfe2a004f" kindref="member">mutex_</ref>);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_1a8e0f3ac13d5adcdc05c4973594fbee27" kindref="member">queue_</ref>.emplace(element);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_1ad75c7d1bbe77c6c19112dee2208e16df" kindref="member">cv_</ref>.notify_one();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_1a3509bdfe83511676d1ee791909f255d5" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_1a3509bdfe83511676d1ee791909f255d5" kindref="member">Dequeue</ref>(T*<sp/>element)<sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>std::lock_guard&lt;std::mutex&gt;<sp/>lock(<ref refid="classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_1ada372a404c6d74035a9c603cfe2a004f" kindref="member">mutex_</ref>);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_1a8e0f3ac13d5adcdc05c4973594fbee27" kindref="member">queue_</ref>.empty())<sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>*element<sp/>=<sp/>std::move(<ref refid="classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_1a8e0f3ac13d5adcdc05c4973594fbee27" kindref="member">queue_</ref>.front());</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_1a8e0f3ac13d5adcdc05c4973594fbee27" kindref="member">queue_</ref>.pop();</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_1abe3c4fe75f0f4f375d77a35a6f84ce22" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_1abe3c4fe75f0f4f375d77a35a6f84ce22" kindref="member">WaitDequeue</ref>(T*<sp/>element)<sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>std::unique_lock&lt;std::mutex&gt;<sp/>lock(<ref refid="classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_1ada372a404c6d74035a9c603cfe2a004f" kindref="member">mutex_</ref>);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_1ad75c7d1bbe77c6c19112dee2208e16df" kindref="member">cv_</ref>.wait(lock,<sp/>[</highlight><highlight class="keyword">this</highlight><highlight class="normal">]()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_1a30e80687183f6d6eab2ec9cb77637666" kindref="member">break_all_wait_</ref><sp/>||<sp/>!<ref refid="classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_1a8e0f3ac13d5adcdc05c4973594fbee27" kindref="member">queue_</ref>.empty();<sp/>});</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_1a30e80687183f6d6eab2ec9cb77637666" kindref="member">break_all_wait_</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>*element<sp/>=<sp/>std::move(<ref refid="classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_1a8e0f3ac13d5adcdc05c4973594fbee27" kindref="member">queue_</ref>.front());</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_1a8e0f3ac13d5adcdc05c4973594fbee27" kindref="member">queue_</ref>.pop();</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_1a00b7d801b1e3ab4ac30800640ff8ff92" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>std::queue&lt;T&gt;::size_type<sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_1a00b7d801b1e3ab4ac30800640ff8ff92" kindref="member">Size</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>std::lock_guard&lt;std::mutex&gt;<sp/>lock(<ref refid="classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_1ada372a404c6d74035a9c603cfe2a004f" kindref="member">mutex_</ref>);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_1a8e0f3ac13d5adcdc05c4973594fbee27" kindref="member">queue_</ref>.size();</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_1a30f40e14eaf493d221c0a1a3f11fc8ca" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_1a30f40e14eaf493d221c0a1a3f11fc8ca" kindref="member">Empty</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>std::lock_guard&lt;std::mutex&gt;<sp/>lock(<ref refid="classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_1ada372a404c6d74035a9c603cfe2a004f" kindref="member">mutex_</ref>);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_1a8e0f3ac13d5adcdc05c4973594fbee27" kindref="member">queue_</ref>.empty();</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76" refid="classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_1a7bd0c67a33cb0b2bd0530370c13dc046" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_1a7bd0c67a33cb0b2bd0530370c13dc046" kindref="member">BreakAllWait</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_1a30e80687183f6d6eab2ec9cb77637666" kindref="member">break_all_wait_</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_1ad75c7d1bbe77c6c19112dee2208e16df" kindref="member">cv_</ref>.notify_all();</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="82" refid="classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_1a30e80687183f6d6eab2ec9cb77637666" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_1a30e80687183f6d6eab2ec9cb77637666" kindref="member">break_all_wait_</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="83" refid="classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_1ada372a404c6d74035a9c603cfe2a004f" refkind="member"><highlight class="normal"><sp/><sp/>std::mutex<sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_1ada372a404c6d74035a9c603cfe2a004f" kindref="member">mutex_</ref>;</highlight></codeline>
+<codeline lineno="84" refid="classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_1a8e0f3ac13d5adcdc05c4973594fbee27" refkind="member"><highlight class="normal"><sp/><sp/>std::queue&lt;T&gt;<sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_1a8e0f3ac13d5adcdc05c4973594fbee27" kindref="member">queue_</ref>;</highlight></codeline>
+<codeline lineno="85" refid="classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_1ad75c7d1bbe77c6c19112dee2208e16df" refkind="member"><highlight class="normal"><sp/><sp/>std::condition_variable<sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_1ad75c7d1bbe77c6c19112dee2208e16df" kindref="member">cv_</ref>;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>base</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>cyber</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>apollo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>CYBER_BASE_THREAD_SAFE_QUEUE_H_</highlight></codeline>
+    </programlisting>
+    <location file="/home/work/apollo-fork/apollo/cyber/base/thread_safe_queue.h"/>
+  </compounddef>
+</doxygen>

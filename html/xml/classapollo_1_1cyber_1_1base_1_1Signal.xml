@@ -1,0 +1,257 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classapollo_1_1cyber_1_1base_1_1Signal" kind="class" prot="public">
+    <compoundname>apollo::cyber::base::Signal</compoundname>
+    <includes refid="signal_8h" local="no">signal.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename...</type>
+        <declname>Args</declname>
+        <defname>Args</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classapollo_1_1cyber_1_1base_1_1Signal_1a85f3c9d95bb2885c4d09cce1542ab049" prot="public" static="no">
+        <type>std::function&lt; void(Args...)&gt;</type>
+        <definition>using apollo::cyber::base::Signal&lt; Args &gt;::Callback =  std::function&lt;void(Args...)&gt;</definition>
+        <argsstring></argsstring>
+        <name>Callback</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/signal.h" line="39" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/signal.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classapollo_1_1cyber_1_1base_1_1Signal_1a3d4274b14dd47e0a5186b3c8005fe676" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="classapollo_1_1cyber_1_1base_1_1Slot" kindref="compound">Slot</ref>&lt; Args...&gt;&gt;</type>
+        <definition>using apollo::cyber::base::Signal&lt; Args &gt;::SlotPtr =  std::shared_ptr&lt;Slot&lt;Args...&gt;&gt;</definition>
+        <argsstring></argsstring>
+        <name>SlotPtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/signal.h" line="40" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/signal.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classapollo_1_1cyber_1_1base_1_1Signal_1a902c7f3a2c9bd9debeb0d7a52dc501bf" prot="public" static="no">
+        <type>std::list&lt; <ref refid="classapollo_1_1cyber_1_1base_1_1Signal_1a3d4274b14dd47e0a5186b3c8005fe676" kindref="member">SlotPtr</ref> &gt;</type>
+        <definition>using apollo::cyber::base::Signal&lt; Args &gt;::SlotList =  std::list&lt;SlotPtr&gt;</definition>
+        <argsstring></argsstring>
+        <name>SlotList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/signal.h" line="41" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/signal.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classapollo_1_1cyber_1_1base_1_1Signal_1a4fb76535f693654bd1afd5d338d85193" prot="public" static="no">
+        <type><ref refid="classapollo_1_1cyber_1_1base_1_1Connection" kindref="compound">Connection</ref>&lt; Args...&gt;</type>
+        <definition>using apollo::cyber::base::Signal&lt; Args &gt;::ConnectionType =  Connection&lt;Args...&gt;</definition>
+        <argsstring></argsstring>
+        <name>ConnectionType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/signal.h" line="42" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/signal.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1base_1_1Signal_1a8b2235cb5214ea2dde45e5b2f678112b" prot="private" static="no" mutable="no">
+        <type><ref refid="classapollo_1_1cyber_1_1base_1_1Signal_1a902c7f3a2c9bd9debeb0d7a52dc501bf" kindref="member">SlotList</ref></type>
+        <definition>SlotList apollo::cyber::base::Signal&lt; Args &gt;::slots_</definition>
+        <argsstring></argsstring>
+        <name>slots_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/signal.h" line="113" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/signal.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1base_1_1Signal_1ae4fbfc9ce2e69ed7fb06aca207f44c70" prot="private" static="no" mutable="no">
+        <type>std::mutex</type>
+        <definition>std::mutex apollo::cyber::base::Signal&lt; Args &gt;::mutex_</definition>
+        <argsstring></argsstring>
+        <name>mutex_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/signal.h" line="114" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/signal.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1base_1_1Signal_1ad62083ac992903de39e23a596fc8c10a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::base::Signal&lt; Args &gt;::Signal</definition>
+        <argsstring>()</argsstring>
+        <name>Signal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/signal.h" line="44" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/signal.h" bodystart="44" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1base_1_1Signal_1a222c79147fd7b564d9da73804d31821e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual apollo::cyber::base::Signal&lt; Args &gt;::~Signal</definition>
+        <argsstring>()</argsstring>
+        <name>~Signal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/signal.h" line="45" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/signal.h" bodystart="45" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1base_1_1Signal_1a212ad3069a927d4aaf4be3d920c6b30a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::base::Signal&lt; Args &gt;::operator()</definition>
+        <argsstring>(Args...args)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>Args...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/signal.h" line="47" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/signal.h" bodystart="47" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1base_1_1Signal_1aff67dfcf03742f69ae2defe42a478c71" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classapollo_1_1cyber_1_1base_1_1Signal_1a4fb76535f693654bd1afd5d338d85193" kindref="member">ConnectionType</ref></type>
+        <definition>ConnectionType apollo::cyber::base::Signal&lt; Args &gt;::Connect</definition>
+        <argsstring>(const Callback &amp;cb)</argsstring>
+        <name>Connect</name>
+        <param>
+          <type>const <ref refid="classapollo_1_1cyber_1_1base_1_1Signal_1a85f3c9d95bb2885c4d09cce1542ab049" kindref="member">Callback</ref> &amp;</type>
+          <declname>cb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/signal.h" line="65" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/signal.h" bodystart="65" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1base_1_1Signal_1ada03325f51ddc97a90711251c2515f72" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::base::Signal&lt; Args &gt;::Disconnect</definition>
+        <argsstring>(const ConnectionType &amp;conn)</argsstring>
+        <name>Disconnect</name>
+        <param>
+          <type>const <ref refid="classapollo_1_1cyber_1_1base_1_1Signal_1a4fb76535f693654bd1afd5d338d85193" kindref="member">ConnectionType</ref> &amp;</type>
+          <declname>conn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/signal.h" line="75" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/signal.h" bodystart="75" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1base_1_1Signal_1aa5df08abb7f3da658fc08fcf1b637b04" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::base::Signal&lt; Args &gt;::DisconnectAllSlots</definition>
+        <argsstring>()</argsstring>
+        <name>DisconnectAllSlots</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/signal.h" line="93" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/signal.h" bodystart="93" bodyend="99"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1base_1_1Signal_1accb1330b6b277f4979543db20b971082" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::base::Signal&lt; Args &gt;::Signal</definition>
+        <argsstring>(const Signal &amp;)=delete</argsstring>
+        <name>Signal</name>
+        <param>
+          <type>const <ref refid="classapollo_1_1cyber_1_1base_1_1Signal" kindref="compound">Signal</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/signal.h" line="102" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1base_1_1Signal_1a9b0552bc732401ecedcd025df6928dbe" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classapollo_1_1cyber_1_1base_1_1Signal" kindref="compound">Signal</ref> &amp;</type>
+        <definition>Signal&amp; apollo::cyber::base::Signal&lt; Args &gt;::operator=</definition>
+        <argsstring>(const Signal &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classapollo_1_1cyber_1_1base_1_1Signal" kindref="compound">Signal</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/signal.h" line="103" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1base_1_1Signal_1a3162fed83a227091be77f8cd9cd537e8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::base::Signal&lt; Args &gt;::ClearDisconnectedSlots</definition>
+        <argsstring>()</argsstring>
+        <name>ClearDisconnectedSlots</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/signal.h" line="105" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/signal.h" bodystart="105" bodyend="111"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/work/apollo-fork/apollo/cyber/base/signal.h" line="37" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/signal.h" bodystart="37" bodyend="115"/>
+    <listofallmembers>
+      <member refid="classapollo_1_1cyber_1_1base_1_1Signal_1a85f3c9d95bb2885c4d09cce1542ab049" prot="public" virt="non-virtual"><scope>apollo::cyber::base::Signal</scope><name>Callback</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1Signal_1a3162fed83a227091be77f8cd9cd537e8" prot="private" virt="non-virtual"><scope>apollo::cyber::base::Signal</scope><name>ClearDisconnectedSlots</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1Signal_1aff67dfcf03742f69ae2defe42a478c71" prot="public" virt="non-virtual"><scope>apollo::cyber::base::Signal</scope><name>Connect</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1Signal_1a4fb76535f693654bd1afd5d338d85193" prot="public" virt="non-virtual"><scope>apollo::cyber::base::Signal</scope><name>ConnectionType</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1Signal_1ada03325f51ddc97a90711251c2515f72" prot="public" virt="non-virtual"><scope>apollo::cyber::base::Signal</scope><name>Disconnect</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1Signal_1aa5df08abb7f3da658fc08fcf1b637b04" prot="public" virt="non-virtual"><scope>apollo::cyber::base::Signal</scope><name>DisconnectAllSlots</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1Signal_1ae4fbfc9ce2e69ed7fb06aca207f44c70" prot="private" virt="non-virtual"><scope>apollo::cyber::base::Signal</scope><name>mutex_</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1Signal_1a212ad3069a927d4aaf4be3d920c6b30a" prot="public" virt="non-virtual"><scope>apollo::cyber::base::Signal</scope><name>operator()</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1Signal_1a9b0552bc732401ecedcd025df6928dbe" prot="private" virt="non-virtual"><scope>apollo::cyber::base::Signal</scope><name>operator=</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1Signal_1ad62083ac992903de39e23a596fc8c10a" prot="public" virt="non-virtual"><scope>apollo::cyber::base::Signal</scope><name>Signal</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1Signal_1accb1330b6b277f4979543db20b971082" prot="private" virt="non-virtual"><scope>apollo::cyber::base::Signal</scope><name>Signal</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1Signal_1a902c7f3a2c9bd9debeb0d7a52dc501bf" prot="public" virt="non-virtual"><scope>apollo::cyber::base::Signal</scope><name>SlotList</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1Signal_1a3d4274b14dd47e0a5186b3c8005fe676" prot="public" virt="non-virtual"><scope>apollo::cyber::base::Signal</scope><name>SlotPtr</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1Signal_1a8b2235cb5214ea2dde45e5b2f678112b" prot="private" virt="non-virtual"><scope>apollo::cyber::base::Signal</scope><name>slots_</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1Signal_1a222c79147fd7b564d9da73804d31821e" prot="public" virt="virtual"><scope>apollo::cyber::base::Signal</scope><name>~Signal</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

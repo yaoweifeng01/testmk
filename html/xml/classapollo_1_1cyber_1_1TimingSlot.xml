@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classapollo_1_1cyber_1_1TimingSlot" kind="class" prot="public">
+    <compoundname>apollo::cyber::TimingSlot</compoundname>
+    <includes refid="timing__slot_8h" local="no">timing_slot.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1TimingSlot_1a2cdde7cc5a017a2cd2816676133864e7" prot="private" static="no" mutable="no">
+        <type>std::unordered_map&lt; uint64_t, std::shared_ptr&lt; <ref refid="classapollo_1_1cyber_1_1TimerTask" kindref="compound">TimerTask</ref> &gt; &gt;</type>
+        <definition>std::unordered_map&lt;uint64_t, std::shared_ptr&lt;TimerTask&gt; &gt; apollo::cyber::TimingSlot::tasks_</definition>
+        <argsstring></argsstring>
+        <name>tasks_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/timer/timing_slot.h" line="49" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/timer/timing_slot.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1TimingSlot_1a7d466ae28f21ce27c96ce7a721915378" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::TimingSlot::TimingSlot</definition>
+        <argsstring>()=default</argsstring>
+        <name>TimingSlot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/timer/timing_slot.h" line="52" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1TimingSlot_1a0103051b7efc92d111aaa23d52bdbc7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::TimingSlot::AddTask</definition>
+        <argsstring>(const std::shared_ptr&lt; TimerTask &gt; &amp;task)</argsstring>
+        <name>AddTask</name>
+        <param>
+          <type>const std::shared_ptr&lt; <ref refid="classapollo_1_1cyber_1_1TimerTask" kindref="compound">TimerTask</ref> &gt; &amp;</type>
+          <declname>task</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/timer/timing_slot.h" line="53" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1TimingSlot_1a315c4829640231f461f6503c8e5cd27a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::TimingSlot::RemoveTask</definition>
+        <argsstring>(uint64_t id)</argsstring>
+        <name>RemoveTask</name>
+        <param>
+          <type>uint64_t</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/timer/timing_slot.h" line="54" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/timer/timing_slot.h" bodystart="54" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1TimingSlot_1a226fd34a86c5c5128bda04a66a432dde" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::TimingSlot::EnumTaskList</definition>
+        <argsstring>(uint64_t deadline, bool async, BoundedQueue&lt; HandlePackage &gt; *hander_queue, BoundedQueue&lt; std::shared_ptr&lt; TimerTask &gt;&gt; *rep_list)</argsstring>
+        <name>EnumTaskList</name>
+        <param>
+          <type>uint64_t</type>
+          <declname>deadline</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>async</declname>
+        </param>
+        <param>
+          <type><ref refid="classapollo_1_1cyber_1_1base_1_1BoundedQueue" kindref="compound">BoundedQueue</ref>&lt; <ref refid="structapollo_1_1cyber_1_1HandlePackage" kindref="compound">HandlePackage</ref> &gt; *</type>
+          <declname>hander_queue</declname>
+        </param>
+        <param>
+          <type><ref refid="classapollo_1_1cyber_1_1base_1_1BoundedQueue" kindref="compound">BoundedQueue</ref>&lt; std::shared_ptr&lt; <ref refid="classapollo_1_1cyber_1_1TimerTask" kindref="compound">TimerTask</ref> &gt;&gt; *</type>
+          <declname>rep_list</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/timer/timing_slot.h" line="56" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/work/apollo-fork/apollo/cyber/timer/timing_slot.h" line="46" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/timer/timing_slot.h" bodystart="46" bodyend="59"/>
+    <listofallmembers>
+      <member refid="classapollo_1_1cyber_1_1TimingSlot_1a0103051b7efc92d111aaa23d52bdbc7e" prot="public" virt="non-virtual"><scope>apollo::cyber::TimingSlot</scope><name>AddTask</name></member>
+      <member refid="classapollo_1_1cyber_1_1TimingSlot_1a226fd34a86c5c5128bda04a66a432dde" prot="public" virt="non-virtual"><scope>apollo::cyber::TimingSlot</scope><name>EnumTaskList</name></member>
+      <member refid="classapollo_1_1cyber_1_1TimingSlot_1a315c4829640231f461f6503c8e5cd27a" prot="public" virt="non-virtual"><scope>apollo::cyber::TimingSlot</scope><name>RemoveTask</name></member>
+      <member refid="classapollo_1_1cyber_1_1TimingSlot_1a2cdde7cc5a017a2cd2816676133864e7" prot="private" virt="non-virtual"><scope>apollo::cyber::TimingSlot</scope><name>tasks_</name></member>
+      <member refid="classapollo_1_1cyber_1_1TimingSlot_1a7d466ae28f21ce27c96ce7a721915378" prot="public" virt="non-virtual"><scope>apollo::cyber::TimingSlot</scope><name>TimingSlot</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,471 @@
+\hypertarget{classGeneralChannelMessage}{\section{General\-Channel\-Message Class Reference}
+\label{classGeneralChannelMessage}\index{General\-Channel\-Message@{General\-Channel\-Message}}
+}
+
+
+{\ttfamily \#include $<$general\-\_\-channel\-\_\-message.\-h$>$}
+
+Inheritance diagram for General\-Channel\-Message\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classGeneralChannelMessage}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classGeneralChannelMessage_a4273153a78b91f1bbc1005c7fc83a42b}{Error\-Code} \{ \\*
+\hyperlink{classGeneralChannelMessage_a4273153a78b91f1bbc1005c7fc83a42ba2f11a39e60eea72e5258966863e92dbb}{Error\-Code\-::\-New\-Sub\-Class\-Failed} = -\/1, 
+\hyperlink{classGeneralChannelMessage_a4273153a78b91f1bbc1005c7fc83a42ba6e17b68c7b260823b72268f4abaa63d8}{Error\-Code\-::\-Create\-Node\-Failed} = -\/2, 
+\hyperlink{classGeneralChannelMessage_a4273153a78b91f1bbc1005c7fc83a42baf3e17a336aaf0ce3288af8cc88f84acd}{Error\-Code\-::\-Create\-Reader\-Failed} = -\/3, 
+\hyperlink{classGeneralChannelMessage_a4273153a78b91f1bbc1005c7fc83a42ba2bce9ea8de55f42d5c705d31d88b580c}{Error\-Code\-::\-Message\-Type\-Is\-Empty} = -\/4, 
+\\*
+\hyperlink{classGeneralChannelMessage_a4273153a78b91f1bbc1005c7fc83a42ba1c1458480e4efd15e595dd35828d389d}{Error\-Code\-::\-Channel\-Name\-Or\-Node\-Name\-Is\-Empty} = -\/5, 
+\hyperlink{classGeneralChannelMessage_a4273153a78b91f1bbc1005c7fc83a42bae125b94e8445980203008e098f9c713f}{Error\-Code\-::\-No\-Close\-Channel} = -\/6
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classGeneralChannelMessage_a4b4051170a0227f18d3807b3da6290c8}{$\sim$\-General\-Channel\-Message} ()
+\item 
+std\-::string \hyperlink{classGeneralChannelMessage_acd67da9cdc84072627c42879469b2095}{Get\-Channel\-Name} (void) const 
+\item 
+void \hyperlink{classGeneralChannelMessage_ac8732e4bbf847a2218d78d57d0b9565b}{set\-\_\-message\-\_\-type} (const std\-::string \&msg\-Type\-Name)
+\item 
+const std\-::string \& \hyperlink{classGeneralChannelMessage_acffb0de01ee3fd896df64f7caed59ae3}{message\-\_\-type} (void) const 
+\item 
+bool \hyperlink{classGeneralChannelMessage_a112d3c8d26558666a5ee296c7e890699}{is\-\_\-enabled} (void) const 
+\item 
+bool \hyperlink{classGeneralChannelMessage_aa62162c570cfc990be7b5045406ea2ee}{has\-\_\-message\-\_\-come} (void) const 
+\item 
+double \hyperlink{classGeneralChannelMessage_ae607e8278605ccb88ea541965a2ff4bd}{frame\-\_\-ratio} (void) override
+\item 
+const std\-::string \& \hyperlink{classGeneralChannelMessage_a3df832daecc2a56b91c1a4165668a699}{Node\-Name} (void) const 
+\item 
+void \hyperlink{classGeneralChannelMessage_afa6acec81e88dbc16cfcb06651462da3}{add\-\_\-reader} (const std\-::string \&reader)
+\item 
+void \hyperlink{classGeneralChannelMessage_a54d35b4c1a5a2d042266fe7ef1591c42}{del\-\_\-reader} (const std\-::string \&reader)
+\item 
+void \hyperlink{classGeneralChannelMessage_aa9c664e67c018d7ddee6287a15972971}{add\-\_\-writer} (const std\-::string \&writer)
+\item 
+void \hyperlink{classGeneralChannelMessage_aedf08c4b88d2662a627f22b5a20c4ba9}{del\-\_\-writer} (const std\-::string \&writer)
+\item 
+void \hyperlink{classGeneralChannelMessage_af7f60b4c6e275dbfd0347aa2f8a2ac14}{Render} (const \hyperlink{classScreen}{Screen} $\ast$s, int key) override
+\item 
+void \hyperlink{classGeneralChannelMessage_a8ff914f416cc8684335a58b56f17c54d}{Close\-Channel} (void)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static const char $\ast$ \hyperlink{classGeneralChannelMessage_aacef197db8365b40ebc65d33874831a2}{err\-Code2\-Str} (\hyperlink{classGeneralChannelMessage_a4273153a78b91f1bbc1005c7fc83a42b}{Error\-Code} err\-Code)
+\item 
+static bool \hyperlink{classGeneralChannelMessage_a78584063709d67ee1cd73ce4e3a5e152}{is\-Error\-Code} (void $\ast$ptr)
+\item 
+static \hyperlink{classGeneralChannelMessage_a4273153a78b91f1bbc1005c7fc83a42b}{Error\-Code} \hyperlink{classGeneralChannelMessage_aa2a46a58ecfda4b9e6277f8d48101d5a}{cast\-Ptr2\-Error\-Code} (void $\ast$ptr)
+\item 
+static \hyperlink{classGeneralChannelMessage}{General\-Channel\-Message} $\ast$ \hyperlink{classGeneralChannelMessage_ae54666aaf4da7e77fedfaf9c6d0f4966}{cast\-Error\-Code2\-Ptr} (\hyperlink{classGeneralChannelMessage_a4273153a78b91f1bbc1005c7fc83a42b}{Error\-Code} err\-Code)
+\end{DoxyCompactItemize}
+\subsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classGeneralChannelMessage_aa051da5753574d8fe644fdbcc2cd2412}{State} \{ \hyperlink{classGeneralChannelMessage_aa051da5753574d8fe644fdbcc2cd2412ad528eed6edec05921bab7a484e1f48f0}{State\-::\-Show\-Debug\-String}, 
+\hyperlink{classGeneralChannelMessage_aa051da5753574d8fe644fdbcc2cd2412ae43857c44f7a3268c1a71df7a2150cca}{State\-::\-Show\-Info}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classGeneralChannelMessage_a390e8b45e9b980c6cc6e2f3c1d36ece9}{General\-Channel\-Message} (const std\-::string \&node\-Name, \hyperlink{classRenderableMessage}{Renderable\-Message} $\ast$\hyperlink{classRenderableMessage_ab23728d14d9aff3efa0af7639ec6059c}{parent}=nullptr)
+\item 
+\hyperlink{classGeneralChannelMessage_ac6269c5ac192942c72566f2a6399e465}{General\-Channel\-Message} (const \hyperlink{classGeneralChannelMessage}{General\-Channel\-Message} \&)=delete
+\item 
+\hyperlink{classGeneralChannelMessage}{General\-Channel\-Message} \& \hyperlink{classGeneralChannelMessage_ab6a1a17b601ac4b41e687022ff0ec434}{operator=} (const \hyperlink{classGeneralChannelMessage}{General\-Channel\-Message} \&)=delete
+\item 
+void \hyperlink{classGeneralChannelMessage_aefdf77ab4c8e43b86af7128aaaa5ccac}{update\-Raw\-Message} (const std\-::shared\-\_\-ptr$<$ \hyperlink{structapollo_1_1cyber_1_1message_1_1RawMessage}{apollo\-::cyber\-::message\-::\-Raw\-Message} $>$ \&raw\-Msg)
+\item 
+std\-::shared\-\_\-ptr\\*
+$<$ \hyperlink{structapollo_1_1cyber_1_1message_1_1RawMessage}{apollo\-::cyber\-::message\-::\-Raw\-Message} $>$ \hyperlink{classGeneralChannelMessage_a347060b4136af1997b77ac6671dbb860}{Copy\-Msg\-Ptr} (void) const 
+\item 
+\hyperlink{classGeneralChannelMessage}{General\-Channel\-Message} $\ast$ \hyperlink{classGeneralChannelMessage_ae1bc06baa0d31bb6757fb5d27f034da9}{Open\-Channel} (const std\-::string \&channel\-Name)
+\item 
+void \hyperlink{classGeneralChannelMessage_a47717a3ab362e45cad05f94495168386}{Render\-Debug\-String} (const \hyperlink{classScreen}{Screen} $\ast$s, int key, unsigned line\-No)
+\item 
+void \hyperlink{classGeneralChannelMessage_a15801ad66f9891d77cb9dbe3e606803e}{Render\-Info} (const \hyperlink{classScreen}{Screen} $\ast$s, int key, unsigned line\-No)
+\item 
+void \hyperlink{classGeneralChannelMessage_ac5344c725f27ad9bd126cc67a8a2238a}{set\-\_\-has\-\_\-message\-\_\-come} (bool b)
+\end{DoxyCompactItemize}
+\subsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classGeneralChannelMessage_a1427cf97f758b92c79262934bab20e28}{Do\-Delete} (std\-::vector$<$ std\-::string $>$ \&vec, const std\-::string \&str)
+\item 
+static void \hyperlink{classGeneralChannelMessage_a4795285b54ebe85294e2b9ce4ce8440c}{Do\-Add} (std\-::vector$<$ std\-::string $>$ \&vec, const std\-::string \&str)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classGeneralChannelMessage_aa051da5753574d8fe644fdbcc2cd2412}{General\-Channel\-Message\-::\-State} \hyperlink{classGeneralChannelMessage_a7b1412a227a2ec0d3baedc0938f931df}{current\-\_\-state\-\_\-}
+\item 
+bool \hyperlink{classGeneralChannelMessage_af5e386e99b7a8722b485d027e2ed75bd}{has\-\_\-message\-\_\-come\-\_\-}
+\item 
+std\-::string \hyperlink{classGeneralChannelMessage_a1d25120dc72e5010565823a544783efc}{message\-\_\-type\-\_\-}
+\item 
+std\-::atomic$<$ int $>$ \hyperlink{classGeneralChannelMessage_a3da8072e2c9d5ed6b510378384d2dc4f}{frame\-\_\-counter\-\_\-}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1Time}{apollo\-::cyber\-::\-Time} \hyperlink{classGeneralChannelMessage_a8ff50746033122e3479db0cd923a8860}{last\-\_\-time\-\_\-}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1Time}{apollo\-::cyber\-::\-Time} \hyperlink{classGeneralChannelMessage_a10a1b559a2fd9741bb268fbe1c4290d2}{msg\-\_\-time\-\_\-}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1Time}{apollo\-::cyber\-::\-Time} \hyperlink{classGeneralChannelMessage_ad1f7f60900caf4cc8cfba0fb83961a43}{time\-\_\-last\-\_\-calc\-\_\-} = \hyperlink{classapollo_1_1cyber_1_1Time_abb3f07caa00e1e76d3040e9f725afc09}{apollo\-::cyber\-::\-Time\-::\-Mono\-Time}()
+\item 
+std\-::unique\-\_\-ptr\\*
+$<$ \hyperlink{classapollo_1_1cyber_1_1Node}{apollo\-::cyber\-::\-Node} $>$ \hyperlink{classGeneralChannelMessage_a9663241eded60406a25281d650713ec5}{channel\-\_\-node\-\_\-}
+\item 
+std\-::string \hyperlink{classGeneralChannelMessage_a123a419e25302adacba1f1984bc70b22}{node\-\_\-name\-\_\-}
+\item 
+std\-::vector$<$ std\-::string $>$ \hyperlink{classGeneralChannelMessage_a2839fca91027887bdb8c7e9df077c105}{readers\-\_\-}
+\item 
+std\-::vector$<$ std\-::string $>$ \hyperlink{classGeneralChannelMessage_aff8aed1cdbd9bfebcea0b2bb5f5c6c5b}{writers\-\_\-}
+\item 
+std\-::shared\-\_\-ptr\\*
+$<$ \hyperlink{structapollo_1_1cyber_1_1message_1_1RawMessage}{apollo\-::cyber\-::message\-::\-Raw\-Message} $>$ \hyperlink{classGeneralChannelMessage_a6b288701779537fb1a9846214d9ebeac}{channel\-\_\-message\-\_\-}
+\item 
+std\-::shared\-\_\-ptr\\*
+$<$ \hyperlink{classapollo_1_1cyber_1_1Reader}{apollo\-::cyber\-::\-Reader}\\*
+$<$ \hyperlink{structapollo_1_1cyber_1_1message_1_1RawMessage}{apollo\-::cyber\-::message\-::\-Raw\-Message} $>$ $>$ \hyperlink{classGeneralChannelMessage_a6fbe63b8ee339b6bbf99736aa6a873cf}{channel\-\_\-reader\-\_\-}
+\item 
+std\-::mutex \hyperlink{classGeneralChannelMessage_a58d9c04f21d27bcbcce36073f4325c7e}{inner\-\_\-lock\-\_\-}
+\item 
+google\-::protobuf\-::\-Message $\ast$ \hyperlink{classGeneralChannelMessage_ab150e16ccbb7e536a0b6e6276e3eca7a}{raw\-\_\-msg\-\_\-class\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classGeneralChannelMessage_ae90c7f27bec878186a229b7b314512f6}{Cyber\-Topology\-Message}
+\item 
+class \hyperlink{classGeneralChannelMessage_abcf2c2516937d8e5700b72b878385bb2}{General\-Message}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classGeneralChannelMessage_a4273153a78b91f1bbc1005c7fc83a42b}{\index{General\-Channel\-Message@{General\-Channel\-Message}!Error\-Code@{Error\-Code}}
+\index{Error\-Code@{Error\-Code}!GeneralChannelMessage@{General\-Channel\-Message}}
+\subsubsection[{Error\-Code}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf General\-Channel\-Message\-::\-Error\-Code}\hspace{0.3cm}{\ttfamily [strong]}}}\label{classGeneralChannelMessage_a4273153a78b91f1bbc1005c7fc83a42b}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{New\-Sub\-Class\-Failed@{New\-Sub\-Class\-Failed}!General\-Channel\-Message@{General\-Channel\-Message}}\index{General\-Channel\-Message@{General\-Channel\-Message}!New\-Sub\-Class\-Failed@{New\-Sub\-Class\-Failed}}\item[{\em 
+\hypertarget{classGeneralChannelMessage_a4273153a78b91f1bbc1005c7fc83a42ba2f11a39e60eea72e5258966863e92dbb}{New\-Sub\-Class\-Failed}\label{classGeneralChannelMessage_a4273153a78b91f1bbc1005c7fc83a42ba2f11a39e60eea72e5258966863e92dbb}
+}]\index{Create\-Node\-Failed@{Create\-Node\-Failed}!General\-Channel\-Message@{General\-Channel\-Message}}\index{General\-Channel\-Message@{General\-Channel\-Message}!Create\-Node\-Failed@{Create\-Node\-Failed}}\item[{\em 
+\hypertarget{classGeneralChannelMessage_a4273153a78b91f1bbc1005c7fc83a42ba6e17b68c7b260823b72268f4abaa63d8}{Create\-Node\-Failed}\label{classGeneralChannelMessage_a4273153a78b91f1bbc1005c7fc83a42ba6e17b68c7b260823b72268f4abaa63d8}
+}]\index{Create\-Reader\-Failed@{Create\-Reader\-Failed}!General\-Channel\-Message@{General\-Channel\-Message}}\index{General\-Channel\-Message@{General\-Channel\-Message}!Create\-Reader\-Failed@{Create\-Reader\-Failed}}\item[{\em 
+\hypertarget{classGeneralChannelMessage_a4273153a78b91f1bbc1005c7fc83a42baf3e17a336aaf0ce3288af8cc88f84acd}{Create\-Reader\-Failed}\label{classGeneralChannelMessage_a4273153a78b91f1bbc1005c7fc83a42baf3e17a336aaf0ce3288af8cc88f84acd}
+}]\index{Message\-Type\-Is\-Empty@{Message\-Type\-Is\-Empty}!General\-Channel\-Message@{General\-Channel\-Message}}\index{General\-Channel\-Message@{General\-Channel\-Message}!Message\-Type\-Is\-Empty@{Message\-Type\-Is\-Empty}}\item[{\em 
+\hypertarget{classGeneralChannelMessage_a4273153a78b91f1bbc1005c7fc83a42ba2bce9ea8de55f42d5c705d31d88b580c}{Message\-Type\-Is\-Empty}\label{classGeneralChannelMessage_a4273153a78b91f1bbc1005c7fc83a42ba2bce9ea8de55f42d5c705d31d88b580c}
+}]\index{Channel\-Name\-Or\-Node\-Name\-Is\-Empty@{Channel\-Name\-Or\-Node\-Name\-Is\-Empty}!General\-Channel\-Message@{General\-Channel\-Message}}\index{General\-Channel\-Message@{General\-Channel\-Message}!Channel\-Name\-Or\-Node\-Name\-Is\-Empty@{Channel\-Name\-Or\-Node\-Name\-Is\-Empty}}\item[{\em 
+\hypertarget{classGeneralChannelMessage_a4273153a78b91f1bbc1005c7fc83a42ba1c1458480e4efd15e595dd35828d389d}{Channel\-Name\-Or\-Node\-Name\-Is\-Empty}\label{classGeneralChannelMessage_a4273153a78b91f1bbc1005c7fc83a42ba1c1458480e4efd15e595dd35828d389d}
+}]\index{No\-Close\-Channel@{No\-Close\-Channel}!General\-Channel\-Message@{General\-Channel\-Message}}\index{General\-Channel\-Message@{General\-Channel\-Message}!No\-Close\-Channel@{No\-Close\-Channel}}\item[{\em 
+\hypertarget{classGeneralChannelMessage_a4273153a78b91f1bbc1005c7fc83a42bae125b94e8445980203008e098f9c713f}{No\-Close\-Channel}\label{classGeneralChannelMessage_a4273153a78b91f1bbc1005c7fc83a42bae125b94e8445980203008e098f9c713f}
+}]\end{description}
+\end{Desc}
+\hypertarget{classGeneralChannelMessage_aa051da5753574d8fe644fdbcc2cd2412}{\index{General\-Channel\-Message@{General\-Channel\-Message}!State@{State}}
+\index{State@{State}!GeneralChannelMessage@{General\-Channel\-Message}}
+\subsubsection[{State}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf General\-Channel\-Message\-::\-State}\hspace{0.3cm}{\ttfamily [strong]}, {\ttfamily [private]}}}\label{classGeneralChannelMessage_aa051da5753574d8fe644fdbcc2cd2412}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Show\-Debug\-String@{Show\-Debug\-String}!General\-Channel\-Message@{General\-Channel\-Message}}\index{General\-Channel\-Message@{General\-Channel\-Message}!Show\-Debug\-String@{Show\-Debug\-String}}\item[{\em 
+\hypertarget{classGeneralChannelMessage_aa051da5753574d8fe644fdbcc2cd2412ad528eed6edec05921bab7a484e1f48f0}{Show\-Debug\-String}\label{classGeneralChannelMessage_aa051da5753574d8fe644fdbcc2cd2412ad528eed6edec05921bab7a484e1f48f0}
+}]\index{Show\-Info@{Show\-Info}!General\-Channel\-Message@{General\-Channel\-Message}}\index{General\-Channel\-Message@{General\-Channel\-Message}!Show\-Info@{Show\-Info}}\item[{\em 
+\hypertarget{classGeneralChannelMessage_aa051da5753574d8fe644fdbcc2cd2412ae43857c44f7a3268c1a71df7a2150cca}{Show\-Info}\label{classGeneralChannelMessage_aa051da5753574d8fe644fdbcc2cd2412ae43857c44f7a3268c1a71df7a2150cca}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classGeneralChannelMessage_a4b4051170a0227f18d3807b3da6290c8}{\index{General\-Channel\-Message@{General\-Channel\-Message}!$\sim$\-General\-Channel\-Message@{$\sim$\-General\-Channel\-Message}}
+\index{$\sim$\-General\-Channel\-Message@{$\sim$\-General\-Channel\-Message}!GeneralChannelMessage@{General\-Channel\-Message}}
+\subsubsection[{$\sim$\-General\-Channel\-Message}]{\setlength{\rightskip}{0pt plus 5cm}General\-Channel\-Message\-::$\sim$\-General\-Channel\-Message (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classGeneralChannelMessage_a4b4051170a0227f18d3807b3da6290c8}
+\hypertarget{classGeneralChannelMessage_a390e8b45e9b980c6cc6e2f3c1d36ece9}{\index{General\-Channel\-Message@{General\-Channel\-Message}!General\-Channel\-Message@{General\-Channel\-Message}}
+\index{General\-Channel\-Message@{General\-Channel\-Message}!GeneralChannelMessage@{General\-Channel\-Message}}
+\subsubsection[{General\-Channel\-Message}]{\setlength{\rightskip}{0pt plus 5cm}General\-Channel\-Message\-::\-General\-Channel\-Message (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{node\-Name, }
+\item[{{\bf Renderable\-Message} $\ast$}]{parent = {\ttfamily nullptr}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}, {\ttfamily [private]}}}\label{classGeneralChannelMessage_a390e8b45e9b980c6cc6e2f3c1d36ece9}
+\hypertarget{classGeneralChannelMessage_ac6269c5ac192942c72566f2a6399e465}{\index{General\-Channel\-Message@{General\-Channel\-Message}!General\-Channel\-Message@{General\-Channel\-Message}}
+\index{General\-Channel\-Message@{General\-Channel\-Message}!GeneralChannelMessage@{General\-Channel\-Message}}
+\subsubsection[{General\-Channel\-Message}]{\setlength{\rightskip}{0pt plus 5cm}General\-Channel\-Message\-::\-General\-Channel\-Message (
+\begin{DoxyParamCaption}
+\item[{const {\bf General\-Channel\-Message} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}}\label{classGeneralChannelMessage_ac6269c5ac192942c72566f2a6399e465}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classGeneralChannelMessage_afa6acec81e88dbc16cfcb06651462da3}{\index{General\-Channel\-Message@{General\-Channel\-Message}!add\-\_\-reader@{add\-\_\-reader}}
+\index{add\-\_\-reader@{add\-\_\-reader}!GeneralChannelMessage@{General\-Channel\-Message}}
+\subsubsection[{add\-\_\-reader}]{\setlength{\rightskip}{0pt plus 5cm}void General\-Channel\-Message\-::add\-\_\-reader (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{reader}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classGeneralChannelMessage_afa6acec81e88dbc16cfcb06651462da3}
+\hypertarget{classGeneralChannelMessage_aa9c664e67c018d7ddee6287a15972971}{\index{General\-Channel\-Message@{General\-Channel\-Message}!add\-\_\-writer@{add\-\_\-writer}}
+\index{add\-\_\-writer@{add\-\_\-writer}!GeneralChannelMessage@{General\-Channel\-Message}}
+\subsubsection[{add\-\_\-writer}]{\setlength{\rightskip}{0pt plus 5cm}void General\-Channel\-Message\-::add\-\_\-writer (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{writer}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classGeneralChannelMessage_aa9c664e67c018d7ddee6287a15972971}
+\hypertarget{classGeneralChannelMessage_ae54666aaf4da7e77fedfaf9c6d0f4966}{\index{General\-Channel\-Message@{General\-Channel\-Message}!cast\-Error\-Code2\-Ptr@{cast\-Error\-Code2\-Ptr}}
+\index{cast\-Error\-Code2\-Ptr@{cast\-Error\-Code2\-Ptr}!GeneralChannelMessage@{General\-Channel\-Message}}
+\subsubsection[{cast\-Error\-Code2\-Ptr}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf General\-Channel\-Message}$\ast$ General\-Channel\-Message\-::cast\-Error\-Code2\-Ptr (
+\begin{DoxyParamCaption}
+\item[{{\bf Error\-Code}}]{err\-Code}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classGeneralChannelMessage_ae54666aaf4da7e77fedfaf9c6d0f4966}
+\hypertarget{classGeneralChannelMessage_aa2a46a58ecfda4b9e6277f8d48101d5a}{\index{General\-Channel\-Message@{General\-Channel\-Message}!cast\-Ptr2\-Error\-Code@{cast\-Ptr2\-Error\-Code}}
+\index{cast\-Ptr2\-Error\-Code@{cast\-Ptr2\-Error\-Code}!GeneralChannelMessage@{General\-Channel\-Message}}
+\subsubsection[{cast\-Ptr2\-Error\-Code}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Error\-Code} General\-Channel\-Message\-::cast\-Ptr2\-Error\-Code (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{ptr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classGeneralChannelMessage_aa2a46a58ecfda4b9e6277f8d48101d5a}
+\hypertarget{classGeneralChannelMessage_a8ff914f416cc8684335a58b56f17c54d}{\index{General\-Channel\-Message@{General\-Channel\-Message}!Close\-Channel@{Close\-Channel}}
+\index{Close\-Channel@{Close\-Channel}!GeneralChannelMessage@{General\-Channel\-Message}}
+\subsubsection[{Close\-Channel}]{\setlength{\rightskip}{0pt plus 5cm}void General\-Channel\-Message\-::\-Close\-Channel (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classGeneralChannelMessage_a8ff914f416cc8684335a58b56f17c54d}
+\hypertarget{classGeneralChannelMessage_a347060b4136af1997b77ac6671dbb860}{\index{General\-Channel\-Message@{General\-Channel\-Message}!Copy\-Msg\-Ptr@{Copy\-Msg\-Ptr}}
+\index{Copy\-Msg\-Ptr@{Copy\-Msg\-Ptr}!GeneralChannelMessage@{General\-Channel\-Message}}
+\subsubsection[{Copy\-Msg\-Ptr}]{\setlength{\rightskip}{0pt plus 5cm}std\-::shared\-\_\-ptr$<${\bf apollo\-::cyber\-::message\-::\-Raw\-Message}$>$ General\-Channel\-Message\-::\-Copy\-Msg\-Ptr (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{classGeneralChannelMessage_a347060b4136af1997b77ac6671dbb860}
+\hypertarget{classGeneralChannelMessage_a54d35b4c1a5a2d042266fe7ef1591c42}{\index{General\-Channel\-Message@{General\-Channel\-Message}!del\-\_\-reader@{del\-\_\-reader}}
+\index{del\-\_\-reader@{del\-\_\-reader}!GeneralChannelMessage@{General\-Channel\-Message}}
+\subsubsection[{del\-\_\-reader}]{\setlength{\rightskip}{0pt plus 5cm}void General\-Channel\-Message\-::del\-\_\-reader (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{reader}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classGeneralChannelMessage_a54d35b4c1a5a2d042266fe7ef1591c42}
+\hypertarget{classGeneralChannelMessage_aedf08c4b88d2662a627f22b5a20c4ba9}{\index{General\-Channel\-Message@{General\-Channel\-Message}!del\-\_\-writer@{del\-\_\-writer}}
+\index{del\-\_\-writer@{del\-\_\-writer}!GeneralChannelMessage@{General\-Channel\-Message}}
+\subsubsection[{del\-\_\-writer}]{\setlength{\rightskip}{0pt plus 5cm}void General\-Channel\-Message\-::del\-\_\-writer (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{writer}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classGeneralChannelMessage_aedf08c4b88d2662a627f22b5a20c4ba9}
+\hypertarget{classGeneralChannelMessage_a4795285b54ebe85294e2b9ce4ce8440c}{\index{General\-Channel\-Message@{General\-Channel\-Message}!Do\-Add@{Do\-Add}}
+\index{Do\-Add@{Do\-Add}!GeneralChannelMessage@{General\-Channel\-Message}}
+\subsubsection[{Do\-Add}]{\setlength{\rightskip}{0pt plus 5cm}static void General\-Channel\-Message\-::\-Do\-Add (
+\begin{DoxyParamCaption}
+\item[{std\-::vector$<$ std\-::string $>$ \&}]{vec, }
+\item[{const std\-::string \&}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}}\label{classGeneralChannelMessage_a4795285b54ebe85294e2b9ce4ce8440c}
+\hypertarget{classGeneralChannelMessage_a1427cf97f758b92c79262934bab20e28}{\index{General\-Channel\-Message@{General\-Channel\-Message}!Do\-Delete@{Do\-Delete}}
+\index{Do\-Delete@{Do\-Delete}!GeneralChannelMessage@{General\-Channel\-Message}}
+\subsubsection[{Do\-Delete}]{\setlength{\rightskip}{0pt plus 5cm}static void General\-Channel\-Message\-::\-Do\-Delete (
+\begin{DoxyParamCaption}
+\item[{std\-::vector$<$ std\-::string $>$ \&}]{vec, }
+\item[{const std\-::string \&}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}}\label{classGeneralChannelMessage_a1427cf97f758b92c79262934bab20e28}
+\hypertarget{classGeneralChannelMessage_aacef197db8365b40ebc65d33874831a2}{\index{General\-Channel\-Message@{General\-Channel\-Message}!err\-Code2\-Str@{err\-Code2\-Str}}
+\index{err\-Code2\-Str@{err\-Code2\-Str}!GeneralChannelMessage@{General\-Channel\-Message}}
+\subsubsection[{err\-Code2\-Str}]{\setlength{\rightskip}{0pt plus 5cm}static const char$\ast$ General\-Channel\-Message\-::err\-Code2\-Str (
+\begin{DoxyParamCaption}
+\item[{{\bf Error\-Code}}]{err\-Code}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classGeneralChannelMessage_aacef197db8365b40ebc65d33874831a2}
+\hypertarget{classGeneralChannelMessage_ae607e8278605ccb88ea541965a2ff4bd}{\index{General\-Channel\-Message@{General\-Channel\-Message}!frame\-\_\-ratio@{frame\-\_\-ratio}}
+\index{frame\-\_\-ratio@{frame\-\_\-ratio}!GeneralChannelMessage@{General\-Channel\-Message}}
+\subsubsection[{frame\-\_\-ratio}]{\setlength{\rightskip}{0pt plus 5cm}double General\-Channel\-Message\-::frame\-\_\-ratio (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classGeneralChannelMessage_ae607e8278605ccb88ea541965a2ff4bd}
+
+
+Reimplemented from \hyperlink{classRenderableMessage_a7b8a1627a96d0b0658be68c1ad6b99a5}{Renderable\-Message}.
+
+\hypertarget{classGeneralChannelMessage_acd67da9cdc84072627c42879469b2095}{\index{General\-Channel\-Message@{General\-Channel\-Message}!Get\-Channel\-Name@{Get\-Channel\-Name}}
+\index{Get\-Channel\-Name@{Get\-Channel\-Name}!GeneralChannelMessage@{General\-Channel\-Message}}
+\subsubsection[{Get\-Channel\-Name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string General\-Channel\-Message\-::\-Get\-Channel\-Name (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classGeneralChannelMessage_acd67da9cdc84072627c42879469b2095}
+\hypertarget{classGeneralChannelMessage_aa62162c570cfc990be7b5045406ea2ee}{\index{General\-Channel\-Message@{General\-Channel\-Message}!has\-\_\-message\-\_\-come@{has\-\_\-message\-\_\-come}}
+\index{has\-\_\-message\-\_\-come@{has\-\_\-message\-\_\-come}!GeneralChannelMessage@{General\-Channel\-Message}}
+\subsubsection[{has\-\_\-message\-\_\-come}]{\setlength{\rightskip}{0pt plus 5cm}bool General\-Channel\-Message\-::has\-\_\-message\-\_\-come (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classGeneralChannelMessage_aa62162c570cfc990be7b5045406ea2ee}
+\hypertarget{classGeneralChannelMessage_a112d3c8d26558666a5ee296c7e890699}{\index{General\-Channel\-Message@{General\-Channel\-Message}!is\-\_\-enabled@{is\-\_\-enabled}}
+\index{is\-\_\-enabled@{is\-\_\-enabled}!GeneralChannelMessage@{General\-Channel\-Message}}
+\subsubsection[{is\-\_\-enabled}]{\setlength{\rightskip}{0pt plus 5cm}bool General\-Channel\-Message\-::is\-\_\-enabled (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classGeneralChannelMessage_a112d3c8d26558666a5ee296c7e890699}
+\hypertarget{classGeneralChannelMessage_a78584063709d67ee1cd73ce4e3a5e152}{\index{General\-Channel\-Message@{General\-Channel\-Message}!is\-Error\-Code@{is\-Error\-Code}}
+\index{is\-Error\-Code@{is\-Error\-Code}!GeneralChannelMessage@{General\-Channel\-Message}}
+\subsubsection[{is\-Error\-Code}]{\setlength{\rightskip}{0pt plus 5cm}static bool General\-Channel\-Message\-::is\-Error\-Code (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{ptr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classGeneralChannelMessage_a78584063709d67ee1cd73ce4e3a5e152}
+\hypertarget{classGeneralChannelMessage_acffb0de01ee3fd896df64f7caed59ae3}{\index{General\-Channel\-Message@{General\-Channel\-Message}!message\-\_\-type@{message\-\_\-type}}
+\index{message\-\_\-type@{message\-\_\-type}!GeneralChannelMessage@{General\-Channel\-Message}}
+\subsubsection[{message\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::string\& General\-Channel\-Message\-::message\-\_\-type (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classGeneralChannelMessage_acffb0de01ee3fd896df64f7caed59ae3}
+\hypertarget{classGeneralChannelMessage_a3df832daecc2a56b91c1a4165668a699}{\index{General\-Channel\-Message@{General\-Channel\-Message}!Node\-Name@{Node\-Name}}
+\index{Node\-Name@{Node\-Name}!GeneralChannelMessage@{General\-Channel\-Message}}
+\subsubsection[{Node\-Name}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::string\& General\-Channel\-Message\-::\-Node\-Name (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classGeneralChannelMessage_a3df832daecc2a56b91c1a4165668a699}
+\hypertarget{classGeneralChannelMessage_ae1bc06baa0d31bb6757fb5d27f034da9}{\index{General\-Channel\-Message@{General\-Channel\-Message}!Open\-Channel@{Open\-Channel}}
+\index{Open\-Channel@{Open\-Channel}!GeneralChannelMessage@{General\-Channel\-Message}}
+\subsubsection[{Open\-Channel}]{\setlength{\rightskip}{0pt plus 5cm}{\bf General\-Channel\-Message}$\ast$ General\-Channel\-Message\-::\-Open\-Channel (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{channel\-Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classGeneralChannelMessage_ae1bc06baa0d31bb6757fb5d27f034da9}
+\hypertarget{classGeneralChannelMessage_ab6a1a17b601ac4b41e687022ff0ec434}{\index{General\-Channel\-Message@{General\-Channel\-Message}!operator=@{operator=}}
+\index{operator=@{operator=}!GeneralChannelMessage@{General\-Channel\-Message}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf General\-Channel\-Message}\& General\-Channel\-Message\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf General\-Channel\-Message} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}}\label{classGeneralChannelMessage_ab6a1a17b601ac4b41e687022ff0ec434}
+\hypertarget{classGeneralChannelMessage_af7f60b4c6e275dbfd0347aa2f8a2ac14}{\index{General\-Channel\-Message@{General\-Channel\-Message}!Render@{Render}}
+\index{Render@{Render}!GeneralChannelMessage@{General\-Channel\-Message}}
+\subsubsection[{Render}]{\setlength{\rightskip}{0pt plus 5cm}void General\-Channel\-Message\-::\-Render (
+\begin{DoxyParamCaption}
+\item[{const {\bf Screen} $\ast$}]{s, }
+\item[{int}]{key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classGeneralChannelMessage_af7f60b4c6e275dbfd0347aa2f8a2ac14}
+
+
+Implements \hyperlink{classRenderableMessage_a3f65c247f5db9bb4918bca7d665bbdc6}{Renderable\-Message}.
+
+\hypertarget{classGeneralChannelMessage_a47717a3ab362e45cad05f94495168386}{\index{General\-Channel\-Message@{General\-Channel\-Message}!Render\-Debug\-String@{Render\-Debug\-String}}
+\index{Render\-Debug\-String@{Render\-Debug\-String}!GeneralChannelMessage@{General\-Channel\-Message}}
+\subsubsection[{Render\-Debug\-String}]{\setlength{\rightskip}{0pt plus 5cm}void General\-Channel\-Message\-::\-Render\-Debug\-String (
+\begin{DoxyParamCaption}
+\item[{const {\bf Screen} $\ast$}]{s, }
+\item[{int}]{key, }
+\item[{unsigned}]{line\-No}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classGeneralChannelMessage_a47717a3ab362e45cad05f94495168386}
+\hypertarget{classGeneralChannelMessage_a15801ad66f9891d77cb9dbe3e606803e}{\index{General\-Channel\-Message@{General\-Channel\-Message}!Render\-Info@{Render\-Info}}
+\index{Render\-Info@{Render\-Info}!GeneralChannelMessage@{General\-Channel\-Message}}
+\subsubsection[{Render\-Info}]{\setlength{\rightskip}{0pt plus 5cm}void General\-Channel\-Message\-::\-Render\-Info (
+\begin{DoxyParamCaption}
+\item[{const {\bf Screen} $\ast$}]{s, }
+\item[{int}]{key, }
+\item[{unsigned}]{line\-No}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classGeneralChannelMessage_a15801ad66f9891d77cb9dbe3e606803e}
+\hypertarget{classGeneralChannelMessage_ac5344c725f27ad9bd126cc67a8a2238a}{\index{General\-Channel\-Message@{General\-Channel\-Message}!set\-\_\-has\-\_\-message\-\_\-come@{set\-\_\-has\-\_\-message\-\_\-come}}
+\index{set\-\_\-has\-\_\-message\-\_\-come@{set\-\_\-has\-\_\-message\-\_\-come}!GeneralChannelMessage@{General\-Channel\-Message}}
+\subsubsection[{set\-\_\-has\-\_\-message\-\_\-come}]{\setlength{\rightskip}{0pt plus 5cm}void General\-Channel\-Message\-::set\-\_\-has\-\_\-message\-\_\-come (
+\begin{DoxyParamCaption}
+\item[{bool}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{classGeneralChannelMessage_ac5344c725f27ad9bd126cc67a8a2238a}
+\hypertarget{classGeneralChannelMessage_ac8732e4bbf847a2218d78d57d0b9565b}{\index{General\-Channel\-Message@{General\-Channel\-Message}!set\-\_\-message\-\_\-type@{set\-\_\-message\-\_\-type}}
+\index{set\-\_\-message\-\_\-type@{set\-\_\-message\-\_\-type}!GeneralChannelMessage@{General\-Channel\-Message}}
+\subsubsection[{set\-\_\-message\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}void General\-Channel\-Message\-::set\-\_\-message\-\_\-type (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{msg\-Type\-Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classGeneralChannelMessage_ac8732e4bbf847a2218d78d57d0b9565b}
+\hypertarget{classGeneralChannelMessage_aefdf77ab4c8e43b86af7128aaaa5ccac}{\index{General\-Channel\-Message@{General\-Channel\-Message}!update\-Raw\-Message@{update\-Raw\-Message}}
+\index{update\-Raw\-Message@{update\-Raw\-Message}!GeneralChannelMessage@{General\-Channel\-Message}}
+\subsubsection[{update\-Raw\-Message}]{\setlength{\rightskip}{0pt plus 5cm}void General\-Channel\-Message\-::update\-Raw\-Message (
+\begin{DoxyParamCaption}
+\item[{const std\-::shared\-\_\-ptr$<$ {\bf apollo\-::cyber\-::message\-::\-Raw\-Message} $>$ \&}]{raw\-Msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{classGeneralChannelMessage_aefdf77ab4c8e43b86af7128aaaa5ccac}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classGeneralChannelMessage_ae90c7f27bec878186a229b7b314512f6}{\index{General\-Channel\-Message@{General\-Channel\-Message}!Cyber\-Topology\-Message@{Cyber\-Topology\-Message}}
+\index{Cyber\-Topology\-Message@{Cyber\-Topology\-Message}!GeneralChannelMessage@{General\-Channel\-Message}}
+\subsubsection[{Cyber\-Topology\-Message}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Cyber\-Topology\-Message}\hspace{0.3cm}{\ttfamily [friend]}}}\label{classGeneralChannelMessage_ae90c7f27bec878186a229b7b314512f6}
+\hypertarget{classGeneralChannelMessage_abcf2c2516937d8e5700b72b878385bb2}{\index{General\-Channel\-Message@{General\-Channel\-Message}!General\-Message@{General\-Message}}
+\index{General\-Message@{General\-Message}!GeneralChannelMessage@{General\-Channel\-Message}}
+\subsubsection[{General\-Message}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf General\-Message}\hspace{0.3cm}{\ttfamily [friend]}}}\label{classGeneralChannelMessage_abcf2c2516937d8e5700b72b878385bb2}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classGeneralChannelMessage_a6b288701779537fb1a9846214d9ebeac}{\index{General\-Channel\-Message@{General\-Channel\-Message}!channel\-\_\-message\-\_\-@{channel\-\_\-message\-\_\-}}
+\index{channel\-\_\-message\-\_\-@{channel\-\_\-message\-\_\-}!GeneralChannelMessage@{General\-Channel\-Message}}
+\subsubsection[{channel\-\_\-message\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::shared\-\_\-ptr$<${\bf apollo\-::cyber\-::message\-::\-Raw\-Message}$>$ General\-Channel\-Message\-::channel\-\_\-message\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classGeneralChannelMessage_a6b288701779537fb1a9846214d9ebeac}
+\hypertarget{classGeneralChannelMessage_a9663241eded60406a25281d650713ec5}{\index{General\-Channel\-Message@{General\-Channel\-Message}!channel\-\_\-node\-\_\-@{channel\-\_\-node\-\_\-}}
+\index{channel\-\_\-node\-\_\-@{channel\-\_\-node\-\_\-}!GeneralChannelMessage@{General\-Channel\-Message}}
+\subsubsection[{channel\-\_\-node\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::unique\-\_\-ptr$<${\bf apollo\-::cyber\-::\-Node}$>$ General\-Channel\-Message\-::channel\-\_\-node\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classGeneralChannelMessage_a9663241eded60406a25281d650713ec5}
+\hypertarget{classGeneralChannelMessage_a6fbe63b8ee339b6bbf99736aa6a873cf}{\index{General\-Channel\-Message@{General\-Channel\-Message}!channel\-\_\-reader\-\_\-@{channel\-\_\-reader\-\_\-}}
+\index{channel\-\_\-reader\-\_\-@{channel\-\_\-reader\-\_\-}!GeneralChannelMessage@{General\-Channel\-Message}}
+\subsubsection[{channel\-\_\-reader\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::shared\-\_\-ptr$<${\bf apollo\-::cyber\-::\-Reader}$<${\bf apollo\-::cyber\-::message\-::\-Raw\-Message}$>$ $>$ General\-Channel\-Message\-::channel\-\_\-reader\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classGeneralChannelMessage_a6fbe63b8ee339b6bbf99736aa6a873cf}
+\hypertarget{classGeneralChannelMessage_a7b1412a227a2ec0d3baedc0938f931df}{\index{General\-Channel\-Message@{General\-Channel\-Message}!current\-\_\-state\-\_\-@{current\-\_\-state\-\_\-}}
+\index{current\-\_\-state\-\_\-@{current\-\_\-state\-\_\-}!GeneralChannelMessage@{General\-Channel\-Message}}
+\subsubsection[{current\-\_\-state\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf General\-Channel\-Message\-::\-State}  General\-Channel\-Message\-::current\-\_\-state\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classGeneralChannelMessage_a7b1412a227a2ec0d3baedc0938f931df}
+\hypertarget{classGeneralChannelMessage_a3da8072e2c9d5ed6b510378384d2dc4f}{\index{General\-Channel\-Message@{General\-Channel\-Message}!frame\-\_\-counter\-\_\-@{frame\-\_\-counter\-\_\-}}
+\index{frame\-\_\-counter\-\_\-@{frame\-\_\-counter\-\_\-}!GeneralChannelMessage@{General\-Channel\-Message}}
+\subsubsection[{frame\-\_\-counter\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::atomic$<$int$>$ General\-Channel\-Message\-::frame\-\_\-counter\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classGeneralChannelMessage_a3da8072e2c9d5ed6b510378384d2dc4f}
+\hypertarget{classGeneralChannelMessage_af5e386e99b7a8722b485d027e2ed75bd}{\index{General\-Channel\-Message@{General\-Channel\-Message}!has\-\_\-message\-\_\-come\-\_\-@{has\-\_\-message\-\_\-come\-\_\-}}
+\index{has\-\_\-message\-\_\-come\-\_\-@{has\-\_\-message\-\_\-come\-\_\-}!GeneralChannelMessage@{General\-Channel\-Message}}
+\subsubsection[{has\-\_\-message\-\_\-come\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}bool General\-Channel\-Message\-::has\-\_\-message\-\_\-come\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classGeneralChannelMessage_af5e386e99b7a8722b485d027e2ed75bd}
+\hypertarget{classGeneralChannelMessage_a58d9c04f21d27bcbcce36073f4325c7e}{\index{General\-Channel\-Message@{General\-Channel\-Message}!inner\-\_\-lock\-\_\-@{inner\-\_\-lock\-\_\-}}
+\index{inner\-\_\-lock\-\_\-@{inner\-\_\-lock\-\_\-}!GeneralChannelMessage@{General\-Channel\-Message}}
+\subsubsection[{inner\-\_\-lock\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::mutex General\-Channel\-Message\-::inner\-\_\-lock\-\_\-\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}}\label{classGeneralChannelMessage_a58d9c04f21d27bcbcce36073f4325c7e}
+\hypertarget{classGeneralChannelMessage_a8ff50746033122e3479db0cd923a8860}{\index{General\-Channel\-Message@{General\-Channel\-Message}!last\-\_\-time\-\_\-@{last\-\_\-time\-\_\-}}
+\index{last\-\_\-time\-\_\-@{last\-\_\-time\-\_\-}!GeneralChannelMessage@{General\-Channel\-Message}}
+\subsubsection[{last\-\_\-time\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apollo\-::cyber\-::\-Time} General\-Channel\-Message\-::last\-\_\-time\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classGeneralChannelMessage_a8ff50746033122e3479db0cd923a8860}
+\hypertarget{classGeneralChannelMessage_a1d25120dc72e5010565823a544783efc}{\index{General\-Channel\-Message@{General\-Channel\-Message}!message\-\_\-type\-\_\-@{message\-\_\-type\-\_\-}}
+\index{message\-\_\-type\-\_\-@{message\-\_\-type\-\_\-}!GeneralChannelMessage@{General\-Channel\-Message}}
+\subsubsection[{message\-\_\-type\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string General\-Channel\-Message\-::message\-\_\-type\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classGeneralChannelMessage_a1d25120dc72e5010565823a544783efc}
+\hypertarget{classGeneralChannelMessage_a10a1b559a2fd9741bb268fbe1c4290d2}{\index{General\-Channel\-Message@{General\-Channel\-Message}!msg\-\_\-time\-\_\-@{msg\-\_\-time\-\_\-}}
+\index{msg\-\_\-time\-\_\-@{msg\-\_\-time\-\_\-}!GeneralChannelMessage@{General\-Channel\-Message}}
+\subsubsection[{msg\-\_\-time\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apollo\-::cyber\-::\-Time} General\-Channel\-Message\-::msg\-\_\-time\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classGeneralChannelMessage_a10a1b559a2fd9741bb268fbe1c4290d2}
+\hypertarget{classGeneralChannelMessage_a123a419e25302adacba1f1984bc70b22}{\index{General\-Channel\-Message@{General\-Channel\-Message}!node\-\_\-name\-\_\-@{node\-\_\-name\-\_\-}}
+\index{node\-\_\-name\-\_\-@{node\-\_\-name\-\_\-}!GeneralChannelMessage@{General\-Channel\-Message}}
+\subsubsection[{node\-\_\-name\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string General\-Channel\-Message\-::node\-\_\-name\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classGeneralChannelMessage_a123a419e25302adacba1f1984bc70b22}
+\hypertarget{classGeneralChannelMessage_ab150e16ccbb7e536a0b6e6276e3eca7a}{\index{General\-Channel\-Message@{General\-Channel\-Message}!raw\-\_\-msg\-\_\-class\-\_\-@{raw\-\_\-msg\-\_\-class\-\_\-}}
+\index{raw\-\_\-msg\-\_\-class\-\_\-@{raw\-\_\-msg\-\_\-class\-\_\-}!GeneralChannelMessage@{General\-Channel\-Message}}
+\subsubsection[{raw\-\_\-msg\-\_\-class\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}google\-::protobuf\-::\-Message$\ast$ General\-Channel\-Message\-::raw\-\_\-msg\-\_\-class\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classGeneralChannelMessage_ab150e16ccbb7e536a0b6e6276e3eca7a}
+\hypertarget{classGeneralChannelMessage_a2839fca91027887bdb8c7e9df077c105}{\index{General\-Channel\-Message@{General\-Channel\-Message}!readers\-\_\-@{readers\-\_\-}}
+\index{readers\-\_\-@{readers\-\_\-}!GeneralChannelMessage@{General\-Channel\-Message}}
+\subsubsection[{readers\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$std\-::string$>$ General\-Channel\-Message\-::readers\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classGeneralChannelMessage_a2839fca91027887bdb8c7e9df077c105}
+\hypertarget{classGeneralChannelMessage_ad1f7f60900caf4cc8cfba0fb83961a43}{\index{General\-Channel\-Message@{General\-Channel\-Message}!time\-\_\-last\-\_\-calc\-\_\-@{time\-\_\-last\-\_\-calc\-\_\-}}
+\index{time\-\_\-last\-\_\-calc\-\_\-@{time\-\_\-last\-\_\-calc\-\_\-}!GeneralChannelMessage@{General\-Channel\-Message}}
+\subsubsection[{time\-\_\-last\-\_\-calc\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apollo\-::cyber\-::\-Time} General\-Channel\-Message\-::time\-\_\-last\-\_\-calc\-\_\- = {\bf apollo\-::cyber\-::\-Time\-::\-Mono\-Time}()\hspace{0.3cm}{\ttfamily [private]}}}\label{classGeneralChannelMessage_ad1f7f60900caf4cc8cfba0fb83961a43}
+\hypertarget{classGeneralChannelMessage_aff8aed1cdbd9bfebcea0b2bb5f5c6c5b}{\index{General\-Channel\-Message@{General\-Channel\-Message}!writers\-\_\-@{writers\-\_\-}}
+\index{writers\-\_\-@{writers\-\_\-}!GeneralChannelMessage@{General\-Channel\-Message}}
+\subsubsection[{writers\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$std\-::string$>$ General\-Channel\-Message\-::writers\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classGeneralChannelMessage_aff8aed1cdbd9bfebcea0b2bb5f5c6c5b}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+tools/cyber\-\_\-monitor/\hyperlink{general__channel__message_8h}{general\-\_\-channel\-\_\-message.\-h}\end{DoxyCompactItemize}

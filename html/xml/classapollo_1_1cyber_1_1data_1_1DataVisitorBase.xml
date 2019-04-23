@@ -1,0 +1,198 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classapollo_1_1cyber_1_1data_1_1DataVisitorBase" kind="class" prot="public">
+    <compoundname>apollo::cyber::data::DataVisitorBase</compoundname>
+    <derivedcompoundref refid="classapollo_1_1cyber_1_1data_1_1DataVisitor" prot="public" virt="non-virtual">apollo::cyber::data::DataVisitor&lt; M0, M1, M2, M3 &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classapollo_1_1cyber_1_1data_1_1DataVisitor_3_01M0_00_01M1_00_01M2_00_01NullType_01_4" prot="public" virt="non-virtual">apollo::cyber::data::DataVisitor&lt; M0, M1, M2, NullType &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classapollo_1_1cyber_1_1data_1_1DataVisitor_3_01M0_00_01M1_00_01NullType_00_01NullType_01_4" prot="public" virt="non-virtual">apollo::cyber::data::DataVisitor&lt; M0, M1, NullType, NullType &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classapollo_1_1cyber_1_1data_1_1DataVisitor_3_01M0_00_01NullType_00_01NullType_00_01NullType_01_4" prot="public" virt="non-virtual">apollo::cyber::data::DataVisitor&lt; M0, NullType, NullType, NullType &gt;</derivedcompoundref>
+    <includes refid="data__visitor__base_8h" local="no">data_visitor_base.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1data_1_1DataVisitorBase_1a976dda8aacd357161f4b6e49b699063e" prot="protected" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t apollo::cyber::data::DataVisitorBase::next_msg_index_</definition>
+        <argsstring></argsstring>
+        <name>next_msg_index_</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/data/data_visitor_base.h" line="46" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/data/data_visitor_base.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1data_1_1DataVisitorBase_1ac8ac7c3bb6c789652df9155e65504ae8" prot="protected" static="no" mutable="no">
+        <type><ref refid="classapollo_1_1cyber_1_1data_1_1DataNotifier" kindref="compound">DataNotifier</ref> *</type>
+        <definition>DataNotifier* apollo::cyber::data::DataVisitorBase::data_notifier_</definition>
+        <argsstring></argsstring>
+        <name>data_notifier_</name>
+        <initializer>= DataNotifier::Instance()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/data/data_visitor_base.h" line="47" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/data/data_visitor_base.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1data_1_1DataVisitorBase_1a812c283846d1071937478c6ad23daa17" prot="protected" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="structapollo_1_1cyber_1_1data_1_1Notifier" kindref="compound">Notifier</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;Notifier&gt; apollo::cyber::data::DataVisitorBase::notifier_</definition>
+        <argsstring></argsstring>
+        <name>notifier_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/data/data_visitor_base.h" line="48" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/data/data_visitor_base.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1data_1_1DataVisitorBase_1a8197ea5e78feb49af879c99bf313cad9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::data::DataVisitorBase::DataVisitorBase</definition>
+        <argsstring>()</argsstring>
+        <name>DataVisitorBase</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/data/data_visitor_base.h" line="36" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/data/data_visitor_base.h" bodystart="36" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1data_1_1DataVisitorBase_1af810d69a0f617eef9f86ac579f2a4339" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::data::DataVisitorBase::RegisterNotifyCallback</definition>
+        <argsstring>(std::function&lt; void()&gt; &amp;&amp;callback)</argsstring>
+        <name>RegisterNotifyCallback</name>
+        <param>
+          <type>std::function&lt; void()&gt; &amp;&amp;</type>
+          <declname>callback</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/data/data_visitor_base.h" line="38" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/data/data_visitor_base.h" bodystart="38" bodyend="40"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1data_1_1DataVisitorBase_1a1114079807721d7986c48b0b7fc00b5c" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::data::DataVisitorBase::DataVisitorBase</definition>
+        <argsstring>(const DataVisitorBase &amp;)=delete</argsstring>
+        <name>DataVisitorBase</name>
+        <param>
+          <type>const <ref refid="classapollo_1_1cyber_1_1data_1_1DataVisitorBase" kindref="compound">DataVisitorBase</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/data/data_visitor_base.h" line="43" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1data_1_1DataVisitorBase_1ae4533b7ce5ee6dcaf617c1ff1f42d052" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classapollo_1_1cyber_1_1data_1_1DataVisitorBase" kindref="compound">DataVisitorBase</ref> &amp;</type>
+        <definition>DataVisitorBase&amp; apollo::cyber::data::DataVisitorBase::operator=</definition>
+        <argsstring>(const DataVisitorBase &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classapollo_1_1cyber_1_1data_1_1DataVisitorBase" kindref="compound">DataVisitorBase</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/data/data_visitor_base.h" line="44" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="268">
+        <label>apollo::cyber::data::DataVisitor&lt; M0, M1, NullType, NullType &gt;</label>
+        <link refid="classapollo_1_1cyber_1_1data_1_1DataVisitor_3_01M0_00_01M1_00_01NullType_00_01NullType_01_4"/>
+        <childnode refid="265" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="269">
+        <label>apollo::cyber::data::DataVisitor&lt; M0, NullType, NullType, NullType &gt;</label>
+        <link refid="classapollo_1_1cyber_1_1data_1_1DataVisitor_3_01M0_00_01NullType_00_01NullType_00_01NullType_01_4"/>
+        <childnode refid="265" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="265">
+        <label>apollo::cyber::data::DataVisitorBase</label>
+        <link refid="classapollo_1_1cyber_1_1data_1_1DataVisitorBase"/>
+      </node>
+      <node id="267">
+        <label>apollo::cyber::data::DataVisitor&lt; M0, M1, M2, NullType &gt;</label>
+        <link refid="classapollo_1_1cyber_1_1data_1_1DataVisitor_3_01M0_00_01M1_00_01M2_00_01NullType_01_4"/>
+        <childnode refid="265" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="266">
+        <label>apollo::cyber::data::DataVisitor&lt; M0, M1, M2, M3 &gt;</label>
+        <link refid="classapollo_1_1cyber_1_1data_1_1DataVisitor"/>
+        <childnode refid="265" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="272">
+        <label>apollo::cyber::base::AtomicHashMap&lt; uint64_t, NotifyVector &gt;</label>
+        <link refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap"/>
+        <childnode refid="273" relation="usage">
+          <edgelabel>table_</edgelabel>
+        </childnode>
+      </node>
+      <node id="274">
+        <label>apollo::cyber::base::AtomicHashMap&lt; K, V, TableSize, std::enable_if&lt; std::is_integral&lt; K &gt;::value &amp;&amp;(TableSize &amp;(TableSize-1))==0, int &gt;::type &gt;::Entry</label>
+        <link refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry"/>
+      </node>
+      <node id="270">
+        <label>apollo::cyber::data::DataVisitorBase</label>
+        <link refid="classapollo_1_1cyber_1_1data_1_1DataVisitorBase"/>
+        <childnode refid="271" relation="usage">
+          <edgelabel>data_notifier_</edgelabel>
+        </childnode>
+      </node>
+      <node id="273">
+        <label>apollo::cyber::base::AtomicHashMap&lt; K, V, TableSize, std::enable_if&lt; std::is_integral&lt; K &gt;::value &amp;&amp;(TableSize &amp;(TableSize-1))==0, int &gt;::type &gt;::Bucket</label>
+        <link refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Bucket"/>
+        <childnode refid="274" relation="usage">
+          <edgelabel>head_</edgelabel>
+        </childnode>
+      </node>
+      <node id="271">
+        <label>apollo::cyber::data::DataNotifier</label>
+        <link refid="classapollo_1_1cyber_1_1data_1_1DataNotifier"/>
+        <childnode refid="272" relation="usage">
+          <edgelabel>notifies_map_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/work/apollo-fork/apollo/cyber/data/data_visitor_base.h" line="34" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/data/data_visitor_base.h" bodystart="34" bodyend="49"/>
+    <listofallmembers>
+      <member refid="classapollo_1_1cyber_1_1data_1_1DataVisitorBase_1ac8ac7c3bb6c789652df9155e65504ae8" prot="protected" virt="non-virtual"><scope>apollo::cyber::data::DataVisitorBase</scope><name>data_notifier_</name></member>
+      <member refid="classapollo_1_1cyber_1_1data_1_1DataVisitorBase_1a8197ea5e78feb49af879c99bf313cad9" prot="public" virt="non-virtual"><scope>apollo::cyber::data::DataVisitorBase</scope><name>DataVisitorBase</name></member>
+      <member refid="classapollo_1_1cyber_1_1data_1_1DataVisitorBase_1a1114079807721d7986c48b0b7fc00b5c" prot="protected" virt="non-virtual"><scope>apollo::cyber::data::DataVisitorBase</scope><name>DataVisitorBase</name></member>
+      <member refid="classapollo_1_1cyber_1_1data_1_1DataVisitorBase_1a976dda8aacd357161f4b6e49b699063e" prot="protected" virt="non-virtual"><scope>apollo::cyber::data::DataVisitorBase</scope><name>next_msg_index_</name></member>
+      <member refid="classapollo_1_1cyber_1_1data_1_1DataVisitorBase_1a812c283846d1071937478c6ad23daa17" prot="protected" virt="non-virtual"><scope>apollo::cyber::data::DataVisitorBase</scope><name>notifier_</name></member>
+      <member refid="classapollo_1_1cyber_1_1data_1_1DataVisitorBase_1ae4533b7ce5ee6dcaf617c1ff1f42d052" prot="protected" virt="non-virtual"><scope>apollo::cyber::data::DataVisitorBase</scope><name>operator=</name></member>
+      <member refid="classapollo_1_1cyber_1_1data_1_1DataVisitorBase_1af810d69a0f617eef9f86ac579f2a4339" prot="public" virt="non-virtual"><scope>apollo::cyber::data::DataVisitorBase</scope><name>RegisterNotifyCallback</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

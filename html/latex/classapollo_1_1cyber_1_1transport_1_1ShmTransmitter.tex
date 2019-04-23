@@ -1,0 +1,136 @@
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1ShmTransmitter}{\section{apollo\-:\-:cyber\-:\-:transport\-:\-:Shm\-Transmitter$<$ M $>$ Class Template Reference}
+\label{classapollo_1_1cyber_1_1transport_1_1ShmTransmitter}\index{apollo\-::cyber\-::transport\-::\-Shm\-Transmitter$<$ M $>$@{apollo\-::cyber\-::transport\-::\-Shm\-Transmitter$<$ M $>$}}
+}
+
+
+{\ttfamily \#include $<$shm\-\_\-transmitter.\-h$>$}
+
+Inheritance diagram for apollo\-:\-:cyber\-:\-:transport\-:\-:Shm\-Transmitter$<$ M $>$\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classapollo_1_1cyber_1_1transport_1_1ShmTransmitter}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1transport_1_1ShmTransmitter_a2970b67f207ebf3359f3b2b5e0407287}{Message\-Ptr} = std\-::shared\-\_\-ptr$<$ M $>$
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1transport_1_1ShmTransmitter_a3c29627d7c09996c4997230196343304}{Shm\-Transmitter} (const Role\-Attributes \&attr)
+\item 
+virtual \hyperlink{classapollo_1_1cyber_1_1transport_1_1ShmTransmitter_a44c390334213e749cb8628f3d1c61ac3}{$\sim$\-Shm\-Transmitter} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1transport_1_1ShmTransmitter_ae47bc5dc313f901843600ca23ae51926}{Enable} () override
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1transport_1_1ShmTransmitter_a5f4559decbf0802768bcf7f9a083e202}{Disable} () override
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1transport_1_1ShmTransmitter_aed9d36fd9aba98640a4acfbcbe2610fb}{Transmit} (const \hyperlink{classapollo_1_1cyber_1_1transport_1_1ShmTransmitter_a2970b67f207ebf3359f3b2b5e0407287}{Message\-Ptr} \&msg, const \hyperlink{classapollo_1_1cyber_1_1transport_1_1MessageInfo}{Message\-Info} \&msg\-\_\-info) override
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1transport_1_1ShmTransmitter_a956db70c05903c96ac6a14ac1f92f636}{Transmit} (const M \&msg, const \hyperlink{classapollo_1_1cyber_1_1transport_1_1MessageInfo}{Message\-Info} \&msg\-\_\-info)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespaceapollo_1_1cyber_1_1transport_ae92e21f5ec6b011ba398cd6907465406}{Segment\-Ptr} \hyperlink{classapollo_1_1cyber_1_1transport_1_1ShmTransmitter_a527f62b8c1680536bee1ca9b77606a09}{segment\-\_\-}
+\item 
+uint64\-\_\-t \hyperlink{classapollo_1_1cyber_1_1transport_1_1ShmTransmitter_acf81c9fa97f65a949ce4c8cfbb7ed7db}{channel\-\_\-id\-\_\-}
+\item 
+uint64\-\_\-t \hyperlink{classapollo_1_1cyber_1_1transport_1_1ShmTransmitter_ab392a50b184f87144a1f00207b51ff62}{host\-\_\-id\-\_\-}
+\item 
+\hyperlink{namespaceapollo_1_1cyber_1_1transport_ad7de1bbf34457c17c4d04b9bbfe152b4}{Notifier\-Ptr} \hyperlink{classapollo_1_1cyber_1_1transport_1_1ShmTransmitter_acb9ca393283d51f5464b291eb355aef7}{notifier\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1ShmTransmitter_a2970b67f207ebf3359f3b2b5e0407287}{\index{apollo\-::cyber\-::transport\-::\-Shm\-Transmitter@{apollo\-::cyber\-::transport\-::\-Shm\-Transmitter}!Message\-Ptr@{Message\-Ptr}}
+\index{Message\-Ptr@{Message\-Ptr}!apollo::cyber::transport::ShmTransmitter@{apollo\-::cyber\-::transport\-::\-Shm\-Transmitter}}
+\subsubsection[{Message\-Ptr}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ using {\bf apollo\-::cyber\-::transport\-::\-Shm\-Transmitter}$<$ M $>$\-::{\bf Message\-Ptr} =  std\-::shared\-\_\-ptr$<$M$>$}}\label{classapollo_1_1cyber_1_1transport_1_1ShmTransmitter_a2970b67f207ebf3359f3b2b5e0407287}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1ShmTransmitter_a3c29627d7c09996c4997230196343304}{\index{apollo\-::cyber\-::transport\-::\-Shm\-Transmitter@{apollo\-::cyber\-::transport\-::\-Shm\-Transmitter}!Shm\-Transmitter@{Shm\-Transmitter}}
+\index{Shm\-Transmitter@{Shm\-Transmitter}!apollo::cyber::transport::ShmTransmitter@{apollo\-::cyber\-::transport\-::\-Shm\-Transmitter}}
+\subsubsection[{Shm\-Transmitter}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ {\bf apollo\-::cyber\-::transport\-::\-Shm\-Transmitter}$<$ M $>$\-::{\bf Shm\-Transmitter} (
+\begin{DoxyParamCaption}
+\item[{const Role\-Attributes \&}]{attr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}}\label{classapollo_1_1cyber_1_1transport_1_1ShmTransmitter_a3c29627d7c09996c4997230196343304}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1ShmTransmitter_a44c390334213e749cb8628f3d1c61ac3}{\index{apollo\-::cyber\-::transport\-::\-Shm\-Transmitter@{apollo\-::cyber\-::transport\-::\-Shm\-Transmitter}!$\sim$\-Shm\-Transmitter@{$\sim$\-Shm\-Transmitter}}
+\index{$\sim$\-Shm\-Transmitter@{$\sim$\-Shm\-Transmitter}!apollo::cyber::transport::ShmTransmitter@{apollo\-::cyber\-::transport\-::\-Shm\-Transmitter}}
+\subsubsection[{$\sim$\-Shm\-Transmitter}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ {\bf apollo\-::cyber\-::transport\-::\-Shm\-Transmitter}$<$ M $>$\-::$\sim${\bf Shm\-Transmitter} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1transport_1_1ShmTransmitter_a44c390334213e749cb8628f3d1c61ac3}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1ShmTransmitter_a5f4559decbf0802768bcf7f9a083e202}{\index{apollo\-::cyber\-::transport\-::\-Shm\-Transmitter@{apollo\-::cyber\-::transport\-::\-Shm\-Transmitter}!Disable@{Disable}}
+\index{Disable@{Disable}!apollo::cyber::transport::ShmTransmitter@{apollo\-::cyber\-::transport\-::\-Shm\-Transmitter}}
+\subsubsection[{Disable}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ void {\bf apollo\-::cyber\-::transport\-::\-Shm\-Transmitter}$<$ M $>$\-::Disable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1transport_1_1ShmTransmitter_a5f4559decbf0802768bcf7f9a083e202}
+
+
+Implements \hyperlink{classapollo_1_1cyber_1_1transport_1_1Transmitter_a24bc426b201239fceff22535351a1903}{apollo\-::cyber\-::transport\-::\-Transmitter$<$ M $>$}.
+
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1ShmTransmitter_ae47bc5dc313f901843600ca23ae51926}{\index{apollo\-::cyber\-::transport\-::\-Shm\-Transmitter@{apollo\-::cyber\-::transport\-::\-Shm\-Transmitter}!Enable@{Enable}}
+\index{Enable@{Enable}!apollo::cyber::transport::ShmTransmitter@{apollo\-::cyber\-::transport\-::\-Shm\-Transmitter}}
+\subsubsection[{Enable}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ void {\bf apollo\-::cyber\-::transport\-::\-Shm\-Transmitter}$<$ M $>$\-::Enable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1transport_1_1ShmTransmitter_ae47bc5dc313f901843600ca23ae51926}
+
+
+Implements \hyperlink{classapollo_1_1cyber_1_1transport_1_1Transmitter_aa4fd1ee72a6ba751226570e4ff54920d}{apollo\-::cyber\-::transport\-::\-Transmitter$<$ M $>$}.
+
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1ShmTransmitter_aed9d36fd9aba98640a4acfbcbe2610fb}{\index{apollo\-::cyber\-::transport\-::\-Shm\-Transmitter@{apollo\-::cyber\-::transport\-::\-Shm\-Transmitter}!Transmit@{Transmit}}
+\index{Transmit@{Transmit}!apollo::cyber::transport::ShmTransmitter@{apollo\-::cyber\-::transport\-::\-Shm\-Transmitter}}
+\subsubsection[{Transmit}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ bool {\bf apollo\-::cyber\-::transport\-::\-Shm\-Transmitter}$<$ M $>$\-::Transmit (
+\begin{DoxyParamCaption}
+\item[{const {\bf Message\-Ptr} \&}]{msg, }
+\item[{const {\bf Message\-Info} \&}]{msg\-\_\-info}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1transport_1_1ShmTransmitter_aed9d36fd9aba98640a4acfbcbe2610fb}
+
+
+Implements \hyperlink{classapollo_1_1cyber_1_1transport_1_1Transmitter_af3a4b7fb0a6dcc1bd00437c121b18e19}{apollo\-::cyber\-::transport\-::\-Transmitter$<$ M $>$}.
+
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1ShmTransmitter_a956db70c05903c96ac6a14ac1f92f636}{\index{apollo\-::cyber\-::transport\-::\-Shm\-Transmitter@{apollo\-::cyber\-::transport\-::\-Shm\-Transmitter}!Transmit@{Transmit}}
+\index{Transmit@{Transmit}!apollo::cyber::transport::ShmTransmitter@{apollo\-::cyber\-::transport\-::\-Shm\-Transmitter}}
+\subsubsection[{Transmit}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ bool {\bf apollo\-::cyber\-::transport\-::\-Shm\-Transmitter}$<$ M $>$\-::Transmit (
+\begin{DoxyParamCaption}
+\item[{const M \&}]{msg, }
+\item[{const {\bf Message\-Info} \&}]{msg\-\_\-info}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1ShmTransmitter_a956db70c05903c96ac6a14ac1f92f636}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1ShmTransmitter_acf81c9fa97f65a949ce4c8cfbb7ed7db}{\index{apollo\-::cyber\-::transport\-::\-Shm\-Transmitter@{apollo\-::cyber\-::transport\-::\-Shm\-Transmitter}!channel\-\_\-id\-\_\-@{channel\-\_\-id\-\_\-}}
+\index{channel\-\_\-id\-\_\-@{channel\-\_\-id\-\_\-}!apollo::cyber::transport::ShmTransmitter@{apollo\-::cyber\-::transport\-::\-Shm\-Transmitter}}
+\subsubsection[{channel\-\_\-id\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ uint64\-\_\-t {\bf apollo\-::cyber\-::transport\-::\-Shm\-Transmitter}$<$ M $>$\-::channel\-\_\-id\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1ShmTransmitter_acf81c9fa97f65a949ce4c8cfbb7ed7db}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1ShmTransmitter_ab392a50b184f87144a1f00207b51ff62}{\index{apollo\-::cyber\-::transport\-::\-Shm\-Transmitter@{apollo\-::cyber\-::transport\-::\-Shm\-Transmitter}!host\-\_\-id\-\_\-@{host\-\_\-id\-\_\-}}
+\index{host\-\_\-id\-\_\-@{host\-\_\-id\-\_\-}!apollo::cyber::transport::ShmTransmitter@{apollo\-::cyber\-::transport\-::\-Shm\-Transmitter}}
+\subsubsection[{host\-\_\-id\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ uint64\-\_\-t {\bf apollo\-::cyber\-::transport\-::\-Shm\-Transmitter}$<$ M $>$\-::host\-\_\-id\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1ShmTransmitter_ab392a50b184f87144a1f00207b51ff62}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1ShmTransmitter_acb9ca393283d51f5464b291eb355aef7}{\index{apollo\-::cyber\-::transport\-::\-Shm\-Transmitter@{apollo\-::cyber\-::transport\-::\-Shm\-Transmitter}!notifier\-\_\-@{notifier\-\_\-}}
+\index{notifier\-\_\-@{notifier\-\_\-}!apollo::cyber::transport::ShmTransmitter@{apollo\-::cyber\-::transport\-::\-Shm\-Transmitter}}
+\subsubsection[{notifier\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ {\bf Notifier\-Ptr} {\bf apollo\-::cyber\-::transport\-::\-Shm\-Transmitter}$<$ M $>$\-::notifier\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1ShmTransmitter_acb9ca393283d51f5464b291eb355aef7}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1ShmTransmitter_a527f62b8c1680536bee1ca9b77606a09}{\index{apollo\-::cyber\-::transport\-::\-Shm\-Transmitter@{apollo\-::cyber\-::transport\-::\-Shm\-Transmitter}!segment\-\_\-@{segment\-\_\-}}
+\index{segment\-\_\-@{segment\-\_\-}!apollo::cyber::transport::ShmTransmitter@{apollo\-::cyber\-::transport\-::\-Shm\-Transmitter}}
+\subsubsection[{segment\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ {\bf Segment\-Ptr} {\bf apollo\-::cyber\-::transport\-::\-Shm\-Transmitter}$<$ M $>$\-::segment\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1ShmTransmitter_a527f62b8c1680536bee1ca9b77606a09}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+transport/transmitter/\hyperlink{shm__transmitter_8h}{shm\-\_\-transmitter.\-h}\end{DoxyCompactItemize}

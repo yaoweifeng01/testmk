@@ -1,0 +1,193 @@
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1Graph}{\section{apollo\-:\-:cyber\-:\-:service\-\_\-discovery\-:\-:Graph Class Reference}
+\label{classapollo_1_1cyber_1_1service__discovery_1_1Graph}\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph}}
+}
+
+
+{\ttfamily \#include $<$graph.\-h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structapollo_1_1cyber_1_1service__discovery_1_1Graph_1_1RelatedVertices}{Related\-Vertices}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1Graph_ad9bc989f8c0b0495694872a2bb65f008}{Vertice\-Set} = std\-::unordered\-\_\-map$<$ std\-::string, \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1Vertice}{Vertice} $>$
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1Graph_a10a571d907b509c8d5026d5209e8edc9}{Adjacency\-List} = std\-::unordered\-\_\-map$<$ std\-::string, \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1Graph_ad9bc989f8c0b0495694872a2bb65f008}{Vertice\-Set} $>$
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1Graph_a50698f103057f739a4651ea2a16bbe19}{Graph} ()
+\item 
+virtual \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1Graph_a28c666ff84beff1b107455a920ea1c6b}{$\sim$\-Graph} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1Graph_a5b20125a0bcfbebd47b2bb68c2b43961}{Insert} (const \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1Edge}{Edge} \&e)
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1Graph_a921bf81cecef62fe5621ac45042f0589}{Delete} (const \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1Edge}{Edge} \&e)
+\item 
+uint32\-\_\-t \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1Graph_a2dd897c1c5d12192c4ed6128617be573}{Get\-Num\-Of\-Edge} ()
+\item 
+\hyperlink{namespaceapollo_1_1cyber_1_1service__discovery_a463f9fa98e31287620adc568e1299c79}{Flow\-Direction} \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1Graph_a8046937e5ba9c37966c1146cca73149b}{Get\-Direction\-Of} (const \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1Vertice}{Vertice} \&lhs, const \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1Vertice}{Vertice} \&rhs)
+\end{DoxyCompactItemize}
+\subsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1Graph_ac45189064420abb326708f92fa17205a}{Edge\-Info} = std\-::unordered\-\_\-map$<$ std\-::string, \hyperlink{structapollo_1_1cyber_1_1service__discovery_1_1Graph_1_1RelatedVertices}{Related\-Vertices} $>$
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1Graph_a0011c94b84f1f5019abe9707d27bc64a}{Insert\-Outgoing\-Edge} (const \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1Edge}{Edge} \&e)
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1Graph_aac0a755052600861f4d051ae0763e768}{Insert\-Incoming\-Edge} (const \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1Edge}{Edge} \&e)
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1Graph_ae1391e8b9baaf33abae6b96c2a4cf4b3}{Insert\-Complete\-Edge} (const \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1Edge}{Edge} \&e)
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1Graph_abb689b821a7c124f31f71ab5e1d54560}{Delete\-Outgoing\-Edge} (const \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1Edge}{Edge} \&e)
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1Graph_a1db840aa96f7bf1c6d89e528092254cc}{Delete\-Incoming\-Edge} (const \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1Edge}{Edge} \&e)
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1Graph_abe4a81fa7390cce8de5232e59a9b5424}{Delete\-Complete\-Edge} (const \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1Edge}{Edge} \&e)
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1Graph_ad335fbccdbe08d2bc5b9b3319a6c951a}{Level\-Traverse} (const \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1Vertice}{Vertice} \&start, const \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1Vertice}{Vertice} \&end)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1Graph_ac45189064420abb326708f92fa17205a}{Edge\-Info} \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1Graph_a74968952c03f0c041066d7018e9a5d3d}{edges\-\_\-}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1Graph_a10a571d907b509c8d5026d5209e8edc9}{Adjacency\-List} \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1Graph_ae41f952e2dd84c01534f193ac3a089fa}{list\-\_\-}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1base_1_1AtomicRWLock}{base\-::\-Atomic\-R\-W\-Lock} \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1Graph_a7b06cdf8ac753e9e571b7e5789ad7bc1}{rw\-\_\-lock\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1Graph_a10a571d907b509c8d5026d5209e8edc9}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph}!Adjacency\-List@{Adjacency\-List}}
+\index{Adjacency\-List@{Adjacency\-List}!apollo::cyber::service_discovery::Graph@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph}}
+\subsubsection[{Adjacency\-List}]{\setlength{\rightskip}{0pt plus 5cm}using {\bf apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph\-::\-Adjacency\-List} =  std\-::unordered\-\_\-map$<$std\-::string, {\bf Vertice\-Set}$>$}}\label{classapollo_1_1cyber_1_1service__discovery_1_1Graph_a10a571d907b509c8d5026d5209e8edc9}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1Graph_ac45189064420abb326708f92fa17205a}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph}!Edge\-Info@{Edge\-Info}}
+\index{Edge\-Info@{Edge\-Info}!apollo::cyber::service_discovery::Graph@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph}}
+\subsubsection[{Edge\-Info}]{\setlength{\rightskip}{0pt plus 5cm}using {\bf apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph\-::\-Edge\-Info} =  std\-::unordered\-\_\-map$<$std\-::string, {\bf Related\-Vertices}$>$\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1Graph_ac45189064420abb326708f92fa17205a}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1Graph_ad9bc989f8c0b0495694872a2bb65f008}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph}!Vertice\-Set@{Vertice\-Set}}
+\index{Vertice\-Set@{Vertice\-Set}!apollo::cyber::service_discovery::Graph@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph}}
+\subsubsection[{Vertice\-Set}]{\setlength{\rightskip}{0pt plus 5cm}using {\bf apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph\-::\-Vertice\-Set} =  std\-::unordered\-\_\-map$<$std\-::string, {\bf Vertice}$>$}}\label{classapollo_1_1cyber_1_1service__discovery_1_1Graph_ad9bc989f8c0b0495694872a2bb65f008}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1Graph_a50698f103057f739a4651ea2a16bbe19}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph}!Graph@{Graph}}
+\index{Graph@{Graph}!apollo::cyber::service_discovery::Graph@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph}}
+\subsubsection[{Graph}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph\-::\-Graph (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1service__discovery_1_1Graph_a50698f103057f739a4651ea2a16bbe19}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1Graph_a28c666ff84beff1b107455a920ea1c6b}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph}!$\sim$\-Graph@{$\sim$\-Graph}}
+\index{$\sim$\-Graph@{$\sim$\-Graph}!apollo::cyber::service_discovery::Graph@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph}}
+\subsubsection[{$\sim$\-Graph}]{\setlength{\rightskip}{0pt plus 5cm}virtual apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph\-::$\sim$\-Graph (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1Graph_a28c666ff84beff1b107455a920ea1c6b}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1Graph_a921bf81cecef62fe5621ac45042f0589}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph}!Delete@{Delete}}
+\index{Delete@{Delete}!apollo::cyber::service_discovery::Graph@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph}}
+\subsubsection[{Delete}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph\-::\-Delete (
+\begin{DoxyParamCaption}
+\item[{const {\bf Edge} \&}]{e}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1service__discovery_1_1Graph_a921bf81cecef62fe5621ac45042f0589}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1Graph_abe4a81fa7390cce8de5232e59a9b5424}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph}!Delete\-Complete\-Edge@{Delete\-Complete\-Edge}}
+\index{Delete\-Complete\-Edge@{Delete\-Complete\-Edge}!apollo::cyber::service_discovery::Graph@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph}}
+\subsubsection[{Delete\-Complete\-Edge}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph\-::\-Delete\-Complete\-Edge (
+\begin{DoxyParamCaption}
+\item[{const {\bf Edge} \&}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1Graph_abe4a81fa7390cce8de5232e59a9b5424}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1Graph_a1db840aa96f7bf1c6d89e528092254cc}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph}!Delete\-Incoming\-Edge@{Delete\-Incoming\-Edge}}
+\index{Delete\-Incoming\-Edge@{Delete\-Incoming\-Edge}!apollo::cyber::service_discovery::Graph@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph}}
+\subsubsection[{Delete\-Incoming\-Edge}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph\-::\-Delete\-Incoming\-Edge (
+\begin{DoxyParamCaption}
+\item[{const {\bf Edge} \&}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1Graph_a1db840aa96f7bf1c6d89e528092254cc}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1Graph_abb689b821a7c124f31f71ab5e1d54560}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph}!Delete\-Outgoing\-Edge@{Delete\-Outgoing\-Edge}}
+\index{Delete\-Outgoing\-Edge@{Delete\-Outgoing\-Edge}!apollo::cyber::service_discovery::Graph@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph}}
+\subsubsection[{Delete\-Outgoing\-Edge}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph\-::\-Delete\-Outgoing\-Edge (
+\begin{DoxyParamCaption}
+\item[{const {\bf Edge} \&}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1Graph_abb689b821a7c124f31f71ab5e1d54560}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1Graph_a8046937e5ba9c37966c1146cca73149b}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph}!Get\-Direction\-Of@{Get\-Direction\-Of}}
+\index{Get\-Direction\-Of@{Get\-Direction\-Of}!apollo::cyber::service_discovery::Graph@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph}}
+\subsubsection[{Get\-Direction\-Of}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Flow\-Direction} apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph\-::\-Get\-Direction\-Of (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vertice} \&}]{lhs, }
+\item[{const {\bf Vertice} \&}]{rhs}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1service__discovery_1_1Graph_a8046937e5ba9c37966c1146cca73149b}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1Graph_a2dd897c1c5d12192c4ed6128617be573}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph}!Get\-Num\-Of\-Edge@{Get\-Num\-Of\-Edge}}
+\index{Get\-Num\-Of\-Edge@{Get\-Num\-Of\-Edge}!apollo::cyber::service_discovery::Graph@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph}}
+\subsubsection[{Get\-Num\-Of\-Edge}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph\-::\-Get\-Num\-Of\-Edge (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1service__discovery_1_1Graph_a2dd897c1c5d12192c4ed6128617be573}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1Graph_a5b20125a0bcfbebd47b2bb68c2b43961}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph}!Insert@{Insert}}
+\index{Insert@{Insert}!apollo::cyber::service_discovery::Graph@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph}}
+\subsubsection[{Insert}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph\-::\-Insert (
+\begin{DoxyParamCaption}
+\item[{const {\bf Edge} \&}]{e}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1service__discovery_1_1Graph_a5b20125a0bcfbebd47b2bb68c2b43961}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1Graph_ae1391e8b9baaf33abae6b96c2a4cf4b3}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph}!Insert\-Complete\-Edge@{Insert\-Complete\-Edge}}
+\index{Insert\-Complete\-Edge@{Insert\-Complete\-Edge}!apollo::cyber::service_discovery::Graph@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph}}
+\subsubsection[{Insert\-Complete\-Edge}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph\-::\-Insert\-Complete\-Edge (
+\begin{DoxyParamCaption}
+\item[{const {\bf Edge} \&}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1Graph_ae1391e8b9baaf33abae6b96c2a4cf4b3}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1Graph_aac0a755052600861f4d051ae0763e768}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph}!Insert\-Incoming\-Edge@{Insert\-Incoming\-Edge}}
+\index{Insert\-Incoming\-Edge@{Insert\-Incoming\-Edge}!apollo::cyber::service_discovery::Graph@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph}}
+\subsubsection[{Insert\-Incoming\-Edge}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph\-::\-Insert\-Incoming\-Edge (
+\begin{DoxyParamCaption}
+\item[{const {\bf Edge} \&}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1Graph_aac0a755052600861f4d051ae0763e768}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1Graph_a0011c94b84f1f5019abe9707d27bc64a}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph}!Insert\-Outgoing\-Edge@{Insert\-Outgoing\-Edge}}
+\index{Insert\-Outgoing\-Edge@{Insert\-Outgoing\-Edge}!apollo::cyber::service_discovery::Graph@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph}}
+\subsubsection[{Insert\-Outgoing\-Edge}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph\-::\-Insert\-Outgoing\-Edge (
+\begin{DoxyParamCaption}
+\item[{const {\bf Edge} \&}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1Graph_a0011c94b84f1f5019abe9707d27bc64a}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1Graph_ad335fbccdbe08d2bc5b9b3319a6c951a}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph}!Level\-Traverse@{Level\-Traverse}}
+\index{Level\-Traverse@{Level\-Traverse}!apollo::cyber::service_discovery::Graph@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph}}
+\subsubsection[{Level\-Traverse}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph\-::\-Level\-Traverse (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vertice} \&}]{start, }
+\item[{const {\bf Vertice} \&}]{end}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1Graph_ad335fbccdbe08d2bc5b9b3319a6c951a}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1Graph_a74968952c03f0c041066d7018e9a5d3d}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph}!edges\-\_\-@{edges\-\_\-}}
+\index{edges\-\_\-@{edges\-\_\-}!apollo::cyber::service_discovery::Graph@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph}}
+\subsubsection[{edges\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Edge\-Info} apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph\-::edges\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1Graph_a74968952c03f0c041066d7018e9a5d3d}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1Graph_ae41f952e2dd84c01534f193ac3a089fa}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph}!list\-\_\-@{list\-\_\-}}
+\index{list\-\_\-@{list\-\_\-}!apollo::cyber::service_discovery::Graph@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph}}
+\subsubsection[{list\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Adjacency\-List} apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph\-::list\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1Graph_ae41f952e2dd84c01534f193ac3a089fa}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1Graph_a7b06cdf8ac753e9e571b7e5789ad7bc1}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph}!rw\-\_\-lock\-\_\-@{rw\-\_\-lock\-\_\-}}
+\index{rw\-\_\-lock\-\_\-@{rw\-\_\-lock\-\_\-}!apollo::cyber::service_discovery::Graph@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph}}
+\subsubsection[{rw\-\_\-lock\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf base\-::\-Atomic\-R\-W\-Lock} apollo\-::cyber\-::service\-\_\-discovery\-::\-Graph\-::rw\-\_\-lock\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1Graph_a7b06cdf8ac753e9e571b7e5789ad7bc1}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+service\-\_\-discovery/container/\hyperlink{graph_8h}{graph.\-h}\end{DoxyCompactItemize}

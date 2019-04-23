@@ -1,0 +1,309 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classapollo_1_1cyber_1_1base_1_1AtomicHashMap" kind="class" prot="public">
+    <compoundname>apollo::cyber::base::AtomicHashMap</compoundname>
+    <includes refid="atomic__hash__map_8h" local="no">atomic_hash_map.h</includes>
+    <innerclass refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Bucket" prot="private">apollo::cyber::base::AtomicHashMap::Bucket</innerclass>
+    <innerclass refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry" prot="private">apollo::cyber::base::AtomicHashMap::Entry</innerclass>
+    <templateparamlist>
+      <param>
+        <type>typename</type>
+        <declname>K</declname>
+        <defname>K</defname>
+      </param>
+      <param>
+        <type>typename</type>
+        <declname>V</declname>
+        <defname>V</defname>
+      </param>
+      <param>
+        <type>std::size_t</type>
+        <declname>TableSize</declname>
+        <defname>TableSize</defname>
+        <defval>128</defval>
+      </param>
+      <param>
+        <type>typename</type>
+        <declname>std::enable_if< std::is_integral< K >::value &&(TableSize &(TableSize-1))==0, int >::type</declname>
+        <defname>std::enable_if< std::is_integral< K >::value &&(TableSize &(TableSize-1))==0, int >::type</defname>
+        <defval>0</defval>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1aab575e13b07e0465956aeb1aaef42e22" prot="private" static="no" mutable="no">
+        <type><ref refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Bucket" kindref="compound">Bucket</ref></type>
+        <definition>Bucket apollo::cyber::base::AtomicHashMap&lt; K, V, TableSize, type &gt;::table_[TableSize]</definition>
+        <argsstring>[TableSize]</argsstring>
+        <name>table_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/atomic_hash_map.h" line="251" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/atomic_hash_map.h" bodystart="251" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1ada585ac9c1211917c1d08bf3ef77281f" prot="private" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t apollo::cyber::base::AtomicHashMap&lt; K, V, TableSize, type &gt;::capacity_</definition>
+        <argsstring></argsstring>
+        <name>capacity_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/atomic_hash_map.h" line="252" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/atomic_hash_map.h" bodystart="252" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1adb15b0fce4c41fa3b25a32b5ba7e23bc" prot="private" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t apollo::cyber::base::AtomicHashMap&lt; K, V, TableSize, type &gt;::mode_num_</definition>
+        <argsstring></argsstring>
+        <name>mode_num_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/atomic_hash_map.h" line="253" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/atomic_hash_map.h" bodystart="253" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1aa1a83359c21d93a096e806382f03e129" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::base::AtomicHashMap&lt; K, V, TableSize, type &gt;::AtomicHashMap</definition>
+        <argsstring>()</argsstring>
+        <name>AtomicHashMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/atomic_hash_map.h" line="42" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/atomic_hash_map.h" bodystart="42" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1aa27dda760cfb4332fe043d5c23242c20" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::base::AtomicHashMap&lt; K, V, TableSize, type &gt;::AtomicHashMap</definition>
+        <argsstring>(const AtomicHashMap &amp;other)=delete</argsstring>
+        <name>AtomicHashMap</name>
+        <param>
+          <type>const <ref refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap" kindref="compound">AtomicHashMap</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/atomic_hash_map.h" line="43" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1a780be857f6f6d0330da564afd8266620" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap" kindref="compound">AtomicHashMap</ref> &amp;</type>
+        <definition>AtomicHashMap&amp; apollo::cyber::base::AtomicHashMap&lt; K, V, TableSize, type &gt;::operator=</definition>
+        <argsstring>(const AtomicHashMap &amp;other)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap" kindref="compound">AtomicHashMap</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/atomic_hash_map.h" line="44" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1ac038ea2f8018172914fcadb807a970a8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::base::AtomicHashMap&lt; K, V, TableSize, type &gt;::Has</definition>
+        <argsstring>(K key)</argsstring>
+        <name>Has</name>
+        <param>
+          <type>K</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/atomic_hash_map.h" line="46" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/atomic_hash_map.h" bodystart="46" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1a0cffa9d1d855e4733f18071b0d7a077d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::base::AtomicHashMap&lt; K, V, TableSize, type &gt;::Get</definition>
+        <argsstring>(K key, V **value)</argsstring>
+        <name>Get</name>
+        <param>
+          <type>K</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>V **</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/atomic_hash_map.h" line="51" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/atomic_hash_map.h" bodystart="51" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1a3b8fc8d906e4e6c116c991cd178c8655" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::base::AtomicHashMap&lt; K, V, TableSize, type &gt;::Get</definition>
+        <argsstring>(K key, V *value)</argsstring>
+        <name>Get</name>
+        <param>
+          <type>K</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>V *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/atomic_hash_map.h" line="56" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/atomic_hash_map.h" bodystart="56" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1a9ed2851c909e8ac9662f92d81df18efe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::base::AtomicHashMap&lt; K, V, TableSize, type &gt;::Set</definition>
+        <argsstring>(K key)</argsstring>
+        <name>Set</name>
+        <param>
+          <type>K</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/atomic_hash_map.h" line="66" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/atomic_hash_map.h" bodystart="66" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1a595719e722207e09c63feb85b505ef36" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::base::AtomicHashMap&lt; K, V, TableSize, type &gt;::Set</definition>
+        <argsstring>(K key, const V &amp;value)</argsstring>
+        <name>Set</name>
+        <param>
+          <type>K</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>const V &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/atomic_hash_map.h" line="71" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/atomic_hash_map.h" bodystart="71" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1ac4c44e27832b4965f999eeed068938d1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::base::AtomicHashMap&lt; K, V, TableSize, type &gt;::Set</definition>
+        <argsstring>(K key, V &amp;&amp;value)</argsstring>
+        <name>Set</name>
+        <param>
+          <type>K</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>V &amp;&amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/atomic_hash_map.h" line="76" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/atomic_hash_map.h" bodystart="76" bodyend="79"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A implementation of lock-free fixed size hash map. </para>    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>K</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of key, must be integral </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>V</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of value </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>128</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of hash table </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type traits, use for checking types of key &amp; value </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="35">
+        <label>apollo::cyber::base::AtomicHashMap&lt; K, V, TableSize, std::enable_if&lt; std::is_integral&lt; K &gt;::value &amp;&amp;(TableSize &amp;(TableSize-1))==0, int &gt;::type &gt;</label>
+        <link refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap"/>
+        <childnode refid="36" relation="usage">
+          <edgelabel>table_</edgelabel>
+        </childnode>
+      </node>
+      <node id="37">
+        <label>apollo::cyber::base::AtomicHashMap&lt; K, V, TableSize, std::enable_if&lt; std::is_integral&lt; K &gt;::value &amp;&amp;(TableSize &amp;(TableSize-1))==0, int &gt;::type &gt;::Entry</label>
+        <link refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry"/>
+      </node>
+      <node id="36">
+        <label>apollo::cyber::base::AtomicHashMap&lt; K, V, TableSize, std::enable_if&lt; std::is_integral&lt; K &gt;::value &amp;&amp;(TableSize &amp;(TableSize-1))==0, int &gt;::type &gt;::Bucket</label>
+        <link refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Bucket"/>
+        <childnode refid="37" relation="usage">
+          <edgelabel>head_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/work/apollo-fork/apollo/cyber/base/atomic_hash_map.h" line="40" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/atomic_hash_map.h" bodystart="40" bodyend="254"/>
+    <listofallmembers>
+      <member refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1aa1a83359c21d93a096e806382f03e129" prot="public" virt="non-virtual"><scope>apollo::cyber::base::AtomicHashMap</scope><name>AtomicHashMap</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1aa27dda760cfb4332fe043d5c23242c20" prot="public" virt="non-virtual"><scope>apollo::cyber::base::AtomicHashMap</scope><name>AtomicHashMap</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1ada585ac9c1211917c1d08bf3ef77281f" prot="private" virt="non-virtual"><scope>apollo::cyber::base::AtomicHashMap</scope><name>capacity_</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1a0cffa9d1d855e4733f18071b0d7a077d" prot="public" virt="non-virtual"><scope>apollo::cyber::base::AtomicHashMap</scope><name>Get</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1a3b8fc8d906e4e6c116c991cd178c8655" prot="public" virt="non-virtual"><scope>apollo::cyber::base::AtomicHashMap</scope><name>Get</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1ac038ea2f8018172914fcadb807a970a8" prot="public" virt="non-virtual"><scope>apollo::cyber::base::AtomicHashMap</scope><name>Has</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1adb15b0fce4c41fa3b25a32b5ba7e23bc" prot="private" virt="non-virtual"><scope>apollo::cyber::base::AtomicHashMap</scope><name>mode_num_</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1a780be857f6f6d0330da564afd8266620" prot="public" virt="non-virtual"><scope>apollo::cyber::base::AtomicHashMap</scope><name>operator=</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1a9ed2851c909e8ac9662f92d81df18efe" prot="public" virt="non-virtual"><scope>apollo::cyber::base::AtomicHashMap</scope><name>Set</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1a595719e722207e09c63feb85b505ef36" prot="public" virt="non-virtual"><scope>apollo::cyber::base::AtomicHashMap</scope><name>Set</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1ac4c44e27832b4965f999eeed068938d1" prot="public" virt="non-virtual"><scope>apollo::cyber::base::AtomicHashMap</scope><name>Set</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1aab575e13b07e0465956aeb1aaef42e22" prot="private" virt="non-virtual"><scope>apollo::cyber::base::AtomicHashMap</scope><name>table_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

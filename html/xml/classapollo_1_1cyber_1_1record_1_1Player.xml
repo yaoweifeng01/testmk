@@ -1,0 +1,285 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classapollo_1_1cyber_1_1record_1_1Player" kind="class" prot="public">
+    <compoundname>apollo::cyber::record::Player</compoundname>
+    <includes refid="player_8h" local="no">player.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classapollo_1_1cyber_1_1record_1_1Player_1a37e1db52ec97f2d722a96728ee34eca4" prot="public" static="no">
+        <type>std::unique_ptr&lt; <ref refid="classapollo_1_1cyber_1_1record_1_1PlayTaskConsumer" kindref="compound">PlayTaskConsumer</ref> &gt;</type>
+        <definition>using apollo::cyber::record::Player::ConsumerPtr =  std::unique_ptr&lt;PlayTaskConsumer&gt;</definition>
+        <argsstring></argsstring>
+        <name>ConsumerPtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/player/player.h" line="35" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/player/player.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classapollo_1_1cyber_1_1record_1_1Player_1acc295a5b34f4d9286c0e5abdb19708cc" prot="public" static="no">
+        <type>std::unique_ptr&lt; <ref refid="classapollo_1_1cyber_1_1record_1_1PlayTaskProducer" kindref="compound">PlayTaskProducer</ref> &gt;</type>
+        <definition>using apollo::cyber::record::Player::ProducerPtr =  std::unique_ptr&lt;PlayTaskProducer&gt;</definition>
+        <argsstring></argsstring>
+        <name>ProducerPtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/player/player.h" line="36" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/player/player.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classapollo_1_1cyber_1_1record_1_1Player_1ab31c13eb2f49c83db3e5ab2241e4a649" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer" kindref="compound">PlayTaskBuffer</ref> &gt;</type>
+        <definition>using apollo::cyber::record::Player::TaskBufferPtr =  std::shared_ptr&lt;PlayTaskBuffer&gt;</definition>
+        <argsstring></argsstring>
+        <name>TaskBufferPtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/player/player.h" line="37" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/player/player.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1Player_1af26d2f34900605500fa1955ac2b3838a" prot="private" static="no" mutable="no">
+        <type>std::atomic&lt; bool &gt;</type>
+        <definition>std::atomic&lt;bool&gt; apollo::cyber::record::Player::is_initialized_</definition>
+        <argsstring></argsstring>
+        <name>is_initialized_</name>
+        <initializer>= {false}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/player/player.h" line="50" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/player/player.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1Player_1a06233a1abd0c23ffe9c60d5ff2072178" prot="private" static="no" mutable="no">
+        <type>std::atomic&lt; bool &gt;</type>
+        <definition>std::atomic&lt;bool&gt; apollo::cyber::record::Player::is_stopped_</definition>
+        <argsstring></argsstring>
+        <name>is_stopped_</name>
+        <initializer>= {false}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/player/player.h" line="51" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/player/player.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1Player_1ad00ace4d6e2aa7ea28bcddd8465c1c73" prot="private" static="no" mutable="no">
+        <type>std::atomic&lt; bool &gt;</type>
+        <definition>std::atomic&lt;bool&gt; apollo::cyber::record::Player::is_paused_</definition>
+        <argsstring></argsstring>
+        <name>is_paused_</name>
+        <initializer>= {false}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/player/player.h" line="52" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/player/player.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1Player_1aa72c517c6103865219e1ae06bea8c626" prot="private" static="no" mutable="no">
+        <type>std::atomic&lt; bool &gt;</type>
+        <definition>std::atomic&lt;bool&gt; apollo::cyber::record::Player::is_playonce_</definition>
+        <argsstring></argsstring>
+        <name>is_playonce_</name>
+        <initializer>= {false}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/player/player.h" line="53" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/player/player.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1Player_1ad2321d30d8cff70ed29c66eafc24fc1c" prot="private" static="no" mutable="no">
+        <type><ref refid="classapollo_1_1cyber_1_1record_1_1Player_1a37e1db52ec97f2d722a96728ee34eca4" kindref="member">ConsumerPtr</ref></type>
+        <definition>ConsumerPtr apollo::cyber::record::Player::consumer_</definition>
+        <argsstring></argsstring>
+        <name>consumer_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/player/player.h" line="54" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/player/player.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1Player_1a3c9d9a11a48225b805ee705d9ec84a36" prot="private" static="no" mutable="no">
+        <type><ref refid="classapollo_1_1cyber_1_1record_1_1Player_1acc295a5b34f4d9286c0e5abdb19708cc" kindref="member">ProducerPtr</ref></type>
+        <definition>ProducerPtr apollo::cyber::record::Player::producer_</definition>
+        <argsstring></argsstring>
+        <name>producer_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/player/player.h" line="55" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/player/player.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1Player_1a7a09a28c3998b3d7f897ced5e0deaef7" prot="private" static="no" mutable="no">
+        <type><ref refid="classapollo_1_1cyber_1_1record_1_1Player_1ab31c13eb2f49c83db3e5ab2241e4a649" kindref="member">TaskBufferPtr</ref></type>
+        <definition>TaskBufferPtr apollo::cyber::record::Player::task_buffer_</definition>
+        <argsstring></argsstring>
+        <name>task_buffer_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/player/player.h" line="56" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/player/player.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1Player_1a2b9c27a08ad0b994faf3476196daea5c" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; std::thread &gt;</type>
+        <definition>std::shared_ptr&lt;std::thread&gt; apollo::cyber::record::Player::term_thread_</definition>
+        <argsstring></argsstring>
+        <name>term_thread_</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/player/player.h" line="57" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/player/player.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1Player_1a9e39f4fbfcd0aa471833f3e33e3ed61a" prot="private" static="yes" mutable="no">
+        <type>const uint64_t</type>
+        <definition>const uint64_t apollo::cyber::record::Player::kSleepIntervalMiliSec</definition>
+        <argsstring></argsstring>
+        <name>kSleepIntervalMiliSec</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/player/player.h" line="58" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/player/player.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1Player_1ab89e817d3d8512bcf9762af369b02672" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::record::Player::Player</definition>
+        <argsstring>(const PlayParam &amp;play_param)</argsstring>
+        <name>Player</name>
+        <param>
+          <type>const <ref refid="structapollo_1_1cyber_1_1record_1_1PlayParam" kindref="compound">PlayParam</ref> &amp;</type>
+          <declname>play_param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/player/player.h" line="39" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1Player_1ae1e86522775d303fdba52ea7ff34705d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual apollo::cyber::record::Player::~Player</definition>
+        <argsstring>()</argsstring>
+        <name>~Player</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/player/player.h" line="40" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1Player_1adfbffc4391f36a9cec88f8acba8aa141" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::record::Player::Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/player/player.h" line="42" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1Player_1a1b61426aa2b2e3a2df4062fbf82950bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::record::Player::Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/player/player.h" line="43" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1Player_1a9ef25420e7c353ba933b12eeacab67c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::record::Player::Stop</definition>
+        <argsstring>()</argsstring>
+        <name>Stop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/player/player.h" line="44" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1Player_1ac25ec278b511f4dd55b742326821c7b5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::record::Player::ThreadFunc_Term</definition>
+        <argsstring>()</argsstring>
+        <name>ThreadFunc_Term</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/player/player.h" line="47" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/player/player.h" line="33" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/player/player.h" bodystart="33" bodyend="59"/>
+    <listofallmembers>
+      <member refid="classapollo_1_1cyber_1_1record_1_1Player_1ad2321d30d8cff70ed29c66eafc24fc1c" prot="private" virt="non-virtual"><scope>apollo::cyber::record::Player</scope><name>consumer_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1Player_1a37e1db52ec97f2d722a96728ee34eca4" prot="public" virt="non-virtual"><scope>apollo::cyber::record::Player</scope><name>ConsumerPtr</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1Player_1adfbffc4391f36a9cec88f8acba8aa141" prot="public" virt="non-virtual"><scope>apollo::cyber::record::Player</scope><name>Init</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1Player_1af26d2f34900605500fa1955ac2b3838a" prot="private" virt="non-virtual"><scope>apollo::cyber::record::Player</scope><name>is_initialized_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1Player_1ad00ace4d6e2aa7ea28bcddd8465c1c73" prot="private" virt="non-virtual"><scope>apollo::cyber::record::Player</scope><name>is_paused_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1Player_1aa72c517c6103865219e1ae06bea8c626" prot="private" virt="non-virtual"><scope>apollo::cyber::record::Player</scope><name>is_playonce_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1Player_1a06233a1abd0c23ffe9c60d5ff2072178" prot="private" virt="non-virtual"><scope>apollo::cyber::record::Player</scope><name>is_stopped_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1Player_1a9e39f4fbfcd0aa471833f3e33e3ed61a" prot="private" virt="non-virtual"><scope>apollo::cyber::record::Player</scope><name>kSleepIntervalMiliSec</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1Player_1ab89e817d3d8512bcf9762af369b02672" prot="public" virt="non-virtual"><scope>apollo::cyber::record::Player</scope><name>Player</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1Player_1a3c9d9a11a48225b805ee705d9ec84a36" prot="private" virt="non-virtual"><scope>apollo::cyber::record::Player</scope><name>producer_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1Player_1acc295a5b34f4d9286c0e5abdb19708cc" prot="public" virt="non-virtual"><scope>apollo::cyber::record::Player</scope><name>ProducerPtr</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1Player_1a1b61426aa2b2e3a2df4062fbf82950bc" prot="public" virt="non-virtual"><scope>apollo::cyber::record::Player</scope><name>Start</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1Player_1a9ef25420e7c353ba933b12eeacab67c0" prot="public" virt="non-virtual"><scope>apollo::cyber::record::Player</scope><name>Stop</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1Player_1a7a09a28c3998b3d7f897ced5e0deaef7" prot="private" virt="non-virtual"><scope>apollo::cyber::record::Player</scope><name>task_buffer_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1Player_1ab31c13eb2f49c83db3e5ab2241e4a649" prot="public" virt="non-virtual"><scope>apollo::cyber::record::Player</scope><name>TaskBufferPtr</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1Player_1a2b9c27a08ad0b994faf3476196daea5c" prot="private" virt="non-virtual"><scope>apollo::cyber::record::Player</scope><name>term_thread_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1Player_1ac25ec278b511f4dd55b742326821c7b5" prot="private" virt="non-virtual"><scope>apollo::cyber::record::Player</scope><name>ThreadFunc_Term</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1Player_1ae1e86522775d303fdba52ea7ff34705d" prot="public" virt="virtual"><scope>apollo::cyber::record::Player</scope><name>~Player</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

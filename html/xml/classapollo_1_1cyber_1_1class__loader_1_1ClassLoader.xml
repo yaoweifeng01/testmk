@@ -1,0 +1,266 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classapollo_1_1cyber_1_1class__loader_1_1ClassLoader" kind="class" prot="public">
+    <compoundname>apollo::cyber::class_loader::ClassLoader</compoundname>
+    <includes refid="class__loader_8h" local="no">class_loader.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1class__loader_1_1ClassLoader_1ac2ce35233a9866b5ed83180b23ce6e16" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string apollo::cyber::class_loader::ClassLoader::library_path_</definition>
+        <argsstring></argsstring>
+        <name>library_path_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/class_loader/class_loader.h" line="56" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/class_loader/class_loader.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1class__loader_1_1ClassLoader_1aa60b8b3da81bcfb874e6c5202522409f" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int apollo::cyber::class_loader::ClassLoader::loadlib_ref_count_</definition>
+        <argsstring></argsstring>
+        <name>loadlib_ref_count_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/class_loader/class_loader.h" line="57" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/class_loader/class_loader.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1class__loader_1_1ClassLoader_1adb3ba15dcff9f555885bcaf4be5f737d" prot="private" static="no" mutable="no">
+        <type>std::mutex</type>
+        <definition>std::mutex apollo::cyber::class_loader::ClassLoader::loadlib_ref_count_mutex_</definition>
+        <argsstring></argsstring>
+        <name>loadlib_ref_count_mutex_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/class_loader/class_loader.h" line="58" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/class_loader/class_loader.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1class__loader_1_1ClassLoader_1affd77449c6ff1c46e459d3e9c696ea7e" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int apollo::cyber::class_loader::ClassLoader::classobj_ref_count_</definition>
+        <argsstring></argsstring>
+        <name>classobj_ref_count_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/class_loader/class_loader.h" line="59" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/class_loader/class_loader.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1class__loader_1_1ClassLoader_1af1ecab3d122a58aedea2029ca95a29ba" prot="private" static="no" mutable="no">
+        <type>std::mutex</type>
+        <definition>std::mutex apollo::cyber::class_loader::ClassLoader::classobj_ref_count_mutex_</definition>
+        <argsstring></argsstring>
+        <name>classobj_ref_count_mutex_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/class_loader/class_loader.h" line="60" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/class_loader/class_loader.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1class__loader_1_1ClassLoader_1ae563608511e63fade96914581cf30f26" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::class_loader::ClassLoader::ClassLoader</definition>
+        <argsstring>(const std::string &amp;library_path)</argsstring>
+        <name>ClassLoader</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>library_path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/class_loader/class_loader.h" line="37" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1class__loader_1_1ClassLoader_1a55141d6d041e0f3ac3b304a75c5e3e8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual apollo::cyber::class_loader::ClassLoader::~ClassLoader</definition>
+        <argsstring>()</argsstring>
+        <name>~ClassLoader</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/class_loader/class_loader.h" line="38" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1class__loader_1_1ClassLoader_1a68a84173ef3e6be8efc2608fe9904bb4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::class_loader::ClassLoader::IsLibraryLoaded</definition>
+        <argsstring>()</argsstring>
+        <name>IsLibraryLoaded</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/class_loader/class_loader.h" line="40" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1class__loader_1_1ClassLoader_1a1a3b7f75f4f52cc1e187404bac779283" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::class_loader::ClassLoader::LoadLibrary</definition>
+        <argsstring>()</argsstring>
+        <name>LoadLibrary</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/class_loader/class_loader.h" line="41" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1class__loader_1_1ClassLoader_1ad255edf388b7bbb53701e68807ab4295" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int apollo::cyber::class_loader::ClassLoader::UnloadLibrary</definition>
+        <argsstring>()</argsstring>
+        <name>UnloadLibrary</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/class_loader/class_loader.h" line="42" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1class__loader_1_1ClassLoader_1a1600e6d8a1841af3214505fc953f07e8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::string</type>
+        <definition>const std::string apollo::cyber::class_loader::ClassLoader::GetLibraryPath</definition>
+        <argsstring>() const </argsstring>
+        <name>GetLibraryPath</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/class_loader/class_loader.h" line="43" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1class__loader_1_1ClassLoader_1a43103c22c08798fce3eaa7263e608e9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Base</type>
+          </param>
+        </templateparamlist>
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt; std::string &gt; apollo::cyber::class_loader::ClassLoader::GetValidClassNames</definition>
+        <argsstring>()</argsstring>
+        <name>GetValidClassNames</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/class_loader/class_loader.h" line="45" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/class_loader/class_loader.h" bodystart="64" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1class__loader_1_1ClassLoader_1ad869f2d0f2933e13b2e7765785287e41" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Base</type>
+          </param>
+        </templateparamlist>
+        <type>std::shared_ptr&lt; Base &gt;</type>
+        <definition>std::shared_ptr&lt; Base &gt; apollo::cyber::class_loader::ClassLoader::CreateClassObj</definition>
+        <argsstring>(const std::string &amp;class_name)</argsstring>
+        <name>CreateClassObj</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>class_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/class_loader/class_loader.h" line="47" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/class_loader/class_loader.h" bodystart="76" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1class__loader_1_1ClassLoader_1a9717e7566534e5395b3d3b8d4229f473" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Base</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool apollo::cyber::class_loader::ClassLoader::IsClassValid</definition>
+        <argsstring>(const std::string &amp;class_name)</argsstring>
+        <name>IsClassValid</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>class_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/class_loader/class_loader.h" line="49" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/class_loader/class_loader.h" bodystart="69" bodyend="73"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1class__loader_1_1ClassLoader_1a779fe6d14fe1b895383bddfb260593f1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Base</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void apollo::cyber::class_loader::ClassLoader::OnClassObjDeleter</definition>
+        <argsstring>(Base *obj)</argsstring>
+        <name>OnClassObjDeleter</name>
+        <param>
+          <type>Base *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/class_loader/class_loader.h" line="53" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/class_loader/class_loader.h" bodystart="98" bodyend="106"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>for library load,createclass object </para>    </detaileddescription>
+    <location file="/home/work/apollo-fork/apollo/cyber/class_loader/class_loader.h" line="35" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/class_loader/class_loader.h" bodystart="35" bodyend="61"/>
+    <listofallmembers>
+      <member refid="classapollo_1_1cyber_1_1class__loader_1_1ClassLoader_1ae563608511e63fade96914581cf30f26" prot="public" virt="non-virtual"><scope>apollo::cyber::class_loader::ClassLoader</scope><name>ClassLoader</name></member>
+      <member refid="classapollo_1_1cyber_1_1class__loader_1_1ClassLoader_1affd77449c6ff1c46e459d3e9c696ea7e" prot="private" virt="non-virtual"><scope>apollo::cyber::class_loader::ClassLoader</scope><name>classobj_ref_count_</name></member>
+      <member refid="classapollo_1_1cyber_1_1class__loader_1_1ClassLoader_1af1ecab3d122a58aedea2029ca95a29ba" prot="private" virt="non-virtual"><scope>apollo::cyber::class_loader::ClassLoader</scope><name>classobj_ref_count_mutex_</name></member>
+      <member refid="classapollo_1_1cyber_1_1class__loader_1_1ClassLoader_1ad869f2d0f2933e13b2e7765785287e41" prot="public" virt="non-virtual"><scope>apollo::cyber::class_loader::ClassLoader</scope><name>CreateClassObj</name></member>
+      <member refid="classapollo_1_1cyber_1_1class__loader_1_1ClassLoader_1a1600e6d8a1841af3214505fc953f07e8" prot="public" virt="non-virtual"><scope>apollo::cyber::class_loader::ClassLoader</scope><name>GetLibraryPath</name></member>
+      <member refid="classapollo_1_1cyber_1_1class__loader_1_1ClassLoader_1a43103c22c08798fce3eaa7263e608e9d" prot="public" virt="non-virtual"><scope>apollo::cyber::class_loader::ClassLoader</scope><name>GetValidClassNames</name></member>
+      <member refid="classapollo_1_1cyber_1_1class__loader_1_1ClassLoader_1a9717e7566534e5395b3d3b8d4229f473" prot="public" virt="non-virtual"><scope>apollo::cyber::class_loader::ClassLoader</scope><name>IsClassValid</name></member>
+      <member refid="classapollo_1_1cyber_1_1class__loader_1_1ClassLoader_1a68a84173ef3e6be8efc2608fe9904bb4" prot="public" virt="non-virtual"><scope>apollo::cyber::class_loader::ClassLoader</scope><name>IsLibraryLoaded</name></member>
+      <member refid="classapollo_1_1cyber_1_1class__loader_1_1ClassLoader_1ac2ce35233a9866b5ed83180b23ce6e16" prot="private" virt="non-virtual"><scope>apollo::cyber::class_loader::ClassLoader</scope><name>library_path_</name></member>
+      <member refid="classapollo_1_1cyber_1_1class__loader_1_1ClassLoader_1aa60b8b3da81bcfb874e6c5202522409f" prot="private" virt="non-virtual"><scope>apollo::cyber::class_loader::ClassLoader</scope><name>loadlib_ref_count_</name></member>
+      <member refid="classapollo_1_1cyber_1_1class__loader_1_1ClassLoader_1adb3ba15dcff9f555885bcaf4be5f737d" prot="private" virt="non-virtual"><scope>apollo::cyber::class_loader::ClassLoader</scope><name>loadlib_ref_count_mutex_</name></member>
+      <member refid="classapollo_1_1cyber_1_1class__loader_1_1ClassLoader_1a1a3b7f75f4f52cc1e187404bac779283" prot="public" virt="non-virtual"><scope>apollo::cyber::class_loader::ClassLoader</scope><name>LoadLibrary</name></member>
+      <member refid="classapollo_1_1cyber_1_1class__loader_1_1ClassLoader_1a779fe6d14fe1b895383bddfb260593f1" prot="private" virt="non-virtual"><scope>apollo::cyber::class_loader::ClassLoader</scope><name>OnClassObjDeleter</name></member>
+      <member refid="classapollo_1_1cyber_1_1class__loader_1_1ClassLoader_1ad255edf388b7bbb53701e68807ab4295" prot="public" virt="non-virtual"><scope>apollo::cyber::class_loader::ClassLoader</scope><name>UnloadLibrary</name></member>
+      <member refid="classapollo_1_1cyber_1_1class__loader_1_1ClassLoader_1a55141d6d041e0f3ac3b304a75c5e3e8f" prot="public" virt="virtual"><scope>apollo::cyber::class_loader::ClassLoader</scope><name>~ClassLoader</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

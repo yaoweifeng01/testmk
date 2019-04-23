@@ -1,0 +1,191 @@
+\hypertarget{classapollo_1_1cyber_1_1Writer}{\section{apollo\-:\-:cyber\-:\-:Writer$<$ Message\-T $>$ Class Template Reference}
+\label{classapollo_1_1cyber_1_1Writer}\index{apollo\-::cyber\-::\-Writer$<$ Message\-T $>$@{apollo\-::cyber\-::\-Writer$<$ Message\-T $>$}}
+}
+
+
+{\ttfamily \#include $<$writer.\-h$>$}
+
+Inheritance diagram for apollo\-:\-:cyber\-:\-:Writer$<$ Message\-T $>$\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classapollo_1_1cyber_1_1Writer}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1Writer_ab3727d9c195176d7f609546547ac44c4}{Transmitter\-Ptr} = std\-::shared\-\_\-ptr$<$ \hyperlink{classapollo_1_1cyber_1_1transport_1_1Transmitter}{transport\-::\-Transmitter}$<$ Message\-T $>$$>$
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1Writer_ae6361e75e6d02a260e53caa52d16d9e2}{Change\-Connection} = typename \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1Manager_ab43fa282f6aa1b3b1180a1e416b98b68}{service\-\_\-discovery\-::\-Manager\-::\-Change\-Connection}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1Writer_a8c4b7af7821be7e2911eec00549fb4db}{Writer} (const proto\-::\-Role\-Attributes \&role\-\_\-attr)
+\item 
+virtual \hyperlink{classapollo_1_1cyber_1_1Writer_a083e3ae7d2709b1ac4513a50741b11f9}{$\sim$\-Writer} ()
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1Writer_a3a8efad4bf1917f541d41e3102ef8776}{Init} () override
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1Writer_a915a8e6c0bb86a98f4ab09d41a9d3242}{Shutdown} () override
+\item 
+virtual bool \hyperlink{classapollo_1_1cyber_1_1Writer_ac801147d965824c910da92626e4b9b05}{Write} (const Message\-T \&msg)
+\item 
+virtual bool \hyperlink{classapollo_1_1cyber_1_1Writer_a793eaf46f34f2d46d0225a1a6cc3fd50}{Write} (const std\-::shared\-\_\-ptr$<$ Message\-T $>$ \&msg\-\_\-ptr)
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1Writer_a0eba2d4599a273a2dc56e5ca5845ebd1}{Has\-Reader} () override
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1Writer_abf208c7a535967956542965c9a6d6e58}{Get\-Readers} (std\-::vector$<$ proto\-::\-Role\-Attributes $>$ $\ast$readers) override
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1Writer_ab034d57bd2386eaae499e9b2bc1cad9b}{Join\-The\-Topology} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1Writer_a1d3098c8b39eee440005bcf88b2c4a9a}{Leave\-The\-Topology} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1Writer_a03ca679668b1bb1cee9a6baf4f399c21}{On\-Channel\-Change} (const proto\-::\-Change\-Msg \&change\-\_\-msg)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1Writer_ab3727d9c195176d7f609546547ac44c4}{Transmitter\-Ptr} \hyperlink{classapollo_1_1cyber_1_1Writer_a0aba4d006319cb00a54999abbdb22395}{transmitter\-\_\-}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1Writer_ae6361e75e6d02a260e53caa52d16d9e2}{Change\-Connection} \hyperlink{classapollo_1_1cyber_1_1Writer_ab63e17387ddc574686cfcae2864e766a}{change\-\_\-conn\-\_\-}
+\item 
+\hyperlink{namespaceapollo_1_1cyber_1_1service__discovery_a12c2dfc39551ef96e3110dae235ab609}{service\-\_\-discovery\-::\-Channel\-Manager\-Ptr} \hyperlink{classapollo_1_1cyber_1_1Writer_a653e7f4679f7849d9d523f27997baa54}{channel\-\_\-manager\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classapollo_1_1cyber_1_1Writer_ae6361e75e6d02a260e53caa52d16d9e2}{\index{apollo\-::cyber\-::\-Writer@{apollo\-::cyber\-::\-Writer}!Change\-Connection@{Change\-Connection}}
+\index{Change\-Connection@{Change\-Connection}!apollo::cyber::Writer@{apollo\-::cyber\-::\-Writer}}
+\subsubsection[{Change\-Connection}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Message\-T $>$ using {\bf apollo\-::cyber\-::\-Writer}$<$ Message\-T $>$\-::{\bf Change\-Connection} =  typename {\bf service\-\_\-discovery\-::\-Manager\-::\-Change\-Connection}}}\label{classapollo_1_1cyber_1_1Writer_ae6361e75e6d02a260e53caa52d16d9e2}
+\hypertarget{classapollo_1_1cyber_1_1Writer_ab3727d9c195176d7f609546547ac44c4}{\index{apollo\-::cyber\-::\-Writer@{apollo\-::cyber\-::\-Writer}!Transmitter\-Ptr@{Transmitter\-Ptr}}
+\index{Transmitter\-Ptr@{Transmitter\-Ptr}!apollo::cyber::Writer@{apollo\-::cyber\-::\-Writer}}
+\subsubsection[{Transmitter\-Ptr}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Message\-T $>$ using {\bf apollo\-::cyber\-::\-Writer}$<$ Message\-T $>$\-::{\bf Transmitter\-Ptr} =  std\-::shared\-\_\-ptr$<${\bf transport\-::\-Transmitter}$<$Message\-T$>$$>$}}\label{classapollo_1_1cyber_1_1Writer_ab3727d9c195176d7f609546547ac44c4}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classapollo_1_1cyber_1_1Writer_a8c4b7af7821be7e2911eec00549fb4db}{\index{apollo\-::cyber\-::\-Writer@{apollo\-::cyber\-::\-Writer}!Writer@{Writer}}
+\index{Writer@{Writer}!apollo::cyber::Writer@{apollo\-::cyber\-::\-Writer}}
+\subsubsection[{Writer}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Message\-T $>$ {\bf apollo\-::cyber\-::\-Writer}$<$ Message\-T $>$\-::{\bf Writer} (
+\begin{DoxyParamCaption}
+\item[{const proto\-::\-Role\-Attributes \&}]{role\-\_\-attr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}}\label{classapollo_1_1cyber_1_1Writer_a8c4b7af7821be7e2911eec00549fb4db}
+\hypertarget{classapollo_1_1cyber_1_1Writer_a083e3ae7d2709b1ac4513a50741b11f9}{\index{apollo\-::cyber\-::\-Writer@{apollo\-::cyber\-::\-Writer}!$\sim$\-Writer@{$\sim$\-Writer}}
+\index{$\sim$\-Writer@{$\sim$\-Writer}!apollo::cyber::Writer@{apollo\-::cyber\-::\-Writer}}
+\subsubsection[{$\sim$\-Writer}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Message\-T $>$ {\bf apollo\-::cyber\-::\-Writer}$<$ Message\-T $>$\-::$\sim${\bf Writer} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1Writer_a083e3ae7d2709b1ac4513a50741b11f9}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1Writer_abf208c7a535967956542965c9a6d6e58}{\index{apollo\-::cyber\-::\-Writer@{apollo\-::cyber\-::\-Writer}!Get\-Readers@{Get\-Readers}}
+\index{Get\-Readers@{Get\-Readers}!apollo::cyber::Writer@{apollo\-::cyber\-::\-Writer}}
+\subsubsection[{Get\-Readers}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Message\-T $>$ void {\bf apollo\-::cyber\-::\-Writer}$<$ Message\-T $>$\-::Get\-Readers (
+\begin{DoxyParamCaption}
+\item[{std\-::vector$<$ proto\-::\-Role\-Attributes $>$ $\ast$}]{readers}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1Writer_abf208c7a535967956542965c9a6d6e58}
+
+
+Reimplemented from \hyperlink{classapollo_1_1cyber_1_1WriterBase_a93845a2774b7515bf63d432ffbed5fda}{apollo\-::cyber\-::\-Writer\-Base}.
+
+\hypertarget{classapollo_1_1cyber_1_1Writer_a0eba2d4599a273a2dc56e5ca5845ebd1}{\index{apollo\-::cyber\-::\-Writer@{apollo\-::cyber\-::\-Writer}!Has\-Reader@{Has\-Reader}}
+\index{Has\-Reader@{Has\-Reader}!apollo::cyber::Writer@{apollo\-::cyber\-::\-Writer}}
+\subsubsection[{Has\-Reader}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Message\-T $>$ bool {\bf apollo\-::cyber\-::\-Writer}$<$ Message\-T $>$\-::Has\-Reader (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1Writer_a0eba2d4599a273a2dc56e5ca5845ebd1}
+
+
+Reimplemented from \hyperlink{classapollo_1_1cyber_1_1WriterBase_a2c158df45980927544cff2c55214c31a}{apollo\-::cyber\-::\-Writer\-Base}.
+
+\hypertarget{classapollo_1_1cyber_1_1Writer_a3a8efad4bf1917f541d41e3102ef8776}{\index{apollo\-::cyber\-::\-Writer@{apollo\-::cyber\-::\-Writer}!Init@{Init}}
+\index{Init@{Init}!apollo::cyber::Writer@{apollo\-::cyber\-::\-Writer}}
+\subsubsection[{Init}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Message\-T $>$ bool {\bf apollo\-::cyber\-::\-Writer}$<$ Message\-T $>$\-::Init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1Writer_a3a8efad4bf1917f541d41e3102ef8776}
+
+
+Implements \hyperlink{classapollo_1_1cyber_1_1WriterBase_acff05a3215b2a2da4b2a140069ac001d}{apollo\-::cyber\-::\-Writer\-Base}.
+
+\hypertarget{classapollo_1_1cyber_1_1Writer_ab034d57bd2386eaae499e9b2bc1cad9b}{\index{apollo\-::cyber\-::\-Writer@{apollo\-::cyber\-::\-Writer}!Join\-The\-Topology@{Join\-The\-Topology}}
+\index{Join\-The\-Topology@{Join\-The\-Topology}!apollo::cyber::Writer@{apollo\-::cyber\-::\-Writer}}
+\subsubsection[{Join\-The\-Topology}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Message\-T $>$ void {\bf apollo\-::cyber\-::\-Writer}$<$ Message\-T $>$\-::Join\-The\-Topology (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1Writer_ab034d57bd2386eaae499e9b2bc1cad9b}
+\hypertarget{classapollo_1_1cyber_1_1Writer_a1d3098c8b39eee440005bcf88b2c4a9a}{\index{apollo\-::cyber\-::\-Writer@{apollo\-::cyber\-::\-Writer}!Leave\-The\-Topology@{Leave\-The\-Topology}}
+\index{Leave\-The\-Topology@{Leave\-The\-Topology}!apollo::cyber::Writer@{apollo\-::cyber\-::\-Writer}}
+\subsubsection[{Leave\-The\-Topology}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Message\-T $>$ void {\bf apollo\-::cyber\-::\-Writer}$<$ Message\-T $>$\-::Leave\-The\-Topology (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1Writer_a1d3098c8b39eee440005bcf88b2c4a9a}
+\hypertarget{classapollo_1_1cyber_1_1Writer_a03ca679668b1bb1cee9a6baf4f399c21}{\index{apollo\-::cyber\-::\-Writer@{apollo\-::cyber\-::\-Writer}!On\-Channel\-Change@{On\-Channel\-Change}}
+\index{On\-Channel\-Change@{On\-Channel\-Change}!apollo::cyber::Writer@{apollo\-::cyber\-::\-Writer}}
+\subsubsection[{On\-Channel\-Change}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Message\-T $>$ void {\bf apollo\-::cyber\-::\-Writer}$<$ Message\-T $>$\-::On\-Channel\-Change (
+\begin{DoxyParamCaption}
+\item[{const proto\-::\-Change\-Msg \&}]{change\-\_\-msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1Writer_a03ca679668b1bb1cee9a6baf4f399c21}
+\hypertarget{classapollo_1_1cyber_1_1Writer_a915a8e6c0bb86a98f4ab09d41a9d3242}{\index{apollo\-::cyber\-::\-Writer@{apollo\-::cyber\-::\-Writer}!Shutdown@{Shutdown}}
+\index{Shutdown@{Shutdown}!apollo::cyber::Writer@{apollo\-::cyber\-::\-Writer}}
+\subsubsection[{Shutdown}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Message\-T $>$ void {\bf apollo\-::cyber\-::\-Writer}$<$ Message\-T $>$\-::Shutdown (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1Writer_a915a8e6c0bb86a98f4ab09d41a9d3242}
+
+
+Implements \hyperlink{classapollo_1_1cyber_1_1WriterBase_ad2f187881a2832ece860eb11d69acc8b}{apollo\-::cyber\-::\-Writer\-Base}.
+
+\hypertarget{classapollo_1_1cyber_1_1Writer_ac801147d965824c910da92626e4b9b05}{\index{apollo\-::cyber\-::\-Writer@{apollo\-::cyber\-::\-Writer}!Write@{Write}}
+\index{Write@{Write}!apollo::cyber::Writer@{apollo\-::cyber\-::\-Writer}}
+\subsubsection[{Write}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Message\-T $>$ bool {\bf apollo\-::cyber\-::\-Writer}$<$ Message\-T $>$\-::Write (
+\begin{DoxyParamCaption}
+\item[{const Message\-T \&}]{msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1Writer_ac801147d965824c910da92626e4b9b05}
+
+
+Reimplemented in \hyperlink{classapollo_1_1cyber_1_1blocker_1_1IntraWriter_a81d327aca81aee982eba2143f5a8f1d6}{apollo\-::cyber\-::blocker\-::\-Intra\-Writer$<$ Message\-T $>$}.
+
+\hypertarget{classapollo_1_1cyber_1_1Writer_a793eaf46f34f2d46d0225a1a6cc3fd50}{\index{apollo\-::cyber\-::\-Writer@{apollo\-::cyber\-::\-Writer}!Write@{Write}}
+\index{Write@{Write}!apollo::cyber::Writer@{apollo\-::cyber\-::\-Writer}}
+\subsubsection[{Write}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Message\-T $>$ bool {\bf apollo\-::cyber\-::\-Writer}$<$ Message\-T $>$\-::Write (
+\begin{DoxyParamCaption}
+\item[{const std\-::shared\-\_\-ptr$<$ Message\-T $>$ \&}]{msg\-\_\-ptr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1Writer_a793eaf46f34f2d46d0225a1a6cc3fd50}
+
+
+Reimplemented in \hyperlink{classapollo_1_1cyber_1_1blocker_1_1IntraWriter_a48491a940e99954b19c7eb26710d04b8}{apollo\-::cyber\-::blocker\-::\-Intra\-Writer$<$ Message\-T $>$}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classapollo_1_1cyber_1_1Writer_ab63e17387ddc574686cfcae2864e766a}{\index{apollo\-::cyber\-::\-Writer@{apollo\-::cyber\-::\-Writer}!change\-\_\-conn\-\_\-@{change\-\_\-conn\-\_\-}}
+\index{change\-\_\-conn\-\_\-@{change\-\_\-conn\-\_\-}!apollo::cyber::Writer@{apollo\-::cyber\-::\-Writer}}
+\subsubsection[{change\-\_\-conn\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Message\-T $>$ {\bf Change\-Connection} {\bf apollo\-::cyber\-::\-Writer}$<$ Message\-T $>$\-::change\-\_\-conn\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1Writer_ab63e17387ddc574686cfcae2864e766a}
+\hypertarget{classapollo_1_1cyber_1_1Writer_a653e7f4679f7849d9d523f27997baa54}{\index{apollo\-::cyber\-::\-Writer@{apollo\-::cyber\-::\-Writer}!channel\-\_\-manager\-\_\-@{channel\-\_\-manager\-\_\-}}
+\index{channel\-\_\-manager\-\_\-@{channel\-\_\-manager\-\_\-}!apollo::cyber::Writer@{apollo\-::cyber\-::\-Writer}}
+\subsubsection[{channel\-\_\-manager\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Message\-T $>$ {\bf service\-\_\-discovery\-::\-Channel\-Manager\-Ptr} {\bf apollo\-::cyber\-::\-Writer}$<$ Message\-T $>$\-::channel\-\_\-manager\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1Writer_a653e7f4679f7849d9d523f27997baa54}
+\hypertarget{classapollo_1_1cyber_1_1Writer_a0aba4d006319cb00a54999abbdb22395}{\index{apollo\-::cyber\-::\-Writer@{apollo\-::cyber\-::\-Writer}!transmitter\-\_\-@{transmitter\-\_\-}}
+\index{transmitter\-\_\-@{transmitter\-\_\-}!apollo::cyber::Writer@{apollo\-::cyber\-::\-Writer}}
+\subsubsection[{transmitter\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Message\-T $>$ {\bf Transmitter\-Ptr} {\bf apollo\-::cyber\-::\-Writer}$<$ Message\-T $>$\-::transmitter\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1Writer_a0aba4d006319cb00a54999abbdb22395}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+node/\hyperlink{writer_8h}{writer.\-h}\end{DoxyCompactItemize}

@@ -1,0 +1,165 @@
+\hypertarget{classGeneralMessageBase}{\section{General\-Message\-Base Class Reference}
+\label{classGeneralMessageBase}\index{General\-Message\-Base@{General\-Message\-Base}}
+}
+
+
+{\ttfamily \#include $<$general\-\_\-message\-\_\-base.\-h$>$}
+
+Inheritance diagram for General\-Message\-Base\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classGeneralMessageBase}
+\end{center}
+\end{figure}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classGeneralMessageBase_a7b063ed053799b40e65b4fc36d53ffe8}{insert\-Repeated\-Message} (int line\-No, \hyperlink{classGeneralMessageBase}{General\-Message\-Base} $\ast$item)
+\item 
+\hyperlink{classRenderableMessage}{Renderable\-Message} $\ast$ \hyperlink{classGeneralMessageBase_a9ab394f1176382bbef06e1b7c37e35ee}{Child} (int line\-No) const override
+\item 
+\hyperlink{classGeneralMessageBase_a94b72a6e3f9cfe7204bd17f589840a77}{General\-Message\-Base} (\hyperlink{classRenderableMessage}{Renderable\-Message} $\ast$\hyperlink{classRenderableMessage_ab23728d14d9aff3efa0af7639ec6059c}{parent}=nullptr)
+\item 
+\hyperlink{classGeneralMessageBase_ab50f085176c924a1d08a805419499a6d}{$\sim$\-General\-Message\-Base} (void)
+\item 
+void \hyperlink{classGeneralMessageBase_a30f39896e2bb072ac8f67e46e6c95e41}{clear} (void)
+\item 
+\hyperlink{classGeneralMessageBase_af9e00565fe280e45a0155f583057ddbd}{General\-Message\-Base} (const \hyperlink{classGeneralMessageBase}{General\-Message\-Base} \&)=delete
+\item 
+\hyperlink{classGeneralMessageBase}{General\-Message\-Base} \& \hyperlink{classGeneralMessageBase_aa360714a5ea853427bfd7662f8928d8c}{operator=} (const \hyperlink{classGeneralMessageBase}{General\-Message\-Base} \&)=delete
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classGeneralMessageBase_acb22b24b458fbb199de702736e136be3}{Print\-Message} (\hyperlink{classGeneralMessageBase}{General\-Message\-Base} $\ast$base\-Msg, const google\-::protobuf\-::\-Message \&msg, int \&jump\-Lines, const \hyperlink{classScreen}{Screen} $\ast$s, unsigned \&line\-No, int indent)
+\item 
+static void \hyperlink{classGeneralMessageBase_abb2b6d5c8a9399cc6e3eab14a0bec0c7}{Print\-Field} (\hyperlink{classGeneralMessageBase}{General\-Message\-Base} $\ast$base\-Msg, const google\-::protobuf\-::\-Message \&msg, int \&jump\-Lines, const \hyperlink{classScreen}{Screen} $\ast$s, unsigned \&line\-No, int indent, const google\-::protobuf\-::\-Reflection $\ast$ref, const google\-::protobuf\-::\-Field\-Descriptor $\ast$field, int index)
+\item 
+static int \hyperlink{classGeneralMessageBase_a3b3feba460a716d68348a54d274dd675}{line\-Count} (const google\-::protobuf\-::\-Message \&msg, int screen\-Width)
+\item 
+static int \hyperlink{classGeneralMessageBase_a4af9e501c26db8741b458ab477fe9aaa}{line\-Count\-Of\-Field} (const google\-::protobuf\-::\-Message \&msg, int screen\-Width, const google\-::protobuf\-::\-Field\-Descriptor $\ast$field, const google\-::protobuf\-::\-Reflection $\ast$reflection, bool is\-\_\-folded=true)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\-::map$<$ const int, \\*
+\hyperlink{classGeneralMessageBase}{General\-Message\-Base} $\ast$ $>$ \hyperlink{classGeneralMessageBase_a5ff98bf477e95204ca2021be372d3eba}{children\-\_\-map\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classGeneralMessageBase_a94b72a6e3f9cfe7204bd17f589840a77}{\index{General\-Message\-Base@{General\-Message\-Base}!General\-Message\-Base@{General\-Message\-Base}}
+\index{General\-Message\-Base@{General\-Message\-Base}!GeneralMessageBase@{General\-Message\-Base}}
+\subsubsection[{General\-Message\-Base}]{\setlength{\rightskip}{0pt plus 5cm}General\-Message\-Base\-::\-General\-Message\-Base (
+\begin{DoxyParamCaption}
+\item[{{\bf Renderable\-Message} $\ast$}]{parent = {\ttfamily nullptr}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}, {\ttfamily [protected]}}}\label{classGeneralMessageBase_a94b72a6e3f9cfe7204bd17f589840a77}
+\hypertarget{classGeneralMessageBase_ab50f085176c924a1d08a805419499a6d}{\index{General\-Message\-Base@{General\-Message\-Base}!$\sim$\-General\-Message\-Base@{$\sim$\-General\-Message\-Base}}
+\index{$\sim$\-General\-Message\-Base@{$\sim$\-General\-Message\-Base}!GeneralMessageBase@{General\-Message\-Base}}
+\subsubsection[{$\sim$\-General\-Message\-Base}]{\setlength{\rightskip}{0pt plus 5cm}General\-Message\-Base\-::$\sim$\-General\-Message\-Base (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classGeneralMessageBase_ab50f085176c924a1d08a805419499a6d}
+\hypertarget{classGeneralMessageBase_af9e00565fe280e45a0155f583057ddbd}{\index{General\-Message\-Base@{General\-Message\-Base}!General\-Message\-Base@{General\-Message\-Base}}
+\index{General\-Message\-Base@{General\-Message\-Base}!GeneralMessageBase@{General\-Message\-Base}}
+\subsubsection[{General\-Message\-Base}]{\setlength{\rightskip}{0pt plus 5cm}General\-Message\-Base\-::\-General\-Message\-Base (
+\begin{DoxyParamCaption}
+\item[{const {\bf General\-Message\-Base} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [delete]}}}\label{classGeneralMessageBase_af9e00565fe280e45a0155f583057ddbd}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classGeneralMessageBase_a9ab394f1176382bbef06e1b7c37e35ee}{\index{General\-Message\-Base@{General\-Message\-Base}!Child@{Child}}
+\index{Child@{Child}!GeneralMessageBase@{General\-Message\-Base}}
+\subsubsection[{Child}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Renderable\-Message}$\ast$ General\-Message\-Base\-::\-Child (
+\begin{DoxyParamCaption}
+\item[{int}]{line\-No}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classGeneralMessageBase_a9ab394f1176382bbef06e1b7c37e35ee}
+
+
+Implements \hyperlink{classRenderableMessage_a0f933ad0befd4d3cf3a95e205c7398d6}{Renderable\-Message}.
+
+\hypertarget{classGeneralMessageBase_a30f39896e2bb072ac8f67e46e6c95e41}{\index{General\-Message\-Base@{General\-Message\-Base}!clear@{clear}}
+\index{clear@{clear}!GeneralMessageBase@{General\-Message\-Base}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void General\-Message\-Base\-::clear (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classGeneralMessageBase_a30f39896e2bb072ac8f67e46e6c95e41}
+\hypertarget{classGeneralMessageBase_a7b063ed053799b40e65b4fc36d53ffe8}{\index{General\-Message\-Base@{General\-Message\-Base}!insert\-Repeated\-Message@{insert\-Repeated\-Message}}
+\index{insert\-Repeated\-Message@{insert\-Repeated\-Message}!GeneralMessageBase@{General\-Message\-Base}}
+\subsubsection[{insert\-Repeated\-Message}]{\setlength{\rightskip}{0pt plus 5cm}void General\-Message\-Base\-::insert\-Repeated\-Message (
+\begin{DoxyParamCaption}
+\item[{int}]{line\-No, }
+\item[{{\bf General\-Message\-Base} $\ast$}]{item}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classGeneralMessageBase_a7b063ed053799b40e65b4fc36d53ffe8}
+\hypertarget{classGeneralMessageBase_a3b3feba460a716d68348a54d274dd675}{\index{General\-Message\-Base@{General\-Message\-Base}!line\-Count@{line\-Count}}
+\index{line\-Count@{line\-Count}!GeneralMessageBase@{General\-Message\-Base}}
+\subsubsection[{line\-Count}]{\setlength{\rightskip}{0pt plus 5cm}static int General\-Message\-Base\-::line\-Count (
+\begin{DoxyParamCaption}
+\item[{const google\-::protobuf\-::\-Message \&}]{msg, }
+\item[{int}]{screen\-Width}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}}\label{classGeneralMessageBase_a3b3feba460a716d68348a54d274dd675}
+\hypertarget{classGeneralMessageBase_a4af9e501c26db8741b458ab477fe9aaa}{\index{General\-Message\-Base@{General\-Message\-Base}!line\-Count\-Of\-Field@{line\-Count\-Of\-Field}}
+\index{line\-Count\-Of\-Field@{line\-Count\-Of\-Field}!GeneralMessageBase@{General\-Message\-Base}}
+\subsubsection[{line\-Count\-Of\-Field}]{\setlength{\rightskip}{0pt plus 5cm}static int General\-Message\-Base\-::line\-Count\-Of\-Field (
+\begin{DoxyParamCaption}
+\item[{const google\-::protobuf\-::\-Message \&}]{msg, }
+\item[{int}]{screen\-Width, }
+\item[{const google\-::protobuf\-::\-Field\-Descriptor $\ast$}]{field, }
+\item[{const google\-::protobuf\-::\-Reflection $\ast$}]{reflection, }
+\item[{bool}]{is\-\_\-folded = {\ttfamily true}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}}\label{classGeneralMessageBase_a4af9e501c26db8741b458ab477fe9aaa}
+\hypertarget{classGeneralMessageBase_aa360714a5ea853427bfd7662f8928d8c}{\index{General\-Message\-Base@{General\-Message\-Base}!operator=@{operator=}}
+\index{operator=@{operator=}!GeneralMessageBase@{General\-Message\-Base}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf General\-Message\-Base}\& General\-Message\-Base\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf General\-Message\-Base} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [delete]}}}\label{classGeneralMessageBase_aa360714a5ea853427bfd7662f8928d8c}
+\hypertarget{classGeneralMessageBase_abb2b6d5c8a9399cc6e3eab14a0bec0c7}{\index{General\-Message\-Base@{General\-Message\-Base}!Print\-Field@{Print\-Field}}
+\index{Print\-Field@{Print\-Field}!GeneralMessageBase@{General\-Message\-Base}}
+\subsubsection[{Print\-Field}]{\setlength{\rightskip}{0pt plus 5cm}static void General\-Message\-Base\-::\-Print\-Field (
+\begin{DoxyParamCaption}
+\item[{{\bf General\-Message\-Base} $\ast$}]{base\-Msg, }
+\item[{const google\-::protobuf\-::\-Message \&}]{msg, }
+\item[{int \&}]{jump\-Lines, }
+\item[{const {\bf Screen} $\ast$}]{s, }
+\item[{unsigned \&}]{line\-No, }
+\item[{int}]{indent, }
+\item[{const google\-::protobuf\-::\-Reflection $\ast$}]{ref, }
+\item[{const google\-::protobuf\-::\-Field\-Descriptor $\ast$}]{field, }
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}}\label{classGeneralMessageBase_abb2b6d5c8a9399cc6e3eab14a0bec0c7}
+\hypertarget{classGeneralMessageBase_acb22b24b458fbb199de702736e136be3}{\index{General\-Message\-Base@{General\-Message\-Base}!Print\-Message@{Print\-Message}}
+\index{Print\-Message@{Print\-Message}!GeneralMessageBase@{General\-Message\-Base}}
+\subsubsection[{Print\-Message}]{\setlength{\rightskip}{0pt plus 5cm}static void General\-Message\-Base\-::\-Print\-Message (
+\begin{DoxyParamCaption}
+\item[{{\bf General\-Message\-Base} $\ast$}]{base\-Msg, }
+\item[{const google\-::protobuf\-::\-Message \&}]{msg, }
+\item[{int \&}]{jump\-Lines, }
+\item[{const {\bf Screen} $\ast$}]{s, }
+\item[{unsigned \&}]{line\-No, }
+\item[{int}]{indent}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}}\label{classGeneralMessageBase_acb22b24b458fbb199de702736e136be3}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classGeneralMessageBase_a5ff98bf477e95204ca2021be372d3eba}{\index{General\-Message\-Base@{General\-Message\-Base}!children\-\_\-map\-\_\-@{children\-\_\-map\-\_\-}}
+\index{children\-\_\-map\-\_\-@{children\-\_\-map\-\_\-}!GeneralMessageBase@{General\-Message\-Base}}
+\subsubsection[{children\-\_\-map\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::map$<$const int, {\bf General\-Message\-Base}$\ast$$>$ General\-Message\-Base\-::children\-\_\-map\-\_\-\hspace{0.3cm}{\ttfamily [protected]}}}\label{classGeneralMessageBase_a5ff98bf477e95204ca2021be372d3eba}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+tools/cyber\-\_\-monitor/\hyperlink{general__message__base_8h}{general\-\_\-message\-\_\-base.\-h}\end{DoxyCompactItemize}

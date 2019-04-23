@@ -1,0 +1,197 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classapollo_1_1cyber_1_1record_1_1RecordBase" kind="class" prot="public" abstract="yes">
+    <compoundname>apollo::cyber::record::RecordBase</compoundname>
+    <derivedcompoundref refid="classapollo_1_1cyber_1_1record_1_1RecordReader" prot="public" virt="non-virtual">apollo::cyber::record::RecordReader</derivedcompoundref>
+    <derivedcompoundref refid="classapollo_1_1cyber_1_1record_1_1RecordWriter" prot="public" virt="non-virtual">apollo::cyber::record::RecordWriter</derivedcompoundref>
+    <includes refid="record__base_8h" local="no">record_base.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1RecordBase_1a3ce26ca2d17eec9a3d4e47749ace66b2" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string apollo::cyber::record::RecordBase::file_</definition>
+        <argsstring></argsstring>
+        <name>file_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/record/record_base.h" line="45" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/record/record_base.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1RecordBase_1a57cd95944aa2d3ddc216d3e9539db590" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string apollo::cyber::record::RecordBase::null_type_</definition>
+        <argsstring></argsstring>
+        <name>null_type_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/record/record_base.h" line="46" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/record/record_base.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1RecordBase_1af4b08d823c058d17eb38abe92d0ac7e7" prot="protected" static="no" mutable="no">
+        <type>proto::Header</type>
+        <definition>proto::Header apollo::cyber::record::RecordBase::header_</definition>
+        <argsstring></argsstring>
+        <name>header_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/record/record_base.h" line="47" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/record/record_base.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1RecordBase_1a122b01307f078dbb0e1baa5d57226c5f" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool apollo::cyber::record::RecordBase::is_opened_</definition>
+        <argsstring></argsstring>
+        <name>is_opened_</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/record/record_base.h" line="48" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/record/record_base.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1RecordBase_1a95c06bb77a60dfc827592777030f84de" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual apollo::cyber::record::RecordBase::~RecordBase</definition>
+        <argsstring>()=default</argsstring>
+        <name>~RecordBase</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/record/record_base.h" line="31" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1RecordBase_1a82d12447e8d34553c42e4225b9359a1b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>uint64_t</type>
+        <definition>virtual uint64_t apollo::cyber::record::RecordBase::GetMessageNumber</definition>
+        <argsstring>(const std::string &amp;channel_name) const =0</argsstring>
+        <name>GetMessageNumber</name>
+        <reimplementedby refid="classapollo_1_1cyber_1_1record_1_1RecordReader_1aac1723c2d51a327d3e36899c3f15319b">GetMessageNumber</reimplementedby>
+        <reimplementedby refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a2f0637a10532fd3d721ec27dec9aab05">GetMessageNumber</reimplementedby>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>channel_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/record/record_base.h" line="33" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1RecordBase_1ad1883d8a1ce2f90046b18eb6fd9306e3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>const std::string &amp;</type>
+        <definition>virtual const std::string&amp; apollo::cyber::record::RecordBase::GetMessageType</definition>
+        <argsstring>(const std::string &amp;channel_name) const =0</argsstring>
+        <name>GetMessageType</name>
+        <reimplementedby refid="classapollo_1_1cyber_1_1record_1_1RecordReader_1a722df636d4f17d66c908bb3433a0b1cf">GetMessageType</reimplementedby>
+        <reimplementedby refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a7bab92d44a94ea9c97546ff809c05064">GetMessageType</reimplementedby>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>channel_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/record/record_base.h" line="35" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1RecordBase_1a0044d679cdfd10e56199f597446e912d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>const std::string &amp;</type>
+        <definition>virtual const std::string&amp; apollo::cyber::record::RecordBase::GetProtoDesc</definition>
+        <argsstring>(const std::string &amp;channel_name) const =0</argsstring>
+        <name>GetProtoDesc</name>
+        <reimplementedby refid="classapollo_1_1cyber_1_1record_1_1RecordReader_1a5618fb95fdcf0660dc9ebdff3a14a869">GetProtoDesc</reimplementedby>
+        <reimplementedby refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a1f547541dfc6df5803f1032e4f39fb3c">GetProtoDesc</reimplementedby>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>channel_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/record/record_base.h" line="38" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1RecordBase_1af627ca03e16834e5be16fdbbba9317c4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const proto::Header &amp;</type>
+        <definition>const proto::Header&amp; apollo::cyber::record::RecordBase::GetHeader</definition>
+        <argsstring>() const </argsstring>
+        <name>GetHeader</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/record/record_base.h" line="41" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/record/record_base.h" bodystart="41" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1RecordBase_1ad51ac494bc2e2a5922b792558789d602" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::string</type>
+        <definition>const std::string apollo::cyber::record::RecordBase::GetFile</definition>
+        <argsstring>() const </argsstring>
+        <name>GetFile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/record/record_base.h" line="42" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/record/record_base.h" bodystart="42" bodyend="42"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="673">
+        <label>apollo::cyber::record::RecordReader</label>
+        <link refid="classapollo_1_1cyber_1_1record_1_1RecordReader"/>
+        <childnode refid="672" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="674">
+        <label>apollo::cyber::record::RecordWriter</label>
+        <link refid="classapollo_1_1cyber_1_1record_1_1RecordWriter"/>
+        <childnode refid="672" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="672">
+        <label>apollo::cyber::record::RecordBase</label>
+        <link refid="classapollo_1_1cyber_1_1record_1_1RecordBase"/>
+      </node>
+    </inheritancegraph>
+    <location file="/home/work/apollo-fork/apollo/cyber/record/record_base.h" line="29" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/record/record_base.h" bodystart="29" bodyend="49"/>
+    <listofallmembers>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordBase_1a3ce26ca2d17eec9a3d4e47749ace66b2" prot="protected" virt="non-virtual"><scope>apollo::cyber::record::RecordBase</scope><name>file_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordBase_1ad51ac494bc2e2a5922b792558789d602" prot="public" virt="non-virtual"><scope>apollo::cyber::record::RecordBase</scope><name>GetFile</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordBase_1af627ca03e16834e5be16fdbbba9317c4" prot="public" virt="non-virtual"><scope>apollo::cyber::record::RecordBase</scope><name>GetHeader</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordBase_1a82d12447e8d34553c42e4225b9359a1b" prot="public" virt="pure-virtual"><scope>apollo::cyber::record::RecordBase</scope><name>GetMessageNumber</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordBase_1ad1883d8a1ce2f90046b18eb6fd9306e3" prot="public" virt="pure-virtual"><scope>apollo::cyber::record::RecordBase</scope><name>GetMessageType</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordBase_1a0044d679cdfd10e56199f597446e912d" prot="public" virt="pure-virtual"><scope>apollo::cyber::record::RecordBase</scope><name>GetProtoDesc</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordBase_1af4b08d823c058d17eb38abe92d0ac7e7" prot="protected" virt="non-virtual"><scope>apollo::cyber::record::RecordBase</scope><name>header_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordBase_1a122b01307f078dbb0e1baa5d57226c5f" prot="protected" virt="non-virtual"><scope>apollo::cyber::record::RecordBase</scope><name>is_opened_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordBase_1a57cd95944aa2d3ddc216d3e9539db590" prot="protected" virt="non-virtual"><scope>apollo::cyber::record::RecordBase</scope><name>null_type_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordBase_1a95c06bb77a60dfc827592777030f84de" prot="public" virt="virtual"><scope>apollo::cyber::record::RecordBase</scope><name>~RecordBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,660 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classapollo_1_1cyber_1_1record_1_1RecordWriter" kind="class" prot="public">
+    <compoundname>apollo::cyber::record::RecordWriter</compoundname>
+    <basecompoundref refid="classapollo_1_1cyber_1_1record_1_1RecordBase" prot="public" virt="non-virtual">apollo::cyber::record::RecordBase</basecompoundref>
+    <includes refid="record__writer_8h" local="no">record_writer.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a2eee5f400e4db03ec9101258d8e819ab" prot="public" static="no">
+        <type>std::unordered_map&lt; std::string, uint64_t &gt;</type>
+        <definition>using apollo::cyber::record::RecordWriter::MessageNumberMap =  std::unordered_map&lt;std::string, uint64_t&gt;</definition>
+        <argsstring></argsstring>
+        <name>MessageNumberMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/record/record_writer.h" line="40" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/record/record_writer.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a199b00d29dde82c7a061b4ee2b6204d3" prot="public" static="no">
+        <type>std::unordered_map&lt; std::string, std::string &gt;</type>
+        <definition>using apollo::cyber::record::RecordWriter::MessageTypeMap =  std::unordered_map&lt;std::string, std::string&gt;</definition>
+        <argsstring></argsstring>
+        <name>MessageTypeMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/record/record_writer.h" line="41" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/record/record_writer.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a19879e77c64a35d8e8d49d39798c25cb" prot="public" static="no">
+        <type>std::unordered_map&lt; std::string, std::string &gt;</type>
+        <definition>using apollo::cyber::record::RecordWriter::MessageProtoDescMap =  std::unordered_map&lt;std::string, std::string&gt;</definition>
+        <argsstring></argsstring>
+        <name>MessageProtoDescMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/record/record_writer.h" line="42" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/record/record_writer.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a9711b0e51bbbd4dbe54e44c3d1fbd9da" prot="public" static="no">
+        <type>std::unique_ptr&lt; <ref refid="classapollo_1_1cyber_1_1record_1_1RecordFileWriter" kindref="compound">RecordFileWriter</ref> &gt;</type>
+        <definition>using apollo::cyber::record::RecordWriter::FileWriterPtr =  std::unique_ptr&lt;RecordFileWriter&gt;</definition>
+        <argsstring></argsstring>
+        <name>FileWriterPtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/record/record_writer.h" line="43" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/record/record_writer.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a2dd230e28b838aef212051c69d1959b5" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string apollo::cyber::record::RecordWriter::path_</definition>
+        <argsstring></argsstring>
+        <name>path_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/record/record_writer.h" line="84" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/record/record_writer.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a93dde89dc680e3e6bddf15ee9a798619" prot="private" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t apollo::cyber::record::RecordWriter::segment_raw_size_</definition>
+        <argsstring></argsstring>
+        <name>segment_raw_size_</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/record/record_writer.h" line="85" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/record/record_writer.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1RecordWriter_1aeb5e15610f58a30bf82b7cc72ad0a9e8" prot="private" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t apollo::cyber::record::RecordWriter::segment_begin_time_</definition>
+        <argsstring></argsstring>
+        <name>segment_begin_time_</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/record/record_writer.h" line="86" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/record/record_writer.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1RecordWriter_1af5094adbd45ce47753dff6b5fc0a79c8" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t apollo::cyber::record::RecordWriter::file_index_</definition>
+        <argsstring></argsstring>
+        <name>file_index_</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/record/record_writer.h" line="87" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/record/record_writer.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1RecordWriter_1af60d36f6e755729d5b0c49c4900a75c2" prot="private" static="no" mutable="no">
+        <type><ref refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a2eee5f400e4db03ec9101258d8e819ab" kindref="member">MessageNumberMap</ref></type>
+        <definition>MessageNumberMap apollo::cyber::record::RecordWriter::channel_message_number_map_</definition>
+        <argsstring></argsstring>
+        <name>channel_message_number_map_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/record/record_writer.h" line="88" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/record/record_writer.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a3697130c4b69f46f1420f33b238a36ea" prot="private" static="no" mutable="no">
+        <type><ref refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a199b00d29dde82c7a061b4ee2b6204d3" kindref="member">MessageTypeMap</ref></type>
+        <definition>MessageTypeMap apollo::cyber::record::RecordWriter::channel_message_type_map_</definition>
+        <argsstring></argsstring>
+        <name>channel_message_type_map_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/record/record_writer.h" line="89" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/record/record_writer.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a9f5fde8dcd26af2dff253a0b95e15211" prot="private" static="no" mutable="no">
+        <type><ref refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a19879e77c64a35d8e8d49d39798c25cb" kindref="member">MessageProtoDescMap</ref></type>
+        <definition>MessageProtoDescMap apollo::cyber::record::RecordWriter::channel_proto_desc_map_</definition>
+        <argsstring></argsstring>
+        <name>channel_proto_desc_map_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/record/record_writer.h" line="90" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/record/record_writer.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1RecordWriter_1aa2df27a2d2944227aa8f38593a018c2e" prot="private" static="no" mutable="no">
+        <type><ref refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a9711b0e51bbbd4dbe54e44c3d1fbd9da" kindref="member">FileWriterPtr</ref></type>
+        <definition>FileWriterPtr apollo::cyber::record::RecordWriter::file_writer_</definition>
+        <argsstring></argsstring>
+        <name>file_writer_</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/record/record_writer.h" line="91" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/record/record_writer.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a12e4edaffd51705cd928e1a9925303c5" prot="private" static="no" mutable="no">
+        <type><ref refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a9711b0e51bbbd4dbe54e44c3d1fbd9da" kindref="member">FileWriterPtr</ref></type>
+        <definition>FileWriterPtr apollo::cyber::record::RecordWriter::file_writer_backup_</definition>
+        <argsstring></argsstring>
+        <name>file_writer_backup_</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/record/record_writer.h" line="92" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/record/record_writer.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1RecordWriter_1ab309369671e53408b88782b68f897be0" prot="private" static="no" mutable="no">
+        <type>std::mutex</type>
+        <definition>std::mutex apollo::cyber::record::RecordWriter::mutex_</definition>
+        <argsstring></argsstring>
+        <name>mutex_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/record/record_writer.h" line="93" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/record/record_writer.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a6ebe2f54d4185936811d045e0135b513" prot="private" static="no" mutable="no">
+        <type>std::stringstream</type>
+        <definition>std::stringstream apollo::cyber::record::RecordWriter::sstream_</definition>
+        <argsstring></argsstring>
+        <name>sstream_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/record/record_writer.h" line="94" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/record/record_writer.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a88286f6474eee87f0790523ff870c65a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::record::RecordWriter::RecordWriter</definition>
+        <argsstring>()</argsstring>
+        <name>RecordWriter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/record/record_writer.h" line="45" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a53d830c597e5874a7304b13f5f15283b" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::record::RecordWriter::RecordWriter</definition>
+        <argsstring>(const proto::Header &amp;header)</argsstring>
+        <name>RecordWriter</name>
+        <param>
+          <type>const proto::Header &amp;</type>
+          <declname>header</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/record/record_writer.h" line="46" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a24af86f0bc084759c1be3a9f4676539e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual apollo::cyber::record::RecordWriter::~RecordWriter</definition>
+        <argsstring>()</argsstring>
+        <name>~RecordWriter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/record/record_writer.h" line="48" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a659682af6dd6b22c5f470470929a0fee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::record::RecordWriter::Open</definition>
+        <argsstring>(const std::string &amp;file)</argsstring>
+        <name>Open</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/record/record_writer.h" line="50" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1RecordWriter_1aeeb301a117dd331fc6fcd5d7c901edef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::record::RecordWriter::Close</definition>
+        <argsstring>()</argsstring>
+        <name>Close</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/record/record_writer.h" line="52" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1RecordWriter_1aff50d522ad22bcfb6ecc8affe837f048" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::record::RecordWriter::WriteChannel</definition>
+        <argsstring>(const std::string &amp;channel_name, const std::string &amp;message_type, const std::string &amp;proto_desc)</argsstring>
+        <name>WriteChannel</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>channel_name</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message_type</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>proto_desc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/record/record_writer.h" line="54" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a9f8c8aa8c692d90fe5463930b440493e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename MessageT</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool apollo::cyber::record::RecordWriter::WriteMessage</definition>
+        <argsstring>(const std::string &amp;channel_name, const MessageT &amp;message, const uint64_t time_nanosec, const std::string &amp;proto_desc=&quot;&quot;)</argsstring>
+        <name>WriteMessage</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>channel_name</declname>
+        </param>
+        <param>
+          <type>const MessageT &amp;</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>const uint64_t</type>
+          <declname>time_nanosec</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>proto_desc</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/record/record_writer.h" line="59" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/record/record_writer.h" bodystart="122" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a5fa79eae0201d4f3334b069b24a080b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::record::RecordWriter::SetSizeOfFileSegmentation</definition>
+        <argsstring>(uint64_t size_kilobytes)</argsstring>
+        <name>SetSizeOfFileSegmentation</name>
+        <param>
+          <type>uint64_t</type>
+          <declname>size_kilobytes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/record/record_writer.h" line="63" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a5e64257c68b872bc9bbb35874d9cdc40" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::record::RecordWriter::SetIntervalOfFileSegmentation</definition>
+        <argsstring>(uint64_t time_sec)</argsstring>
+        <name>SetIntervalOfFileSegmentation</name>
+        <param>
+          <type>uint64_t</type>
+          <declname>time_sec</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/record/record_writer.h" line="65" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a2f0637a10532fd3d721ec27dec9aab05" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t apollo::cyber::record::RecordWriter::GetMessageNumber</definition>
+        <argsstring>(const std::string &amp;channel_name) const override</argsstring>
+        <name>GetMessageNumber</name>
+        <reimplements refid="classapollo_1_1cyber_1_1record_1_1RecordBase_1a82d12447e8d34553c42e4225b9359a1b">GetMessageNumber</reimplements>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>channel_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/record/record_writer.h" line="67" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a7bab92d44a94ea9c97546ff809c05064" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const std::string &amp;</type>
+        <definition>const std::string&amp; apollo::cyber::record::RecordWriter::GetMessageType</definition>
+        <argsstring>(const std::string &amp;channel_name) const override</argsstring>
+        <name>GetMessageType</name>
+        <reimplements refid="classapollo_1_1cyber_1_1record_1_1RecordBase_1ad1883d8a1ce2f90046b18eb6fd9306e3">GetMessageType</reimplements>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>channel_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/record/record_writer.h" line="69" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a1f547541dfc6df5803f1032e4f39fb3c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const std::string &amp;</type>
+        <definition>const std::string&amp; apollo::cyber::record::RecordWriter::GetProtoDesc</definition>
+        <argsstring>(const std::string &amp;channel_name) const override</argsstring>
+        <name>GetProtoDesc</name>
+        <reimplements refid="classapollo_1_1cyber_1_1record_1_1RecordBase_1a0044d679cdfd10e56199f597446e912d">GetProtoDesc</reimplements>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>channel_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/record/record_writer.h" line="72" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1RecordWriter_1aafe567af96e0770740544c54d388e4c8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool apollo::cyber::record::RecordWriter::WriteMessage</definition>
+        <argsstring>(const std::string &amp;channel_name, const std::string &amp;content, const uint64_t time_nanosec, const std::string &amp;proto_desc)</argsstring>
+        <name>WriteMessage</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>channel_name</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>content</declname>
+        </param>
+        <param>
+          <type>const uint64_t</type>
+          <declname>time_nanosec</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>proto_desc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/record/record_writer.h" line="98" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/record/record_writer.h" bodystart="98" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a28694d46c58b507e13571e66ad1b5215" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool apollo::cyber::record::RecordWriter::WriteMessage</definition>
+        <argsstring>(const std::string &amp;channel_name, const std::shared_ptr&lt; message::RawMessage &gt; &amp;message, const uint64_t time_nanosec, const std::string &amp;proto_desc)</argsstring>
+        <name>WriteMessage</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>channel_name</declname>
+        </param>
+        <param>
+          <type>const std::shared_ptr&lt; <ref refid="structapollo_1_1cyber_1_1message_1_1RawMessage" kindref="compound">message::RawMessage</ref> &gt; &amp;</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>const uint64_t</type>
+          <declname>time_nanosec</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>proto_desc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/record/record_writer.h" line="110" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/record/record_writer.h" bodystart="110" bodyend="119"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a0667d7e33d4d062ddbd942753b71c061" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::record::RecordWriter::WriteMessage</definition>
+        <argsstring>(const proto::SingleMessage &amp;single_msg)</argsstring>
+        <name>WriteMessage</name>
+        <param>
+          <type>const proto::SingleMessage &amp;</type>
+          <declname>single_msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/record/record_writer.h" line="76" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1RecordWriter_1aef5d2cfdfff48cd23f430c0d4a20f5c2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::record::RecordWriter::SplitOutfile</definition>
+        <argsstring>()</argsstring>
+        <name>SplitOutfile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/record/record_writer.h" line="77" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a2ea4f80202e28292900382ca60ec9b71" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::record::RecordWriter::IsNewChannel</definition>
+        <argsstring>(const std::string &amp;channel_name)</argsstring>
+        <name>IsNewChannel</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>channel_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/record/record_writer.h" line="78" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a96843b877960edcf89da30a5ea0807d2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::record::RecordWriter::OnNewChannel</definition>
+        <argsstring>(const std::string &amp;channel_name, const std::string &amp;message_type, const std::string &amp;proto_desc)</argsstring>
+        <name>OnNewChannel</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>channel_name</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message_type</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>proto_desc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/record/record_writer.h" line="79" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1RecordWriter_1aa997a88b0c59f25f8f5b52aab1c76229" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::record::RecordWriter::OnNewMessage</definition>
+        <argsstring>(const std::string &amp;channel_name)</argsstring>
+        <name>OnNewMessage</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>channel_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/record/record_writer.h" line="82" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="702">
+        <label>apollo::cyber::record::RecordWriter</label>
+        <link refid="classapollo_1_1cyber_1_1record_1_1RecordWriter"/>
+        <childnode refid="703" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="703">
+        <label>apollo::cyber::record::RecordBase</label>
+        <link refid="classapollo_1_1cyber_1_1record_1_1RecordBase"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="704">
+        <label>apollo::cyber::record::RecordWriter</label>
+        <link refid="classapollo_1_1cyber_1_1record_1_1RecordWriter"/>
+        <childnode refid="705" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="705">
+        <label>apollo::cyber::record::RecordBase</label>
+        <link refid="classapollo_1_1cyber_1_1record_1_1RecordBase"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/work/apollo-fork/apollo/cyber/record/record_writer.h" line="38" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/record/record_writer.h" bodystart="38" bodyend="95"/>
+    <listofallmembers>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1af60d36f6e755729d5b0c49c4900a75c2" prot="private" virt="non-virtual"><scope>apollo::cyber::record::RecordWriter</scope><name>channel_message_number_map_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a3697130c4b69f46f1420f33b238a36ea" prot="private" virt="non-virtual"><scope>apollo::cyber::record::RecordWriter</scope><name>channel_message_type_map_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a9f5fde8dcd26af2dff253a0b95e15211" prot="private" virt="non-virtual"><scope>apollo::cyber::record::RecordWriter</scope><name>channel_proto_desc_map_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1aeeb301a117dd331fc6fcd5d7c901edef" prot="public" virt="non-virtual"><scope>apollo::cyber::record::RecordWriter</scope><name>Close</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordBase_1a3ce26ca2d17eec9a3d4e47749ace66b2" prot="protected" virt="non-virtual"><scope>apollo::cyber::record::RecordWriter</scope><name>file_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1af5094adbd45ce47753dff6b5fc0a79c8" prot="private" virt="non-virtual"><scope>apollo::cyber::record::RecordWriter</scope><name>file_index_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1aa2df27a2d2944227aa8f38593a018c2e" prot="private" virt="non-virtual"><scope>apollo::cyber::record::RecordWriter</scope><name>file_writer_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a12e4edaffd51705cd928e1a9925303c5" prot="private" virt="non-virtual"><scope>apollo::cyber::record::RecordWriter</scope><name>file_writer_backup_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a9711b0e51bbbd4dbe54e44c3d1fbd9da" prot="public" virt="non-virtual"><scope>apollo::cyber::record::RecordWriter</scope><name>FileWriterPtr</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordBase_1ad51ac494bc2e2a5922b792558789d602" prot="public" virt="non-virtual"><scope>apollo::cyber::record::RecordWriter</scope><name>GetFile</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordBase_1af627ca03e16834e5be16fdbbba9317c4" prot="public" virt="non-virtual"><scope>apollo::cyber::record::RecordWriter</scope><name>GetHeader</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a2f0637a10532fd3d721ec27dec9aab05" prot="public" virt="virtual"><scope>apollo::cyber::record::RecordWriter</scope><name>GetMessageNumber</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a7bab92d44a94ea9c97546ff809c05064" prot="public" virt="virtual"><scope>apollo::cyber::record::RecordWriter</scope><name>GetMessageType</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a1f547541dfc6df5803f1032e4f39fb3c" prot="public" virt="virtual"><scope>apollo::cyber::record::RecordWriter</scope><name>GetProtoDesc</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordBase_1af4b08d823c058d17eb38abe92d0ac7e7" prot="protected" virt="non-virtual"><scope>apollo::cyber::record::RecordWriter</scope><name>header_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordBase_1a122b01307f078dbb0e1baa5d57226c5f" prot="protected" virt="non-virtual"><scope>apollo::cyber::record::RecordWriter</scope><name>is_opened_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a2ea4f80202e28292900382ca60ec9b71" prot="private" virt="non-virtual"><scope>apollo::cyber::record::RecordWriter</scope><name>IsNewChannel</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a2eee5f400e4db03ec9101258d8e819ab" prot="public" virt="non-virtual"><scope>apollo::cyber::record::RecordWriter</scope><name>MessageNumberMap</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a19879e77c64a35d8e8d49d39798c25cb" prot="public" virt="non-virtual"><scope>apollo::cyber::record::RecordWriter</scope><name>MessageProtoDescMap</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a199b00d29dde82c7a061b4ee2b6204d3" prot="public" virt="non-virtual"><scope>apollo::cyber::record::RecordWriter</scope><name>MessageTypeMap</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1ab309369671e53408b88782b68f897be0" prot="private" virt="non-virtual"><scope>apollo::cyber::record::RecordWriter</scope><name>mutex_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordBase_1a57cd95944aa2d3ddc216d3e9539db590" prot="protected" virt="non-virtual"><scope>apollo::cyber::record::RecordWriter</scope><name>null_type_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a96843b877960edcf89da30a5ea0807d2" prot="private" virt="non-virtual"><scope>apollo::cyber::record::RecordWriter</scope><name>OnNewChannel</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1aa997a88b0c59f25f8f5b52aab1c76229" prot="private" virt="non-virtual"><scope>apollo::cyber::record::RecordWriter</scope><name>OnNewMessage</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a659682af6dd6b22c5f470470929a0fee" prot="public" virt="non-virtual"><scope>apollo::cyber::record::RecordWriter</scope><name>Open</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a2dd230e28b838aef212051c69d1959b5" prot="private" virt="non-virtual"><scope>apollo::cyber::record::RecordWriter</scope><name>path_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a88286f6474eee87f0790523ff870c65a" prot="public" virt="non-virtual"><scope>apollo::cyber::record::RecordWriter</scope><name>RecordWriter</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a53d830c597e5874a7304b13f5f15283b" prot="public" virt="non-virtual"><scope>apollo::cyber::record::RecordWriter</scope><name>RecordWriter</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1aeb5e15610f58a30bf82b7cc72ad0a9e8" prot="private" virt="non-virtual"><scope>apollo::cyber::record::RecordWriter</scope><name>segment_begin_time_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a93dde89dc680e3e6bddf15ee9a798619" prot="private" virt="non-virtual"><scope>apollo::cyber::record::RecordWriter</scope><name>segment_raw_size_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a5e64257c68b872bc9bbb35874d9cdc40" prot="public" virt="non-virtual"><scope>apollo::cyber::record::RecordWriter</scope><name>SetIntervalOfFileSegmentation</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a5fa79eae0201d4f3334b069b24a080b9" prot="public" virt="non-virtual"><scope>apollo::cyber::record::RecordWriter</scope><name>SetSizeOfFileSegmentation</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1aef5d2cfdfff48cd23f430c0d4a20f5c2" prot="private" virt="non-virtual"><scope>apollo::cyber::record::RecordWriter</scope><name>SplitOutfile</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a6ebe2f54d4185936811d045e0135b513" prot="private" virt="non-virtual"><scope>apollo::cyber::record::RecordWriter</scope><name>sstream_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1aff50d522ad22bcfb6ecc8affe837f048" prot="public" virt="non-virtual"><scope>apollo::cyber::record::RecordWriter</scope><name>WriteChannel</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a9f8c8aa8c692d90fe5463930b440493e" prot="public" virt="non-virtual"><scope>apollo::cyber::record::RecordWriter</scope><name>WriteMessage</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a0667d7e33d4d062ddbd942753b71c061" prot="private" virt="non-virtual"><scope>apollo::cyber::record::RecordWriter</scope><name>WriteMessage</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1aafe567af96e0770740544c54d388e4c8" prot="public" virt="non-virtual"><scope>apollo::cyber::record::RecordWriter</scope><name>WriteMessage</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a28694d46c58b507e13571e66ad1b5215" prot="public" virt="non-virtual"><scope>apollo::cyber::record::RecordWriter</scope><name>WriteMessage</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordBase_1a95c06bb77a60dfc827592777030f84de" prot="public" virt="virtual"><scope>apollo::cyber::record::RecordWriter</scope><name>~RecordBase</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1RecordWriter_1a24af86f0bc084759c1be3a9f4676539e" prot="public" virt="virtual"><scope>apollo::cyber::record::RecordWriter</scope><name>~RecordWriter</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

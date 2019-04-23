@@ -1,0 +1,650 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classScreen" kind="class" prot="public" final="yes">
+    <compoundname>Screen</compoundname>
+    <includes refid="screen_8h" local="no">screen.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classScreen_1ade5d330a53244ab5e204c9fc2a8ab235" prot="public" static="no">
+        <name>ColorPair</name>
+        <enumvalue id="classScreen_1ade5d330a53244ab5e204c9fc2a8ab235a8f6f59447dce1fb81c648d8674d6b6d2" prot="public">
+          <name>INVALID</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classScreen_1ade5d330a53244ab5e204c9fc2a8ab235aa979e0b275ebd1d03e934974ac04806a" prot="public">
+          <name>GREEN_BLACK</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classScreen_1ade5d330a53244ab5e204c9fc2a8ab235ad296b80c3ff583dfc66fd69be3bfa177" prot="public">
+          <name>YELLOW_BLACK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classScreen_1ade5d330a53244ab5e204c9fc2a8ab235aeb2de5cf606cc15deec28e5ed6d94f1d" prot="public">
+          <name>RED_BLACK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classScreen_1ade5d330a53244ab5e204c9fc2a8ab235a970004d17898edd8718ff21e795b9d39" prot="public">
+          <name>WHITE_BLACK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classScreen_1ade5d330a53244ab5e204c9fc2a8ab235a710df85d2ceefb42c12694fda0682fee" prot="public">
+          <name>BLACK_WHITE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/screen.h" line="34" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/screen.h" bodystart="34" bodyend="41"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="classScreen_1a3b2273cea4444624a4fb6542ee2ce44e" prot="private" static="no">
+        <name>State</name>
+        <enumvalue id="classScreen_1a3b2273cea4444624a4fb6542ee2ce44ea0c1142ba26a81392fece35ae71e5bb31" prot="public">
+          <name>RenderMessage</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classScreen_1a3b2273cea4444624a4fb6542ee2ce44ea08a6b92dc8c413bc10fdce91fdc730ad" prot="public">
+          <name>RenderInterCmdInfo</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/screen.h" line="82" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/screen.h" bodystart="82" bodyend="82"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classScreen_1aeaa4372d83cf381da26b0f06be0c08f2" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char Screen::InteractiveCmdStr[]</definition>
+        <argsstring>[]</argsstring>
+        <name>InteractiveCmdStr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/screen.h" line="32" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/screen.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classScreen_1a806b6c5ad380d84aa7457d06e1eb98f8" prot="private" static="no" mutable="yes">
+        <type><ref refid="classScreen_1ade5d330a53244ab5e204c9fc2a8ab235" kindref="member">ColorPair</ref></type>
+        <definition>ColorPair Screen::current_color_pair_</definition>
+        <argsstring></argsstring>
+        <name>current_color_pair_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/screen.h" line="84" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/screen.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classScreen_1a7282ffbd67e23dfec94cc1a7f0a7a7e9" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Screen::canRun_</definition>
+        <argsstring></argsstring>
+        <name>canRun_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/screen.h" line="85" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/screen.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classScreen_1a0ea09ea5eadc990cdcd32068c377287d" prot="private" static="no" mutable="no">
+        <type><ref refid="classScreen_1a3b2273cea4444624a4fb6542ee2ce44e" kindref="member">State</ref></type>
+        <definition>State Screen::current_state_</definition>
+        <argsstring></argsstring>
+        <name>current_state_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/screen.h" line="86" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/screen.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classScreen_1a69a30640ab25485d9f769e3a37bf8639" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Screen::highlight_direction_</definition>
+        <argsstring></argsstring>
+        <name>highlight_direction_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/screen.h" line="87" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/screen.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classScreen_1a404ae55aee99b0d10ccd46387ccac02e" prot="private" static="no" mutable="no">
+        <type><ref refid="classRenderableMessage" kindref="compound">RenderableMessage</ref> *</type>
+        <definition>RenderableMessage* Screen::current_render_obj_</definition>
+        <argsstring></argsstring>
+        <name>current_render_obj_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/screen.h" line="88" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/screen.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classScreen_1a737e0e6d802ff6c6f3055c94432fd062" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classScreen" kindref="compound">Screen</ref> *</type>
+        <definition>static Screen* Screen::Instance</definition>
+        <argsstring>(void)</argsstring>
+        <name>Instance</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/screen.h" line="42" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classScreen_1aca8e6d405d54bd0ea318564f11a68f00" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Screen::~Screen</definition>
+        <argsstring>(void)</argsstring>
+        <name>~Screen</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/screen.h" line="44" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classScreen_1a383837c8034bc40ce87e96898d5be0cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Screen::Init</definition>
+        <argsstring>(void)</argsstring>
+        <name>Init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/screen.h" line="46" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classScreen_1a48842cd1df5d4117dee21a028da74a40" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Screen::Run</definition>
+        <argsstring>(void)</argsstring>
+        <name>Run</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/screen.h" line="47" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classScreen_1a69154a73511bc8620803fa8f646ddd86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Screen::Resize</definition>
+        <argsstring>()</argsstring>
+        <name>Resize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/screen.h" line="48" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classScreen_1aadce9111b1acb69bd0e6f788ae2bbd1b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Screen::Stop</definition>
+        <argsstring>(void)</argsstring>
+        <name>Stop</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/screen.h" line="49" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/screen.h" bodystart="49" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classScreen_1a40b0a6eabbfe785a379388064ccea5c3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Screen::Width</definition>
+        <argsstring>(void) const </argsstring>
+        <name>Width</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/screen.h" line="51" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classScreen_1abb048c10e10b8c375e64d52137a9d279" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Screen::Height</definition>
+        <argsstring>(void) const </argsstring>
+        <name>Height</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/screen.h" line="52" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classScreen_1a1274f1b8ed227c757d390cd764fb16d0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Screen::AddStr</definition>
+        <argsstring>(int x, int y, ColorPair color, const char *cStr) const </argsstring>
+        <name>AddStr</name>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type><ref refid="classScreen_1ade5d330a53244ab5e204c9fc2a8ab235" kindref="member">ColorPair</ref></type>
+          <declname>color</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>cStr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/screen.h" line="54" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classScreen_1a09e8fb5148385cb5b9f9b0402617ae80" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classScreen_1ade5d330a53244ab5e204c9fc2a8ab235" kindref="member">ColorPair</ref></type>
+        <definition>ColorPair Screen::Color</definition>
+        <argsstring>(void) const </argsstring>
+        <name>Color</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/screen.h" line="56" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/screen.h" bodystart="56" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="classScreen_1a1237833b525a279bccec474488f49220" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Screen::SetCurrentColor</definition>
+        <argsstring>(ColorPair color) const </argsstring>
+        <name>SetCurrentColor</name>
+        <param>
+          <type><ref refid="classScreen_1ade5d330a53244ab5e204c9fc2a8ab235" kindref="member">ColorPair</ref></type>
+          <declname>color</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/screen.h" line="57" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classScreen_1a2195b9634c45b2d3158c7b6f749b910c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Screen::AddStr</definition>
+        <argsstring>(int x, int y, const char *str) const </argsstring>
+        <name>AddStr</name>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/screen.h" line="58" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classScreen_1aa2940a795d5a7b2ef7ce7321bb8e31e3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Screen::AddStr</definition>
+        <argsstring>(const char *str) const </argsstring>
+        <name>AddStr</name>
+        <param>
+          <type>const char *</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/screen.h" line="59" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classScreen_1aee7ca5e081d29f87a75d83932bace80f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Screen::MoveOffsetXY</definition>
+        <argsstring>(int offsetX, int offsetY) const </argsstring>
+        <name>MoveOffsetXY</name>
+        <param>
+          <type>int</type>
+          <declname>offsetX</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>offsetY</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/screen.h" line="60" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classScreen_1a93d9bd83f95acec95ab695cfa8ed7230" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Screen::ClearCurrentColor</definition>
+        <argsstring>(void) const </argsstring>
+        <name>ClearCurrentColor</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/screen.h" line="61" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classScreen_1ade6282ee71fe718c5a46c96578a7e00e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Screen::SetCurrentRenderMessage</definition>
+        <argsstring>(RenderableMessage *const renderObj)</argsstring>
+        <name>SetCurrentRenderMessage</name>
+        <param>
+          <type><ref refid="classRenderableMessage" kindref="compound">RenderableMessage</ref> *const</type>
+          <declname>renderObj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/screen.h" line="63" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/screen.h" bodystart="63" bodyend="67"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classScreen_1ae7576476fc6e6a6eaa66389fdc41fe72" prot="private" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Screen::Screen</definition>
+        <argsstring>()</argsstring>
+        <name>Screen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/screen.h" line="70" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classScreen_1a0e756e6d8543c7efe051beb0f757ca38" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Screen::Screen</definition>
+        <argsstring>(const Screen &amp;)=delete</argsstring>
+        <name>Screen</name>
+        <param>
+          <type>const <ref refid="classScreen" kindref="compound">Screen</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/screen.h" line="71" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classScreen_1a6e3bc79495fd0a10b19c2bb19b6d0d85" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classScreen" kindref="compound">Screen</ref> &amp;</type>
+        <definition>Screen&amp; Screen::operator=</definition>
+        <argsstring>(const Screen &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classScreen" kindref="compound">Screen</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/screen.h" line="72" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classScreen_1affe4f3c4fa6ed3a0ee953f1a75eee09e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Screen::SwitchState</definition>
+        <argsstring>(int ch)</argsstring>
+        <name>SwitchState</name>
+        <param>
+          <type>int</type>
+          <declname>ch</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/screen.h" line="74" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classScreen_1ac23986bc6e46e1d1565fec76da3a12fe" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Screen::HighlightLine</definition>
+        <argsstring>(int lineNo)</argsstring>
+        <name>HighlightLine</name>
+        <param>
+          <type>int</type>
+          <declname>lineNo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/screen.h" line="75" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classScreen_1a1957413647a5858f2c8324124c247ba2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Screen::ShowInteractiveCmd</definition>
+        <argsstring>(int ch)</argsstring>
+        <name>ShowInteractiveCmd</name>
+        <param>
+          <type>int</type>
+          <declname>ch</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/screen.h" line="77" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classScreen_1a27912037b26e33f45f0d5b7cfca777b3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Screen::ShowRenderMessage</definition>
+        <argsstring>(int ch)</argsstring>
+        <name>ShowRenderMessage</name>
+        <param>
+          <type>int</type>
+          <declname>ch</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/screen.h" line="78" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classScreen_1a0e172a443241197f50216c532be093df" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Screen::IsInit</definition>
+        <argsstring>(void) const </argsstring>
+        <name>IsInit</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/screen.h" line="80" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="802">
+        <label>RenderableMessage</label>
+        <link refid="classRenderableMessage"/>
+        <childnode refid="802" relation="usage">
+          <edgelabel>parent_</edgelabel>
+        </childnode>
+      </node>
+      <node id="801">
+        <label>Screen</label>
+        <link refid="classScreen"/>
+        <childnode refid="802" relation="usage">
+          <edgelabel>current_render_obj_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/screen.h" line="30" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/screen.h" bodystart="30" bodyend="89"/>
+    <listofallmembers>
+      <member refid="classScreen_1a1274f1b8ed227c757d390cd764fb16d0" prot="public" virt="non-virtual"><scope>Screen</scope><name>AddStr</name></member>
+      <member refid="classScreen_1a2195b9634c45b2d3158c7b6f749b910c" prot="public" virt="non-virtual"><scope>Screen</scope><name>AddStr</name></member>
+      <member refid="classScreen_1aa2940a795d5a7b2ef7ce7321bb8e31e3" prot="public" virt="non-virtual"><scope>Screen</scope><name>AddStr</name></member>
+      <member refid="classScreen_1ade5d330a53244ab5e204c9fc2a8ab235a710df85d2ceefb42c12694fda0682fee" prot="public" virt="non-virtual"><scope>Screen</scope><name>BLACK_WHITE</name></member>
+      <member refid="classScreen_1a7282ffbd67e23dfec94cc1a7f0a7a7e9" prot="private" virt="non-virtual"><scope>Screen</scope><name>canRun_</name></member>
+      <member refid="classScreen_1a93d9bd83f95acec95ab695cfa8ed7230" prot="public" virt="non-virtual"><scope>Screen</scope><name>ClearCurrentColor</name></member>
+      <member refid="classScreen_1a09e8fb5148385cb5b9f9b0402617ae80" prot="public" virt="non-virtual"><scope>Screen</scope><name>Color</name></member>
+      <member refid="classScreen_1ade5d330a53244ab5e204c9fc2a8ab235" prot="public" virt="non-virtual"><scope>Screen</scope><name>ColorPair</name></member>
+      <member refid="classScreen_1a806b6c5ad380d84aa7457d06e1eb98f8" prot="private" virt="non-virtual"><scope>Screen</scope><name>current_color_pair_</name></member>
+      <member refid="classScreen_1a404ae55aee99b0d10ccd46387ccac02e" prot="private" virt="non-virtual"><scope>Screen</scope><name>current_render_obj_</name></member>
+      <member refid="classScreen_1a0ea09ea5eadc990cdcd32068c377287d" prot="private" virt="non-virtual"><scope>Screen</scope><name>current_state_</name></member>
+      <member refid="classScreen_1ade5d330a53244ab5e204c9fc2a8ab235aa979e0b275ebd1d03e934974ac04806a" prot="public" virt="non-virtual"><scope>Screen</scope><name>GREEN_BLACK</name></member>
+      <member refid="classScreen_1abb048c10e10b8c375e64d52137a9d279" prot="public" virt="non-virtual"><scope>Screen</scope><name>Height</name></member>
+      <member refid="classScreen_1a69a30640ab25485d9f769e3a37bf8639" prot="private" virt="non-virtual"><scope>Screen</scope><name>highlight_direction_</name></member>
+      <member refid="classScreen_1ac23986bc6e46e1d1565fec76da3a12fe" prot="private" virt="non-virtual"><scope>Screen</scope><name>HighlightLine</name></member>
+      <member refid="classScreen_1a383837c8034bc40ce87e96898d5be0cc" prot="public" virt="non-virtual"><scope>Screen</scope><name>Init</name></member>
+      <member refid="classScreen_1a737e0e6d802ff6c6f3055c94432fd062" prot="public" virt="non-virtual"><scope>Screen</scope><name>Instance</name></member>
+      <member refid="classScreen_1aeaa4372d83cf381da26b0f06be0c08f2" prot="public" virt="non-virtual"><scope>Screen</scope><name>InteractiveCmdStr</name></member>
+      <member refid="classScreen_1ade5d330a53244ab5e204c9fc2a8ab235a8f6f59447dce1fb81c648d8674d6b6d2" prot="public" virt="non-virtual"><scope>Screen</scope><name>INVALID</name></member>
+      <member refid="classScreen_1a0e172a443241197f50216c532be093df" prot="private" virt="non-virtual"><scope>Screen</scope><name>IsInit</name></member>
+      <member refid="classScreen_1aee7ca5e081d29f87a75d83932bace80f" prot="public" virt="non-virtual"><scope>Screen</scope><name>MoveOffsetXY</name></member>
+      <member refid="classScreen_1a6e3bc79495fd0a10b19c2bb19b6d0d85" prot="private" virt="non-virtual"><scope>Screen</scope><name>operator=</name></member>
+      <member refid="classScreen_1ade5d330a53244ab5e204c9fc2a8ab235aeb2de5cf606cc15deec28e5ed6d94f1d" prot="public" virt="non-virtual"><scope>Screen</scope><name>RED_BLACK</name></member>
+      <member refid="classScreen_1a69154a73511bc8620803fa8f646ddd86" prot="public" virt="non-virtual"><scope>Screen</scope><name>Resize</name></member>
+      <member refid="classScreen_1a48842cd1df5d4117dee21a028da74a40" prot="public" virt="non-virtual"><scope>Screen</scope><name>Run</name></member>
+      <member refid="classScreen_1ae7576476fc6e6a6eaa66389fdc41fe72" prot="private" virt="non-virtual"><scope>Screen</scope><name>Screen</name></member>
+      <member refid="classScreen_1a0e756e6d8543c7efe051beb0f757ca38" prot="private" virt="non-virtual"><scope>Screen</scope><name>Screen</name></member>
+      <member refid="classScreen_1a1237833b525a279bccec474488f49220" prot="public" virt="non-virtual"><scope>Screen</scope><name>SetCurrentColor</name></member>
+      <member refid="classScreen_1ade6282ee71fe718c5a46c96578a7e00e" prot="public" virt="non-virtual"><scope>Screen</scope><name>SetCurrentRenderMessage</name></member>
+      <member refid="classScreen_1a1957413647a5858f2c8324124c247ba2" prot="private" virt="non-virtual"><scope>Screen</scope><name>ShowInteractiveCmd</name></member>
+      <member refid="classScreen_1a27912037b26e33f45f0d5b7cfca777b3" prot="private" virt="non-virtual"><scope>Screen</scope><name>ShowRenderMessage</name></member>
+      <member refid="classScreen_1a3b2273cea4444624a4fb6542ee2ce44e" prot="private" virt="non-virtual"><scope>Screen</scope><name>State</name></member>
+      <member refid="classScreen_1aadce9111b1acb69bd0e6f788ae2bbd1b" prot="public" virt="non-virtual"><scope>Screen</scope><name>Stop</name></member>
+      <member refid="classScreen_1affe4f3c4fa6ed3a0ee953f1a75eee09e" prot="private" virt="non-virtual"><scope>Screen</scope><name>SwitchState</name></member>
+      <member refid="classScreen_1ade5d330a53244ab5e204c9fc2a8ab235a970004d17898edd8718ff21e795b9d39" prot="public" virt="non-virtual"><scope>Screen</scope><name>WHITE_BLACK</name></member>
+      <member refid="classScreen_1a40b0a6eabbfe785a379388064ccea5c3" prot="public" virt="non-virtual"><scope>Screen</scope><name>Width</name></member>
+      <member refid="classScreen_1ade5d330a53244ab5e204c9fc2a8ab235ad296b80c3ff583dfc66fd69be3bfa177" prot="public" virt="non-virtual"><scope>Screen</scope><name>YELLOW_BLACK</name></member>
+      <member refid="classScreen_1aca8e6d405d54bd0ea318564f11a68f00" prot="public" virt="non-virtual"><scope>Screen</scope><name>~Screen</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
