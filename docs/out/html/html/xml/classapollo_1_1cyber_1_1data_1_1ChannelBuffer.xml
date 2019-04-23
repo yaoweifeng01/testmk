@@ -1,0 +1,181 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classapollo_1_1cyber_1_1data_1_1ChannelBuffer" kind="class" prot="public">
+    <compoundname>apollo::cyber::data::ChannelBuffer</compoundname>
+    <includes refid="channel__buffer_8h" local="no">channel_buffer.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename</type>
+        <declname>T</declname>
+        <defname>T</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classapollo_1_1cyber_1_1data_1_1ChannelBuffer_1a4d0e8b23e4b308b61ca0154970cec77f" prot="public" static="no">
+        <type><ref refid="classapollo_1_1cyber_1_1data_1_1CacheBuffer" kindref="compound">CacheBuffer</ref>&lt; std::shared_ptr&lt; T &gt;&gt;</type>
+        <definition>using apollo::cyber::data::ChannelBuffer&lt; T &gt;::BufferType =  CacheBuffer&lt;std::shared_ptr&lt;T&gt;&gt;</definition>
+        <argsstring></argsstring>
+        <name>BufferType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/data/channel_buffer.h" line="39" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/data/channel_buffer.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1data_1_1ChannelBuffer_1a019c648fb3ffbc85bd2639878b70e120" prot="private" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t apollo::cyber::data::ChannelBuffer&lt; T &gt;::channel_id_</definition>
+        <argsstring></argsstring>
+        <name>channel_id_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/data/channel_buffer.h" line="53" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/data/channel_buffer.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1data_1_1ChannelBuffer_1a5db350f9adda047d243e1ea696b13ccc" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="classapollo_1_1cyber_1_1data_1_1ChannelBuffer_1a4d0e8b23e4b308b61ca0154970cec77f" kindref="member">BufferType</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;BufferType&gt; apollo::cyber::data::ChannelBuffer&lt; T &gt;::buffer_</definition>
+        <argsstring></argsstring>
+        <name>buffer_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/data/channel_buffer.h" line="54" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/data/channel_buffer.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1data_1_1ChannelBuffer_1af90aee7c0f697fc64c495829816d28fd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::data::ChannelBuffer&lt; T &gt;::ChannelBuffer</definition>
+        <argsstring>(uint64_t channel_id, BufferType *buffer)</argsstring>
+        <name>ChannelBuffer</name>
+        <param>
+          <type>uint64_t</type>
+          <declname>channel_id</declname>
+        </param>
+        <param>
+          <type><ref refid="classapollo_1_1cyber_1_1data_1_1ChannelBuffer_1a4d0e8b23e4b308b61ca0154970cec77f" kindref="member">BufferType</ref> *</type>
+          <declname>buffer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/data/channel_buffer.h" line="40" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/data/channel_buffer.h" bodystart="40" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1data_1_1ChannelBuffer_1a8f82b68889d1cc8f68760103fcfdb4ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::data::ChannelBuffer&lt; T &gt;::Fetch</definition>
+        <argsstring>(uint64_t *index, std::shared_ptr&lt; T &gt; &amp;m)</argsstring>
+        <name>Fetch</name>
+        <param>
+          <type>uint64_t *</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; T &gt; &amp;</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/data/channel_buffer.h" line="43" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/data/channel_buffer.h" bodystart="58" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1data_1_1ChannelBuffer_1a29071a969030a646c7d7becd894e8767" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::data::ChannelBuffer&lt; T &gt;::Latest</definition>
+        <argsstring>(std::shared_ptr&lt; T &gt; &amp;m)</argsstring>
+        <name>Latest</name>
+        <param>
+          <type>std::shared_ptr&lt; T &gt; &amp;</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/data/channel_buffer.h" line="45" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/data/channel_buffer.h" bodystart="81" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1data_1_1ChannelBuffer_1a6e58caceefc98711d66d4bbeb07b51d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::data::ChannelBuffer&lt; T &gt;::FetchMulti</definition>
+        <argsstring>(uint64_t fetch_size, std::vector&lt; std::shared_ptr&lt; T &gt;&gt; *vec)</argsstring>
+        <name>FetchMulti</name>
+        <param>
+          <type>uint64_t</type>
+          <declname>fetch_size</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; std::shared_ptr&lt; T &gt;&gt; *</type>
+          <declname>vec</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/data/channel_buffer.h" line="47" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/data/channel_buffer.h" bodystart="92" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1data_1_1ChannelBuffer_1abb1ae153da4014b45a4c5591e3209a53" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t apollo::cyber::data::ChannelBuffer&lt; T &gt;::channel_id</definition>
+        <argsstring>() const </argsstring>
+        <name>channel_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/data/channel_buffer.h" line="49" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/data/channel_buffer.h" bodystart="49" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1data_1_1ChannelBuffer_1abb9e4babe4169c9b3cd3125f84a7da1f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="classapollo_1_1cyber_1_1data_1_1ChannelBuffer_1a4d0e8b23e4b308b61ca0154970cec77f" kindref="member">BufferType</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;BufferType&gt; apollo::cyber::data::ChannelBuffer&lt; T &gt;::Buffer</definition>
+        <argsstring>() const </argsstring>
+        <name>Buffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/data/channel_buffer.h" line="50" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/data/channel_buffer.h" bodystart="50" bodyend="50"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/work/apollo-fork/apollo/cyber/data/channel_buffer.h" line="37" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/data/channel_buffer.h" bodystart="37" bodyend="55"/>
+    <listofallmembers>
+      <member refid="classapollo_1_1cyber_1_1data_1_1ChannelBuffer_1abb9e4babe4169c9b3cd3125f84a7da1f" prot="public" virt="non-virtual"><scope>apollo::cyber::data::ChannelBuffer</scope><name>Buffer</name></member>
+      <member refid="classapollo_1_1cyber_1_1data_1_1ChannelBuffer_1a5db350f9adda047d243e1ea696b13ccc" prot="private" virt="non-virtual"><scope>apollo::cyber::data::ChannelBuffer</scope><name>buffer_</name></member>
+      <member refid="classapollo_1_1cyber_1_1data_1_1ChannelBuffer_1a4d0e8b23e4b308b61ca0154970cec77f" prot="public" virt="non-virtual"><scope>apollo::cyber::data::ChannelBuffer</scope><name>BufferType</name></member>
+      <member refid="classapollo_1_1cyber_1_1data_1_1ChannelBuffer_1abb1ae153da4014b45a4c5591e3209a53" prot="public" virt="non-virtual"><scope>apollo::cyber::data::ChannelBuffer</scope><name>channel_id</name></member>
+      <member refid="classapollo_1_1cyber_1_1data_1_1ChannelBuffer_1a019c648fb3ffbc85bd2639878b70e120" prot="private" virt="non-virtual"><scope>apollo::cyber::data::ChannelBuffer</scope><name>channel_id_</name></member>
+      <member refid="classapollo_1_1cyber_1_1data_1_1ChannelBuffer_1af90aee7c0f697fc64c495829816d28fd" prot="public" virt="non-virtual"><scope>apollo::cyber::data::ChannelBuffer</scope><name>ChannelBuffer</name></member>
+      <member refid="classapollo_1_1cyber_1_1data_1_1ChannelBuffer_1a8f82b68889d1cc8f68760103fcfdb4ed" prot="public" virt="non-virtual"><scope>apollo::cyber::data::ChannelBuffer</scope><name>Fetch</name></member>
+      <member refid="classapollo_1_1cyber_1_1data_1_1ChannelBuffer_1a6e58caceefc98711d66d4bbeb07b51d8" prot="public" virt="non-virtual"><scope>apollo::cyber::data::ChannelBuffer</scope><name>FetchMulti</name></member>
+      <member refid="classapollo_1_1cyber_1_1data_1_1ChannelBuffer_1a29071a969030a646c7d7becd894e8767" prot="public" virt="non-virtual"><scope>apollo::cyber::data::ChannelBuffer</scope><name>Latest</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

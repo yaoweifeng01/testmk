@@ -1,0 +1,424 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classapollo_1_1cyber_1_1logger_1_1AsyncLogger" kind="class" prot="public">
+    <compoundname>apollo::cyber::logger::AsyncLogger</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Logger</basecompoundref>
+    <includes refid="async__logger_8h" local="no">async_logger.h</includes>
+    <innerclass refid="structapollo_1_1cyber_1_1logger_1_1AsyncLogger_1_1Buffer" prot="private">apollo::cyber::logger::AsyncLogger::Buffer</innerclass>
+    <innerclass refid="structapollo_1_1cyber_1_1logger_1_1AsyncLogger_1_1Msg" prot="private">apollo::cyber::logger::AsyncLogger::Msg</innerclass>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="classapollo_1_1cyber_1_1logger_1_1AsyncLogger_1ac693c5c55875861feb508ed2b60223a4" prot="private" static="no">
+        <name>State</name>
+        <enumvalue id="classapollo_1_1cyber_1_1logger_1_1AsyncLogger_1ac693c5c55875861feb508ed2b60223a4a05e01a42de2ef2f76fc008c2f2ac0b11" prot="private">
+          <name>INITTED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classapollo_1_1cyber_1_1logger_1_1AsyncLogger_1ac693c5c55875861feb508ed2b60223a4ad883b067d35376bd78b0f301a0200704" prot="private">
+          <name>RUNNING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classapollo_1_1cyber_1_1logger_1_1AsyncLogger_1ac693c5c55875861feb508ed2b60223a4a26a879c1a0c30577cff7af5688a3b55f" prot="private">
+          <name>STOPPED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/logger/async_logger.h" line="197" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/logger/async_logger.h" bodystart="197" bodyend="197"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1logger_1_1AsyncLogger_1aa335015aac6cf1e4a7ef9def98cc5f33" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int apollo::cyber::logger::AsyncLogger::max_buffer_bytes_</definition>
+        <argsstring></argsstring>
+        <name>max_buffer_bytes_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/logger/async_logger.h" line="161" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/logger/async_logger.h" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1logger_1_1AsyncLogger_1a4d7679337ba167a45f75c006f9c2f340" prot="private" static="no" mutable="no">
+        <type>google::base::Logger *const</type>
+        <definition>google::base::Logger* const apollo::cyber::logger::AsyncLogger::wrapped_</definition>
+        <argsstring></argsstring>
+        <name>wrapped_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/logger/async_logger.h" line="163" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/logger/async_logger.h" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1logger_1_1AsyncLogger_1a973fb1d166acaab52815ded79cadec25" prot="private" static="no" mutable="no">
+        <type>std::thread</type>
+        <definition>std::thread apollo::cyber::logger::AsyncLogger::thread_</definition>
+        <argsstring></argsstring>
+        <name>thread_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/logger/async_logger.h" line="164" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/logger/async_logger.h" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1logger_1_1AsyncLogger_1a52a5941a5ed779bac9b1469677dfd8fa" prot="private" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t apollo::cyber::logger::AsyncLogger::flush_count_</definition>
+        <argsstring></argsstring>
+        <name>flush_count_</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/logger/async_logger.h" line="168" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/logger/async_logger.h" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1logger_1_1AsyncLogger_1ae50ea372dfdfe32615dc5d25664c8075" prot="private" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t apollo::cyber::logger::AsyncLogger::drop_count_</definition>
+        <argsstring></argsstring>
+        <name>drop_count_</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/logger/async_logger.h" line="172" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/logger/async_logger.h" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1logger_1_1AsyncLogger_1a822d34060bc2e4bc3c1b5dbb80a62470" prot="private" static="no" mutable="no">
+        <type>std::mutex</type>
+        <definition>std::mutex apollo::cyber::logger::AsyncLogger::mutex_</definition>
+        <argsstring></argsstring>
+        <name>mutex_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/logger/async_logger.h" line="175" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/logger/async_logger.h" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1logger_1_1AsyncLogger_1a606516963229bb28e70cf5599e993798" prot="private" static="no" mutable="no">
+        <type>std::condition_variable</type>
+        <definition>std::condition_variable apollo::cyber::logger::AsyncLogger::wake_flusher_cv_</definition>
+        <argsstring></argsstring>
+        <name>wake_flusher_cv_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/logger/async_logger.h" line="179" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/logger/async_logger.h" bodystart="179" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1logger_1_1AsyncLogger_1ac317fa7ba8ac170fcaebee103b861aa6" prot="private" static="no" mutable="no">
+        <type>std::condition_variable</type>
+        <definition>std::condition_variable apollo::cyber::logger::AsyncLogger::flush_complete_cv_</definition>
+        <argsstring></argsstring>
+        <name>flush_complete_cv_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/logger/async_logger.h" line="187" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/logger/async_logger.h" bodystart="187" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1logger_1_1AsyncLogger_1a89a6be9354f86ddcfabe1d313117b43d" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; <ref refid="structapollo_1_1cyber_1_1logger_1_1AsyncLogger_1_1Buffer" kindref="compound">Buffer</ref> &gt;</type>
+        <definition>std::unique_ptr&lt;Buffer&gt; apollo::cyber::logger::AsyncLogger::active_buf_</definition>
+        <argsstring></argsstring>
+        <name>active_buf_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/logger/async_logger.h" line="190" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/logger/async_logger.h" bodystart="190" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1logger_1_1AsyncLogger_1ae78d3263cf93ea38811ab00e2afc6d1c" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; <ref refid="structapollo_1_1cyber_1_1logger_1_1AsyncLogger_1_1Buffer" kindref="compound">Buffer</ref> &gt;</type>
+        <definition>std::unique_ptr&lt;Buffer&gt; apollo::cyber::logger::AsyncLogger::flushing_buf_</definition>
+        <argsstring></argsstring>
+        <name>flushing_buf_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/logger/async_logger.h" line="194" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/logger/async_logger.h" bodystart="194" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1logger_1_1AsyncLogger_1a01dbb42c36800aa824b929ddba8332d8" prot="private" static="no" mutable="no">
+        <type><ref refid="classapollo_1_1cyber_1_1logger_1_1AsyncLogger_1ac693c5c55875861feb508ed2b60223a4" kindref="member">State</ref></type>
+        <definition>State apollo::cyber::logger::AsyncLogger::state_</definition>
+        <argsstring></argsstring>
+        <name>state_</name>
+        <initializer>= <ref refid="classapollo_1_1cyber_1_1logger_1_1AsyncLogger_1ac693c5c55875861feb508ed2b60223a4a05e01a42de2ef2f76fc008c2f2ac0b11" kindref="member">INITTED</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/logger/async_logger.h" line="198" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/logger/async_logger.h" bodystart="198" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1logger_1_1AsyncLogger_1ab512ca5b0980840bd97187b8b8bf68a7" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::logger::AsyncLogger::AsyncLogger</definition>
+        <argsstring>(google::base::Logger *wrapped, int max_buffer_bytes)</argsstring>
+        <name>AsyncLogger</name>
+        <param>
+          <type>google::base::Logger *</type>
+          <declname>wrapped</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>max_buffer_bytes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/logger/async_logger.h" line="68" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1logger_1_1AsyncLogger_1ab81c56987b35eac2468293214cc0831a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::logger::AsyncLogger::~AsyncLogger</definition>
+        <argsstring>()</argsstring>
+        <name>~AsyncLogger</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/logger/async_logger.h" line="70" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1logger_1_1AsyncLogger_1a57a56cd44d68c932c229638169a8ece1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::logger::AsyncLogger::Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/logger/async_logger.h" line="72" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1logger_1_1AsyncLogger_1a36aceb58b08edfba1417d18d60996811" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::logger::AsyncLogger::Stop</definition>
+        <argsstring>()</argsstring>
+        <name>Stop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/logger/async_logger.h" line="80" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1logger_1_1AsyncLogger_1abe281a699f379c7274ef0fc9fe171eab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::logger::AsyncLogger::Write</definition>
+        <argsstring>(bool force_flush, time_t timestamp, const char *message, int message_len) override</argsstring>
+        <name>Write</name>
+        <param>
+          <type>bool</type>
+          <declname>force_flush</declname>
+        </param>
+        <param>
+          <type>time_t</type>
+          <declname>timestamp</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>message_len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/logger/async_logger.h" line="94" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1logger_1_1AsyncLogger_1a75894f5de117c03d05c013f2638639a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::logger::AsyncLogger::Flush</definition>
+        <argsstring>() override</argsstring>
+        <name>Flush</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/logger/async_logger.h" line="98" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1logger_1_1AsyncLogger_1af14fc46b26821895b40def530a4a5aeb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t apollo::cyber::logger::AsyncLogger::LogSize</definition>
+        <argsstring>() override</argsstring>
+        <name>LogSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/logger/async_logger.h" line="103" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1logger_1_1AsyncLogger_1ac71b6d358d78e0912524c1b8359baa2f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::thread *</type>
+        <definition>const std::thread* apollo::cyber::logger::AsyncLogger::LogThread</definition>
+        <argsstring>() const </argsstring>
+        <name>LogThread</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/logger/async_logger.h" line="105" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/logger/async_logger.h" bodystart="105" bodyend="105"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1logger_1_1AsyncLogger_1a52f8a409bf0dceb86e9e484a494a166c" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::logger::AsyncLogger::BufferFull</definition>
+        <argsstring>(const Buffer &amp;buf) const </argsstring>
+        <name>BufferFull</name>
+        <param>
+          <type>const <ref refid="structapollo_1_1cyber_1_1logger_1_1AsyncLogger_1_1Buffer" kindref="compound">Buffer</ref> &amp;</type>
+          <declname>buf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/logger/async_logger.h" line="157" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1logger_1_1AsyncLogger_1af1600cd1348d78c6ab0e806928a2d50b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::logger::AsyncLogger::RunThread</definition>
+        <argsstring>()</argsstring>
+        <name>RunThread</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/logger/async_logger.h" line="158" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1logger_1_1AsyncLogger_1afa782e83a5e5d08d7ff7da08c6f194ac" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::logger::AsyncLogger::DISALLOW_COPY_AND_ASSIGN</definition>
+        <argsstring>(AsyncLogger)</argsstring>
+        <name>DISALLOW_COPY_AND_ASSIGN</name>
+        <param>
+          <type><ref refid="classapollo_1_1cyber_1_1logger_1_1AsyncLogger" kindref="compound">AsyncLogger</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/logger/async_logger.h" line="200" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="30">
+        <label>apollo::cyber::logger::AsyncLogger</label>
+        <link refid="classapollo_1_1cyber_1_1logger_1_1AsyncLogger"/>
+        <childnode refid="31" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>google::base::Logger</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="32">
+        <label>apollo::cyber::logger::AsyncLogger</label>
+        <link refid="classapollo_1_1cyber_1_1logger_1_1AsyncLogger"/>
+        <childnode refid="33" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>google::base::Logger</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/work/apollo-fork/apollo/cyber/logger/async_logger.h" line="66" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/logger/async_logger.h" bodystart="66" bodyend="201"/>
+    <listofallmembers>
+      <member refid="classapollo_1_1cyber_1_1logger_1_1AsyncLogger_1a89a6be9354f86ddcfabe1d313117b43d" prot="private" virt="non-virtual"><scope>apollo::cyber::logger::AsyncLogger</scope><name>active_buf_</name></member>
+      <member refid="classapollo_1_1cyber_1_1logger_1_1AsyncLogger_1ab512ca5b0980840bd97187b8b8bf68a7" prot="public" virt="non-virtual"><scope>apollo::cyber::logger::AsyncLogger</scope><name>AsyncLogger</name></member>
+      <member refid="classapollo_1_1cyber_1_1logger_1_1AsyncLogger_1a52f8a409bf0dceb86e9e484a494a166c" prot="private" virt="non-virtual"><scope>apollo::cyber::logger::AsyncLogger</scope><name>BufferFull</name></member>
+      <member refid="classapollo_1_1cyber_1_1logger_1_1AsyncLogger_1afa782e83a5e5d08d7ff7da08c6f194ac" prot="private" virt="non-virtual"><scope>apollo::cyber::logger::AsyncLogger</scope><name>DISALLOW_COPY_AND_ASSIGN</name></member>
+      <member refid="classapollo_1_1cyber_1_1logger_1_1AsyncLogger_1ae50ea372dfdfe32615dc5d25664c8075" prot="private" virt="non-virtual"><scope>apollo::cyber::logger::AsyncLogger</scope><name>drop_count_</name></member>
+      <member refid="classapollo_1_1cyber_1_1logger_1_1AsyncLogger_1a75894f5de117c03d05c013f2638639a1" prot="public" virt="non-virtual"><scope>apollo::cyber::logger::AsyncLogger</scope><name>Flush</name></member>
+      <member refid="classapollo_1_1cyber_1_1logger_1_1AsyncLogger_1ac317fa7ba8ac170fcaebee103b861aa6" prot="private" virt="non-virtual"><scope>apollo::cyber::logger::AsyncLogger</scope><name>flush_complete_cv_</name></member>
+      <member refid="classapollo_1_1cyber_1_1logger_1_1AsyncLogger_1a52a5941a5ed779bac9b1469677dfd8fa" prot="private" virt="non-virtual"><scope>apollo::cyber::logger::AsyncLogger</scope><name>flush_count_</name></member>
+      <member refid="classapollo_1_1cyber_1_1logger_1_1AsyncLogger_1ae78d3263cf93ea38811ab00e2afc6d1c" prot="private" virt="non-virtual"><scope>apollo::cyber::logger::AsyncLogger</scope><name>flushing_buf_</name></member>
+      <member refid="classapollo_1_1cyber_1_1logger_1_1AsyncLogger_1ac693c5c55875861feb508ed2b60223a4a05e01a42de2ef2f76fc008c2f2ac0b11" prot="private" virt="non-virtual"><scope>apollo::cyber::logger::AsyncLogger</scope><name>INITTED</name></member>
+      <member refid="classapollo_1_1cyber_1_1logger_1_1AsyncLogger_1af14fc46b26821895b40def530a4a5aeb" prot="public" virt="non-virtual"><scope>apollo::cyber::logger::AsyncLogger</scope><name>LogSize</name></member>
+      <member refid="classapollo_1_1cyber_1_1logger_1_1AsyncLogger_1ac71b6d358d78e0912524c1b8359baa2f" prot="public" virt="non-virtual"><scope>apollo::cyber::logger::AsyncLogger</scope><name>LogThread</name></member>
+      <member refid="classapollo_1_1cyber_1_1logger_1_1AsyncLogger_1aa335015aac6cf1e4a7ef9def98cc5f33" prot="private" virt="non-virtual"><scope>apollo::cyber::logger::AsyncLogger</scope><name>max_buffer_bytes_</name></member>
+      <member refid="classapollo_1_1cyber_1_1logger_1_1AsyncLogger_1a822d34060bc2e4bc3c1b5dbb80a62470" prot="private" virt="non-virtual"><scope>apollo::cyber::logger::AsyncLogger</scope><name>mutex_</name></member>
+      <member refid="classapollo_1_1cyber_1_1logger_1_1AsyncLogger_1ac693c5c55875861feb508ed2b60223a4ad883b067d35376bd78b0f301a0200704" prot="private" virt="non-virtual"><scope>apollo::cyber::logger::AsyncLogger</scope><name>RUNNING</name></member>
+      <member refid="classapollo_1_1cyber_1_1logger_1_1AsyncLogger_1af1600cd1348d78c6ab0e806928a2d50b" prot="private" virt="non-virtual"><scope>apollo::cyber::logger::AsyncLogger</scope><name>RunThread</name></member>
+      <member refid="classapollo_1_1cyber_1_1logger_1_1AsyncLogger_1a57a56cd44d68c932c229638169a8ece1" prot="public" virt="non-virtual"><scope>apollo::cyber::logger::AsyncLogger</scope><name>Start</name></member>
+      <member refid="classapollo_1_1cyber_1_1logger_1_1AsyncLogger_1ac693c5c55875861feb508ed2b60223a4" prot="private" virt="non-virtual"><scope>apollo::cyber::logger::AsyncLogger</scope><name>State</name></member>
+      <member refid="classapollo_1_1cyber_1_1logger_1_1AsyncLogger_1a01dbb42c36800aa824b929ddba8332d8" prot="private" virt="non-virtual"><scope>apollo::cyber::logger::AsyncLogger</scope><name>state_</name></member>
+      <member refid="classapollo_1_1cyber_1_1logger_1_1AsyncLogger_1a36aceb58b08edfba1417d18d60996811" prot="public" virt="non-virtual"><scope>apollo::cyber::logger::AsyncLogger</scope><name>Stop</name></member>
+      <member refid="classapollo_1_1cyber_1_1logger_1_1AsyncLogger_1ac693c5c55875861feb508ed2b60223a4a26a879c1a0c30577cff7af5688a3b55f" prot="private" virt="non-virtual"><scope>apollo::cyber::logger::AsyncLogger</scope><name>STOPPED</name></member>
+      <member refid="classapollo_1_1cyber_1_1logger_1_1AsyncLogger_1a973fb1d166acaab52815ded79cadec25" prot="private" virt="non-virtual"><scope>apollo::cyber::logger::AsyncLogger</scope><name>thread_</name></member>
+      <member refid="classapollo_1_1cyber_1_1logger_1_1AsyncLogger_1a606516963229bb28e70cf5599e993798" prot="private" virt="non-virtual"><scope>apollo::cyber::logger::AsyncLogger</scope><name>wake_flusher_cv_</name></member>
+      <member refid="classapollo_1_1cyber_1_1logger_1_1AsyncLogger_1a4d7679337ba167a45f75c006f9c2f340" prot="private" virt="non-virtual"><scope>apollo::cyber::logger::AsyncLogger</scope><name>wrapped_</name></member>
+      <member refid="classapollo_1_1cyber_1_1logger_1_1AsyncLogger_1abe281a699f379c7274ef0fc9fe171eab" prot="public" virt="non-virtual"><scope>apollo::cyber::logger::AsyncLogger</scope><name>Write</name></member>
+      <member refid="classapollo_1_1cyber_1_1logger_1_1AsyncLogger_1ab81c56987b35eac2468293214cc0831a" prot="public" virt="non-virtual"><scope>apollo::cyber::logger::AsyncLogger</scope><name>~AsyncLogger</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

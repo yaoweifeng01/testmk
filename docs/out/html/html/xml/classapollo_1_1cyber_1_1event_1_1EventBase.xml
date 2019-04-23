@@ -1,0 +1,263 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classapollo_1_1cyber_1_1event_1_1EventBase" kind="class" prot="public" abstract="yes">
+    <compoundname>apollo::cyber::event::EventBase</compoundname>
+    <derivedcompoundref refid="classapollo_1_1cyber_1_1event_1_1SchedEvent" prot="public" virt="non-virtual">apollo::cyber::event::SchedEvent</derivedcompoundref>
+    <derivedcompoundref refid="classapollo_1_1cyber_1_1event_1_1TransportEvent" prot="public" virt="non-virtual">apollo::cyber::event::TransportEvent</derivedcompoundref>
+    <includes refid="perf__event_8h" local="no">perf_event.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1event_1_1EventBase_1ae26baa01961de359956540b4e5f98ad5" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int apollo::cyber::event::EventBase::etype_</definition>
+        <argsstring></argsstring>
+        <name>etype_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/event/perf_event.h" line="59" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/event/perf_event.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1event_1_1EventBase_1a1d9e13642a28e712a16bff0224e0b6fe" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int apollo::cyber::event::EventBase::eid_</definition>
+        <argsstring></argsstring>
+        <name>eid_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/event/perf_event.h" line="60" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/event/perf_event.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1event_1_1EventBase_1afaeda733409e3addc6e7f839b694333d" prot="protected" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t apollo::cyber::event::EventBase::stamp_</definition>
+        <argsstring></argsstring>
+        <name>stamp_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/event/perf_event.h" line="61" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/event/perf_event.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1event_1_1EventBase_1a76173ad9c315ed775371469d612b489d" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::string</type>
+        <definition>virtual std::string apollo::cyber::event::EventBase::SerializeToString</definition>
+        <argsstring>()=0</argsstring>
+        <name>SerializeToString</name>
+        <reimplementedby refid="classapollo_1_1cyber_1_1event_1_1SchedEvent_1a92a8ce80dac62e102d79010845c37b5b">SerializeToString</reimplementedby>
+        <reimplementedby refid="classapollo_1_1cyber_1_1event_1_1TransportEvent_1ac006e30964aa5ddf8325a2a4187474b9">SerializeToString</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/event/perf_event.h" line="44" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1event_1_1EventBase_1ad7322836ed1d5d2a1a1c5bbf88f04df0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::event::EventBase::set_eid</definition>
+        <argsstring>(int eid)</argsstring>
+        <name>set_eid</name>
+        <param>
+          <type>int</type>
+          <declname>eid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/event/perf_event.h" line="46" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/event/perf_event.h" bodystart="46" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1event_1_1EventBase_1aae9bb6e39842338f1139c6496d71dfb6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::event::EventBase::set_etype</definition>
+        <argsstring>(int etype)</argsstring>
+        <name>set_etype</name>
+        <param>
+          <type>int</type>
+          <declname>etype</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/event/perf_event.h" line="47" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/event/perf_event.h" bodystart="47" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1event_1_1EventBase_1a3b0ef301b6eb0bd03c0c98e4c85ae29e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::event::EventBase::set_stamp</definition>
+        <argsstring>(uint64_t stamp)</argsstring>
+        <name>set_stamp</name>
+        <param>
+          <type>uint64_t</type>
+          <declname>stamp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/event/perf_event.h" line="48" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/event/perf_event.h" bodystart="48" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1event_1_1EventBase_1adca308f7a8828fc85f7a7c47f8e62938" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void apollo::cyber::event::EventBase::set_cr_id</definition>
+        <argsstring>(uint64_t cr_id)</argsstring>
+        <name>set_cr_id</name>
+        <reimplementedby refid="classapollo_1_1cyber_1_1event_1_1SchedEvent_1a22cfd60eaefdf7647263d3270d3f3244">set_cr_id</reimplementedby>
+        <param>
+          <type>uint64_t</type>
+          <declname>cr_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/event/perf_event.h" line="50" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/event/perf_event.h" bodystart="50" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1event_1_1EventBase_1a9b0dbb9c9db334795fb32523be945e20" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void apollo::cyber::event::EventBase::set_cr_state</definition>
+        <argsstring>(int cr_state)</argsstring>
+        <name>set_cr_state</name>
+        <reimplementedby refid="classapollo_1_1cyber_1_1event_1_1SchedEvent_1ae9b63ed13d7df3a671bb74988ff87bf6">set_cr_state</reimplementedby>
+        <param>
+          <type>int</type>
+          <declname>cr_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/event/perf_event.h" line="51" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/event/perf_event.h" bodystart="51" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1event_1_1EventBase_1a892ea37f81adc4981bc91396919c4e9a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void apollo::cyber::event::EventBase::set_proc_id</definition>
+        <argsstring>(int proc_id)</argsstring>
+        <name>set_proc_id</name>
+        <reimplementedby refid="classapollo_1_1cyber_1_1event_1_1SchedEvent_1aa4d016a3c5a507c58b195e3d99f92f2b">set_proc_id</reimplementedby>
+        <param>
+          <type>int</type>
+          <declname>proc_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/event/perf_event.h" line="52" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/event/perf_event.h" bodystart="52" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1event_1_1EventBase_1a3023ba9bdcd8996d879099ac19647465" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void apollo::cyber::event::EventBase::set_fetch_res</definition>
+        <argsstring>(int fetch_res)</argsstring>
+        <name>set_fetch_res</name>
+        <param>
+          <type>int</type>
+          <declname>fetch_res</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/event/perf_event.h" line="53" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/event/perf_event.h" bodystart="53" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1event_1_1EventBase_1ae70276f235359287b75a72b932903bf1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void apollo::cyber::event::EventBase::set_msg_seq</definition>
+        <argsstring>(uint64_t msg_seq)</argsstring>
+        <name>set_msg_seq</name>
+        <reimplementedby refid="classapollo_1_1cyber_1_1event_1_1TransportEvent_1a0a3297ffaaabc6127133714209bb0c6f">set_msg_seq</reimplementedby>
+        <param>
+          <type>uint64_t</type>
+          <declname>msg_seq</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/event/perf_event.h" line="55" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/event/perf_event.h" bodystart="55" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1event_1_1EventBase_1af2db22e91dcce677a59ecab489685542" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void apollo::cyber::event::EventBase::set_channel_id</definition>
+        <argsstring>(uint64_t channel_id)</argsstring>
+        <name>set_channel_id</name>
+        <reimplementedby refid="classapollo_1_1cyber_1_1event_1_1TransportEvent_1a474cc7b64211525b00a5fd4f2238fd51">set_channel_id</reimplementedby>
+        <param>
+          <type>uint64_t</type>
+          <declname>channel_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/event/perf_event.h" line="56" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/event/perf_event.h" bodystart="56" bodyend="56"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="311">
+        <label>apollo::cyber::event::EventBase</label>
+        <link refid="classapollo_1_1cyber_1_1event_1_1EventBase"/>
+      </node>
+      <node id="312">
+        <label>apollo::cyber::event::SchedEvent</label>
+        <link refid="classapollo_1_1cyber_1_1event_1_1SchedEvent"/>
+        <childnode refid="311" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="313">
+        <label>apollo::cyber::event::TransportEvent</label>
+        <link refid="classapollo_1_1cyber_1_1event_1_1TransportEvent"/>
+        <childnode refid="311" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/home/work/apollo-fork/apollo/cyber/event/perf_event.h" line="42" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/event/perf_event.h" bodystart="42" bodyend="62"/>
+    <listofallmembers>
+      <member refid="classapollo_1_1cyber_1_1event_1_1EventBase_1a1d9e13642a28e712a16bff0224e0b6fe" prot="protected" virt="non-virtual"><scope>apollo::cyber::event::EventBase</scope><name>eid_</name></member>
+      <member refid="classapollo_1_1cyber_1_1event_1_1EventBase_1ae26baa01961de359956540b4e5f98ad5" prot="protected" virt="non-virtual"><scope>apollo::cyber::event::EventBase</scope><name>etype_</name></member>
+      <member refid="classapollo_1_1cyber_1_1event_1_1EventBase_1a76173ad9c315ed775371469d612b489d" prot="public" virt="pure-virtual"><scope>apollo::cyber::event::EventBase</scope><name>SerializeToString</name></member>
+      <member refid="classapollo_1_1cyber_1_1event_1_1EventBase_1af2db22e91dcce677a59ecab489685542" prot="public" virt="virtual"><scope>apollo::cyber::event::EventBase</scope><name>set_channel_id</name></member>
+      <member refid="classapollo_1_1cyber_1_1event_1_1EventBase_1adca308f7a8828fc85f7a7c47f8e62938" prot="public" virt="virtual"><scope>apollo::cyber::event::EventBase</scope><name>set_cr_id</name></member>
+      <member refid="classapollo_1_1cyber_1_1event_1_1EventBase_1a9b0dbb9c9db334795fb32523be945e20" prot="public" virt="virtual"><scope>apollo::cyber::event::EventBase</scope><name>set_cr_state</name></member>
+      <member refid="classapollo_1_1cyber_1_1event_1_1EventBase_1ad7322836ed1d5d2a1a1c5bbf88f04df0" prot="public" virt="non-virtual"><scope>apollo::cyber::event::EventBase</scope><name>set_eid</name></member>
+      <member refid="classapollo_1_1cyber_1_1event_1_1EventBase_1aae9bb6e39842338f1139c6496d71dfb6" prot="public" virt="non-virtual"><scope>apollo::cyber::event::EventBase</scope><name>set_etype</name></member>
+      <member refid="classapollo_1_1cyber_1_1event_1_1EventBase_1a3023ba9bdcd8996d879099ac19647465" prot="public" virt="virtual"><scope>apollo::cyber::event::EventBase</scope><name>set_fetch_res</name></member>
+      <member refid="classapollo_1_1cyber_1_1event_1_1EventBase_1ae70276f235359287b75a72b932903bf1" prot="public" virt="virtual"><scope>apollo::cyber::event::EventBase</scope><name>set_msg_seq</name></member>
+      <member refid="classapollo_1_1cyber_1_1event_1_1EventBase_1a892ea37f81adc4981bc91396919c4e9a" prot="public" virt="virtual"><scope>apollo::cyber::event::EventBase</scope><name>set_proc_id</name></member>
+      <member refid="classapollo_1_1cyber_1_1event_1_1EventBase_1a3b0ef301b6eb0bd03c0c98e4c85ae29e" prot="public" virt="non-virtual"><scope>apollo::cyber::event::EventBase</scope><name>set_stamp</name></member>
+      <member refid="classapollo_1_1cyber_1_1event_1_1EventBase_1afaeda733409e3addc6e7f839b694333d" prot="protected" virt="non-virtual"><scope>apollo::cyber::event::EventBase</scope><name>stamp_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

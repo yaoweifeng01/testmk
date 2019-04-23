@@ -1,0 +1,272 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classapollo_1_1cyber_1_1transport_1_1RtpsDispatcher" kind="class" prot="public">
+    <compoundname>apollo::cyber::transport::RtpsDispatcher</compoundname>
+    <basecompoundref refid="classapollo_1_1cyber_1_1transport_1_1Dispatcher" prot="public" virt="non-virtual">apollo::cyber::transport::Dispatcher</basecompoundref>
+    <includes refid="rtps__dispatcher_8h" local="no">rtps_dispatcher.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1transport_1_1RtpsDispatcher_1a8ff80d52b17b3a5c07d960078ee14914" prot="private" static="no" mutable="no">
+        <type>std::unordered_map&lt; uint64_t, <ref refid="structapollo_1_1cyber_1_1transport_1_1Subscriber" kindref="compound">Subscriber</ref> &gt;</type>
+        <definition>std::unordered_map&lt;uint64_t, Subscriber&gt; apollo::cyber::transport::RtpsDispatcher::subs_</definition>
+        <argsstring></argsstring>
+        <name>subs_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/dispatcher/rtps_dispatcher.h" line="73" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/dispatcher/rtps_dispatcher.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1transport_1_1RtpsDispatcher_1a78bc088bc5b4c3d9fb0624e4d9a8b098" prot="private" static="no" mutable="no">
+        <type>std::mutex</type>
+        <definition>std::mutex apollo::cyber::transport::RtpsDispatcher::subs_mutex_</definition>
+        <argsstring></argsstring>
+        <name>subs_mutex_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/dispatcher/rtps_dispatcher.h" line="74" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/dispatcher/rtps_dispatcher.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1transport_1_1RtpsDispatcher_1a8c472e08afebd0087e51fe5b9eeae6e4" prot="private" static="no" mutable="no">
+        <type><ref refid="namespaceapollo_1_1cyber_1_1transport_1a4214d0780331276d0384d0b57e3bc688" kindref="member">ParticipantPtr</ref></type>
+        <definition>ParticipantPtr apollo::cyber::transport::RtpsDispatcher::participant_</definition>
+        <argsstring></argsstring>
+        <name>participant_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/dispatcher/rtps_dispatcher.h" line="76" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/dispatcher/rtps_dispatcher.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1RtpsDispatcher_1a84ab3f3d90a3c50d1a8fb0afd63126e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual apollo::cyber::transport::RtpsDispatcher::~RtpsDispatcher</definition>
+        <argsstring>()</argsstring>
+        <name>~RtpsDispatcher</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/dispatcher/rtps_dispatcher.h" line="50" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1RtpsDispatcher_1a6dae71a55d15ec41f5ca6b5bfb9a452a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::transport::RtpsDispatcher::Shutdown</definition>
+        <argsstring>() override</argsstring>
+        <name>Shutdown</name>
+        <reimplements refid="classapollo_1_1cyber_1_1transport_1_1Dispatcher_1a87c80d37d0b6218218ad888888ad0d08">Shutdown</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/dispatcher/rtps_dispatcher.h" line="52" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1RtpsDispatcher_1aaf9d49e9165cebef7e3706f7f8f22720" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename MessageT</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void apollo::cyber::transport::RtpsDispatcher::AddListener</definition>
+        <argsstring>(const RoleAttributes &amp;self_attr, const MessageListener&lt; MessageT &gt; &amp;listener)</argsstring>
+        <name>AddListener</name>
+        <param>
+          <type>const RoleAttributes &amp;</type>
+          <declname>self_attr</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespaceapollo_1_1cyber_1_1transport_1aade3f4d41770972ae44166cdde27e2d8" kindref="member">MessageListener</ref>&lt; MessageT &gt; &amp;</type>
+          <declname>listener</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/dispatcher/rtps_dispatcher.h" line="55" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/dispatcher/rtps_dispatcher.h" bodystart="82" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1RtpsDispatcher_1aa4e5d5bc5366dc297b73b7dd4c353a27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename MessageT</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void apollo::cyber::transport::RtpsDispatcher::AddListener</definition>
+        <argsstring>(const RoleAttributes &amp;self_attr, const RoleAttributes &amp;opposite_attr, const MessageListener&lt; MessageT &gt; &amp;listener)</argsstring>
+        <name>AddListener</name>
+        <param>
+          <type>const RoleAttributes &amp;</type>
+          <declname>self_attr</declname>
+        </param>
+        <param>
+          <type>const RoleAttributes &amp;</type>
+          <declname>opposite_attr</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespaceapollo_1_1cyber_1_1transport_1aade3f4d41770972ae44166cdde27e2d8" kindref="member">MessageListener</ref>&lt; MessageT &gt; &amp;</type>
+          <declname>listener</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/dispatcher/rtps_dispatcher.h" line="59" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/dispatcher/rtps_dispatcher.h" bodystart="97" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1RtpsDispatcher_1a2904e5f8ca347113cdd547ff1920fe68" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::transport::RtpsDispatcher::set_participant</definition>
+        <argsstring>(const ParticipantPtr &amp;participant)</argsstring>
+        <name>set_participant</name>
+        <param>
+          <type>const <ref refid="namespaceapollo_1_1cyber_1_1transport_1a4214d0780331276d0384d0b57e3bc688" kindref="member">ParticipantPtr</ref> &amp;</type>
+          <declname>participant</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/dispatcher/rtps_dispatcher.h" line="63" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/dispatcher/rtps_dispatcher.h" bodystart="63" bodyend="65"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1RtpsDispatcher_1a59c0136136c1062cb86462ff2a4e7acc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::transport::RtpsDispatcher::OnMessage</definition>
+        <argsstring>(uint64_t channel_id, const std::shared_ptr&lt; std::string &gt; &amp;msg_str, const MessageInfo &amp;msg_info)</argsstring>
+        <name>OnMessage</name>
+        <param>
+          <type>uint64_t</type>
+          <declname>channel_id</declname>
+        </param>
+        <param>
+          <type>const std::shared_ptr&lt; std::string &gt; &amp;</type>
+          <declname>msg_str</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classapollo_1_1cyber_1_1transport_1_1MessageInfo" kindref="compound">MessageInfo</ref> &amp;</type>
+          <declname>msg_info</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/dispatcher/rtps_dispatcher.h" line="68" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1RtpsDispatcher_1afe72ad9b8c0d3c5a94fb623a334013c1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::transport::RtpsDispatcher::AddSubscriber</definition>
+        <argsstring>(const RoleAttributes &amp;self_attr)</argsstring>
+        <name>AddSubscriber</name>
+        <param>
+          <type>const RoleAttributes &amp;</type>
+          <declname>self_attr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/dispatcher/rtps_dispatcher.h" line="71" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="740">
+        <label>apollo::cyber::transport::RtpsDispatcher</label>
+        <link refid="classapollo_1_1cyber_1_1transport_1_1RtpsDispatcher"/>
+        <childnode refid="741" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="741">
+        <label>apollo::cyber::transport::Dispatcher</label>
+        <link refid="classapollo_1_1cyber_1_1transport_1_1Dispatcher"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="742">
+        <label>apollo::cyber::transport::RtpsDispatcher</label>
+        <link refid="classapollo_1_1cyber_1_1transport_1_1RtpsDispatcher"/>
+        <childnode refid="743" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="745">
+        <label>apollo::cyber::base::AtomicHashMap&lt; uint64_t, ListenerHandlerBasePtr &gt;</label>
+        <link refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap"/>
+        <childnode refid="746" relation="usage">
+          <edgelabel>table_</edgelabel>
+        </childnode>
+      </node>
+      <node id="747">
+        <label>apollo::cyber::base::AtomicHashMap&lt; K, V, TableSize, std::enable_if&lt; std::is_integral&lt; K &gt;::value &amp;&amp;(TableSize &amp;(TableSize-1))==0, int &gt;::type &gt;::Entry</label>
+        <link refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry"/>
+      </node>
+      <node id="743">
+        <label>apollo::cyber::transport::Dispatcher</label>
+        <link refid="classapollo_1_1cyber_1_1transport_1_1Dispatcher"/>
+        <childnode refid="744" relation="usage">
+          <edgelabel>rw_lock_</edgelabel>
+        </childnode>
+        <childnode refid="745" relation="usage">
+          <edgelabel>msg_listeners_</edgelabel>
+        </childnode>
+      </node>
+      <node id="744">
+        <label>apollo::cyber::base::AtomicRWLock</label>
+        <link refid="classapollo_1_1cyber_1_1base_1_1AtomicRWLock"/>
+      </node>
+      <node id="746">
+        <label>apollo::cyber::base::AtomicHashMap&lt; K, V, TableSize, std::enable_if&lt; std::is_integral&lt; K &gt;::value &amp;&amp;(TableSize &amp;(TableSize-1))==0, int &gt;::type &gt;::Bucket</label>
+        <link refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Bucket"/>
+        <childnode refid="747" relation="usage">
+          <edgelabel>head_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/work/apollo-fork/apollo/cyber/transport/dispatcher/rtps_dispatcher.h" line="48" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/dispatcher/rtps_dispatcher.h" bodystart="48" bodyend="79"/>
+    <listofallmembers>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1RtpsDispatcher_1aaf9d49e9165cebef7e3706f7f8f22720" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::RtpsDispatcher</scope><name>AddListener</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1RtpsDispatcher_1aa4e5d5bc5366dc297b73b7dd4c353a27" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::RtpsDispatcher</scope><name>AddListener</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1RtpsDispatcher_1afe72ad9b8c0d3c5a94fb623a334013c1" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::RtpsDispatcher</scope><name>AddSubscriber</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Dispatcher_1a7b740666b178815f3bef327a223fe39f" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::RtpsDispatcher</scope><name>Dispatcher</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Dispatcher_1a7bea7181659fa46204434dbdba90e00f" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::RtpsDispatcher</scope><name>HasChannel</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Dispatcher_1a014ad0d3a3d8830aec03c8a47a00b385" prot="protected" virt="non-virtual"><scope>apollo::cyber::transport::RtpsDispatcher</scope><name>is_shutdown_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Dispatcher_1aec5b13dcc35013468812f0ea0bd0dd89" prot="protected" virt="non-virtual"><scope>apollo::cyber::transport::RtpsDispatcher</scope><name>msg_listeners_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1RtpsDispatcher_1a59c0136136c1062cb86462ff2a4e7acc" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::RtpsDispatcher</scope><name>OnMessage</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1RtpsDispatcher_1a8c472e08afebd0087e51fe5b9eeae6e4" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::RtpsDispatcher</scope><name>participant_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Dispatcher_1a24ced235e749abc47265d6ffade4f8bc" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::RtpsDispatcher</scope><name>RemoveListener</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Dispatcher_1af81d7e383f5cb1c4b92ab4dd84125997" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::RtpsDispatcher</scope><name>RemoveListener</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Dispatcher_1a93d037058df25c609f9d2e24f62bd67e" prot="protected" virt="non-virtual"><scope>apollo::cyber::transport::RtpsDispatcher</scope><name>rw_lock_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1RtpsDispatcher_1a2904e5f8ca347113cdd547ff1920fe68" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::RtpsDispatcher</scope><name>set_participant</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1RtpsDispatcher_1a6dae71a55d15ec41f5ca6b5bfb9a452a" prot="public" virt="virtual"><scope>apollo::cyber::transport::RtpsDispatcher</scope><name>Shutdown</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1RtpsDispatcher_1a8ff80d52b17b3a5c07d960078ee14914" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::RtpsDispatcher</scope><name>subs_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1RtpsDispatcher_1a78bc088bc5b4c3d9fb0624e4d9a8b098" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::RtpsDispatcher</scope><name>subs_mutex_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Dispatcher_1a6d28df2005ee5409e4dedb0e80a6bb91" prot="public" virt="virtual"><scope>apollo::cyber::transport::RtpsDispatcher</scope><name>~Dispatcher</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1RtpsDispatcher_1a84ab3f3d90a3c50d1a8fb0afd63126e2" prot="public" virt="virtual"><scope>apollo::cyber::transport::RtpsDispatcher</scope><name>~RtpsDispatcher</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

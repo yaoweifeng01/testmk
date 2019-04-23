@@ -1,0 +1,98 @@
+\hypertarget{message__traits_8h}{\section{message/message\-\_\-traits.h File Reference}
+\label{message__traits_8h}\index{message/message\-\_\-traits.\-h@{message/message\-\_\-traits.\-h}}
+}
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include \char`\"{}cyber/base/macros.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}cyber/common/log.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}cyber/message/intra\-\_\-message.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}cyber/message/message\-\_\-header.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}cyber/message/protobuf\-\_\-traits.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}cyber/message/py\-\_\-message\-\_\-traits.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}cyber/message/raw\-\_\-message\-\_\-traits.\-h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classapollo_1_1cyber_1_1message_1_1HasSerializer}{apollo\-::cyber\-::message\-::\-Has\-Serializer$<$ T $>$}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespaceapollo}{apollo}
+\item 
+\hyperlink{namespaceapollo_1_1cyber}{apollo\-::cyber}
+\item 
+\hyperlink{namespaceapollo_1_1cyber_1_1message}{apollo\-::cyber\-::message}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T , typename std\-::enable\-\_\-if$<$ Has\-Type$<$ T $>$\-::value \&\&std\-::is\-\_\-member\-\_\-function\-\_\-pointer$<$ decltype(\&\-T\-::\-Type\-Name)$>$\-::value, bool $>$\-::type  = 0$>$ }\\std\-::string \hyperlink{namespaceapollo_1_1cyber_1_1message_aed7a0653ea8d7791da7cf676f507a8ba}{apollo\-::cyber\-::message\-::\-Message\-Type} (const T \&message)
+\item 
+{\footnotesize template$<$typename T , typename std\-::enable\-\_\-if$<$ Has\-Type$<$ T $>$\-::value \&\&!std\-::is\-\_\-member\-\_\-function\-\_\-pointer$<$ decltype(\&\-T\-::\-Type\-Name)$>$\-::value, bool $>$\-::type  = 0$>$ }\\std\-::string \hyperlink{namespaceapollo_1_1cyber_1_1message_a9804d294759658408491c5b8929e8cb5}{apollo\-::cyber\-::message\-::\-Message\-Type} ()
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\-::enable\-\_\-if$<$ Has\-Set\-Type$<$ T $>$\\*
+\-::value, void $>$\-::type \hyperlink{namespaceapollo_1_1cyber_1_1message_a2b337ed960f840af58dc36a9459a4865}{apollo\-::cyber\-::message\-::\-Set\-Type\-Name} (const std\-::string \&type\-\_\-name, T $\ast$message)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\-::enable\-\_\-if$<$!Has\-Set\-Type$<$ T $>$\\*
+\-::value, void $>$\-::type \hyperlink{namespaceapollo_1_1cyber_1_1message_aa80d580cdaf16ade14c16309e336d42e}{apollo\-::cyber\-::message\-::\-Set\-Type\-Name} (const std\-::string \&type\-\_\-name, T $\ast$message)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\-::enable\-\_\-if$<$ Has\-Byte\-Size$<$ T $>$\\*
+\-::value, int $>$\-::type \hyperlink{namespaceapollo_1_1cyber_1_1message_a86c5c50ba417237cb14b1bc0ef413e42}{apollo\-::cyber\-::message\-::\-Byte\-Size} (const T \&message)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\-::enable\-\_\-if$<$!Has\-Byte\-Size$<$ T $>$\\*
+\-::value, int $>$\-::type \hyperlink{namespaceapollo_1_1cyber_1_1message_a53d094570369a6e8413967cdd4025b82}{apollo\-::cyber\-::message\-::\-Byte\-Size} (const T \&message)
+\item 
+{\footnotesize template$<$typename T $>$ }\\int \hyperlink{namespaceapollo_1_1cyber_1_1message_abd3f08d8fd1f9a79b1da4d782c73fc48}{apollo\-::cyber\-::message\-::\-Full\-Byte\-Size} (const T \&message)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\-::enable\-\_\-if\\*
+$<$ Has\-Parse\-From\-Array$<$ T $>$\\*
+\-::value, bool $>$\-::type \hyperlink{namespaceapollo_1_1cyber_1_1message_aeb045f496b533d2e1f405d8588f9b279}{apollo\-::cyber\-::message\-::\-Parse\-From\-Array} (const void $\ast$data, int size, T $\ast$message)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\-::enable\-\_\-if\\*
+$<$!Has\-Parse\-From\-Array$<$ T $>$\\*
+\-::value, bool $>$\-::type \hyperlink{namespaceapollo_1_1cyber_1_1message_a5808d28d4a46e2a0ca378526c25b1e37}{apollo\-::cyber\-::message\-::\-Parse\-From\-Array} (const void $\ast$data, int size, T $\ast$message)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\-::enable\-\_\-if\\*
+$<$ Has\-Parse\-From\-String$<$ T $>$\\*
+\-::value, bool $>$\-::type \hyperlink{namespaceapollo_1_1cyber_1_1message_ac7c65d89fac88eda8ae486507c260f39}{apollo\-::cyber\-::message\-::\-Parse\-From\-String} (const std\-::string \&str, T $\ast$message)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\-::enable\-\_\-if\\*
+$<$!Has\-Parse\-From\-String$<$ T $>$\\*
+\-::value, bool $>$\-::type \hyperlink{namespaceapollo_1_1cyber_1_1message_a447d1039d8ca437c0bb1a3f620154092}{apollo\-::cyber\-::message\-::\-Parse\-From\-String} (const std\-::string \&str, T $\ast$message)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\-::enable\-\_\-if\\*
+$<$ Has\-Parse\-From\-Array$<$ T $>$\\*
+\-::value, bool $>$\-::type \hyperlink{namespaceapollo_1_1cyber_1_1message_aabb2d1760d1f1755b1682813b0f39b6f}{apollo\-::cyber\-::message\-::\-Parse\-From\-H\-C} (const void $\ast$data, int size, T $\ast$message)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\-::enable\-\_\-if\\*
+$<$!Has\-Parse\-From\-Array$<$ T $>$\\*
+\-::value, bool $>$\-::type \hyperlink{namespaceapollo_1_1cyber_1_1message_a100b9c6809db1365bf09a3c621751449}{apollo\-::cyber\-::message\-::\-Parse\-From\-H\-C} (const void $\ast$data, int size, T $\ast$message)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\-::enable\-\_\-if\\*
+$<$ Has\-Serialize\-To\-Array$<$ T $>$\\*
+\-::value, bool $>$\-::type \hyperlink{namespaceapollo_1_1cyber_1_1message_a101dafae7968f3114fa0d27935ee0630}{apollo\-::cyber\-::message\-::\-Serialize\-To\-Array} (const T \&message, void $\ast$data, int size)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\-::enable\-\_\-if\\*
+$<$!Has\-Serialize\-To\-Array$<$ T $>$\\*
+\-::value, bool $>$\-::type \hyperlink{namespaceapollo_1_1cyber_1_1message_a6fdb56336a64af71da0e2c79de30b949}{apollo\-::cyber\-::message\-::\-Serialize\-To\-Array} (const T \&message, void $\ast$data, int size)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\-::enable\-\_\-if\\*
+$<$ Has\-Serialize\-To\-String$<$ T $>$\\*
+\-::value, bool $>$\-::type \hyperlink{namespaceapollo_1_1cyber_1_1message_a56be747d5d58394d96f3b997a19c47b9}{apollo\-::cyber\-::message\-::\-Serialize\-To\-String} (const T \&message, std\-::string $\ast$str)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\-::enable\-\_\-if\\*
+$<$!Has\-Serialize\-To\-String$<$ T $>$\\*
+\-::value, bool $>$\-::type \hyperlink{namespaceapollo_1_1cyber_1_1message_a5608a318a0ae528e1629c9cfc87e489a}{apollo\-::cyber\-::message\-::\-Serialize\-To\-String} (const T \&message, std\-::string $\ast$str)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\-::enable\-\_\-if\\*
+$<$ Has\-Serialize\-To\-Array$<$ T $>$\\*
+\-::value, bool $>$\-::type \hyperlink{namespaceapollo_1_1cyber_1_1message_a388b614c8e6891dbfab3191e329ec7f1}{apollo\-::cyber\-::message\-::\-Serialize\-To\-H\-C} (const T \&message, void $\ast$data, int size)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\-::enable\-\_\-if\\*
+$<$!Has\-Serialize\-To\-Array$<$ T $>$\\*
+\-::value, bool $>$\-::type \hyperlink{namespaceapollo_1_1cyber_1_1message_a4bf197cbc2ae92e0a3ff9f705af2971b}{apollo\-::cyber\-::message\-::\-Serialize\-To\-H\-C} (const T \&message, void $\ast$data, int size)
+\item 
+{\footnotesize template$<$typename T , typename std\-::enable\-\_\-if$<$ Has\-Descriptor$<$ T $>$\-::value, bool $>$\-::type  = 0$>$ }\\void \hyperlink{namespaceapollo_1_1cyber_1_1message_adaa75b444b0befc8527210cfc29b1049}{apollo\-::cyber\-::message\-::\-Get\-Descriptor\-String} (const std\-::string \&type, std\-::string $\ast$desc\-\_\-str)
+\item 
+{\footnotesize template$<$typename Message\-T , typename std\-::enable\-\_\-if$<$ !std\-::is\-\_\-base\-\_\-of$<$ google\-::protobuf\-::\-Message, Message\-T $>$\-::value, int $>$\-::type  = 0$>$ }\\void \hyperlink{namespaceapollo_1_1cyber_1_1message_ab794defc8952601237ff80cd187ecec1}{apollo\-::cyber\-::message\-::\-Get\-Descriptor\-String} (const Message\-T \&message, std\-::string $\ast$desc\-\_\-str)
+\end{DoxyCompactItemize}

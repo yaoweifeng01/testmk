@@ -1,0 +1,308 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier" kind="class" prot="public">
+    <compoundname>apollo::cyber::transport::ConditionNotifier</compoundname>
+    <basecompoundref refid="classapollo_1_1cyber_1_1transport_1_1NotifierBase" prot="public" virt="non-virtual">apollo::cyber::transport::NotifierBase</basecompoundref>
+    <includes refid="condition__notifier_8h" local="no">condition_notifier.h</includes>
+    <innerclass refid="structapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1_1Indicator" prot="private">apollo::cyber::transport::ConditionNotifier::Indicator</innerclass>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1aa5d9958e7a5c7abc7f04ce84f0385c9a" prot="private" static="no" mutable="no">
+        <type>key_t</type>
+        <definition>key_t apollo::cyber::transport::ConditionNotifier::key_</definition>
+        <argsstring></argsstring>
+        <name>key_</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/condition_notifier.h" line="56" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/shm/condition_notifier.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1a22cba07e5cce1d0a782c51f3bcbb09c8" prot="private" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* apollo::cyber::transport::ConditionNotifier::managed_shm_</definition>
+        <argsstring></argsstring>
+        <name>managed_shm_</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/condition_notifier.h" line="57" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/shm/condition_notifier.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1a48fcd814d133e570bcaaed0527e72edc" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t apollo::cyber::transport::ConditionNotifier::shm_size_</definition>
+        <argsstring></argsstring>
+        <name>shm_size_</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/condition_notifier.h" line="58" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/shm/condition_notifier.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1ac9867419135c8a5484cc1296a69ee7e0" prot="private" static="no" mutable="no">
+        <type><ref refid="structapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1_1Indicator" kindref="compound">Indicator</ref> *</type>
+        <definition>Indicator* apollo::cyber::transport::ConditionNotifier::indicator_</definition>
+        <argsstring></argsstring>
+        <name>indicator_</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/condition_notifier.h" line="59" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/shm/condition_notifier.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1a55460f4f3c02cd6cb0d5e0dcabd7576e" prot="private" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t apollo::cyber::transport::ConditionNotifier::next_listen_num_</definition>
+        <argsstring></argsstring>
+        <name>next_listen_num_</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/condition_notifier.h" line="60" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/shm/condition_notifier.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1af8e320c5121acbb3b50956ac7519fdb8" prot="private" static="no" mutable="no">
+        <type>std::atomic&lt; bool &gt;</type>
+        <definition>std::atomic&lt;bool&gt; apollo::cyber::transport::ConditionNotifier::is_shutdown_</definition>
+        <argsstring></argsstring>
+        <name>is_shutdown_</name>
+        <initializer>= {false}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/condition_notifier.h" line="61" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/shm/condition_notifier.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1a7e4bd95c4da5a8d1e6194c255ee75eb3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual apollo::cyber::transport::ConditionNotifier::~ConditionNotifier</definition>
+        <argsstring>()</argsstring>
+        <name>~ConditionNotifier</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/condition_notifier.h" line="41" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1a057d3f71a69a9913107416166a01a81b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::transport::ConditionNotifier::Shutdown</definition>
+        <argsstring>() override</argsstring>
+        <name>Shutdown</name>
+        <reimplements refid="classapollo_1_1cyber_1_1transport_1_1NotifierBase_1a48e05bdc97d573893234846fcbd9be46">Shutdown</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/condition_notifier.h" line="43" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1ad9d938243de75dc7b015ca2ca9819f01" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::transport::ConditionNotifier::Notify</definition>
+        <argsstring>(const ReadableInfo &amp;info) override</argsstring>
+        <name>Notify</name>
+        <reimplements refid="classapollo_1_1cyber_1_1transport_1_1NotifierBase_1aef2741bc38fa6b7aca8c1cfb012975dd">Notify</reimplements>
+        <param>
+          <type>const <ref refid="classapollo_1_1cyber_1_1transport_1_1ReadableInfo" kindref="compound">ReadableInfo</ref> &amp;</type>
+          <declname>info</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/condition_notifier.h" line="44" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1a961bd6d94fdae4ffa6a7413a95932db5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::transport::ConditionNotifier::Listen</definition>
+        <argsstring>(int timeout_ms, ReadableInfo *info) override</argsstring>
+        <name>Listen</name>
+        <reimplements refid="classapollo_1_1cyber_1_1transport_1_1NotifierBase_1aa42f5b65d60d3b61a919f09b7605775b">Listen</reimplements>
+        <param>
+          <type>int</type>
+          <declname>timeout_ms</declname>
+        </param>
+        <param>
+          <type><ref refid="classapollo_1_1cyber_1_1transport_1_1ReadableInfo" kindref="compound">ReadableInfo</ref> *</type>
+          <declname>info</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/condition_notifier.h" line="45" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1a176c1ca8f3cbc3c15ff2fba4eb0280e2" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const char *</type>
+        <definition>static const char* apollo::cyber::transport::ConditionNotifier::Type</definition>
+        <argsstring>()</argsstring>
+        <name>Type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/condition_notifier.h" line="47" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/shm/condition_notifier.h" bodystart="47" bodyend="47"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1a822ee78c2f903e366f3c58cc9a9eafa1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::transport::ConditionNotifier::Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/condition_notifier.h" line="50" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1a506f0777ddba9729af366d6df37b40ad" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::transport::ConditionNotifier::OpenOrCreate</definition>
+        <argsstring>()</argsstring>
+        <name>OpenOrCreate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/condition_notifier.h" line="51" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1afaf6b12a6030861f6ad009b6cfd42f27" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::transport::ConditionNotifier::OpenOnly</definition>
+        <argsstring>()</argsstring>
+        <name>OpenOnly</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/condition_notifier.h" line="52" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1aa72b3769316e25e2d4faee6eac8c30a2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::transport::ConditionNotifier::Remove</definition>
+        <argsstring>()</argsstring>
+        <name>Remove</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/condition_notifier.h" line="53" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1a5094406c9605ef19b646208ae6036d77" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::transport::ConditionNotifier::Reset</definition>
+        <argsstring>()</argsstring>
+        <name>Reset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/condition_notifier.h" line="54" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="185">
+        <label>apollo::cyber::transport::ConditionNotifier</label>
+        <link refid="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier"/>
+        <childnode refid="186" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="186">
+        <label>apollo::cyber::transport::NotifierBase</label>
+        <link refid="classapollo_1_1cyber_1_1transport_1_1NotifierBase"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="187">
+        <label>apollo::cyber::transport::ConditionNotifier</label>
+        <link refid="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier"/>
+        <childnode refid="188" relation="public-inheritance">
+        </childnode>
+        <childnode refid="189" relation="usage">
+          <edgelabel>indicator_</edgelabel>
+        </childnode>
+      </node>
+      <node id="189">
+        <label>apollo::cyber::transport::ConditionNotifier::Indicator</label>
+        <link refid="structapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1_1Indicator"/>
+        <childnode refid="190" relation="usage">
+          <edgelabel>infos</edgelabel>
+        </childnode>
+      </node>
+      <node id="188">
+        <label>apollo::cyber::transport::NotifierBase</label>
+        <link refid="classapollo_1_1cyber_1_1transport_1_1NotifierBase"/>
+      </node>
+      <node id="190">
+        <label>apollo::cyber::transport::ReadableInfo</label>
+        <link refid="classapollo_1_1cyber_1_1transport_1_1ReadableInfo"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/condition_notifier.h" line="33" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/shm/condition_notifier.h" bodystart="33" bodyend="64"/>
+    <listofallmembers>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1ac9867419135c8a5484cc1296a69ee7e0" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::ConditionNotifier</scope><name>indicator_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1a822ee78c2f903e366f3c58cc9a9eafa1" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::ConditionNotifier</scope><name>Init</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1af8e320c5121acbb3b50956ac7519fdb8" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::ConditionNotifier</scope><name>is_shutdown_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1aa5d9958e7a5c7abc7f04ce84f0385c9a" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::ConditionNotifier</scope><name>key_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1a961bd6d94fdae4ffa6a7413a95932db5" prot="public" virt="virtual"><scope>apollo::cyber::transport::ConditionNotifier</scope><name>Listen</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1a22cba07e5cce1d0a782c51f3bcbb09c8" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::ConditionNotifier</scope><name>managed_shm_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1a55460f4f3c02cd6cb0d5e0dcabd7576e" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::ConditionNotifier</scope><name>next_listen_num_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1ad9d938243de75dc7b015ca2ca9819f01" prot="public" virt="virtual"><scope>apollo::cyber::transport::ConditionNotifier</scope><name>Notify</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1afaf6b12a6030861f6ad009b6cfd42f27" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::ConditionNotifier</scope><name>OpenOnly</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1a506f0777ddba9729af366d6df37b40ad" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::ConditionNotifier</scope><name>OpenOrCreate</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1aa72b3769316e25e2d4faee6eac8c30a2" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::ConditionNotifier</scope><name>Remove</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1a5094406c9605ef19b646208ae6036d77" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::ConditionNotifier</scope><name>Reset</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1a48fcd814d133e570bcaaed0527e72edc" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::ConditionNotifier</scope><name>shm_size_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1a057d3f71a69a9913107416166a01a81b" prot="public" virt="virtual"><scope>apollo::cyber::transport::ConditionNotifier</scope><name>Shutdown</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1a176c1ca8f3cbc3c15ff2fba4eb0280e2" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::ConditionNotifier</scope><name>Type</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1a7e4bd95c4da5a8d1e6194c255ee75eb3" prot="public" virt="virtual"><scope>apollo::cyber::transport::ConditionNotifier</scope><name>~ConditionNotifier</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1NotifierBase_1ab1f83a69f899c80831045278da0a11ba" prot="public" virt="virtual"><scope>apollo::cyber::transport::ConditionNotifier</scope><name>~NotifierBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

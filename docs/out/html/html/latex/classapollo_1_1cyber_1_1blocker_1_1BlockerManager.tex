@@ -1,0 +1,178 @@
+\hypertarget{classapollo_1_1cyber_1_1blocker_1_1BlockerManager}{\section{apollo\-:\-:cyber\-:\-:blocker\-:\-:Blocker\-Manager Class Reference}
+\label{classapollo_1_1cyber_1_1blocker_1_1BlockerManager}\index{apollo\-::cyber\-::blocker\-::\-Blocker\-Manager@{apollo\-::cyber\-::blocker\-::\-Blocker\-Manager}}
+}
+
+
+{\ttfamily \#include $<$blocker\-\_\-manager.\-h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1blocker_1_1BlockerManager_aab93de92687db46229801f733c741334}{Blocker\-Map} = std\-::unordered\-\_\-map$<$ std\-::string, std\-::shared\-\_\-ptr$<$ \hyperlink{classapollo_1_1cyber_1_1blocker_1_1BlockerBase}{Blocker\-Base} $>$$>$
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classapollo_1_1cyber_1_1blocker_1_1BlockerManager_a9507c5a941e01053a258badd91d5bb5e}{$\sim$\-Blocker\-Manager} ()
+\item 
+{\footnotesize template$<$typename T $>$ }\\bool \hyperlink{classapollo_1_1cyber_1_1blocker_1_1BlockerManager_a02cf4d2417c97da763663052e5997c51}{Publish} (const std\-::string \&channel\-\_\-name, const typename \hyperlink{classapollo_1_1cyber_1_1blocker_1_1Blocker}{Blocker}$<$ T $>$\-::Message\-Ptr \&msg)
+\item 
+{\footnotesize template$<$typename T $>$ }\\bool \hyperlink{classapollo_1_1cyber_1_1blocker_1_1BlockerManager_a9240b9cb2f282a740e863b9e81bbbe06}{Publish} (const std\-::string \&channel\-\_\-name, const typename \hyperlink{classapollo_1_1cyber_1_1blocker_1_1Blocker}{Blocker}$<$ T $>$\-::Message\-Type \&msg)
+\item 
+{\footnotesize template$<$typename T $>$ }\\bool \hyperlink{classapollo_1_1cyber_1_1blocker_1_1BlockerManager_adf88edc35b0ea77921145adc2298e23b}{Subscribe} (const std\-::string \&channel\-\_\-name, size\-\_\-t capacity, const std\-::string \&callback\-\_\-id, const typename \hyperlink{classapollo_1_1cyber_1_1blocker_1_1Blocker}{Blocker}$<$ T $>$\-::Callback \&callback)
+\item 
+{\footnotesize template$<$typename T $>$ }\\bool \hyperlink{classapollo_1_1cyber_1_1blocker_1_1BlockerManager_a9275edf629662a3800e3089f3dd91c3a}{Unsubscribe} (const std\-::string \&channel\-\_\-name, const std\-::string \&callback\-\_\-id)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\-::shared\-\_\-ptr$<$ \hyperlink{classapollo_1_1cyber_1_1blocker_1_1Blocker}{Blocker}$<$ T $>$ $>$ \hyperlink{classapollo_1_1cyber_1_1blocker_1_1BlockerManager_ae6b3a620a508fac29bc657eac4b88d46}{Get\-Blocker} (const std\-::string \&channel\-\_\-name)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\-::shared\-\_\-ptr$<$ \hyperlink{classapollo_1_1cyber_1_1blocker_1_1Blocker}{Blocker}$<$ T $>$ $>$ \hyperlink{classapollo_1_1cyber_1_1blocker_1_1BlockerManager_a8b675f3729363e53c7a09d267c560ac5}{Get\-Or\-Create\-Blocker} (const \hyperlink{structapollo_1_1cyber_1_1blocker_1_1BlockerAttr}{Blocker\-Attr} \&attr)
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1blocker_1_1BlockerManager_a6577db9e414c1567b9d0df15ccadcb1f}{Observe} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1blocker_1_1BlockerManager_a5146d37bdbc55c29b2f82ff8b8c6af64}{Reset} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static const std\-::shared\-\_\-ptr\\*
+$<$ \hyperlink{classapollo_1_1cyber_1_1blocker_1_1BlockerManager}{Blocker\-Manager} $>$ \& \hyperlink{classapollo_1_1cyber_1_1blocker_1_1BlockerManager_a2fd73d2d9c2a50820750d68aea0a9c1b}{Instance} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1blocker_1_1BlockerManager_ad5317e0dea1d15074e99c073d3aa9615}{Blocker\-Manager} ()
+\item 
+\hyperlink{classapollo_1_1cyber_1_1blocker_1_1BlockerManager_a42ef19cb5d583093f35ef2a85f8ceb88}{Blocker\-Manager} (const \hyperlink{classapollo_1_1cyber_1_1blocker_1_1BlockerManager}{Blocker\-Manager} \&)=delete
+\item 
+\hyperlink{classapollo_1_1cyber_1_1blocker_1_1BlockerManager}{Blocker\-Manager} \& \hyperlink{classapollo_1_1cyber_1_1blocker_1_1BlockerManager_a315c9dc141d141bf0c707bf3dc56b841}{operator=} (const \hyperlink{classapollo_1_1cyber_1_1blocker_1_1BlockerManager}{Blocker\-Manager} \&)=delete
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1blocker_1_1BlockerManager_aab93de92687db46229801f733c741334}{Blocker\-Map} \hyperlink{classapollo_1_1cyber_1_1blocker_1_1BlockerManager_a63cbedd8313717b3f8fc8ad8133329bc}{blockers\-\_\-}
+\item 
+std\-::mutex \hyperlink{classapollo_1_1cyber_1_1blocker_1_1BlockerManager_a84ba4d0f791c3ff2b835dbfa91d325ea}{blocker\-\_\-mutex\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classapollo_1_1cyber_1_1blocker_1_1BlockerManager_aab93de92687db46229801f733c741334}{\index{apollo\-::cyber\-::blocker\-::\-Blocker\-Manager@{apollo\-::cyber\-::blocker\-::\-Blocker\-Manager}!Blocker\-Map@{Blocker\-Map}}
+\index{Blocker\-Map@{Blocker\-Map}!apollo::cyber::blocker::BlockerManager@{apollo\-::cyber\-::blocker\-::\-Blocker\-Manager}}
+\subsubsection[{Blocker\-Map}]{\setlength{\rightskip}{0pt plus 5cm}using {\bf apollo\-::cyber\-::blocker\-::\-Blocker\-Manager\-::\-Blocker\-Map} =  std\-::unordered\-\_\-map$<$std\-::string, std\-::shared\-\_\-ptr$<${\bf Blocker\-Base}$>$$>$}}\label{classapollo_1_1cyber_1_1blocker_1_1BlockerManager_aab93de92687db46229801f733c741334}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classapollo_1_1cyber_1_1blocker_1_1BlockerManager_a9507c5a941e01053a258badd91d5bb5e}{\index{apollo\-::cyber\-::blocker\-::\-Blocker\-Manager@{apollo\-::cyber\-::blocker\-::\-Blocker\-Manager}!$\sim$\-Blocker\-Manager@{$\sim$\-Blocker\-Manager}}
+\index{$\sim$\-Blocker\-Manager@{$\sim$\-Blocker\-Manager}!apollo::cyber::blocker::BlockerManager@{apollo\-::cyber\-::blocker\-::\-Blocker\-Manager}}
+\subsubsection[{$\sim$\-Blocker\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}virtual apollo\-::cyber\-::blocker\-::\-Blocker\-Manager\-::$\sim$\-Blocker\-Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1blocker_1_1BlockerManager_a9507c5a941e01053a258badd91d5bb5e}
+\hypertarget{classapollo_1_1cyber_1_1blocker_1_1BlockerManager_ad5317e0dea1d15074e99c073d3aa9615}{\index{apollo\-::cyber\-::blocker\-::\-Blocker\-Manager@{apollo\-::cyber\-::blocker\-::\-Blocker\-Manager}!Blocker\-Manager@{Blocker\-Manager}}
+\index{Blocker\-Manager@{Blocker\-Manager}!apollo::cyber::blocker::BlockerManager@{apollo\-::cyber\-::blocker\-::\-Blocker\-Manager}}
+\subsubsection[{Blocker\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::blocker\-::\-Blocker\-Manager\-::\-Blocker\-Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1blocker_1_1BlockerManager_ad5317e0dea1d15074e99c073d3aa9615}
+\hypertarget{classapollo_1_1cyber_1_1blocker_1_1BlockerManager_a42ef19cb5d583093f35ef2a85f8ceb88}{\index{apollo\-::cyber\-::blocker\-::\-Blocker\-Manager@{apollo\-::cyber\-::blocker\-::\-Blocker\-Manager}!Blocker\-Manager@{Blocker\-Manager}}
+\index{Blocker\-Manager@{Blocker\-Manager}!apollo::cyber::blocker::BlockerManager@{apollo\-::cyber\-::blocker\-::\-Blocker\-Manager}}
+\subsubsection[{Blocker\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::blocker\-::\-Blocker\-Manager\-::\-Blocker\-Manager (
+\begin{DoxyParamCaption}
+\item[{const {\bf Blocker\-Manager} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}}\label{classapollo_1_1cyber_1_1blocker_1_1BlockerManager_a42ef19cb5d583093f35ef2a85f8ceb88}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1blocker_1_1BlockerManager_ae6b3a620a508fac29bc657eac4b88d46}{\index{apollo\-::cyber\-::blocker\-::\-Blocker\-Manager@{apollo\-::cyber\-::blocker\-::\-Blocker\-Manager}!Get\-Blocker@{Get\-Blocker}}
+\index{Get\-Blocker@{Get\-Blocker}!apollo::cyber::blocker::BlockerManager@{apollo\-::cyber\-::blocker\-::\-Blocker\-Manager}}
+\subsubsection[{Get\-Blocker}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\-::shared\-\_\-ptr$<$ {\bf Blocker}$<$ T $>$ $>$ apollo\-::cyber\-::blocker\-::\-Blocker\-Manager\-::\-Get\-Blocker (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{channel\-\_\-name}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1blocker_1_1BlockerManager_ae6b3a620a508fac29bc657eac4b88d46}
+\hypertarget{classapollo_1_1cyber_1_1blocker_1_1BlockerManager_a8b675f3729363e53c7a09d267c560ac5}{\index{apollo\-::cyber\-::blocker\-::\-Blocker\-Manager@{apollo\-::cyber\-::blocker\-::\-Blocker\-Manager}!Get\-Or\-Create\-Blocker@{Get\-Or\-Create\-Blocker}}
+\index{Get\-Or\-Create\-Blocker@{Get\-Or\-Create\-Blocker}!apollo::cyber::blocker::BlockerManager@{apollo\-::cyber\-::blocker\-::\-Blocker\-Manager}}
+\subsubsection[{Get\-Or\-Create\-Blocker}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\-::shared\-\_\-ptr$<$ {\bf Blocker}$<$ T $>$ $>$ apollo\-::cyber\-::blocker\-::\-Blocker\-Manager\-::\-Get\-Or\-Create\-Blocker (
+\begin{DoxyParamCaption}
+\item[{const {\bf Blocker\-Attr} \&}]{attr}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1blocker_1_1BlockerManager_a8b675f3729363e53c7a09d267c560ac5}
+\hypertarget{classapollo_1_1cyber_1_1blocker_1_1BlockerManager_a2fd73d2d9c2a50820750d68aea0a9c1b}{\index{apollo\-::cyber\-::blocker\-::\-Blocker\-Manager@{apollo\-::cyber\-::blocker\-::\-Blocker\-Manager}!Instance@{Instance}}
+\index{Instance@{Instance}!apollo::cyber::blocker::BlockerManager@{apollo\-::cyber\-::blocker\-::\-Blocker\-Manager}}
+\subsubsection[{Instance}]{\setlength{\rightskip}{0pt plus 5cm}static const std\-::shared\-\_\-ptr$<${\bf Blocker\-Manager}$>$\& apollo\-::cyber\-::blocker\-::\-Blocker\-Manager\-::\-Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classapollo_1_1cyber_1_1blocker_1_1BlockerManager_a2fd73d2d9c2a50820750d68aea0a9c1b}
+\hypertarget{classapollo_1_1cyber_1_1blocker_1_1BlockerManager_a6577db9e414c1567b9d0df15ccadcb1f}{\index{apollo\-::cyber\-::blocker\-::\-Blocker\-Manager@{apollo\-::cyber\-::blocker\-::\-Blocker\-Manager}!Observe@{Observe}}
+\index{Observe@{Observe}!apollo::cyber::blocker::BlockerManager@{apollo\-::cyber\-::blocker\-::\-Blocker\-Manager}}
+\subsubsection[{Observe}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::blocker\-::\-Blocker\-Manager\-::\-Observe (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1blocker_1_1BlockerManager_a6577db9e414c1567b9d0df15ccadcb1f}
+\hypertarget{classapollo_1_1cyber_1_1blocker_1_1BlockerManager_a315c9dc141d141bf0c707bf3dc56b841}{\index{apollo\-::cyber\-::blocker\-::\-Blocker\-Manager@{apollo\-::cyber\-::blocker\-::\-Blocker\-Manager}!operator=@{operator=}}
+\index{operator=@{operator=}!apollo::cyber::blocker::BlockerManager@{apollo\-::cyber\-::blocker\-::\-Blocker\-Manager}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Blocker\-Manager}\& apollo\-::cyber\-::blocker\-::\-Blocker\-Manager\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Blocker\-Manager} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}}\label{classapollo_1_1cyber_1_1blocker_1_1BlockerManager_a315c9dc141d141bf0c707bf3dc56b841}
+\hypertarget{classapollo_1_1cyber_1_1blocker_1_1BlockerManager_a02cf4d2417c97da763663052e5997c51}{\index{apollo\-::cyber\-::blocker\-::\-Blocker\-Manager@{apollo\-::cyber\-::blocker\-::\-Blocker\-Manager}!Publish@{Publish}}
+\index{Publish@{Publish}!apollo::cyber::blocker::BlockerManager@{apollo\-::cyber\-::blocker\-::\-Blocker\-Manager}}
+\subsubsection[{Publish}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool apollo\-::cyber\-::blocker\-::\-Blocker\-Manager\-::\-Publish (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{channel\-\_\-name, }
+\item[{const typename {\bf Blocker}$<$ T $>$\-::Message\-Ptr \&}]{msg}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1blocker_1_1BlockerManager_a02cf4d2417c97da763663052e5997c51}
+\hypertarget{classapollo_1_1cyber_1_1blocker_1_1BlockerManager_a9240b9cb2f282a740e863b9e81bbbe06}{\index{apollo\-::cyber\-::blocker\-::\-Blocker\-Manager@{apollo\-::cyber\-::blocker\-::\-Blocker\-Manager}!Publish@{Publish}}
+\index{Publish@{Publish}!apollo::cyber::blocker::BlockerManager@{apollo\-::cyber\-::blocker\-::\-Blocker\-Manager}}
+\subsubsection[{Publish}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool apollo\-::cyber\-::blocker\-::\-Blocker\-Manager\-::\-Publish (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{channel\-\_\-name, }
+\item[{const typename {\bf Blocker}$<$ T $>$\-::Message\-Type \&}]{msg}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1blocker_1_1BlockerManager_a9240b9cb2f282a740e863b9e81bbbe06}
+\hypertarget{classapollo_1_1cyber_1_1blocker_1_1BlockerManager_a5146d37bdbc55c29b2f82ff8b8c6af64}{\index{apollo\-::cyber\-::blocker\-::\-Blocker\-Manager@{apollo\-::cyber\-::blocker\-::\-Blocker\-Manager}!Reset@{Reset}}
+\index{Reset@{Reset}!apollo::cyber::blocker::BlockerManager@{apollo\-::cyber\-::blocker\-::\-Blocker\-Manager}}
+\subsubsection[{Reset}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::blocker\-::\-Blocker\-Manager\-::\-Reset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1blocker_1_1BlockerManager_a5146d37bdbc55c29b2f82ff8b8c6af64}
+\hypertarget{classapollo_1_1cyber_1_1blocker_1_1BlockerManager_adf88edc35b0ea77921145adc2298e23b}{\index{apollo\-::cyber\-::blocker\-::\-Blocker\-Manager@{apollo\-::cyber\-::blocker\-::\-Blocker\-Manager}!Subscribe@{Subscribe}}
+\index{Subscribe@{Subscribe}!apollo::cyber::blocker::BlockerManager@{apollo\-::cyber\-::blocker\-::\-Blocker\-Manager}}
+\subsubsection[{Subscribe}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool apollo\-::cyber\-::blocker\-::\-Blocker\-Manager\-::\-Subscribe (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{channel\-\_\-name, }
+\item[{size\-\_\-t}]{capacity, }
+\item[{const std\-::string \&}]{callback\-\_\-id, }
+\item[{const typename {\bf Blocker}$<$ T $>$\-::Callback \&}]{callback}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1blocker_1_1BlockerManager_adf88edc35b0ea77921145adc2298e23b}
+\hypertarget{classapollo_1_1cyber_1_1blocker_1_1BlockerManager_a9275edf629662a3800e3089f3dd91c3a}{\index{apollo\-::cyber\-::blocker\-::\-Blocker\-Manager@{apollo\-::cyber\-::blocker\-::\-Blocker\-Manager}!Unsubscribe@{Unsubscribe}}
+\index{Unsubscribe@{Unsubscribe}!apollo::cyber::blocker::BlockerManager@{apollo\-::cyber\-::blocker\-::\-Blocker\-Manager}}
+\subsubsection[{Unsubscribe}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool apollo\-::cyber\-::blocker\-::\-Blocker\-Manager\-::\-Unsubscribe (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{channel\-\_\-name, }
+\item[{const std\-::string \&}]{callback\-\_\-id}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1blocker_1_1BlockerManager_a9275edf629662a3800e3089f3dd91c3a}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classapollo_1_1cyber_1_1blocker_1_1BlockerManager_a84ba4d0f791c3ff2b835dbfa91d325ea}{\index{apollo\-::cyber\-::blocker\-::\-Blocker\-Manager@{apollo\-::cyber\-::blocker\-::\-Blocker\-Manager}!blocker\-\_\-mutex\-\_\-@{blocker\-\_\-mutex\-\_\-}}
+\index{blocker\-\_\-mutex\-\_\-@{blocker\-\_\-mutex\-\_\-}!apollo::cyber::blocker::BlockerManager@{apollo\-::cyber\-::blocker\-::\-Blocker\-Manager}}
+\subsubsection[{blocker\-\_\-mutex\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::mutex apollo\-::cyber\-::blocker\-::\-Blocker\-Manager\-::blocker\-\_\-mutex\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1blocker_1_1BlockerManager_a84ba4d0f791c3ff2b835dbfa91d325ea}
+\hypertarget{classapollo_1_1cyber_1_1blocker_1_1BlockerManager_a63cbedd8313717b3f8fc8ad8133329bc}{\index{apollo\-::cyber\-::blocker\-::\-Blocker\-Manager@{apollo\-::cyber\-::blocker\-::\-Blocker\-Manager}!blockers\-\_\-@{blockers\-\_\-}}
+\index{blockers\-\_\-@{blockers\-\_\-}!apollo::cyber::blocker::BlockerManager@{apollo\-::cyber\-::blocker\-::\-Blocker\-Manager}}
+\subsubsection[{blockers\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Blocker\-Map} apollo\-::cyber\-::blocker\-::\-Blocker\-Manager\-::blockers\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1blocker_1_1BlockerManager_a63cbedd8313717b3f8fc8ad8133329bc}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+blocker/\hyperlink{blocker__manager_8h}{blocker\-\_\-manager.\-h}\end{DoxyCompactItemize}

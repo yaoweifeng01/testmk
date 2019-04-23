@@ -1,0 +1,137 @@
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1UnderlayMessageType}{\section{apollo\-:\-:cyber\-:\-:transport\-:\-:Underlay\-Message\-Type Class Reference}
+\label{classapollo_1_1cyber_1_1transport_1_1UnderlayMessageType}\index{apollo\-::cyber\-::transport\-::\-Underlay\-Message\-Type@{apollo\-::cyber\-::transport\-::\-Underlay\-Message\-Type}}
+}
+
+
+This class represents the Topic\-Data\-Type of the type \hyperlink{classapollo_1_1cyber_1_1transport_1_1UnderlayMessage}{Underlay\-Message} defined by the user in the I\-D\-L file.  
+
+
+
+
+{\ttfamily \#include $<$underlay\-\_\-message\-\_\-type.\-h$>$}
+
+Inheritance diagram for apollo\-:\-:cyber\-:\-:transport\-:\-:Underlay\-Message\-Type\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classapollo_1_1cyber_1_1transport_1_1UnderlayMessageType}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1transport_1_1UnderlayMessageType_a4b65746e3f848e2f8fcb9c1adef1d84d}{type} = \hyperlink{classapollo_1_1cyber_1_1transport_1_1UnderlayMessage}{Underlay\-Message}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1transport_1_1UnderlayMessageType_a00d06a38a4b9dc8979b48123ee70affc}{Underlay\-Message\-Type} ()
+\item 
+virtual \hyperlink{classapollo_1_1cyber_1_1transport_1_1UnderlayMessageType_ac092329df3cf792ffaaf80028b34df04}{$\sim$\-Underlay\-Message\-Type} ()
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1transport_1_1UnderlayMessageType_aa3a5b3cd4ac16b879e600d4652ce9d01}{serialize} (void $\ast$data, Serialized\-Payload\-\_\-t $\ast$payload)
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1transport_1_1UnderlayMessageType_addcc30ac149aae4fd099e808a809cc58}{deserialize} (Serialized\-Payload\-\_\-t $\ast$payload, void $\ast$data)
+\item 
+std\-::function$<$ uint32\-\_\-t()$>$ \hyperlink{classapollo_1_1cyber_1_1transport_1_1UnderlayMessageType_a1a02a21f0d7bc7148f7d24e39e7a6c0e}{get\-Serialized\-Size\-Provider} (void $\ast$data)
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1transport_1_1UnderlayMessageType_a5a4bb79093137ddfe93e27ba5b3a336a}{get\-Key} (void $\ast$data, Instance\-Handle\-\_\-t $\ast$ihandle)
+\item 
+void $\ast$ \hyperlink{classapollo_1_1cyber_1_1transport_1_1UnderlayMessageType_ae20e71f5cca39feac6993ef26fc89abf}{create\-Data} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1transport_1_1UnderlayMessageType_aa406d69101f4f1d0aec4de5f13f54e56}{delete\-Data} (void $\ast$data)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+M\-D5 \hyperlink{classapollo_1_1cyber_1_1transport_1_1UnderlayMessageType_ad0c794c245214421d0a93f1c9df6ca03}{m\-\_\-md5}
+\item 
+unsigned char $\ast$ \hyperlink{classapollo_1_1cyber_1_1transport_1_1UnderlayMessageType_a70946fdd8679f584bb8bd917cc845a21}{m\-\_\-key\-Buffer}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class represents the Topic\-Data\-Type of the type \hyperlink{classapollo_1_1cyber_1_1transport_1_1UnderlayMessage}{Underlay\-Message} defined by the user in the I\-D\-L file. 
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1UnderlayMessageType_a4b65746e3f848e2f8fcb9c1adef1d84d}{\index{apollo\-::cyber\-::transport\-::\-Underlay\-Message\-Type@{apollo\-::cyber\-::transport\-::\-Underlay\-Message\-Type}!type@{type}}
+\index{type@{type}!apollo::cyber::transport::UnderlayMessageType@{apollo\-::cyber\-::transport\-::\-Underlay\-Message\-Type}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}using {\bf apollo\-::cyber\-::transport\-::\-Underlay\-Message\-Type\-::type} =  {\bf Underlay\-Message}}}\label{classapollo_1_1cyber_1_1transport_1_1UnderlayMessageType_a4b65746e3f848e2f8fcb9c1adef1d84d}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1UnderlayMessageType_a00d06a38a4b9dc8979b48123ee70affc}{\index{apollo\-::cyber\-::transport\-::\-Underlay\-Message\-Type@{apollo\-::cyber\-::transport\-::\-Underlay\-Message\-Type}!Underlay\-Message\-Type@{Underlay\-Message\-Type}}
+\index{Underlay\-Message\-Type@{Underlay\-Message\-Type}!apollo::cyber::transport::UnderlayMessageType@{apollo\-::cyber\-::transport\-::\-Underlay\-Message\-Type}}
+\subsubsection[{Underlay\-Message\-Type}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::transport\-::\-Underlay\-Message\-Type\-::\-Underlay\-Message\-Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1transport_1_1UnderlayMessageType_a00d06a38a4b9dc8979b48123ee70affc}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1UnderlayMessageType_ac092329df3cf792ffaaf80028b34df04}{\index{apollo\-::cyber\-::transport\-::\-Underlay\-Message\-Type@{apollo\-::cyber\-::transport\-::\-Underlay\-Message\-Type}!$\sim$\-Underlay\-Message\-Type@{$\sim$\-Underlay\-Message\-Type}}
+\index{$\sim$\-Underlay\-Message\-Type@{$\sim$\-Underlay\-Message\-Type}!apollo::cyber::transport::UnderlayMessageType@{apollo\-::cyber\-::transport\-::\-Underlay\-Message\-Type}}
+\subsubsection[{$\sim$\-Underlay\-Message\-Type}]{\setlength{\rightskip}{0pt plus 5cm}virtual apollo\-::cyber\-::transport\-::\-Underlay\-Message\-Type\-::$\sim$\-Underlay\-Message\-Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1transport_1_1UnderlayMessageType_ac092329df3cf792ffaaf80028b34df04}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1UnderlayMessageType_ae20e71f5cca39feac6993ef26fc89abf}{\index{apollo\-::cyber\-::transport\-::\-Underlay\-Message\-Type@{apollo\-::cyber\-::transport\-::\-Underlay\-Message\-Type}!create\-Data@{create\-Data}}
+\index{create\-Data@{create\-Data}!apollo::cyber::transport::UnderlayMessageType@{apollo\-::cyber\-::transport\-::\-Underlay\-Message\-Type}}
+\subsubsection[{create\-Data}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ apollo\-::cyber\-::transport\-::\-Underlay\-Message\-Type\-::create\-Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1transport_1_1UnderlayMessageType_ae20e71f5cca39feac6993ef26fc89abf}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1UnderlayMessageType_aa406d69101f4f1d0aec4de5f13f54e56}{\index{apollo\-::cyber\-::transport\-::\-Underlay\-Message\-Type@{apollo\-::cyber\-::transport\-::\-Underlay\-Message\-Type}!delete\-Data@{delete\-Data}}
+\index{delete\-Data@{delete\-Data}!apollo::cyber::transport::UnderlayMessageType@{apollo\-::cyber\-::transport\-::\-Underlay\-Message\-Type}}
+\subsubsection[{delete\-Data}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::transport\-::\-Underlay\-Message\-Type\-::delete\-Data (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{data}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1transport_1_1UnderlayMessageType_aa406d69101f4f1d0aec4de5f13f54e56}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1UnderlayMessageType_addcc30ac149aae4fd099e808a809cc58}{\index{apollo\-::cyber\-::transport\-::\-Underlay\-Message\-Type@{apollo\-::cyber\-::transport\-::\-Underlay\-Message\-Type}!deserialize@{deserialize}}
+\index{deserialize@{deserialize}!apollo::cyber::transport::UnderlayMessageType@{apollo\-::cyber\-::transport\-::\-Underlay\-Message\-Type}}
+\subsubsection[{deserialize}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::transport\-::\-Underlay\-Message\-Type\-::deserialize (
+\begin{DoxyParamCaption}
+\item[{Serialized\-Payload\-\_\-t $\ast$}]{payload, }
+\item[{void $\ast$}]{data}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1transport_1_1UnderlayMessageType_addcc30ac149aae4fd099e808a809cc58}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1UnderlayMessageType_a5a4bb79093137ddfe93e27ba5b3a336a}{\index{apollo\-::cyber\-::transport\-::\-Underlay\-Message\-Type@{apollo\-::cyber\-::transport\-::\-Underlay\-Message\-Type}!get\-Key@{get\-Key}}
+\index{get\-Key@{get\-Key}!apollo::cyber::transport::UnderlayMessageType@{apollo\-::cyber\-::transport\-::\-Underlay\-Message\-Type}}
+\subsubsection[{get\-Key}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::transport\-::\-Underlay\-Message\-Type\-::get\-Key (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{data, }
+\item[{Instance\-Handle\-\_\-t $\ast$}]{ihandle}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1transport_1_1UnderlayMessageType_a5a4bb79093137ddfe93e27ba5b3a336a}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1UnderlayMessageType_a1a02a21f0d7bc7148f7d24e39e7a6c0e}{\index{apollo\-::cyber\-::transport\-::\-Underlay\-Message\-Type@{apollo\-::cyber\-::transport\-::\-Underlay\-Message\-Type}!get\-Serialized\-Size\-Provider@{get\-Serialized\-Size\-Provider}}
+\index{get\-Serialized\-Size\-Provider@{get\-Serialized\-Size\-Provider}!apollo::cyber::transport::UnderlayMessageType@{apollo\-::cyber\-::transport\-::\-Underlay\-Message\-Type}}
+\subsubsection[{get\-Serialized\-Size\-Provider}]{\setlength{\rightskip}{0pt plus 5cm}std\-::function$<$uint32\-\_\-t()$>$ apollo\-::cyber\-::transport\-::\-Underlay\-Message\-Type\-::get\-Serialized\-Size\-Provider (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{data}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1transport_1_1UnderlayMessageType_a1a02a21f0d7bc7148f7d24e39e7a6c0e}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1UnderlayMessageType_aa3a5b3cd4ac16b879e600d4652ce9d01}{\index{apollo\-::cyber\-::transport\-::\-Underlay\-Message\-Type@{apollo\-::cyber\-::transport\-::\-Underlay\-Message\-Type}!serialize@{serialize}}
+\index{serialize@{serialize}!apollo::cyber::transport::UnderlayMessageType@{apollo\-::cyber\-::transport\-::\-Underlay\-Message\-Type}}
+\subsubsection[{serialize}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::transport\-::\-Underlay\-Message\-Type\-::serialize (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{data, }
+\item[{Serialized\-Payload\-\_\-t $\ast$}]{payload}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1transport_1_1UnderlayMessageType_aa3a5b3cd4ac16b879e600d4652ce9d01}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1UnderlayMessageType_a70946fdd8679f584bb8bd917cc845a21}{\index{apollo\-::cyber\-::transport\-::\-Underlay\-Message\-Type@{apollo\-::cyber\-::transport\-::\-Underlay\-Message\-Type}!m\-\_\-key\-Buffer@{m\-\_\-key\-Buffer}}
+\index{m\-\_\-key\-Buffer@{m\-\_\-key\-Buffer}!apollo::cyber::transport::UnderlayMessageType@{apollo\-::cyber\-::transport\-::\-Underlay\-Message\-Type}}
+\subsubsection[{m\-\_\-key\-Buffer}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char$\ast$ apollo\-::cyber\-::transport\-::\-Underlay\-Message\-Type\-::m\-\_\-key\-Buffer}}\label{classapollo_1_1cyber_1_1transport_1_1UnderlayMessageType_a70946fdd8679f584bb8bd917cc845a21}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1UnderlayMessageType_ad0c794c245214421d0a93f1c9df6ca03}{\index{apollo\-::cyber\-::transport\-::\-Underlay\-Message\-Type@{apollo\-::cyber\-::transport\-::\-Underlay\-Message\-Type}!m\-\_\-md5@{m\-\_\-md5}}
+\index{m\-\_\-md5@{m\-\_\-md5}!apollo::cyber::transport::UnderlayMessageType@{apollo\-::cyber\-::transport\-::\-Underlay\-Message\-Type}}
+\subsubsection[{m\-\_\-md5}]{\setlength{\rightskip}{0pt plus 5cm}M\-D5 apollo\-::cyber\-::transport\-::\-Underlay\-Message\-Type\-::m\-\_\-md5}}\label{classapollo_1_1cyber_1_1transport_1_1UnderlayMessageType_ad0c794c245214421d0a93f1c9df6ca03}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+transport/rtps/\hyperlink{underlay__message__type_8h}{underlay\-\_\-message\-\_\-type.\-h}\end{DoxyCompactItemize}

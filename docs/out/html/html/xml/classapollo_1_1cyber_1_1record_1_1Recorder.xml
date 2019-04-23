@@ -1,0 +1,465 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classapollo_1_1cyber_1_1record_1_1Recorder" kind="class" prot="public">
+    <compoundname>apollo::cyber::record::Recorder</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">std::enable_shared_from_this&lt; Recorder &gt;</basecompoundref>
+    <includes refid="recorder_8h" local="no">recorder.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1Recorder_1a45e46219c614d60f478fe179c055f929" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool apollo::cyber::record::Recorder::is_started_</definition>
+        <argsstring></argsstring>
+        <name>is_started_</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/recorder.h" line="59" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/recorder.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1Recorder_1a35686e54ba6d3d1e016db22eb658932a" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool apollo::cyber::record::Recorder::is_stopping_</definition>
+        <argsstring></argsstring>
+        <name>is_stopping_</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/recorder.h" line="60" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/recorder.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1Recorder_1a5f3b7c6dd94a93238437099ffabd640f" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="classapollo_1_1cyber_1_1Node" kindref="compound">Node</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;Node&gt; apollo::cyber::record::Recorder::node_</definition>
+        <argsstring></argsstring>
+        <name>node_</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/recorder.h" line="61" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/recorder.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1Recorder_1a84a6307202707dd3af88342aa5b587a0" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="classapollo_1_1cyber_1_1record_1_1RecordWriter" kindref="compound">RecordWriter</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;RecordWriter&gt; apollo::cyber::record::Recorder::writer_</definition>
+        <argsstring></argsstring>
+        <name>writer_</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/recorder.h" line="62" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/recorder.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1Recorder_1a3501b5e072094c92b9e395da2efce38d" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; std::thread &gt;</type>
+        <definition>std::shared_ptr&lt;std::thread&gt; apollo::cyber::record::Recorder::display_thread_</definition>
+        <argsstring></argsstring>
+        <name>display_thread_</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/recorder.h" line="63" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/recorder.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1Recorder_1a19008dc3b5064e0e160873b8dce8c471" prot="private" static="no" mutable="no">
+        <type><ref refid="classapollo_1_1cyber_1_1base_1_1Connection" kindref="compound">Connection</ref>&lt; const ChangeMsg &amp; &gt;</type>
+        <definition>Connection&lt;const ChangeMsg&amp;&gt; apollo::cyber::record::Recorder::change_conn_</definition>
+        <argsstring></argsstring>
+        <name>change_conn_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/recorder.h" line="64" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/recorder.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1Recorder_1a882605447aa4a2057c9b23257b73e353" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string apollo::cyber::record::Recorder::output_</definition>
+        <argsstring></argsstring>
+        <name>output_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/recorder.h" line="65" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/recorder.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1Recorder_1a6ee49bb5607d8fddd9d7cc1e6d6cfeec" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool apollo::cyber::record::Recorder::all_channels_</definition>
+        <argsstring></argsstring>
+        <name>all_channels_</name>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/recorder.h" line="66" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/recorder.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1Recorder_1af5005f0a82b3f286eab34ed3cec721cf" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; apollo::cyber::record::Recorder::channel_vec_</definition>
+        <argsstring></argsstring>
+        <name>channel_vec_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/recorder.h" line="67" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/recorder.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1Recorder_1a535751fe26620a816ea114cf44065fe6" prot="private" static="no" mutable="no">
+        <type>proto::Header</type>
+        <definition>proto::Header apollo::cyber::record::Recorder::header_</definition>
+        <argsstring></argsstring>
+        <name>header_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/recorder.h" line="68" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/recorder.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1Recorder_1a216e4e98ce9314a8e527fad21f79ff9e" prot="private" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, std::shared_ptr&lt; <ref refid="classapollo_1_1cyber_1_1ReaderBase" kindref="compound">ReaderBase</ref> &gt; &gt;</type>
+        <definition>std::unordered_map&lt;std::string, std::shared_ptr&lt;ReaderBase&gt; &gt; apollo::cyber::record::Recorder::channel_reader_map_</definition>
+        <argsstring></argsstring>
+        <name>channel_reader_map_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/recorder.h" line="70" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/recorder.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1Recorder_1ad59a9ed9e4cda30bd266dea4943e5a18" prot="private" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t apollo::cyber::record::Recorder::message_count_</definition>
+        <argsstring></argsstring>
+        <name>message_count_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/recorder.h" line="71" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/recorder.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1Recorder_1ab96a45009399e22bd8f0be7a4119f884" prot="private" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t apollo::cyber::record::Recorder::message_time_</definition>
+        <argsstring></argsstring>
+        <name>message_time_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/recorder.h" line="72" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/recorder.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1Recorder_1a7e6059eed97d720778acb9b7b090c130" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::record::Recorder::Recorder</definition>
+        <argsstring>(const std::string &amp;output, bool all_channels, const std::vector&lt; std::string &gt; &amp;channel_vec)</argsstring>
+        <name>Recorder</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>all_channels</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::string &gt; &amp;</type>
+          <declname>channel_vec</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/recorder.h" line="49" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1Recorder_1a0ce864fc3deadf13f292533c27335330" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::record::Recorder::Recorder</definition>
+        <argsstring>(const std::string &amp;output, bool all_channels, const std::vector&lt; std::string &gt; &amp;channel_vec, const proto::Header &amp;header)</argsstring>
+        <name>Recorder</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>all_channels</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::string &gt; &amp;</type>
+          <declname>channel_vec</declname>
+        </param>
+        <param>
+          <type>const proto::Header &amp;</type>
+          <declname>header</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/recorder.h" line="51" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1Recorder_1a932ad6db8cbf58b15c6ed44ae80b5e9c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::record::Recorder::~Recorder</definition>
+        <argsstring>()</argsstring>
+        <name>~Recorder</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/recorder.h" line="54" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1Recorder_1aa3a2084056a4b05c496782c6855a57fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::record::Recorder::Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/recorder.h" line="55" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1Recorder_1a0bd7c077dec0fd2c2dd993168c0a36f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::record::Recorder::Stop</definition>
+        <argsstring>()</argsstring>
+        <name>Stop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/recorder.h" line="56" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1Recorder_1a01f8010c7d771c1d02d5376d316bb19b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::record::Recorder::InitReadersImpl</definition>
+        <argsstring>()</argsstring>
+        <name>InitReadersImpl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/recorder.h" line="74" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1Recorder_1ae4dbb4253601d889d293cc34a19cc924" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::record::Recorder::FreeReadersImpl</definition>
+        <argsstring>()</argsstring>
+        <name>FreeReadersImpl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/recorder.h" line="76" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1Recorder_1a523440fbf66cb275580715cb14c92259" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::record::Recorder::InitReaderImpl</definition>
+        <argsstring>(const std::string &amp;channel_name, const std::string &amp;message_type)</argsstring>
+        <name>InitReaderImpl</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>channel_name</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message_type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/recorder.h" line="78" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1Recorder_1af12fe97b5f97f298c12d3ef5eddf93d0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::record::Recorder::TopologyCallback</definition>
+        <argsstring>(const ChangeMsg &amp;msg)</argsstring>
+        <name>TopologyCallback</name>
+        <param>
+          <type>const ChangeMsg &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/recorder.h" line="81" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1Recorder_1abac0d8d87a1db4574db9d1e7e67c8be1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::record::Recorder::ReaderCallback</definition>
+        <argsstring>(const std::shared_ptr&lt; RawMessage &gt; &amp;message, const std::string &amp;channel_name)</argsstring>
+        <name>ReaderCallback</name>
+        <param>
+          <type>const std::shared_ptr&lt; <ref refid="structapollo_1_1cyber_1_1message_1_1RawMessage" kindref="compound">RawMessage</ref> &gt; &amp;</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>channel_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/recorder.h" line="83" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1Recorder_1a1b44f0938e97b74ab29dfb543cfd0bbc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::record::Recorder::FindNewChannel</definition>
+        <argsstring>(const RoleAttributes &amp;role_attr)</argsstring>
+        <name>FindNewChannel</name>
+        <param>
+          <type>const RoleAttributes &amp;</type>
+          <declname>role_attr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/recorder.h" line="86" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1Recorder_1acff5ebb09184b08346199287aef8d099" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::record::Recorder::ShowProgress</definition>
+        <argsstring>()</argsstring>
+        <name>ShowProgress</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/recorder.h" line="88" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="676">
+        <label>apollo::cyber::record::Recorder</label>
+        <link refid="classapollo_1_1cyber_1_1record_1_1Recorder"/>
+        <childnode refid="677" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="677">
+        <label>std::enable_shared_from_this&lt; Recorder &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="678">
+        <label>apollo::cyber::record::Recorder</label>
+        <link refid="classapollo_1_1cyber_1_1record_1_1Recorder"/>
+        <childnode refid="679" relation="public-inheritance">
+        </childnode>
+        <childnode refid="680" relation="usage">
+          <edgelabel>change_conn_</edgelabel>
+        </childnode>
+      </node>
+      <node id="681">
+        <label>apollo::cyber::base::Signal&lt; Args...&gt;</label>
+        <link refid="classapollo_1_1cyber_1_1base_1_1Signal"/>
+      </node>
+      <node id="679">
+        <label>std::enable_shared_from_this&lt; Recorder &gt;</label>
+      </node>
+      <node id="680">
+        <label>apollo::cyber::base::Connection&lt; const ChangeMsg &amp; &gt;</label>
+        <link refid="classapollo_1_1cyber_1_1base_1_1Connection"/>
+        <childnode refid="681" relation="usage">
+          <edgelabel>signal_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/recorder.h" line="47" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/recorder.h" bodystart="47" bodyend="89"/>
+    <listofallmembers>
+      <member refid="classapollo_1_1cyber_1_1record_1_1Recorder_1a6ee49bb5607d8fddd9d7cc1e6d6cfeec" prot="private" virt="non-virtual"><scope>apollo::cyber::record::Recorder</scope><name>all_channels_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1Recorder_1a19008dc3b5064e0e160873b8dce8c471" prot="private" virt="non-virtual"><scope>apollo::cyber::record::Recorder</scope><name>change_conn_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1Recorder_1a216e4e98ce9314a8e527fad21f79ff9e" prot="private" virt="non-virtual"><scope>apollo::cyber::record::Recorder</scope><name>channel_reader_map_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1Recorder_1af5005f0a82b3f286eab34ed3cec721cf" prot="private" virt="non-virtual"><scope>apollo::cyber::record::Recorder</scope><name>channel_vec_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1Recorder_1a3501b5e072094c92b9e395da2efce38d" prot="private" virt="non-virtual"><scope>apollo::cyber::record::Recorder</scope><name>display_thread_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1Recorder_1a1b44f0938e97b74ab29dfb543cfd0bbc" prot="private" virt="non-virtual"><scope>apollo::cyber::record::Recorder</scope><name>FindNewChannel</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1Recorder_1ae4dbb4253601d889d293cc34a19cc924" prot="private" virt="non-virtual"><scope>apollo::cyber::record::Recorder</scope><name>FreeReadersImpl</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1Recorder_1a535751fe26620a816ea114cf44065fe6" prot="private" virt="non-virtual"><scope>apollo::cyber::record::Recorder</scope><name>header_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1Recorder_1a523440fbf66cb275580715cb14c92259" prot="private" virt="non-virtual"><scope>apollo::cyber::record::Recorder</scope><name>InitReaderImpl</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1Recorder_1a01f8010c7d771c1d02d5376d316bb19b" prot="private" virt="non-virtual"><scope>apollo::cyber::record::Recorder</scope><name>InitReadersImpl</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1Recorder_1a45e46219c614d60f478fe179c055f929" prot="private" virt="non-virtual"><scope>apollo::cyber::record::Recorder</scope><name>is_started_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1Recorder_1a35686e54ba6d3d1e016db22eb658932a" prot="private" virt="non-virtual"><scope>apollo::cyber::record::Recorder</scope><name>is_stopping_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1Recorder_1ad59a9ed9e4cda30bd266dea4943e5a18" prot="private" virt="non-virtual"><scope>apollo::cyber::record::Recorder</scope><name>message_count_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1Recorder_1ab96a45009399e22bd8f0be7a4119f884" prot="private" virt="non-virtual"><scope>apollo::cyber::record::Recorder</scope><name>message_time_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1Recorder_1a5f3b7c6dd94a93238437099ffabd640f" prot="private" virt="non-virtual"><scope>apollo::cyber::record::Recorder</scope><name>node_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1Recorder_1a882605447aa4a2057c9b23257b73e353" prot="private" virt="non-virtual"><scope>apollo::cyber::record::Recorder</scope><name>output_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1Recorder_1abac0d8d87a1db4574db9d1e7e67c8be1" prot="private" virt="non-virtual"><scope>apollo::cyber::record::Recorder</scope><name>ReaderCallback</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1Recorder_1a7e6059eed97d720778acb9b7b090c130" prot="public" virt="non-virtual"><scope>apollo::cyber::record::Recorder</scope><name>Recorder</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1Recorder_1a0ce864fc3deadf13f292533c27335330" prot="public" virt="non-virtual"><scope>apollo::cyber::record::Recorder</scope><name>Recorder</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1Recorder_1acff5ebb09184b08346199287aef8d099" prot="private" virt="non-virtual"><scope>apollo::cyber::record::Recorder</scope><name>ShowProgress</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1Recorder_1aa3a2084056a4b05c496782c6855a57fe" prot="public" virt="non-virtual"><scope>apollo::cyber::record::Recorder</scope><name>Start</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1Recorder_1a0bd7c077dec0fd2c2dd993168c0a36f3" prot="public" virt="non-virtual"><scope>apollo::cyber::record::Recorder</scope><name>Stop</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1Recorder_1af12fe97b5f97f298c12d3ef5eddf93d0" prot="private" virt="non-virtual"><scope>apollo::cyber::record::Recorder</scope><name>TopologyCallback</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1Recorder_1a84a6307202707dd3af88342aa5b587a0" prot="private" virt="non-virtual"><scope>apollo::cyber::record::Recorder</scope><name>writer_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1Recorder_1a932ad6db8cbf58b15c6ed44ae80b5e9c" prot="public" virt="non-virtual"><scope>apollo::cyber::record::Recorder</scope><name>~Recorder</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

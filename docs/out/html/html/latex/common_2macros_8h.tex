@@ -1,0 +1,97 @@
+\hypertarget{common_2macros_8h}{\section{common/macros.h File Reference}
+\label{common_2macros_8h}\index{common/macros.\-h@{common/macros.\-h}}
+}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$memory$>$}\\*
+{\ttfamily \#include $<$mutex$>$}\\*
+{\ttfamily \#include $<$type\-\_\-traits$>$}\\*
+{\ttfamily \#include $<$utility$>$}\\*
+{\ttfamily \#include \char`\"{}cyber/base/macros.\-h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{common_2macros_8h_a3e5bd53e9de4078ded1bf077b019a131}{U\-N\-U\-S\-E\-D}(param)~(void)param
+\item 
+\#define \hyperlink{common_2macros_8h_a92b9051cdb0e9c0fd1a37c1512ebdfae}{D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N}(classname)
+\item 
+\#define \hyperlink{common_2macros_8h_ae064c360d998527ea6031d4e129b709d}{D\-E\-C\-L\-A\-R\-E\-\_\-\-S\-I\-N\-G\-L\-E\-T\-O\-N}(classname)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\-::enable\-\_\-if$<$ Has\-Shutdown$<$ T $>$\\*
+\-::value $>$\-::type \hyperlink{common_2macros_8h_a6cc149fed512462575aebcc90a894f9f}{Call\-Shutdown} (T $\ast$instance)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\-::enable\-\_\-if$<$!Has\-Shutdown$<$ T $>$\\*
+\-::value $>$\-::type \hyperlink{common_2macros_8h_a52af9c636d9d308931285636a3312885}{Call\-Shutdown} (T $\ast$instance)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{common_2macros_8h_ae064c360d998527ea6031d4e129b709d}{\index{common/macros.\-h@{common/macros.\-h}!D\-E\-C\-L\-A\-R\-E\-\_\-\-S\-I\-N\-G\-L\-E\-T\-O\-N@{D\-E\-C\-L\-A\-R\-E\-\_\-\-S\-I\-N\-G\-L\-E\-T\-O\-N}}
+\index{D\-E\-C\-L\-A\-R\-E\-\_\-\-S\-I\-N\-G\-L\-E\-T\-O\-N@{D\-E\-C\-L\-A\-R\-E\-\_\-\-S\-I\-N\-G\-L\-E\-T\-O\-N}!common/macros.h@{common/macros.\-h}}
+\subsubsection[{D\-E\-C\-L\-A\-R\-E\-\_\-\-S\-I\-N\-G\-L\-E\-T\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-E\-C\-L\-A\-R\-E\-\_\-\-S\-I\-N\-G\-L\-E\-T\-O\-N(
+\begin{DoxyParamCaption}
+\item[{}]{classname}
+\end{DoxyParamCaption}
+)}}\label{common_2macros_8h_ae064c360d998527ea6031d4e129b709d}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\textcolor{keyword}{public}:                                                                  \(\backslash\)
+  static classname *\hyperlink{namespaceapollo_1_1cyber_1_1scheduler_aa3840df1c2d2c2b4593d229da1c1d0df}{Instance}(\textcolor{keywordtype}{bool} create\_if\_needed = \textcolor{keyword}{true}) \{              \(\backslash\)
+    static classname *instance = \textcolor{keyword}{nullptr};                                 \(\backslash\)
+    if (!instance && create\_if\_needed) \{                                  \(\backslash\)
+      static std::once\_flag flag;                                         \(\backslash\)
+      std::call\_once(flag,                                                \(\backslash\)
+                     [&] \{ instance = \textcolor{keyword}{new} (std::nothrow) classname(); \}); \(\backslash\)
+    \}                                                                     \(\backslash\)
+    return instance;                                                      \(\backslash\)
+  \}                                                                       \(\backslash\)
+                                                                          \(\backslash\)
+  static \textcolor{keywordtype}{void} \hyperlink{namespaceapollo_1_1cyber_1_1scheduler_afccf62ddcce3f9a2326d126309ee7fc7}{CleanUp}() \{                                                 \(\backslash\)
+    auto instance = \hyperlink{namespaceapollo_1_1cyber_1_1scheduler_aa3840df1c2d2c2b4593d229da1c1d0df}{Instance}(\textcolor{keyword}{false});                                      \(\backslash\)
+    if (instance != \textcolor{keyword}{nullptr}) \{                                            \hyperlink{common_2macros_8h_a6cc149fed512462575aebcc90a894f9f}{\(\backslash\)}
+\hyperlink{common_2macros_8h_a6cc149fed512462575aebcc90a894f9f}{      CallShutdown}(instance);                                             \(\backslash\)
+    \}                                                                     \(\backslash\)
+  \}                                                                       \(\backslash\)
+                                                                          \(\backslash\)
+ private:                                                                 \(\backslash\)
+  classname();                                                            \hyperlink{common_2macros_8h_a92b9051cdb0e9c0fd1a37c1512ebdfae}{\(\backslash\)}
+\hyperlink{common_2macros_8h_a92b9051cdb0e9c0fd1a37c1512ebdfae}{  DISALLOW\_COPY\_AND\_ASSIGN}(classname)
+\end{DoxyCode}
+\hypertarget{common_2macros_8h_a92b9051cdb0e9c0fd1a37c1512ebdfae}{\index{common/macros.\-h@{common/macros.\-h}!D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N@{D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N}}
+\index{D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N@{D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N}!common/macros.h@{common/macros.\-h}}
+\subsubsection[{D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N(
+\begin{DoxyParamCaption}
+\item[{}]{classname}
+\end{DoxyParamCaption}
+)}}\label{common_2macros_8h_a92b9051cdb0e9c0fd1a37c1512ebdfae}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+classname(\textcolor{keyword}{const} classname &) = \textcolor{keyword}{delete};    \(\backslash\)
+  classname &operator=(\textcolor{keyword}{const} classname &) = \textcolor{keyword}{delete};
+\end{DoxyCode}
+\hypertarget{common_2macros_8h_a3e5bd53e9de4078ded1bf077b019a131}{\index{common/macros.\-h@{common/macros.\-h}!U\-N\-U\-S\-E\-D@{U\-N\-U\-S\-E\-D}}
+\index{U\-N\-U\-S\-E\-D@{U\-N\-U\-S\-E\-D}!common/macros.h@{common/macros.\-h}}
+\subsubsection[{U\-N\-U\-S\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-N\-U\-S\-E\-D(
+\begin{DoxyParamCaption}
+\item[{}]{param}
+\end{DoxyParamCaption}
+)~(void)param}}\label{common_2macros_8h_a3e5bd53e9de4078ded1bf077b019a131}
+
+
+\subsection{Function Documentation}
+\hypertarget{common_2macros_8h_a6cc149fed512462575aebcc90a894f9f}{\index{common/macros.\-h@{common/macros.\-h}!Call\-Shutdown@{Call\-Shutdown}}
+\index{Call\-Shutdown@{Call\-Shutdown}!common/macros.h@{common/macros.\-h}}
+\subsubsection[{Call\-Shutdown}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\-::enable\-\_\-if$<$Has\-Shutdown$<$T$>$\-::value$>$\-::type Call\-Shutdown (
+\begin{DoxyParamCaption}
+\item[{T $\ast$}]{instance}
+\end{DoxyParamCaption}
+)}}\label{common_2macros_8h_a6cc149fed512462575aebcc90a894f9f}
+\hypertarget{common_2macros_8h_a52af9c636d9d308931285636a3312885}{\index{common/macros.\-h@{common/macros.\-h}!Call\-Shutdown@{Call\-Shutdown}}
+\index{Call\-Shutdown@{Call\-Shutdown}!common/macros.h@{common/macros.\-h}}
+\subsubsection[{Call\-Shutdown}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\-::enable\-\_\-if$<$!Has\-Shutdown$<$T$>$\-::value$>$\-::type Call\-Shutdown (
+\begin{DoxyParamCaption}
+\item[{T $\ast$}]{instance}
+\end{DoxyParamCaption}
+)}}\label{common_2macros_8h_a52af9c636d9d308931285636a3312885}

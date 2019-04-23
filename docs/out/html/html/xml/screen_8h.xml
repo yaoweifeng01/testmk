@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="screen_8h" kind="file">
+    <compoundname>screen.h</compoundname>
+    <includes local="no">map</includes>
+    <includes local="no">string</includes>
+    <includes local="no">vector</includes>
+    <incdepgraph>
+      <node id="11360">
+        <label>tools/cyber_monitor/screen.h</label>
+        <link refid="screen.h"/>
+        <childnode refid="11361" relation="include">
+        </childnode>
+        <childnode refid="11362" relation="include">
+        </childnode>
+        <childnode refid="11363" relation="include">
+        </childnode>
+      </node>
+      <node id="11362">
+        <label>string</label>
+      </node>
+      <node id="11361">
+        <label>map</label>
+      </node>
+      <node id="11363">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classScreen" prot="public">Screen</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="screen_8h_1a38adf45853bf0ab387f2b9ce3145cd37" prot="public" static="no">
+        <name>CTRL</name>
+        <param><defname>c</defname></param>
+        <initializer>((c)&amp;0x1F)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/screen.h" line="25" column="9" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/screen.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2018<sp/>The<sp/>Apollo<sp/>Authors.<sp/>All<sp/>Rights<sp/>Reserved.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>TOOLS_CVT_MONITOR_SCREEN_H_</highlight></codeline>
+<codeline lineno="18"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>TOOLS_CVT_MONITOR_SCREEN_H_</highlight></codeline>
+<codeline lineno="19"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CTRL</highlight></codeline>
+<codeline lineno="25" refid="screen_8h_1a38adf45853bf0ab387f2b9ce3145cd37" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CTRL(c)<sp/>((c)&amp;0x1F)</highlight></codeline>
+<codeline lineno="26"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="27"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classRenderableMessage" kindref="compound">RenderableMessage</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="classScreen" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classScreen" kindref="compound">Screen</ref><sp/>final<sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="32" refid="classScreen_1aeaa4372d83cf381da26b0f06be0c08f2" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="classScreen_1aeaa4372d83cf381da26b0f06be0c08f2" kindref="member">InteractiveCmdStr</ref>[];</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="classScreen_1ade5d330a53244ab5e204c9fc2a8ab235" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="classScreen_1ade5d330a53244ab5e204c9fc2a8ab235" kindref="member">ColorPair</ref><sp/>{<sp/><sp/></highlight><highlight class="comment">//<sp/>foreground<sp/>color<sp/>-<sp/>background<sp/>color</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="classScreen_1ade5d330a53244ab5e204c9fc2a8ab235a8f6f59447dce1fb81c648d8674d6b6d2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classScreen_1ade5d330a53244ab5e204c9fc2a8ab235a8f6f59447dce1fb81c648d8674d6b6d2" kindref="member">INVALID</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="36" refid="classScreen_1ade5d330a53244ab5e204c9fc2a8ab235aa979e0b275ebd1d03e934974ac04806a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classScreen_1ade5d330a53244ab5e204c9fc2a8ab235aa979e0b275ebd1d03e934974ac04806a" kindref="member">GREEN_BLACK</ref><sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="37" refid="classScreen_1ade5d330a53244ab5e204c9fc2a8ab235ad296b80c3ff583dfc66fd69be3bfa177" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classScreen_1ade5d330a53244ab5e204c9fc2a8ab235ad296b80c3ff583dfc66fd69be3bfa177" kindref="member">YELLOW_BLACK</ref>,</highlight></codeline>
+<codeline lineno="38" refid="classScreen_1ade5d330a53244ab5e204c9fc2a8ab235aeb2de5cf606cc15deec28e5ed6d94f1d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classScreen_1ade5d330a53244ab5e204c9fc2a8ab235aeb2de5cf606cc15deec28e5ed6d94f1d" kindref="member">RED_BLACK</ref>,</highlight></codeline>
+<codeline lineno="39" refid="classScreen_1ade5d330a53244ab5e204c9fc2a8ab235a970004d17898edd8718ff21e795b9d39" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classScreen_1ade5d330a53244ab5e204c9fc2a8ab235a970004d17898edd8718ff21e795b9d39" kindref="member">WHITE_BLACK</ref>,</highlight></codeline>
+<codeline lineno="40" refid="classScreen_1ade5d330a53244ab5e204c9fc2a8ab235a710df85d2ceefb42c12694fda0682fee" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classScreen_1ade5d330a53244ab5e204c9fc2a8ab235a710df85d2ceefb42c12694fda0682fee" kindref="member">BLACK_WHITE</ref></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classScreen" kindref="compound">Screen</ref>*<sp/><ref refid="classScreen_1a737e0e6d802ff6c6f3055c94432fd062" kindref="member">Instance</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><ref refid="classScreen_1aca8e6d405d54bd0ea318564f11a68f00" kindref="member">~Screen</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classScreen_1a383837c8034bc40ce87e96898d5be0cc" kindref="member">Init</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classScreen_1a48842cd1df5d4117dee21a028da74a40" kindref="member">Run</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classScreen_1a69154a73511bc8620803fa8f646ddd86" kindref="member">Resize</ref>();</highlight></codeline>
+<codeline lineno="49" refid="classScreen_1aadce9111b1acb69bd0e6f788ae2bbd1b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classScreen_1aadce9111b1acb69bd0e6f788ae2bbd1b" kindref="member">Stop</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{<sp/><ref refid="classScreen_1a7282ffbd67e23dfec94cc1a7f0a7a7e9" kindref="member">canRun_</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classScreen_1a40b0a6eabbfe785a379388064ccea5c3" kindref="member">Width</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classScreen_1abb048c10e10b8c375e64d52137a9d279" kindref="member">Height</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classScreen_1a1274f1b8ed227c757d390cd764fb16d0" kindref="member">AddStr</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y,<sp/><ref refid="classScreen_1ade5d330a53244ab5e204c9fc2a8ab235" kindref="member">ColorPair</ref><sp/>color,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>cStr)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="classScreen_1a09e8fb5148385cb5b9f9b0402617ae80" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classScreen_1ade5d330a53244ab5e204c9fc2a8ab235" kindref="member">ColorPair</ref><sp/><ref refid="classScreen_1a09e8fb5148385cb5b9f9b0402617ae80" kindref="member">Color</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classScreen_1a806b6c5ad380d84aa7457d06e1eb98f8" kindref="member">current_color_pair_</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classScreen_1a1237833b525a279bccec474488f49220" kindref="member">SetCurrentColor</ref>(<ref refid="classScreen_1ade5d330a53244ab5e204c9fc2a8ab235" kindref="member">ColorPair</ref><sp/>color)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classScreen_1a1274f1b8ed227c757d390cd764fb16d0" kindref="member">AddStr</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>str)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classScreen_1a1274f1b8ed227c757d390cd764fb16d0" kindref="member">AddStr</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>str)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classScreen_1aee7ca5e081d29f87a75d83932bace80f" kindref="member">MoveOffsetXY</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>offsetX,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>offsetY)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classScreen_1a93d9bd83f95acec95ab695cfa8ed7230" kindref="member">ClearCurrentColor</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="classScreen_1ade6282ee71fe718c5a46c96578a7e00e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classScreen_1ade6282ee71fe718c5a46c96578a7e00e" kindref="member">SetCurrentRenderMessage</ref>(<ref refid="classRenderableMessage" kindref="compound">RenderableMessage</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>renderObj)<sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(renderObj)<sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScreen_1a404ae55aee99b0d10ccd46387ccac02e" kindref="member">current_render_obj_</ref><sp/>=<sp/>renderObj;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classScreen_1ae7576476fc6e6a6eaa66389fdc41fe72" kindref="member">Screen</ref>();</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><ref refid="classScreen_1ae7576476fc6e6a6eaa66389fdc41fe72" kindref="member">Screen</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classScreen" kindref="compound">Screen</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><ref refid="classScreen" kindref="compound">Screen</ref>&amp;<sp/><ref refid="classScreen_1a6e3bc79495fd0a10b19c2bb19b6d0d85" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classScreen" kindref="compound">Screen</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classScreen_1affe4f3c4fa6ed3a0ee953f1a75eee09e" kindref="member">SwitchState</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ch);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classScreen_1ac23986bc6e46e1d1565fec76da3a12fe" kindref="member">HighlightLine</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>lineNo);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classScreen_1a1957413647a5858f2c8324124c247ba2" kindref="member">ShowInteractiveCmd</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ch);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classScreen_1a27912037b26e33f45f0d5b7cfca777b3" kindref="member">ShowRenderMessage</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ch);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classScreen_1a0e172a443241197f50216c532be093df" kindref="member">IsInit</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="classScreen_1a3b2273cea4444624a4fb6542ee2ce44e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="classScreen_1a3b2273cea4444624a4fb6542ee2ce44e" kindref="member">State</ref><sp/>{<sp/><ref refid="classScreen_1a3b2273cea4444624a4fb6542ee2ce44ea0c1142ba26a81392fece35ae71e5bb31" kindref="member">RenderMessage</ref>,<sp/><ref refid="classScreen_1a3b2273cea4444624a4fb6542ee2ce44ea08a6b92dc8c413bc10fdce91fdc730ad" kindref="member">RenderInterCmdInfo</ref><sp/>};</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="classScreen_1a806b6c5ad380d84aa7457d06e1eb98f8" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">mutable</highlight><highlight class="normal"><sp/><ref refid="classScreen_1ade5d330a53244ab5e204c9fc2a8ab235" kindref="member">ColorPair</ref><sp/><ref refid="classScreen_1a806b6c5ad380d84aa7457d06e1eb98f8" kindref="member">current_color_pair_</ref>;</highlight></codeline>
+<codeline lineno="85" refid="classScreen_1a7282ffbd67e23dfec94cc1a7f0a7a7e9" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classScreen_1a7282ffbd67e23dfec94cc1a7f0a7a7e9" kindref="member">canRun_</ref>;</highlight></codeline>
+<codeline lineno="86" refid="classScreen_1a0ea09ea5eadc990cdcd32068c377287d" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classScreen_1a3b2273cea4444624a4fb6542ee2ce44e" kindref="member">State</ref><sp/><ref refid="classScreen_1a0ea09ea5eadc990cdcd32068c377287d" kindref="member">current_state_</ref>;</highlight></codeline>
+<codeline lineno="87" refid="classScreen_1a69a30640ab25485d9f769e3a37bf8639" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classScreen_1a69a30640ab25485d9f769e3a37bf8639" kindref="member">highlight_direction_</ref>;</highlight></codeline>
+<codeline lineno="88" refid="classScreen_1a404ae55aee99b0d10ccd46387ccac02e" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classRenderableMessage" kindref="compound">RenderableMessage</ref>*<sp/><ref refid="classScreen_1a404ae55aee99b0d10ccd46387ccac02e" kindref="member">current_render_obj_</ref>;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>TOOLS_CVT_MONITOR_SCREEN_H_</highlight></codeline>
+    </programlisting>
+    <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/screen.h"/>
+  </compounddef>
+</doxygen>

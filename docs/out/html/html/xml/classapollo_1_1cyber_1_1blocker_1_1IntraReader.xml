@@ -1,0 +1,417 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classapollo_1_1cyber_1_1blocker_1_1IntraReader" kind="class" prot="public">
+    <compoundname>apollo::cyber::blocker::IntraReader</compoundname>
+    <basecompoundref refid="classapollo_1_1cyber_1_1Reader" prot="public" virt="non-virtual">apollo::cyber::Reader&lt; MessageT &gt;</basecompoundref>
+    <includes refid="intra__reader_8h" local="no">intra_reader.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename MessageT</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classapollo_1_1cyber_1_1blocker_1_1IntraReader_1aa4e9071f397bee80ba4ab42e7d1f165d" prot="public" static="no">
+        <type>std::shared_ptr&lt; MessageT &gt;</type>
+        <definition>using apollo::cyber::blocker::IntraReader&lt; MessageT &gt;::MessagePtr =  std::shared_ptr&lt;MessageT&gt;</definition>
+        <argsstring></argsstring>
+        <name>MessagePtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/blocker/intra_reader.h" line="36" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/blocker/intra_reader.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classapollo_1_1cyber_1_1blocker_1_1IntraReader_1a15cf88ac9399d324aeb685bec11c8afe" prot="public" static="no">
+        <type>std::function&lt; void(const std::shared_ptr&lt; MessageT &gt; &amp;)&gt;</type>
+        <definition>using apollo::cyber::blocker::IntraReader&lt; MessageT &gt;::Callback =  std::function&lt;void(const std::shared_ptr&lt;MessageT&gt;&amp;)&gt;</definition>
+        <argsstring></argsstring>
+        <name>Callback</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/blocker/intra_reader.h" line="37" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/blocker/intra_reader.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classapollo_1_1cyber_1_1blocker_1_1IntraReader_1a34f048290fe0ff40e672a485835ccfc9" prot="public" static="no">
+        <type>typename std::list&lt; std::shared_ptr&lt; MessageT &gt;&gt;::const_iterator</type>
+        <definition>using apollo::cyber::blocker::IntraReader&lt; MessageT &gt;::Iterator =  typename std::list&lt;std::shared_ptr&lt;MessageT&gt;&gt;::const_iterator</definition>
+        <argsstring></argsstring>
+        <name>Iterator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/blocker/intra_reader.h" line="38" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/blocker/intra_reader.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1blocker_1_1IntraReader_1adf1bc681d8decbd80ba6a69039f1851b" prot="private" static="no" mutable="no">
+        <type><ref refid="classapollo_1_1cyber_1_1blocker_1_1IntraReader_1a15cf88ac9399d324aeb685bec11c8afe" kindref="member">Callback</ref></type>
+        <definition>Callback apollo::cyber::blocker::IntraReader&lt; MessageT &gt;::msg_callback_</definition>
+        <argsstring></argsstring>
+        <name>msg_callback_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/blocker/intra_reader.h" line="63" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/blocker/intra_reader.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1blocker_1_1IntraReader_1a591de348f97ac5ec0e378e1fb92c617d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::blocker::IntraReader&lt; MessageT &gt;::IntraReader</definition>
+        <argsstring>(const proto::RoleAttributes &amp;attr, const Callback &amp;callback)</argsstring>
+        <name>IntraReader</name>
+        <param>
+          <type>const proto::RoleAttributes &amp;</type>
+          <declname>attr</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classapollo_1_1cyber_1_1blocker_1_1IntraReader_1a15cf88ac9399d324aeb685bec11c8afe" kindref="member">Callback</ref> &amp;</type>
+          <declname>callback</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/blocker/intra_reader.h" line="41" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/blocker/intra_reader.h" bodystart="67" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1blocker_1_1IntraReader_1a0921409f222aec564d34d8814dd94266" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>apollo::cyber::blocker::IntraReader&lt; MessageT &gt;::~IntraReader</definition>
+        <argsstring>()</argsstring>
+        <name>~IntraReader</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/blocker/intra_reader.h" line="42" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/blocker/intra_reader.h" bodystart="72" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1blocker_1_1IntraReader_1a43e61ca2814c9ca792b89c67e2a02daf" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::blocker::IntraReader&lt; MessageT &gt;::Init</definition>
+        <argsstring>() override</argsstring>
+        <name>Init</name>
+        <reimplements refid="classapollo_1_1cyber_1_1ReaderBase_1a58e95863a3ea4e744ddff5914456ad7d">Init</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/blocker/intra_reader.h" line="44" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/blocker/intra_reader.h" bodystart="77" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1blocker_1_1IntraReader_1a4f6fb242d33858198474001f855626dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::blocker::IntraReader&lt; MessageT &gt;::Shutdown</definition>
+        <argsstring>() override</argsstring>
+        <name>Shutdown</name>
+        <reimplements refid="classapollo_1_1cyber_1_1ReaderBase_1a340d56ab095e4ee0789e9ae6c3097730">Shutdown</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/blocker/intra_reader.h" line="45" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/blocker/intra_reader.h" bodystart="89" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1blocker_1_1IntraReader_1a10695c39f2444febe5963747a578df29" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::blocker::IntraReader&lt; MessageT &gt;::ClearData</definition>
+        <argsstring>() override</argsstring>
+        <name>ClearData</name>
+        <reimplements refid="classapollo_1_1cyber_1_1ReaderBase_1a6bf09eafd9a155192d6e623f90c881e0">ClearData</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/blocker/intra_reader.h" line="47" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/blocker/intra_reader.h" bodystart="98" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1blocker_1_1IntraReader_1a8f509c61e3b4b406cbe2beb53558e821" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::blocker::IntraReader&lt; MessageT &gt;::Observe</definition>
+        <argsstring>() override</argsstring>
+        <name>Observe</name>
+        <reimplements refid="classapollo_1_1cyber_1_1ReaderBase_1a3cfeb975a301fe9094221f105d387e55">Observe</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/blocker/intra_reader.h" line="48" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/blocker/intra_reader.h" bodystart="108" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1blocker_1_1IntraReader_1a69f5c5029cba88c2a23528efe6a69457" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::blocker::IntraReader&lt; MessageT &gt;::Empty</definition>
+        <argsstring>() const override</argsstring>
+        <name>Empty</name>
+        <reimplements refid="classapollo_1_1cyber_1_1ReaderBase_1a9f70abd4ac366a0e173f210db1512ffc">Empty</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/blocker/intra_reader.h" line="49" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/blocker/intra_reader.h" bodystart="117" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1blocker_1_1IntraReader_1a398c31e1c4918adc42e771e183eb244a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::blocker::IntraReader&lt; MessageT &gt;::HasReceived</definition>
+        <argsstring>() const override</argsstring>
+        <name>HasReceived</name>
+        <reimplements refid="classapollo_1_1cyber_1_1ReaderBase_1a42a2e0a6c898cc3da881b1531a608995">HasReceived</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/blocker/intra_reader.h" line="50" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/blocker/intra_reader.h" bodystart="127" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1blocker_1_1IntraReader_1a2c155cd435cacc890cbffc4e0a3299e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::blocker::IntraReader&lt; MessageT &gt;::Enqueue</definition>
+        <argsstring>(const std::shared_ptr&lt; MessageT &gt; &amp;msg) override</argsstring>
+        <name>Enqueue</name>
+        <reimplements refid="classapollo_1_1cyber_1_1Reader_1a9acce2d137849540e434596de51b10bf">Enqueue</reimplements>
+        <param>
+          <type>const std::shared_ptr&lt; MessageT &gt; &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/blocker/intra_reader.h" line="52" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/blocker/intra_reader.h" bodystart="137" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1blocker_1_1IntraReader_1a699f5630c23afb609aa55a63528d2361" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::blocker::IntraReader&lt; MessageT &gt;::SetHistoryDepth</definition>
+        <argsstring>(const uint32_t &amp;depth) override</argsstring>
+        <name>SetHistoryDepth</name>
+        <reimplements refid="classapollo_1_1cyber_1_1Reader_1a20a9b73c463c8f65b9592bb295745fa6">SetHistoryDepth</reimplements>
+        <param>
+          <type>const uint32_t &amp;</type>
+          <declname>depth</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/blocker/intra_reader.h" line="53" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/blocker/intra_reader.h" bodystart="143" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1blocker_1_1IntraReader_1adb4056ff1f7ed30e7fbff720fb85887a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t apollo::cyber::blocker::IntraReader&lt; MessageT &gt;::GetHistoryDepth</definition>
+        <argsstring>() const override</argsstring>
+        <name>GetHistoryDepth</name>
+        <reimplements refid="classapollo_1_1cyber_1_1Reader_1a6e1d8dd73f052175e1599286f54ba80c">GetHistoryDepth</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/blocker/intra_reader.h" line="54" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/blocker/intra_reader.h" bodystart="152" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1blocker_1_1IntraReader_1a85adf523b69aa8a0ca72f801c07486fc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>std::shared_ptr&lt; MessageT &gt;</type>
+        <definition>std::shared_ptr&lt; MessageT &gt; apollo::cyber::blocker::IntraReader&lt; MessageT &gt;::GetLatestObserved</definition>
+        <argsstring>() const override</argsstring>
+        <name>GetLatestObserved</name>
+        <reimplements refid="classapollo_1_1cyber_1_1Reader_1ac3fabcbcb3eac7570fc719f07cdaac27">GetLatestObserved</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/blocker/intra_reader.h" line="55" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/blocker/intra_reader.h" bodystart="162" bodyend="169"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1blocker_1_1IntraReader_1a4ecd786720ee58f0b53cee186f0a4713" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>std::shared_ptr&lt; MessageT &gt;</type>
+        <definition>std::shared_ptr&lt; MessageT &gt; apollo::cyber::blocker::IntraReader&lt; MessageT &gt;::GetOldestObserved</definition>
+        <argsstring>() const override</argsstring>
+        <name>GetOldestObserved</name>
+        <reimplements refid="classapollo_1_1cyber_1_1Reader_1a787bb122252d2e2a86fdb04a81d6beca">GetOldestObserved</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/blocker/intra_reader.h" line="56" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/blocker/intra_reader.h" bodystart="172" bodyend="179"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1blocker_1_1IntraReader_1a9249758337ab94e2aefe657f1f8a3580" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classapollo_1_1cyber_1_1blocker_1_1IntraReader_1a34f048290fe0ff40e672a485835ccfc9" kindref="member">Iterator</ref></type>
+        <definition>auto apollo::cyber::blocker::IntraReader&lt; MessageT &gt;::Begin</definition>
+        <argsstring>() const override</argsstring>
+        <name>Begin</name>
+        <reimplements refid="classapollo_1_1cyber_1_1Reader_1a5fff77810d6a55099b507eb9e4a6135c">Begin</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/blocker/intra_reader.h" line="57" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/blocker/intra_reader.h" bodystart="182" bodyend="187"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1blocker_1_1IntraReader_1ab94a92e11479f932b99f1c2e1f2df931" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classapollo_1_1cyber_1_1blocker_1_1IntraReader_1a34f048290fe0ff40e672a485835ccfc9" kindref="member">Iterator</ref></type>
+        <definition>auto apollo::cyber::blocker::IntraReader&lt; MessageT &gt;::End</definition>
+        <argsstring>() const override</argsstring>
+        <name>End</name>
+        <reimplements refid="classapollo_1_1cyber_1_1Reader_1a1e670b90e2896b668b8061860d6e953f">End</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/blocker/intra_reader.h" line="58" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/blocker/intra_reader.h" bodystart="190" bodyend="195"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1blocker_1_1IntraReader_1a4310e459238cf6c5c23dab4b96236f2e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::blocker::IntraReader&lt; MessageT &gt;::OnMessage</definition>
+        <argsstring>(const MessagePtr &amp;msg_ptr)</argsstring>
+        <name>OnMessage</name>
+        <param>
+          <type>const <ref refid="classapollo_1_1cyber_1_1blocker_1_1IntraReader_1aa4e9071f397bee80ba4ab42e7d1f165d" kindref="member">MessagePtr</ref> &amp;</type>
+          <declname>msg_ptr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/blocker/intra_reader.h" line="61" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/blocker/intra_reader.h" bodystart="198" bodyend="204"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="390">
+        <label>apollo::cyber::ReaderBase</label>
+        <link refid="classapollo_1_1cyber_1_1ReaderBase"/>
+      </node>
+      <node id="389">
+        <label>apollo::cyber::Reader&lt; MessageT &gt;</label>
+        <link refid="classapollo_1_1cyber_1_1Reader"/>
+        <childnode refid="390" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="388">
+        <label>apollo::cyber::blocker::IntraReader&lt; MessageT &gt;</label>
+        <link refid="classapollo_1_1cyber_1_1blocker_1_1IntraReader"/>
+        <childnode refid="389" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="393">
+        <label>apollo::cyber::ReaderBase</label>
+        <link refid="classapollo_1_1cyber_1_1ReaderBase"/>
+        <childnode refid="394" relation="usage">
+          <edgelabel>role_attr_</edgelabel>
+        </childnode>
+      </node>
+      <node id="394">
+        <label>RoleAttributes</label>
+      </node>
+      <node id="392">
+        <label>apollo::cyber::Reader&lt; MessageT &gt;</label>
+        <link refid="classapollo_1_1cyber_1_1Reader"/>
+        <childnode refid="393" relation="public-inheritance">
+        </childnode>
+        <childnode refid="395" relation="usage">
+          <edgelabel>change_conn_</edgelabel>
+        </childnode>
+      </node>
+      <node id="396">
+        <label>apollo::cyber::base::Signal&lt; Args...&gt;</label>
+        <link refid="classapollo_1_1cyber_1_1base_1_1Signal"/>
+      </node>
+      <node id="395">
+        <label>apollo::cyber::base::Connection&lt; const ChangeMsg &amp; &gt;</label>
+        <link refid="classapollo_1_1cyber_1_1base_1_1Connection"/>
+        <childnode refid="396" relation="usage">
+          <edgelabel>signal_</edgelabel>
+        </childnode>
+      </node>
+      <node id="391">
+        <label>apollo::cyber::blocker::IntraReader&lt; MessageT &gt;</label>
+        <link refid="classapollo_1_1cyber_1_1blocker_1_1IntraReader"/>
+        <childnode refid="392" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/work/apollo-fork/apollo/cyber/blocker/intra_reader.h" line="34" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/blocker/intra_reader.h" bodystart="34" bodyend="64"/>
+    <listofallmembers>
+      <member refid="classapollo_1_1cyber_1_1blocker_1_1IntraReader_1a9249758337ab94e2aefe657f1f8a3580" prot="public" virt="virtual"><scope>apollo::cyber::blocker::IntraReader</scope><name>Begin</name></member>
+      <member refid="classapollo_1_1cyber_1_1Reader_1a44a6c385712936a5d4eaaa1920d05013" prot="public" virt="non-virtual"><scope>apollo::cyber::blocker::IntraReader</scope><name>BlockerPtr</name></member>
+      <member refid="classapollo_1_1cyber_1_1blocker_1_1IntraReader_1a15cf88ac9399d324aeb685bec11c8afe" prot="public" virt="non-virtual"><scope>apollo::cyber::blocker::IntraReader</scope><name>Callback</name></member>
+      <member refid="classapollo_1_1cyber_1_1Reader_1a1bb84e1881d6df00cd3b8fc669b606b4" prot="public" virt="non-virtual"><scope>apollo::cyber::blocker::IntraReader</scope><name>ChangeConnection</name></member>
+      <member refid="classapollo_1_1cyber_1_1ReaderBase_1a5f0ebff207b12283c72280454d4a394c" prot="public" virt="non-virtual"><scope>apollo::cyber::blocker::IntraReader</scope><name>ChannelId</name></member>
+      <member refid="classapollo_1_1cyber_1_1blocker_1_1IntraReader_1a10695c39f2444febe5963747a578df29" prot="public" virt="virtual"><scope>apollo::cyber::blocker::IntraReader</scope><name>ClearData</name></member>
+      <member refid="classapollo_1_1cyber_1_1blocker_1_1IntraReader_1a69f5c5029cba88c2a23528efe6a69457" prot="public" virt="virtual"><scope>apollo::cyber::blocker::IntraReader</scope><name>Empty</name></member>
+      <member refid="classapollo_1_1cyber_1_1blocker_1_1IntraReader_1ab94a92e11479f932b99f1c2e1f2df931" prot="public" virt="virtual"><scope>apollo::cyber::blocker::IntraReader</scope><name>End</name></member>
+      <member refid="classapollo_1_1cyber_1_1blocker_1_1IntraReader_1a2c155cd435cacc890cbffc4e0a3299e7" prot="public" virt="virtual"><scope>apollo::cyber::blocker::IntraReader</scope><name>Enqueue</name></member>
+      <member refid="classapollo_1_1cyber_1_1ReaderBase_1ac41daf5e2aa167f52b5ded5d8bb38e0b" prot="public" virt="non-virtual"><scope>apollo::cyber::blocker::IntraReader</scope><name>GetChannelName</name></member>
+      <member refid="classapollo_1_1cyber_1_1Reader_1a51cdaa33430e6c1b2905336066a4b6f2" prot="public" virt="virtual"><scope>apollo::cyber::blocker::IntraReader</scope><name>GetDelaySec</name></member>
+      <member refid="classapollo_1_1cyber_1_1blocker_1_1IntraReader_1adb4056ff1f7ed30e7fbff720fb85887a" prot="public" virt="virtual"><scope>apollo::cyber::blocker::IntraReader</scope><name>GetHistoryDepth</name></member>
+      <member refid="classapollo_1_1cyber_1_1blocker_1_1IntraReader_1a85adf523b69aa8a0ca72f801c07486fc" prot="public" virt="virtual"><scope>apollo::cyber::blocker::IntraReader</scope><name>GetLatestObserved</name></member>
+      <member refid="classapollo_1_1cyber_1_1blocker_1_1IntraReader_1a4ecd786720ee58f0b53cee186f0a4713" prot="public" virt="virtual"><scope>apollo::cyber::blocker::IntraReader</scope><name>GetOldestObserved</name></member>
+      <member refid="classapollo_1_1cyber_1_1Reader_1a5d2fe028b8ba545a07621d8412a6df95" prot="public" virt="virtual"><scope>apollo::cyber::blocker::IntraReader</scope><name>GetWriters</name></member>
+      <member refid="classapollo_1_1cyber_1_1blocker_1_1IntraReader_1a398c31e1c4918adc42e771e183eb244a" prot="public" virt="virtual"><scope>apollo::cyber::blocker::IntraReader</scope><name>HasReceived</name></member>
+      <member refid="classapollo_1_1cyber_1_1Reader_1a9fc3587c84ebe1e483b12c2c91314786" prot="public" virt="virtual"><scope>apollo::cyber::blocker::IntraReader</scope><name>HasWriter</name></member>
+      <member refid="classapollo_1_1cyber_1_1blocker_1_1IntraReader_1a43e61ca2814c9ca792b89c67e2a02daf" prot="public" virt="virtual"><scope>apollo::cyber::blocker::IntraReader</scope><name>Init</name></member>
+      <member refid="classapollo_1_1cyber_1_1ReaderBase_1a1069158d442f829dcfe467b45c7dd39a" prot="protected" virt="non-virtual"><scope>apollo::cyber::blocker::IntraReader</scope><name>init_</name></member>
+      <member refid="classapollo_1_1cyber_1_1blocker_1_1IntraReader_1a591de348f97ac5ec0e378e1fb92c617d" prot="public" virt="non-virtual"><scope>apollo::cyber::blocker::IntraReader</scope><name>IntraReader</name></member>
+      <member refid="classapollo_1_1cyber_1_1ReaderBase_1a84bce8de3776b33f9ccd961f6b99dc60" prot="public" virt="non-virtual"><scope>apollo::cyber::blocker::IntraReader</scope><name>IsInit</name></member>
+      <member refid="classapollo_1_1cyber_1_1blocker_1_1IntraReader_1a34f048290fe0ff40e672a485835ccfc9" prot="public" virt="non-virtual"><scope>apollo::cyber::blocker::IntraReader</scope><name>Iterator</name></member>
+      <member refid="classapollo_1_1cyber_1_1Reader_1a88776a4339f254a9907c5821f6d1a272" prot="protected" virt="non-virtual"><scope>apollo::cyber::blocker::IntraReader</scope><name>latest_recv_time_sec_</name></member>
+      <member refid="classapollo_1_1cyber_1_1blocker_1_1IntraReader_1aa4e9071f397bee80ba4ab42e7d1f165d" prot="public" virt="non-virtual"><scope>apollo::cyber::blocker::IntraReader</scope><name>MessagePtr</name></member>
+      <member refid="classapollo_1_1cyber_1_1blocker_1_1IntraReader_1adf1bc681d8decbd80ba6a69039f1851b" prot="private" virt="non-virtual"><scope>apollo::cyber::blocker::IntraReader</scope><name>msg_callback_</name></member>
+      <member refid="classapollo_1_1cyber_1_1blocker_1_1IntraReader_1a8f509c61e3b4b406cbe2beb53558e821" prot="public" virt="virtual"><scope>apollo::cyber::blocker::IntraReader</scope><name>Observe</name></member>
+      <member refid="classapollo_1_1cyber_1_1blocker_1_1IntraReader_1a4310e459238cf6c5c23dab4b96236f2e" prot="private" virt="non-virtual"><scope>apollo::cyber::blocker::IntraReader</scope><name>OnMessage</name></member>
+      <member refid="classapollo_1_1cyber_1_1Reader_1a87f1ff71f13f5fee1e4b93b58da506d4" prot="protected" virt="non-virtual"><scope>apollo::cyber::blocker::IntraReader</scope><name>pending_queue_size_</name></member>
+      <member refid="classapollo_1_1cyber_1_1Reader_1a9f787ae54e884141d13396345b56c9e2" prot="public" virt="virtual"><scope>apollo::cyber::blocker::IntraReader</scope><name>PendingQueueSize</name></member>
+      <member refid="classapollo_1_1cyber_1_1ReaderBase_1af2980f9f85084d4a3711b86d4cb24183" prot="public" virt="non-virtual"><scope>apollo::cyber::blocker::IntraReader</scope><name>QosProfile</name></member>
+      <member refid="classapollo_1_1cyber_1_1Reader_1a69f4d76924d5313aa62254b479f74741" prot="public" virt="non-virtual"><scope>apollo::cyber::blocker::IntraReader</scope><name>Reader</name></member>
+      <member refid="classapollo_1_1cyber_1_1ReaderBase_1a9f7a08c0ec4ad3d007efd2b8673312fc" prot="public" virt="non-virtual"><scope>apollo::cyber::blocker::IntraReader</scope><name>ReaderBase</name></member>
+      <member refid="classapollo_1_1cyber_1_1Reader_1a7c76533ce5c8e13f5382248ae2059aad" prot="public" virt="non-virtual"><scope>apollo::cyber::blocker::IntraReader</scope><name>ReceiverPtr</name></member>
+      <member refid="classapollo_1_1cyber_1_1ReaderBase_1abb179fb694df505798fc959ff51614ed" prot="protected" virt="non-virtual"><scope>apollo::cyber::blocker::IntraReader</scope><name>role_attr_</name></member>
+      <member refid="classapollo_1_1cyber_1_1Reader_1ac3a5475b325e2934669803280370c2f3" prot="protected" virt="non-virtual"><scope>apollo::cyber::blocker::IntraReader</scope><name>second_to_lastest_recv_time_sec_</name></member>
+      <member refid="classapollo_1_1cyber_1_1blocker_1_1IntraReader_1a699f5630c23afb609aa55a63528d2361" prot="public" virt="virtual"><scope>apollo::cyber::blocker::IntraReader</scope><name>SetHistoryDepth</name></member>
+      <member refid="classapollo_1_1cyber_1_1blocker_1_1IntraReader_1a4f6fb242d33858198474001f855626dc" prot="public" virt="virtual"><scope>apollo::cyber::blocker::IntraReader</scope><name>Shutdown</name></member>
+      <member refid="classapollo_1_1cyber_1_1blocker_1_1IntraReader_1a0921409f222aec564d34d8814dd94266" prot="public" virt="virtual"><scope>apollo::cyber::blocker::IntraReader</scope><name>~IntraReader</name></member>
+      <member refid="classapollo_1_1cyber_1_1Reader_1a23bf2eaed41aa7764fdc5f3d0f6dc3f4" prot="public" virt="virtual"><scope>apollo::cyber::blocker::IntraReader</scope><name>~Reader</name></member>
+      <member refid="classapollo_1_1cyber_1_1ReaderBase_1a5c38479c30457a5d6509735404a5d2f3" prot="public" virt="virtual"><scope>apollo::cyber::blocker::IntraReader</scope><name>~ReaderBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

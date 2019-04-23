@@ -1,0 +1,325 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classapollo_1_1cyber_1_1ReaderBase" kind="class" prot="public" abstract="yes">
+    <compoundname>apollo::cyber::ReaderBase</compoundname>
+    <derivedcompoundref refid="classapollo_1_1cyber_1_1Reader" prot="public" virt="non-virtual">apollo::cyber::Reader&lt; MessageT &gt;</derivedcompoundref>
+    <includes refid="reader__base_8h" local="no">reader_base.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1ReaderBase_1abb179fb694df505798fc959ff51614ed" prot="protected" static="no" mutable="no">
+        <type>proto::RoleAttributes</type>
+        <definition>proto::RoleAttributes apollo::cyber::ReaderBase::role_attr_</definition>
+        <argsstring></argsstring>
+        <name>role_attr_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/node/reader_base.h" line="69" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/node/reader_base.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1ReaderBase_1a1069158d442f829dcfe467b45c7dd39a" prot="protected" static="no" mutable="no">
+        <type>std::atomic&lt; bool &gt;</type>
+        <definition>std::atomic&lt;bool&gt; apollo::cyber::ReaderBase::init_</definition>
+        <argsstring></argsstring>
+        <name>init_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/node/reader_base.h" line="70" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/node/reader_base.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1ReaderBase_1a9f7a08c0ec4ad3d007efd2b8673312fc" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::ReaderBase::ReaderBase</definition>
+        <argsstring>(const proto::RoleAttributes &amp;role_attr)</argsstring>
+        <name>ReaderBase</name>
+        <param>
+          <type>const proto::RoleAttributes &amp;</type>
+          <declname>role_attr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/node/reader_base.h" line="40" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/node/reader_base.h" bodystart="40" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1ReaderBase_1a5c38479c30457a5d6509735404a5d2f3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual apollo::cyber::ReaderBase::~ReaderBase</definition>
+        <argsstring>()</argsstring>
+        <name>~ReaderBase</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/node/reader_base.h" line="42" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/node/reader_base.h" bodystart="42" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1ReaderBase_1a58e95863a3ea4e744ddff5914456ad7d" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool apollo::cyber::ReaderBase::Init</definition>
+        <argsstring>()=0</argsstring>
+        <name>Init</name>
+        <reimplementedby refid="classapollo_1_1cyber_1_1blocker_1_1IntraReader_1a43e61ca2814c9ca792b89c67e2a02daf">Init</reimplementedby>
+        <reimplementedby refid="classapollo_1_1cyber_1_1Reader_1a249fd8fc318b8f86d018d2016b926ca4">Init</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/node/reader_base.h" line="44" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1ReaderBase_1a340d56ab095e4ee0789e9ae6c3097730" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void apollo::cyber::ReaderBase::Shutdown</definition>
+        <argsstring>()=0</argsstring>
+        <name>Shutdown</name>
+        <reimplementedby refid="classapollo_1_1cyber_1_1blocker_1_1IntraReader_1a4f6fb242d33858198474001f855626dc">Shutdown</reimplementedby>
+        <reimplementedby refid="classapollo_1_1cyber_1_1Reader_1accc21ea8144e9c577be55ca03e152769">Shutdown</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/node/reader_base.h" line="45" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1ReaderBase_1a6bf09eafd9a155192d6e623f90c881e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void apollo::cyber::ReaderBase::ClearData</definition>
+        <argsstring>()=0</argsstring>
+        <name>ClearData</name>
+        <reimplementedby refid="classapollo_1_1cyber_1_1blocker_1_1IntraReader_1a10695c39f2444febe5963747a578df29">ClearData</reimplementedby>
+        <reimplementedby refid="classapollo_1_1cyber_1_1Reader_1ab286c2d587e10eadb339bcf55f4a9567">ClearData</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/node/reader_base.h" line="46" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1ReaderBase_1a3cfeb975a301fe9094221f105d387e55" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void apollo::cyber::ReaderBase::Observe</definition>
+        <argsstring>()=0</argsstring>
+        <name>Observe</name>
+        <reimplementedby refid="classapollo_1_1cyber_1_1blocker_1_1IntraReader_1a8f509c61e3b4b406cbe2beb53558e821">Observe</reimplementedby>
+        <reimplementedby refid="classapollo_1_1cyber_1_1Reader_1a00b3cdc0a487ed6fe0f68e703166d391">Observe</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/node/reader_base.h" line="47" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1ReaderBase_1a9f70abd4ac366a0e173f210db1512ffc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool apollo::cyber::ReaderBase::Empty</definition>
+        <argsstring>() const =0</argsstring>
+        <name>Empty</name>
+        <reimplementedby refid="classapollo_1_1cyber_1_1blocker_1_1IntraReader_1a69f5c5029cba88c2a23528efe6a69457">Empty</reimplementedby>
+        <reimplementedby refid="classapollo_1_1cyber_1_1Reader_1ab3e96bf171f2d1fbbafa40da14590548">Empty</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/node/reader_base.h" line="48" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1ReaderBase_1a42a2e0a6c898cc3da881b1531a608995" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool apollo::cyber::ReaderBase::HasReceived</definition>
+        <argsstring>() const =0</argsstring>
+        <name>HasReceived</name>
+        <reimplementedby refid="classapollo_1_1cyber_1_1blocker_1_1IntraReader_1a398c31e1c4918adc42e771e183eb244a">HasReceived</reimplementedby>
+        <reimplementedby refid="classapollo_1_1cyber_1_1Reader_1aca67f3936aa209c1a73f1ca984062f3a">HasReceived</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/node/reader_base.h" line="49" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1ReaderBase_1abaf2320e67f5845ecef3b1b3f561b3e5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double apollo::cyber::ReaderBase::GetDelaySec</definition>
+        <argsstring>() const =0</argsstring>
+        <name>GetDelaySec</name>
+        <reimplementedby refid="classapollo_1_1cyber_1_1Reader_1a51cdaa33430e6c1b2905336066a4b6f2">GetDelaySec</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/node/reader_base.h" line="50" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1ReaderBase_1aff558a596e4f289b6a5fbb52e9d69fe6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>uint32_t</type>
+        <definition>virtual uint32_t apollo::cyber::ReaderBase::PendingQueueSize</definition>
+        <argsstring>() const =0</argsstring>
+        <name>PendingQueueSize</name>
+        <reimplementedby refid="classapollo_1_1cyber_1_1Reader_1a9f787ae54e884141d13396345b56c9e2">PendingQueueSize</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/node/reader_base.h" line="51" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1ReaderBase_1a0b5792a3fbab13927087c259bf848ab1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool apollo::cyber::ReaderBase::HasWriter</definition>
+        <argsstring>()</argsstring>
+        <name>HasWriter</name>
+        <reimplementedby refid="classapollo_1_1cyber_1_1Reader_1a9fc3587c84ebe1e483b12c2c91314786">HasWriter</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/node/reader_base.h" line="53" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/node/reader_base.h" bodystart="53" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1ReaderBase_1a5f3ff80c03b0353a607c703461f591f8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void apollo::cyber::ReaderBase::GetWriters</definition>
+        <argsstring>(std::vector&lt; proto::RoleAttributes &gt; *writers)</argsstring>
+        <name>GetWriters</name>
+        <reimplementedby refid="classapollo_1_1cyber_1_1Reader_1a5d2fe028b8ba545a07621d8412a6df95">GetWriters</reimplementedby>
+        <param>
+          <type>std::vector&lt; proto::RoleAttributes &gt; *</type>
+          <declname>writers</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/node/reader_base.h" line="54" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/node/reader_base.h" bodystart="54" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1ReaderBase_1ac41daf5e2aa167f52b5ded5d8bb38e0b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::string &amp;</type>
+        <definition>const std::string&amp; apollo::cyber::ReaderBase::GetChannelName</definition>
+        <argsstring>() const </argsstring>
+        <name>GetChannelName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/node/reader_base.h" line="56" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/node/reader_base.h" bodystart="56" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1ReaderBase_1a5f0ebff207b12283c72280454d4a394c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t apollo::cyber::ReaderBase::ChannelId</definition>
+        <argsstring>() const </argsstring>
+        <name>ChannelId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/node/reader_base.h" line="60" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/node/reader_base.h" bodystart="60" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1ReaderBase_1af2980f9f85084d4a3711b86d4cb24183" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const proto::QosProfile &amp;</type>
+        <definition>const proto::QosProfile&amp; apollo::cyber::ReaderBase::QosProfile</definition>
+        <argsstring>() const </argsstring>
+        <name>QosProfile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/node/reader_base.h" line="62" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/node/reader_base.h" bodystart="62" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1ReaderBase_1a84bce8de3776b33f9ccd961f6b99dc60" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::ReaderBase::IsInit</definition>
+        <argsstring>() const </argsstring>
+        <name>IsInit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/node/reader_base.h" line="66" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/node/reader_base.h" bodystart="66" bodyend="66"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="650">
+        <label>apollo::cyber::ReaderBase</label>
+        <link refid="classapollo_1_1cyber_1_1ReaderBase"/>
+      </node>
+      <node id="651">
+        <label>apollo::cyber::Reader&lt; MessageT &gt;</label>
+        <link refid="classapollo_1_1cyber_1_1Reader"/>
+        <childnode refid="650" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="652">
+        <label>apollo::cyber::blocker::IntraReader&lt; MessageT &gt;</label>
+        <link refid="classapollo_1_1cyber_1_1blocker_1_1IntraReader"/>
+        <childnode refid="651" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="653">
+        <label>apollo::cyber::ReaderBase</label>
+        <link refid="classapollo_1_1cyber_1_1ReaderBase"/>
+        <childnode refid="654" relation="usage">
+          <edgelabel>role_attr_</edgelabel>
+        </childnode>
+      </node>
+      <node id="654">
+        <label>RoleAttributes</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/work/apollo-fork/apollo/cyber/node/reader_base.h" line="38" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/node/reader_base.h" bodystart="38" bodyend="71"/>
+    <listofallmembers>
+      <member refid="classapollo_1_1cyber_1_1ReaderBase_1a5f0ebff207b12283c72280454d4a394c" prot="public" virt="non-virtual"><scope>apollo::cyber::ReaderBase</scope><name>ChannelId</name></member>
+      <member refid="classapollo_1_1cyber_1_1ReaderBase_1a6bf09eafd9a155192d6e623f90c881e0" prot="public" virt="pure-virtual"><scope>apollo::cyber::ReaderBase</scope><name>ClearData</name></member>
+      <member refid="classapollo_1_1cyber_1_1ReaderBase_1a9f70abd4ac366a0e173f210db1512ffc" prot="public" virt="pure-virtual"><scope>apollo::cyber::ReaderBase</scope><name>Empty</name></member>
+      <member refid="classapollo_1_1cyber_1_1ReaderBase_1ac41daf5e2aa167f52b5ded5d8bb38e0b" prot="public" virt="non-virtual"><scope>apollo::cyber::ReaderBase</scope><name>GetChannelName</name></member>
+      <member refid="classapollo_1_1cyber_1_1ReaderBase_1abaf2320e67f5845ecef3b1b3f561b3e5" prot="public" virt="pure-virtual"><scope>apollo::cyber::ReaderBase</scope><name>GetDelaySec</name></member>
+      <member refid="classapollo_1_1cyber_1_1ReaderBase_1a5f3ff80c03b0353a607c703461f591f8" prot="public" virt="virtual"><scope>apollo::cyber::ReaderBase</scope><name>GetWriters</name></member>
+      <member refid="classapollo_1_1cyber_1_1ReaderBase_1a42a2e0a6c898cc3da881b1531a608995" prot="public" virt="pure-virtual"><scope>apollo::cyber::ReaderBase</scope><name>HasReceived</name></member>
+      <member refid="classapollo_1_1cyber_1_1ReaderBase_1a0b5792a3fbab13927087c259bf848ab1" prot="public" virt="virtual"><scope>apollo::cyber::ReaderBase</scope><name>HasWriter</name></member>
+      <member refid="classapollo_1_1cyber_1_1ReaderBase_1a58e95863a3ea4e744ddff5914456ad7d" prot="public" virt="pure-virtual"><scope>apollo::cyber::ReaderBase</scope><name>Init</name></member>
+      <member refid="classapollo_1_1cyber_1_1ReaderBase_1a1069158d442f829dcfe467b45c7dd39a" prot="protected" virt="non-virtual"><scope>apollo::cyber::ReaderBase</scope><name>init_</name></member>
+      <member refid="classapollo_1_1cyber_1_1ReaderBase_1a84bce8de3776b33f9ccd961f6b99dc60" prot="public" virt="non-virtual"><scope>apollo::cyber::ReaderBase</scope><name>IsInit</name></member>
+      <member refid="classapollo_1_1cyber_1_1ReaderBase_1a3cfeb975a301fe9094221f105d387e55" prot="public" virt="pure-virtual"><scope>apollo::cyber::ReaderBase</scope><name>Observe</name></member>
+      <member refid="classapollo_1_1cyber_1_1ReaderBase_1aff558a596e4f289b6a5fbb52e9d69fe6" prot="public" virt="pure-virtual"><scope>apollo::cyber::ReaderBase</scope><name>PendingQueueSize</name></member>
+      <member refid="classapollo_1_1cyber_1_1ReaderBase_1af2980f9f85084d4a3711b86d4cb24183" prot="public" virt="non-virtual"><scope>apollo::cyber::ReaderBase</scope><name>QosProfile</name></member>
+      <member refid="classapollo_1_1cyber_1_1ReaderBase_1a9f7a08c0ec4ad3d007efd2b8673312fc" prot="public" virt="non-virtual"><scope>apollo::cyber::ReaderBase</scope><name>ReaderBase</name></member>
+      <member refid="classapollo_1_1cyber_1_1ReaderBase_1abb179fb694df505798fc959ff51614ed" prot="protected" virt="non-virtual"><scope>apollo::cyber::ReaderBase</scope><name>role_attr_</name></member>
+      <member refid="classapollo_1_1cyber_1_1ReaderBase_1a340d56ab095e4ee0789e9ae6c3097730" prot="public" virt="pure-virtual"><scope>apollo::cyber::ReaderBase</scope><name>Shutdown</name></member>
+      <member refid="classapollo_1_1cyber_1_1ReaderBase_1a5c38479c30457a5d6509735404a5d2f3" prot="public" virt="virtual"><scope>apollo::cyber::ReaderBase</scope><name>~ReaderBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

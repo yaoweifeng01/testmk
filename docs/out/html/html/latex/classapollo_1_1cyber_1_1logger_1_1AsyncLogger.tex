@@ -1,0 +1,226 @@
+\hypertarget{classapollo_1_1cyber_1_1logger_1_1AsyncLogger}{\section{apollo\-:\-:cyber\-:\-:logger\-:\-:Async\-Logger Class Reference}
+\label{classapollo_1_1cyber_1_1logger_1_1AsyncLogger}\index{apollo\-::cyber\-::logger\-::\-Async\-Logger@{apollo\-::cyber\-::logger\-::\-Async\-Logger}}
+}
+
+
+{\ttfamily \#include $<$async\-\_\-logger.\-h$>$}
+
+Inheritance diagram for apollo\-:\-:cyber\-:\-:logger\-:\-:Async\-Logger\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classapollo_1_1cyber_1_1logger_1_1AsyncLogger}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structapollo_1_1cyber_1_1logger_1_1AsyncLogger_1_1Buffer}{Buffer}
+\item 
+struct \hyperlink{structapollo_1_1cyber_1_1logger_1_1AsyncLogger_1_1Msg}{Msg}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_ab512ca5b0980840bd97187b8b8bf68a7}{Async\-Logger} (google\-::base\-::\-Logger $\ast$wrapped, int max\-\_\-buffer\-\_\-bytes)
+\item 
+\hyperlink{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_ab81c56987b35eac2468293214cc0831a}{$\sim$\-Async\-Logger} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_a57a56cd44d68c932c229638169a8ece1}{Start} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_a36aceb58b08edfba1417d18d60996811}{Stop} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_abe281a699f379c7274ef0fc9fe171eab}{Write} (bool force\-\_\-flush, time\-\_\-t timestamp, const char $\ast$message, int message\-\_\-len) override
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_a75894f5de117c03d05c013f2638639a1}{Flush} () override
+\item 
+uint32\-\_\-t \hyperlink{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_af14fc46b26821895b40def530a4a5aeb}{Log\-Size} () override
+\item 
+const std\-::thread $\ast$ \hyperlink{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_ac71b6d358d78e0912524c1b8359baa2f}{Log\-Thread} () const 
+\end{DoxyCompactItemize}
+\subsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_ac693c5c55875861feb508ed2b60223a4}{State} \{ \hyperlink{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_ac693c5c55875861feb508ed2b60223a4a05e01a42de2ef2f76fc008c2f2ac0b11}{I\-N\-I\-T\-T\-E\-D}, 
+\hyperlink{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_ac693c5c55875861feb508ed2b60223a4ad883b067d35376bd78b0f301a0200704}{R\-U\-N\-N\-I\-N\-G}, 
+\hyperlink{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_ac693c5c55875861feb508ed2b60223a4a26a879c1a0c30577cff7af5688a3b55f}{S\-T\-O\-P\-P\-E\-D}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_a52f8a409bf0dceb86e9e484a494a166c}{Buffer\-Full} (const \hyperlink{structapollo_1_1cyber_1_1logger_1_1AsyncLogger_1_1Buffer}{Buffer} \&buf) const 
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_af1600cd1348d78c6ab0e806928a2d50b}{Run\-Thread} ()
+\item 
+\hyperlink{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_afa782e83a5e5d08d7ff7da08c6f194ac}{D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N} (\hyperlink{classapollo_1_1cyber_1_1logger_1_1AsyncLogger}{Async\-Logger})
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_aa335015aac6cf1e4a7ef9def98cc5f33}{max\-\_\-buffer\-\_\-bytes\-\_\-}
+\item 
+google\-::base\-::\-Logger $\ast$const \hyperlink{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_a4d7679337ba167a45f75c006f9c2f340}{wrapped\-\_\-}
+\item 
+std\-::thread \hyperlink{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_a973fb1d166acaab52815ded79cadec25}{thread\-\_\-}
+\item 
+uint64\-\_\-t \hyperlink{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_a52a5941a5ed779bac9b1469677dfd8fa}{flush\-\_\-count\-\_\-} = 0
+\item 
+uint64\-\_\-t \hyperlink{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_ae50ea372dfdfe32615dc5d25664c8075}{drop\-\_\-count\-\_\-} = 0
+\item 
+std\-::mutex \hyperlink{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_a822d34060bc2e4bc3c1b5dbb80a62470}{mutex\-\_\-}
+\item 
+std\-::condition\-\_\-variable \hyperlink{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_a606516963229bb28e70cf5599e993798}{wake\-\_\-flusher\-\_\-cv\-\_\-}
+\item 
+std\-::condition\-\_\-variable \hyperlink{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_ac317fa7ba8ac170fcaebee103b861aa6}{flush\-\_\-complete\-\_\-cv\-\_\-}
+\item 
+std\-::unique\-\_\-ptr$<$ \hyperlink{structapollo_1_1cyber_1_1logger_1_1AsyncLogger_1_1Buffer}{Buffer} $>$ \hyperlink{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_a89a6be9354f86ddcfabe1d313117b43d}{active\-\_\-buf\-\_\-}
+\item 
+std\-::unique\-\_\-ptr$<$ \hyperlink{structapollo_1_1cyber_1_1logger_1_1AsyncLogger_1_1Buffer}{Buffer} $>$ \hyperlink{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_ae78d3263cf93ea38811ab00e2afc6d1c}{flushing\-\_\-buf\-\_\-}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_ac693c5c55875861feb508ed2b60223a4}{State} \hyperlink{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_a01dbb42c36800aa824b929ddba8332d8}{state\-\_\-} = \hyperlink{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_ac693c5c55875861feb508ed2b60223a4a05e01a42de2ef2f76fc008c2f2ac0b11}{I\-N\-I\-T\-T\-E\-D}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_ac693c5c55875861feb508ed2b60223a4}{\index{apollo\-::cyber\-::logger\-::\-Async\-Logger@{apollo\-::cyber\-::logger\-::\-Async\-Logger}!State@{State}}
+\index{State@{State}!apollo::cyber::logger::AsyncLogger@{apollo\-::cyber\-::logger\-::\-Async\-Logger}}
+\subsubsection[{State}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf apollo\-::cyber\-::logger\-::\-Async\-Logger\-::\-State}\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_ac693c5c55875861feb508ed2b60223a4}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{I\-N\-I\-T\-T\-E\-D@{I\-N\-I\-T\-T\-E\-D}!apollo\-::cyber\-::logger\-::\-Async\-Logger@{apollo\-::cyber\-::logger\-::\-Async\-Logger}}\index{apollo\-::cyber\-::logger\-::\-Async\-Logger@{apollo\-::cyber\-::logger\-::\-Async\-Logger}!I\-N\-I\-T\-T\-E\-D@{I\-N\-I\-T\-T\-E\-D}}\item[{\em 
+\hypertarget{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_ac693c5c55875861feb508ed2b60223a4a05e01a42de2ef2f76fc008c2f2ac0b11}{I\-N\-I\-T\-T\-E\-D}\label{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_ac693c5c55875861feb508ed2b60223a4a05e01a42de2ef2f76fc008c2f2ac0b11}
+}]\index{R\-U\-N\-N\-I\-N\-G@{R\-U\-N\-N\-I\-N\-G}!apollo\-::cyber\-::logger\-::\-Async\-Logger@{apollo\-::cyber\-::logger\-::\-Async\-Logger}}\index{apollo\-::cyber\-::logger\-::\-Async\-Logger@{apollo\-::cyber\-::logger\-::\-Async\-Logger}!R\-U\-N\-N\-I\-N\-G@{R\-U\-N\-N\-I\-N\-G}}\item[{\em 
+\hypertarget{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_ac693c5c55875861feb508ed2b60223a4ad883b067d35376bd78b0f301a0200704}{R\-U\-N\-N\-I\-N\-G}\label{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_ac693c5c55875861feb508ed2b60223a4ad883b067d35376bd78b0f301a0200704}
+}]\index{S\-T\-O\-P\-P\-E\-D@{S\-T\-O\-P\-P\-E\-D}!apollo\-::cyber\-::logger\-::\-Async\-Logger@{apollo\-::cyber\-::logger\-::\-Async\-Logger}}\index{apollo\-::cyber\-::logger\-::\-Async\-Logger@{apollo\-::cyber\-::logger\-::\-Async\-Logger}!S\-T\-O\-P\-P\-E\-D@{S\-T\-O\-P\-P\-E\-D}}\item[{\em 
+\hypertarget{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_ac693c5c55875861feb508ed2b60223a4a26a879c1a0c30577cff7af5688a3b55f}{S\-T\-O\-P\-P\-E\-D}\label{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_ac693c5c55875861feb508ed2b60223a4a26a879c1a0c30577cff7af5688a3b55f}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_ab512ca5b0980840bd97187b8b8bf68a7}{\index{apollo\-::cyber\-::logger\-::\-Async\-Logger@{apollo\-::cyber\-::logger\-::\-Async\-Logger}!Async\-Logger@{Async\-Logger}}
+\index{Async\-Logger@{Async\-Logger}!apollo::cyber::logger::AsyncLogger@{apollo\-::cyber\-::logger\-::\-Async\-Logger}}
+\subsubsection[{Async\-Logger}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::logger\-::\-Async\-Logger\-::\-Async\-Logger (
+\begin{DoxyParamCaption}
+\item[{google\-::base\-::\-Logger $\ast$}]{wrapped, }
+\item[{int}]{max\-\_\-buffer\-\_\-bytes}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}}\label{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_ab512ca5b0980840bd97187b8b8bf68a7}
+\hypertarget{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_ab81c56987b35eac2468293214cc0831a}{\index{apollo\-::cyber\-::logger\-::\-Async\-Logger@{apollo\-::cyber\-::logger\-::\-Async\-Logger}!$\sim$\-Async\-Logger@{$\sim$\-Async\-Logger}}
+\index{$\sim$\-Async\-Logger@{$\sim$\-Async\-Logger}!apollo::cyber::logger::AsyncLogger@{apollo\-::cyber\-::logger\-::\-Async\-Logger}}
+\subsubsection[{$\sim$\-Async\-Logger}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::logger\-::\-Async\-Logger\-::$\sim$\-Async\-Logger (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_ab81c56987b35eac2468293214cc0831a}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_a52f8a409bf0dceb86e9e484a494a166c}{\index{apollo\-::cyber\-::logger\-::\-Async\-Logger@{apollo\-::cyber\-::logger\-::\-Async\-Logger}!Buffer\-Full@{Buffer\-Full}}
+\index{Buffer\-Full@{Buffer\-Full}!apollo::cyber::logger::AsyncLogger@{apollo\-::cyber\-::logger\-::\-Async\-Logger}}
+\subsubsection[{Buffer\-Full}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::logger\-::\-Async\-Logger\-::\-Buffer\-Full (
+\begin{DoxyParamCaption}
+\item[{const {\bf Buffer} \&}]{buf}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_a52f8a409bf0dceb86e9e484a494a166c}
+\hypertarget{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_afa782e83a5e5d08d7ff7da08c6f194ac}{\index{apollo\-::cyber\-::logger\-::\-Async\-Logger@{apollo\-::cyber\-::logger\-::\-Async\-Logger}!D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N@{D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N}}
+\index{D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N@{D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N}!apollo::cyber::logger::AsyncLogger@{apollo\-::cyber\-::logger\-::\-Async\-Logger}}
+\subsubsection[{D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::logger\-::\-Async\-Logger\-::\-D\-I\-S\-A\-L\-L\-O\-W\-\_\-\-C\-O\-P\-Y\-\_\-\-A\-N\-D\-\_\-\-A\-S\-S\-I\-G\-N (
+\begin{DoxyParamCaption}
+\item[{{\bf Async\-Logger}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_afa782e83a5e5d08d7ff7da08c6f194ac}
+\hypertarget{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_a75894f5de117c03d05c013f2638639a1}{\index{apollo\-::cyber\-::logger\-::\-Async\-Logger@{apollo\-::cyber\-::logger\-::\-Async\-Logger}!Flush@{Flush}}
+\index{Flush@{Flush}!apollo::cyber::logger::AsyncLogger@{apollo\-::cyber\-::logger\-::\-Async\-Logger}}
+\subsubsection[{Flush}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::logger\-::\-Async\-Logger\-::\-Flush (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}}}\label{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_a75894f5de117c03d05c013f2638639a1}
+\hypertarget{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_af14fc46b26821895b40def530a4a5aeb}{\index{apollo\-::cyber\-::logger\-::\-Async\-Logger@{apollo\-::cyber\-::logger\-::\-Async\-Logger}!Log\-Size@{Log\-Size}}
+\index{Log\-Size@{Log\-Size}!apollo::cyber::logger::AsyncLogger@{apollo\-::cyber\-::logger\-::\-Async\-Logger}}
+\subsubsection[{Log\-Size}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t apollo\-::cyber\-::logger\-::\-Async\-Logger\-::\-Log\-Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}}}\label{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_af14fc46b26821895b40def530a4a5aeb}
+\hypertarget{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_ac71b6d358d78e0912524c1b8359baa2f}{\index{apollo\-::cyber\-::logger\-::\-Async\-Logger@{apollo\-::cyber\-::logger\-::\-Async\-Logger}!Log\-Thread@{Log\-Thread}}
+\index{Log\-Thread@{Log\-Thread}!apollo::cyber::logger::AsyncLogger@{apollo\-::cyber\-::logger\-::\-Async\-Logger}}
+\subsubsection[{Log\-Thread}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::thread$\ast$ apollo\-::cyber\-::logger\-::\-Async\-Logger\-::\-Log\-Thread (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_ac71b6d358d78e0912524c1b8359baa2f}
+\hypertarget{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_af1600cd1348d78c6ab0e806928a2d50b}{\index{apollo\-::cyber\-::logger\-::\-Async\-Logger@{apollo\-::cyber\-::logger\-::\-Async\-Logger}!Run\-Thread@{Run\-Thread}}
+\index{Run\-Thread@{Run\-Thread}!apollo::cyber::logger::AsyncLogger@{apollo\-::cyber\-::logger\-::\-Async\-Logger}}
+\subsubsection[{Run\-Thread}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::logger\-::\-Async\-Logger\-::\-Run\-Thread (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_af1600cd1348d78c6ab0e806928a2d50b}
+\hypertarget{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_a57a56cd44d68c932c229638169a8ece1}{\index{apollo\-::cyber\-::logger\-::\-Async\-Logger@{apollo\-::cyber\-::logger\-::\-Async\-Logger}!Start@{Start}}
+\index{Start@{Start}!apollo::cyber::logger::AsyncLogger@{apollo\-::cyber\-::logger\-::\-Async\-Logger}}
+\subsubsection[{Start}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::logger\-::\-Async\-Logger\-::\-Start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_a57a56cd44d68c932c229638169a8ece1}
+\hypertarget{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_a36aceb58b08edfba1417d18d60996811}{\index{apollo\-::cyber\-::logger\-::\-Async\-Logger@{apollo\-::cyber\-::logger\-::\-Async\-Logger}!Stop@{Stop}}
+\index{Stop@{Stop}!apollo::cyber::logger::AsyncLogger@{apollo\-::cyber\-::logger\-::\-Async\-Logger}}
+\subsubsection[{Stop}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::logger\-::\-Async\-Logger\-::\-Stop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_a36aceb58b08edfba1417d18d60996811}
+\hypertarget{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_abe281a699f379c7274ef0fc9fe171eab}{\index{apollo\-::cyber\-::logger\-::\-Async\-Logger@{apollo\-::cyber\-::logger\-::\-Async\-Logger}!Write@{Write}}
+\index{Write@{Write}!apollo::cyber::logger::AsyncLogger@{apollo\-::cyber\-::logger\-::\-Async\-Logger}}
+\subsubsection[{Write}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::logger\-::\-Async\-Logger\-::\-Write (
+\begin{DoxyParamCaption}
+\item[{bool}]{force\-\_\-flush, }
+\item[{time\-\_\-t}]{timestamp, }
+\item[{const char $\ast$}]{message, }
+\item[{int}]{message\-\_\-len}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}}}\label{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_abe281a699f379c7274ef0fc9fe171eab}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_a89a6be9354f86ddcfabe1d313117b43d}{\index{apollo\-::cyber\-::logger\-::\-Async\-Logger@{apollo\-::cyber\-::logger\-::\-Async\-Logger}!active\-\_\-buf\-\_\-@{active\-\_\-buf\-\_\-}}
+\index{active\-\_\-buf\-\_\-@{active\-\_\-buf\-\_\-}!apollo::cyber::logger::AsyncLogger@{apollo\-::cyber\-::logger\-::\-Async\-Logger}}
+\subsubsection[{active\-\_\-buf\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::unique\-\_\-ptr$<${\bf Buffer}$>$ apollo\-::cyber\-::logger\-::\-Async\-Logger\-::active\-\_\-buf\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_a89a6be9354f86ddcfabe1d313117b43d}
+\hypertarget{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_ae50ea372dfdfe32615dc5d25664c8075}{\index{apollo\-::cyber\-::logger\-::\-Async\-Logger@{apollo\-::cyber\-::logger\-::\-Async\-Logger}!drop\-\_\-count\-\_\-@{drop\-\_\-count\-\_\-}}
+\index{drop\-\_\-count\-\_\-@{drop\-\_\-count\-\_\-}!apollo::cyber::logger::AsyncLogger@{apollo\-::cyber\-::logger\-::\-Async\-Logger}}
+\subsubsection[{drop\-\_\-count\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}uint64\-\_\-t apollo\-::cyber\-::logger\-::\-Async\-Logger\-::drop\-\_\-count\-\_\- = 0\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_ae50ea372dfdfe32615dc5d25664c8075}
+\hypertarget{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_ac317fa7ba8ac170fcaebee103b861aa6}{\index{apollo\-::cyber\-::logger\-::\-Async\-Logger@{apollo\-::cyber\-::logger\-::\-Async\-Logger}!flush\-\_\-complete\-\_\-cv\-\_\-@{flush\-\_\-complete\-\_\-cv\-\_\-}}
+\index{flush\-\_\-complete\-\_\-cv\-\_\-@{flush\-\_\-complete\-\_\-cv\-\_\-}!apollo::cyber::logger::AsyncLogger@{apollo\-::cyber\-::logger\-::\-Async\-Logger}}
+\subsubsection[{flush\-\_\-complete\-\_\-cv\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::condition\-\_\-variable apollo\-::cyber\-::logger\-::\-Async\-Logger\-::flush\-\_\-complete\-\_\-cv\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_ac317fa7ba8ac170fcaebee103b861aa6}
+\hypertarget{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_a52a5941a5ed779bac9b1469677dfd8fa}{\index{apollo\-::cyber\-::logger\-::\-Async\-Logger@{apollo\-::cyber\-::logger\-::\-Async\-Logger}!flush\-\_\-count\-\_\-@{flush\-\_\-count\-\_\-}}
+\index{flush\-\_\-count\-\_\-@{flush\-\_\-count\-\_\-}!apollo::cyber::logger::AsyncLogger@{apollo\-::cyber\-::logger\-::\-Async\-Logger}}
+\subsubsection[{flush\-\_\-count\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}uint64\-\_\-t apollo\-::cyber\-::logger\-::\-Async\-Logger\-::flush\-\_\-count\-\_\- = 0\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_a52a5941a5ed779bac9b1469677dfd8fa}
+\hypertarget{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_ae78d3263cf93ea38811ab00e2afc6d1c}{\index{apollo\-::cyber\-::logger\-::\-Async\-Logger@{apollo\-::cyber\-::logger\-::\-Async\-Logger}!flushing\-\_\-buf\-\_\-@{flushing\-\_\-buf\-\_\-}}
+\index{flushing\-\_\-buf\-\_\-@{flushing\-\_\-buf\-\_\-}!apollo::cyber::logger::AsyncLogger@{apollo\-::cyber\-::logger\-::\-Async\-Logger}}
+\subsubsection[{flushing\-\_\-buf\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::unique\-\_\-ptr$<${\bf Buffer}$>$ apollo\-::cyber\-::logger\-::\-Async\-Logger\-::flushing\-\_\-buf\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_ae78d3263cf93ea38811ab00e2afc6d1c}
+\hypertarget{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_aa335015aac6cf1e4a7ef9def98cc5f33}{\index{apollo\-::cyber\-::logger\-::\-Async\-Logger@{apollo\-::cyber\-::logger\-::\-Async\-Logger}!max\-\_\-buffer\-\_\-bytes\-\_\-@{max\-\_\-buffer\-\_\-bytes\-\_\-}}
+\index{max\-\_\-buffer\-\_\-bytes\-\_\-@{max\-\_\-buffer\-\_\-bytes\-\_\-}!apollo::cyber::logger::AsyncLogger@{apollo\-::cyber\-::logger\-::\-Async\-Logger}}
+\subsubsection[{max\-\_\-buffer\-\_\-bytes\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int apollo\-::cyber\-::logger\-::\-Async\-Logger\-::max\-\_\-buffer\-\_\-bytes\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_aa335015aac6cf1e4a7ef9def98cc5f33}
+\hypertarget{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_a822d34060bc2e4bc3c1b5dbb80a62470}{\index{apollo\-::cyber\-::logger\-::\-Async\-Logger@{apollo\-::cyber\-::logger\-::\-Async\-Logger}!mutex\-\_\-@{mutex\-\_\-}}
+\index{mutex\-\_\-@{mutex\-\_\-}!apollo::cyber::logger::AsyncLogger@{apollo\-::cyber\-::logger\-::\-Async\-Logger}}
+\subsubsection[{mutex\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::mutex apollo\-::cyber\-::logger\-::\-Async\-Logger\-::mutex\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_a822d34060bc2e4bc3c1b5dbb80a62470}
+\hypertarget{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_a01dbb42c36800aa824b929ddba8332d8}{\index{apollo\-::cyber\-::logger\-::\-Async\-Logger@{apollo\-::cyber\-::logger\-::\-Async\-Logger}!state\-\_\-@{state\-\_\-}}
+\index{state\-\_\-@{state\-\_\-}!apollo::cyber::logger::AsyncLogger@{apollo\-::cyber\-::logger\-::\-Async\-Logger}}
+\subsubsection[{state\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf State} apollo\-::cyber\-::logger\-::\-Async\-Logger\-::state\-\_\- = {\bf I\-N\-I\-T\-T\-E\-D}\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_a01dbb42c36800aa824b929ddba8332d8}
+\hypertarget{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_a973fb1d166acaab52815ded79cadec25}{\index{apollo\-::cyber\-::logger\-::\-Async\-Logger@{apollo\-::cyber\-::logger\-::\-Async\-Logger}!thread\-\_\-@{thread\-\_\-}}
+\index{thread\-\_\-@{thread\-\_\-}!apollo::cyber::logger::AsyncLogger@{apollo\-::cyber\-::logger\-::\-Async\-Logger}}
+\subsubsection[{thread\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::thread apollo\-::cyber\-::logger\-::\-Async\-Logger\-::thread\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_a973fb1d166acaab52815ded79cadec25}
+\hypertarget{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_a606516963229bb28e70cf5599e993798}{\index{apollo\-::cyber\-::logger\-::\-Async\-Logger@{apollo\-::cyber\-::logger\-::\-Async\-Logger}!wake\-\_\-flusher\-\_\-cv\-\_\-@{wake\-\_\-flusher\-\_\-cv\-\_\-}}
+\index{wake\-\_\-flusher\-\_\-cv\-\_\-@{wake\-\_\-flusher\-\_\-cv\-\_\-}!apollo::cyber::logger::AsyncLogger@{apollo\-::cyber\-::logger\-::\-Async\-Logger}}
+\subsubsection[{wake\-\_\-flusher\-\_\-cv\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::condition\-\_\-variable apollo\-::cyber\-::logger\-::\-Async\-Logger\-::wake\-\_\-flusher\-\_\-cv\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_a606516963229bb28e70cf5599e993798}
+\hypertarget{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_a4d7679337ba167a45f75c006f9c2f340}{\index{apollo\-::cyber\-::logger\-::\-Async\-Logger@{apollo\-::cyber\-::logger\-::\-Async\-Logger}!wrapped\-\_\-@{wrapped\-\_\-}}
+\index{wrapped\-\_\-@{wrapped\-\_\-}!apollo::cyber::logger::AsyncLogger@{apollo\-::cyber\-::logger\-::\-Async\-Logger}}
+\subsubsection[{wrapped\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}google\-::base\-::\-Logger$\ast$ const apollo\-::cyber\-::logger\-::\-Async\-Logger\-::wrapped\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1logger_1_1AsyncLogger_a4d7679337ba167a45f75c006f9c2f340}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+logger/\hyperlink{async__logger_8h}{async\-\_\-logger.\-h}\end{DoxyCompactItemize}

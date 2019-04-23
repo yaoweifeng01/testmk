@@ -1,0 +1,411 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classapollo_1_1cyber_1_1transport_1_1Segment" kind="class" prot="public" final="yes">
+    <compoundname>apollo::cyber::transport::Segment</compoundname>
+    <includes refid="segment_8h" local="no">segment.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1transport_1_1Segment_1a5ffa8fc8020741fe2cd065a185dfec72" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool apollo::cyber::transport::Segment::init_</definition>
+        <argsstring></argsstring>
+        <name>init_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/segment.h" line="76" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/shm/segment.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1transport_1_1Segment_1a43c86ced180f817e91aa0cba66491d71" prot="private" static="no" mutable="no">
+        <type>key_t</type>
+        <definition>key_t apollo::cyber::transport::Segment::id_</definition>
+        <argsstring></argsstring>
+        <name>id_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/segment.h" line="77" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/shm/segment.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1transport_1_1Segment_1ae476c5fa5e5011249836d36f69379c6c" prot="private" static="no" mutable="no">
+        <type><ref refid="namespaceapollo_1_1cyber_1_1transport_1a020d15a7a063c0bdae65bd0a96c4a960" kindref="member">ReadWriteMode</ref></type>
+        <definition>ReadWriteMode apollo::cyber::transport::Segment::mode_</definition>
+        <argsstring></argsstring>
+        <name>mode_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/segment.h" line="78" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/shm/segment.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1transport_1_1Segment_1a8c1cd9da8ef8e4fd13f91873155440d6" prot="private" static="no" mutable="no">
+        <type><ref refid="classapollo_1_1cyber_1_1transport_1_1ShmConf" kindref="compound">ShmConf</ref></type>
+        <definition>ShmConf apollo::cyber::transport::Segment::conf_</definition>
+        <argsstring></argsstring>
+        <name>conf_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/segment.h" line="79" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/shm/segment.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1transport_1_1Segment_1af18b71bafdc13c212ff424b8f0f91591" prot="private" static="no" mutable="no">
+        <type><ref refid="classapollo_1_1cyber_1_1transport_1_1State" kindref="compound">State</ref> *</type>
+        <definition>State* apollo::cyber::transport::Segment::state_</definition>
+        <argsstring></argsstring>
+        <name>state_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/segment.h" line="81" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/shm/segment.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1transport_1_1Segment_1a24f1e0ef673533da49b75c6c572eb618" prot="private" static="no" mutable="no">
+        <type><ref refid="classapollo_1_1cyber_1_1transport_1_1Block" kindref="compound">Block</ref> *</type>
+        <definition>Block* apollo::cyber::transport::Segment::blocks_</definition>
+        <argsstring></argsstring>
+        <name>blocks_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/segment.h" line="82" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/shm/segment.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1transport_1_1Segment_1a47d9f6f69188095dc7147e1cc0bbe271" prot="private" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* apollo::cyber::transport::Segment::managed_shm_</definition>
+        <argsstring></argsstring>
+        <name>managed_shm_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/segment.h" line="83" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/shm/segment.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1transport_1_1Segment_1a6e2beef8f3df98c0cde70f4024442c45" prot="private" static="no" mutable="no">
+        <type>std::mutex</type>
+        <definition>std::mutex apollo::cyber::transport::Segment::block_buf_lock_</definition>
+        <argsstring></argsstring>
+        <name>block_buf_lock_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/segment.h" line="84" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/shm/segment.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1transport_1_1Segment_1ac7f83a4f44cbb525f9f4755096195c5e" prot="private" static="no" mutable="no">
+        <type>std::unordered_map&lt; uint32_t, uint8_t * &gt;</type>
+        <definition>std::unordered_map&lt;uint32_t, uint8_t*&gt; apollo::cyber::transport::Segment::block_buf_addrs_</definition>
+        <argsstring></argsstring>
+        <name>block_buf_addrs_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/segment.h" line="85" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/shm/segment.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1Segment_1ae8bfb4d78dd55afa88dbdd4da4457933" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::transport::Segment::Segment</definition>
+        <argsstring>(uint64_t channel_id, const ReadWriteMode &amp;mode)</argsstring>
+        <name>Segment</name>
+        <param>
+          <type>uint64_t</type>
+          <declname>channel_id</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespaceapollo_1_1cyber_1_1transport_1a020d15a7a063c0bdae65bd0a96c4a960" kindref="member">ReadWriteMode</ref> &amp;</type>
+          <declname>mode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/segment.h" line="55" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1Segment_1ad70526aa7c3592c069d1e5c9388f5425" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::transport::Segment::~Segment</definition>
+        <argsstring>()</argsstring>
+        <name>~Segment</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/segment.h" line="56" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1Segment_1aa4c6ee5c4e2ee304a20316bcf6ff4de3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::transport::Segment::AcquireBlockToWrite</definition>
+        <argsstring>(std::size_t msg_size, WritableBlock *writable_block)</argsstring>
+        <name>AcquireBlockToWrite</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>msg_size</declname>
+        </param>
+        <param>
+          <type><ref refid="structapollo_1_1cyber_1_1transport_1_1WritableBlock" kindref="compound">WritableBlock</ref> *</type>
+          <declname>writable_block</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/segment.h" line="58" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1Segment_1aec54ea16d4a5ba09ed10e80ff2beb78c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::transport::Segment::ReleaseWrittenBlock</definition>
+        <argsstring>(const WritableBlock &amp;writable_block)</argsstring>
+        <name>ReleaseWrittenBlock</name>
+        <param>
+          <type>const <ref refid="structapollo_1_1cyber_1_1transport_1_1WritableBlock" kindref="compound">WritableBlock</ref> &amp;</type>
+          <declname>writable_block</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/segment.h" line="59" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1Segment_1a02924fcfc5a10a6a0e94a9c352307d2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::transport::Segment::AcquireBlockToRead</definition>
+        <argsstring>(ReadableBlock *readable_block)</argsstring>
+        <name>AcquireBlockToRead</name>
+        <param>
+          <type><ref refid="namespaceapollo_1_1cyber_1_1transport_1a38f70b996ac896a1bc06d4598f1d0070" kindref="member">ReadableBlock</ref> *</type>
+          <declname>readable_block</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/segment.h" line="61" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1Segment_1a63ccce7f12f1b6e9a1b7a9e97b146d06" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::transport::Segment::ReleaseReadBlock</definition>
+        <argsstring>(const ReadableBlock &amp;readable_block)</argsstring>
+        <name>ReleaseReadBlock</name>
+        <param>
+          <type>const <ref refid="namespaceapollo_1_1cyber_1_1transport_1a38f70b996ac896a1bc06d4598f1d0070" kindref="member">ReadableBlock</ref> &amp;</type>
+          <declname>readable_block</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/segment.h" line="62" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1Segment_1ac6c53b504e1efce7911645f1fd6ac648" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::transport::Segment::Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/segment.h" line="65" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1Segment_1ae4aa98aa23e3facbb4f3dc0c277ab794" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::transport::Segment::OpenOrCreate</definition>
+        <argsstring>()</argsstring>
+        <name>OpenOrCreate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/segment.h" line="66" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1Segment_1af248b5091c49a0d46bcbbaa4bf57f5a2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::transport::Segment::OpenOnly</definition>
+        <argsstring>()</argsstring>
+        <name>OpenOnly</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/segment.h" line="67" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1Segment_1abfb32828a2d829f04a6a15a57c5a6331" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::transport::Segment::Remove</definition>
+        <argsstring>()</argsstring>
+        <name>Remove</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/segment.h" line="68" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1Segment_1aed7bc6467a6dc566751314d1e99b8eb2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::transport::Segment::Destroy</definition>
+        <argsstring>()</argsstring>
+        <name>Destroy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/segment.h" line="69" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1Segment_1a66a6d2f771fb2f663a32180430c4f403" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::transport::Segment::Reset</definition>
+        <argsstring>()</argsstring>
+        <name>Reset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/segment.h" line="70" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1Segment_1a5068dd354c9857a512cae26f3cead8be" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::transport::Segment::Remap</definition>
+        <argsstring>()</argsstring>
+        <name>Remap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/segment.h" line="71" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1Segment_1a554aa287f3534b59bd635d4897350507" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::transport::Segment::Recreate</definition>
+        <argsstring>()</argsstring>
+        <name>Recreate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/segment.h" line="72" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1Segment_1a916f0eaad7b8201e717238fdd81ab6a6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t apollo::cyber::transport::Segment::GetNextWritableBlockIndex</definition>
+        <argsstring>()</argsstring>
+        <name>GetNextWritableBlockIndex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/segment.h" line="74" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="808">
+        <label>apollo::cyber::transport::State</label>
+        <link refid="classapollo_1_1cyber_1_1transport_1_1State"/>
+      </node>
+      <node id="809">
+        <label>apollo::cyber::transport::ShmConf</label>
+        <link refid="classapollo_1_1cyber_1_1transport_1_1ShmConf"/>
+      </node>
+      <node id="806">
+        <label>apollo::cyber::transport::Segment</label>
+        <link refid="classapollo_1_1cyber_1_1transport_1_1Segment"/>
+        <childnode refid="807" relation="usage">
+          <edgelabel>blocks_</edgelabel>
+        </childnode>
+        <childnode refid="808" relation="usage">
+          <edgelabel>state_</edgelabel>
+        </childnode>
+        <childnode refid="809" relation="usage">
+          <edgelabel>conf_</edgelabel>
+        </childnode>
+      </node>
+      <node id="807">
+        <label>apollo::cyber::transport::Block</label>
+        <link refid="classapollo_1_1cyber_1_1transport_1_1Block"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/segment.h" line="53" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/shm/segment.h" bodystart="53" bodyend="86"/>
+    <listofallmembers>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Segment_1a02924fcfc5a10a6a0e94a9c352307d2e" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::Segment</scope><name>AcquireBlockToRead</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Segment_1aa4c6ee5c4e2ee304a20316bcf6ff4de3" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::Segment</scope><name>AcquireBlockToWrite</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Segment_1ac7f83a4f44cbb525f9f4755096195c5e" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::Segment</scope><name>block_buf_addrs_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Segment_1a6e2beef8f3df98c0cde70f4024442c45" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::Segment</scope><name>block_buf_lock_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Segment_1a24f1e0ef673533da49b75c6c572eb618" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::Segment</scope><name>blocks_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Segment_1a8c1cd9da8ef8e4fd13f91873155440d6" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::Segment</scope><name>conf_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Segment_1aed7bc6467a6dc566751314d1e99b8eb2" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::Segment</scope><name>Destroy</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Segment_1a916f0eaad7b8201e717238fdd81ab6a6" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::Segment</scope><name>GetNextWritableBlockIndex</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Segment_1a43c86ced180f817e91aa0cba66491d71" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::Segment</scope><name>id_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Segment_1ac6c53b504e1efce7911645f1fd6ac648" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::Segment</scope><name>Init</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Segment_1a5ffa8fc8020741fe2cd065a185dfec72" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::Segment</scope><name>init_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Segment_1a47d9f6f69188095dc7147e1cc0bbe271" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::Segment</scope><name>managed_shm_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Segment_1ae476c5fa5e5011249836d36f69379c6c" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::Segment</scope><name>mode_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Segment_1af248b5091c49a0d46bcbbaa4bf57f5a2" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::Segment</scope><name>OpenOnly</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Segment_1ae4aa98aa23e3facbb4f3dc0c277ab794" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::Segment</scope><name>OpenOrCreate</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Segment_1a554aa287f3534b59bd635d4897350507" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::Segment</scope><name>Recreate</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Segment_1a63ccce7f12f1b6e9a1b7a9e97b146d06" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::Segment</scope><name>ReleaseReadBlock</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Segment_1aec54ea16d4a5ba09ed10e80ff2beb78c" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::Segment</scope><name>ReleaseWrittenBlock</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Segment_1a5068dd354c9857a512cae26f3cead8be" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::Segment</scope><name>Remap</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Segment_1abfb32828a2d829f04a6a15a57c5a6331" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::Segment</scope><name>Remove</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Segment_1a66a6d2f771fb2f663a32180430c4f403" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::Segment</scope><name>Reset</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Segment_1ae8bfb4d78dd55afa88dbdd4da4457933" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::Segment</scope><name>Segment</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Segment_1af18b71bafdc13c212ff424b8f0f91591" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::Segment</scope><name>state_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Segment_1ad70526aa7c3592c069d1e5c9388f5425" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::Segment</scope><name>~Segment</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

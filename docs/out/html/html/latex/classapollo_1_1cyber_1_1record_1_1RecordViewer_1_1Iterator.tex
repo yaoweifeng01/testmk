@@ -1,0 +1,151 @@
+\hypertarget{classapollo_1_1cyber_1_1record_1_1RecordViewer_1_1Iterator}{\section{apollo\-:\-:cyber\-:\-:record\-:\-:Record\-Viewer\-:\-:Iterator Class Reference}
+\label{classapollo_1_1cyber_1_1record_1_1RecordViewer_1_1Iterator}\index{apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator@{apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator}}
+}
+
+
+{\ttfamily \#include $<$record\-\_\-viewer.\-h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1record_1_1RecordViewer_1_1Iterator_a45e3f7f65e6c5d011bcf253ddf994e42}{iterator\-\_\-category} = std\-::input\-\_\-iterator\-\_\-tag
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1record_1_1RecordViewer_1_1Iterator_a0de09c9c8009daa91416ddcfcf3b222e}{value\-\_\-type} = \hyperlink{structapollo_1_1cyber_1_1record_1_1RecordMessage}{Record\-Message}
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1record_1_1RecordViewer_1_1Iterator_a744368463a3f6ed5345c4614bff536f7}{difference\-\_\-type} = int
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1record_1_1RecordViewer_1_1Iterator_a9f3cbce1cbf35a09693e35abd4c21728}{pointer} = \hyperlink{structapollo_1_1cyber_1_1record_1_1RecordMessage}{Record\-Message} $\ast$
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1record_1_1RecordViewer_1_1Iterator_a670a19f28cd3f2db0e69d0167787021a}{reference} = \hyperlink{structapollo_1_1cyber_1_1record_1_1RecordMessage}{Record\-Message} \&
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1record_1_1RecordViewer_1_1Iterator_ac08d6746bb571e1830bb63873c0b84c2}{Iterator} (\hyperlink{classapollo_1_1cyber_1_1record_1_1RecordViewer}{Record\-Viewer} $\ast$viewer, bool \hyperlink{classapollo_1_1cyber_1_1record_1_1RecordViewer_a142bc45d0387f9982573aba250d3bebd}{end}=false)
+\item 
+\hyperlink{classapollo_1_1cyber_1_1record_1_1RecordViewer_1_1Iterator_a575b3b0b688618b2898caa82ffbfe420}{Iterator} ()
+\item 
+virtual \hyperlink{classapollo_1_1cyber_1_1record_1_1RecordViewer_1_1Iterator_a4be1cd45d37cdba7a2f7cb670d788f11}{$\sim$\-Iterator} ()
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1record_1_1RecordViewer_1_1Iterator_a12fe2b96833075c538f2d6ed30026d72}{operator==} (\hyperlink{classapollo_1_1cyber_1_1record_1_1RecordViewer_1_1Iterator}{Iterator} const \&other) const 
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1record_1_1RecordViewer_1_1Iterator_abf1b097103f74b27846f906b7e9c2bfe}{operator!=} (const \hyperlink{classapollo_1_1cyber_1_1record_1_1RecordViewer_1_1Iterator}{Iterator} \&rhs) const 
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1record_1_1RecordViewer_1_1Iterator_a84e0cc6e08eb354ce6380d71c2f3e088}{operator++} ()
+\item 
+\hyperlink{classapollo_1_1cyber_1_1record_1_1RecordViewer_1_1Iterator_a9f3cbce1cbf35a09693e35abd4c21728}{pointer} \hyperlink{classapollo_1_1cyber_1_1record_1_1RecordViewer_1_1Iterator_ae934f4a9e60c2cab6d017f1e52691c28}{operator-\/$>$} ()
+\item 
+\hyperlink{classapollo_1_1cyber_1_1record_1_1RecordViewer_1_1Iterator_a670a19f28cd3f2db0e69d0167787021a}{reference} \hyperlink{classapollo_1_1cyber_1_1record_1_1RecordViewer_1_1Iterator_a91f936e4915f0398cfe59129c9cf22b0}{operator$\ast$} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1record_1_1RecordViewer_1_1Iterator_ab0b210fd00c859793652337d6162836e}{end\-\_\-} = false
+\item 
+uint64\-\_\-t \hyperlink{classapollo_1_1cyber_1_1record_1_1RecordViewer_1_1Iterator_a70fbcc7e167eccd93e569eef2220aada}{index\-\_\-} = 0
+\item 
+\hyperlink{classapollo_1_1cyber_1_1record_1_1RecordViewer}{Record\-Viewer} $\ast$ \hyperlink{classapollo_1_1cyber_1_1record_1_1RecordViewer_1_1Iterator_a3ff81d30a9a632768e017ca86ab3d703}{viewer\-\_\-} = nullptr
+\item 
+\hyperlink{classapollo_1_1cyber_1_1record_1_1RecordViewer_1_1Iterator_a0de09c9c8009daa91416ddcfcf3b222e}{value\-\_\-type} \hyperlink{classapollo_1_1cyber_1_1record_1_1RecordViewer_1_1Iterator_a1b6754c5978ca4f98b7bd492c6fb1fa9}{message\-\_\-instance\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1RecordViewer_1_1Iterator_a744368463a3f6ed5345c4614bff536f7}{\index{apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator@{apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator}!difference\-\_\-type@{difference\-\_\-type}}
+\index{difference\-\_\-type@{difference\-\_\-type}!apollo::cyber::record::RecordViewer::Iterator@{apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator}}
+\subsubsection[{difference\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}using {\bf apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator\-::difference\-\_\-type} =  int}}\label{classapollo_1_1cyber_1_1record_1_1RecordViewer_1_1Iterator_a744368463a3f6ed5345c4614bff536f7}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1RecordViewer_1_1Iterator_a45e3f7f65e6c5d011bcf253ddf994e42}{\index{apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator@{apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator}!iterator\-\_\-category@{iterator\-\_\-category}}
+\index{iterator\-\_\-category@{iterator\-\_\-category}!apollo::cyber::record::RecordViewer::Iterator@{apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator}}
+\subsubsection[{iterator\-\_\-category}]{\setlength{\rightskip}{0pt plus 5cm}using {\bf apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator\-::iterator\-\_\-category} =  std\-::input\-\_\-iterator\-\_\-tag}}\label{classapollo_1_1cyber_1_1record_1_1RecordViewer_1_1Iterator_a45e3f7f65e6c5d011bcf253ddf994e42}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1RecordViewer_1_1Iterator_a9f3cbce1cbf35a09693e35abd4c21728}{\index{apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator@{apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator}!pointer@{pointer}}
+\index{pointer@{pointer}!apollo::cyber::record::RecordViewer::Iterator@{apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator}}
+\subsubsection[{pointer}]{\setlength{\rightskip}{0pt plus 5cm}using {\bf apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator\-::pointer} =  {\bf Record\-Message}$\ast$}}\label{classapollo_1_1cyber_1_1record_1_1RecordViewer_1_1Iterator_a9f3cbce1cbf35a09693e35abd4c21728}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1RecordViewer_1_1Iterator_a670a19f28cd3f2db0e69d0167787021a}{\index{apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator@{apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator}!reference@{reference}}
+\index{reference@{reference}!apollo::cyber::record::RecordViewer::Iterator@{apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator}}
+\subsubsection[{reference}]{\setlength{\rightskip}{0pt plus 5cm}using {\bf apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator\-::reference} =  {\bf Record\-Message}\&}}\label{classapollo_1_1cyber_1_1record_1_1RecordViewer_1_1Iterator_a670a19f28cd3f2db0e69d0167787021a}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1RecordViewer_1_1Iterator_a0de09c9c8009daa91416ddcfcf3b222e}{\index{apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator@{apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator}!value\-\_\-type@{value\-\_\-type}}
+\index{value\-\_\-type@{value\-\_\-type}!apollo::cyber::record::RecordViewer::Iterator@{apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator}}
+\subsubsection[{value\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}using {\bf apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator\-::value\-\_\-type} =  {\bf Record\-Message}}}\label{classapollo_1_1cyber_1_1record_1_1RecordViewer_1_1Iterator_a0de09c9c8009daa91416ddcfcf3b222e}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1RecordViewer_1_1Iterator_ac08d6746bb571e1830bb63873c0b84c2}{\index{apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator@{apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator}!Iterator@{Iterator}}
+\index{Iterator@{Iterator}!apollo::cyber::record::RecordViewer::Iterator@{apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator}}
+\subsubsection[{Iterator}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator\-::\-Iterator (
+\begin{DoxyParamCaption}
+\item[{{\bf Record\-Viewer} $\ast$}]{viewer, }
+\item[{bool}]{end = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}}\label{classapollo_1_1cyber_1_1record_1_1RecordViewer_1_1Iterator_ac08d6746bb571e1830bb63873c0b84c2}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1RecordViewer_1_1Iterator_a575b3b0b688618b2898caa82ffbfe420}{\index{apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator@{apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator}!Iterator@{Iterator}}
+\index{Iterator@{Iterator}!apollo::cyber::record::RecordViewer::Iterator@{apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator}}
+\subsubsection[{Iterator}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator\-::\-Iterator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1record_1_1RecordViewer_1_1Iterator_a575b3b0b688618b2898caa82ffbfe420}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1RecordViewer_1_1Iterator_a4be1cd45d37cdba7a2f7cb670d788f11}{\index{apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator@{apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator}!$\sim$\-Iterator@{$\sim$\-Iterator}}
+\index{$\sim$\-Iterator@{$\sim$\-Iterator}!apollo::cyber::record::RecordViewer::Iterator@{apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator}}
+\subsubsection[{$\sim$\-Iterator}]{\setlength{\rightskip}{0pt plus 5cm}virtual apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator\-::$\sim$\-Iterator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1record_1_1RecordViewer_1_1Iterator_a4be1cd45d37cdba7a2f7cb670d788f11}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1RecordViewer_1_1Iterator_abf1b097103f74b27846f906b7e9c2bfe}{\index{apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator@{apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator}!operator!=@{operator!=}}
+\index{operator!=@{operator!=}!apollo::cyber::record::RecordViewer::Iterator@{apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator}}
+\subsubsection[{operator!=}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator\-::operator!= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Iterator} \&}]{rhs}
+\end{DoxyParamCaption}
+) const}}\label{classapollo_1_1cyber_1_1record_1_1RecordViewer_1_1Iterator_abf1b097103f74b27846f906b7e9c2bfe}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1RecordViewer_1_1Iterator_a91f936e4915f0398cfe59129c9cf22b0}{\index{apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator@{apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!apollo::cyber::record::RecordViewer::Iterator@{apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf reference} apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator\-::operator$\ast$ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1record_1_1RecordViewer_1_1Iterator_a91f936e4915f0398cfe59129c9cf22b0}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1RecordViewer_1_1Iterator_a84e0cc6e08eb354ce6380d71c2f3e088}{\index{apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator@{apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator}!operator++@{operator++}}
+\index{operator++@{operator++}!apollo::cyber::record::RecordViewer::Iterator@{apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator}}
+\subsubsection[{operator++}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator\-::operator++ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1record_1_1RecordViewer_1_1Iterator_a84e0cc6e08eb354ce6380d71c2f3e088}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1RecordViewer_1_1Iterator_ae934f4a9e60c2cab6d017f1e52691c28}{\index{apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator@{apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator}!operator-\/$>$@{operator-\/$>$}}
+\index{operator-\/$>$@{operator-\/$>$}!apollo::cyber::record::RecordViewer::Iterator@{apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator}}
+\subsubsection[{operator-\/$>$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pointer} apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator\-::operator-\/$>$ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1record_1_1RecordViewer_1_1Iterator_ae934f4a9e60c2cab6d017f1e52691c28}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1RecordViewer_1_1Iterator_a12fe2b96833075c538f2d6ed30026d72}{\index{apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator@{apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator}!operator==@{operator==}}
+\index{operator==@{operator==}!apollo::cyber::record::RecordViewer::Iterator@{apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator\-::operator== (
+\begin{DoxyParamCaption}
+\item[{{\bf Iterator} const \&}]{other}
+\end{DoxyParamCaption}
+) const}}\label{classapollo_1_1cyber_1_1record_1_1RecordViewer_1_1Iterator_a12fe2b96833075c538f2d6ed30026d72}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1RecordViewer_1_1Iterator_ab0b210fd00c859793652337d6162836e}{\index{apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator@{apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator}!end\-\_\-@{end\-\_\-}}
+\index{end\-\_\-@{end\-\_\-}!apollo::cyber::record::RecordViewer::Iterator@{apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator}}
+\subsubsection[{end\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator\-::end\-\_\- = false\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1record_1_1RecordViewer_1_1Iterator_ab0b210fd00c859793652337d6162836e}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1RecordViewer_1_1Iterator_a70fbcc7e167eccd93e569eef2220aada}{\index{apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator@{apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator}!index\-\_\-@{index\-\_\-}}
+\index{index\-\_\-@{index\-\_\-}!apollo::cyber::record::RecordViewer::Iterator@{apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator}}
+\subsubsection[{index\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}uint64\-\_\-t apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator\-::index\-\_\- = 0\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1record_1_1RecordViewer_1_1Iterator_a70fbcc7e167eccd93e569eef2220aada}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1RecordViewer_1_1Iterator_a1b6754c5978ca4f98b7bd492c6fb1fa9}{\index{apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator@{apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator}!message\-\_\-instance\-\_\-@{message\-\_\-instance\-\_\-}}
+\index{message\-\_\-instance\-\_\-@{message\-\_\-instance\-\_\-}!apollo::cyber::record::RecordViewer::Iterator@{apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator}}
+\subsubsection[{message\-\_\-instance\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf value\-\_\-type} apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator\-::message\-\_\-instance\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1record_1_1RecordViewer_1_1Iterator_a1b6754c5978ca4f98b7bd492c6fb1fa9}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1RecordViewer_1_1Iterator_a3ff81d30a9a632768e017ca86ab3d703}{\index{apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator@{apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator}!viewer\-\_\-@{viewer\-\_\-}}
+\index{viewer\-\_\-@{viewer\-\_\-}!apollo::cyber::record::RecordViewer::Iterator@{apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator}}
+\subsubsection[{viewer\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Record\-Viewer}$\ast$ apollo\-::cyber\-::record\-::\-Record\-Viewer\-::\-Iterator\-::viewer\-\_\- = nullptr\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1record_1_1RecordViewer_1_1Iterator_a3ff81d30a9a632768e017ca86ab3d703}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+record/\hyperlink{record__viewer_8h}{record\-\_\-viewer.\-h}\end{DoxyCompactItemize}

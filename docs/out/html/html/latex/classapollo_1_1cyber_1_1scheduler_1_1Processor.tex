@@ -1,0 +1,128 @@
+\hypertarget{classapollo_1_1cyber_1_1scheduler_1_1Processor}{\section{apollo\-:\-:cyber\-:\-:scheduler\-:\-:Processor Class Reference}
+\label{classapollo_1_1cyber_1_1scheduler_1_1Processor}\index{apollo\-::cyber\-::scheduler\-::\-Processor@{apollo\-::cyber\-::scheduler\-::\-Processor}}
+}
+
+
+{\ttfamily \#include $<$processor.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1scheduler_1_1Processor_a7a3447f8b5b52ff3a06ddd49af89cc94}{Processor} ()
+\item 
+virtual \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1Processor_a1cdaf1b21f6ce895d2174bf606a09b94}{$\sim$\-Processor} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1Processor_a80d4e7a40b6cc550567e3ce65501f50b}{Run} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1Processor_a051ca1c0c4db0c90c486b81826c58108}{Stop} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1Processor_a3129843a2a28a39cdfe3bb261aedee03}{Bind\-Context} (const std\-::shared\-\_\-ptr$<$ \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1ProcessorContext}{Processor\-Context} $>$ \&context)
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1Processor_a4df86a908d96bbf1e072a6918d6ff2b0}{Set\-Affinity} (const std\-::vector$<$ int $>$ \&, const std\-::string \&, int)
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1Processor_a9d95a996d51cc0cb9b59dfa81047d80d}{Set\-Sched\-Policy} (std\-::string spolicy, int sched\-\_\-priority)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\-::shared\-\_\-ptr$<$ \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1ProcessorContext}{Processor\-Context} $>$ \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1Processor_aeec2ffd44e4449e5a14f62bc4ce90473}{context\-\_\-}
+\item 
+std\-::condition\-\_\-variable \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1Processor_a7cb6c27d4d7922832e3a357438f129e6}{cv\-\_\-ctx\-\_\-}
+\item 
+std\-::once\-\_\-flag \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1Processor_af8d792d6a520ca8a91e82e14026d1f62}{thread\-\_\-flag\-\_\-}
+\item 
+std\-::mutex \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1Processor_aa2f22c012a66da1ada177e5839a0c8b9}{mtx\-\_\-ctx\-\_\-}
+\item 
+std\-::thread \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1Processor_a2a0aaa17f63537e1cf23676b2645fbf3}{thread\-\_\-}
+\item 
+std\-::atomic$<$ pid\-\_\-t $>$ \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1Processor_a6cdc919faf4daee51d13c77f07b79194}{tid\-\_\-}
+\item 
+std\-::atomic$<$ bool $>$ \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1Processor_a7d77fcdd037bb308488b6f2bdb135101}{running\-\_\-} \{false\}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classapollo_1_1cyber_1_1scheduler_1_1Processor_a7a3447f8b5b52ff3a06ddd49af89cc94}{\index{apollo\-::cyber\-::scheduler\-::\-Processor@{apollo\-::cyber\-::scheduler\-::\-Processor}!Processor@{Processor}}
+\index{Processor@{Processor}!apollo::cyber::scheduler::Processor@{apollo\-::cyber\-::scheduler\-::\-Processor}}
+\subsubsection[{Processor}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::scheduler\-::\-Processor\-::\-Processor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1scheduler_1_1Processor_a7a3447f8b5b52ff3a06ddd49af89cc94}
+\hypertarget{classapollo_1_1cyber_1_1scheduler_1_1Processor_a1cdaf1b21f6ce895d2174bf606a09b94}{\index{apollo\-::cyber\-::scheduler\-::\-Processor@{apollo\-::cyber\-::scheduler\-::\-Processor}!$\sim$\-Processor@{$\sim$\-Processor}}
+\index{$\sim$\-Processor@{$\sim$\-Processor}!apollo::cyber::scheduler::Processor@{apollo\-::cyber\-::scheduler\-::\-Processor}}
+\subsubsection[{$\sim$\-Processor}]{\setlength{\rightskip}{0pt plus 5cm}virtual apollo\-::cyber\-::scheduler\-::\-Processor\-::$\sim$\-Processor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1scheduler_1_1Processor_a1cdaf1b21f6ce895d2174bf606a09b94}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1scheduler_1_1Processor_a3129843a2a28a39cdfe3bb261aedee03}{\index{apollo\-::cyber\-::scheduler\-::\-Processor@{apollo\-::cyber\-::scheduler\-::\-Processor}!Bind\-Context@{Bind\-Context}}
+\index{Bind\-Context@{Bind\-Context}!apollo::cyber::scheduler::Processor@{apollo\-::cyber\-::scheduler\-::\-Processor}}
+\subsubsection[{Bind\-Context}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::scheduler\-::\-Processor\-::\-Bind\-Context (
+\begin{DoxyParamCaption}
+\item[{const std\-::shared\-\_\-ptr$<$ {\bf Processor\-Context} $>$ \&}]{context}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1scheduler_1_1Processor_a3129843a2a28a39cdfe3bb261aedee03}
+\hypertarget{classapollo_1_1cyber_1_1scheduler_1_1Processor_a80d4e7a40b6cc550567e3ce65501f50b}{\index{apollo\-::cyber\-::scheduler\-::\-Processor@{apollo\-::cyber\-::scheduler\-::\-Processor}!Run@{Run}}
+\index{Run@{Run}!apollo::cyber::scheduler::Processor@{apollo\-::cyber\-::scheduler\-::\-Processor}}
+\subsubsection[{Run}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::scheduler\-::\-Processor\-::\-Run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1scheduler_1_1Processor_a80d4e7a40b6cc550567e3ce65501f50b}
+\hypertarget{classapollo_1_1cyber_1_1scheduler_1_1Processor_a4df86a908d96bbf1e072a6918d6ff2b0}{\index{apollo\-::cyber\-::scheduler\-::\-Processor@{apollo\-::cyber\-::scheduler\-::\-Processor}!Set\-Affinity@{Set\-Affinity}}
+\index{Set\-Affinity@{Set\-Affinity}!apollo::cyber::scheduler::Processor@{apollo\-::cyber\-::scheduler\-::\-Processor}}
+\subsubsection[{Set\-Affinity}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::scheduler\-::\-Processor\-::\-Set\-Affinity (
+\begin{DoxyParamCaption}
+\item[{const std\-::vector$<$ int $>$ \&}]{, }
+\item[{const std\-::string \&}]{, }
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1scheduler_1_1Processor_a4df86a908d96bbf1e072a6918d6ff2b0}
+\hypertarget{classapollo_1_1cyber_1_1scheduler_1_1Processor_a9d95a996d51cc0cb9b59dfa81047d80d}{\index{apollo\-::cyber\-::scheduler\-::\-Processor@{apollo\-::cyber\-::scheduler\-::\-Processor}!Set\-Sched\-Policy@{Set\-Sched\-Policy}}
+\index{Set\-Sched\-Policy@{Set\-Sched\-Policy}!apollo::cyber::scheduler::Processor@{apollo\-::cyber\-::scheduler\-::\-Processor}}
+\subsubsection[{Set\-Sched\-Policy}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::scheduler\-::\-Processor\-::\-Set\-Sched\-Policy (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{spolicy, }
+\item[{int}]{sched\-\_\-priority}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1scheduler_1_1Processor_a9d95a996d51cc0cb9b59dfa81047d80d}
+\hypertarget{classapollo_1_1cyber_1_1scheduler_1_1Processor_a051ca1c0c4db0c90c486b81826c58108}{\index{apollo\-::cyber\-::scheduler\-::\-Processor@{apollo\-::cyber\-::scheduler\-::\-Processor}!Stop@{Stop}}
+\index{Stop@{Stop}!apollo::cyber::scheduler::Processor@{apollo\-::cyber\-::scheduler\-::\-Processor}}
+\subsubsection[{Stop}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::scheduler\-::\-Processor\-::\-Stop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1scheduler_1_1Processor_a051ca1c0c4db0c90c486b81826c58108}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classapollo_1_1cyber_1_1scheduler_1_1Processor_aeec2ffd44e4449e5a14f62bc4ce90473}{\index{apollo\-::cyber\-::scheduler\-::\-Processor@{apollo\-::cyber\-::scheduler\-::\-Processor}!context\-\_\-@{context\-\_\-}}
+\index{context\-\_\-@{context\-\_\-}!apollo::cyber::scheduler::Processor@{apollo\-::cyber\-::scheduler\-::\-Processor}}
+\subsubsection[{context\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::shared\-\_\-ptr$<${\bf Processor\-Context}$>$ apollo\-::cyber\-::scheduler\-::\-Processor\-::context\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1scheduler_1_1Processor_aeec2ffd44e4449e5a14f62bc4ce90473}
+\hypertarget{classapollo_1_1cyber_1_1scheduler_1_1Processor_a7cb6c27d4d7922832e3a357438f129e6}{\index{apollo\-::cyber\-::scheduler\-::\-Processor@{apollo\-::cyber\-::scheduler\-::\-Processor}!cv\-\_\-ctx\-\_\-@{cv\-\_\-ctx\-\_\-}}
+\index{cv\-\_\-ctx\-\_\-@{cv\-\_\-ctx\-\_\-}!apollo::cyber::scheduler::Processor@{apollo\-::cyber\-::scheduler\-::\-Processor}}
+\subsubsection[{cv\-\_\-ctx\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::condition\-\_\-variable apollo\-::cyber\-::scheduler\-::\-Processor\-::cv\-\_\-ctx\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1scheduler_1_1Processor_a7cb6c27d4d7922832e3a357438f129e6}
+\hypertarget{classapollo_1_1cyber_1_1scheduler_1_1Processor_aa2f22c012a66da1ada177e5839a0c8b9}{\index{apollo\-::cyber\-::scheduler\-::\-Processor@{apollo\-::cyber\-::scheduler\-::\-Processor}!mtx\-\_\-ctx\-\_\-@{mtx\-\_\-ctx\-\_\-}}
+\index{mtx\-\_\-ctx\-\_\-@{mtx\-\_\-ctx\-\_\-}!apollo::cyber::scheduler::Processor@{apollo\-::cyber\-::scheduler\-::\-Processor}}
+\subsubsection[{mtx\-\_\-ctx\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::mutex apollo\-::cyber\-::scheduler\-::\-Processor\-::mtx\-\_\-ctx\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1scheduler_1_1Processor_aa2f22c012a66da1ada177e5839a0c8b9}
+\hypertarget{classapollo_1_1cyber_1_1scheduler_1_1Processor_a7d77fcdd037bb308488b6f2bdb135101}{\index{apollo\-::cyber\-::scheduler\-::\-Processor@{apollo\-::cyber\-::scheduler\-::\-Processor}!running\-\_\-@{running\-\_\-}}
+\index{running\-\_\-@{running\-\_\-}!apollo::cyber::scheduler::Processor@{apollo\-::cyber\-::scheduler\-::\-Processor}}
+\subsubsection[{running\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::atomic$<$bool$>$ apollo\-::cyber\-::scheduler\-::\-Processor\-::running\-\_\- \{false\}\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1scheduler_1_1Processor_a7d77fcdd037bb308488b6f2bdb135101}
+\hypertarget{classapollo_1_1cyber_1_1scheduler_1_1Processor_a2a0aaa17f63537e1cf23676b2645fbf3}{\index{apollo\-::cyber\-::scheduler\-::\-Processor@{apollo\-::cyber\-::scheduler\-::\-Processor}!thread\-\_\-@{thread\-\_\-}}
+\index{thread\-\_\-@{thread\-\_\-}!apollo::cyber::scheduler::Processor@{apollo\-::cyber\-::scheduler\-::\-Processor}}
+\subsubsection[{thread\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::thread apollo\-::cyber\-::scheduler\-::\-Processor\-::thread\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1scheduler_1_1Processor_a2a0aaa17f63537e1cf23676b2645fbf3}
+\hypertarget{classapollo_1_1cyber_1_1scheduler_1_1Processor_af8d792d6a520ca8a91e82e14026d1f62}{\index{apollo\-::cyber\-::scheduler\-::\-Processor@{apollo\-::cyber\-::scheduler\-::\-Processor}!thread\-\_\-flag\-\_\-@{thread\-\_\-flag\-\_\-}}
+\index{thread\-\_\-flag\-\_\-@{thread\-\_\-flag\-\_\-}!apollo::cyber::scheduler::Processor@{apollo\-::cyber\-::scheduler\-::\-Processor}}
+\subsubsection[{thread\-\_\-flag\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::once\-\_\-flag apollo\-::cyber\-::scheduler\-::\-Processor\-::thread\-\_\-flag\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1scheduler_1_1Processor_af8d792d6a520ca8a91e82e14026d1f62}
+\hypertarget{classapollo_1_1cyber_1_1scheduler_1_1Processor_a6cdc919faf4daee51d13c77f07b79194}{\index{apollo\-::cyber\-::scheduler\-::\-Processor@{apollo\-::cyber\-::scheduler\-::\-Processor}!tid\-\_\-@{tid\-\_\-}}
+\index{tid\-\_\-@{tid\-\_\-}!apollo::cyber::scheduler::Processor@{apollo\-::cyber\-::scheduler\-::\-Processor}}
+\subsubsection[{tid\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::atomic$<$pid\-\_\-t$>$ apollo\-::cyber\-::scheduler\-::\-Processor\-::tid\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1scheduler_1_1Processor_a6cdc919faf4daee51d13c77f07b79194}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+scheduler/\hyperlink{processor_8h}{processor.\-h}\end{DoxyCompactItemize}

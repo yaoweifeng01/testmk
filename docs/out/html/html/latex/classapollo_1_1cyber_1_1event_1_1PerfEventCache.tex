@@ -1,0 +1,131 @@
+\hypertarget{classapollo_1_1cyber_1_1event_1_1PerfEventCache}{\section{apollo\-:\-:cyber\-:\-:event\-:\-:Perf\-Event\-Cache Class Reference}
+\label{classapollo_1_1cyber_1_1event_1_1PerfEventCache}\index{apollo\-::cyber\-::event\-::\-Perf\-Event\-Cache@{apollo\-::cyber\-::event\-::\-Perf\-Event\-Cache}}
+}
+
+
+{\ttfamily \#include $<$perf\-\_\-event\-\_\-cache.\-h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1event_1_1PerfEventCache_a97c9a532fd89d72c664547eba0f39525}{Event\-Base\-Ptr} = std\-::shared\-\_\-ptr$<$ \hyperlink{classapollo_1_1cyber_1_1event_1_1EventBase}{Event\-Base} $>$
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1event_1_1PerfEventCache_a5225c72f643d172f8a02beeb6eb84b51}{$\sim$\-Perf\-Event\-Cache} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1event_1_1PerfEventCache_a8046148fae61146484ce98d2694c0a0c}{Add\-Sched\-Event} (const \hyperlink{namespaceapollo_1_1cyber_1_1event_ab72445ee0247295d6699d5f251e11b83}{Sched\-Perf} event\-\_\-id, const uint64\-\_\-t cr\-\_\-id, const int proc\-\_\-id, const int cr\-\_\-state=-\/1)
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1event_1_1PerfEventCache_a2d915a242d915c6247de01cd54086488}{Add\-Transport\-Event} (const \hyperlink{namespaceapollo_1_1cyber_1_1event_a2918dc8c778172bc4a921da7fe02ad84}{Trans\-Perf} event\-\_\-id, const uint64\-\_\-t channel\-\_\-id, const uint64\-\_\-t msg\-\_\-seq)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1event_1_1PerfEventCache_aadc41f95023b4a56b5d119a08a69ffd5}{Start} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1event_1_1PerfEventCache_ad981b82b1aa24d850346eb9ec1307aec}{Run} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\-::thread \hyperlink{classapollo_1_1cyber_1_1event_1_1PerfEventCache_a72da8ae6b3a52a0533c5df4398f7463a}{io\-\_\-thread\-\_\-}
+\item 
+std\-::ofstream \hyperlink{classapollo_1_1cyber_1_1event_1_1PerfEventCache_ad190a19395906ca0eede7b1526b64964}{of\-\_\-}
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1event_1_1PerfEventCache_a91a46c1094cff4af13c2af59c884ccbc}{enable\-\_\-trans\-\_\-perf\-\_\-} = false
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1event_1_1PerfEventCache_af4b2ddc5105d2d75a2aca49a219bced4}{enable\-\_\-sched\-\_\-perf\-\_\-} = false
+\item 
+std\-::atomic$<$ bool $>$ \hyperlink{classapollo_1_1cyber_1_1event_1_1PerfEventCache_a4f064542c80809a3d11e8d274e01a0f2}{shutdown\-\_\-} = \{false\}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1base_1_1BoundedQueue}{base\-::\-Bounded\-Queue}$<$ \hyperlink{classapollo_1_1cyber_1_1event_1_1PerfEventCache_a97c9a532fd89d72c664547eba0f39525}{Event\-Base\-Ptr} $>$ \hyperlink{classapollo_1_1cyber_1_1event_1_1PerfEventCache_a0c19917b6624f25f5519d3d3383bcdf7}{event\-\_\-queue\-\_\-}
+\item 
+const int \hyperlink{classapollo_1_1cyber_1_1event_1_1PerfEventCache_a3eededccf54705415c8bde9035aa21f0}{k\-Flush\-Size} = 512
+\item 
+const uint64\-\_\-t \hyperlink{classapollo_1_1cyber_1_1event_1_1PerfEventCache_a2722b97e9e3d6712ffca9cee99b6fe22}{k\-Event\-Queue\-Size} = 8192
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classapollo_1_1cyber_1_1event_1_1PerfEventCache_a97c9a532fd89d72c664547eba0f39525}{\index{apollo\-::cyber\-::event\-::\-Perf\-Event\-Cache@{apollo\-::cyber\-::event\-::\-Perf\-Event\-Cache}!Event\-Base\-Ptr@{Event\-Base\-Ptr}}
+\index{Event\-Base\-Ptr@{Event\-Base\-Ptr}!apollo::cyber::event::PerfEventCache@{apollo\-::cyber\-::event\-::\-Perf\-Event\-Cache}}
+\subsubsection[{Event\-Base\-Ptr}]{\setlength{\rightskip}{0pt plus 5cm}using {\bf apollo\-::cyber\-::event\-::\-Perf\-Event\-Cache\-::\-Event\-Base\-Ptr} =  std\-::shared\-\_\-ptr$<${\bf Event\-Base}$>$}}\label{classapollo_1_1cyber_1_1event_1_1PerfEventCache_a97c9a532fd89d72c664547eba0f39525}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classapollo_1_1cyber_1_1event_1_1PerfEventCache_a5225c72f643d172f8a02beeb6eb84b51}{\index{apollo\-::cyber\-::event\-::\-Perf\-Event\-Cache@{apollo\-::cyber\-::event\-::\-Perf\-Event\-Cache}!$\sim$\-Perf\-Event\-Cache@{$\sim$\-Perf\-Event\-Cache}}
+\index{$\sim$\-Perf\-Event\-Cache@{$\sim$\-Perf\-Event\-Cache}!apollo::cyber::event::PerfEventCache@{apollo\-::cyber\-::event\-::\-Perf\-Event\-Cache}}
+\subsubsection[{$\sim$\-Perf\-Event\-Cache}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::event\-::\-Perf\-Event\-Cache\-::$\sim$\-Perf\-Event\-Cache (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1event_1_1PerfEventCache_a5225c72f643d172f8a02beeb6eb84b51}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1event_1_1PerfEventCache_a8046148fae61146484ce98d2694c0a0c}{\index{apollo\-::cyber\-::event\-::\-Perf\-Event\-Cache@{apollo\-::cyber\-::event\-::\-Perf\-Event\-Cache}!Add\-Sched\-Event@{Add\-Sched\-Event}}
+\index{Add\-Sched\-Event@{Add\-Sched\-Event}!apollo::cyber::event::PerfEventCache@{apollo\-::cyber\-::event\-::\-Perf\-Event\-Cache}}
+\subsubsection[{Add\-Sched\-Event}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::event\-::\-Perf\-Event\-Cache\-::\-Add\-Sched\-Event (
+\begin{DoxyParamCaption}
+\item[{const {\bf Sched\-Perf}}]{event\-\_\-id, }
+\item[{const uint64\-\_\-t}]{cr\-\_\-id, }
+\item[{const int}]{proc\-\_\-id, }
+\item[{const int}]{cr\-\_\-state = {\ttfamily -\/1}}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1event_1_1PerfEventCache_a8046148fae61146484ce98d2694c0a0c}
+\hypertarget{classapollo_1_1cyber_1_1event_1_1PerfEventCache_a2d915a242d915c6247de01cd54086488}{\index{apollo\-::cyber\-::event\-::\-Perf\-Event\-Cache@{apollo\-::cyber\-::event\-::\-Perf\-Event\-Cache}!Add\-Transport\-Event@{Add\-Transport\-Event}}
+\index{Add\-Transport\-Event@{Add\-Transport\-Event}!apollo::cyber::event::PerfEventCache@{apollo\-::cyber\-::event\-::\-Perf\-Event\-Cache}}
+\subsubsection[{Add\-Transport\-Event}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::event\-::\-Perf\-Event\-Cache\-::\-Add\-Transport\-Event (
+\begin{DoxyParamCaption}
+\item[{const {\bf Trans\-Perf}}]{event\-\_\-id, }
+\item[{const uint64\-\_\-t}]{channel\-\_\-id, }
+\item[{const uint64\-\_\-t}]{msg\-\_\-seq}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1event_1_1PerfEventCache_a2d915a242d915c6247de01cd54086488}
+\hypertarget{classapollo_1_1cyber_1_1event_1_1PerfEventCache_ad981b82b1aa24d850346eb9ec1307aec}{\index{apollo\-::cyber\-::event\-::\-Perf\-Event\-Cache@{apollo\-::cyber\-::event\-::\-Perf\-Event\-Cache}!Run@{Run}}
+\index{Run@{Run}!apollo::cyber::event::PerfEventCache@{apollo\-::cyber\-::event\-::\-Perf\-Event\-Cache}}
+\subsubsection[{Run}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::event\-::\-Perf\-Event\-Cache\-::\-Run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1event_1_1PerfEventCache_ad981b82b1aa24d850346eb9ec1307aec}
+\hypertarget{classapollo_1_1cyber_1_1event_1_1PerfEventCache_aadc41f95023b4a56b5d119a08a69ffd5}{\index{apollo\-::cyber\-::event\-::\-Perf\-Event\-Cache@{apollo\-::cyber\-::event\-::\-Perf\-Event\-Cache}!Start@{Start}}
+\index{Start@{Start}!apollo::cyber::event::PerfEventCache@{apollo\-::cyber\-::event\-::\-Perf\-Event\-Cache}}
+\subsubsection[{Start}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::event\-::\-Perf\-Event\-Cache\-::\-Start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1event_1_1PerfEventCache_aadc41f95023b4a56b5d119a08a69ffd5}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classapollo_1_1cyber_1_1event_1_1PerfEventCache_af4b2ddc5105d2d75a2aca49a219bced4}{\index{apollo\-::cyber\-::event\-::\-Perf\-Event\-Cache@{apollo\-::cyber\-::event\-::\-Perf\-Event\-Cache}!enable\-\_\-sched\-\_\-perf\-\_\-@{enable\-\_\-sched\-\_\-perf\-\_\-}}
+\index{enable\-\_\-sched\-\_\-perf\-\_\-@{enable\-\_\-sched\-\_\-perf\-\_\-}!apollo::cyber::event::PerfEventCache@{apollo\-::cyber\-::event\-::\-Perf\-Event\-Cache}}
+\subsubsection[{enable\-\_\-sched\-\_\-perf\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::event\-::\-Perf\-Event\-Cache\-::enable\-\_\-sched\-\_\-perf\-\_\- = false\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1event_1_1PerfEventCache_af4b2ddc5105d2d75a2aca49a219bced4}
+\hypertarget{classapollo_1_1cyber_1_1event_1_1PerfEventCache_a91a46c1094cff4af13c2af59c884ccbc}{\index{apollo\-::cyber\-::event\-::\-Perf\-Event\-Cache@{apollo\-::cyber\-::event\-::\-Perf\-Event\-Cache}!enable\-\_\-trans\-\_\-perf\-\_\-@{enable\-\_\-trans\-\_\-perf\-\_\-}}
+\index{enable\-\_\-trans\-\_\-perf\-\_\-@{enable\-\_\-trans\-\_\-perf\-\_\-}!apollo::cyber::event::PerfEventCache@{apollo\-::cyber\-::event\-::\-Perf\-Event\-Cache}}
+\subsubsection[{enable\-\_\-trans\-\_\-perf\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::event\-::\-Perf\-Event\-Cache\-::enable\-\_\-trans\-\_\-perf\-\_\- = false\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1event_1_1PerfEventCache_a91a46c1094cff4af13c2af59c884ccbc}
+\hypertarget{classapollo_1_1cyber_1_1event_1_1PerfEventCache_a0c19917b6624f25f5519d3d3383bcdf7}{\index{apollo\-::cyber\-::event\-::\-Perf\-Event\-Cache@{apollo\-::cyber\-::event\-::\-Perf\-Event\-Cache}!event\-\_\-queue\-\_\-@{event\-\_\-queue\-\_\-}}
+\index{event\-\_\-queue\-\_\-@{event\-\_\-queue\-\_\-}!apollo::cyber::event::PerfEventCache@{apollo\-::cyber\-::event\-::\-Perf\-Event\-Cache}}
+\subsubsection[{event\-\_\-queue\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf base\-::\-Bounded\-Queue}$<${\bf Event\-Base\-Ptr}$>$ apollo\-::cyber\-::event\-::\-Perf\-Event\-Cache\-::event\-\_\-queue\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1event_1_1PerfEventCache_a0c19917b6624f25f5519d3d3383bcdf7}
+\hypertarget{classapollo_1_1cyber_1_1event_1_1PerfEventCache_a72da8ae6b3a52a0533c5df4398f7463a}{\index{apollo\-::cyber\-::event\-::\-Perf\-Event\-Cache@{apollo\-::cyber\-::event\-::\-Perf\-Event\-Cache}!io\-\_\-thread\-\_\-@{io\-\_\-thread\-\_\-}}
+\index{io\-\_\-thread\-\_\-@{io\-\_\-thread\-\_\-}!apollo::cyber::event::PerfEventCache@{apollo\-::cyber\-::event\-::\-Perf\-Event\-Cache}}
+\subsubsection[{io\-\_\-thread\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::thread apollo\-::cyber\-::event\-::\-Perf\-Event\-Cache\-::io\-\_\-thread\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1event_1_1PerfEventCache_a72da8ae6b3a52a0533c5df4398f7463a}
+\hypertarget{classapollo_1_1cyber_1_1event_1_1PerfEventCache_a2722b97e9e3d6712ffca9cee99b6fe22}{\index{apollo\-::cyber\-::event\-::\-Perf\-Event\-Cache@{apollo\-::cyber\-::event\-::\-Perf\-Event\-Cache}!k\-Event\-Queue\-Size@{k\-Event\-Queue\-Size}}
+\index{k\-Event\-Queue\-Size@{k\-Event\-Queue\-Size}!apollo::cyber::event::PerfEventCache@{apollo\-::cyber\-::event\-::\-Perf\-Event\-Cache}}
+\subsubsection[{k\-Event\-Queue\-Size}]{\setlength{\rightskip}{0pt plus 5cm}const uint64\-\_\-t apollo\-::cyber\-::event\-::\-Perf\-Event\-Cache\-::k\-Event\-Queue\-Size = 8192\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1event_1_1PerfEventCache_a2722b97e9e3d6712ffca9cee99b6fe22}
+\hypertarget{classapollo_1_1cyber_1_1event_1_1PerfEventCache_a3eededccf54705415c8bde9035aa21f0}{\index{apollo\-::cyber\-::event\-::\-Perf\-Event\-Cache@{apollo\-::cyber\-::event\-::\-Perf\-Event\-Cache}!k\-Flush\-Size@{k\-Flush\-Size}}
+\index{k\-Flush\-Size@{k\-Flush\-Size}!apollo::cyber::event::PerfEventCache@{apollo\-::cyber\-::event\-::\-Perf\-Event\-Cache}}
+\subsubsection[{k\-Flush\-Size}]{\setlength{\rightskip}{0pt plus 5cm}const int apollo\-::cyber\-::event\-::\-Perf\-Event\-Cache\-::k\-Flush\-Size = 512\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1event_1_1PerfEventCache_a3eededccf54705415c8bde9035aa21f0}
+\hypertarget{classapollo_1_1cyber_1_1event_1_1PerfEventCache_ad190a19395906ca0eede7b1526b64964}{\index{apollo\-::cyber\-::event\-::\-Perf\-Event\-Cache@{apollo\-::cyber\-::event\-::\-Perf\-Event\-Cache}!of\-\_\-@{of\-\_\-}}
+\index{of\-\_\-@{of\-\_\-}!apollo::cyber::event::PerfEventCache@{apollo\-::cyber\-::event\-::\-Perf\-Event\-Cache}}
+\subsubsection[{of\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::ofstream apollo\-::cyber\-::event\-::\-Perf\-Event\-Cache\-::of\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1event_1_1PerfEventCache_ad190a19395906ca0eede7b1526b64964}
+\hypertarget{classapollo_1_1cyber_1_1event_1_1PerfEventCache_a4f064542c80809a3d11e8d274e01a0f2}{\index{apollo\-::cyber\-::event\-::\-Perf\-Event\-Cache@{apollo\-::cyber\-::event\-::\-Perf\-Event\-Cache}!shutdown\-\_\-@{shutdown\-\_\-}}
+\index{shutdown\-\_\-@{shutdown\-\_\-}!apollo::cyber::event::PerfEventCache@{apollo\-::cyber\-::event\-::\-Perf\-Event\-Cache}}
+\subsubsection[{shutdown\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::atomic$<$bool$>$ apollo\-::cyber\-::event\-::\-Perf\-Event\-Cache\-::shutdown\-\_\- = \{false\}\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1event_1_1PerfEventCache_a4f064542c80809a3d11e8d274e01a0f2}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+event/\hyperlink{perf__event__cache_8h}{perf\-\_\-event\-\_\-cache.\-h}\end{DoxyCompactItemize}

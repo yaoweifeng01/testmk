@@ -1,0 +1,77 @@
+\hypertarget{classapollo_1_1cyber_1_1data_1_1DataNotifier}{\section{apollo\-:\-:cyber\-:\-:data\-:\-:Data\-Notifier Class Reference}
+\label{classapollo_1_1cyber_1_1data_1_1DataNotifier}\index{apollo\-::cyber\-::data\-::\-Data\-Notifier@{apollo\-::cyber\-::data\-::\-Data\-Notifier}}
+}
+
+
+{\ttfamily \#include $<$data\-\_\-notifier.\-h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1data_1_1DataNotifier_a32a6a858ae70632d5a6533fb1f16ed2a}{Notify\-Vector} = std\-::vector$<$ std\-::shared\-\_\-ptr$<$ \hyperlink{structapollo_1_1cyber_1_1data_1_1Notifier}{Notifier} $>$$>$
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1data_1_1DataNotifier_ae1b83ee9238a49eb78876ed5da759c8f}{$\sim$\-Data\-Notifier} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1data_1_1DataNotifier_a7d08646b3ac8758b2021d24bbc7dabb8}{Add\-Notifier} (uint64\-\_\-t channel\-\_\-id, const std\-::shared\-\_\-ptr$<$ \hyperlink{structapollo_1_1cyber_1_1data_1_1Notifier}{Notifier} $>$ \&notifier)
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1data_1_1DataNotifier_a28ae002832e1c7c35a26888b0b5417f9}{Notify} (const uint64\-\_\-t channel\-\_\-id)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\-::mutex \hyperlink{classapollo_1_1cyber_1_1data_1_1DataNotifier_a6e73bd4fadc7ed461f4077ea905e50f6}{notifies\-\_\-map\-\_\-mutex\-\_\-}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1base_1_1AtomicHashMap}{Atomic\-Hash\-Map}$<$ uint64\-\_\-t, \\*
+\hyperlink{classapollo_1_1cyber_1_1data_1_1DataNotifier_a32a6a858ae70632d5a6533fb1f16ed2a}{Notify\-Vector} $>$ \hyperlink{classapollo_1_1cyber_1_1data_1_1DataNotifier_acbb98cccf2b075c3c455b9bc2b16013c}{notifies\-\_\-map\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classapollo_1_1cyber_1_1data_1_1DataNotifier_a32a6a858ae70632d5a6533fb1f16ed2a}{\index{apollo\-::cyber\-::data\-::\-Data\-Notifier@{apollo\-::cyber\-::data\-::\-Data\-Notifier}!Notify\-Vector@{Notify\-Vector}}
+\index{Notify\-Vector@{Notify\-Vector}!apollo::cyber::data::DataNotifier@{apollo\-::cyber\-::data\-::\-Data\-Notifier}}
+\subsubsection[{Notify\-Vector}]{\setlength{\rightskip}{0pt plus 5cm}using {\bf apollo\-::cyber\-::data\-::\-Data\-Notifier\-::\-Notify\-Vector} =  std\-::vector$<$std\-::shared\-\_\-ptr$<${\bf Notifier}$>$$>$}}\label{classapollo_1_1cyber_1_1data_1_1DataNotifier_a32a6a858ae70632d5a6533fb1f16ed2a}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classapollo_1_1cyber_1_1data_1_1DataNotifier_ae1b83ee9238a49eb78876ed5da759c8f}{\index{apollo\-::cyber\-::data\-::\-Data\-Notifier@{apollo\-::cyber\-::data\-::\-Data\-Notifier}!$\sim$\-Data\-Notifier@{$\sim$\-Data\-Notifier}}
+\index{$\sim$\-Data\-Notifier@{$\sim$\-Data\-Notifier}!apollo::cyber::data::DataNotifier@{apollo\-::cyber\-::data\-::\-Data\-Notifier}}
+\subsubsection[{$\sim$\-Data\-Notifier}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::data\-::\-Data\-Notifier\-::$\sim$\-Data\-Notifier (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1data_1_1DataNotifier_ae1b83ee9238a49eb78876ed5da759c8f}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1data_1_1DataNotifier_a7d08646b3ac8758b2021d24bbc7dabb8}{\index{apollo\-::cyber\-::data\-::\-Data\-Notifier@{apollo\-::cyber\-::data\-::\-Data\-Notifier}!Add\-Notifier@{Add\-Notifier}}
+\index{Add\-Notifier@{Add\-Notifier}!apollo::cyber::data::DataNotifier@{apollo\-::cyber\-::data\-::\-Data\-Notifier}}
+\subsubsection[{Add\-Notifier}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::data\-::\-Data\-Notifier\-::\-Add\-Notifier (
+\begin{DoxyParamCaption}
+\item[{uint64\-\_\-t}]{channel\-\_\-id, }
+\item[{const std\-::shared\-\_\-ptr$<$ {\bf Notifier} $>$ \&}]{notifier}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1data_1_1DataNotifier_a7d08646b3ac8758b2021d24bbc7dabb8}
+\hypertarget{classapollo_1_1cyber_1_1data_1_1DataNotifier_a28ae002832e1c7c35a26888b0b5417f9}{\index{apollo\-::cyber\-::data\-::\-Data\-Notifier@{apollo\-::cyber\-::data\-::\-Data\-Notifier}!Notify@{Notify}}
+\index{Notify@{Notify}!apollo::cyber::data::DataNotifier@{apollo\-::cyber\-::data\-::\-Data\-Notifier}}
+\subsubsection[{Notify}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::data\-::\-Data\-Notifier\-::\-Notify (
+\begin{DoxyParamCaption}
+\item[{const uint64\-\_\-t}]{channel\-\_\-id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1data_1_1DataNotifier_a28ae002832e1c7c35a26888b0b5417f9}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classapollo_1_1cyber_1_1data_1_1DataNotifier_acbb98cccf2b075c3c455b9bc2b16013c}{\index{apollo\-::cyber\-::data\-::\-Data\-Notifier@{apollo\-::cyber\-::data\-::\-Data\-Notifier}!notifies\-\_\-map\-\_\-@{notifies\-\_\-map\-\_\-}}
+\index{notifies\-\_\-map\-\_\-@{notifies\-\_\-map\-\_\-}!apollo::cyber::data::DataNotifier@{apollo\-::cyber\-::data\-::\-Data\-Notifier}}
+\subsubsection[{notifies\-\_\-map\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Atomic\-Hash\-Map}$<$uint64\-\_\-t, {\bf Notify\-Vector}$>$ apollo\-::cyber\-::data\-::\-Data\-Notifier\-::notifies\-\_\-map\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1data_1_1DataNotifier_acbb98cccf2b075c3c455b9bc2b16013c}
+\hypertarget{classapollo_1_1cyber_1_1data_1_1DataNotifier_a6e73bd4fadc7ed461f4077ea905e50f6}{\index{apollo\-::cyber\-::data\-::\-Data\-Notifier@{apollo\-::cyber\-::data\-::\-Data\-Notifier}!notifies\-\_\-map\-\_\-mutex\-\_\-@{notifies\-\_\-map\-\_\-mutex\-\_\-}}
+\index{notifies\-\_\-map\-\_\-mutex\-\_\-@{notifies\-\_\-map\-\_\-mutex\-\_\-}!apollo::cyber::data::DataNotifier@{apollo\-::cyber\-::data\-::\-Data\-Notifier}}
+\subsubsection[{notifies\-\_\-map\-\_\-mutex\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::mutex apollo\-::cyber\-::data\-::\-Data\-Notifier\-::notifies\-\_\-map\-\_\-mutex\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1data_1_1DataNotifier_a6e73bd4fadc7ed461f4077ea905e50f6}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+data/\hyperlink{data__notifier_8h}{data\-\_\-notifier.\-h}\end{DoxyCompactItemize}

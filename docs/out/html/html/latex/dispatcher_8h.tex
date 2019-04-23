@@ -1,0 +1,38 @@
+\hypertarget{dispatcher_8h}{\section{transport/dispatcher/dispatcher.h File Reference}
+\label{dispatcher_8h}\index{transport/dispatcher/dispatcher.\-h@{transport/dispatcher/dispatcher.\-h}}
+}
+{\ttfamily \#include $<$atomic$>$}\\*
+{\ttfamily \#include $<$functional$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$memory$>$}\\*
+{\ttfamily \#include $<$mutex$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$unordered\-\_\-map$>$}\\*
+{\ttfamily \#include \char`\"{}cyber/base/atomic\-\_\-hash\-\_\-map.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}cyber/base/atomic\-\_\-rw\-\_\-lock.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}cyber/common/global\-\_\-data.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}cyber/common/log.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}cyber/proto/role\-\_\-attributes.\-pb.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}cyber/transport/message/listener\-\_\-handler.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}cyber/transport/message/message\-\_\-info.\-h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classapollo_1_1cyber_1_1transport_1_1Dispatcher}{apollo\-::cyber\-::transport\-::\-Dispatcher}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespaceapollo}{apollo}
+\item 
+\hyperlink{namespaceapollo_1_1cyber}{apollo\-::cyber}
+\item 
+\hyperlink{namespaceapollo_1_1cyber_1_1transport}{apollo\-::cyber\-::transport}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \hyperlink{namespaceapollo_1_1cyber_1_1transport_abba04e3e93745dd7020da6aa697cf165}{apollo\-::cyber\-::transport\-::\-Dispatcher\-Ptr} = std\-::shared\-\_\-ptr$<$ Dispatcher $>$
+\item 
+{\footnotesize template$<$typename Message\-T $>$ }\\using \hyperlink{namespaceapollo_1_1cyber_1_1transport_aade3f4d41770972ae44166cdde27e2d8}{apollo\-::cyber\-::transport\-::\-Message\-Listener} = std\-::function$<$ void(const std\-::shared\-\_\-ptr$<$ Message\-T $>$ \&, const Message\-Info \&)$>$
+\end{DoxyCompactItemize}

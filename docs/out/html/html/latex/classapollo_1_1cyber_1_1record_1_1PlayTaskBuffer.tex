@@ -1,0 +1,116 @@
+\hypertarget{classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer}{\section{apollo\-:\-:cyber\-:\-:record\-:\-:Play\-Task\-Buffer Class Reference}
+\label{classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer}\index{apollo\-::cyber\-::record\-::\-Play\-Task\-Buffer@{apollo\-::cyber\-::record\-::\-Play\-Task\-Buffer}}
+}
+
+
+{\ttfamily \#include $<$play\-\_\-task\-\_\-buffer.\-h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer_abdab9410dfa9e3ea1ff24159f2def04f}{Task\-Ptr} = std\-::shared\-\_\-ptr$<$ \hyperlink{classapollo_1_1cyber_1_1record_1_1PlayTask}{Play\-Task} $>$
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer_a86f981e02cc0d763c58afdd89b0db510}{Task\-Map} = std\-::multimap$<$ uint64\-\_\-t, \hyperlink{classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer_abdab9410dfa9e3ea1ff24159f2def04f}{Task\-Ptr} $>$
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer_a04dad02bd480aa696e9cb8f1c7df2775}{Play\-Task\-Buffer} ()
+\item 
+virtual \hyperlink{classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer_a66a4e421a23fc3e67fd332197fa12c43}{$\sim$\-Play\-Task\-Buffer} ()
+\item 
+size\-\_\-t \hyperlink{classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer_ac55eb5a8ce38f8d2bed2c900ac8b8b42}{Size} () const 
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer_acc53cf6e820900208d155d4bce82467e}{Empty} () const 
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer_af25951447b2d3aaccad81200ff465280}{Push} (const \hyperlink{classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer_abdab9410dfa9e3ea1ff24159f2def04f}{Task\-Ptr} \&task)
+\item 
+\hyperlink{classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer_abdab9410dfa9e3ea1ff24159f2def04f}{Task\-Ptr} \hyperlink{classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer_ab62f0719b82c466efd5f22785b4f8c22}{Front} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer_ac0b92aa25c06c8ffd6f04756ea4daea9}{Pop\-Front} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer_a86f981e02cc0d763c58afdd89b0db510}{Task\-Map} \hyperlink{classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer_a4d96a5bc32297ceb367780f555d323d8}{tasks\-\_\-}
+\item 
+std\-::mutex \hyperlink{classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer_a1ffbe36785389d7f80ee266898ab1348}{mutex\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer_a86f981e02cc0d763c58afdd89b0db510}{\index{apollo\-::cyber\-::record\-::\-Play\-Task\-Buffer@{apollo\-::cyber\-::record\-::\-Play\-Task\-Buffer}!Task\-Map@{Task\-Map}}
+\index{Task\-Map@{Task\-Map}!apollo::cyber::record::PlayTaskBuffer@{apollo\-::cyber\-::record\-::\-Play\-Task\-Buffer}}
+\subsubsection[{Task\-Map}]{\setlength{\rightskip}{0pt plus 5cm}using {\bf apollo\-::cyber\-::record\-::\-Play\-Task\-Buffer\-::\-Task\-Map} =  std\-::multimap$<$uint64\-\_\-t, {\bf Task\-Ptr}$>$}}\label{classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer_a86f981e02cc0d763c58afdd89b0db510}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer_abdab9410dfa9e3ea1ff24159f2def04f}{\index{apollo\-::cyber\-::record\-::\-Play\-Task\-Buffer@{apollo\-::cyber\-::record\-::\-Play\-Task\-Buffer}!Task\-Ptr@{Task\-Ptr}}
+\index{Task\-Ptr@{Task\-Ptr}!apollo::cyber::record::PlayTaskBuffer@{apollo\-::cyber\-::record\-::\-Play\-Task\-Buffer}}
+\subsubsection[{Task\-Ptr}]{\setlength{\rightskip}{0pt plus 5cm}using {\bf apollo\-::cyber\-::record\-::\-Play\-Task\-Buffer\-::\-Task\-Ptr} =  std\-::shared\-\_\-ptr$<${\bf Play\-Task}$>$}}\label{classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer_abdab9410dfa9e3ea1ff24159f2def04f}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer_a04dad02bd480aa696e9cb8f1c7df2775}{\index{apollo\-::cyber\-::record\-::\-Play\-Task\-Buffer@{apollo\-::cyber\-::record\-::\-Play\-Task\-Buffer}!Play\-Task\-Buffer@{Play\-Task\-Buffer}}
+\index{Play\-Task\-Buffer@{Play\-Task\-Buffer}!apollo::cyber::record::PlayTaskBuffer@{apollo\-::cyber\-::record\-::\-Play\-Task\-Buffer}}
+\subsubsection[{Play\-Task\-Buffer}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::record\-::\-Play\-Task\-Buffer\-::\-Play\-Task\-Buffer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer_a04dad02bd480aa696e9cb8f1c7df2775}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer_a66a4e421a23fc3e67fd332197fa12c43}{\index{apollo\-::cyber\-::record\-::\-Play\-Task\-Buffer@{apollo\-::cyber\-::record\-::\-Play\-Task\-Buffer}!$\sim$\-Play\-Task\-Buffer@{$\sim$\-Play\-Task\-Buffer}}
+\index{$\sim$\-Play\-Task\-Buffer@{$\sim$\-Play\-Task\-Buffer}!apollo::cyber::record::PlayTaskBuffer@{apollo\-::cyber\-::record\-::\-Play\-Task\-Buffer}}
+\subsubsection[{$\sim$\-Play\-Task\-Buffer}]{\setlength{\rightskip}{0pt plus 5cm}virtual apollo\-::cyber\-::record\-::\-Play\-Task\-Buffer\-::$\sim$\-Play\-Task\-Buffer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer_a66a4e421a23fc3e67fd332197fa12c43}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer_acc53cf6e820900208d155d4bce82467e}{\index{apollo\-::cyber\-::record\-::\-Play\-Task\-Buffer@{apollo\-::cyber\-::record\-::\-Play\-Task\-Buffer}!Empty@{Empty}}
+\index{Empty@{Empty}!apollo::cyber::record::PlayTaskBuffer@{apollo\-::cyber\-::record\-::\-Play\-Task\-Buffer}}
+\subsubsection[{Empty}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::record\-::\-Play\-Task\-Buffer\-::\-Empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer_acc53cf6e820900208d155d4bce82467e}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer_ab62f0719b82c466efd5f22785b4f8c22}{\index{apollo\-::cyber\-::record\-::\-Play\-Task\-Buffer@{apollo\-::cyber\-::record\-::\-Play\-Task\-Buffer}!Front@{Front}}
+\index{Front@{Front}!apollo::cyber::record::PlayTaskBuffer@{apollo\-::cyber\-::record\-::\-Play\-Task\-Buffer}}
+\subsubsection[{Front}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Task\-Ptr} apollo\-::cyber\-::record\-::\-Play\-Task\-Buffer\-::\-Front (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer_ab62f0719b82c466efd5f22785b4f8c22}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer_ac0b92aa25c06c8ffd6f04756ea4daea9}{\index{apollo\-::cyber\-::record\-::\-Play\-Task\-Buffer@{apollo\-::cyber\-::record\-::\-Play\-Task\-Buffer}!Pop\-Front@{Pop\-Front}}
+\index{Pop\-Front@{Pop\-Front}!apollo::cyber::record::PlayTaskBuffer@{apollo\-::cyber\-::record\-::\-Play\-Task\-Buffer}}
+\subsubsection[{Pop\-Front}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::record\-::\-Play\-Task\-Buffer\-::\-Pop\-Front (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer_ac0b92aa25c06c8ffd6f04756ea4daea9}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer_af25951447b2d3aaccad81200ff465280}{\index{apollo\-::cyber\-::record\-::\-Play\-Task\-Buffer@{apollo\-::cyber\-::record\-::\-Play\-Task\-Buffer}!Push@{Push}}
+\index{Push@{Push}!apollo::cyber::record::PlayTaskBuffer@{apollo\-::cyber\-::record\-::\-Play\-Task\-Buffer}}
+\subsubsection[{Push}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::record\-::\-Play\-Task\-Buffer\-::\-Push (
+\begin{DoxyParamCaption}
+\item[{const {\bf Task\-Ptr} \&}]{task}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer_af25951447b2d3aaccad81200ff465280}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer_ac55eb5a8ce38f8d2bed2c900ac8b8b42}{\index{apollo\-::cyber\-::record\-::\-Play\-Task\-Buffer@{apollo\-::cyber\-::record\-::\-Play\-Task\-Buffer}!Size@{Size}}
+\index{Size@{Size}!apollo::cyber::record::PlayTaskBuffer@{apollo\-::cyber\-::record\-::\-Play\-Task\-Buffer}}
+\subsubsection[{Size}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t apollo\-::cyber\-::record\-::\-Play\-Task\-Buffer\-::\-Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer_ac55eb5a8ce38f8d2bed2c900ac8b8b42}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer_a1ffbe36785389d7f80ee266898ab1348}{\index{apollo\-::cyber\-::record\-::\-Play\-Task\-Buffer@{apollo\-::cyber\-::record\-::\-Play\-Task\-Buffer}!mutex\-\_\-@{mutex\-\_\-}}
+\index{mutex\-\_\-@{mutex\-\_\-}!apollo::cyber::record::PlayTaskBuffer@{apollo\-::cyber\-::record\-::\-Play\-Task\-Buffer}}
+\subsubsection[{mutex\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::mutex apollo\-::cyber\-::record\-::\-Play\-Task\-Buffer\-::mutex\-\_\-\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer_a1ffbe36785389d7f80ee266898ab1348}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer_a4d96a5bc32297ceb367780f555d323d8}{\index{apollo\-::cyber\-::record\-::\-Play\-Task\-Buffer@{apollo\-::cyber\-::record\-::\-Play\-Task\-Buffer}!tasks\-\_\-@{tasks\-\_\-}}
+\index{tasks\-\_\-@{tasks\-\_\-}!apollo::cyber::record::PlayTaskBuffer@{apollo\-::cyber\-::record\-::\-Play\-Task\-Buffer}}
+\subsubsection[{tasks\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Task\-Map} apollo\-::cyber\-::record\-::\-Play\-Task\-Buffer\-::tasks\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer_a4d96a5bc32297ceb367780f555d323d8}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+tools/cyber\-\_\-recorder/player/\hyperlink{play__task__buffer_8h}{play\-\_\-task\-\_\-buffer.\-h}\end{DoxyCompactItemize}

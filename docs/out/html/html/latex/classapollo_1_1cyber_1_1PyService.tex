@@ -1,0 +1,128 @@
+\hypertarget{classapollo_1_1cyber_1_1PyService}{\section{apollo\-:\-:cyber\-:\-:Py\-Service Class Reference}
+\label{classapollo_1_1cyber_1_1PyService}\index{apollo\-::cyber\-::\-Py\-Service@{apollo\-::cyber\-::\-Py\-Service}}
+}
+
+
+{\ttfamily \#include $<$py\-\_\-node.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1PyService_a9d1ef7f49583e013e84b9ad7579740e5}{Py\-Service} (const std\-::string \&service\-\_\-name, const std\-::string \&data\-\_\-type, \hyperlink{classapollo_1_1cyber_1_1Node}{Node} $\ast$node)
+\item 
+\hyperlink{classapollo_1_1cyber_1_1PyService_ae063591fa991821b4b4c38b3c303b42c}{$\sim$\-Py\-Service} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1PyService_a5cfbdcf741b619e1d9bb4f191934aeb5}{register\-\_\-func} (int($\ast$func)(const char $\ast$))
+\item 
+std\-::string \hyperlink{classapollo_1_1cyber_1_1PyService_ae1deb060e2023beef0e4d944037db7e1}{read} ()
+\item 
+int \hyperlink{classapollo_1_1cyber_1_1PyService_a810410082a599d26d0f3e0b4acd6dd38}{write} (const std\-::string \&data)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespaceapollo_1_1cyber_a1152fb39339af5618cb8e3a7afc89703}{Py\-Msg\-Wrap\-Ptr} \hyperlink{classapollo_1_1cyber_1_1PyService_a591d16ed9d1a0f7dffb6da7a8a29ab9c}{cb} (const std\-::shared\-\_\-ptr$<$ const \hyperlink{classapollo_1_1cyber_1_1message_1_1PyMessageWrap}{message\-::\-Py\-Message\-Wrap} $>$ \&request)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1Node}{Node} $\ast$ \hyperlink{classapollo_1_1cyber_1_1PyService_a07c8fc13734dc16f9e904bc968e8b625}{node\-\_\-}
+\item 
+std\-::string \hyperlink{classapollo_1_1cyber_1_1PyService_a18608cb4dd8e78999a545a50ba031ebf}{service\-\_\-name\-\_\-}
+\item 
+std\-::string \hyperlink{classapollo_1_1cyber_1_1PyService_a513217bf46b0b77682301c3455cfe4b2}{data\-\_\-type\-\_\-}
+\item 
+int($\ast$ \hyperlink{classapollo_1_1cyber_1_1PyService_a2d5b481af42ce71251792b280b489fd6}{func\-\_\-} )(const char $\ast$) = nullptr
+\item 
+std\-::shared\-\_\-ptr$<$ \hyperlink{classapollo_1_1cyber_1_1Service}{Service}\\*
+$<$ \hyperlink{classapollo_1_1cyber_1_1message_1_1PyMessageWrap}{message\-::\-Py\-Message\-Wrap}, \\*
+\hyperlink{classapollo_1_1cyber_1_1message_1_1PyMessageWrap}{message\-::\-Py\-Message\-Wrap} $>$ $>$ \hyperlink{classapollo_1_1cyber_1_1PyService_a99aaf93ea49699319a639b7e4d5bcb47}{service\-\_\-}
+\item 
+std\-::mutex \hyperlink{classapollo_1_1cyber_1_1PyService_a072867c4addabd216a1570ef47fa32b9}{msg\-\_\-lock\-\_\-}
+\item 
+std\-::deque$<$ std\-::string $>$ \hyperlink{classapollo_1_1cyber_1_1PyService_ae4e009d900897119b74006f69c9218ba}{request\-\_\-cache\-\_\-}
+\item 
+std\-::deque$<$ std\-::string $>$ \hyperlink{classapollo_1_1cyber_1_1PyService_aaca305c91e61517f7e86ad84372091fd}{response\-\_\-cache\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classapollo_1_1cyber_1_1PyService_a9d1ef7f49583e013e84b9ad7579740e5}{\index{apollo\-::cyber\-::\-Py\-Service@{apollo\-::cyber\-::\-Py\-Service}!Py\-Service@{Py\-Service}}
+\index{Py\-Service@{Py\-Service}!apollo::cyber::PyService@{apollo\-::cyber\-::\-Py\-Service}}
+\subsubsection[{Py\-Service}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::\-Py\-Service\-::\-Py\-Service (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{service\-\_\-name, }
+\item[{const std\-::string \&}]{data\-\_\-type, }
+\item[{{\bf Node} $\ast$}]{node}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1PyService_a9d1ef7f49583e013e84b9ad7579740e5}
+\hypertarget{classapollo_1_1cyber_1_1PyService_ae063591fa991821b4b4c38b3c303b42c}{\index{apollo\-::cyber\-::\-Py\-Service@{apollo\-::cyber\-::\-Py\-Service}!$\sim$\-Py\-Service@{$\sim$\-Py\-Service}}
+\index{$\sim$\-Py\-Service@{$\sim$\-Py\-Service}!apollo::cyber::PyService@{apollo\-::cyber\-::\-Py\-Service}}
+\subsubsection[{$\sim$\-Py\-Service}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::\-Py\-Service\-::$\sim$\-Py\-Service (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1PyService_ae063591fa991821b4b4c38b3c303b42c}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1PyService_a591d16ed9d1a0f7dffb6da7a8a29ab9c}{\index{apollo\-::cyber\-::\-Py\-Service@{apollo\-::cyber\-::\-Py\-Service}!cb@{cb}}
+\index{cb@{cb}!apollo::cyber::PyService@{apollo\-::cyber\-::\-Py\-Service}}
+\subsubsection[{cb}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Py\-Msg\-Wrap\-Ptr} apollo\-::cyber\-::\-Py\-Service\-::cb (
+\begin{DoxyParamCaption}
+\item[{const std\-::shared\-\_\-ptr$<$ const {\bf message\-::\-Py\-Message\-Wrap} $>$ \&}]{request}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1PyService_a591d16ed9d1a0f7dffb6da7a8a29ab9c}
+\hypertarget{classapollo_1_1cyber_1_1PyService_ae1deb060e2023beef0e4d944037db7e1}{\index{apollo\-::cyber\-::\-Py\-Service@{apollo\-::cyber\-::\-Py\-Service}!read@{read}}
+\index{read@{read}!apollo::cyber::PyService@{apollo\-::cyber\-::\-Py\-Service}}
+\subsubsection[{read}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string apollo\-::cyber\-::\-Py\-Service\-::read (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1PyService_ae1deb060e2023beef0e4d944037db7e1}
+\hypertarget{classapollo_1_1cyber_1_1PyService_a5cfbdcf741b619e1d9bb4f191934aeb5}{\index{apollo\-::cyber\-::\-Py\-Service@{apollo\-::cyber\-::\-Py\-Service}!register\-\_\-func@{register\-\_\-func}}
+\index{register\-\_\-func@{register\-\_\-func}!apollo::cyber::PyService@{apollo\-::cyber\-::\-Py\-Service}}
+\subsubsection[{register\-\_\-func}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::\-Py\-Service\-::register\-\_\-func (
+\begin{DoxyParamCaption}
+\item[{int($\ast$)(const char $\ast$)}]{func}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1PyService_a5cfbdcf741b619e1d9bb4f191934aeb5}
+\hypertarget{classapollo_1_1cyber_1_1PyService_a810410082a599d26d0f3e0b4acd6dd38}{\index{apollo\-::cyber\-::\-Py\-Service@{apollo\-::cyber\-::\-Py\-Service}!write@{write}}
+\index{write@{write}!apollo::cyber::PyService@{apollo\-::cyber\-::\-Py\-Service}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}int apollo\-::cyber\-::\-Py\-Service\-::write (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1PyService_a810410082a599d26d0f3e0b4acd6dd38}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classapollo_1_1cyber_1_1PyService_a513217bf46b0b77682301c3455cfe4b2}{\index{apollo\-::cyber\-::\-Py\-Service@{apollo\-::cyber\-::\-Py\-Service}!data\-\_\-type\-\_\-@{data\-\_\-type\-\_\-}}
+\index{data\-\_\-type\-\_\-@{data\-\_\-type\-\_\-}!apollo::cyber::PyService@{apollo\-::cyber\-::\-Py\-Service}}
+\subsubsection[{data\-\_\-type\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string apollo\-::cyber\-::\-Py\-Service\-::data\-\_\-type\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1PyService_a513217bf46b0b77682301c3455cfe4b2}
+\hypertarget{classapollo_1_1cyber_1_1PyService_a2d5b481af42ce71251792b280b489fd6}{\index{apollo\-::cyber\-::\-Py\-Service@{apollo\-::cyber\-::\-Py\-Service}!func\-\_\-@{func\-\_\-}}
+\index{func\-\_\-@{func\-\_\-}!apollo::cyber::PyService@{apollo\-::cyber\-::\-Py\-Service}}
+\subsubsection[{func\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ apollo\-::cyber\-::\-Py\-Service\-::func\-\_\-)(const char $\ast$) = nullptr\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1PyService_a2d5b481af42ce71251792b280b489fd6}
+\hypertarget{classapollo_1_1cyber_1_1PyService_a072867c4addabd216a1570ef47fa32b9}{\index{apollo\-::cyber\-::\-Py\-Service@{apollo\-::cyber\-::\-Py\-Service}!msg\-\_\-lock\-\_\-@{msg\-\_\-lock\-\_\-}}
+\index{msg\-\_\-lock\-\_\-@{msg\-\_\-lock\-\_\-}!apollo::cyber::PyService@{apollo\-::cyber\-::\-Py\-Service}}
+\subsubsection[{msg\-\_\-lock\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::mutex apollo\-::cyber\-::\-Py\-Service\-::msg\-\_\-lock\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1PyService_a072867c4addabd216a1570ef47fa32b9}
+\hypertarget{classapollo_1_1cyber_1_1PyService_a07c8fc13734dc16f9e904bc968e8b625}{\index{apollo\-::cyber\-::\-Py\-Service@{apollo\-::cyber\-::\-Py\-Service}!node\-\_\-@{node\-\_\-}}
+\index{node\-\_\-@{node\-\_\-}!apollo::cyber::PyService@{apollo\-::cyber\-::\-Py\-Service}}
+\subsubsection[{node\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Node}$\ast$ apollo\-::cyber\-::\-Py\-Service\-::node\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1PyService_a07c8fc13734dc16f9e904bc968e8b625}
+\hypertarget{classapollo_1_1cyber_1_1PyService_ae4e009d900897119b74006f69c9218ba}{\index{apollo\-::cyber\-::\-Py\-Service@{apollo\-::cyber\-::\-Py\-Service}!request\-\_\-cache\-\_\-@{request\-\_\-cache\-\_\-}}
+\index{request\-\_\-cache\-\_\-@{request\-\_\-cache\-\_\-}!apollo::cyber::PyService@{apollo\-::cyber\-::\-Py\-Service}}
+\subsubsection[{request\-\_\-cache\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::deque$<$std\-::string$>$ apollo\-::cyber\-::\-Py\-Service\-::request\-\_\-cache\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1PyService_ae4e009d900897119b74006f69c9218ba}
+\hypertarget{classapollo_1_1cyber_1_1PyService_aaca305c91e61517f7e86ad84372091fd}{\index{apollo\-::cyber\-::\-Py\-Service@{apollo\-::cyber\-::\-Py\-Service}!response\-\_\-cache\-\_\-@{response\-\_\-cache\-\_\-}}
+\index{response\-\_\-cache\-\_\-@{response\-\_\-cache\-\_\-}!apollo::cyber::PyService@{apollo\-::cyber\-::\-Py\-Service}}
+\subsubsection[{response\-\_\-cache\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::deque$<$std\-::string$>$ apollo\-::cyber\-::\-Py\-Service\-::response\-\_\-cache\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1PyService_aaca305c91e61517f7e86ad84372091fd}
+\hypertarget{classapollo_1_1cyber_1_1PyService_a99aaf93ea49699319a639b7e4d5bcb47}{\index{apollo\-::cyber\-::\-Py\-Service@{apollo\-::cyber\-::\-Py\-Service}!service\-\_\-@{service\-\_\-}}
+\index{service\-\_\-@{service\-\_\-}!apollo::cyber::PyService@{apollo\-::cyber\-::\-Py\-Service}}
+\subsubsection[{service\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::shared\-\_\-ptr$<${\bf Service}$<${\bf message\-::\-Py\-Message\-Wrap}, {\bf message\-::\-Py\-Message\-Wrap}$>$ $>$ apollo\-::cyber\-::\-Py\-Service\-::service\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1PyService_a99aaf93ea49699319a639b7e4d5bcb47}
+\hypertarget{classapollo_1_1cyber_1_1PyService_a18608cb4dd8e78999a545a50ba031ebf}{\index{apollo\-::cyber\-::\-Py\-Service@{apollo\-::cyber\-::\-Py\-Service}!service\-\_\-name\-\_\-@{service\-\_\-name\-\_\-}}
+\index{service\-\_\-name\-\_\-@{service\-\_\-name\-\_\-}!apollo::cyber::PyService@{apollo\-::cyber\-::\-Py\-Service}}
+\subsubsection[{service\-\_\-name\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string apollo\-::cyber\-::\-Py\-Service\-::service\-\_\-name\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1PyService_a18608cb4dd8e78999a545a50ba031ebf}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+py\-\_\-wrapper/\hyperlink{py__node_8h}{py\-\_\-node.\-h}\end{DoxyCompactItemize}

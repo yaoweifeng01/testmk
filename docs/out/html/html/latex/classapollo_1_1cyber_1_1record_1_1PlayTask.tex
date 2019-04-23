@@ -1,0 +1,131 @@
+\hypertarget{classapollo_1_1cyber_1_1record_1_1PlayTask}{\section{apollo\-:\-:cyber\-:\-:record\-:\-:Play\-Task Class Reference}
+\label{classapollo_1_1cyber_1_1record_1_1PlayTask}\index{apollo\-::cyber\-::record\-::\-Play\-Task@{apollo\-::cyber\-::record\-::\-Play\-Task}}
+}
+
+
+{\ttfamily \#include $<$play\-\_\-task.\-h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1record_1_1PlayTask_a77f6d771bbb5a21c67a533a3c36efb77}{Message\-Ptr} = std\-::shared\-\_\-ptr$<$ \hyperlink{structapollo_1_1cyber_1_1message_1_1RawMessage}{message\-::\-Raw\-Message} $>$
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1record_1_1PlayTask_ab836ae21967a8fc00e1b556152bbfc9a}{Writer\-Ptr} = std\-::shared\-\_\-ptr$<$ \hyperlink{classapollo_1_1cyber_1_1Writer}{Writer}$<$ \hyperlink{structapollo_1_1cyber_1_1message_1_1RawMessage}{message\-::\-Raw\-Message} $>$$>$
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1record_1_1PlayTask_aabfe95d4b9fe2bf8be17b70af9d8cb1e}{Play\-Task} (const \hyperlink{classapollo_1_1cyber_1_1record_1_1PlayTask_a77f6d771bbb5a21c67a533a3c36efb77}{Message\-Ptr} \&msg, const \hyperlink{classapollo_1_1cyber_1_1record_1_1PlayTask_ab836ae21967a8fc00e1b556152bbfc9a}{Writer\-Ptr} \&writer, uint64\-\_\-t \hyperlink{classapollo_1_1cyber_1_1record_1_1PlayTask_ab0eab97ac4bea60ce30f5e1809c37be1}{msg\-\_\-real\-\_\-time\-\_\-ns}, uint64\-\_\-t \hyperlink{classapollo_1_1cyber_1_1record_1_1PlayTask_adeb245b818b190947264ed04ab7c1d77}{msg\-\_\-play\-\_\-time\-\_\-ns})
+\item 
+virtual \hyperlink{classapollo_1_1cyber_1_1record_1_1PlayTask_a1e38b526d329a121ddc24d899d38ec94}{$\sim$\-Play\-Task} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1record_1_1PlayTask_aba31dc77d54fcd939a16263b5f6b951f}{Play} ()
+\item 
+uint64\-\_\-t \hyperlink{classapollo_1_1cyber_1_1record_1_1PlayTask_ab0eab97ac4bea60ce30f5e1809c37be1}{msg\-\_\-real\-\_\-time\-\_\-ns} () const 
+\item 
+uint64\-\_\-t \hyperlink{classapollo_1_1cyber_1_1record_1_1PlayTask_adeb245b818b190947264ed04ab7c1d77}{msg\-\_\-play\-\_\-time\-\_\-ns} () const 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static uint64\-\_\-t \hyperlink{classapollo_1_1cyber_1_1record_1_1PlayTask_ae7df85963bce5bba5df858ad2387de6c}{played\-\_\-msg\-\_\-num} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1record_1_1PlayTask_a77f6d771bbb5a21c67a533a3c36efb77}{Message\-Ptr} \hyperlink{classapollo_1_1cyber_1_1record_1_1PlayTask_ac0c040bc6bd5628570185f0e4ffbdeef}{msg\-\_\-}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1record_1_1PlayTask_ab836ae21967a8fc00e1b556152bbfc9a}{Writer\-Ptr} \hyperlink{classapollo_1_1cyber_1_1record_1_1PlayTask_ae2caf470e78e9d706b321d9891d9f44b}{writer\-\_\-}
+\item 
+uint64\-\_\-t \hyperlink{classapollo_1_1cyber_1_1record_1_1PlayTask_af16f2eb40c896c70086bdc41207cb5b8}{msg\-\_\-real\-\_\-time\-\_\-ns\-\_\-}
+\item 
+uint64\-\_\-t \hyperlink{classapollo_1_1cyber_1_1record_1_1PlayTask_a02659dc739c25371b3062e6dd3a5bb57}{msg\-\_\-play\-\_\-time\-\_\-ns\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static std\-::atomic$<$ uint64\-\_\-t $>$ \hyperlink{classapollo_1_1cyber_1_1record_1_1PlayTask_a5dd34256985b04cbd9e22e57cd5d5f61}{played\-\_\-msg\-\_\-num\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1PlayTask_a77f6d771bbb5a21c67a533a3c36efb77}{\index{apollo\-::cyber\-::record\-::\-Play\-Task@{apollo\-::cyber\-::record\-::\-Play\-Task}!Message\-Ptr@{Message\-Ptr}}
+\index{Message\-Ptr@{Message\-Ptr}!apollo::cyber::record::PlayTask@{apollo\-::cyber\-::record\-::\-Play\-Task}}
+\subsubsection[{Message\-Ptr}]{\setlength{\rightskip}{0pt plus 5cm}using {\bf apollo\-::cyber\-::record\-::\-Play\-Task\-::\-Message\-Ptr} =  std\-::shared\-\_\-ptr$<${\bf message\-::\-Raw\-Message}$>$}}\label{classapollo_1_1cyber_1_1record_1_1PlayTask_a77f6d771bbb5a21c67a533a3c36efb77}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1PlayTask_ab836ae21967a8fc00e1b556152bbfc9a}{\index{apollo\-::cyber\-::record\-::\-Play\-Task@{apollo\-::cyber\-::record\-::\-Play\-Task}!Writer\-Ptr@{Writer\-Ptr}}
+\index{Writer\-Ptr@{Writer\-Ptr}!apollo::cyber::record::PlayTask@{apollo\-::cyber\-::record\-::\-Play\-Task}}
+\subsubsection[{Writer\-Ptr}]{\setlength{\rightskip}{0pt plus 5cm}using {\bf apollo\-::cyber\-::record\-::\-Play\-Task\-::\-Writer\-Ptr} =  std\-::shared\-\_\-ptr$<${\bf Writer}$<${\bf message\-::\-Raw\-Message}$>$$>$}}\label{classapollo_1_1cyber_1_1record_1_1PlayTask_ab836ae21967a8fc00e1b556152bbfc9a}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1PlayTask_aabfe95d4b9fe2bf8be17b70af9d8cb1e}{\index{apollo\-::cyber\-::record\-::\-Play\-Task@{apollo\-::cyber\-::record\-::\-Play\-Task}!Play\-Task@{Play\-Task}}
+\index{Play\-Task@{Play\-Task}!apollo::cyber::record::PlayTask@{apollo\-::cyber\-::record\-::\-Play\-Task}}
+\subsubsection[{Play\-Task}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::record\-::\-Play\-Task\-::\-Play\-Task (
+\begin{DoxyParamCaption}
+\item[{const {\bf Message\-Ptr} \&}]{msg, }
+\item[{const {\bf Writer\-Ptr} \&}]{writer, }
+\item[{uint64\-\_\-t}]{msg\-\_\-real\-\_\-time\-\_\-ns, }
+\item[{uint64\-\_\-t}]{msg\-\_\-play\-\_\-time\-\_\-ns}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1record_1_1PlayTask_aabfe95d4b9fe2bf8be17b70af9d8cb1e}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1PlayTask_a1e38b526d329a121ddc24d899d38ec94}{\index{apollo\-::cyber\-::record\-::\-Play\-Task@{apollo\-::cyber\-::record\-::\-Play\-Task}!$\sim$\-Play\-Task@{$\sim$\-Play\-Task}}
+\index{$\sim$\-Play\-Task@{$\sim$\-Play\-Task}!apollo::cyber::record::PlayTask@{apollo\-::cyber\-::record\-::\-Play\-Task}}
+\subsubsection[{$\sim$\-Play\-Task}]{\setlength{\rightskip}{0pt plus 5cm}virtual apollo\-::cyber\-::record\-::\-Play\-Task\-::$\sim$\-Play\-Task (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1record_1_1PlayTask_a1e38b526d329a121ddc24d899d38ec94}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1PlayTask_adeb245b818b190947264ed04ab7c1d77}{\index{apollo\-::cyber\-::record\-::\-Play\-Task@{apollo\-::cyber\-::record\-::\-Play\-Task}!msg\-\_\-play\-\_\-time\-\_\-ns@{msg\-\_\-play\-\_\-time\-\_\-ns}}
+\index{msg\-\_\-play\-\_\-time\-\_\-ns@{msg\-\_\-play\-\_\-time\-\_\-ns}!apollo::cyber::record::PlayTask@{apollo\-::cyber\-::record\-::\-Play\-Task}}
+\subsubsection[{msg\-\_\-play\-\_\-time\-\_\-ns}]{\setlength{\rightskip}{0pt plus 5cm}uint64\-\_\-t apollo\-::cyber\-::record\-::\-Play\-Task\-::msg\-\_\-play\-\_\-time\-\_\-ns (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1record_1_1PlayTask_adeb245b818b190947264ed04ab7c1d77}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1PlayTask_ab0eab97ac4bea60ce30f5e1809c37be1}{\index{apollo\-::cyber\-::record\-::\-Play\-Task@{apollo\-::cyber\-::record\-::\-Play\-Task}!msg\-\_\-real\-\_\-time\-\_\-ns@{msg\-\_\-real\-\_\-time\-\_\-ns}}
+\index{msg\-\_\-real\-\_\-time\-\_\-ns@{msg\-\_\-real\-\_\-time\-\_\-ns}!apollo::cyber::record::PlayTask@{apollo\-::cyber\-::record\-::\-Play\-Task}}
+\subsubsection[{msg\-\_\-real\-\_\-time\-\_\-ns}]{\setlength{\rightskip}{0pt plus 5cm}uint64\-\_\-t apollo\-::cyber\-::record\-::\-Play\-Task\-::msg\-\_\-real\-\_\-time\-\_\-ns (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1record_1_1PlayTask_ab0eab97ac4bea60ce30f5e1809c37be1}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1PlayTask_aba31dc77d54fcd939a16263b5f6b951f}{\index{apollo\-::cyber\-::record\-::\-Play\-Task@{apollo\-::cyber\-::record\-::\-Play\-Task}!Play@{Play}}
+\index{Play@{Play}!apollo::cyber::record::PlayTask@{apollo\-::cyber\-::record\-::\-Play\-Task}}
+\subsubsection[{Play}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::record\-::\-Play\-Task\-::\-Play (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1record_1_1PlayTask_aba31dc77d54fcd939a16263b5f6b951f}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1PlayTask_ae7df85963bce5bba5df858ad2387de6c}{\index{apollo\-::cyber\-::record\-::\-Play\-Task@{apollo\-::cyber\-::record\-::\-Play\-Task}!played\-\_\-msg\-\_\-num@{played\-\_\-msg\-\_\-num}}
+\index{played\-\_\-msg\-\_\-num@{played\-\_\-msg\-\_\-num}!apollo::cyber::record::PlayTask@{apollo\-::cyber\-::record\-::\-Play\-Task}}
+\subsubsection[{played\-\_\-msg\-\_\-num}]{\setlength{\rightskip}{0pt plus 5cm}static uint64\-\_\-t apollo\-::cyber\-::record\-::\-Play\-Task\-::played\-\_\-msg\-\_\-num (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classapollo_1_1cyber_1_1record_1_1PlayTask_ae7df85963bce5bba5df858ad2387de6c}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1PlayTask_ac0c040bc6bd5628570185f0e4ffbdeef}{\index{apollo\-::cyber\-::record\-::\-Play\-Task@{apollo\-::cyber\-::record\-::\-Play\-Task}!msg\-\_\-@{msg\-\_\-}}
+\index{msg\-\_\-@{msg\-\_\-}!apollo::cyber::record::PlayTask@{apollo\-::cyber\-::record\-::\-Play\-Task}}
+\subsubsection[{msg\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Message\-Ptr} apollo\-::cyber\-::record\-::\-Play\-Task\-::msg\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1record_1_1PlayTask_ac0c040bc6bd5628570185f0e4ffbdeef}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1PlayTask_a02659dc739c25371b3062e6dd3a5bb57}{\index{apollo\-::cyber\-::record\-::\-Play\-Task@{apollo\-::cyber\-::record\-::\-Play\-Task}!msg\-\_\-play\-\_\-time\-\_\-ns\-\_\-@{msg\-\_\-play\-\_\-time\-\_\-ns\-\_\-}}
+\index{msg\-\_\-play\-\_\-time\-\_\-ns\-\_\-@{msg\-\_\-play\-\_\-time\-\_\-ns\-\_\-}!apollo::cyber::record::PlayTask@{apollo\-::cyber\-::record\-::\-Play\-Task}}
+\subsubsection[{msg\-\_\-play\-\_\-time\-\_\-ns\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}uint64\-\_\-t apollo\-::cyber\-::record\-::\-Play\-Task\-::msg\-\_\-play\-\_\-time\-\_\-ns\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1record_1_1PlayTask_a02659dc739c25371b3062e6dd3a5bb57}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1PlayTask_af16f2eb40c896c70086bdc41207cb5b8}{\index{apollo\-::cyber\-::record\-::\-Play\-Task@{apollo\-::cyber\-::record\-::\-Play\-Task}!msg\-\_\-real\-\_\-time\-\_\-ns\-\_\-@{msg\-\_\-real\-\_\-time\-\_\-ns\-\_\-}}
+\index{msg\-\_\-real\-\_\-time\-\_\-ns\-\_\-@{msg\-\_\-real\-\_\-time\-\_\-ns\-\_\-}!apollo::cyber::record::PlayTask@{apollo\-::cyber\-::record\-::\-Play\-Task}}
+\subsubsection[{msg\-\_\-real\-\_\-time\-\_\-ns\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}uint64\-\_\-t apollo\-::cyber\-::record\-::\-Play\-Task\-::msg\-\_\-real\-\_\-time\-\_\-ns\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1record_1_1PlayTask_af16f2eb40c896c70086bdc41207cb5b8}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1PlayTask_a5dd34256985b04cbd9e22e57cd5d5f61}{\index{apollo\-::cyber\-::record\-::\-Play\-Task@{apollo\-::cyber\-::record\-::\-Play\-Task}!played\-\_\-msg\-\_\-num\-\_\-@{played\-\_\-msg\-\_\-num\-\_\-}}
+\index{played\-\_\-msg\-\_\-num\-\_\-@{played\-\_\-msg\-\_\-num\-\_\-}!apollo::cyber::record::PlayTask@{apollo\-::cyber\-::record\-::\-Play\-Task}}
+\subsubsection[{played\-\_\-msg\-\_\-num\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::atomic$<$uint64\-\_\-t$>$ apollo\-::cyber\-::record\-::\-Play\-Task\-::played\-\_\-msg\-\_\-num\-\_\-\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1record_1_1PlayTask_a5dd34256985b04cbd9e22e57cd5d5f61}
+\hypertarget{classapollo_1_1cyber_1_1record_1_1PlayTask_ae2caf470e78e9d706b321d9891d9f44b}{\index{apollo\-::cyber\-::record\-::\-Play\-Task@{apollo\-::cyber\-::record\-::\-Play\-Task}!writer\-\_\-@{writer\-\_\-}}
+\index{writer\-\_\-@{writer\-\_\-}!apollo::cyber::record::PlayTask@{apollo\-::cyber\-::record\-::\-Play\-Task}}
+\subsubsection[{writer\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Writer\-Ptr} apollo\-::cyber\-::record\-::\-Play\-Task\-::writer\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1record_1_1PlayTask_ae2caf470e78e9d706b321d9891d9f44b}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+tools/cyber\-\_\-recorder/player/\hyperlink{play__task_8h}{play\-\_\-task.\-h}\end{DoxyCompactItemize}

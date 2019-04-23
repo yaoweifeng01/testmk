@@ -1,0 +1,358 @@
+\hypertarget{namespaceapollo_1_1cyber_1_1message}{\section{apollo\-:\-:cyber\-:\-:message Namespace Reference}
+\label{namespaceapollo_1_1cyber_1_1message}\index{apollo\-::cyber\-::message@{apollo\-::cyber\-::message}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classapollo_1_1cyber_1_1message_1_1IntraMessage}{Intra\-Message}
+\item 
+class \hyperlink{classapollo_1_1cyber_1_1message_1_1MessageHeader}{Message\-Header}
+\item 
+class \hyperlink{classapollo_1_1cyber_1_1message_1_1HasSerializer}{Has\-Serializer}
+\item 
+class \hyperlink{classapollo_1_1cyber_1_1message_1_1ErrorCollector}{Error\-Collector}
+\item 
+class \hyperlink{classapollo_1_1cyber_1_1message_1_1ProtobufFactory}{Protobuf\-Factory}
+\item 
+class \hyperlink{classapollo_1_1cyber_1_1message_1_1PyMessageWrap}{Py\-Message\-Wrap}
+\item 
+struct \hyperlink{structapollo_1_1cyber_1_1message_1_1RawMessage}{Raw\-Message}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T , typename std\-::enable\-\_\-if$<$ Has\-Type$<$ T $>$\-::value \&\&std\-::is\-\_\-member\-\_\-function\-\_\-pointer$<$ decltype(\&\-T\-::\-Type\-Name)$>$\-::value, bool $>$\-::type  = 0$>$ }\\std\-::string \hyperlink{namespaceapollo_1_1cyber_1_1message_aed7a0653ea8d7791da7cf676f507a8ba}{Message\-Type} (const T \&message)
+\item 
+{\footnotesize template$<$typename T , typename std\-::enable\-\_\-if$<$ Has\-Type$<$ T $>$\-::value \&\&!std\-::is\-\_\-member\-\_\-function\-\_\-pointer$<$ decltype(\&\-T\-::\-Type\-Name)$>$\-::value, bool $>$\-::type  = 0$>$ }\\std\-::string \hyperlink{namespaceapollo_1_1cyber_1_1message_a9804d294759658408491c5b8929e8cb5}{Message\-Type} ()
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\-::enable\-\_\-if$<$ Has\-Set\-Type$<$ T $>$\\*
+\-::value, void $>$\-::type \hyperlink{namespaceapollo_1_1cyber_1_1message_a2b337ed960f840af58dc36a9459a4865}{Set\-Type\-Name} (const std\-::string \&type\-\_\-name, T $\ast$message)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\-::enable\-\_\-if$<$!Has\-Set\-Type$<$ T $>$\\*
+\-::value, void $>$\-::type \hyperlink{namespaceapollo_1_1cyber_1_1message_aa80d580cdaf16ade14c16309e336d42e}{Set\-Type\-Name} (const std\-::string \&type\-\_\-name, T $\ast$message)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\-::enable\-\_\-if$<$ Has\-Byte\-Size$<$ T $>$\\*
+\-::value, int $>$\-::type \hyperlink{namespaceapollo_1_1cyber_1_1message_a86c5c50ba417237cb14b1bc0ef413e42}{Byte\-Size} (const T \&message)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\-::enable\-\_\-if$<$!Has\-Byte\-Size$<$ T $>$\\*
+\-::value, int $>$\-::type \hyperlink{namespaceapollo_1_1cyber_1_1message_a53d094570369a6e8413967cdd4025b82}{Byte\-Size} (const T \&message)
+\item 
+{\footnotesize template$<$typename T $>$ }\\int \hyperlink{namespaceapollo_1_1cyber_1_1message_abd3f08d8fd1f9a79b1da4d782c73fc48}{Full\-Byte\-Size} (const T \&message)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\-::enable\-\_\-if\\*
+$<$ Has\-Parse\-From\-Array$<$ T $>$\\*
+\-::value, bool $>$\-::type \hyperlink{namespaceapollo_1_1cyber_1_1message_aeb045f496b533d2e1f405d8588f9b279}{Parse\-From\-Array} (const void $\ast$data, int size, T $\ast$message)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\-::enable\-\_\-if\\*
+$<$!Has\-Parse\-From\-Array$<$ T $>$\\*
+\-::value, bool $>$\-::type \hyperlink{namespaceapollo_1_1cyber_1_1message_a5808d28d4a46e2a0ca378526c25b1e37}{Parse\-From\-Array} (const void $\ast$data, int size, T $\ast$message)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\-::enable\-\_\-if\\*
+$<$ Has\-Parse\-From\-String$<$ T $>$\\*
+\-::value, bool $>$\-::type \hyperlink{namespaceapollo_1_1cyber_1_1message_ac7c65d89fac88eda8ae486507c260f39}{Parse\-From\-String} (const std\-::string \&str, T $\ast$message)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\-::enable\-\_\-if\\*
+$<$!Has\-Parse\-From\-String$<$ T $>$\\*
+\-::value, bool $>$\-::type \hyperlink{namespaceapollo_1_1cyber_1_1message_a447d1039d8ca437c0bb1a3f620154092}{Parse\-From\-String} (const std\-::string \&str, T $\ast$message)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\-::enable\-\_\-if\\*
+$<$ Has\-Parse\-From\-Array$<$ T $>$\\*
+\-::value, bool $>$\-::type \hyperlink{namespaceapollo_1_1cyber_1_1message_aabb2d1760d1f1755b1682813b0f39b6f}{Parse\-From\-H\-C} (const void $\ast$data, int size, T $\ast$message)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\-::enable\-\_\-if\\*
+$<$!Has\-Parse\-From\-Array$<$ T $>$\\*
+\-::value, bool $>$\-::type \hyperlink{namespaceapollo_1_1cyber_1_1message_a100b9c6809db1365bf09a3c621751449}{Parse\-From\-H\-C} (const void $\ast$data, int size, T $\ast$message)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\-::enable\-\_\-if\\*
+$<$ Has\-Serialize\-To\-Array$<$ T $>$\\*
+\-::value, bool $>$\-::type \hyperlink{namespaceapollo_1_1cyber_1_1message_a101dafae7968f3114fa0d27935ee0630}{Serialize\-To\-Array} (const T \&message, void $\ast$data, int size)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\-::enable\-\_\-if\\*
+$<$!Has\-Serialize\-To\-Array$<$ T $>$\\*
+\-::value, bool $>$\-::type \hyperlink{namespaceapollo_1_1cyber_1_1message_a6fdb56336a64af71da0e2c79de30b949}{Serialize\-To\-Array} (const T \&message, void $\ast$data, int size)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\-::enable\-\_\-if\\*
+$<$ Has\-Serialize\-To\-String$<$ T $>$\\*
+\-::value, bool $>$\-::type \hyperlink{namespaceapollo_1_1cyber_1_1message_a56be747d5d58394d96f3b997a19c47b9}{Serialize\-To\-String} (const T \&message, std\-::string $\ast$str)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\-::enable\-\_\-if\\*
+$<$!Has\-Serialize\-To\-String$<$ T $>$\\*
+\-::value, bool $>$\-::type \hyperlink{namespaceapollo_1_1cyber_1_1message_a5608a318a0ae528e1629c9cfc87e489a}{Serialize\-To\-String} (const T \&message, std\-::string $\ast$str)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\-::enable\-\_\-if\\*
+$<$ Has\-Serialize\-To\-Array$<$ T $>$\\*
+\-::value, bool $>$\-::type \hyperlink{namespaceapollo_1_1cyber_1_1message_a388b614c8e6891dbfab3191e329ec7f1}{Serialize\-To\-H\-C} (const T \&message, void $\ast$data, int size)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\-::enable\-\_\-if\\*
+$<$!Has\-Serialize\-To\-Array$<$ T $>$\\*
+\-::value, bool $>$\-::type \hyperlink{namespaceapollo_1_1cyber_1_1message_a4bf197cbc2ae92e0a3ff9f705af2971b}{Serialize\-To\-H\-C} (const T \&message, void $\ast$data, int size)
+\item 
+{\footnotesize template$<$typename T , typename std\-::enable\-\_\-if$<$ Has\-Descriptor$<$ T $>$\-::value, bool $>$\-::type  = 0$>$ }\\void \hyperlink{namespaceapollo_1_1cyber_1_1message_adaa75b444b0befc8527210cfc29b1049}{Get\-Descriptor\-String} (const std\-::string \&type, std\-::string $\ast$desc\-\_\-str)
+\item 
+{\footnotesize template$<$typename Message\-T , typename std\-::enable\-\_\-if$<$ !std\-::is\-\_\-base\-\_\-of$<$ google\-::protobuf\-::\-Message, Message\-T $>$\-::value, int $>$\-::type  = 0$>$ }\\void \hyperlink{namespaceapollo_1_1cyber_1_1message_ab794defc8952601237ff80cd187ecec1}{Get\-Descriptor\-String} (const Message\-T \&message, std\-::string $\ast$desc\-\_\-str)
+\item 
+{\footnotesize template$<$typename Message\-T , typename std\-::enable\-\_\-if$<$ std\-::is\-\_\-base\-\_\-of$<$ google\-::protobuf\-::\-Message, Message\-T $>$\-::value, int $>$\-::type  = 0$>$ }\\std\-::string \hyperlink{namespaceapollo_1_1cyber_1_1message_a2d8177d4cd8dd056aaad524b1cb4137a}{Message\-Type} (const Message\-T \&message)
+\item 
+{\footnotesize template$<$typename Message\-T , typename std\-::enable\-\_\-if$<$ std\-::is\-\_\-base\-\_\-of$<$ google\-::protobuf\-::\-Message, Message\-T $>$\-::value, int $>$\-::type  = 0$>$ }\\bool \hyperlink{namespaceapollo_1_1cyber_1_1message_a186f9efe80c75467002d7f76509b96a9}{Register\-Message} (const Message\-T \&message)
+\item 
+bool \hyperlink{namespaceapollo_1_1cyber_1_1message_ab83eab8558ccf82e2af5b216c39acedd}{Serialize\-To\-Array} (const \hyperlink{classapollo_1_1cyber_1_1message_1_1PyMessageWrap}{Py\-Message\-Wrap} \&message, void $\ast$data, int size)
+\item 
+bool \hyperlink{namespaceapollo_1_1cyber_1_1message_a119266bb8560e3b93456580b373a11a9}{Parse\-From\-Array} (const void $\ast$data, int size, \hyperlink{classapollo_1_1cyber_1_1message_1_1PyMessageWrap}{Py\-Message\-Wrap} $\ast$message)
+\item 
+int \hyperlink{namespaceapollo_1_1cyber_1_1message_aa6e094242ba8c1c36c06edcc85d9fdf6}{Byte\-Size} (const \hyperlink{classapollo_1_1cyber_1_1message_1_1PyMessageWrap}{Py\-Message\-Wrap} \&message)
+\item 
+bool \hyperlink{namespaceapollo_1_1cyber_1_1message_a94bcdf7f75627047514bcbdc059c7ac6}{Serialize\-To\-Array} (const \hyperlink{structapollo_1_1cyber_1_1message_1_1RawMessage}{Raw\-Message} \&message, void $\ast$data, int size)
+\item 
+bool \hyperlink{namespaceapollo_1_1cyber_1_1message_a76d31ca5297e7c40fbd682756159e8ff}{Parse\-From\-Array} (const void $\ast$data, int size, \hyperlink{structapollo_1_1cyber_1_1message_1_1RawMessage}{Raw\-Message} $\ast$message)
+\item 
+int \hyperlink{namespaceapollo_1_1cyber_1_1message_a3d9bb094a125aa150c25b2b50a40cc97}{Byte\-Size} (const \hyperlink{structapollo_1_1cyber_1_1message_1_1RawMessage}{Raw\-Message} \&message)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$const \hyperlink{namespaceapollo_1_1cyber_1_1message_a365817ca48261ee138abde4580d63af9}{P\-Y\-\_\-\-M\-E\-S\-S\-A\-G\-E\-\_\-\-F\-U\-L\-L\-N\-A\-M\-E} = \char`\"{}apollo.\-cyber.\-message.\-Py\-Message\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{namespaceapollo_1_1cyber_1_1message_a3d9bb094a125aa150c25b2b50a40cc97}{\index{apollo\-::cyber\-::message@{apollo\-::cyber\-::message}!Byte\-Size@{Byte\-Size}}
+\index{Byte\-Size@{Byte\-Size}!apollo::cyber::message@{apollo\-::cyber\-::message}}
+\subsubsection[{Byte\-Size}]{\setlength{\rightskip}{0pt plus 5cm}int apollo\-::cyber\-::message\-::\-Byte\-Size (
+\begin{DoxyParamCaption}
+\item[{const Raw\-Message \&}]{message}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespaceapollo_1_1cyber_1_1message_a3d9bb094a125aa150c25b2b50a40cc97}
+\hypertarget{namespaceapollo_1_1cyber_1_1message_aa6e094242ba8c1c36c06edcc85d9fdf6}{\index{apollo\-::cyber\-::message@{apollo\-::cyber\-::message}!Byte\-Size@{Byte\-Size}}
+\index{Byte\-Size@{Byte\-Size}!apollo::cyber::message@{apollo\-::cyber\-::message}}
+\subsubsection[{Byte\-Size}]{\setlength{\rightskip}{0pt plus 5cm}int apollo\-::cyber\-::message\-::\-Byte\-Size (
+\begin{DoxyParamCaption}
+\item[{const Py\-Message\-Wrap \&}]{message}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespaceapollo_1_1cyber_1_1message_aa6e094242ba8c1c36c06edcc85d9fdf6}
+\hypertarget{namespaceapollo_1_1cyber_1_1message_a86c5c50ba417237cb14b1bc0ef413e42}{\index{apollo\-::cyber\-::message@{apollo\-::cyber\-::message}!Byte\-Size@{Byte\-Size}}
+\index{Byte\-Size@{Byte\-Size}!apollo::cyber::message@{apollo\-::cyber\-::message}}
+\subsubsection[{Byte\-Size}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\-::enable\-\_\-if$<$Has\-Byte\-Size$<$T$>$\-::value, int$>$\-::type apollo\-::cyber\-::message\-::\-Byte\-Size (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{message}
+\end{DoxyParamCaption}
+)}}\label{namespaceapollo_1_1cyber_1_1message_a86c5c50ba417237cb14b1bc0ef413e42}
+\hypertarget{namespaceapollo_1_1cyber_1_1message_a53d094570369a6e8413967cdd4025b82}{\index{apollo\-::cyber\-::message@{apollo\-::cyber\-::message}!Byte\-Size@{Byte\-Size}}
+\index{Byte\-Size@{Byte\-Size}!apollo::cyber::message@{apollo\-::cyber\-::message}}
+\subsubsection[{Byte\-Size}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\-::enable\-\_\-if$<$!Has\-Byte\-Size$<$T$>$\-::value, int$>$\-::type apollo\-::cyber\-::message\-::\-Byte\-Size (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{message}
+\end{DoxyParamCaption}
+)}}\label{namespaceapollo_1_1cyber_1_1message_a53d094570369a6e8413967cdd4025b82}
+\hypertarget{namespaceapollo_1_1cyber_1_1message_abd3f08d8fd1f9a79b1da4d782c73fc48}{\index{apollo\-::cyber\-::message@{apollo\-::cyber\-::message}!Full\-Byte\-Size@{Full\-Byte\-Size}}
+\index{Full\-Byte\-Size@{Full\-Byte\-Size}!apollo::cyber::message@{apollo\-::cyber\-::message}}
+\subsubsection[{Full\-Byte\-Size}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ int apollo\-::cyber\-::message\-::\-Full\-Byte\-Size (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{message}
+\end{DoxyParamCaption}
+)}}\label{namespaceapollo_1_1cyber_1_1message_abd3f08d8fd1f9a79b1da4d782c73fc48}
+\hypertarget{namespaceapollo_1_1cyber_1_1message_adaa75b444b0befc8527210cfc29b1049}{\index{apollo\-::cyber\-::message@{apollo\-::cyber\-::message}!Get\-Descriptor\-String@{Get\-Descriptor\-String}}
+\index{Get\-Descriptor\-String@{Get\-Descriptor\-String}!apollo::cyber::message@{apollo\-::cyber\-::message}}
+\subsubsection[{Get\-Descriptor\-String}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T , typename std\-::enable\-\_\-if$<$ Has\-Descriptor$<$ T $>$\-::value, bool $>$\-::type  = 0$>$ void apollo\-::cyber\-::message\-::\-Get\-Descriptor\-String (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{type, }
+\item[{std\-::string $\ast$}]{desc\-\_\-str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespaceapollo_1_1cyber_1_1message_adaa75b444b0befc8527210cfc29b1049}
+\hypertarget{namespaceapollo_1_1cyber_1_1message_ab794defc8952601237ff80cd187ecec1}{\index{apollo\-::cyber\-::message@{apollo\-::cyber\-::message}!Get\-Descriptor\-String@{Get\-Descriptor\-String}}
+\index{Get\-Descriptor\-String@{Get\-Descriptor\-String}!apollo::cyber::message@{apollo\-::cyber\-::message}}
+\subsubsection[{Get\-Descriptor\-String}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Message\-T , typename std\-::enable\-\_\-if$<$ !std\-::is\-\_\-base\-\_\-of$<$ google\-::protobuf\-::\-Message, Message\-T $>$\-::value, int $>$\-::type  = 0$>$ void apollo\-::cyber\-::message\-::\-Get\-Descriptor\-String (
+\begin{DoxyParamCaption}
+\item[{const Message\-T \&}]{message, }
+\item[{std\-::string $\ast$}]{desc\-\_\-str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespaceapollo_1_1cyber_1_1message_ab794defc8952601237ff80cd187ecec1}
+\hypertarget{namespaceapollo_1_1cyber_1_1message_a2d8177d4cd8dd056aaad524b1cb4137a}{\index{apollo\-::cyber\-::message@{apollo\-::cyber\-::message}!Message\-Type@{Message\-Type}}
+\index{Message\-Type@{Message\-Type}!apollo::cyber::message@{apollo\-::cyber\-::message}}
+\subsubsection[{Message\-Type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Message\-T , typename std\-::enable\-\_\-if$<$ std\-::is\-\_\-base\-\_\-of$<$ google\-::protobuf\-::\-Message, Message\-T $>$\-::value, int $>$\-::type  = 0$>$ std\-::string apollo\-::cyber\-::message\-::\-Message\-Type (
+\begin{DoxyParamCaption}
+\item[{const Message\-T \&}]{message}
+\end{DoxyParamCaption}
+)}}\label{namespaceapollo_1_1cyber_1_1message_a2d8177d4cd8dd056aaad524b1cb4137a}
+\hypertarget{namespaceapollo_1_1cyber_1_1message_aed7a0653ea8d7791da7cf676f507a8ba}{\index{apollo\-::cyber\-::message@{apollo\-::cyber\-::message}!Message\-Type@{Message\-Type}}
+\index{Message\-Type@{Message\-Type}!apollo::cyber::message@{apollo\-::cyber\-::message}}
+\subsubsection[{Message\-Type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T , typename std\-::enable\-\_\-if$<$ Has\-Type$<$ T $>$\-::value \&\&std\-::is\-\_\-member\-\_\-function\-\_\-pointer$<$ decltype(\&\-T\-::\-Type\-Name)$>$\-::value, bool $>$\-::type  = 0$>$ std\-::string apollo\-::cyber\-::message\-::\-Message\-Type (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{message}
+\end{DoxyParamCaption}
+)}}\label{namespaceapollo_1_1cyber_1_1message_aed7a0653ea8d7791da7cf676f507a8ba}
+\hypertarget{namespaceapollo_1_1cyber_1_1message_a9804d294759658408491c5b8929e8cb5}{\index{apollo\-::cyber\-::message@{apollo\-::cyber\-::message}!Message\-Type@{Message\-Type}}
+\index{Message\-Type@{Message\-Type}!apollo::cyber::message@{apollo\-::cyber\-::message}}
+\subsubsection[{Message\-Type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T , typename std\-::enable\-\_\-if$<$ Has\-Type$<$ T $>$\-::value \&\&!std\-::is\-\_\-member\-\_\-function\-\_\-pointer$<$ decltype(\&\-T\-::\-Type\-Name)$>$\-::value, bool $>$\-::type  = 0$>$ std\-::string apollo\-::cyber\-::message\-::\-Message\-Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespaceapollo_1_1cyber_1_1message_a9804d294759658408491c5b8929e8cb5}
+\hypertarget{namespaceapollo_1_1cyber_1_1message_a76d31ca5297e7c40fbd682756159e8ff}{\index{apollo\-::cyber\-::message@{apollo\-::cyber\-::message}!Parse\-From\-Array@{Parse\-From\-Array}}
+\index{Parse\-From\-Array@{Parse\-From\-Array}!apollo::cyber::message@{apollo\-::cyber\-::message}}
+\subsubsection[{Parse\-From\-Array}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::message\-::\-Parse\-From\-Array (
+\begin{DoxyParamCaption}
+\item[{const void $\ast$}]{data, }
+\item[{int}]{size, }
+\item[{Raw\-Message $\ast$}]{message}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespaceapollo_1_1cyber_1_1message_a76d31ca5297e7c40fbd682756159e8ff}
+\hypertarget{namespaceapollo_1_1cyber_1_1message_a119266bb8560e3b93456580b373a11a9}{\index{apollo\-::cyber\-::message@{apollo\-::cyber\-::message}!Parse\-From\-Array@{Parse\-From\-Array}}
+\index{Parse\-From\-Array@{Parse\-From\-Array}!apollo::cyber::message@{apollo\-::cyber\-::message}}
+\subsubsection[{Parse\-From\-Array}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::message\-::\-Parse\-From\-Array (
+\begin{DoxyParamCaption}
+\item[{const void $\ast$}]{data, }
+\item[{int}]{size, }
+\item[{Py\-Message\-Wrap $\ast$}]{message}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespaceapollo_1_1cyber_1_1message_a119266bb8560e3b93456580b373a11a9}
+\hypertarget{namespaceapollo_1_1cyber_1_1message_aeb045f496b533d2e1f405d8588f9b279}{\index{apollo\-::cyber\-::message@{apollo\-::cyber\-::message}!Parse\-From\-Array@{Parse\-From\-Array}}
+\index{Parse\-From\-Array@{Parse\-From\-Array}!apollo::cyber::message@{apollo\-::cyber\-::message}}
+\subsubsection[{Parse\-From\-Array}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\-::enable\-\_\-if$<$Has\-Parse\-From\-Array$<$T$>$\-::value, bool$>$\-::type apollo\-::cyber\-::message\-::\-Parse\-From\-Array (
+\begin{DoxyParamCaption}
+\item[{const void $\ast$}]{data, }
+\item[{int}]{size, }
+\item[{T $\ast$}]{message}
+\end{DoxyParamCaption}
+)}}\label{namespaceapollo_1_1cyber_1_1message_aeb045f496b533d2e1f405d8588f9b279}
+\hypertarget{namespaceapollo_1_1cyber_1_1message_a5808d28d4a46e2a0ca378526c25b1e37}{\index{apollo\-::cyber\-::message@{apollo\-::cyber\-::message}!Parse\-From\-Array@{Parse\-From\-Array}}
+\index{Parse\-From\-Array@{Parse\-From\-Array}!apollo::cyber::message@{apollo\-::cyber\-::message}}
+\subsubsection[{Parse\-From\-Array}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\-::enable\-\_\-if$<$!Has\-Parse\-From\-Array$<$T$>$\-::value, bool$>$\-::type apollo\-::cyber\-::message\-::\-Parse\-From\-Array (
+\begin{DoxyParamCaption}
+\item[{const void $\ast$}]{data, }
+\item[{int}]{size, }
+\item[{T $\ast$}]{message}
+\end{DoxyParamCaption}
+)}}\label{namespaceapollo_1_1cyber_1_1message_a5808d28d4a46e2a0ca378526c25b1e37}
+\hypertarget{namespaceapollo_1_1cyber_1_1message_aabb2d1760d1f1755b1682813b0f39b6f}{\index{apollo\-::cyber\-::message@{apollo\-::cyber\-::message}!Parse\-From\-H\-C@{Parse\-From\-H\-C}}
+\index{Parse\-From\-H\-C@{Parse\-From\-H\-C}!apollo::cyber::message@{apollo\-::cyber\-::message}}
+\subsubsection[{Parse\-From\-H\-C}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\-::enable\-\_\-if$<$Has\-Parse\-From\-Array$<$T$>$\-::value, bool$>$\-::type apollo\-::cyber\-::message\-::\-Parse\-From\-H\-C (
+\begin{DoxyParamCaption}
+\item[{const void $\ast$}]{data, }
+\item[{int}]{size, }
+\item[{T $\ast$}]{message}
+\end{DoxyParamCaption}
+)}}\label{namespaceapollo_1_1cyber_1_1message_aabb2d1760d1f1755b1682813b0f39b6f}
+\hypertarget{namespaceapollo_1_1cyber_1_1message_a100b9c6809db1365bf09a3c621751449}{\index{apollo\-::cyber\-::message@{apollo\-::cyber\-::message}!Parse\-From\-H\-C@{Parse\-From\-H\-C}}
+\index{Parse\-From\-H\-C@{Parse\-From\-H\-C}!apollo::cyber::message@{apollo\-::cyber\-::message}}
+\subsubsection[{Parse\-From\-H\-C}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\-::enable\-\_\-if$<$!Has\-Parse\-From\-Array$<$T$>$\-::value, bool$>$\-::type apollo\-::cyber\-::message\-::\-Parse\-From\-H\-C (
+\begin{DoxyParamCaption}
+\item[{const void $\ast$}]{data, }
+\item[{int}]{size, }
+\item[{T $\ast$}]{message}
+\end{DoxyParamCaption}
+)}}\label{namespaceapollo_1_1cyber_1_1message_a100b9c6809db1365bf09a3c621751449}
+\hypertarget{namespaceapollo_1_1cyber_1_1message_ac7c65d89fac88eda8ae486507c260f39}{\index{apollo\-::cyber\-::message@{apollo\-::cyber\-::message}!Parse\-From\-String@{Parse\-From\-String}}
+\index{Parse\-From\-String@{Parse\-From\-String}!apollo::cyber::message@{apollo\-::cyber\-::message}}
+\subsubsection[{Parse\-From\-String}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\-::enable\-\_\-if$<$Has\-Parse\-From\-String$<$T$>$\-::value, bool$>$\-::type apollo\-::cyber\-::message\-::\-Parse\-From\-String (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{str, }
+\item[{T $\ast$}]{message}
+\end{DoxyParamCaption}
+)}}\label{namespaceapollo_1_1cyber_1_1message_ac7c65d89fac88eda8ae486507c260f39}
+\hypertarget{namespaceapollo_1_1cyber_1_1message_a447d1039d8ca437c0bb1a3f620154092}{\index{apollo\-::cyber\-::message@{apollo\-::cyber\-::message}!Parse\-From\-String@{Parse\-From\-String}}
+\index{Parse\-From\-String@{Parse\-From\-String}!apollo::cyber::message@{apollo\-::cyber\-::message}}
+\subsubsection[{Parse\-From\-String}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\-::enable\-\_\-if$<$!Has\-Parse\-From\-String$<$T$>$\-::value, bool$>$\-::type apollo\-::cyber\-::message\-::\-Parse\-From\-String (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{str, }
+\item[{T $\ast$}]{message}
+\end{DoxyParamCaption}
+)}}\label{namespaceapollo_1_1cyber_1_1message_a447d1039d8ca437c0bb1a3f620154092}
+\hypertarget{namespaceapollo_1_1cyber_1_1message_a186f9efe80c75467002d7f76509b96a9}{\index{apollo\-::cyber\-::message@{apollo\-::cyber\-::message}!Register\-Message@{Register\-Message}}
+\index{Register\-Message@{Register\-Message}!apollo::cyber::message@{apollo\-::cyber\-::message}}
+\subsubsection[{Register\-Message}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Message\-T , typename std\-::enable\-\_\-if$<$ std\-::is\-\_\-base\-\_\-of$<$ google\-::protobuf\-::\-Message, Message\-T $>$\-::value, int $>$\-::type  = 0$>$ bool apollo\-::cyber\-::message\-::\-Register\-Message (
+\begin{DoxyParamCaption}
+\item[{const Message\-T \&}]{message}
+\end{DoxyParamCaption}
+)}}\label{namespaceapollo_1_1cyber_1_1message_a186f9efe80c75467002d7f76509b96a9}
+\hypertarget{namespaceapollo_1_1cyber_1_1message_ab83eab8558ccf82e2af5b216c39acedd}{\index{apollo\-::cyber\-::message@{apollo\-::cyber\-::message}!Serialize\-To\-Array@{Serialize\-To\-Array}}
+\index{Serialize\-To\-Array@{Serialize\-To\-Array}!apollo::cyber::message@{apollo\-::cyber\-::message}}
+\subsubsection[{Serialize\-To\-Array}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::message\-::\-Serialize\-To\-Array (
+\begin{DoxyParamCaption}
+\item[{const Py\-Message\-Wrap \&}]{message, }
+\item[{void $\ast$}]{data, }
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespaceapollo_1_1cyber_1_1message_ab83eab8558ccf82e2af5b216c39acedd}
+\hypertarget{namespaceapollo_1_1cyber_1_1message_a94bcdf7f75627047514bcbdc059c7ac6}{\index{apollo\-::cyber\-::message@{apollo\-::cyber\-::message}!Serialize\-To\-Array@{Serialize\-To\-Array}}
+\index{Serialize\-To\-Array@{Serialize\-To\-Array}!apollo::cyber::message@{apollo\-::cyber\-::message}}
+\subsubsection[{Serialize\-To\-Array}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::message\-::\-Serialize\-To\-Array (
+\begin{DoxyParamCaption}
+\item[{const Raw\-Message \&}]{message, }
+\item[{void $\ast$}]{data, }
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespaceapollo_1_1cyber_1_1message_a94bcdf7f75627047514bcbdc059c7ac6}
+\hypertarget{namespaceapollo_1_1cyber_1_1message_a101dafae7968f3114fa0d27935ee0630}{\index{apollo\-::cyber\-::message@{apollo\-::cyber\-::message}!Serialize\-To\-Array@{Serialize\-To\-Array}}
+\index{Serialize\-To\-Array@{Serialize\-To\-Array}!apollo::cyber::message@{apollo\-::cyber\-::message}}
+\subsubsection[{Serialize\-To\-Array}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\-::enable\-\_\-if$<$Has\-Serialize\-To\-Array$<$T$>$\-::value, bool$>$\-::type apollo\-::cyber\-::message\-::\-Serialize\-To\-Array (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{message, }
+\item[{void $\ast$}]{data, }
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)}}\label{namespaceapollo_1_1cyber_1_1message_a101dafae7968f3114fa0d27935ee0630}
+\hypertarget{namespaceapollo_1_1cyber_1_1message_a6fdb56336a64af71da0e2c79de30b949}{\index{apollo\-::cyber\-::message@{apollo\-::cyber\-::message}!Serialize\-To\-Array@{Serialize\-To\-Array}}
+\index{Serialize\-To\-Array@{Serialize\-To\-Array}!apollo::cyber::message@{apollo\-::cyber\-::message}}
+\subsubsection[{Serialize\-To\-Array}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\-::enable\-\_\-if$<$!Has\-Serialize\-To\-Array$<$T$>$\-::value, bool$>$\-::type apollo\-::cyber\-::message\-::\-Serialize\-To\-Array (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{message, }
+\item[{void $\ast$}]{data, }
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)}}\label{namespaceapollo_1_1cyber_1_1message_a6fdb56336a64af71da0e2c79de30b949}
+\hypertarget{namespaceapollo_1_1cyber_1_1message_a388b614c8e6891dbfab3191e329ec7f1}{\index{apollo\-::cyber\-::message@{apollo\-::cyber\-::message}!Serialize\-To\-H\-C@{Serialize\-To\-H\-C}}
+\index{Serialize\-To\-H\-C@{Serialize\-To\-H\-C}!apollo::cyber::message@{apollo\-::cyber\-::message}}
+\subsubsection[{Serialize\-To\-H\-C}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\-::enable\-\_\-if$<$Has\-Serialize\-To\-Array$<$T$>$\-::value, bool$>$\-::type apollo\-::cyber\-::message\-::\-Serialize\-To\-H\-C (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{message, }
+\item[{void $\ast$}]{data, }
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)}}\label{namespaceapollo_1_1cyber_1_1message_a388b614c8e6891dbfab3191e329ec7f1}
+\hypertarget{namespaceapollo_1_1cyber_1_1message_a4bf197cbc2ae92e0a3ff9f705af2971b}{\index{apollo\-::cyber\-::message@{apollo\-::cyber\-::message}!Serialize\-To\-H\-C@{Serialize\-To\-H\-C}}
+\index{Serialize\-To\-H\-C@{Serialize\-To\-H\-C}!apollo::cyber::message@{apollo\-::cyber\-::message}}
+\subsubsection[{Serialize\-To\-H\-C}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\-::enable\-\_\-if$<$!Has\-Serialize\-To\-Array$<$T$>$\-::value, bool$>$\-::type apollo\-::cyber\-::message\-::\-Serialize\-To\-H\-C (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{message, }
+\item[{void $\ast$}]{data, }
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)}}\label{namespaceapollo_1_1cyber_1_1message_a4bf197cbc2ae92e0a3ff9f705af2971b}
+\hypertarget{namespaceapollo_1_1cyber_1_1message_a56be747d5d58394d96f3b997a19c47b9}{\index{apollo\-::cyber\-::message@{apollo\-::cyber\-::message}!Serialize\-To\-String@{Serialize\-To\-String}}
+\index{Serialize\-To\-String@{Serialize\-To\-String}!apollo::cyber::message@{apollo\-::cyber\-::message}}
+\subsubsection[{Serialize\-To\-String}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\-::enable\-\_\-if$<$Has\-Serialize\-To\-String$<$T$>$\-::value, bool$>$\-::type apollo\-::cyber\-::message\-::\-Serialize\-To\-String (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{message, }
+\item[{std\-::string $\ast$}]{str}
+\end{DoxyParamCaption}
+)}}\label{namespaceapollo_1_1cyber_1_1message_a56be747d5d58394d96f3b997a19c47b9}
+\hypertarget{namespaceapollo_1_1cyber_1_1message_a5608a318a0ae528e1629c9cfc87e489a}{\index{apollo\-::cyber\-::message@{apollo\-::cyber\-::message}!Serialize\-To\-String@{Serialize\-To\-String}}
+\index{Serialize\-To\-String@{Serialize\-To\-String}!apollo::cyber::message@{apollo\-::cyber\-::message}}
+\subsubsection[{Serialize\-To\-String}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\-::enable\-\_\-if$<$!Has\-Serialize\-To\-String$<$T$>$\-::value, bool$>$\-::type apollo\-::cyber\-::message\-::\-Serialize\-To\-String (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{message, }
+\item[{std\-::string $\ast$}]{str}
+\end{DoxyParamCaption}
+)}}\label{namespaceapollo_1_1cyber_1_1message_a5608a318a0ae528e1629c9cfc87e489a}
+\hypertarget{namespaceapollo_1_1cyber_1_1message_a2b337ed960f840af58dc36a9459a4865}{\index{apollo\-::cyber\-::message@{apollo\-::cyber\-::message}!Set\-Type\-Name@{Set\-Type\-Name}}
+\index{Set\-Type\-Name@{Set\-Type\-Name}!apollo::cyber::message@{apollo\-::cyber\-::message}}
+\subsubsection[{Set\-Type\-Name}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\-::enable\-\_\-if$<$Has\-Set\-Type$<$T$>$\-::value, void$>$\-::type apollo\-::cyber\-::message\-::\-Set\-Type\-Name (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{type\-\_\-name, }
+\item[{T $\ast$}]{message}
+\end{DoxyParamCaption}
+)}}\label{namespaceapollo_1_1cyber_1_1message_a2b337ed960f840af58dc36a9459a4865}
+\hypertarget{namespaceapollo_1_1cyber_1_1message_aa80d580cdaf16ade14c16309e336d42e}{\index{apollo\-::cyber\-::message@{apollo\-::cyber\-::message}!Set\-Type\-Name@{Set\-Type\-Name}}
+\index{Set\-Type\-Name@{Set\-Type\-Name}!apollo::cyber::message@{apollo\-::cyber\-::message}}
+\subsubsection[{Set\-Type\-Name}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\-::enable\-\_\-if$<$!Has\-Set\-Type$<$T$>$\-::value, void$>$\-::type apollo\-::cyber\-::message\-::\-Set\-Type\-Name (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{type\-\_\-name, }
+\item[{T $\ast$}]{message}
+\end{DoxyParamCaption}
+)}}\label{namespaceapollo_1_1cyber_1_1message_aa80d580cdaf16ade14c16309e336d42e}
+
+
+\subsection{Variable Documentation}
+\hypertarget{namespaceapollo_1_1cyber_1_1message_a365817ca48261ee138abde4580d63af9}{\index{apollo\-::cyber\-::message@{apollo\-::cyber\-::message}!P\-Y\-\_\-\-M\-E\-S\-S\-A\-G\-E\-\_\-\-F\-U\-L\-L\-N\-A\-M\-E@{P\-Y\-\_\-\-M\-E\-S\-S\-A\-G\-E\-\_\-\-F\-U\-L\-L\-N\-A\-M\-E}}
+\index{P\-Y\-\_\-\-M\-E\-S\-S\-A\-G\-E\-\_\-\-F\-U\-L\-L\-N\-A\-M\-E@{P\-Y\-\_\-\-M\-E\-S\-S\-A\-G\-E\-\_\-\-F\-U\-L\-L\-N\-A\-M\-E}!apollo::cyber::message@{apollo\-::cyber\-::message}}
+\subsubsection[{P\-Y\-\_\-\-M\-E\-S\-S\-A\-G\-E\-\_\-\-F\-U\-L\-L\-N\-A\-M\-E}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ const apollo\-::cyber\-::message\-::\-P\-Y\-\_\-\-M\-E\-S\-S\-A\-G\-E\-\_\-\-F\-U\-L\-L\-N\-A\-M\-E = \char`\"{}apollo.\-cyber.\-message.\-Py\-Message\char`\"{}}}\label{namespaceapollo_1_1cyber_1_1message_a365817ca48261ee138abde4580d63af9}

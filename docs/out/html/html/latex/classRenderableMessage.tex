@@ -1,0 +1,207 @@
+\hypertarget{classRenderableMessage}{\section{Renderable\-Message Class Reference}
+\label{classRenderableMessage}\index{Renderable\-Message@{Renderable\-Message}}
+}
+
+
+{\ttfamily \#include $<$renderable\-\_\-message.\-h$>$}
+
+Inheritance diagram for Renderable\-Message\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classRenderableMessage}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classRenderableMessage_afdf4e7a3ff674f72bc6c9bba9997a422}{Renderable\-Message} (\hyperlink{classRenderableMessage}{Renderable\-Message} $\ast$\hyperlink{classRenderableMessage_ab23728d14d9aff3efa0af7639ec6059c}{parent}=nullptr, int line\-No=0)
+\item 
+virtual \hyperlink{classRenderableMessage_a2a539566921f83ea97eed0ea8965d842}{$\sim$\-Renderable\-Message} ()
+\item 
+virtual void \hyperlink{classRenderableMessage_a3f65c247f5db9bb4918bca7d665bbdc6}{Render} (const \hyperlink{classScreen}{Screen} $\ast$s, int key)=0
+\item 
+virtual \hyperlink{classRenderableMessage}{Renderable\-Message} $\ast$ \hyperlink{classRenderableMessage_a0f933ad0befd4d3cf3a95e205c7398d6}{Child} (int) const =0
+\item 
+virtual double \hyperlink{classRenderableMessage_a7b8a1627a96d0b0658be68c1ad6b99a5}{frame\-\_\-ratio} (void)
+\item 
+\hyperlink{classRenderableMessage}{Renderable\-Message} $\ast$ \hyperlink{classRenderableMessage_ab23728d14d9aff3efa0af7639ec6059c}{parent} (void) const 
+\item 
+void \hyperlink{classRenderableMessage_a3313d82739bb1dc2da225a40aacfc9b6}{set\-\_\-parent} (\hyperlink{classRenderableMessage}{Renderable\-Message} $\ast$\hyperlink{classRenderableMessage_ab23728d14d9aff3efa0af7639ec6059c}{parent})
+\item 
+int \hyperlink{classRenderableMessage_a6ada5869afedf204cc031e3345624017}{page\-\_\-item\-\_\-count} (void) const 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr int \hyperlink{classRenderableMessage_af8a50adc6f5e10a890eb435390e4e8a6}{Frame\-Ratio\-\_\-\-Precision} = 2
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int $\ast$ \hyperlink{classRenderableMessage_a88b81ff1a8da326284fb4732b3d33f46}{line\-\_\-no} (void)
+\item 
+void \hyperlink{classRenderableMessage_aa6685f59c0d7a11b7510aa0f822d1a03}{set\-\_\-line\-\_\-no} (int line\-No)
+\item 
+void \hyperlink{classRenderableMessage_af2cbc010cd97044dee4ebb42c46ff340}{reset\-\_\-line\-\_\-page} (void)
+\item 
+void \hyperlink{classRenderableMessage_a6ca2c5740e208cb4062fbe021ce72853}{Split\-Pages} (int key)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classRenderableMessage_ae3a742ebe02b5a7f547e97921464e8b5}{line\-\_\-no\-\_\-}
+\item 
+int \hyperlink{classRenderableMessage_ac3a01804a7e180672c2a34fe2b8b0a8c}{pages\-\_\-}
+\item 
+int \hyperlink{classRenderableMessage_a1d6dcb391ac3d77b8b38c5e926d58375}{page\-\_\-index\-\_\-}
+\item 
+int \hyperlink{classRenderableMessage_ac013cc75fdc393be5bf3c8e95d1b5430}{page\-\_\-item\-\_\-count\-\_\-}
+\item 
+\hyperlink{classRenderableMessage}{Renderable\-Message} $\ast$ \hyperlink{classRenderableMessage_a4745527c9b4cf149bfeccee669fd3aa8}{parent\-\_\-}
+\item 
+double \hyperlink{classRenderableMessage_a41d8fd1e6b5f8dee768ee227783c6913}{frame\-\_\-ratio\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classRenderableMessage_a8d160591d071092304c2ed571901f8bb}{Screen}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classRenderableMessage_afdf4e7a3ff674f72bc6c9bba9997a422}{\index{Renderable\-Message@{Renderable\-Message}!Renderable\-Message@{Renderable\-Message}}
+\index{Renderable\-Message@{Renderable\-Message}!RenderableMessage@{Renderable\-Message}}
+\subsubsection[{Renderable\-Message}]{\setlength{\rightskip}{0pt plus 5cm}Renderable\-Message\-::\-Renderable\-Message (
+\begin{DoxyParamCaption}
+\item[{{\bf Renderable\-Message} $\ast$}]{parent = {\ttfamily nullptr}, }
+\item[{int}]{line\-No = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}}\label{classRenderableMessage_afdf4e7a3ff674f72bc6c9bba9997a422}
+\hypertarget{classRenderableMessage_a2a539566921f83ea97eed0ea8965d842}{\index{Renderable\-Message@{Renderable\-Message}!$\sim$\-Renderable\-Message@{$\sim$\-Renderable\-Message}}
+\index{$\sim$\-Renderable\-Message@{$\sim$\-Renderable\-Message}!RenderableMessage@{Renderable\-Message}}
+\subsubsection[{$\sim$\-Renderable\-Message}]{\setlength{\rightskip}{0pt plus 5cm}virtual Renderable\-Message\-::$\sim$\-Renderable\-Message (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classRenderableMessage_a2a539566921f83ea97eed0ea8965d842}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classRenderableMessage_a0f933ad0befd4d3cf3a95e205c7398d6}{\index{Renderable\-Message@{Renderable\-Message}!Child@{Child}}
+\index{Child@{Child}!RenderableMessage@{Renderable\-Message}}
+\subsubsection[{Child}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Renderable\-Message}$\ast$ Renderable\-Message\-::\-Child (
+\begin{DoxyParamCaption}
+\item[{int}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classRenderableMessage_a0f933ad0befd4d3cf3a95e205c7398d6}
+
+
+Implemented in \hyperlink{classGeneralMessageBase_a9ab394f1176382bbef06e1b7c37e35ee}{General\-Message\-Base}, and \hyperlink{classCyberTopologyMessage_afc36cda612863d6a940bef1509f39f16}{Cyber\-Topology\-Message}.
+
+\hypertarget{classRenderableMessage_a7b8a1627a96d0b0658be68c1ad6b99a5}{\index{Renderable\-Message@{Renderable\-Message}!frame\-\_\-ratio@{frame\-\_\-ratio}}
+\index{frame\-\_\-ratio@{frame\-\_\-ratio}!RenderableMessage@{Renderable\-Message}}
+\subsubsection[{frame\-\_\-ratio}]{\setlength{\rightskip}{0pt plus 5cm}virtual double Renderable\-Message\-::frame\-\_\-ratio (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classRenderableMessage_a7b8a1627a96d0b0658be68c1ad6b99a5}
+
+
+Reimplemented in \hyperlink{classGeneralChannelMessage_ae607e8278605ccb88ea541965a2ff4bd}{General\-Channel\-Message}.
+
+\hypertarget{classRenderableMessage_a88b81ff1a8da326284fb4732b3d33f46}{\index{Renderable\-Message@{Renderable\-Message}!line\-\_\-no@{line\-\_\-no}}
+\index{line\-\_\-no@{line\-\_\-no}!RenderableMessage@{Renderable\-Message}}
+\subsubsection[{line\-\_\-no}]{\setlength{\rightskip}{0pt plus 5cm}int$\ast$ Renderable\-Message\-::line\-\_\-no (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classRenderableMessage_a88b81ff1a8da326284fb4732b3d33f46}
+\hypertarget{classRenderableMessage_a6ada5869afedf204cc031e3345624017}{\index{Renderable\-Message@{Renderable\-Message}!page\-\_\-item\-\_\-count@{page\-\_\-item\-\_\-count}}
+\index{page\-\_\-item\-\_\-count@{page\-\_\-item\-\_\-count}!RenderableMessage@{Renderable\-Message}}
+\subsubsection[{page\-\_\-item\-\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}int Renderable\-Message\-::page\-\_\-item\-\_\-count (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classRenderableMessage_a6ada5869afedf204cc031e3345624017}
+\hypertarget{classRenderableMessage_ab23728d14d9aff3efa0af7639ec6059c}{\index{Renderable\-Message@{Renderable\-Message}!parent@{parent}}
+\index{parent@{parent}!RenderableMessage@{Renderable\-Message}}
+\subsubsection[{parent}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Renderable\-Message}$\ast$ Renderable\-Message\-::parent (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classRenderableMessage_ab23728d14d9aff3efa0af7639ec6059c}
+\hypertarget{classRenderableMessage_a3f65c247f5db9bb4918bca7d665bbdc6}{\index{Renderable\-Message@{Renderable\-Message}!Render@{Render}}
+\index{Render@{Render}!RenderableMessage@{Renderable\-Message}}
+\subsubsection[{Render}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Renderable\-Message\-::\-Render (
+\begin{DoxyParamCaption}
+\item[{const {\bf Screen} $\ast$}]{s, }
+\item[{int}]{key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classRenderableMessage_a3f65c247f5db9bb4918bca7d665bbdc6}
+
+
+Implemented in \hyperlink{classGeneralChannelMessage_af7f60b4c6e275dbfd0347aa2f8a2ac14}{General\-Channel\-Message}, \hyperlink{classCyberTopologyMessage_aed410d8532bc9230d35f61cebcee4824}{Cyber\-Topology\-Message}, and \hyperlink{classGeneralMessage_a382210348f197d8b83a3d5a795e04852}{General\-Message}.
+
+\hypertarget{classRenderableMessage_af2cbc010cd97044dee4ebb42c46ff340}{\index{Renderable\-Message@{Renderable\-Message}!reset\-\_\-line\-\_\-page@{reset\-\_\-line\-\_\-page}}
+\index{reset\-\_\-line\-\_\-page@{reset\-\_\-line\-\_\-page}!RenderableMessage@{Renderable\-Message}}
+\subsubsection[{reset\-\_\-line\-\_\-page}]{\setlength{\rightskip}{0pt plus 5cm}void Renderable\-Message\-::reset\-\_\-line\-\_\-page (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classRenderableMessage_af2cbc010cd97044dee4ebb42c46ff340}
+\hypertarget{classRenderableMessage_aa6685f59c0d7a11b7510aa0f822d1a03}{\index{Renderable\-Message@{Renderable\-Message}!set\-\_\-line\-\_\-no@{set\-\_\-line\-\_\-no}}
+\index{set\-\_\-line\-\_\-no@{set\-\_\-line\-\_\-no}!RenderableMessage@{Renderable\-Message}}
+\subsubsection[{set\-\_\-line\-\_\-no}]{\setlength{\rightskip}{0pt plus 5cm}void Renderable\-Message\-::set\-\_\-line\-\_\-no (
+\begin{DoxyParamCaption}
+\item[{int}]{line\-No}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classRenderableMessage_aa6685f59c0d7a11b7510aa0f822d1a03}
+\hypertarget{classRenderableMessage_a3313d82739bb1dc2da225a40aacfc9b6}{\index{Renderable\-Message@{Renderable\-Message}!set\-\_\-parent@{set\-\_\-parent}}
+\index{set\-\_\-parent@{set\-\_\-parent}!RenderableMessage@{Renderable\-Message}}
+\subsubsection[{set\-\_\-parent}]{\setlength{\rightskip}{0pt plus 5cm}void Renderable\-Message\-::set\-\_\-parent (
+\begin{DoxyParamCaption}
+\item[{{\bf Renderable\-Message} $\ast$}]{parent}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classRenderableMessage_a3313d82739bb1dc2da225a40aacfc9b6}
+\hypertarget{classRenderableMessage_a6ca2c5740e208cb4062fbe021ce72853}{\index{Renderable\-Message@{Renderable\-Message}!Split\-Pages@{Split\-Pages}}
+\index{Split\-Pages@{Split\-Pages}!RenderableMessage@{Renderable\-Message}}
+\subsubsection[{Split\-Pages}]{\setlength{\rightskip}{0pt plus 5cm}void Renderable\-Message\-::\-Split\-Pages (
+\begin{DoxyParamCaption}
+\item[{int}]{key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classRenderableMessage_a6ca2c5740e208cb4062fbe021ce72853}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classRenderableMessage_a8d160591d071092304c2ed571901f8bb}{\index{Renderable\-Message@{Renderable\-Message}!Screen@{Screen}}
+\index{Screen@{Screen}!RenderableMessage@{Renderable\-Message}}
+\subsubsection[{Screen}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Screen}\hspace{0.3cm}{\ttfamily [friend]}}}\label{classRenderableMessage_a8d160591d071092304c2ed571901f8bb}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classRenderableMessage_a41d8fd1e6b5f8dee768ee227783c6913}{\index{Renderable\-Message@{Renderable\-Message}!frame\-\_\-ratio\-\_\-@{frame\-\_\-ratio\-\_\-}}
+\index{frame\-\_\-ratio\-\_\-@{frame\-\_\-ratio\-\_\-}!RenderableMessage@{Renderable\-Message}}
+\subsubsection[{frame\-\_\-ratio\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}double Renderable\-Message\-::frame\-\_\-ratio\-\_\-\hspace{0.3cm}{\ttfamily [protected]}}}\label{classRenderableMessage_a41d8fd1e6b5f8dee768ee227783c6913}
+\hypertarget{classRenderableMessage_af8a50adc6f5e10a890eb435390e4e8a6}{\index{Renderable\-Message@{Renderable\-Message}!Frame\-Ratio\-\_\-\-Precision@{Frame\-Ratio\-\_\-\-Precision}}
+\index{Frame\-Ratio\-\_\-\-Precision@{Frame\-Ratio\-\_\-\-Precision}!RenderableMessage@{Renderable\-Message}}
+\subsubsection[{Frame\-Ratio\-\_\-\-Precision}]{\setlength{\rightskip}{0pt plus 5cm}constexpr int Renderable\-Message\-::\-Frame\-Ratio\-\_\-\-Precision = 2\hspace{0.3cm}{\ttfamily [static]}}}\label{classRenderableMessage_af8a50adc6f5e10a890eb435390e4e8a6}
+\hypertarget{classRenderableMessage_ae3a742ebe02b5a7f547e97921464e8b5}{\index{Renderable\-Message@{Renderable\-Message}!line\-\_\-no\-\_\-@{line\-\_\-no\-\_\-}}
+\index{line\-\_\-no\-\_\-@{line\-\_\-no\-\_\-}!RenderableMessage@{Renderable\-Message}}
+\subsubsection[{line\-\_\-no\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int Renderable\-Message\-::line\-\_\-no\-\_\-\hspace{0.3cm}{\ttfamily [protected]}}}\label{classRenderableMessage_ae3a742ebe02b5a7f547e97921464e8b5}
+\hypertarget{classRenderableMessage_a1d6dcb391ac3d77b8b38c5e926d58375}{\index{Renderable\-Message@{Renderable\-Message}!page\-\_\-index\-\_\-@{page\-\_\-index\-\_\-}}
+\index{page\-\_\-index\-\_\-@{page\-\_\-index\-\_\-}!RenderableMessage@{Renderable\-Message}}
+\subsubsection[{page\-\_\-index\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int Renderable\-Message\-::page\-\_\-index\-\_\-\hspace{0.3cm}{\ttfamily [protected]}}}\label{classRenderableMessage_a1d6dcb391ac3d77b8b38c5e926d58375}
+\hypertarget{classRenderableMessage_ac013cc75fdc393be5bf3c8e95d1b5430}{\index{Renderable\-Message@{Renderable\-Message}!page\-\_\-item\-\_\-count\-\_\-@{page\-\_\-item\-\_\-count\-\_\-}}
+\index{page\-\_\-item\-\_\-count\-\_\-@{page\-\_\-item\-\_\-count\-\_\-}!RenderableMessage@{Renderable\-Message}}
+\subsubsection[{page\-\_\-item\-\_\-count\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int Renderable\-Message\-::page\-\_\-item\-\_\-count\-\_\-\hspace{0.3cm}{\ttfamily [protected]}}}\label{classRenderableMessage_ac013cc75fdc393be5bf3c8e95d1b5430}
+\hypertarget{classRenderableMessage_ac3a01804a7e180672c2a34fe2b8b0a8c}{\index{Renderable\-Message@{Renderable\-Message}!pages\-\_\-@{pages\-\_\-}}
+\index{pages\-\_\-@{pages\-\_\-}!RenderableMessage@{Renderable\-Message}}
+\subsubsection[{pages\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int Renderable\-Message\-::pages\-\_\-\hspace{0.3cm}{\ttfamily [protected]}}}\label{classRenderableMessage_ac3a01804a7e180672c2a34fe2b8b0a8c}
+\hypertarget{classRenderableMessage_a4745527c9b4cf149bfeccee669fd3aa8}{\index{Renderable\-Message@{Renderable\-Message}!parent\-\_\-@{parent\-\_\-}}
+\index{parent\-\_\-@{parent\-\_\-}!RenderableMessage@{Renderable\-Message}}
+\subsubsection[{parent\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Renderable\-Message}$\ast$ Renderable\-Message\-::parent\-\_\-\hspace{0.3cm}{\ttfamily [protected]}}}\label{classRenderableMessage_a4745527c9b4cf149bfeccee669fd3aa8}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+tools/cyber\-\_\-monitor/\hyperlink{renderable__message_8h}{renderable\-\_\-message.\-h}\end{DoxyCompactItemize}

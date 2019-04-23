@@ -1,0 +1,200 @@
+\hypertarget{classapollo_1_1cyber_1_1io_1_1Poller}{\section{apollo\-:\-:cyber\-:\-:io\-:\-:Poller Class Reference}
+\label{classapollo_1_1cyber_1_1io_1_1Poller}\index{apollo\-::cyber\-::io\-::\-Poller@{apollo\-::cyber\-::io\-::\-Poller}}
+}
+
+
+{\ttfamily \#include $<$poller.\-h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1io_1_1Poller_afca2e09142da5f57cfca966402953bf2}{Request\-Ptr} = std\-::shared\-\_\-ptr$<$ \hyperlink{structapollo_1_1cyber_1_1io_1_1PollRequest}{Poll\-Request} $>$
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1io_1_1Poller_a46cf3c8b1cd0c34c0daf7dd076cddc63}{Request\-Map} = std\-::unordered\-\_\-map$<$ int, \hyperlink{classapollo_1_1cyber_1_1io_1_1Poller_afca2e09142da5f57cfca966402953bf2}{Request\-Ptr} $>$
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1io_1_1Poller_a8b5069a91f056c7b473bcfd02ff2aaad}{Ctrl\-Param\-Map} = std\-::unordered\-\_\-map$<$ int, \hyperlink{structapollo_1_1cyber_1_1io_1_1PollCtrlParam}{Poll\-Ctrl\-Param} $>$
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classapollo_1_1cyber_1_1io_1_1Poller_a3d4410cd424c87e76f258e3b41d37ab5}{$\sim$\-Poller} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1io_1_1Poller_a0eec83658cd929f9c2515d5779e3e129}{Shutdown} ()
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1io_1_1Poller_ae403021b629890022daceda8640c5a9c}{Register} (const \hyperlink{structapollo_1_1cyber_1_1io_1_1PollRequest}{Poll\-Request} \&req)
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1io_1_1Poller_a3a1f73729383b8840bc797f83e3f9518}{Unregister} (const \hyperlink{structapollo_1_1cyber_1_1io_1_1PollRequest}{Poll\-Request} \&req)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1io_1_1Poller_a3d904d64d3a2f4f0a29695a0263f9f82}{Init} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1io_1_1Poller_aa3e2338ecaeb8cb5ce0cbfdb15d7eb79}{Clear} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1io_1_1Poller_ae2d156bf9966263391597b959c9515ab}{Poll} (int timeout\-\_\-ms)
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1io_1_1Poller_ab5de085f3ce0d9030d02a81b17f21d7e}{Thread\-Func} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1io_1_1Poller_a32b96845dcf187f57eb322ceb8b76c89}{Handle\-Changes} ()
+\item 
+int \hyperlink{classapollo_1_1cyber_1_1io_1_1Poller_ad106607e755fc50c05d81a91fccca9d8}{Get\-Timeout\-Ms} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1io_1_1Poller_a5a8bb1e33405acb498772bc02fa816bf}{Notify} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classapollo_1_1cyber_1_1io_1_1Poller_af669bb62157becf9016f69df5b1b5660}{epoll\-\_\-fd\-\_\-} = -\/1
+\item 
+std\-::thread \hyperlink{classapollo_1_1cyber_1_1io_1_1Poller_a2145143a3849794f4faf3aa7c5c0b841}{thread\-\_\-}
+\item 
+std\-::atomic$<$ bool $>$ \hyperlink{classapollo_1_1cyber_1_1io_1_1Poller_a5792d1208ae12538fe5b26d40fd6ca45}{is\-\_\-shutdown\-\_\-} = \{true\}
+\item 
+int \hyperlink{classapollo_1_1cyber_1_1io_1_1Poller_aa75b020f05c88884f277c2f2e7d7e6be}{pipe\-\_\-fd\-\_\-} \mbox{[}2\mbox{]} = \{-\/1, -\/1\}
+\item 
+std\-::mutex \hyperlink{classapollo_1_1cyber_1_1io_1_1Poller_a3df124c7d788692895df721bc51cc70e}{pipe\-\_\-mutex\-\_\-}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1io_1_1Poller_a46cf3c8b1cd0c34c0daf7dd076cddc63}{Request\-Map} \hyperlink{classapollo_1_1cyber_1_1io_1_1Poller_a23832294a91e3659fd279314aa351612}{requests\-\_\-}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1io_1_1Poller_a8b5069a91f056c7b473bcfd02ff2aaad}{Ctrl\-Param\-Map} \hyperlink{classapollo_1_1cyber_1_1io_1_1Poller_a4f0f2b3d4c68325fc3cefb0a4cdddfa9}{ctrl\-\_\-params\-\_\-}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1base_1_1AtomicRWLock}{base\-::\-Atomic\-R\-W\-Lock} \hyperlink{classapollo_1_1cyber_1_1io_1_1Poller_a3f852093b8de045b394577a4c8a833eb}{poll\-\_\-data\-\_\-lock\-\_\-}
+\item 
+const int \hyperlink{classapollo_1_1cyber_1_1io_1_1Poller_a68e2ded7a858f416c9bd248e61af1b66}{k\-Poll\-Size} = 32
+\item 
+const int \hyperlink{classapollo_1_1cyber_1_1io_1_1Poller_ad4c45237b9d3db1d4efb8d1cc7fe5a6d}{k\-Poll\-Timeout\-Ms} = 100
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classapollo_1_1cyber_1_1io_1_1Poller_a8b5069a91f056c7b473bcfd02ff2aaad}{\index{apollo\-::cyber\-::io\-::\-Poller@{apollo\-::cyber\-::io\-::\-Poller}!Ctrl\-Param\-Map@{Ctrl\-Param\-Map}}
+\index{Ctrl\-Param\-Map@{Ctrl\-Param\-Map}!apollo::cyber::io::Poller@{apollo\-::cyber\-::io\-::\-Poller}}
+\subsubsection[{Ctrl\-Param\-Map}]{\setlength{\rightskip}{0pt plus 5cm}using {\bf apollo\-::cyber\-::io\-::\-Poller\-::\-Ctrl\-Param\-Map} =  std\-::unordered\-\_\-map$<$int, {\bf Poll\-Ctrl\-Param}$>$}}\label{classapollo_1_1cyber_1_1io_1_1Poller_a8b5069a91f056c7b473bcfd02ff2aaad}
+\hypertarget{classapollo_1_1cyber_1_1io_1_1Poller_a46cf3c8b1cd0c34c0daf7dd076cddc63}{\index{apollo\-::cyber\-::io\-::\-Poller@{apollo\-::cyber\-::io\-::\-Poller}!Request\-Map@{Request\-Map}}
+\index{Request\-Map@{Request\-Map}!apollo::cyber::io::Poller@{apollo\-::cyber\-::io\-::\-Poller}}
+\subsubsection[{Request\-Map}]{\setlength{\rightskip}{0pt plus 5cm}using {\bf apollo\-::cyber\-::io\-::\-Poller\-::\-Request\-Map} =  std\-::unordered\-\_\-map$<$int, {\bf Request\-Ptr}$>$}}\label{classapollo_1_1cyber_1_1io_1_1Poller_a46cf3c8b1cd0c34c0daf7dd076cddc63}
+\hypertarget{classapollo_1_1cyber_1_1io_1_1Poller_afca2e09142da5f57cfca966402953bf2}{\index{apollo\-::cyber\-::io\-::\-Poller@{apollo\-::cyber\-::io\-::\-Poller}!Request\-Ptr@{Request\-Ptr}}
+\index{Request\-Ptr@{Request\-Ptr}!apollo::cyber::io::Poller@{apollo\-::cyber\-::io\-::\-Poller}}
+\subsubsection[{Request\-Ptr}]{\setlength{\rightskip}{0pt plus 5cm}using {\bf apollo\-::cyber\-::io\-::\-Poller\-::\-Request\-Ptr} =  std\-::shared\-\_\-ptr$<${\bf Poll\-Request}$>$}}\label{classapollo_1_1cyber_1_1io_1_1Poller_afca2e09142da5f57cfca966402953bf2}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classapollo_1_1cyber_1_1io_1_1Poller_a3d4410cd424c87e76f258e3b41d37ab5}{\index{apollo\-::cyber\-::io\-::\-Poller@{apollo\-::cyber\-::io\-::\-Poller}!$\sim$\-Poller@{$\sim$\-Poller}}
+\index{$\sim$\-Poller@{$\sim$\-Poller}!apollo::cyber::io::Poller@{apollo\-::cyber\-::io\-::\-Poller}}
+\subsubsection[{$\sim$\-Poller}]{\setlength{\rightskip}{0pt plus 5cm}virtual apollo\-::cyber\-::io\-::\-Poller\-::$\sim$\-Poller (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1io_1_1Poller_a3d4410cd424c87e76f258e3b41d37ab5}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1io_1_1Poller_aa3e2338ecaeb8cb5ce0cbfdb15d7eb79}{\index{apollo\-::cyber\-::io\-::\-Poller@{apollo\-::cyber\-::io\-::\-Poller}!Clear@{Clear}}
+\index{Clear@{Clear}!apollo::cyber::io::Poller@{apollo\-::cyber\-::io\-::\-Poller}}
+\subsubsection[{Clear}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::io\-::\-Poller\-::\-Clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1io_1_1Poller_aa3e2338ecaeb8cb5ce0cbfdb15d7eb79}
+\hypertarget{classapollo_1_1cyber_1_1io_1_1Poller_ad106607e755fc50c05d81a91fccca9d8}{\index{apollo\-::cyber\-::io\-::\-Poller@{apollo\-::cyber\-::io\-::\-Poller}!Get\-Timeout\-Ms@{Get\-Timeout\-Ms}}
+\index{Get\-Timeout\-Ms@{Get\-Timeout\-Ms}!apollo::cyber::io::Poller@{apollo\-::cyber\-::io\-::\-Poller}}
+\subsubsection[{Get\-Timeout\-Ms}]{\setlength{\rightskip}{0pt plus 5cm}int apollo\-::cyber\-::io\-::\-Poller\-::\-Get\-Timeout\-Ms (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1io_1_1Poller_ad106607e755fc50c05d81a91fccca9d8}
+\hypertarget{classapollo_1_1cyber_1_1io_1_1Poller_a32b96845dcf187f57eb322ceb8b76c89}{\index{apollo\-::cyber\-::io\-::\-Poller@{apollo\-::cyber\-::io\-::\-Poller}!Handle\-Changes@{Handle\-Changes}}
+\index{Handle\-Changes@{Handle\-Changes}!apollo::cyber::io::Poller@{apollo\-::cyber\-::io\-::\-Poller}}
+\subsubsection[{Handle\-Changes}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::io\-::\-Poller\-::\-Handle\-Changes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1io_1_1Poller_a32b96845dcf187f57eb322ceb8b76c89}
+\hypertarget{classapollo_1_1cyber_1_1io_1_1Poller_a3d904d64d3a2f4f0a29695a0263f9f82}{\index{apollo\-::cyber\-::io\-::\-Poller@{apollo\-::cyber\-::io\-::\-Poller}!Init@{Init}}
+\index{Init@{Init}!apollo::cyber::io::Poller@{apollo\-::cyber\-::io\-::\-Poller}}
+\subsubsection[{Init}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::io\-::\-Poller\-::\-Init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1io_1_1Poller_a3d904d64d3a2f4f0a29695a0263f9f82}
+\hypertarget{classapollo_1_1cyber_1_1io_1_1Poller_a5a8bb1e33405acb498772bc02fa816bf}{\index{apollo\-::cyber\-::io\-::\-Poller@{apollo\-::cyber\-::io\-::\-Poller}!Notify@{Notify}}
+\index{Notify@{Notify}!apollo::cyber::io::Poller@{apollo\-::cyber\-::io\-::\-Poller}}
+\subsubsection[{Notify}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::io\-::\-Poller\-::\-Notify (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1io_1_1Poller_a5a8bb1e33405acb498772bc02fa816bf}
+\hypertarget{classapollo_1_1cyber_1_1io_1_1Poller_ae2d156bf9966263391597b959c9515ab}{\index{apollo\-::cyber\-::io\-::\-Poller@{apollo\-::cyber\-::io\-::\-Poller}!Poll@{Poll}}
+\index{Poll@{Poll}!apollo::cyber::io::Poller@{apollo\-::cyber\-::io\-::\-Poller}}
+\subsubsection[{Poll}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::io\-::\-Poller\-::\-Poll (
+\begin{DoxyParamCaption}
+\item[{int}]{timeout\-\_\-ms}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1io_1_1Poller_ae2d156bf9966263391597b959c9515ab}
+\hypertarget{classapollo_1_1cyber_1_1io_1_1Poller_ae403021b629890022daceda8640c5a9c}{\index{apollo\-::cyber\-::io\-::\-Poller@{apollo\-::cyber\-::io\-::\-Poller}!Register@{Register}}
+\index{Register@{Register}!apollo::cyber::io::Poller@{apollo\-::cyber\-::io\-::\-Poller}}
+\subsubsection[{Register}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::io\-::\-Poller\-::\-Register (
+\begin{DoxyParamCaption}
+\item[{const {\bf Poll\-Request} \&}]{req}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1io_1_1Poller_ae403021b629890022daceda8640c5a9c}
+\hypertarget{classapollo_1_1cyber_1_1io_1_1Poller_a0eec83658cd929f9c2515d5779e3e129}{\index{apollo\-::cyber\-::io\-::\-Poller@{apollo\-::cyber\-::io\-::\-Poller}!Shutdown@{Shutdown}}
+\index{Shutdown@{Shutdown}!apollo::cyber::io::Poller@{apollo\-::cyber\-::io\-::\-Poller}}
+\subsubsection[{Shutdown}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::io\-::\-Poller\-::\-Shutdown (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1io_1_1Poller_a0eec83658cd929f9c2515d5779e3e129}
+\hypertarget{classapollo_1_1cyber_1_1io_1_1Poller_ab5de085f3ce0d9030d02a81b17f21d7e}{\index{apollo\-::cyber\-::io\-::\-Poller@{apollo\-::cyber\-::io\-::\-Poller}!Thread\-Func@{Thread\-Func}}
+\index{Thread\-Func@{Thread\-Func}!apollo::cyber::io::Poller@{apollo\-::cyber\-::io\-::\-Poller}}
+\subsubsection[{Thread\-Func}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::io\-::\-Poller\-::\-Thread\-Func (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1io_1_1Poller_ab5de085f3ce0d9030d02a81b17f21d7e}
+\hypertarget{classapollo_1_1cyber_1_1io_1_1Poller_a3a1f73729383b8840bc797f83e3f9518}{\index{apollo\-::cyber\-::io\-::\-Poller@{apollo\-::cyber\-::io\-::\-Poller}!Unregister@{Unregister}}
+\index{Unregister@{Unregister}!apollo::cyber::io::Poller@{apollo\-::cyber\-::io\-::\-Poller}}
+\subsubsection[{Unregister}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::io\-::\-Poller\-::\-Unregister (
+\begin{DoxyParamCaption}
+\item[{const {\bf Poll\-Request} \&}]{req}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1io_1_1Poller_a3a1f73729383b8840bc797f83e3f9518}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classapollo_1_1cyber_1_1io_1_1Poller_a4f0f2b3d4c68325fc3cefb0a4cdddfa9}{\index{apollo\-::cyber\-::io\-::\-Poller@{apollo\-::cyber\-::io\-::\-Poller}!ctrl\-\_\-params\-\_\-@{ctrl\-\_\-params\-\_\-}}
+\index{ctrl\-\_\-params\-\_\-@{ctrl\-\_\-params\-\_\-}!apollo::cyber::io::Poller@{apollo\-::cyber\-::io\-::\-Poller}}
+\subsubsection[{ctrl\-\_\-params\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ctrl\-Param\-Map} apollo\-::cyber\-::io\-::\-Poller\-::ctrl\-\_\-params\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1io_1_1Poller_a4f0f2b3d4c68325fc3cefb0a4cdddfa9}
+\hypertarget{classapollo_1_1cyber_1_1io_1_1Poller_af669bb62157becf9016f69df5b1b5660}{\index{apollo\-::cyber\-::io\-::\-Poller@{apollo\-::cyber\-::io\-::\-Poller}!epoll\-\_\-fd\-\_\-@{epoll\-\_\-fd\-\_\-}}
+\index{epoll\-\_\-fd\-\_\-@{epoll\-\_\-fd\-\_\-}!apollo::cyber::io::Poller@{apollo\-::cyber\-::io\-::\-Poller}}
+\subsubsection[{epoll\-\_\-fd\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int apollo\-::cyber\-::io\-::\-Poller\-::epoll\-\_\-fd\-\_\- = -\/1\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1io_1_1Poller_af669bb62157becf9016f69df5b1b5660}
+\hypertarget{classapollo_1_1cyber_1_1io_1_1Poller_a5792d1208ae12538fe5b26d40fd6ca45}{\index{apollo\-::cyber\-::io\-::\-Poller@{apollo\-::cyber\-::io\-::\-Poller}!is\-\_\-shutdown\-\_\-@{is\-\_\-shutdown\-\_\-}}
+\index{is\-\_\-shutdown\-\_\-@{is\-\_\-shutdown\-\_\-}!apollo::cyber::io::Poller@{apollo\-::cyber\-::io\-::\-Poller}}
+\subsubsection[{is\-\_\-shutdown\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::atomic$<$bool$>$ apollo\-::cyber\-::io\-::\-Poller\-::is\-\_\-shutdown\-\_\- = \{true\}\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1io_1_1Poller_a5792d1208ae12538fe5b26d40fd6ca45}
+\hypertarget{classapollo_1_1cyber_1_1io_1_1Poller_a68e2ded7a858f416c9bd248e61af1b66}{\index{apollo\-::cyber\-::io\-::\-Poller@{apollo\-::cyber\-::io\-::\-Poller}!k\-Poll\-Size@{k\-Poll\-Size}}
+\index{k\-Poll\-Size@{k\-Poll\-Size}!apollo::cyber::io::Poller@{apollo\-::cyber\-::io\-::\-Poller}}
+\subsubsection[{k\-Poll\-Size}]{\setlength{\rightskip}{0pt plus 5cm}const int apollo\-::cyber\-::io\-::\-Poller\-::k\-Poll\-Size = 32\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1io_1_1Poller_a68e2ded7a858f416c9bd248e61af1b66}
+\hypertarget{classapollo_1_1cyber_1_1io_1_1Poller_ad4c45237b9d3db1d4efb8d1cc7fe5a6d}{\index{apollo\-::cyber\-::io\-::\-Poller@{apollo\-::cyber\-::io\-::\-Poller}!k\-Poll\-Timeout\-Ms@{k\-Poll\-Timeout\-Ms}}
+\index{k\-Poll\-Timeout\-Ms@{k\-Poll\-Timeout\-Ms}!apollo::cyber::io::Poller@{apollo\-::cyber\-::io\-::\-Poller}}
+\subsubsection[{k\-Poll\-Timeout\-Ms}]{\setlength{\rightskip}{0pt plus 5cm}const int apollo\-::cyber\-::io\-::\-Poller\-::k\-Poll\-Timeout\-Ms = 100\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1io_1_1Poller_ad4c45237b9d3db1d4efb8d1cc7fe5a6d}
+\hypertarget{classapollo_1_1cyber_1_1io_1_1Poller_aa75b020f05c88884f277c2f2e7d7e6be}{\index{apollo\-::cyber\-::io\-::\-Poller@{apollo\-::cyber\-::io\-::\-Poller}!pipe\-\_\-fd\-\_\-@{pipe\-\_\-fd\-\_\-}}
+\index{pipe\-\_\-fd\-\_\-@{pipe\-\_\-fd\-\_\-}!apollo::cyber::io::Poller@{apollo\-::cyber\-::io\-::\-Poller}}
+\subsubsection[{pipe\-\_\-fd\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int apollo\-::cyber\-::io\-::\-Poller\-::pipe\-\_\-fd\-\_\-\mbox{[}2\mbox{]} = \{-\/1, -\/1\}\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1io_1_1Poller_aa75b020f05c88884f277c2f2e7d7e6be}
+\hypertarget{classapollo_1_1cyber_1_1io_1_1Poller_a3df124c7d788692895df721bc51cc70e}{\index{apollo\-::cyber\-::io\-::\-Poller@{apollo\-::cyber\-::io\-::\-Poller}!pipe\-\_\-mutex\-\_\-@{pipe\-\_\-mutex\-\_\-}}
+\index{pipe\-\_\-mutex\-\_\-@{pipe\-\_\-mutex\-\_\-}!apollo::cyber::io::Poller@{apollo\-::cyber\-::io\-::\-Poller}}
+\subsubsection[{pipe\-\_\-mutex\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::mutex apollo\-::cyber\-::io\-::\-Poller\-::pipe\-\_\-mutex\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1io_1_1Poller_a3df124c7d788692895df721bc51cc70e}
+\hypertarget{classapollo_1_1cyber_1_1io_1_1Poller_a3f852093b8de045b394577a4c8a833eb}{\index{apollo\-::cyber\-::io\-::\-Poller@{apollo\-::cyber\-::io\-::\-Poller}!poll\-\_\-data\-\_\-lock\-\_\-@{poll\-\_\-data\-\_\-lock\-\_\-}}
+\index{poll\-\_\-data\-\_\-lock\-\_\-@{poll\-\_\-data\-\_\-lock\-\_\-}!apollo::cyber::io::Poller@{apollo\-::cyber\-::io\-::\-Poller}}
+\subsubsection[{poll\-\_\-data\-\_\-lock\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf base\-::\-Atomic\-R\-W\-Lock} apollo\-::cyber\-::io\-::\-Poller\-::poll\-\_\-data\-\_\-lock\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1io_1_1Poller_a3f852093b8de045b394577a4c8a833eb}
+\hypertarget{classapollo_1_1cyber_1_1io_1_1Poller_a23832294a91e3659fd279314aa351612}{\index{apollo\-::cyber\-::io\-::\-Poller@{apollo\-::cyber\-::io\-::\-Poller}!requests\-\_\-@{requests\-\_\-}}
+\index{requests\-\_\-@{requests\-\_\-}!apollo::cyber::io::Poller@{apollo\-::cyber\-::io\-::\-Poller}}
+\subsubsection[{requests\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Request\-Map} apollo\-::cyber\-::io\-::\-Poller\-::requests\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1io_1_1Poller_a23832294a91e3659fd279314aa351612}
+\hypertarget{classapollo_1_1cyber_1_1io_1_1Poller_a2145143a3849794f4faf3aa7c5c0b841}{\index{apollo\-::cyber\-::io\-::\-Poller@{apollo\-::cyber\-::io\-::\-Poller}!thread\-\_\-@{thread\-\_\-}}
+\index{thread\-\_\-@{thread\-\_\-}!apollo::cyber::io::Poller@{apollo\-::cyber\-::io\-::\-Poller}}
+\subsubsection[{thread\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::thread apollo\-::cyber\-::io\-::\-Poller\-::thread\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1io_1_1Poller_a2145143a3849794f4faf3aa7c5c0b841}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+io/\hyperlink{poller_8h}{poller.\-h}\end{DoxyCompactItemize}

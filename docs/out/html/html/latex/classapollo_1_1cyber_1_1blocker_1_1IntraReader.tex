@@ -1,0 +1,260 @@
+\hypertarget{classapollo_1_1cyber_1_1blocker_1_1IntraReader}{\section{apollo\-:\-:cyber\-:\-:blocker\-:\-:Intra\-Reader$<$ Message\-T $>$ Class Template Reference}
+\label{classapollo_1_1cyber_1_1blocker_1_1IntraReader}\index{apollo\-::cyber\-::blocker\-::\-Intra\-Reader$<$ Message\-T $>$@{apollo\-::cyber\-::blocker\-::\-Intra\-Reader$<$ Message\-T $>$}}
+}
+
+
+{\ttfamily \#include $<$intra\-\_\-reader.\-h$>$}
+
+Inheritance diagram for apollo\-:\-:cyber\-:\-:blocker\-:\-:Intra\-Reader$<$ Message\-T $>$\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classapollo_1_1cyber_1_1blocker_1_1IntraReader}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1blocker_1_1IntraReader_aa4e9071f397bee80ba4ab42e7d1f165d}{Message\-Ptr} = std\-::shared\-\_\-ptr$<$ Message\-T $>$
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1blocker_1_1IntraReader_a15cf88ac9399d324aeb685bec11c8afe}{Callback} = std\-::function$<$ void(const std\-::shared\-\_\-ptr$<$ Message\-T $>$ \&)$>$
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1blocker_1_1IntraReader_a34f048290fe0ff40e672a485835ccfc9}{Iterator} = typename std\-::list$<$ std\-::shared\-\_\-ptr$<$ Message\-T $>$$>$\-::const\-\_\-iterator
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1blocker_1_1IntraReader_a591de348f97ac5ec0e378e1fb92c617d}{Intra\-Reader} (const proto\-::\-Role\-Attributes \&attr, const \hyperlink{classapollo_1_1cyber_1_1blocker_1_1IntraReader_a15cf88ac9399d324aeb685bec11c8afe}{Callback} \&callback)
+\item 
+virtual \hyperlink{classapollo_1_1cyber_1_1blocker_1_1IntraReader_a0921409f222aec564d34d8814dd94266}{$\sim$\-Intra\-Reader} ()
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1blocker_1_1IntraReader_a43e61ca2814c9ca792b89c67e2a02daf}{Init} () override
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1blocker_1_1IntraReader_a4f6fb242d33858198474001f855626dc}{Shutdown} () override
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1blocker_1_1IntraReader_a10695c39f2444febe5963747a578df29}{Clear\-Data} () override
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1blocker_1_1IntraReader_a8f509c61e3b4b406cbe2beb53558e821}{Observe} () override
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1blocker_1_1IntraReader_a69f5c5029cba88c2a23528efe6a69457}{Empty} () const override
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1blocker_1_1IntraReader_a398c31e1c4918adc42e771e183eb244a}{Has\-Received} () const override
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1blocker_1_1IntraReader_a2c155cd435cacc890cbffc4e0a3299e7}{Enqueue} (const std\-::shared\-\_\-ptr$<$ Message\-T $>$ \&msg) override
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1blocker_1_1IntraReader_a699f5630c23afb609aa55a63528d2361}{Set\-History\-Depth} (const uint32\-\_\-t \&depth) override
+\item 
+uint32\-\_\-t \hyperlink{classapollo_1_1cyber_1_1blocker_1_1IntraReader_adb4056ff1f7ed30e7fbff720fb85887a}{Get\-History\-Depth} () const override
+\item 
+std\-::shared\-\_\-ptr$<$ Message\-T $>$ \hyperlink{classapollo_1_1cyber_1_1blocker_1_1IntraReader_a85adf523b69aa8a0ca72f801c07486fc}{Get\-Latest\-Observed} () const override
+\item 
+std\-::shared\-\_\-ptr$<$ Message\-T $>$ \hyperlink{classapollo_1_1cyber_1_1blocker_1_1IntraReader_a4ecd786720ee58f0b53cee186f0a4713}{Get\-Oldest\-Observed} () const override
+\item 
+\hyperlink{classapollo_1_1cyber_1_1blocker_1_1IntraReader_a34f048290fe0ff40e672a485835ccfc9}{Iterator} \hyperlink{classapollo_1_1cyber_1_1blocker_1_1IntraReader_a9249758337ab94e2aefe657f1f8a3580}{Begin} () const override
+\item 
+\hyperlink{classapollo_1_1cyber_1_1blocker_1_1IntraReader_a34f048290fe0ff40e672a485835ccfc9}{Iterator} \hyperlink{classapollo_1_1cyber_1_1blocker_1_1IntraReader_ab94a92e11479f932b99f1c2e1f2df931}{End} () const override
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1blocker_1_1IntraReader_a4310e459238cf6c5c23dab4b96236f2e}{On\-Message} (const \hyperlink{classapollo_1_1cyber_1_1blocker_1_1IntraReader_aa4e9071f397bee80ba4ab42e7d1f165d}{Message\-Ptr} \&msg\-\_\-ptr)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1blocker_1_1IntraReader_a15cf88ac9399d324aeb685bec11c8afe}{Callback} \hyperlink{classapollo_1_1cyber_1_1blocker_1_1IntraReader_adf1bc681d8decbd80ba6a69039f1851b}{msg\-\_\-callback\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classapollo_1_1cyber_1_1blocker_1_1IntraReader_a15cf88ac9399d324aeb685bec11c8afe}{\index{apollo\-::cyber\-::blocker\-::\-Intra\-Reader@{apollo\-::cyber\-::blocker\-::\-Intra\-Reader}!Callback@{Callback}}
+\index{Callback@{Callback}!apollo::cyber::blocker::IntraReader@{apollo\-::cyber\-::blocker\-::\-Intra\-Reader}}
+\subsubsection[{Callback}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Message\-T $>$ using {\bf apollo\-::cyber\-::blocker\-::\-Intra\-Reader}$<$ Message\-T $>$\-::{\bf Callback} =  std\-::function$<$void(const std\-::shared\-\_\-ptr$<$Message\-T$>$\&)$>$}}\label{classapollo_1_1cyber_1_1blocker_1_1IntraReader_a15cf88ac9399d324aeb685bec11c8afe}
+\hypertarget{classapollo_1_1cyber_1_1blocker_1_1IntraReader_a34f048290fe0ff40e672a485835ccfc9}{\index{apollo\-::cyber\-::blocker\-::\-Intra\-Reader@{apollo\-::cyber\-::blocker\-::\-Intra\-Reader}!Iterator@{Iterator}}
+\index{Iterator@{Iterator}!apollo::cyber::blocker::IntraReader@{apollo\-::cyber\-::blocker\-::\-Intra\-Reader}}
+\subsubsection[{Iterator}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Message\-T $>$ using {\bf apollo\-::cyber\-::blocker\-::\-Intra\-Reader}$<$ Message\-T $>$\-::{\bf Iterator} =  typename std\-::list$<$std\-::shared\-\_\-ptr$<$Message\-T$>$$>$\-::const\-\_\-iterator}}\label{classapollo_1_1cyber_1_1blocker_1_1IntraReader_a34f048290fe0ff40e672a485835ccfc9}
+\hypertarget{classapollo_1_1cyber_1_1blocker_1_1IntraReader_aa4e9071f397bee80ba4ab42e7d1f165d}{\index{apollo\-::cyber\-::blocker\-::\-Intra\-Reader@{apollo\-::cyber\-::blocker\-::\-Intra\-Reader}!Message\-Ptr@{Message\-Ptr}}
+\index{Message\-Ptr@{Message\-Ptr}!apollo::cyber::blocker::IntraReader@{apollo\-::cyber\-::blocker\-::\-Intra\-Reader}}
+\subsubsection[{Message\-Ptr}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Message\-T $>$ using {\bf apollo\-::cyber\-::blocker\-::\-Intra\-Reader}$<$ Message\-T $>$\-::{\bf Message\-Ptr} =  std\-::shared\-\_\-ptr$<$Message\-T$>$}}\label{classapollo_1_1cyber_1_1blocker_1_1IntraReader_aa4e9071f397bee80ba4ab42e7d1f165d}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classapollo_1_1cyber_1_1blocker_1_1IntraReader_a591de348f97ac5ec0e378e1fb92c617d}{\index{apollo\-::cyber\-::blocker\-::\-Intra\-Reader@{apollo\-::cyber\-::blocker\-::\-Intra\-Reader}!Intra\-Reader@{Intra\-Reader}}
+\index{Intra\-Reader@{Intra\-Reader}!apollo::cyber::blocker::IntraReader@{apollo\-::cyber\-::blocker\-::\-Intra\-Reader}}
+\subsubsection[{Intra\-Reader}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Message\-T $>$ {\bf apollo\-::cyber\-::blocker\-::\-Intra\-Reader}$<$ Message\-T $>$\-::{\bf Intra\-Reader} (
+\begin{DoxyParamCaption}
+\item[{const proto\-::\-Role\-Attributes \&}]{attr, }
+\item[{const {\bf Callback} \&}]{callback}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1blocker_1_1IntraReader_a591de348f97ac5ec0e378e1fb92c617d}
+\hypertarget{classapollo_1_1cyber_1_1blocker_1_1IntraReader_a0921409f222aec564d34d8814dd94266}{\index{apollo\-::cyber\-::blocker\-::\-Intra\-Reader@{apollo\-::cyber\-::blocker\-::\-Intra\-Reader}!$\sim$\-Intra\-Reader@{$\sim$\-Intra\-Reader}}
+\index{$\sim$\-Intra\-Reader@{$\sim$\-Intra\-Reader}!apollo::cyber::blocker::IntraReader@{apollo\-::cyber\-::blocker\-::\-Intra\-Reader}}
+\subsubsection[{$\sim$\-Intra\-Reader}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Message\-T $>$ {\bf apollo\-::cyber\-::blocker\-::\-Intra\-Reader}$<$ Message\-T $>$\-::$\sim${\bf Intra\-Reader} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1blocker_1_1IntraReader_a0921409f222aec564d34d8814dd94266}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1blocker_1_1IntraReader_a9249758337ab94e2aefe657f1f8a3580}{\index{apollo\-::cyber\-::blocker\-::\-Intra\-Reader@{apollo\-::cyber\-::blocker\-::\-Intra\-Reader}!Begin@{Begin}}
+\index{Begin@{Begin}!apollo::cyber::blocker::IntraReader@{apollo\-::cyber\-::blocker\-::\-Intra\-Reader}}
+\subsubsection[{Begin}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Message\-T $>$ auto {\bf apollo\-::cyber\-::blocker\-::\-Intra\-Reader}$<$ Message\-T $>$\-::Begin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1blocker_1_1IntraReader_a9249758337ab94e2aefe657f1f8a3580}
+
+
+Reimplemented from \hyperlink{classapollo_1_1cyber_1_1Reader_a5fff77810d6a55099b507eb9e4a6135c}{apollo\-::cyber\-::\-Reader$<$ Message\-T $>$}.
+
+\hypertarget{classapollo_1_1cyber_1_1blocker_1_1IntraReader_a10695c39f2444febe5963747a578df29}{\index{apollo\-::cyber\-::blocker\-::\-Intra\-Reader@{apollo\-::cyber\-::blocker\-::\-Intra\-Reader}!Clear\-Data@{Clear\-Data}}
+\index{Clear\-Data@{Clear\-Data}!apollo::cyber::blocker::IntraReader@{apollo\-::cyber\-::blocker\-::\-Intra\-Reader}}
+\subsubsection[{Clear\-Data}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Message\-T $>$ void {\bf apollo\-::cyber\-::blocker\-::\-Intra\-Reader}$<$ Message\-T $>$\-::Clear\-Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1blocker_1_1IntraReader_a10695c39f2444febe5963747a578df29}
+
+
+Implements \hyperlink{classapollo_1_1cyber_1_1ReaderBase_a6bf09eafd9a155192d6e623f90c881e0}{apollo\-::cyber\-::\-Reader\-Base}.
+
+\hypertarget{classapollo_1_1cyber_1_1blocker_1_1IntraReader_a69f5c5029cba88c2a23528efe6a69457}{\index{apollo\-::cyber\-::blocker\-::\-Intra\-Reader@{apollo\-::cyber\-::blocker\-::\-Intra\-Reader}!Empty@{Empty}}
+\index{Empty@{Empty}!apollo::cyber::blocker::IntraReader@{apollo\-::cyber\-::blocker\-::\-Intra\-Reader}}
+\subsubsection[{Empty}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Message\-T $>$ bool {\bf apollo\-::cyber\-::blocker\-::\-Intra\-Reader}$<$ Message\-T $>$\-::Empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1blocker_1_1IntraReader_a69f5c5029cba88c2a23528efe6a69457}
+
+
+Implements \hyperlink{classapollo_1_1cyber_1_1ReaderBase_a9f70abd4ac366a0e173f210db1512ffc}{apollo\-::cyber\-::\-Reader\-Base}.
+
+\hypertarget{classapollo_1_1cyber_1_1blocker_1_1IntraReader_ab94a92e11479f932b99f1c2e1f2df931}{\index{apollo\-::cyber\-::blocker\-::\-Intra\-Reader@{apollo\-::cyber\-::blocker\-::\-Intra\-Reader}!End@{End}}
+\index{End@{End}!apollo::cyber::blocker::IntraReader@{apollo\-::cyber\-::blocker\-::\-Intra\-Reader}}
+\subsubsection[{End}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Message\-T $>$ auto {\bf apollo\-::cyber\-::blocker\-::\-Intra\-Reader}$<$ Message\-T $>$\-::End (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1blocker_1_1IntraReader_ab94a92e11479f932b99f1c2e1f2df931}
+
+
+Reimplemented from \hyperlink{classapollo_1_1cyber_1_1Reader_a1e670b90e2896b668b8061860d6e953f}{apollo\-::cyber\-::\-Reader$<$ Message\-T $>$}.
+
+\hypertarget{classapollo_1_1cyber_1_1blocker_1_1IntraReader_a2c155cd435cacc890cbffc4e0a3299e7}{\index{apollo\-::cyber\-::blocker\-::\-Intra\-Reader@{apollo\-::cyber\-::blocker\-::\-Intra\-Reader}!Enqueue@{Enqueue}}
+\index{Enqueue@{Enqueue}!apollo::cyber::blocker::IntraReader@{apollo\-::cyber\-::blocker\-::\-Intra\-Reader}}
+\subsubsection[{Enqueue}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Message\-T $>$ void {\bf apollo\-::cyber\-::blocker\-::\-Intra\-Reader}$<$ Message\-T $>$\-::Enqueue (
+\begin{DoxyParamCaption}
+\item[{const std\-::shared\-\_\-ptr$<$ Message\-T $>$ \&}]{msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1blocker_1_1IntraReader_a2c155cd435cacc890cbffc4e0a3299e7}
+
+
+Reimplemented from \hyperlink{classapollo_1_1cyber_1_1Reader_a9acce2d137849540e434596de51b10bf}{apollo\-::cyber\-::\-Reader$<$ Message\-T $>$}.
+
+\hypertarget{classapollo_1_1cyber_1_1blocker_1_1IntraReader_adb4056ff1f7ed30e7fbff720fb85887a}{\index{apollo\-::cyber\-::blocker\-::\-Intra\-Reader@{apollo\-::cyber\-::blocker\-::\-Intra\-Reader}!Get\-History\-Depth@{Get\-History\-Depth}}
+\index{Get\-History\-Depth@{Get\-History\-Depth}!apollo::cyber::blocker::IntraReader@{apollo\-::cyber\-::blocker\-::\-Intra\-Reader}}
+\subsubsection[{Get\-History\-Depth}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Message\-T $>$ uint32\-\_\-t {\bf apollo\-::cyber\-::blocker\-::\-Intra\-Reader}$<$ Message\-T $>$\-::Get\-History\-Depth (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1blocker_1_1IntraReader_adb4056ff1f7ed30e7fbff720fb85887a}
+
+
+Reimplemented from \hyperlink{classapollo_1_1cyber_1_1Reader_a6e1d8dd73f052175e1599286f54ba80c}{apollo\-::cyber\-::\-Reader$<$ Message\-T $>$}.
+
+\hypertarget{classapollo_1_1cyber_1_1blocker_1_1IntraReader_a85adf523b69aa8a0ca72f801c07486fc}{\index{apollo\-::cyber\-::blocker\-::\-Intra\-Reader@{apollo\-::cyber\-::blocker\-::\-Intra\-Reader}!Get\-Latest\-Observed@{Get\-Latest\-Observed}}
+\index{Get\-Latest\-Observed@{Get\-Latest\-Observed}!apollo::cyber::blocker::IntraReader@{apollo\-::cyber\-::blocker\-::\-Intra\-Reader}}
+\subsubsection[{Get\-Latest\-Observed}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Message\-T $>$ std\-::shared\-\_\-ptr$<$ Message\-T $>$ {\bf apollo\-::cyber\-::blocker\-::\-Intra\-Reader}$<$ Message\-T $>$\-::Get\-Latest\-Observed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1blocker_1_1IntraReader_a85adf523b69aa8a0ca72f801c07486fc}
+
+
+Reimplemented from \hyperlink{classapollo_1_1cyber_1_1Reader_ac3fabcbcb3eac7570fc719f07cdaac27}{apollo\-::cyber\-::\-Reader$<$ Message\-T $>$}.
+
+\hypertarget{classapollo_1_1cyber_1_1blocker_1_1IntraReader_a4ecd786720ee58f0b53cee186f0a4713}{\index{apollo\-::cyber\-::blocker\-::\-Intra\-Reader@{apollo\-::cyber\-::blocker\-::\-Intra\-Reader}!Get\-Oldest\-Observed@{Get\-Oldest\-Observed}}
+\index{Get\-Oldest\-Observed@{Get\-Oldest\-Observed}!apollo::cyber::blocker::IntraReader@{apollo\-::cyber\-::blocker\-::\-Intra\-Reader}}
+\subsubsection[{Get\-Oldest\-Observed}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Message\-T $>$ std\-::shared\-\_\-ptr$<$ Message\-T $>$ {\bf apollo\-::cyber\-::blocker\-::\-Intra\-Reader}$<$ Message\-T $>$\-::Get\-Oldest\-Observed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1blocker_1_1IntraReader_a4ecd786720ee58f0b53cee186f0a4713}
+
+
+Reimplemented from \hyperlink{classapollo_1_1cyber_1_1Reader_a787bb122252d2e2a86fdb04a81d6beca}{apollo\-::cyber\-::\-Reader$<$ Message\-T $>$}.
+
+\hypertarget{classapollo_1_1cyber_1_1blocker_1_1IntraReader_a398c31e1c4918adc42e771e183eb244a}{\index{apollo\-::cyber\-::blocker\-::\-Intra\-Reader@{apollo\-::cyber\-::blocker\-::\-Intra\-Reader}!Has\-Received@{Has\-Received}}
+\index{Has\-Received@{Has\-Received}!apollo::cyber::blocker::IntraReader@{apollo\-::cyber\-::blocker\-::\-Intra\-Reader}}
+\subsubsection[{Has\-Received}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Message\-T $>$ bool {\bf apollo\-::cyber\-::blocker\-::\-Intra\-Reader}$<$ Message\-T $>$\-::Has\-Received (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1blocker_1_1IntraReader_a398c31e1c4918adc42e771e183eb244a}
+
+
+Implements \hyperlink{classapollo_1_1cyber_1_1ReaderBase_a42a2e0a6c898cc3da881b1531a608995}{apollo\-::cyber\-::\-Reader\-Base}.
+
+\hypertarget{classapollo_1_1cyber_1_1blocker_1_1IntraReader_a43e61ca2814c9ca792b89c67e2a02daf}{\index{apollo\-::cyber\-::blocker\-::\-Intra\-Reader@{apollo\-::cyber\-::blocker\-::\-Intra\-Reader}!Init@{Init}}
+\index{Init@{Init}!apollo::cyber::blocker::IntraReader@{apollo\-::cyber\-::blocker\-::\-Intra\-Reader}}
+\subsubsection[{Init}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Message\-T $>$ bool {\bf apollo\-::cyber\-::blocker\-::\-Intra\-Reader}$<$ Message\-T $>$\-::Init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1blocker_1_1IntraReader_a43e61ca2814c9ca792b89c67e2a02daf}
+
+
+Implements \hyperlink{classapollo_1_1cyber_1_1ReaderBase_a58e95863a3ea4e744ddff5914456ad7d}{apollo\-::cyber\-::\-Reader\-Base}.
+
+\hypertarget{classapollo_1_1cyber_1_1blocker_1_1IntraReader_a8f509c61e3b4b406cbe2beb53558e821}{\index{apollo\-::cyber\-::blocker\-::\-Intra\-Reader@{apollo\-::cyber\-::blocker\-::\-Intra\-Reader}!Observe@{Observe}}
+\index{Observe@{Observe}!apollo::cyber::blocker::IntraReader@{apollo\-::cyber\-::blocker\-::\-Intra\-Reader}}
+\subsubsection[{Observe}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Message\-T $>$ void {\bf apollo\-::cyber\-::blocker\-::\-Intra\-Reader}$<$ Message\-T $>$\-::Observe (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1blocker_1_1IntraReader_a8f509c61e3b4b406cbe2beb53558e821}
+
+
+Implements \hyperlink{classapollo_1_1cyber_1_1ReaderBase_a3cfeb975a301fe9094221f105d387e55}{apollo\-::cyber\-::\-Reader\-Base}.
+
+\hypertarget{classapollo_1_1cyber_1_1blocker_1_1IntraReader_a4310e459238cf6c5c23dab4b96236f2e}{\index{apollo\-::cyber\-::blocker\-::\-Intra\-Reader@{apollo\-::cyber\-::blocker\-::\-Intra\-Reader}!On\-Message@{On\-Message}}
+\index{On\-Message@{On\-Message}!apollo::cyber::blocker::IntraReader@{apollo\-::cyber\-::blocker\-::\-Intra\-Reader}}
+\subsubsection[{On\-Message}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Message\-T $>$ void {\bf apollo\-::cyber\-::blocker\-::\-Intra\-Reader}$<$ Message\-T $>$\-::On\-Message (
+\begin{DoxyParamCaption}
+\item[{const {\bf Message\-Ptr} \&}]{msg\-\_\-ptr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1blocker_1_1IntraReader_a4310e459238cf6c5c23dab4b96236f2e}
+\hypertarget{classapollo_1_1cyber_1_1blocker_1_1IntraReader_a699f5630c23afb609aa55a63528d2361}{\index{apollo\-::cyber\-::blocker\-::\-Intra\-Reader@{apollo\-::cyber\-::blocker\-::\-Intra\-Reader}!Set\-History\-Depth@{Set\-History\-Depth}}
+\index{Set\-History\-Depth@{Set\-History\-Depth}!apollo::cyber::blocker::IntraReader@{apollo\-::cyber\-::blocker\-::\-Intra\-Reader}}
+\subsubsection[{Set\-History\-Depth}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Message\-T $>$ void {\bf apollo\-::cyber\-::blocker\-::\-Intra\-Reader}$<$ Message\-T $>$\-::Set\-History\-Depth (
+\begin{DoxyParamCaption}
+\item[{const uint32\-\_\-t \&}]{depth}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1blocker_1_1IntraReader_a699f5630c23afb609aa55a63528d2361}
+
+
+Reimplemented from \hyperlink{classapollo_1_1cyber_1_1Reader_a20a9b73c463c8f65b9592bb295745fa6}{apollo\-::cyber\-::\-Reader$<$ Message\-T $>$}.
+
+\hypertarget{classapollo_1_1cyber_1_1blocker_1_1IntraReader_a4f6fb242d33858198474001f855626dc}{\index{apollo\-::cyber\-::blocker\-::\-Intra\-Reader@{apollo\-::cyber\-::blocker\-::\-Intra\-Reader}!Shutdown@{Shutdown}}
+\index{Shutdown@{Shutdown}!apollo::cyber::blocker::IntraReader@{apollo\-::cyber\-::blocker\-::\-Intra\-Reader}}
+\subsubsection[{Shutdown}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Message\-T $>$ void {\bf apollo\-::cyber\-::blocker\-::\-Intra\-Reader}$<$ Message\-T $>$\-::Shutdown (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1blocker_1_1IntraReader_a4f6fb242d33858198474001f855626dc}
+
+
+Implements \hyperlink{classapollo_1_1cyber_1_1ReaderBase_a340d56ab095e4ee0789e9ae6c3097730}{apollo\-::cyber\-::\-Reader\-Base}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classapollo_1_1cyber_1_1blocker_1_1IntraReader_adf1bc681d8decbd80ba6a69039f1851b}{\index{apollo\-::cyber\-::blocker\-::\-Intra\-Reader@{apollo\-::cyber\-::blocker\-::\-Intra\-Reader}!msg\-\_\-callback\-\_\-@{msg\-\_\-callback\-\_\-}}
+\index{msg\-\_\-callback\-\_\-@{msg\-\_\-callback\-\_\-}!apollo::cyber::blocker::IntraReader@{apollo\-::cyber\-::blocker\-::\-Intra\-Reader}}
+\subsubsection[{msg\-\_\-callback\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Message\-T $>$ {\bf Callback} {\bf apollo\-::cyber\-::blocker\-::\-Intra\-Reader}$<$ Message\-T $>$\-::msg\-\_\-callback\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1blocker_1_1IntraReader_adf1bc681d8decbd80ba6a69039f1851b}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+blocker/\hyperlink{intra__reader_8h}{intra\-\_\-reader.\-h}\end{DoxyCompactItemize}

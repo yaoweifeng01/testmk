@@ -1,0 +1,159 @@
+\hypertarget{classapollo_1_1cyber_1_1event_1_1EventBase}{\section{apollo\-:\-:cyber\-:\-:event\-:\-:Event\-Base Class Reference}
+\label{classapollo_1_1cyber_1_1event_1_1EventBase}\index{apollo\-::cyber\-::event\-::\-Event\-Base@{apollo\-::cyber\-::event\-::\-Event\-Base}}
+}
+
+
+{\ttfamily \#include $<$perf\-\_\-event.\-h$>$}
+
+Inheritance diagram for apollo\-:\-:cyber\-:\-:event\-:\-:Event\-Base\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classapollo_1_1cyber_1_1event_1_1EventBase}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual std\-::string \hyperlink{classapollo_1_1cyber_1_1event_1_1EventBase_a76173ad9c315ed775371469d612b489d}{Serialize\-To\-String} ()=0
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1event_1_1EventBase_ad7322836ed1d5d2a1a1c5bbf88f04df0}{set\-\_\-eid} (int eid)
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1event_1_1EventBase_aae9bb6e39842338f1139c6496d71dfb6}{set\-\_\-etype} (int etype)
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1event_1_1EventBase_a3b0ef301b6eb0bd03c0c98e4c85ae29e}{set\-\_\-stamp} (uint64\-\_\-t stamp)
+\item 
+virtual void \hyperlink{classapollo_1_1cyber_1_1event_1_1EventBase_adca308f7a8828fc85f7a7c47f8e62938}{set\-\_\-cr\-\_\-id} (uint64\-\_\-t cr\-\_\-id)
+\item 
+virtual void \hyperlink{classapollo_1_1cyber_1_1event_1_1EventBase_a9b0dbb9c9db334795fb32523be945e20}{set\-\_\-cr\-\_\-state} (int cr\-\_\-state)
+\item 
+virtual void \hyperlink{classapollo_1_1cyber_1_1event_1_1EventBase_a892ea37f81adc4981bc91396919c4e9a}{set\-\_\-proc\-\_\-id} (int proc\-\_\-id)
+\item 
+virtual void \hyperlink{classapollo_1_1cyber_1_1event_1_1EventBase_a3023ba9bdcd8996d879099ac19647465}{set\-\_\-fetch\-\_\-res} (int fetch\-\_\-res)
+\item 
+virtual void \hyperlink{classapollo_1_1cyber_1_1event_1_1EventBase_ae70276f235359287b75a72b932903bf1}{set\-\_\-msg\-\_\-seq} (uint64\-\_\-t msg\-\_\-seq)
+\item 
+virtual void \hyperlink{classapollo_1_1cyber_1_1event_1_1EventBase_af2db22e91dcce677a59ecab489685542}{set\-\_\-channel\-\_\-id} (uint64\-\_\-t channel\-\_\-id)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classapollo_1_1cyber_1_1event_1_1EventBase_ae26baa01961de359956540b4e5f98ad5}{etype\-\_\-}
+\item 
+int \hyperlink{classapollo_1_1cyber_1_1event_1_1EventBase_a1d9e13642a28e712a16bff0224e0b6fe}{eid\-\_\-}
+\item 
+uint64\-\_\-t \hyperlink{classapollo_1_1cyber_1_1event_1_1EventBase_afaeda733409e3addc6e7f839b694333d}{stamp\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1event_1_1EventBase_a76173ad9c315ed775371469d612b489d}{\index{apollo\-::cyber\-::event\-::\-Event\-Base@{apollo\-::cyber\-::event\-::\-Event\-Base}!Serialize\-To\-String@{Serialize\-To\-String}}
+\index{Serialize\-To\-String@{Serialize\-To\-String}!apollo::cyber::event::EventBase@{apollo\-::cyber\-::event\-::\-Event\-Base}}
+\subsubsection[{Serialize\-To\-String}]{\setlength{\rightskip}{0pt plus 5cm}virtual std\-::string apollo\-::cyber\-::event\-::\-Event\-Base\-::\-Serialize\-To\-String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classapollo_1_1cyber_1_1event_1_1EventBase_a76173ad9c315ed775371469d612b489d}
+
+
+Implemented in \hyperlink{classapollo_1_1cyber_1_1event_1_1TransportEvent_ac006e30964aa5ddf8325a2a4187474b9}{apollo\-::cyber\-::event\-::\-Transport\-Event}, and \hyperlink{classapollo_1_1cyber_1_1event_1_1SchedEvent_a92a8ce80dac62e102d79010845c37b5b}{apollo\-::cyber\-::event\-::\-Sched\-Event}.
+
+\hypertarget{classapollo_1_1cyber_1_1event_1_1EventBase_af2db22e91dcce677a59ecab489685542}{\index{apollo\-::cyber\-::event\-::\-Event\-Base@{apollo\-::cyber\-::event\-::\-Event\-Base}!set\-\_\-channel\-\_\-id@{set\-\_\-channel\-\_\-id}}
+\index{set\-\_\-channel\-\_\-id@{set\-\_\-channel\-\_\-id}!apollo::cyber::event::EventBase@{apollo\-::cyber\-::event\-::\-Event\-Base}}
+\subsubsection[{set\-\_\-channel\-\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}virtual void apollo\-::cyber\-::event\-::\-Event\-Base\-::set\-\_\-channel\-\_\-id (
+\begin{DoxyParamCaption}
+\item[{uint64\-\_\-t}]{channel\-\_\-id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1event_1_1EventBase_af2db22e91dcce677a59ecab489685542}
+
+
+Reimplemented in \hyperlink{classapollo_1_1cyber_1_1event_1_1TransportEvent_a474cc7b64211525b00a5fd4f2238fd51}{apollo\-::cyber\-::event\-::\-Transport\-Event}.
+
+\hypertarget{classapollo_1_1cyber_1_1event_1_1EventBase_adca308f7a8828fc85f7a7c47f8e62938}{\index{apollo\-::cyber\-::event\-::\-Event\-Base@{apollo\-::cyber\-::event\-::\-Event\-Base}!set\-\_\-cr\-\_\-id@{set\-\_\-cr\-\_\-id}}
+\index{set\-\_\-cr\-\_\-id@{set\-\_\-cr\-\_\-id}!apollo::cyber::event::EventBase@{apollo\-::cyber\-::event\-::\-Event\-Base}}
+\subsubsection[{set\-\_\-cr\-\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}virtual void apollo\-::cyber\-::event\-::\-Event\-Base\-::set\-\_\-cr\-\_\-id (
+\begin{DoxyParamCaption}
+\item[{uint64\-\_\-t}]{cr\-\_\-id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1event_1_1EventBase_adca308f7a8828fc85f7a7c47f8e62938}
+
+
+Reimplemented in \hyperlink{classapollo_1_1cyber_1_1event_1_1SchedEvent_a22cfd60eaefdf7647263d3270d3f3244}{apollo\-::cyber\-::event\-::\-Sched\-Event}.
+
+\hypertarget{classapollo_1_1cyber_1_1event_1_1EventBase_a9b0dbb9c9db334795fb32523be945e20}{\index{apollo\-::cyber\-::event\-::\-Event\-Base@{apollo\-::cyber\-::event\-::\-Event\-Base}!set\-\_\-cr\-\_\-state@{set\-\_\-cr\-\_\-state}}
+\index{set\-\_\-cr\-\_\-state@{set\-\_\-cr\-\_\-state}!apollo::cyber::event::EventBase@{apollo\-::cyber\-::event\-::\-Event\-Base}}
+\subsubsection[{set\-\_\-cr\-\_\-state}]{\setlength{\rightskip}{0pt plus 5cm}virtual void apollo\-::cyber\-::event\-::\-Event\-Base\-::set\-\_\-cr\-\_\-state (
+\begin{DoxyParamCaption}
+\item[{int}]{cr\-\_\-state}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1event_1_1EventBase_a9b0dbb9c9db334795fb32523be945e20}
+
+
+Reimplemented in \hyperlink{classapollo_1_1cyber_1_1event_1_1SchedEvent_ae9b63ed13d7df3a671bb74988ff87bf6}{apollo\-::cyber\-::event\-::\-Sched\-Event}.
+
+\hypertarget{classapollo_1_1cyber_1_1event_1_1EventBase_ad7322836ed1d5d2a1a1c5bbf88f04df0}{\index{apollo\-::cyber\-::event\-::\-Event\-Base@{apollo\-::cyber\-::event\-::\-Event\-Base}!set\-\_\-eid@{set\-\_\-eid}}
+\index{set\-\_\-eid@{set\-\_\-eid}!apollo::cyber::event::EventBase@{apollo\-::cyber\-::event\-::\-Event\-Base}}
+\subsubsection[{set\-\_\-eid}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::event\-::\-Event\-Base\-::set\-\_\-eid (
+\begin{DoxyParamCaption}
+\item[{int}]{eid}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1event_1_1EventBase_ad7322836ed1d5d2a1a1c5bbf88f04df0}
+\hypertarget{classapollo_1_1cyber_1_1event_1_1EventBase_aae9bb6e39842338f1139c6496d71dfb6}{\index{apollo\-::cyber\-::event\-::\-Event\-Base@{apollo\-::cyber\-::event\-::\-Event\-Base}!set\-\_\-etype@{set\-\_\-etype}}
+\index{set\-\_\-etype@{set\-\_\-etype}!apollo::cyber::event::EventBase@{apollo\-::cyber\-::event\-::\-Event\-Base}}
+\subsubsection[{set\-\_\-etype}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::event\-::\-Event\-Base\-::set\-\_\-etype (
+\begin{DoxyParamCaption}
+\item[{int}]{etype}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1event_1_1EventBase_aae9bb6e39842338f1139c6496d71dfb6}
+\hypertarget{classapollo_1_1cyber_1_1event_1_1EventBase_a3023ba9bdcd8996d879099ac19647465}{\index{apollo\-::cyber\-::event\-::\-Event\-Base@{apollo\-::cyber\-::event\-::\-Event\-Base}!set\-\_\-fetch\-\_\-res@{set\-\_\-fetch\-\_\-res}}
+\index{set\-\_\-fetch\-\_\-res@{set\-\_\-fetch\-\_\-res}!apollo::cyber::event::EventBase@{apollo\-::cyber\-::event\-::\-Event\-Base}}
+\subsubsection[{set\-\_\-fetch\-\_\-res}]{\setlength{\rightskip}{0pt plus 5cm}virtual void apollo\-::cyber\-::event\-::\-Event\-Base\-::set\-\_\-fetch\-\_\-res (
+\begin{DoxyParamCaption}
+\item[{int}]{fetch\-\_\-res}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1event_1_1EventBase_a3023ba9bdcd8996d879099ac19647465}
+\hypertarget{classapollo_1_1cyber_1_1event_1_1EventBase_ae70276f235359287b75a72b932903bf1}{\index{apollo\-::cyber\-::event\-::\-Event\-Base@{apollo\-::cyber\-::event\-::\-Event\-Base}!set\-\_\-msg\-\_\-seq@{set\-\_\-msg\-\_\-seq}}
+\index{set\-\_\-msg\-\_\-seq@{set\-\_\-msg\-\_\-seq}!apollo::cyber::event::EventBase@{apollo\-::cyber\-::event\-::\-Event\-Base}}
+\subsubsection[{set\-\_\-msg\-\_\-seq}]{\setlength{\rightskip}{0pt plus 5cm}virtual void apollo\-::cyber\-::event\-::\-Event\-Base\-::set\-\_\-msg\-\_\-seq (
+\begin{DoxyParamCaption}
+\item[{uint64\-\_\-t}]{msg\-\_\-seq}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1event_1_1EventBase_ae70276f235359287b75a72b932903bf1}
+
+
+Reimplemented in \hyperlink{classapollo_1_1cyber_1_1event_1_1TransportEvent_a0a3297ffaaabc6127133714209bb0c6f}{apollo\-::cyber\-::event\-::\-Transport\-Event}.
+
+\hypertarget{classapollo_1_1cyber_1_1event_1_1EventBase_a892ea37f81adc4981bc91396919c4e9a}{\index{apollo\-::cyber\-::event\-::\-Event\-Base@{apollo\-::cyber\-::event\-::\-Event\-Base}!set\-\_\-proc\-\_\-id@{set\-\_\-proc\-\_\-id}}
+\index{set\-\_\-proc\-\_\-id@{set\-\_\-proc\-\_\-id}!apollo::cyber::event::EventBase@{apollo\-::cyber\-::event\-::\-Event\-Base}}
+\subsubsection[{set\-\_\-proc\-\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}virtual void apollo\-::cyber\-::event\-::\-Event\-Base\-::set\-\_\-proc\-\_\-id (
+\begin{DoxyParamCaption}
+\item[{int}]{proc\-\_\-id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1event_1_1EventBase_a892ea37f81adc4981bc91396919c4e9a}
+
+
+Reimplemented in \hyperlink{classapollo_1_1cyber_1_1event_1_1SchedEvent_aa4d016a3c5a507c58b195e3d99f92f2b}{apollo\-::cyber\-::event\-::\-Sched\-Event}.
+
+\hypertarget{classapollo_1_1cyber_1_1event_1_1EventBase_a3b0ef301b6eb0bd03c0c98e4c85ae29e}{\index{apollo\-::cyber\-::event\-::\-Event\-Base@{apollo\-::cyber\-::event\-::\-Event\-Base}!set\-\_\-stamp@{set\-\_\-stamp}}
+\index{set\-\_\-stamp@{set\-\_\-stamp}!apollo::cyber::event::EventBase@{apollo\-::cyber\-::event\-::\-Event\-Base}}
+\subsubsection[{set\-\_\-stamp}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::event\-::\-Event\-Base\-::set\-\_\-stamp (
+\begin{DoxyParamCaption}
+\item[{uint64\-\_\-t}]{stamp}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1event_1_1EventBase_a3b0ef301b6eb0bd03c0c98e4c85ae29e}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classapollo_1_1cyber_1_1event_1_1EventBase_a1d9e13642a28e712a16bff0224e0b6fe}{\index{apollo\-::cyber\-::event\-::\-Event\-Base@{apollo\-::cyber\-::event\-::\-Event\-Base}!eid\-\_\-@{eid\-\_\-}}
+\index{eid\-\_\-@{eid\-\_\-}!apollo::cyber::event::EventBase@{apollo\-::cyber\-::event\-::\-Event\-Base}}
+\subsubsection[{eid\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int apollo\-::cyber\-::event\-::\-Event\-Base\-::eid\-\_\-\hspace{0.3cm}{\ttfamily [protected]}}}\label{classapollo_1_1cyber_1_1event_1_1EventBase_a1d9e13642a28e712a16bff0224e0b6fe}
+\hypertarget{classapollo_1_1cyber_1_1event_1_1EventBase_ae26baa01961de359956540b4e5f98ad5}{\index{apollo\-::cyber\-::event\-::\-Event\-Base@{apollo\-::cyber\-::event\-::\-Event\-Base}!etype\-\_\-@{etype\-\_\-}}
+\index{etype\-\_\-@{etype\-\_\-}!apollo::cyber::event::EventBase@{apollo\-::cyber\-::event\-::\-Event\-Base}}
+\subsubsection[{etype\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int apollo\-::cyber\-::event\-::\-Event\-Base\-::etype\-\_\-\hspace{0.3cm}{\ttfamily [protected]}}}\label{classapollo_1_1cyber_1_1event_1_1EventBase_ae26baa01961de359956540b4e5f98ad5}
+\hypertarget{classapollo_1_1cyber_1_1event_1_1EventBase_afaeda733409e3addc6e7f839b694333d}{\index{apollo\-::cyber\-::event\-::\-Event\-Base@{apollo\-::cyber\-::event\-::\-Event\-Base}!stamp\-\_\-@{stamp\-\_\-}}
+\index{stamp\-\_\-@{stamp\-\_\-}!apollo::cyber::event::EventBase@{apollo\-::cyber\-::event\-::\-Event\-Base}}
+\subsubsection[{stamp\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}uint64\-\_\-t apollo\-::cyber\-::event\-::\-Event\-Base\-::stamp\-\_\-\hspace{0.3cm}{\ttfamily [protected]}}}\label{classapollo_1_1cyber_1_1event_1_1EventBase_afaeda733409e3addc6e7f839b694333d}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+event/\hyperlink{perf__event_8h}{perf\-\_\-event.\-h}\end{DoxyCompactItemize}

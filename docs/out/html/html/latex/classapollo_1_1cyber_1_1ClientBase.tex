@@ -1,0 +1,103 @@
+\hypertarget{classapollo_1_1cyber_1_1ClientBase}{\section{apollo\-:\-:cyber\-:\-:Client\-Base Class Reference}
+\label{classapollo_1_1cyber_1_1ClientBase}\index{apollo\-::cyber\-::\-Client\-Base@{apollo\-::cyber\-::\-Client\-Base}}
+}
+
+
+{\ttfamily \#include $<$client\-\_\-base.\-h$>$}
+
+Inheritance diagram for apollo\-:\-:cyber\-:\-:Client\-Base\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classapollo_1_1cyber_1_1ClientBase}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1ClientBase_a11ae882f14c81d424e6065e84e274032}{Client\-Base} (const std\-::string \&service\-\_\-name)
+\item 
+virtual \hyperlink{classapollo_1_1cyber_1_1ClientBase_a415c5d2ee0ef5bf9fd55c9536417c718}{$\sim$\-Client\-Base} ()
+\item 
+virtual void \hyperlink{classapollo_1_1cyber_1_1ClientBase_a144df36f1d8e9ec5923e3ad77a4ee634}{Destroy} ()=0
+\item 
+const std\-::string \& \hyperlink{classapollo_1_1cyber_1_1ClientBase_a9d29607d93d7d68ccc3b248ef6f9cf47}{Service\-Name} () const 
+\item 
+virtual bool \hyperlink{classapollo_1_1cyber_1_1ClientBase_af21c54a3f02783626ce5ae5eea621bda}{Service\-Is\-Ready} () const =0
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1ClientBase_ad6c2d2b853720a17de21f3bc25b6aae9}{Wait\-For\-Service\-Nanoseconds} (std\-::chrono\-::nanoseconds time\-\_\-out)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\-::string \hyperlink{classapollo_1_1cyber_1_1ClientBase_a91831fd30272eb760345dbfe6db86b44}{service\-\_\-name\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classapollo_1_1cyber_1_1ClientBase_a11ae882f14c81d424e6065e84e274032}{\index{apollo\-::cyber\-::\-Client\-Base@{apollo\-::cyber\-::\-Client\-Base}!Client\-Base@{Client\-Base}}
+\index{Client\-Base@{Client\-Base}!apollo::cyber::ClientBase@{apollo\-::cyber\-::\-Client\-Base}}
+\subsubsection[{Client\-Base}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::\-Client\-Base\-::\-Client\-Base (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{service\-\_\-name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}}\label{classapollo_1_1cyber_1_1ClientBase_a11ae882f14c81d424e6065e84e274032}
+\hypertarget{classapollo_1_1cyber_1_1ClientBase_a415c5d2ee0ef5bf9fd55c9536417c718}{\index{apollo\-::cyber\-::\-Client\-Base@{apollo\-::cyber\-::\-Client\-Base}!$\sim$\-Client\-Base@{$\sim$\-Client\-Base}}
+\index{$\sim$\-Client\-Base@{$\sim$\-Client\-Base}!apollo::cyber::ClientBase@{apollo\-::cyber\-::\-Client\-Base}}
+\subsubsection[{$\sim$\-Client\-Base}]{\setlength{\rightskip}{0pt plus 5cm}virtual apollo\-::cyber\-::\-Client\-Base\-::$\sim$\-Client\-Base (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1ClientBase_a415c5d2ee0ef5bf9fd55c9536417c718}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1ClientBase_a144df36f1d8e9ec5923e3ad77a4ee634}{\index{apollo\-::cyber\-::\-Client\-Base@{apollo\-::cyber\-::\-Client\-Base}!Destroy@{Destroy}}
+\index{Destroy@{Destroy}!apollo::cyber::ClientBase@{apollo\-::cyber\-::\-Client\-Base}}
+\subsubsection[{Destroy}]{\setlength{\rightskip}{0pt plus 5cm}virtual void apollo\-::cyber\-::\-Client\-Base\-::\-Destroy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classapollo_1_1cyber_1_1ClientBase_a144df36f1d8e9ec5923e3ad77a4ee634}
+
+
+Implemented in \hyperlink{classapollo_1_1cyber_1_1Client_a7315a6cd9c733e844f0bd8e01006f491}{apollo\-::cyber\-::\-Client$<$ Request, Response $>$}.
+
+\hypertarget{classapollo_1_1cyber_1_1ClientBase_af21c54a3f02783626ce5ae5eea621bda}{\index{apollo\-::cyber\-::\-Client\-Base@{apollo\-::cyber\-::\-Client\-Base}!Service\-Is\-Ready@{Service\-Is\-Ready}}
+\index{Service\-Is\-Ready@{Service\-Is\-Ready}!apollo::cyber::ClientBase@{apollo\-::cyber\-::\-Client\-Base}}
+\subsubsection[{Service\-Is\-Ready}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool apollo\-::cyber\-::\-Client\-Base\-::\-Service\-Is\-Ready (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classapollo_1_1cyber_1_1ClientBase_af21c54a3f02783626ce5ae5eea621bda}
+
+
+Implemented in \hyperlink{classapollo_1_1cyber_1_1Client_a08a71d99f64374f6f06236848fbfe57c}{apollo\-::cyber\-::\-Client$<$ Request, Response $>$}.
+
+\hypertarget{classapollo_1_1cyber_1_1ClientBase_a9d29607d93d7d68ccc3b248ef6f9cf47}{\index{apollo\-::cyber\-::\-Client\-Base@{apollo\-::cyber\-::\-Client\-Base}!Service\-Name@{Service\-Name}}
+\index{Service\-Name@{Service\-Name}!apollo::cyber::ClientBase@{apollo\-::cyber\-::\-Client\-Base}}
+\subsubsection[{Service\-Name}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::string\& apollo\-::cyber\-::\-Client\-Base\-::\-Service\-Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1ClientBase_a9d29607d93d7d68ccc3b248ef6f9cf47}
+\hypertarget{classapollo_1_1cyber_1_1ClientBase_ad6c2d2b853720a17de21f3bc25b6aae9}{\index{apollo\-::cyber\-::\-Client\-Base@{apollo\-::cyber\-::\-Client\-Base}!Wait\-For\-Service\-Nanoseconds@{Wait\-For\-Service\-Nanoseconds}}
+\index{Wait\-For\-Service\-Nanoseconds@{Wait\-For\-Service\-Nanoseconds}!apollo::cyber::ClientBase@{apollo\-::cyber\-::\-Client\-Base}}
+\subsubsection[{Wait\-For\-Service\-Nanoseconds}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::\-Client\-Base\-::\-Wait\-For\-Service\-Nanoseconds (
+\begin{DoxyParamCaption}
+\item[{std\-::chrono\-::nanoseconds}]{time\-\_\-out}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classapollo_1_1cyber_1_1ClientBase_ad6c2d2b853720a17de21f3bc25b6aae9}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classapollo_1_1cyber_1_1ClientBase_a91831fd30272eb760345dbfe6db86b44}{\index{apollo\-::cyber\-::\-Client\-Base@{apollo\-::cyber\-::\-Client\-Base}!service\-\_\-name\-\_\-@{service\-\_\-name\-\_\-}}
+\index{service\-\_\-name\-\_\-@{service\-\_\-name\-\_\-}!apollo::cyber::ClientBase@{apollo\-::cyber\-::\-Client\-Base}}
+\subsubsection[{service\-\_\-name\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string apollo\-::cyber\-::\-Client\-Base\-::service\-\_\-name\-\_\-\hspace{0.3cm}{\ttfamily [protected]}}}\label{classapollo_1_1cyber_1_1ClientBase_a91831fd30272eb760345dbfe6db86b44}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+service/\hyperlink{client__base_8h}{client\-\_\-base.\-h}\end{DoxyCompactItemize}

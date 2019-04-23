@@ -1,0 +1,389 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="timer__manager_8h" kind="file">
+    <compoundname>timer_manager.h</compoundname>
+    <includes local="no">fstream</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">list</includes>
+    <includes local="no">memory</includes>
+    <includes local="no">mutex</includes>
+    <includes local="no">string</includes>
+    <includes local="no">thread</includes>
+    <includes refid="common_2macros_8h" local="yes">cyber/common/macros.h</includes>
+    <includes refid="duration_8h" local="yes">cyber/time/duration.h</includes>
+    <includes refid="timing__wheel_8h" local="yes">cyber/timer/timing_wheel.h</includes>
+    <includedby refid="timer_8h" local="yes">timer/timer.h</includedby>
+    <incdepgraph>
+      <node id="10588">
+        <label>list</label>
+      </node>
+      <node id="10612">
+        <label>atomic</label>
+      </node>
+      <node id="10606">
+        <label>functional</label>
+      </node>
+      <node id="10601">
+        <label>stdint.h</label>
+      </node>
+      <node id="10603">
+        <label>stdexcept</label>
+      </node>
+      <node id="10593">
+        <label>cyber/common/macros.h</label>
+        <link refid="common_2macros_8h"/>
+        <childnode refid="10587" relation="include">
+        </childnode>
+        <childnode refid="10589" relation="include">
+        </childnode>
+        <childnode refid="10590" relation="include">
+        </childnode>
+        <childnode refid="10594" relation="include">
+        </childnode>
+        <childnode refid="10595" relation="include">
+        </childnode>
+        <childnode refid="10596" relation="include">
+        </childnode>
+      </node>
+      <node id="10591">
+        <label>string</label>
+      </node>
+      <node id="10607">
+        <label>map</label>
+      </node>
+      <node id="10586">
+        <label>fstream</label>
+      </node>
+      <node id="10610">
+        <label>cyber/base/bounded_queue.h</label>
+        <link refid="bounded__queue_8h"/>
+        <childnode refid="10601" relation="include">
+        </childnode>
+        <childnode refid="10611" relation="include">
+        </childnode>
+        <childnode refid="10605" relation="include">
+        </childnode>
+        <childnode refid="10612" relation="include">
+        </childnode>
+        <childnode refid="10597" relation="include">
+        </childnode>
+        <childnode refid="10589" relation="include">
+        </childnode>
+        <childnode refid="10596" relation="include">
+        </childnode>
+        <childnode refid="10613" relation="include">
+        </childnode>
+      </node>
+      <node id="10615">
+        <label>condition_variable</label>
+      </node>
+      <node id="10611">
+        <label>unistd.h</label>
+      </node>
+      <node id="10609">
+        <label>vector</label>
+      </node>
+      <node id="10613">
+        <label>cyber/base/wait_strategy.h</label>
+        <link refid="wait__strategy_8h"/>
+        <childnode refid="10614" relation="include">
+        </childnode>
+        <childnode refid="10615" relation="include">
+        </childnode>
+        <childnode refid="10597" relation="include">
+        </childnode>
+        <childnode refid="10590" relation="include">
+        </childnode>
+        <childnode refid="10592" relation="include">
+        </childnode>
+      </node>
+      <node id="10598">
+        <label>new</label>
+      </node>
+      <node id="10595">
+        <label>utility</label>
+      </node>
+      <node id="10600">
+        <label>math.h</label>
+      </node>
+      <node id="10597">
+        <label>cstdlib</label>
+      </node>
+      <node id="10587">
+        <label>iostream</label>
+      </node>
+      <node id="10585">
+        <label>timer/timer_manager.h</label>
+        <link refid="timer_manager.h"/>
+        <childnode refid="10586" relation="include">
+        </childnode>
+        <childnode refid="10587" relation="include">
+        </childnode>
+        <childnode refid="10588" relation="include">
+        </childnode>
+        <childnode refid="10589" relation="include">
+        </childnode>
+        <childnode refid="10590" relation="include">
+        </childnode>
+        <childnode refid="10591" relation="include">
+        </childnode>
+        <childnode refid="10592" relation="include">
+        </childnode>
+        <childnode refid="10593" relation="include">
+        </childnode>
+        <childnode refid="10599" relation="include">
+        </childnode>
+        <childnode refid="10604" relation="include">
+        </childnode>
+      </node>
+      <node id="10599">
+        <label>cyber/time/duration.h</label>
+        <link refid="duration_8h"/>
+        <childnode refid="10600" relation="include">
+        </childnode>
+        <childnode refid="10601" relation="include">
+        </childnode>
+        <childnode refid="10602" relation="include">
+        </childnode>
+        <childnode refid="10587" relation="include">
+        </childnode>
+        <childnode refid="10603" relation="include">
+        </childnode>
+      </node>
+      <node id="10604">
+        <label>cyber/timer/timing_wheel.h</label>
+        <link refid="timing__wheel_8h"/>
+        <childnode refid="10605" relation="include">
+        </childnode>
+        <childnode refid="10606" relation="include">
+        </childnode>
+        <childnode refid="10587" relation="include">
+        </childnode>
+        <childnode refid="10588" relation="include">
+        </childnode>
+        <childnode refid="10607" relation="include">
+        </childnode>
+        <childnode refid="10589" relation="include">
+        </childnode>
+        <childnode refid="10590" relation="include">
+        </childnode>
+        <childnode refid="10592" relation="include">
+        </childnode>
+        <childnode refid="10608" relation="include">
+        </childnode>
+        <childnode refid="10595" relation="include">
+        </childnode>
+        <childnode refid="10609" relation="include">
+        </childnode>
+        <childnode refid="10610" relation="include">
+        </childnode>
+        <childnode refid="10599" relation="include">
+        </childnode>
+        <childnode refid="10616" relation="include">
+        </childnode>
+      </node>
+      <node id="10608">
+        <label>unordered_map</label>
+      </node>
+      <node id="10602">
+        <label>climits</label>
+      </node>
+      <node id="10590">
+        <label>mutex</label>
+      </node>
+      <node id="10614">
+        <label>chrono</label>
+      </node>
+      <node id="10592">
+        <label>thread</label>
+      </node>
+      <node id="10616">
+        <label>cyber/timer/timing_slot.h</label>
+        <link refid="timing__slot_8h"/>
+        <childnode refid="10605" relation="include">
+        </childnode>
+        <childnode refid="10587" relation="include">
+        </childnode>
+        <childnode refid="10588" relation="include">
+        </childnode>
+        <childnode refid="10607" relation="include">
+        </childnode>
+        <childnode refid="10589" relation="include">
+        </childnode>
+        <childnode refid="10590" relation="include">
+        </childnode>
+        <childnode refid="10592" relation="include">
+        </childnode>
+        <childnode refid="10608" relation="include">
+        </childnode>
+        <childnode refid="10595" relation="include">
+        </childnode>
+        <childnode refid="10609" relation="include">
+        </childnode>
+        <childnode refid="10610" relation="include">
+        </childnode>
+      </node>
+      <node id="10594">
+        <label>type_traits</label>
+      </node>
+      <node id="10605">
+        <label>algorithm</label>
+      </node>
+      <node id="10596">
+        <label>cyber/base/macros.h</label>
+        <link refid="base_2macros_8h"/>
+        <childnode refid="10597" relation="include">
+        </childnode>
+        <childnode refid="10598" relation="include">
+        </childnode>
+      </node>
+      <node id="10589">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="10623">
+        <label>py_wrapper/py_timer.h</label>
+        <link refid="py__timer_8h"/>
+      </node>
+      <node id="10621">
+        <label>py_wrapper/py_node.h</label>
+        <link refid="py__node_8h"/>
+      </node>
+      <node id="10625">
+        <label>tools/cyber_monitor/general_message_base.h</label>
+        <link refid="general__message__base_8h"/>
+        <childnode refid="10626" relation="include">
+        </childnode>
+        <childnode refid="10627" relation="include">
+        </childnode>
+      </node>
+      <node id="10620">
+        <label>py_wrapper/py_init.h</label>
+        <link refid="py__init_8h"/>
+      </node>
+      <node id="10628">
+        <label>tools/cyber_recorder/recorder.h</label>
+        <link refid="recorder_8h"/>
+      </node>
+      <node id="10619">
+        <label>cyber.h</label>
+        <link refid="cyber_8h"/>
+        <childnode refid="10620" relation="include">
+        </childnode>
+        <childnode refid="10621" relation="include">
+        </childnode>
+        <childnode refid="10622" relation="include">
+        </childnode>
+        <childnode refid="10623" relation="include">
+        </childnode>
+        <childnode refid="10624" relation="include">
+        </childnode>
+        <childnode refid="10625" relation="include">
+        </childnode>
+        <childnode refid="10627" relation="include">
+        </childnode>
+        <childnode refid="10628" relation="include">
+        </childnode>
+      </node>
+      <node id="10624">
+        <label>py_wrapper/py_topology_manager.h</label>
+        <link refid="py__topology__manager_8h"/>
+      </node>
+      <node id="10618">
+        <label>timer/timer.h</label>
+        <link refid="timer_8h"/>
+        <childnode refid="10619" relation="include">
+        </childnode>
+        <childnode refid="10623" relation="include">
+        </childnode>
+      </node>
+      <node id="10627">
+        <label>tools/cyber_monitor/general_message.h</label>
+        <link refid="general__message_8h"/>
+      </node>
+      <node id="10626">
+        <label>tools/cyber_monitor/general_channel_message.h</label>
+        <link refid="general__channel__message_8h"/>
+      </node>
+      <node id="10617">
+        <label>timer/timer_manager.h</label>
+        <link refid="timer_manager.h"/>
+        <childnode refid="10618" relation="include">
+        </childnode>
+      </node>
+      <node id="10622">
+        <label>py_wrapper/py_time.h</label>
+        <link refid="py__time_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classapollo_1_1cyber_1_1TimerManager" prot="public">apollo::cyber::TimerManager</innerclass>
+    <innernamespace refid="namespaceapollo">apollo</innernamespace>
+    <innernamespace refid="namespaceapollo_1_1cyber">apollo::cyber</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2018<sp/>The<sp/>Apollo<sp/>Authors.<sp/>All<sp/>Rights<sp/>Reserved.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CYBER_TIMER_TIMER_MANAGER_H_</highlight></codeline>
+<codeline lineno="18"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CYBER_TIMER_TIMER_MANAGER_H_</highlight></codeline>
+<codeline lineno="19"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;list&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;mutex&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;thread&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="common_2macros_8h" kindref="compound">cyber/common/macros.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="duration_8h" kindref="compound">cyber/time/duration.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="timing__wheel_8h" kindref="compound">cyber/timer/timing_wheel.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">apollo<sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">cyber<sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="classapollo_1_1cyber_1_1TimerManager" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classapollo_1_1cyber_1_1TimerManager" kindref="compound">TimerManager</ref><sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1TimerManager_1a7c24c08a81c56e17af7de3f659ada622" kindref="member">~TimerManager</ref>();</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1TimerManager_1a3b12ca83b1b0fcfe1247a1d46d922a3f" kindref="member">Start</ref>();</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1TimerManager_1a5f6375a4c10e451707198d193f98ba1b" kindref="member">Shutdown</ref>();</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1TimerManager_1ab179408a45f0ad08c6405b05af897941" kindref="member">IsRunning</ref>();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/>uint64_t<sp/><ref refid="classapollo_1_1cyber_1_1TimerManager_1aefcab6d469d9f0f4eb4420a3df73df44" kindref="member">Add</ref>(uint64_t<sp/>interval,<sp/>std::function&lt;</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">()&gt;<sp/>handler,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>oneshot);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1TimerManager_1a76046da749392382bb30b90a98d7f5eb" kindref="member">Remove</ref>(uint64_t<sp/>timer_id);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="45" refid="classapollo_1_1cyber_1_1TimerManager_1a7ef5c0dcaa6340f1590f0f6e4c018a99" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classapollo_1_1cyber_1_1TimingWheel" kindref="compound">TimingWheel</ref><sp/><ref refid="classapollo_1_1cyber_1_1TimerManager_1a7ef5c0dcaa6340f1590f0f6e4c018a99" kindref="member">timing_wheel_</ref>;</highlight></codeline>
+<codeline lineno="46" refid="classapollo_1_1cyber_1_1TimerManager_1a94b3f5901c040151003c31996e38325f" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classapollo_1_1cyber_1_1Duration" kindref="compound">Duration</ref><sp/><ref refid="classapollo_1_1cyber_1_1TimerManager_1a94b3f5901c040151003c31996e38325f" kindref="member">time_gran_</ref>;</highlight></codeline>
+<codeline lineno="47" refid="classapollo_1_1cyber_1_1TimerManager_1a982a2e8e7d6afbc4ec91ea53f490e999" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1TimerManager_1a982a2e8e7d6afbc4ec91ea53f490e999" kindref="member">running_</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="48" refid="classapollo_1_1cyber_1_1TimerManager_1aed436a70f5511f8be98e8d8c4a99c441" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">mutable</highlight><highlight class="normal"><sp/>std::mutex<sp/><ref refid="classapollo_1_1cyber_1_1TimerManager_1aed436a70f5511f8be98e8d8c4a99c441" kindref="member">running_mutex_</ref>;</highlight></codeline>
+<codeline lineno="49" refid="classapollo_1_1cyber_1_1TimerManager_1ab929e9aa71508413660e55de8704028e" refkind="member"><highlight class="normal"><sp/><sp/>std::thread<sp/><ref refid="classapollo_1_1cyber_1_1TimerManager_1ab929e9aa71508413660e55de8704028e" kindref="member">scheduler_thread_</ref>;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1TimerManager_1a8492669c4feb18223792ab5878eb9fa2" kindref="member">ThreadFuncImpl</ref>();</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><ref refid="common_2macros_8h_1ae064c360d998527ea6031d4e129b709d" kindref="member">DECLARE_SINGLETON</ref>(<ref refid="classapollo_1_1cyber_1_1TimerManager" kindref="compound">TimerManager</ref>)</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>cyber</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>apollo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>CYBER_TIMER_TIMER_MANAGER_H_</highlight></codeline>
+    </programlisting>
+    <location file="/home/work/apollo-fork/apollo/cyber/timer/timer_manager.h"/>
+  </compounddef>
+</doxygen>

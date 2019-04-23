@@ -1,0 +1,323 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classapollo_1_1cyber_1_1scheduler_1_1ClassicContext" kind="class" prot="public">
+    <compoundname>apollo::cyber::scheduler::ClassicContext</compoundname>
+    <basecompoundref refid="classapollo_1_1cyber_1_1scheduler_1_1ProcessorContext" prot="public" virt="non-virtual">apollo::cyber::scheduler::ProcessorContext</basecompoundref>
+    <includes refid="classic__context_8h" local="no">classic_context.h</includes>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_1a10adfb1632c4cb5049273262cb997333" prot="public" static="yes" mutable="no">
+        <type><ref refid="namespaceapollo_1_1cyber_1_1scheduler_1ad4f939996840b0f02dafc9a779dfefd7" kindref="member">RQ_LOCK_GROUP</ref></type>
+        <definition>RQ_LOCK_GROUP apollo::cyber::scheduler::ClassicContext::rq_locks_</definition>
+        <argsstring></argsstring>
+        <name>rq_locks_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/scheduler/policy/classic_context.h" line="62" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/scheduler/policy/classic_context.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_1a22519e2ac14bf14f0b81e4a3a3befcfb" prot="public" static="yes" mutable="no">
+        <type><ref refid="namespaceapollo_1_1cyber_1_1scheduler_1aea5742ba3cc52566de1eeeeaac1a8714" kindref="member">CR_GROUP</ref></type>
+        <definition>CR_GROUP apollo::cyber::scheduler::ClassicContext::cr_group_</definition>
+        <argsstring></argsstring>
+        <name>cr_group_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/scheduler/policy/classic_context.h" line="63" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/scheduler/policy/classic_context.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_1a48ad41105f3adbc71ca925a08ff987ee" prot="public" static="yes" mutable="no">
+        <type><ref refid="namespaceapollo_1_1cyber_1_1scheduler_1a38dec21bb0dcc34727c9a215020abb70" kindref="member">GRP_WQ_MUTEX</ref></type>
+        <definition>GRP_WQ_MUTEX apollo::cyber::scheduler::ClassicContext::mtx_wq_</definition>
+        <argsstring></argsstring>
+        <name>mtx_wq_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/scheduler/policy/classic_context.h" line="65" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/scheduler/policy/classic_context.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_1abc70c8c180700b17f5048020f21b6fd0" prot="public" static="yes" mutable="no">
+        <type><ref refid="namespaceapollo_1_1cyber_1_1scheduler_1aaaf29077b955c494a8b6ef756e02ed4d" kindref="member">GRP_WQ_CV</ref></type>
+        <definition>GRP_WQ_CV apollo::cyber::scheduler::ClassicContext::cv_wq_</definition>
+        <argsstring></argsstring>
+        <name>cv_wq_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/scheduler/policy/classic_context.h" line="66" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/scheduler/policy/classic_context.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_1abc30359d23f986f35b0c01ff81d6ccc1" prot="private" static="no" mutable="no">
+        <type>std::chrono::steady_clock::time_point</type>
+        <definition>std::chrono::steady_clock::time_point apollo::cyber::scheduler::ClassicContext::wake_time_</definition>
+        <argsstring></argsstring>
+        <name>wake_time_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/scheduler/policy/classic_context.h" line="71" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/scheduler/policy/classic_context.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_1a094e0d83afedbb7530649d54b17f9e65" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool apollo::cyber::scheduler::ClassicContext::need_sleep_</definition>
+        <argsstring></argsstring>
+        <name>need_sleep_</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/scheduler/policy/classic_context.h" line="72" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/scheduler/policy/classic_context.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_1aa3ed67cfe2876f8fd1e1388867cad234" prot="private" static="no" mutable="no">
+        <type><ref refid="namespaceapollo_1_1cyber_1_1scheduler_1ac66e3c3cdda21d9be8ea0692401913a2" kindref="member">MULTI_PRIO_QUEUE</ref> *</type>
+        <definition>MULTI_PRIO_QUEUE* apollo::cyber::scheduler::ClassicContext::multi_pri_rq_</definition>
+        <argsstring></argsstring>
+        <name>multi_pri_rq_</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/scheduler/policy/classic_context.h" line="74" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/scheduler/policy/classic_context.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_1af6e0adf912a3056950ded3660aabb9ec" prot="private" static="no" mutable="no">
+        <type><ref refid="namespaceapollo_1_1cyber_1_1scheduler_1a714aab7bf591e6d2f48fafdbbb1dda02" kindref="member">LOCK_QUEUE</ref> *</type>
+        <definition>LOCK_QUEUE* apollo::cyber::scheduler::ClassicContext::lq_</definition>
+        <argsstring></argsstring>
+        <name>lq_</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/scheduler/policy/classic_context.h" line="75" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/scheduler/policy/classic_context.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_1a12aaac26d8fbeea3ac3124eb08528409" prot="private" static="no" mutable="no">
+        <type><ref refid="classapollo_1_1cyber_1_1scheduler_1_1MutexWrapper" kindref="compound">MutexWrapper</ref> *</type>
+        <definition>MutexWrapper* apollo::cyber::scheduler::ClassicContext::mtx_wrapper_</definition>
+        <argsstring></argsstring>
+        <name>mtx_wrapper_</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/scheduler/policy/classic_context.h" line="76" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/scheduler/policy/classic_context.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_1a39f22a14b1997f761659f2fe8cbade8b" prot="private" static="no" mutable="no">
+        <type><ref refid="classapollo_1_1cyber_1_1scheduler_1_1CvWrapper" kindref="compound">CvWrapper</ref> *</type>
+        <definition>CvWrapper* apollo::cyber::scheduler::ClassicContext::cw_</definition>
+        <argsstring></argsstring>
+        <name>cw_</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/scheduler/policy/classic_context.h" line="77" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/scheduler/policy/classic_context.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_1a663924838acb75ef7c041bc435a8142f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::scheduler::ClassicContext::ClassicContext</definition>
+        <argsstring>()</argsstring>
+        <name>ClassicContext</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/scheduler/policy/classic_context.h" line="53" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_1aeaaa88d1cab549ab2800f5e229c1244a" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::scheduler::ClassicContext::ClassicContext</definition>
+        <argsstring>(const std::string &amp;group_name)</argsstring>
+        <name>ClassicContext</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>group_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/scheduler/policy/classic_context.h" line="54" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_1a6a9ffd7b5fb645a97b7daf93d4973025" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>std::shared_ptr&lt; <ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine" kindref="compound">CRoutine</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;CRoutine&gt; apollo::cyber::scheduler::ClassicContext::NextRoutine</definition>
+        <argsstring>() override</argsstring>
+        <name>NextRoutine</name>
+        <reimplements refid="classapollo_1_1cyber_1_1scheduler_1_1ProcessorContext_1a0923b50903b11612234355566ab573e0">NextRoutine</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/scheduler/policy/classic_context.h" line="56" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_1ac32e655ea3689a0bc06c9003852fd0a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::scheduler::ClassicContext::Wait</definition>
+        <argsstring>() override</argsstring>
+        <name>Wait</name>
+        <reimplements refid="classapollo_1_1cyber_1_1scheduler_1_1ProcessorContext_1a0a2e1914277be7a5fe81f459c83b6644">Wait</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/scheduler/policy/classic_context.h" line="57" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_1aa6c94b93d17fb4f546c8f2f7e74f832a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::scheduler::ClassicContext::Shutdown</definition>
+        <argsstring>() override</argsstring>
+        <name>Shutdown</name>
+        <reimplements refid="classapollo_1_1cyber_1_1scheduler_1_1ProcessorContext_1ab36b8e9524ea0e02cba88b7d4e0e3079">Shutdown</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/scheduler/policy/classic_context.h" line="58" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_1afaa6f92a7ea305b55cd96763cbdd2a90" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void apollo::cyber::scheduler::ClassicContext::Notify</definition>
+        <argsstring>(const std::string &amp;group_name)</argsstring>
+        <name>Notify</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>group_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/scheduler/policy/classic_context.h" line="60" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_1a2f4f0b6749ceb22e645c8ca2567f903a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::scheduler::ClassicContext::InitGroup</definition>
+        <argsstring>(const std::string &amp;group_name)</argsstring>
+        <name>InitGroup</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>group_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/scheduler/policy/classic_context.h" line="69" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="116">
+        <label>apollo::cyber::scheduler::ClassicContext</label>
+        <link refid="classapollo_1_1cyber_1_1scheduler_1_1ClassicContext"/>
+        <childnode refid="117" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="117">
+        <label>apollo::cyber::scheduler::ProcessorContext</label>
+        <link refid="classapollo_1_1cyber_1_1scheduler_1_1ProcessorContext"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="120">
+        <label>apollo::cyber::scheduler::CvWrapper</label>
+        <link refid="classapollo_1_1cyber_1_1scheduler_1_1CvWrapper"/>
+      </node>
+      <node id="121">
+        <label>apollo::cyber::scheduler::MutexWrapper</label>
+        <link refid="classapollo_1_1cyber_1_1scheduler_1_1MutexWrapper"/>
+      </node>
+      <node id="118">
+        <label>apollo::cyber::scheduler::ClassicContext</label>
+        <link refid="classapollo_1_1cyber_1_1scheduler_1_1ClassicContext"/>
+        <childnode refid="119" relation="public-inheritance">
+        </childnode>
+        <childnode refid="120" relation="usage">
+          <edgelabel>cw_</edgelabel>
+        </childnode>
+        <childnode refid="121" relation="usage">
+          <edgelabel>mtx_wrapper_</edgelabel>
+        </childnode>
+      </node>
+      <node id="119">
+        <label>apollo::cyber::scheduler::ProcessorContext</label>
+        <link refid="classapollo_1_1cyber_1_1scheduler_1_1ProcessorContext"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/work/apollo-fork/apollo/cyber/scheduler/policy/classic_context.h" line="51" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/scheduler/policy/classic_context.h" bodystart="51" bodyend="78"/>
+    <listofallmembers>
+      <member refid="classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_1a663924838acb75ef7c041bc435a8142f" prot="public" virt="non-virtual"><scope>apollo::cyber::scheduler::ClassicContext</scope><name>ClassicContext</name></member>
+      <member refid="classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_1aeaaa88d1cab549ab2800f5e229c1244a" prot="public" virt="non-virtual"><scope>apollo::cyber::scheduler::ClassicContext</scope><name>ClassicContext</name></member>
+      <member refid="classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_1a22519e2ac14bf14f0b81e4a3a3befcfb" prot="public" virt="non-virtual"><scope>apollo::cyber::scheduler::ClassicContext</scope><name>cr_group_</name></member>
+      <member refid="classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_1abc70c8c180700b17f5048020f21b6fd0" prot="public" virt="non-virtual"><scope>apollo::cyber::scheduler::ClassicContext</scope><name>cv_wq_</name></member>
+      <member refid="classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_1a39f22a14b1997f761659f2fe8cbade8b" prot="private" virt="non-virtual"><scope>apollo::cyber::scheduler::ClassicContext</scope><name>cw_</name></member>
+      <member refid="classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_1a2f4f0b6749ceb22e645c8ca2567f903a" prot="private" virt="non-virtual"><scope>apollo::cyber::scheduler::ClassicContext</scope><name>InitGroup</name></member>
+      <member refid="classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_1af6e0adf912a3056950ded3660aabb9ec" prot="private" virt="non-virtual"><scope>apollo::cyber::scheduler::ClassicContext</scope><name>lq_</name></member>
+      <member refid="classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_1a48ad41105f3adbc71ca925a08ff987ee" prot="public" virt="non-virtual"><scope>apollo::cyber::scheduler::ClassicContext</scope><name>mtx_wq_</name></member>
+      <member refid="classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_1a12aaac26d8fbeea3ac3124eb08528409" prot="private" virt="non-virtual"><scope>apollo::cyber::scheduler::ClassicContext</scope><name>mtx_wrapper_</name></member>
+      <member refid="classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_1aa3ed67cfe2876f8fd1e1388867cad234" prot="private" virt="non-virtual"><scope>apollo::cyber::scheduler::ClassicContext</scope><name>multi_pri_rq_</name></member>
+      <member refid="classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_1a094e0d83afedbb7530649d54b17f9e65" prot="private" virt="non-virtual"><scope>apollo::cyber::scheduler::ClassicContext</scope><name>need_sleep_</name></member>
+      <member refid="classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_1a6a9ffd7b5fb645a97b7daf93d4973025" prot="public" virt="virtual"><scope>apollo::cyber::scheduler::ClassicContext</scope><name>NextRoutine</name></member>
+      <member refid="classapollo_1_1cyber_1_1scheduler_1_1ProcessorContext_1ad4e0ac53246d1d65b4d14a1f438715e3" prot="protected" virt="non-virtual"><scope>apollo::cyber::scheduler::ClassicContext</scope><name>notified_</name></member>
+      <member refid="classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_1afaa6f92a7ea305b55cd96763cbdd2a90" prot="public" virt="non-virtual"><scope>apollo::cyber::scheduler::ClassicContext</scope><name>Notify</name></member>
+      <member refid="classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_1a10adfb1632c4cb5049273262cb997333" prot="public" virt="non-virtual"><scope>apollo::cyber::scheduler::ClassicContext</scope><name>rq_locks_</name></member>
+      <member refid="classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_1aa6c94b93d17fb4f546c8f2f7e74f832a" prot="public" virt="virtual"><scope>apollo::cyber::scheduler::ClassicContext</scope><name>Shutdown</name></member>
+      <member refid="classapollo_1_1cyber_1_1scheduler_1_1ProcessorContext_1a19eebaac060d52fb252077f59762a97e" prot="protected" virt="non-virtual"><scope>apollo::cyber::scheduler::ClassicContext</scope><name>stop_</name></member>
+      <member refid="classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_1ac32e655ea3689a0bc06c9003852fd0a3" prot="public" virt="virtual"><scope>apollo::cyber::scheduler::ClassicContext</scope><name>Wait</name></member>
+      <member refid="classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_1abc30359d23f986f35b0c01ff81d6ccc1" prot="private" virt="non-virtual"><scope>apollo::cyber::scheduler::ClassicContext</scope><name>wake_time_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

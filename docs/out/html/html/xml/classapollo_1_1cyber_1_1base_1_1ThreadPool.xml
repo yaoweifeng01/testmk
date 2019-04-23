@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classapollo_1_1cyber_1_1base_1_1ThreadPool" kind="class" prot="public">
+    <compoundname>apollo::cyber::base::ThreadPool</compoundname>
+    <includes refid="thread__pool_8h" local="no">thread_pool.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1base_1_1ThreadPool_1acced081f4cd5b01eb8fc445d5c628ca6" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::thread &gt;</type>
+        <definition>std::vector&lt;std::thread&gt; apollo::cyber::base::ThreadPool::workers_</definition>
+        <argsstring></argsstring>
+        <name>workers_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/thread_pool.h" line="47" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/thread_pool.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1base_1_1ThreadPool_1a8a22cf996a6d9584df9b134fbefc8871" prot="private" static="no" mutable="no">
+        <type><ref refid="classapollo_1_1cyber_1_1base_1_1BoundedQueue" kindref="compound">BoundedQueue</ref>&lt; std::function&lt; void()&gt; &gt;</type>
+        <definition>BoundedQueue&lt;std::function&lt;void()&gt; &gt; apollo::cyber::base::ThreadPool::task_queue_</definition>
+        <argsstring></argsstring>
+        <name>task_queue_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/thread_pool.h" line="48" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/thread_pool.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1base_1_1ThreadPool_1a3ac78b38d2357e302782b269eb418a13" prot="private" static="no" mutable="no">
+        <type>std::atomic_bool</type>
+        <definition>std::atomic_bool apollo::cyber::base::ThreadPool::stop_</definition>
+        <argsstring></argsstring>
+        <name>stop_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/thread_pool.h" line="49" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/thread_pool.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1base_1_1ThreadPool_1a2f100617db396e84a85d3b73e0a8445e" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::base::ThreadPool::ThreadPool</definition>
+        <argsstring>(std::size_t thread_num, std::size_t max_task_num=1000)</argsstring>
+        <name>ThreadPool</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>thread_num</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>max_task_num</declname>
+          <defval>1000</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/thread_pool.h" line="38" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/thread_pool.h" bodystart="52" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1base_1_1ThreadPool_1afbec0b11f01e3104a25b6a4d6c4187fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename F</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto apollo::cyber::base::ThreadPool::Enqueue</definition>
+        <argsstring>(F &amp;&amp;f, Args &amp;&amp;...args) -&gt; std::future&lt; typename std::result_of&lt; F(Args...)&gt;::type &gt;</argsstring>
+        <name>Enqueue</name>
+        <param>
+          <type>F &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>Args &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/thread_pool.h" line="41" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/thread_pool.h" bodystart="71" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1base_1_1ThreadPool_1a3471298c5bba16696124d7be5d4d3982" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::base::ThreadPool::~ThreadPool</definition>
+        <argsstring>()</argsstring>
+        <name>~ThreadPool</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/thread_pool.h" line="44" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/thread_pool.h" bodystart="89" bodyend="97"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="908">
+        <label>apollo::cyber::base::ThreadPool</label>
+        <link refid="classapollo_1_1cyber_1_1base_1_1ThreadPool"/>
+        <childnode refid="909" relation="usage">
+          <edgelabel>task_queue_</edgelabel>
+        </childnode>
+      </node>
+      <node id="909">
+        <label>apollo::cyber::base::BoundedQueue&lt; apollo::cyber::base::std::function&lt; void()&gt; &gt;</label>
+        <link refid="classapollo_1_1cyber_1_1base_1_1BoundedQueue"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/work/apollo-fork/apollo/cyber/base/thread_pool.h" line="36" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/thread_pool.h" bodystart="36" bodyend="50"/>
+    <listofallmembers>
+      <member refid="classapollo_1_1cyber_1_1base_1_1ThreadPool_1afbec0b11f01e3104a25b6a4d6c4187fa" prot="public" virt="non-virtual"><scope>apollo::cyber::base::ThreadPool</scope><name>Enqueue</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1ThreadPool_1a3ac78b38d2357e302782b269eb418a13" prot="private" virt="non-virtual"><scope>apollo::cyber::base::ThreadPool</scope><name>stop_</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1ThreadPool_1a8a22cf996a6d9584df9b134fbefc8871" prot="private" virt="non-virtual"><scope>apollo::cyber::base::ThreadPool</scope><name>task_queue_</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1ThreadPool_1a2f100617db396e84a85d3b73e0a8445e" prot="public" virt="non-virtual"><scope>apollo::cyber::base::ThreadPool</scope><name>ThreadPool</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1ThreadPool_1acced081f4cd5b01eb8fc445d5c628ca6" prot="private" virt="non-virtual"><scope>apollo::cyber::base::ThreadPool</scope><name>workers_</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1ThreadPool_1a3471298c5bba16696124d7be5d4d3982" prot="public" virt="non-virtual"><scope>apollo::cyber::base::ThreadPool</scope><name>~ThreadPool</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,72 @@
+\hypertarget{classapollo_1_1cyber_1_1TimingSlot}{\section{apollo\-:\-:cyber\-:\-:Timing\-Slot Class Reference}
+\label{classapollo_1_1cyber_1_1TimingSlot}\index{apollo\-::cyber\-::\-Timing\-Slot@{apollo\-::cyber\-::\-Timing\-Slot}}
+}
+
+
+{\ttfamily \#include $<$timing\-\_\-slot.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1TimingSlot_a7d466ae28f21ce27c96ce7a721915378}{Timing\-Slot} ()=default
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1TimingSlot_a0103051b7efc92d111aaa23d52bdbc7e}{Add\-Task} (const std\-::shared\-\_\-ptr$<$ \hyperlink{classapollo_1_1cyber_1_1TimerTask}{Timer\-Task} $>$ \&task)
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1TimingSlot_a315c4829640231f461f6503c8e5cd27a}{Remove\-Task} (uint64\-\_\-t id)
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1TimingSlot_a226fd34a86c5c5128bda04a66a432dde}{Enum\-Task\-List} (uint64\-\_\-t deadline, bool async, \hyperlink{classapollo_1_1cyber_1_1base_1_1BoundedQueue}{Bounded\-Queue}$<$ \hyperlink{structapollo_1_1cyber_1_1HandlePackage}{Handle\-Package} $>$ $\ast$hander\-\_\-queue, \hyperlink{classapollo_1_1cyber_1_1base_1_1BoundedQueue}{Bounded\-Queue}$<$ std\-::shared\-\_\-ptr$<$ \hyperlink{classapollo_1_1cyber_1_1TimerTask}{Timer\-Task} $>$$>$ $\ast$rep\-\_\-list)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\-::unordered\-\_\-map$<$ uint64\-\_\-t, \\*
+std\-::shared\-\_\-ptr$<$ \hyperlink{classapollo_1_1cyber_1_1TimerTask}{Timer\-Task} $>$ $>$ \hyperlink{classapollo_1_1cyber_1_1TimingSlot_a2cdde7cc5a017a2cd2816676133864e7}{tasks\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classapollo_1_1cyber_1_1TimingSlot_a7d466ae28f21ce27c96ce7a721915378}{\index{apollo\-::cyber\-::\-Timing\-Slot@{apollo\-::cyber\-::\-Timing\-Slot}!Timing\-Slot@{Timing\-Slot}}
+\index{Timing\-Slot@{Timing\-Slot}!apollo::cyber::TimingSlot@{apollo\-::cyber\-::\-Timing\-Slot}}
+\subsubsection[{Timing\-Slot}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::\-Timing\-Slot\-::\-Timing\-Slot (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [default]}}}\label{classapollo_1_1cyber_1_1TimingSlot_a7d466ae28f21ce27c96ce7a721915378}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1TimingSlot_a0103051b7efc92d111aaa23d52bdbc7e}{\index{apollo\-::cyber\-::\-Timing\-Slot@{apollo\-::cyber\-::\-Timing\-Slot}!Add\-Task@{Add\-Task}}
+\index{Add\-Task@{Add\-Task}!apollo::cyber::TimingSlot@{apollo\-::cyber\-::\-Timing\-Slot}}
+\subsubsection[{Add\-Task}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::\-Timing\-Slot\-::\-Add\-Task (
+\begin{DoxyParamCaption}
+\item[{const std\-::shared\-\_\-ptr$<$ {\bf Timer\-Task} $>$ \&}]{task}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1TimingSlot_a0103051b7efc92d111aaa23d52bdbc7e}
+\hypertarget{classapollo_1_1cyber_1_1TimingSlot_a226fd34a86c5c5128bda04a66a432dde}{\index{apollo\-::cyber\-::\-Timing\-Slot@{apollo\-::cyber\-::\-Timing\-Slot}!Enum\-Task\-List@{Enum\-Task\-List}}
+\index{Enum\-Task\-List@{Enum\-Task\-List}!apollo::cyber::TimingSlot@{apollo\-::cyber\-::\-Timing\-Slot}}
+\subsubsection[{Enum\-Task\-List}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::\-Timing\-Slot\-::\-Enum\-Task\-List (
+\begin{DoxyParamCaption}
+\item[{uint64\-\_\-t}]{deadline, }
+\item[{bool}]{async, }
+\item[{{\bf Bounded\-Queue}$<$ {\bf Handle\-Package} $>$ $\ast$}]{hander\-\_\-queue, }
+\item[{{\bf Bounded\-Queue}$<$ std\-::shared\-\_\-ptr$<$ {\bf Timer\-Task} $>$$>$ $\ast$}]{rep\-\_\-list}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1TimingSlot_a226fd34a86c5c5128bda04a66a432dde}
+\hypertarget{classapollo_1_1cyber_1_1TimingSlot_a315c4829640231f461f6503c8e5cd27a}{\index{apollo\-::cyber\-::\-Timing\-Slot@{apollo\-::cyber\-::\-Timing\-Slot}!Remove\-Task@{Remove\-Task}}
+\index{Remove\-Task@{Remove\-Task}!apollo::cyber::TimingSlot@{apollo\-::cyber\-::\-Timing\-Slot}}
+\subsubsection[{Remove\-Task}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::\-Timing\-Slot\-::\-Remove\-Task (
+\begin{DoxyParamCaption}
+\item[{uint64\-\_\-t}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1TimingSlot_a315c4829640231f461f6503c8e5cd27a}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classapollo_1_1cyber_1_1TimingSlot_a2cdde7cc5a017a2cd2816676133864e7}{\index{apollo\-::cyber\-::\-Timing\-Slot@{apollo\-::cyber\-::\-Timing\-Slot}!tasks\-\_\-@{tasks\-\_\-}}
+\index{tasks\-\_\-@{tasks\-\_\-}!apollo::cyber::TimingSlot@{apollo\-::cyber\-::\-Timing\-Slot}}
+\subsubsection[{tasks\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::unordered\-\_\-map$<$uint64\-\_\-t, std\-::shared\-\_\-ptr$<${\bf Timer\-Task}$>$ $>$ apollo\-::cyber\-::\-Timing\-Slot\-::tasks\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1TimingSlot_a2cdde7cc5a017a2cd2816676133864e7}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+timer/\hyperlink{timing__slot_8h}{timing\-\_\-slot.\-h}\end{DoxyCompactItemize}

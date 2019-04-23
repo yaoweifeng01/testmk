@@ -1,0 +1,79 @@
+\hypertarget{classapollo_1_1cyber_1_1scheduler_1_1ProcessorContext}{\section{apollo\-:\-:cyber\-:\-:scheduler\-:\-:Processor\-Context Class Reference}
+\label{classapollo_1_1cyber_1_1scheduler_1_1ProcessorContext}\index{apollo\-::cyber\-::scheduler\-::\-Processor\-Context@{apollo\-::cyber\-::scheduler\-::\-Processor\-Context}}
+}
+
+
+{\ttfamily \#include $<$processor\-\_\-context.\-h$>$}
+
+Inheritance diagram for apollo\-:\-:cyber\-:\-:scheduler\-:\-:Processor\-Context\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.964912cm]{classapollo_1_1cyber_1_1scheduler_1_1ProcessorContext}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1ProcessorContext_ab36b8e9524ea0e02cba88b7d4e0e3079}{Shutdown} ()
+\item 
+virtual std\-::shared\-\_\-ptr$<$ \hyperlink{classapollo_1_1cyber_1_1croutine_1_1CRoutine}{C\-Routine} $>$ \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1ProcessorContext_a0923b50903b11612234355566ab573e0}{Next\-Routine} ()=0
+\item 
+virtual void \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1ProcessorContext_a0a2e1914277be7a5fe81f459c83b6644}{Wait} ()=0
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1ProcessorContext_a19eebaac060d52fb252077f59762a97e}{stop\-\_\-} = false
+\item 
+std\-::atomic\-\_\-flag \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1ProcessorContext_ad4e0ac53246d1d65b4d14a1f438715e3}{notified\-\_\-} = A\-T\-O\-M\-I\-C\-\_\-\-F\-L\-A\-G\-\_\-\-I\-N\-I\-T
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1scheduler_1_1ProcessorContext_a0923b50903b11612234355566ab573e0}{\index{apollo\-::cyber\-::scheduler\-::\-Processor\-Context@{apollo\-::cyber\-::scheduler\-::\-Processor\-Context}!Next\-Routine@{Next\-Routine}}
+\index{Next\-Routine@{Next\-Routine}!apollo::cyber::scheduler::ProcessorContext@{apollo\-::cyber\-::scheduler\-::\-Processor\-Context}}
+\subsubsection[{Next\-Routine}]{\setlength{\rightskip}{0pt plus 5cm}virtual std\-::shared\-\_\-ptr$<${\bf C\-Routine}$>$ apollo\-::cyber\-::scheduler\-::\-Processor\-Context\-::\-Next\-Routine (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classapollo_1_1cyber_1_1scheduler_1_1ProcessorContext_a0923b50903b11612234355566ab573e0}
+
+
+Implemented in \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_a6a9ffd7b5fb645a97b7daf93d4973025}{apollo\-::cyber\-::scheduler\-::\-Classic\-Context}, and \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1ChoreographyContext_aab1c6b9f912a43e1339fa99f2e3631b6}{apollo\-::cyber\-::scheduler\-::\-Choreography\-Context}.
+
+\hypertarget{classapollo_1_1cyber_1_1scheduler_1_1ProcessorContext_ab36b8e9524ea0e02cba88b7d4e0e3079}{\index{apollo\-::cyber\-::scheduler\-::\-Processor\-Context@{apollo\-::cyber\-::scheduler\-::\-Processor\-Context}!Shutdown@{Shutdown}}
+\index{Shutdown@{Shutdown}!apollo::cyber::scheduler::ProcessorContext@{apollo\-::cyber\-::scheduler\-::\-Processor\-Context}}
+\subsubsection[{Shutdown}]{\setlength{\rightskip}{0pt plus 5cm}virtual void apollo\-::cyber\-::scheduler\-::\-Processor\-Context\-::\-Shutdown (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1scheduler_1_1ProcessorContext_ab36b8e9524ea0e02cba88b7d4e0e3079}
+
+
+Reimplemented in \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_aa6c94b93d17fb4f546c8f2f7e74f832a}{apollo\-::cyber\-::scheduler\-::\-Classic\-Context}.
+
+\hypertarget{classapollo_1_1cyber_1_1scheduler_1_1ProcessorContext_a0a2e1914277be7a5fe81f459c83b6644}{\index{apollo\-::cyber\-::scheduler\-::\-Processor\-Context@{apollo\-::cyber\-::scheduler\-::\-Processor\-Context}!Wait@{Wait}}
+\index{Wait@{Wait}!apollo::cyber::scheduler::ProcessorContext@{apollo\-::cyber\-::scheduler\-::\-Processor\-Context}}
+\subsubsection[{Wait}]{\setlength{\rightskip}{0pt plus 5cm}virtual void apollo\-::cyber\-::scheduler\-::\-Processor\-Context\-::\-Wait (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classapollo_1_1cyber_1_1scheduler_1_1ProcessorContext_a0a2e1914277be7a5fe81f459c83b6644}
+
+
+Implemented in \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_ac32e655ea3689a0bc06c9003852fd0a3}{apollo\-::cyber\-::scheduler\-::\-Classic\-Context}, and \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1ChoreographyContext_a895fb1717d71bb0e53abfdc5f9a7a768}{apollo\-::cyber\-::scheduler\-::\-Choreography\-Context}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classapollo_1_1cyber_1_1scheduler_1_1ProcessorContext_ad4e0ac53246d1d65b4d14a1f438715e3}{\index{apollo\-::cyber\-::scheduler\-::\-Processor\-Context@{apollo\-::cyber\-::scheduler\-::\-Processor\-Context}!notified\-\_\-@{notified\-\_\-}}
+\index{notified\-\_\-@{notified\-\_\-}!apollo::cyber::scheduler::ProcessorContext@{apollo\-::cyber\-::scheduler\-::\-Processor\-Context}}
+\subsubsection[{notified\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::atomic\-\_\-flag apollo\-::cyber\-::scheduler\-::\-Processor\-Context\-::notified\-\_\- = A\-T\-O\-M\-I\-C\-\_\-\-F\-L\-A\-G\-\_\-\-I\-N\-I\-T\hspace{0.3cm}{\ttfamily [protected]}}}\label{classapollo_1_1cyber_1_1scheduler_1_1ProcessorContext_ad4e0ac53246d1d65b4d14a1f438715e3}
+\hypertarget{classapollo_1_1cyber_1_1scheduler_1_1ProcessorContext_a19eebaac060d52fb252077f59762a97e}{\index{apollo\-::cyber\-::scheduler\-::\-Processor\-Context@{apollo\-::cyber\-::scheduler\-::\-Processor\-Context}!stop\-\_\-@{stop\-\_\-}}
+\index{stop\-\_\-@{stop\-\_\-}!apollo::cyber::scheduler::ProcessorContext@{apollo\-::cyber\-::scheduler\-::\-Processor\-Context}}
+\subsubsection[{stop\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::scheduler\-::\-Processor\-Context\-::stop\-\_\- = false\hspace{0.3cm}{\ttfamily [protected]}}}\label{classapollo_1_1cyber_1_1scheduler_1_1ProcessorContext_a19eebaac060d52fb252077f59762a97e}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+scheduler/\hyperlink{processor__context_8h}{processor\-\_\-context.\-h}\end{DoxyCompactItemize}

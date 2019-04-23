@@ -1,0 +1,236 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="reentrant__rw__lock_8h" kind="file">
+    <compoundname>reentrant_rw_lock.h</compoundname>
+    <includes local="no">stdint.h</includes>
+    <includes local="no">unistd.h</includes>
+    <includes local="no">atomic</includes>
+    <includes local="no">condition_variable</includes>
+    <includes local="no">cstdlib</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">mutex</includes>
+    <includes local="no">thread</includes>
+    <includes refid="rw__lock__guard_8h" local="yes">cyber/base/rw_lock_guard.h</includes>
+    <incdepgraph>
+      <node id="469">
+        <label>atomic</label>
+      </node>
+      <node id="467">
+        <label>stdint.h</label>
+      </node>
+      <node id="475">
+        <label>cyber/base/rw_lock_guard.h</label>
+        <link refid="rw__lock__guard_8h"/>
+        <childnode refid="467" relation="include">
+        </childnode>
+        <childnode refid="468" relation="include">
+        </childnode>
+        <childnode refid="469" relation="include">
+        </childnode>
+        <childnode refid="470" relation="include">
+        </childnode>
+        <childnode refid="471" relation="include">
+        </childnode>
+        <childnode refid="472" relation="include">
+        </childnode>
+        <childnode refid="473" relation="include">
+        </childnode>
+        <childnode refid="474" relation="include">
+        </childnode>
+      </node>
+      <node id="470">
+        <label>condition_variable</label>
+      </node>
+      <node id="468">
+        <label>unistd.h</label>
+      </node>
+      <node id="471">
+        <label>cstdlib</label>
+      </node>
+      <node id="472">
+        <label>iostream</label>
+      </node>
+      <node id="466">
+        <label>base/reentrant_rw_lock.h</label>
+        <link refid="reentrant_rw_lock.h"/>
+        <childnode refid="467" relation="include">
+        </childnode>
+        <childnode refid="468" relation="include">
+        </childnode>
+        <childnode refid="469" relation="include">
+        </childnode>
+        <childnode refid="470" relation="include">
+        </childnode>
+        <childnode refid="471" relation="include">
+        </childnode>
+        <childnode refid="472" relation="include">
+        </childnode>
+        <childnode refid="473" relation="include">
+        </childnode>
+        <childnode refid="474" relation="include">
+        </childnode>
+        <childnode refid="475" relation="include">
+        </childnode>
+      </node>
+      <node id="473">
+        <label>mutex</label>
+      </node>
+      <node id="474">
+        <label>thread</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock" prot="public">apollo::cyber::base::ReentrantRWLock</innerclass>
+    <innernamespace refid="namespaceapollo">apollo</innernamespace>
+    <innernamespace refid="namespaceapollo_1_1cyber">apollo::cyber</innernamespace>
+    <innernamespace refid="namespaceapollo_1_1cyber_1_1base">apollo::cyber::base</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2018<sp/>The<sp/>Apollo<sp/>Authors.<sp/>All<sp/>Rights<sp/>Reserved.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CYBER_BASE_REENTRANT_RW_LOCK_H_</highlight></codeline>
+<codeline lineno="18"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CYBER_BASE_REENTRANT_RW_LOCK_H_</highlight></codeline>
+<codeline lineno="19"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;unistd.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;atomic&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;condition_variable&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdlib&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;mutex&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;thread&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="rw__lock__guard_8h" kindref="compound">cyber/base/rw_lock_guard.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">apollo<sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">cyber<sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">base<sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="namespaceapollo_1_1cyber_1_1base_1a3aa2d654ab213ffe2d37fd81e951094b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::thread::id<sp/><ref refid="namespaceapollo_1_1cyber_1_1base_1a3aa2d654ab213ffe2d37fd81e951094b" kindref="member">NULL_THREAD_ID</ref><sp/>=<sp/>std::thread::id();</highlight></codeline>
+<codeline lineno="36" refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock" kindref="compound">ReentrantRWLock</ref><sp/>{</highlight></codeline>
+<codeline lineno="37" refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1a44206ff51a59b832c2629a9d04803c1b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classapollo_1_1cyber_1_1base_1_1ReadLockGuard" kindref="compound">ReadLockGuard</ref>&lt;<ref refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock" kindref="compound">ReentrantRWLock</ref>&gt;;</highlight></codeline>
+<codeline lineno="38" refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1ae0e3e9a45b2e096b2706f0845459eb01" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classapollo_1_1cyber_1_1base_1_1WriteLockGuard" kindref="compound">WriteLockGuard</ref>&lt;<ref refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock" kindref="compound">ReentrantRWLock</ref>&gt;;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="41" refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1a1ea3a1cbc79ba78a79fbf965b74d03e5" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>int32_t<sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1a1ea3a1cbc79ba78a79fbf965b74d03e5" kindref="member">RW_LOCK_FREE</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="42" refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1af20aa8c75a72b20ab6863f77e436b04d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>int32_t<sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1af20aa8c75a72b20ab6863f77e436b04d" kindref="member">WRITE_EXCLUSIVE</ref><sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="43" refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1ad21e7730e6c0803b54bb17d409de3991" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t<sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1ad21e7730e6c0803b54bb17d409de3991" kindref="member">MAX_RETRY_TIMES</ref><sp/>=<sp/>5;</highlight></codeline>
+<codeline lineno="44" refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1a77a2185c1f0ba187bd45e3fd51dd4425" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::thread::id<sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1a77a2185c1f0ba187bd45e3fd51dd4425" kindref="member">null_thread</ref>;</highlight></codeline>
+<codeline lineno="45" refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1afb5cf9b3147e418d7ea56bd95faef907" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1afb5cf9b3147e418d7ea56bd95faef907" kindref="member">ReentrantRWLock</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="46" refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1a54c6a03f86a85c28ac1b98affd4c6c77" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1a54c6a03f86a85c28ac1b98affd4c6c77" kindref="member">ReentrantRWLock</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>write_first)<sp/>:<sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1ab986769842dcde3e2dc152ee206bd16a" kindref="member">write_first_</ref>(write_first)<sp/>{}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>all<sp/>these<sp/>function<sp/>only<sp/>can<sp/>used<sp/>by<sp/>ReadLockGuard/WriteLockGuard;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1a8549e924ba3f76d1fb517f736a358d64" kindref="member">ReadLock</ref>();</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1a02f8bf0029382f9887e7e3f9c8c3051a" kindref="member">WriteLock</ref>();</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1a07699e427dcd60975968712cdfd9bf0b" kindref="member">ReadUnlock</ref>();</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1af8f6e3508b02328dcc081d72639097f4" kindref="member">WriteUnlock</ref>();</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1afb5cf9b3147e418d7ea56bd95faef907" kindref="member">ReentrantRWLock</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock" kindref="compound">ReentrantRWLock</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock" kindref="compound">ReentrantRWLock</ref>&amp;<sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1ac2862d650cda15e8c6a553ce5fe5ce66" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock" kindref="compound">ReentrantRWLock</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="58" refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1ad9ffc19935a572a671f094c612581473" refkind="member"><highlight class="normal"><sp/><sp/>std::thread::id<sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1ad9ffc19935a572a671f094c612581473" kindref="member">write_thread_id_</ref><sp/>=<sp/>{<ref refid="namespaceapollo_1_1cyber_1_1base_1a3aa2d654ab213ffe2d37fd81e951094b" kindref="member">NULL_THREAD_ID</ref>};</highlight></codeline>
+<codeline lineno="59" refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1a374944a50ed1bb9997bfd1665ae7c3fc" refkind="member"><highlight class="normal"><sp/><sp/>std::atomic&lt;uint32_t&gt;<sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1a374944a50ed1bb9997bfd1665ae7c3fc" kindref="member">write_lock_wait_num_</ref><sp/>=<sp/>{0};</highlight></codeline>
+<codeline lineno="60" refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1a5ca32abf747615ddcd8d52d46ad434db" refkind="member"><highlight class="normal"><sp/><sp/>std::atomic&lt;int32_t&gt;<sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1a5ca32abf747615ddcd8d52d46ad434db" kindref="member">lock_num_</ref><sp/>=<sp/>{0};</highlight></codeline>
+<codeline lineno="61" refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1ab986769842dcde3e2dc152ee206bd16a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1ab986769842dcde3e2dc152ee206bd16a" kindref="member">write_first_</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1a8549e924ba3f76d1fb517f736a358d64" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1a8549e924ba3f76d1fb517f736a358d64" kindref="member">ReentrantRWLock::ReadLock</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1ad9ffc19935a572a671f094c612581473" kindref="member">write_thread_id_</ref><sp/>==<sp/>std::this_thread::get_id())<sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/>uint32_t<sp/>retry_times<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/>int32_t<sp/>lock_num<sp/>=<sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1a5ca32abf747615ddcd8d52d46ad434db" kindref="member">lock_num_</ref>.load(std::memory_order_acquire);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1ab986769842dcde3e2dc152ee206bd16a" kindref="member">write_first_</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(lock_num<sp/>&lt;<sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1a1ea3a1cbc79ba78a79fbf965b74d03e5" kindref="member">RW_LOCK_FREE</ref><sp/>||</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1a374944a50ed1bb9997bfd1665ae7c3fc" kindref="member">write_lock_wait_num_</ref>.load(std::memory_order_acquire)<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(++retry_times<sp/>==<sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1ad21e7730e6c0803b54bb17d409de3991" kindref="member">MAX_RETRY_TIMES</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>saving<sp/>cpu</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::this_thread::yield();</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retry_times<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lock_num<sp/>=<sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1a5ca32abf747615ddcd8d52d46ad434db" kindref="member">lock_num_</ref>.load(std::memory_order_acquire);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!<ref refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1a5ca32abf747615ddcd8d52d46ad434db" kindref="member">lock_num_</ref>.compare_exchange_weak(lock_num,<sp/>lock_num<sp/>+<sp/>1,</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::memory_order_acq_rel,</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::memory_order_relaxed));</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(lock_num<sp/>&lt;<sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1a1ea3a1cbc79ba78a79fbf965b74d03e5" kindref="member">RW_LOCK_FREE</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(++retry_times<sp/>==<sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1ad21e7730e6c0803b54bb17d409de3991" kindref="member">MAX_RETRY_TIMES</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>saving<sp/>cpu</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::this_thread::yield();</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>retry_times<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lock_num<sp/>=<sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1a5ca32abf747615ddcd8d52d46ad434db" kindref="member">lock_num_</ref>.load(std::memory_order_acquire);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!<ref refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1a5ca32abf747615ddcd8d52d46ad434db" kindref="member">lock_num_</ref>.compare_exchange_weak(lock_num,<sp/>lock_num<sp/>+<sp/>1,</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::memory_order_acq_rel,</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::memory_order_relaxed));</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1a02f8bf0029382f9887e7e3f9c8c3051a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1a02f8bf0029382f9887e7e3f9c8c3051a" kindref="member">ReentrantRWLock::WriteLock</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>this_thread_id<sp/>=<sp/>std::this_thread::get_id();</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1ad9ffc19935a572a671f094c612581473" kindref="member">write_thread_id_</ref><sp/>==<sp/>this_thread_id)<sp/>{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1a5ca32abf747615ddcd8d52d46ad434db" kindref="member">lock_num_</ref>.fetch_sub(1);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/>int32_t<sp/>rw_lock_free<sp/>=<sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1a1ea3a1cbc79ba78a79fbf965b74d03e5" kindref="member">RW_LOCK_FREE</ref>;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/>uint32_t<sp/>retry_times<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1a374944a50ed1bb9997bfd1665ae7c3fc" kindref="member">write_lock_wait_num_</ref>.fetch_add(1);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!<ref refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1a5ca32abf747615ddcd8d52d46ad434db" kindref="member">lock_num_</ref>.compare_exchange_weak(rw_lock_free,<sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1af20aa8c75a72b20ab6863f77e436b04d" kindref="member">WRITE_EXCLUSIVE</ref>,</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::memory_order_acq_rel,</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::memory_order_relaxed))<sp/>{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>rw_lock_free<sp/>will<sp/>change<sp/>after<sp/>CAS<sp/>fail,<sp/>so<sp/>init<sp/>agin</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>rw_lock_free<sp/>=<sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1a1ea3a1cbc79ba78a79fbf965b74d03e5" kindref="member">RW_LOCK_FREE</ref>;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(++retry_times<sp/>==<sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1ad21e7730e6c0803b54bb17d409de3991" kindref="member">MAX_RETRY_TIMES</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>saving<sp/>cpu</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::this_thread::yield();</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>retry_times<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1ad9ffc19935a572a671f094c612581473" kindref="member">write_thread_id_</ref><sp/>=<sp/>this_thread_id;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1a374944a50ed1bb9997bfd1665ae7c3fc" kindref="member">write_lock_wait_num_</ref>.fetch_sub(1);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125" refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1a07699e427dcd60975968712cdfd9bf0b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1a07699e427dcd60975968712cdfd9bf0b" kindref="member">ReentrantRWLock::ReadUnlock</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1ad9ffc19935a572a671f094c612581473" kindref="member">write_thread_id_</ref><sp/>==<sp/>std::this_thread::get_id())<sp/>{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1a5ca32abf747615ddcd8d52d46ad434db" kindref="member">lock_num_</ref>.fetch_sub(1);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132" refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1af8f6e3508b02328dcc081d72639097f4" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1af8f6e3508b02328dcc081d72639097f4" kindref="member">ReentrantRWLock::WriteUnlock</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1a5ca32abf747615ddcd8d52d46ad434db" kindref="member">lock_num_</ref>.fetch_add(1)<sp/>==<sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1af20aa8c75a72b20ab6863f77e436b04d" kindref="member">WRITE_EXCLUSIVE</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1ad9ffc19935a572a671f094c612581473" kindref="member">write_thread_id_</ref><sp/>=<sp/><ref refid="namespaceapollo_1_1cyber_1_1base_1a3aa2d654ab213ffe2d37fd81e951094b" kindref="member">NULL_THREAD_ID</ref>;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>base</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>cyber</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>apollo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>CYBER_BASE_REENTRANT_RW_LOCK_H_</highlight></codeline>
+    </programlisting>
+    <location file="/home/work/apollo-fork/apollo/cyber/base/reentrant_rw_lock.h"/>
+  </compounddef>
+</doxygen>

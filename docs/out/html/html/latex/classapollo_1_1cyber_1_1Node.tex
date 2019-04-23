@@ -1,0 +1,209 @@
+\hypertarget{classapollo_1_1cyber_1_1Node}{\section{apollo\-:\-:cyber\-:\-:Node Class Reference}
+\label{classapollo_1_1cyber_1_1Node}\index{apollo\-::cyber\-::\-Node@{apollo\-::cyber\-::\-Node}}
+}
+
+
+{\ttfamily \#include $<$node.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classapollo_1_1cyber_1_1Node_a5dda5dd93c37631a8d4601398d0abf52}{$\sim$\-Node} ()
+\item 
+const std\-::string \& \hyperlink{classapollo_1_1cyber_1_1Node_a0fd0e39463d3407904f726217c0b9dbb}{Name} () const 
+\item 
+{\footnotesize template$<$typename Message\-T $>$ }\\auto \hyperlink{classapollo_1_1cyber_1_1Node_a6ba09b337623830c2a3c53e3f70de285}{Create\-Writer} (const proto\-::\-Role\-Attributes \&role\-\_\-attr) -\/$>$ std\-::shared\-\_\-ptr$<$ \hyperlink{classapollo_1_1cyber_1_1Writer}{Writer}$<$ Message\-T $>$$>$
+\item 
+{\footnotesize template$<$typename Message\-T $>$ }\\auto \hyperlink{classapollo_1_1cyber_1_1Node_acf60041ea3a94a5d002acaf1c8c74aee}{Create\-Reader} (const std\-::string \&channel\-\_\-name, const \hyperlink{namespaceapollo_1_1cyber_ac2b119de9ef52dbfcee3b6e8d497adc4}{Callback\-Func}$<$ Message\-T $>$ \&reader\-\_\-func=nullptr) -\/$>$ std\-::shared\-\_\-ptr$<$ \hyperlink{classapollo_1_1cyber_1_1Reader}{cyber\-::\-Reader}$<$ Message\-T $>$$>$
+\item 
+{\footnotesize template$<$typename Message\-T $>$ }\\auto \hyperlink{classapollo_1_1cyber_1_1Node_a2e17c58e7b3cd8867991cab633d90b8f}{Create\-Reader} (const \hyperlink{structapollo_1_1cyber_1_1ReaderConfig}{Reader\-Config} \&config, const \hyperlink{namespaceapollo_1_1cyber_ac2b119de9ef52dbfcee3b6e8d497adc4}{Callback\-Func}$<$ Message\-T $>$ \&reader\-\_\-func=nullptr) -\/$>$ std\-::shared\-\_\-ptr$<$ \hyperlink{classapollo_1_1cyber_1_1Reader}{cyber\-::\-Reader}$<$ Message\-T $>$$>$
+\item 
+{\footnotesize template$<$typename Message\-T $>$ }\\auto \hyperlink{classapollo_1_1cyber_1_1Node_a1d2ff5d6345df80ab6f519539ef62f9f}{Create\-Reader} (const proto\-::\-Role\-Attributes \&role\-\_\-attr, const \hyperlink{namespaceapollo_1_1cyber_ac2b119de9ef52dbfcee3b6e8d497adc4}{Callback\-Func}$<$ Message\-T $>$ \&reader\-\_\-func=nullptr) -\/$>$ std\-::shared\-\_\-ptr$<$ \hyperlink{classapollo_1_1cyber_1_1Reader}{cyber\-::\-Reader}$<$ Message\-T $>$$>$
+\item 
+{\footnotesize template$<$typename Message\-T $>$ }\\auto \hyperlink{classapollo_1_1cyber_1_1Node_acb01c315d71730e31fbd7687f99ad664}{Create\-Writer} (const std\-::string \&channel\-\_\-name) -\/$>$ std\-::shared\-\_\-ptr$<$ \hyperlink{classapollo_1_1cyber_1_1Writer}{Writer}$<$ Message\-T $>$$>$
+\item 
+{\footnotesize template$<$typename Request , typename Response $>$ }\\auto \hyperlink{classapollo_1_1cyber_1_1Node_aaa9b8d603becaf7ef00354f780d0680f}{Create\-Service} (const std\-::string \&service\-\_\-name, const typename \hyperlink{classapollo_1_1cyber_1_1Service}{Service}$<$ Request, Response $>$\-::Service\-Callback \&service\-\_\-calllback) -\/$>$ std\-::shared\-\_\-ptr$<$ \hyperlink{classapollo_1_1cyber_1_1Service}{Service}$<$ Request, Response $>$$>$
+\item 
+{\footnotesize template$<$typename Request , typename Response $>$ }\\auto \hyperlink{classapollo_1_1cyber_1_1Node_a5686ca1d8eebcb4b75d40aaf4b38cb62}{Create\-Client} (const std\-::string \&service\-\_\-name) -\/$>$ std\-::shared\-\_\-ptr$<$ \hyperlink{classapollo_1_1cyber_1_1Client}{Client}$<$ Request, Response $>$$>$
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1Node_a4be2b14c6792747f8656dd919d27ab08}{Observe} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1Node_a0ea323d8977f0bf34ab980aa08abe538}{Clear\-Data} ()
+\item 
+{\footnotesize template$<$typename Message\-T $>$ }\\auto \hyperlink{classapollo_1_1cyber_1_1Node_ae327333999356195de0643ce21e27ec9}{Get\-Reader} (const std\-::string \&channel\-\_\-name) -\/$>$ std\-::shared\-\_\-ptr$<$ \hyperlink{classapollo_1_1cyber_1_1Reader}{Reader}$<$ Message\-T $>$$>$
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1Node_abc8fb29c7802cebbcc5af4cc3fec5b5c}{Node} (const std\-::string \&node\-\_\-name, const std\-::string \&name\-\_\-space=\char`\"{}\char`\"{})
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\-::string \hyperlink{classapollo_1_1cyber_1_1Node_afc778da4ec0270b109bdc9dd22b435ad}{node\-\_\-name\-\_\-}
+\item 
+std\-::string \hyperlink{classapollo_1_1cyber_1_1Node_ad7fbce28b454e6f419cbae9c9e55f665}{name\-\_\-space\-\_\-}
+\item 
+std\-::mutex \hyperlink{classapollo_1_1cyber_1_1Node_a1da65038b46901c730a9b50a1f0f38d6}{readers\-\_\-mutex\-\_\-}
+\item 
+std\-::map$<$ std\-::string, \\*
+std\-::shared\-\_\-ptr$<$ \hyperlink{classapollo_1_1cyber_1_1ReaderBase}{Reader\-Base} $>$ $>$ \hyperlink{classapollo_1_1cyber_1_1Node_ab62dc14e42c5c1585405690d9af1401b}{readers\-\_\-}
+\item 
+std\-::unique\-\_\-ptr$<$ \hyperlink{classapollo_1_1cyber_1_1NodeChannelImpl}{Node\-Channel\-Impl} $>$ \hyperlink{classapollo_1_1cyber_1_1Node_aca5b98e6450b2c8f7a399f25e128fc70}{node\-\_\-channel\-\_\-impl\-\_\-} = nullptr
+\item 
+std\-::unique\-\_\-ptr$<$ \hyperlink{classapollo_1_1cyber_1_1NodeServiceImpl}{Node\-Service\-Impl} $>$ \hyperlink{classapollo_1_1cyber_1_1Node_af99eb9acecc7ee0fc373a94938833579}{node\-\_\-service\-\_\-impl\-\_\-} = nullptr
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename M0 , typename M1 , typename M2 , typename M3 $>$ }\\class \hyperlink{classapollo_1_1cyber_1_1Node_a734c4a9f2abda26d833396f447e6fc27}{Component}
+\item 
+class \hyperlink{classapollo_1_1cyber_1_1Node_a0a63d0a707df18a6aaaabbb3a39e65cd}{Timer\-Component}
+\item 
+std\-::unique\-\_\-ptr$<$ \hyperlink{classapollo_1_1cyber_1_1Node}{Node} $>$ \hyperlink{classapollo_1_1cyber_1_1Node_a1ce7fed0a950c53fb2d27a5fc4861b41}{Create\-Node} (const std\-::string \&, const std\-::string \&)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classapollo_1_1cyber_1_1Node_a5dda5dd93c37631a8d4601398d0abf52}{\index{apollo\-::cyber\-::\-Node@{apollo\-::cyber\-::\-Node}!$\sim$\-Node@{$\sim$\-Node}}
+\index{$\sim$\-Node@{$\sim$\-Node}!apollo::cyber::Node@{apollo\-::cyber\-::\-Node}}
+\subsubsection[{$\sim$\-Node}]{\setlength{\rightskip}{0pt plus 5cm}virtual apollo\-::cyber\-::\-Node\-::$\sim$\-Node (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1Node_a5dda5dd93c37631a8d4601398d0abf52}
+\hypertarget{classapollo_1_1cyber_1_1Node_abc8fb29c7802cebbcc5af4cc3fec5b5c}{\index{apollo\-::cyber\-::\-Node@{apollo\-::cyber\-::\-Node}!Node@{Node}}
+\index{Node@{Node}!apollo::cyber::Node@{apollo\-::cyber\-::\-Node}}
+\subsubsection[{Node}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::\-Node\-::\-Node (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{node\-\_\-name, }
+\item[{const std\-::string \&}]{name\-\_\-space = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1Node_abc8fb29c7802cebbcc5af4cc3fec5b5c}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1Node_a0ea323d8977f0bf34ab980aa08abe538}{\index{apollo\-::cyber\-::\-Node@{apollo\-::cyber\-::\-Node}!Clear\-Data@{Clear\-Data}}
+\index{Clear\-Data@{Clear\-Data}!apollo::cyber::Node@{apollo\-::cyber\-::\-Node}}
+\subsubsection[{Clear\-Data}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::\-Node\-::\-Clear\-Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1Node_a0ea323d8977f0bf34ab980aa08abe538}
+\hypertarget{classapollo_1_1cyber_1_1Node_a5686ca1d8eebcb4b75d40aaf4b38cb62}{\index{apollo\-::cyber\-::\-Node@{apollo\-::cyber\-::\-Node}!Create\-Client@{Create\-Client}}
+\index{Create\-Client@{Create\-Client}!apollo::cyber::Node@{apollo\-::cyber\-::\-Node}}
+\subsubsection[{Create\-Client}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Request , typename Response $>$ auto apollo\-::cyber\-::\-Node\-::\-Create\-Client (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{service\-\_\-name}
+\end{DoxyParamCaption}
+) -\/$>$ std\-::shared\-\_\-ptr$<${\bf Client}$<$Request, Response$>$$>$}}\label{classapollo_1_1cyber_1_1Node_a5686ca1d8eebcb4b75d40aaf4b38cb62}
+\hypertarget{classapollo_1_1cyber_1_1Node_acf60041ea3a94a5d002acaf1c8c74aee}{\index{apollo\-::cyber\-::\-Node@{apollo\-::cyber\-::\-Node}!Create\-Reader@{Create\-Reader}}
+\index{Create\-Reader@{Create\-Reader}!apollo::cyber::Node@{apollo\-::cyber\-::\-Node}}
+\subsubsection[{Create\-Reader}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Message\-T $>$ auto apollo\-::cyber\-::\-Node\-::\-Create\-Reader (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{channel\-\_\-name, }
+\item[{const {\bf Callback\-Func}$<$ Message\-T $>$ \&}]{reader\-\_\-func = {\ttfamily nullptr}}
+\end{DoxyParamCaption}
+) -\/$>$ std\-::shared\-\_\-ptr$<${\bf cyber\-::\-Reader}$<$Message\-T$>$$>$}}\label{classapollo_1_1cyber_1_1Node_acf60041ea3a94a5d002acaf1c8c74aee}
+\hypertarget{classapollo_1_1cyber_1_1Node_a2e17c58e7b3cd8867991cab633d90b8f}{\index{apollo\-::cyber\-::\-Node@{apollo\-::cyber\-::\-Node}!Create\-Reader@{Create\-Reader}}
+\index{Create\-Reader@{Create\-Reader}!apollo::cyber::Node@{apollo\-::cyber\-::\-Node}}
+\subsubsection[{Create\-Reader}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Message\-T $>$ auto apollo\-::cyber\-::\-Node\-::\-Create\-Reader (
+\begin{DoxyParamCaption}
+\item[{const {\bf Reader\-Config} \&}]{config, }
+\item[{const {\bf Callback\-Func}$<$ Message\-T $>$ \&}]{reader\-\_\-func = {\ttfamily nullptr}}
+\end{DoxyParamCaption}
+) -\/$>$ std\-::shared\-\_\-ptr$<${\bf cyber\-::\-Reader}$<$Message\-T$>$$>$}}\label{classapollo_1_1cyber_1_1Node_a2e17c58e7b3cd8867991cab633d90b8f}
+\hypertarget{classapollo_1_1cyber_1_1Node_a1d2ff5d6345df80ab6f519539ef62f9f}{\index{apollo\-::cyber\-::\-Node@{apollo\-::cyber\-::\-Node}!Create\-Reader@{Create\-Reader}}
+\index{Create\-Reader@{Create\-Reader}!apollo::cyber::Node@{apollo\-::cyber\-::\-Node}}
+\subsubsection[{Create\-Reader}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Message\-T $>$ auto apollo\-::cyber\-::\-Node\-::\-Create\-Reader (
+\begin{DoxyParamCaption}
+\item[{const proto\-::\-Role\-Attributes \&}]{role\-\_\-attr, }
+\item[{const {\bf Callback\-Func}$<$ Message\-T $>$ \&}]{reader\-\_\-func = {\ttfamily nullptr}}
+\end{DoxyParamCaption}
+) -\/$>$ std\-::shared\-\_\-ptr$<${\bf cyber\-::\-Reader}$<$Message\-T$>$$>$}}\label{classapollo_1_1cyber_1_1Node_a1d2ff5d6345df80ab6f519539ef62f9f}
+\hypertarget{classapollo_1_1cyber_1_1Node_aaa9b8d603becaf7ef00354f780d0680f}{\index{apollo\-::cyber\-::\-Node@{apollo\-::cyber\-::\-Node}!Create\-Service@{Create\-Service}}
+\index{Create\-Service@{Create\-Service}!apollo::cyber::Node@{apollo\-::cyber\-::\-Node}}
+\subsubsection[{Create\-Service}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Request , typename Response $>$ auto apollo\-::cyber\-::\-Node\-::\-Create\-Service (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{service\-\_\-name, }
+\item[{const typename {\bf Service}$<$ Request, Response $>$\-::Service\-Callback \&}]{service\-\_\-calllback}
+\end{DoxyParamCaption}
+) -\/$>$ std\-::shared\-\_\-ptr$<${\bf Service}$<$Request, Response$>$$>$}}\label{classapollo_1_1cyber_1_1Node_aaa9b8d603becaf7ef00354f780d0680f}
+\hypertarget{classapollo_1_1cyber_1_1Node_a6ba09b337623830c2a3c53e3f70de285}{\index{apollo\-::cyber\-::\-Node@{apollo\-::cyber\-::\-Node}!Create\-Writer@{Create\-Writer}}
+\index{Create\-Writer@{Create\-Writer}!apollo::cyber::Node@{apollo\-::cyber\-::\-Node}}
+\subsubsection[{Create\-Writer}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Message\-T $>$ auto apollo\-::cyber\-::\-Node\-::\-Create\-Writer (
+\begin{DoxyParamCaption}
+\item[{const proto\-::\-Role\-Attributes \&}]{role\-\_\-attr}
+\end{DoxyParamCaption}
+) -\/$>$ std\-::shared\-\_\-ptr$<${\bf Writer}$<$Message\-T$>$$>$}}\label{classapollo_1_1cyber_1_1Node_a6ba09b337623830c2a3c53e3f70de285}
+\hypertarget{classapollo_1_1cyber_1_1Node_acb01c315d71730e31fbd7687f99ad664}{\index{apollo\-::cyber\-::\-Node@{apollo\-::cyber\-::\-Node}!Create\-Writer@{Create\-Writer}}
+\index{Create\-Writer@{Create\-Writer}!apollo::cyber::Node@{apollo\-::cyber\-::\-Node}}
+\subsubsection[{Create\-Writer}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Message\-T $>$ auto apollo\-::cyber\-::\-Node\-::\-Create\-Writer (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{channel\-\_\-name}
+\end{DoxyParamCaption}
+) -\/$>$ std\-::shared\-\_\-ptr$<${\bf Writer}$<$Message\-T$>$$>$}}\label{classapollo_1_1cyber_1_1Node_acb01c315d71730e31fbd7687f99ad664}
+\hypertarget{classapollo_1_1cyber_1_1Node_ae327333999356195de0643ce21e27ec9}{\index{apollo\-::cyber\-::\-Node@{apollo\-::cyber\-::\-Node}!Get\-Reader@{Get\-Reader}}
+\index{Get\-Reader@{Get\-Reader}!apollo::cyber::Node@{apollo\-::cyber\-::\-Node}}
+\subsubsection[{Get\-Reader}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Message\-T $>$ auto apollo\-::cyber\-::\-Node\-::\-Get\-Reader (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{channel\-\_\-name}
+\end{DoxyParamCaption}
+) -\/$>$ std\-::shared\-\_\-ptr$<${\bf Reader}$<$Message\-T$>$$>$}}\label{classapollo_1_1cyber_1_1Node_ae327333999356195de0643ce21e27ec9}
+\hypertarget{classapollo_1_1cyber_1_1Node_a0fd0e39463d3407904f726217c0b9dbb}{\index{apollo\-::cyber\-::\-Node@{apollo\-::cyber\-::\-Node}!Name@{Name}}
+\index{Name@{Name}!apollo::cyber::Node@{apollo\-::cyber\-::\-Node}}
+\subsubsection[{Name}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::string\& apollo\-::cyber\-::\-Node\-::\-Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classapollo_1_1cyber_1_1Node_a0fd0e39463d3407904f726217c0b9dbb}
+\hypertarget{classapollo_1_1cyber_1_1Node_a4be2b14c6792747f8656dd919d27ab08}{\index{apollo\-::cyber\-::\-Node@{apollo\-::cyber\-::\-Node}!Observe@{Observe}}
+\index{Observe@{Observe}!apollo::cyber::Node@{apollo\-::cyber\-::\-Node}}
+\subsubsection[{Observe}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::\-Node\-::\-Observe (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1Node_a4be2b14c6792747f8656dd919d27ab08}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1Node_a734c4a9f2abda26d833396f447e6fc27}{\index{apollo\-::cyber\-::\-Node@{apollo\-::cyber\-::\-Node}!Component@{Component}}
+\index{Component@{Component}!apollo::cyber::Node@{apollo\-::cyber\-::\-Node}}
+\subsubsection[{Component}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M0 , typename M1 , typename M2 , typename M3 $>$ friend class {\bf Component}\hspace{0.3cm}{\ttfamily [friend]}}}\label{classapollo_1_1cyber_1_1Node_a734c4a9f2abda26d833396f447e6fc27}
+\hypertarget{classapollo_1_1cyber_1_1Node_a1ce7fed0a950c53fb2d27a5fc4861b41}{\index{apollo\-::cyber\-::\-Node@{apollo\-::cyber\-::\-Node}!Create\-Node@{Create\-Node}}
+\index{Create\-Node@{Create\-Node}!apollo::cyber::Node@{apollo\-::cyber\-::\-Node}}
+\subsubsection[{Create\-Node}]{\setlength{\rightskip}{0pt plus 5cm}std\-::unique\-\_\-ptr$<${\bf Node}$>$ Create\-Node (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{, }
+\item[{const std\-::string \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{classapollo_1_1cyber_1_1Node_a1ce7fed0a950c53fb2d27a5fc4861b41}
+\hypertarget{classapollo_1_1cyber_1_1Node_a0a63d0a707df18a6aaaabbb3a39e65cd}{\index{apollo\-::cyber\-::\-Node@{apollo\-::cyber\-::\-Node}!Timer\-Component@{Timer\-Component}}
+\index{Timer\-Component@{Timer\-Component}!apollo::cyber::Node@{apollo\-::cyber\-::\-Node}}
+\subsubsection[{Timer\-Component}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Timer\-Component}\hspace{0.3cm}{\ttfamily [friend]}}}\label{classapollo_1_1cyber_1_1Node_a0a63d0a707df18a6aaaabbb3a39e65cd}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classapollo_1_1cyber_1_1Node_ad7fbce28b454e6f419cbae9c9e55f665}{\index{apollo\-::cyber\-::\-Node@{apollo\-::cyber\-::\-Node}!name\-\_\-space\-\_\-@{name\-\_\-space\-\_\-}}
+\index{name\-\_\-space\-\_\-@{name\-\_\-space\-\_\-}!apollo::cyber::Node@{apollo\-::cyber\-::\-Node}}
+\subsubsection[{name\-\_\-space\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string apollo\-::cyber\-::\-Node\-::name\-\_\-space\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1Node_ad7fbce28b454e6f419cbae9c9e55f665}
+\hypertarget{classapollo_1_1cyber_1_1Node_aca5b98e6450b2c8f7a399f25e128fc70}{\index{apollo\-::cyber\-::\-Node@{apollo\-::cyber\-::\-Node}!node\-\_\-channel\-\_\-impl\-\_\-@{node\-\_\-channel\-\_\-impl\-\_\-}}
+\index{node\-\_\-channel\-\_\-impl\-\_\-@{node\-\_\-channel\-\_\-impl\-\_\-}!apollo::cyber::Node@{apollo\-::cyber\-::\-Node}}
+\subsubsection[{node\-\_\-channel\-\_\-impl\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::unique\-\_\-ptr$<${\bf Node\-Channel\-Impl}$>$ apollo\-::cyber\-::\-Node\-::node\-\_\-channel\-\_\-impl\-\_\- = nullptr\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1Node_aca5b98e6450b2c8f7a399f25e128fc70}
+\hypertarget{classapollo_1_1cyber_1_1Node_afc778da4ec0270b109bdc9dd22b435ad}{\index{apollo\-::cyber\-::\-Node@{apollo\-::cyber\-::\-Node}!node\-\_\-name\-\_\-@{node\-\_\-name\-\_\-}}
+\index{node\-\_\-name\-\_\-@{node\-\_\-name\-\_\-}!apollo::cyber::Node@{apollo\-::cyber\-::\-Node}}
+\subsubsection[{node\-\_\-name\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string apollo\-::cyber\-::\-Node\-::node\-\_\-name\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1Node_afc778da4ec0270b109bdc9dd22b435ad}
+\hypertarget{classapollo_1_1cyber_1_1Node_af99eb9acecc7ee0fc373a94938833579}{\index{apollo\-::cyber\-::\-Node@{apollo\-::cyber\-::\-Node}!node\-\_\-service\-\_\-impl\-\_\-@{node\-\_\-service\-\_\-impl\-\_\-}}
+\index{node\-\_\-service\-\_\-impl\-\_\-@{node\-\_\-service\-\_\-impl\-\_\-}!apollo::cyber::Node@{apollo\-::cyber\-::\-Node}}
+\subsubsection[{node\-\_\-service\-\_\-impl\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::unique\-\_\-ptr$<${\bf Node\-Service\-Impl}$>$ apollo\-::cyber\-::\-Node\-::node\-\_\-service\-\_\-impl\-\_\- = nullptr\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1Node_af99eb9acecc7ee0fc373a94938833579}
+\hypertarget{classapollo_1_1cyber_1_1Node_ab62dc14e42c5c1585405690d9af1401b}{\index{apollo\-::cyber\-::\-Node@{apollo\-::cyber\-::\-Node}!readers\-\_\-@{readers\-\_\-}}
+\index{readers\-\_\-@{readers\-\_\-}!apollo::cyber::Node@{apollo\-::cyber\-::\-Node}}
+\subsubsection[{readers\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::map$<$std\-::string, std\-::shared\-\_\-ptr$<${\bf Reader\-Base}$>$ $>$ apollo\-::cyber\-::\-Node\-::readers\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1Node_ab62dc14e42c5c1585405690d9af1401b}
+\hypertarget{classapollo_1_1cyber_1_1Node_a1da65038b46901c730a9b50a1f0f38d6}{\index{apollo\-::cyber\-::\-Node@{apollo\-::cyber\-::\-Node}!readers\-\_\-mutex\-\_\-@{readers\-\_\-mutex\-\_\-}}
+\index{readers\-\_\-mutex\-\_\-@{readers\-\_\-mutex\-\_\-}!apollo::cyber::Node@{apollo\-::cyber\-::\-Node}}
+\subsubsection[{readers\-\_\-mutex\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::mutex apollo\-::cyber\-::\-Node\-::readers\-\_\-mutex\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1Node_a1da65038b46901c730a9b50a1f0f38d6}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+node/\hyperlink{node_8h}{node.\-h}\end{DoxyCompactItemize}

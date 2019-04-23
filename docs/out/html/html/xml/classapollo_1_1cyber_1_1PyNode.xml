@@ -1,0 +1,204 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classapollo_1_1cyber_1_1PyNode" kind="class" prot="public">
+    <compoundname>apollo::cyber::PyNode</compoundname>
+    <includes refid="py__node_8h" local="no">py_node.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1PyNode_1aaabbfc592e52cc2501e2b4c9685927c9" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string apollo::cyber::PyNode::node_name_</definition>
+        <argsstring></argsstring>
+        <name>node_name_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/py_wrapper/py_node.h" line="337" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/py_wrapper/py_node.h" bodystart="337" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1PyNode_1a366c56a5a7c1d5c03a72c1ebcf246820" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; <ref refid="classapollo_1_1cyber_1_1Node" kindref="compound">Node</ref> &gt;</type>
+        <definition>std::unique_ptr&lt;Node&gt; apollo::cyber::PyNode::node_</definition>
+        <argsstring></argsstring>
+        <name>node_</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/py_wrapper/py_node.h" line="338" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/py_wrapper/py_node.h" bodystart="338" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1PyNode_1a1fd745580dbd3402c16e2e5741057583" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::PyNode::PyNode</definition>
+        <argsstring>(const std::string &amp;node_name)</argsstring>
+        <name>PyNode</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>node_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/py_wrapper/py_node.h" line="291" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/py_wrapper/py_node.h" bodystart="291" bodyend="293"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1PyNode_1a72ef7b8357f4744c0fd5f5bd13c143f6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::PyNode::~PyNode</definition>
+        <argsstring>()</argsstring>
+        <name>~PyNode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/py_wrapper/py_node.h" line="294" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/py_wrapper/py_node.h" bodystart="294" bodyend="294"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1PyNode_1a5b9bca8bb275c76086e21113c829194e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::PyNode::shutdown</definition>
+        <argsstring>()</argsstring>
+        <name>shutdown</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/py_wrapper/py_node.h" line="296" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/py_wrapper/py_node.h" bodystart="296" bodyend="299"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1PyNode_1a3bcbe1170b63bb7552119540b793675c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classapollo_1_1cyber_1_1PyWriter" kindref="compound">PyWriter</ref> *</type>
+        <definition>PyWriter* apollo::cyber::PyNode::create_writer</definition>
+        <argsstring>(const std::string &amp;channel, const std::string &amp;type, uint32_t qos_depth=1)</argsstring>
+        <name>create_writer</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>channel</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>qos_depth</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/py_wrapper/py_node.h" line="301" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/py_wrapper/py_node.h" bodystart="301" bodyend="308"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1PyNode_1adb37cff1b766781878d43d4caf7fe183" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::PyNode::register_message</definition>
+        <argsstring>(const std::string &amp;desc)</argsstring>
+        <name>register_message</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>desc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/py_wrapper/py_node.h" line="310" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/py_wrapper/py_node.h" bodystart="310" bodyend="312"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1PyNode_1a51040dbfb514b3758576677cdab32a01" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classapollo_1_1cyber_1_1PyReader" kindref="compound">PyReader</ref> *</type>
+        <definition>PyReader* apollo::cyber::PyNode::create_reader</definition>
+        <argsstring>(const std::string &amp;channel, const std::string &amp;type)</argsstring>
+        <name>create_reader</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>channel</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/py_wrapper/py_node.h" line="314" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/py_wrapper/py_node.h" bodystart="314" bodyend="319"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1PyNode_1a045d1b609d47c236be36617cc033067b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classapollo_1_1cyber_1_1PyService" kindref="compound">PyService</ref> *</type>
+        <definition>PyService* apollo::cyber::PyNode::create_service</definition>
+        <argsstring>(const std::string &amp;service, const std::string &amp;type)</argsstring>
+        <name>create_service</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>service</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/py_wrapper/py_node.h" line="321" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/py_wrapper/py_node.h" bodystart="321" bodyend="327"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1PyNode_1a6e6275ce1059d4b6868be9996112058d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classapollo_1_1cyber_1_1PyClient" kindref="compound">PyClient</ref> *</type>
+        <definition>PyClient* apollo::cyber::PyNode::create_client</definition>
+        <argsstring>(const std::string &amp;service, const std::string &amp;type)</argsstring>
+        <name>create_client</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>service</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/py_wrapper/py_node.h" line="329" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/py_wrapper/py_node.h" bodystart="329" bodyend="334"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/work/apollo-fork/apollo/cyber/py_wrapper/py_node.h" line="289" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/py_wrapper/py_node.h" bodystart="289" bodyend="339"/>
+    <listofallmembers>
+      <member refid="classapollo_1_1cyber_1_1PyNode_1a6e6275ce1059d4b6868be9996112058d" prot="public" virt="non-virtual"><scope>apollo::cyber::PyNode</scope><name>create_client</name></member>
+      <member refid="classapollo_1_1cyber_1_1PyNode_1a51040dbfb514b3758576677cdab32a01" prot="public" virt="non-virtual"><scope>apollo::cyber::PyNode</scope><name>create_reader</name></member>
+      <member refid="classapollo_1_1cyber_1_1PyNode_1a045d1b609d47c236be36617cc033067b" prot="public" virt="non-virtual"><scope>apollo::cyber::PyNode</scope><name>create_service</name></member>
+      <member refid="classapollo_1_1cyber_1_1PyNode_1a3bcbe1170b63bb7552119540b793675c" prot="public" virt="non-virtual"><scope>apollo::cyber::PyNode</scope><name>create_writer</name></member>
+      <member refid="classapollo_1_1cyber_1_1PyNode_1a366c56a5a7c1d5c03a72c1ebcf246820" prot="private" virt="non-virtual"><scope>apollo::cyber::PyNode</scope><name>node_</name></member>
+      <member refid="classapollo_1_1cyber_1_1PyNode_1aaabbfc592e52cc2501e2b4c9685927c9" prot="private" virt="non-virtual"><scope>apollo::cyber::PyNode</scope><name>node_name_</name></member>
+      <member refid="classapollo_1_1cyber_1_1PyNode_1a1fd745580dbd3402c16e2e5741057583" prot="public" virt="non-virtual"><scope>apollo::cyber::PyNode</scope><name>PyNode</name></member>
+      <member refid="classapollo_1_1cyber_1_1PyNode_1adb37cff1b766781878d43d4caf7fe183" prot="public" virt="non-virtual"><scope>apollo::cyber::PyNode</scope><name>register_message</name></member>
+      <member refid="classapollo_1_1cyber_1_1PyNode_1a5b9bca8bb275c76086e21113c829194e" prot="public" virt="non-virtual"><scope>apollo::cyber::PyNode</scope><name>shutdown</name></member>
+      <member refid="classapollo_1_1cyber_1_1PyNode_1a72ef7b8357f4744c0fd5f5bd13c143f6" prot="public" virt="non-virtual"><scope>apollo::cyber::PyNode</scope><name>~PyNode</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

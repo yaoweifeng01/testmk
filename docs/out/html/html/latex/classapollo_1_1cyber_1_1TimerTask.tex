@@ -1,0 +1,179 @@
+\hypertarget{classapollo_1_1cyber_1_1TimerTask}{\section{apollo\-:\-:cyber\-:\-:Timer\-Task Class Reference}
+\label{classapollo_1_1cyber_1_1TimerTask}\index{apollo\-::cyber\-::\-Timer\-Task@{apollo\-::cyber\-::\-Timer\-Task}}
+}
+
+
+{\ttfamily \#include $<$timer\-\_\-task.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1TimerTask_a47c9483a816dc0975777d6ab584778b4}{Timer\-Task} (uint64\-\_\-t id, uint64\-\_\-t it, uint64\-\_\-t ivl, \hyperlink{namespaceapollo_1_1cyber_a73f7b365c4d923725c0a03bfb8c97978}{Call\-Handler} h, bool ons)
+\item 
+\hyperlink{classapollo_1_1cyber_1_1TimerTask_a5ffb99c2d598df3f991fb5b0852b65c4}{Timer\-Task} ()=default
+\item 
+uint64\-\_\-t \hyperlink{classapollo_1_1cyber_1_1TimerTask_a20ddd9c2160d756b939ae0e7fe1b07bd}{Id} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1TimerTask_a989cc4900a9d303fd2a62d6b3d3ca4bf}{Fire} (bool async)
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1TimerTask_ab8042523f5416d5383d6b25c1f624aba}{Cancel} ()
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1TimerTask_a6badb4f167ade19b6b0ddc9df15dd708}{Is\-Canceled} ()
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1TimerTask_a37551d4fbbe37ea9c3a5d9770d68f7b9}{Is\-Expired} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint64\-\_\-t \hyperlink{classapollo_1_1cyber_1_1TimerTask_a799665cefef6d15319443ef3c60b7222}{init\-\_\-time\-\_\-} = 0
+\item 
+uint64\-\_\-t \hyperlink{classapollo_1_1cyber_1_1TimerTask_a1fbfa9037352296f67933ed5b0f86f6a}{deadline\-\_\-} = 0
+\item 
+uint64\-\_\-t \hyperlink{classapollo_1_1cyber_1_1TimerTask_ac81077a72ce25273fa49b34e24be5b40}{interval\-\_\-} = 0
+\item 
+\hyperlink{namespaceapollo_1_1cyber_a73f7b365c4d923725c0a03bfb8c97978}{Call\-Handler} \hyperlink{classapollo_1_1cyber_1_1TimerTask_a726dd80016a944b581931974d9203819}{handler\-\_\-}
+\item 
+uint64\-\_\-t \hyperlink{classapollo_1_1cyber_1_1TimerTask_a249095d69722d44f2cc5dd7dd82e27a5}{rest\-\_\-rounds\-\_\-} = 0
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1TimerTask_a90bfd686d5fa8a84382555dc899a80bd}{oneshot\-\_\-} = true
+\item 
+uint64\-\_\-t \hyperlink{classapollo_1_1cyber_1_1TimerTask_af3aec64d13c9a238498906d16d046a35}{fire\-\_\-count\-\_\-} = 0
+\end{DoxyCompactItemize}
+\subsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classapollo_1_1cyber_1_1TimerTask_a3ef75f49c4156cab3c9f4923266e9466}{S\-T\-A\-T\-S} \{ \hyperlink{classapollo_1_1cyber_1_1TimerTask_a3ef75f49c4156cab3c9f4923266e9466a6689b7df2a1fd5f6ecef752258cd93d1}{I\-N\-I\-T} = 0, 
+\hyperlink{classapollo_1_1cyber_1_1TimerTask_a3ef75f49c4156cab3c9f4923266e9466a6d28c72551a5871321ea335741b55b70}{C\-A\-N\-C\-E\-L\-E\-D}, 
+\hyperlink{classapollo_1_1cyber_1_1TimerTask_a3ef75f49c4156cab3c9f4923266e9466a33f821f47cc36f92cf72bdcce7e92da0}{E\-X\-P\-I\-R\-E\-D}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1TimerTask_a3ef75f49c4156cab3c9f4923266e9466}{S\-T\-A\-T\-S} \hyperlink{classapollo_1_1cyber_1_1TimerTask_ad37aa040e45d48666dccb47fbc2a9b4f}{State} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+volatile \hyperlink{classapollo_1_1cyber_1_1TimerTask_a3ef75f49c4156cab3c9f4923266e9466}{S\-T\-A\-T\-S} \hyperlink{classapollo_1_1cyber_1_1TimerTask_a08a072f333d69dfd501f82ce990de24c}{status\-\_\-} = \hyperlink{classapollo_1_1cyber_1_1TimerTask_a3ef75f49c4156cab3c9f4923266e9466a6689b7df2a1fd5f6ecef752258cd93d1}{I\-N\-I\-T}
+\item 
+uint64\-\_\-t \hyperlink{classapollo_1_1cyber_1_1TimerTask_a9fe857ede3438525c040f0fae5e510d3}{tid\-\_\-} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classapollo_1_1cyber_1_1TimerTask_a3ef75f49c4156cab3c9f4923266e9466}{\index{apollo\-::cyber\-::\-Timer\-Task@{apollo\-::cyber\-::\-Timer\-Task}!S\-T\-A\-T\-S@{S\-T\-A\-T\-S}}
+\index{S\-T\-A\-T\-S@{S\-T\-A\-T\-S}!apollo::cyber::TimerTask@{apollo\-::cyber\-::\-Timer\-Task}}
+\subsubsection[{S\-T\-A\-T\-S}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf apollo\-::cyber\-::\-Timer\-Task\-::\-S\-T\-A\-T\-S}\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1TimerTask_a3ef75f49c4156cab3c9f4923266e9466}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{I\-N\-I\-T@{I\-N\-I\-T}!apollo\-::cyber\-::\-Timer\-Task@{apollo\-::cyber\-::\-Timer\-Task}}\index{apollo\-::cyber\-::\-Timer\-Task@{apollo\-::cyber\-::\-Timer\-Task}!I\-N\-I\-T@{I\-N\-I\-T}}\item[{\em 
+\hypertarget{classapollo_1_1cyber_1_1TimerTask_a3ef75f49c4156cab3c9f4923266e9466a6689b7df2a1fd5f6ecef752258cd93d1}{I\-N\-I\-T}\label{classapollo_1_1cyber_1_1TimerTask_a3ef75f49c4156cab3c9f4923266e9466a6689b7df2a1fd5f6ecef752258cd93d1}
+}]\index{C\-A\-N\-C\-E\-L\-E\-D@{C\-A\-N\-C\-E\-L\-E\-D}!apollo\-::cyber\-::\-Timer\-Task@{apollo\-::cyber\-::\-Timer\-Task}}\index{apollo\-::cyber\-::\-Timer\-Task@{apollo\-::cyber\-::\-Timer\-Task}!C\-A\-N\-C\-E\-L\-E\-D@{C\-A\-N\-C\-E\-L\-E\-D}}\item[{\em 
+\hypertarget{classapollo_1_1cyber_1_1TimerTask_a3ef75f49c4156cab3c9f4923266e9466a6d28c72551a5871321ea335741b55b70}{C\-A\-N\-C\-E\-L\-E\-D}\label{classapollo_1_1cyber_1_1TimerTask_a3ef75f49c4156cab3c9f4923266e9466a6d28c72551a5871321ea335741b55b70}
+}]\index{E\-X\-P\-I\-R\-E\-D@{E\-X\-P\-I\-R\-E\-D}!apollo\-::cyber\-::\-Timer\-Task@{apollo\-::cyber\-::\-Timer\-Task}}\index{apollo\-::cyber\-::\-Timer\-Task@{apollo\-::cyber\-::\-Timer\-Task}!E\-X\-P\-I\-R\-E\-D@{E\-X\-P\-I\-R\-E\-D}}\item[{\em 
+\hypertarget{classapollo_1_1cyber_1_1TimerTask_a3ef75f49c4156cab3c9f4923266e9466a33f821f47cc36f92cf72bdcce7e92da0}{E\-X\-P\-I\-R\-E\-D}\label{classapollo_1_1cyber_1_1TimerTask_a3ef75f49c4156cab3c9f4923266e9466a33f821f47cc36f92cf72bdcce7e92da0}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classapollo_1_1cyber_1_1TimerTask_a47c9483a816dc0975777d6ab584778b4}{\index{apollo\-::cyber\-::\-Timer\-Task@{apollo\-::cyber\-::\-Timer\-Task}!Timer\-Task@{Timer\-Task}}
+\index{Timer\-Task@{Timer\-Task}!apollo::cyber::TimerTask@{apollo\-::cyber\-::\-Timer\-Task}}
+\subsubsection[{Timer\-Task}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::\-Timer\-Task\-::\-Timer\-Task (
+\begin{DoxyParamCaption}
+\item[{uint64\-\_\-t}]{id, }
+\item[{uint64\-\_\-t}]{it, }
+\item[{uint64\-\_\-t}]{ivl, }
+\item[{{\bf Call\-Handler}}]{h, }
+\item[{bool}]{ons}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1TimerTask_a47c9483a816dc0975777d6ab584778b4}
+\hypertarget{classapollo_1_1cyber_1_1TimerTask_a5ffb99c2d598df3f991fb5b0852b65c4}{\index{apollo\-::cyber\-::\-Timer\-Task@{apollo\-::cyber\-::\-Timer\-Task}!Timer\-Task@{Timer\-Task}}
+\index{Timer\-Task@{Timer\-Task}!apollo::cyber::TimerTask@{apollo\-::cyber\-::\-Timer\-Task}}
+\subsubsection[{Timer\-Task}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::\-Timer\-Task\-::\-Timer\-Task (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [default]}}}\label{classapollo_1_1cyber_1_1TimerTask_a5ffb99c2d598df3f991fb5b0852b65c4}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1TimerTask_ab8042523f5416d5383d6b25c1f624aba}{\index{apollo\-::cyber\-::\-Timer\-Task@{apollo\-::cyber\-::\-Timer\-Task}!Cancel@{Cancel}}
+\index{Cancel@{Cancel}!apollo::cyber::TimerTask@{apollo\-::cyber\-::\-Timer\-Task}}
+\subsubsection[{Cancel}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::\-Timer\-Task\-::\-Cancel (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1TimerTask_ab8042523f5416d5383d6b25c1f624aba}
+\hypertarget{classapollo_1_1cyber_1_1TimerTask_a989cc4900a9d303fd2a62d6b3d3ca4bf}{\index{apollo\-::cyber\-::\-Timer\-Task@{apollo\-::cyber\-::\-Timer\-Task}!Fire@{Fire}}
+\index{Fire@{Fire}!apollo::cyber::TimerTask@{apollo\-::cyber\-::\-Timer\-Task}}
+\subsubsection[{Fire}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::\-Timer\-Task\-::\-Fire (
+\begin{DoxyParamCaption}
+\item[{bool}]{async}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1TimerTask_a989cc4900a9d303fd2a62d6b3d3ca4bf}
+\hypertarget{classapollo_1_1cyber_1_1TimerTask_a20ddd9c2160d756b939ae0e7fe1b07bd}{\index{apollo\-::cyber\-::\-Timer\-Task@{apollo\-::cyber\-::\-Timer\-Task}!Id@{Id}}
+\index{Id@{Id}!apollo::cyber::TimerTask@{apollo\-::cyber\-::\-Timer\-Task}}
+\subsubsection[{Id}]{\setlength{\rightskip}{0pt plus 5cm}uint64\-\_\-t apollo\-::cyber\-::\-Timer\-Task\-::\-Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1TimerTask_a20ddd9c2160d756b939ae0e7fe1b07bd}
+\hypertarget{classapollo_1_1cyber_1_1TimerTask_a6badb4f167ade19b6b0ddc9df15dd708}{\index{apollo\-::cyber\-::\-Timer\-Task@{apollo\-::cyber\-::\-Timer\-Task}!Is\-Canceled@{Is\-Canceled}}
+\index{Is\-Canceled@{Is\-Canceled}!apollo::cyber::TimerTask@{apollo\-::cyber\-::\-Timer\-Task}}
+\subsubsection[{Is\-Canceled}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::\-Timer\-Task\-::\-Is\-Canceled (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1TimerTask_a6badb4f167ade19b6b0ddc9df15dd708}
+\hypertarget{classapollo_1_1cyber_1_1TimerTask_a37551d4fbbe37ea9c3a5d9770d68f7b9}{\index{apollo\-::cyber\-::\-Timer\-Task@{apollo\-::cyber\-::\-Timer\-Task}!Is\-Expired@{Is\-Expired}}
+\index{Is\-Expired@{Is\-Expired}!apollo::cyber::TimerTask@{apollo\-::cyber\-::\-Timer\-Task}}
+\subsubsection[{Is\-Expired}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::\-Timer\-Task\-::\-Is\-Expired (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1TimerTask_a37551d4fbbe37ea9c3a5d9770d68f7b9}
+\hypertarget{classapollo_1_1cyber_1_1TimerTask_ad37aa040e45d48666dccb47fbc2a9b4f}{\index{apollo\-::cyber\-::\-Timer\-Task@{apollo\-::cyber\-::\-Timer\-Task}!State@{State}}
+\index{State@{State}!apollo::cyber::TimerTask@{apollo\-::cyber\-::\-Timer\-Task}}
+\subsubsection[{State}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-T\-A\-T\-S} apollo\-::cyber\-::\-Timer\-Task\-::\-State (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1TimerTask_ad37aa040e45d48666dccb47fbc2a9b4f}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classapollo_1_1cyber_1_1TimerTask_a1fbfa9037352296f67933ed5b0f86f6a}{\index{apollo\-::cyber\-::\-Timer\-Task@{apollo\-::cyber\-::\-Timer\-Task}!deadline\-\_\-@{deadline\-\_\-}}
+\index{deadline\-\_\-@{deadline\-\_\-}!apollo::cyber::TimerTask@{apollo\-::cyber\-::\-Timer\-Task}}
+\subsubsection[{deadline\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}uint64\-\_\-t apollo\-::cyber\-::\-Timer\-Task\-::deadline\-\_\- = 0}}\label{classapollo_1_1cyber_1_1TimerTask_a1fbfa9037352296f67933ed5b0f86f6a}
+\hypertarget{classapollo_1_1cyber_1_1TimerTask_af3aec64d13c9a238498906d16d046a35}{\index{apollo\-::cyber\-::\-Timer\-Task@{apollo\-::cyber\-::\-Timer\-Task}!fire\-\_\-count\-\_\-@{fire\-\_\-count\-\_\-}}
+\index{fire\-\_\-count\-\_\-@{fire\-\_\-count\-\_\-}!apollo::cyber::TimerTask@{apollo\-::cyber\-::\-Timer\-Task}}
+\subsubsection[{fire\-\_\-count\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}uint64\-\_\-t apollo\-::cyber\-::\-Timer\-Task\-::fire\-\_\-count\-\_\- = 0}}\label{classapollo_1_1cyber_1_1TimerTask_af3aec64d13c9a238498906d16d046a35}
+\hypertarget{classapollo_1_1cyber_1_1TimerTask_a726dd80016a944b581931974d9203819}{\index{apollo\-::cyber\-::\-Timer\-Task@{apollo\-::cyber\-::\-Timer\-Task}!handler\-\_\-@{handler\-\_\-}}
+\index{handler\-\_\-@{handler\-\_\-}!apollo::cyber::TimerTask@{apollo\-::cyber\-::\-Timer\-Task}}
+\subsubsection[{handler\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Call\-Handler} apollo\-::cyber\-::\-Timer\-Task\-::handler\-\_\-}}\label{classapollo_1_1cyber_1_1TimerTask_a726dd80016a944b581931974d9203819}
+\hypertarget{classapollo_1_1cyber_1_1TimerTask_a799665cefef6d15319443ef3c60b7222}{\index{apollo\-::cyber\-::\-Timer\-Task@{apollo\-::cyber\-::\-Timer\-Task}!init\-\_\-time\-\_\-@{init\-\_\-time\-\_\-}}
+\index{init\-\_\-time\-\_\-@{init\-\_\-time\-\_\-}!apollo::cyber::TimerTask@{apollo\-::cyber\-::\-Timer\-Task}}
+\subsubsection[{init\-\_\-time\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}uint64\-\_\-t apollo\-::cyber\-::\-Timer\-Task\-::init\-\_\-time\-\_\- = 0}}\label{classapollo_1_1cyber_1_1TimerTask_a799665cefef6d15319443ef3c60b7222}
+\hypertarget{classapollo_1_1cyber_1_1TimerTask_ac81077a72ce25273fa49b34e24be5b40}{\index{apollo\-::cyber\-::\-Timer\-Task@{apollo\-::cyber\-::\-Timer\-Task}!interval\-\_\-@{interval\-\_\-}}
+\index{interval\-\_\-@{interval\-\_\-}!apollo::cyber::TimerTask@{apollo\-::cyber\-::\-Timer\-Task}}
+\subsubsection[{interval\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}uint64\-\_\-t apollo\-::cyber\-::\-Timer\-Task\-::interval\-\_\- = 0}}\label{classapollo_1_1cyber_1_1TimerTask_ac81077a72ce25273fa49b34e24be5b40}
+\hypertarget{classapollo_1_1cyber_1_1TimerTask_a90bfd686d5fa8a84382555dc899a80bd}{\index{apollo\-::cyber\-::\-Timer\-Task@{apollo\-::cyber\-::\-Timer\-Task}!oneshot\-\_\-@{oneshot\-\_\-}}
+\index{oneshot\-\_\-@{oneshot\-\_\-}!apollo::cyber::TimerTask@{apollo\-::cyber\-::\-Timer\-Task}}
+\subsubsection[{oneshot\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::\-Timer\-Task\-::oneshot\-\_\- = true}}\label{classapollo_1_1cyber_1_1TimerTask_a90bfd686d5fa8a84382555dc899a80bd}
+\hypertarget{classapollo_1_1cyber_1_1TimerTask_a249095d69722d44f2cc5dd7dd82e27a5}{\index{apollo\-::cyber\-::\-Timer\-Task@{apollo\-::cyber\-::\-Timer\-Task}!rest\-\_\-rounds\-\_\-@{rest\-\_\-rounds\-\_\-}}
+\index{rest\-\_\-rounds\-\_\-@{rest\-\_\-rounds\-\_\-}!apollo::cyber::TimerTask@{apollo\-::cyber\-::\-Timer\-Task}}
+\subsubsection[{rest\-\_\-rounds\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}uint64\-\_\-t apollo\-::cyber\-::\-Timer\-Task\-::rest\-\_\-rounds\-\_\- = 0}}\label{classapollo_1_1cyber_1_1TimerTask_a249095d69722d44f2cc5dd7dd82e27a5}
+\hypertarget{classapollo_1_1cyber_1_1TimerTask_a08a072f333d69dfd501f82ce990de24c}{\index{apollo\-::cyber\-::\-Timer\-Task@{apollo\-::cyber\-::\-Timer\-Task}!status\-\_\-@{status\-\_\-}}
+\index{status\-\_\-@{status\-\_\-}!apollo::cyber::TimerTask@{apollo\-::cyber\-::\-Timer\-Task}}
+\subsubsection[{status\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}volatile {\bf S\-T\-A\-T\-S} apollo\-::cyber\-::\-Timer\-Task\-::status\-\_\- = {\bf I\-N\-I\-T}\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1TimerTask_a08a072f333d69dfd501f82ce990de24c}
+\hypertarget{classapollo_1_1cyber_1_1TimerTask_a9fe857ede3438525c040f0fae5e510d3}{\index{apollo\-::cyber\-::\-Timer\-Task@{apollo\-::cyber\-::\-Timer\-Task}!tid\-\_\-@{tid\-\_\-}}
+\index{tid\-\_\-@{tid\-\_\-}!apollo::cyber::TimerTask@{apollo\-::cyber\-::\-Timer\-Task}}
+\subsubsection[{tid\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}uint64\-\_\-t apollo\-::cyber\-::\-Timer\-Task\-::tid\-\_\- = 0\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1TimerTask_a9fe857ede3438525c040f0fae5e510d3}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+timer/\hyperlink{timer__task_8h}{timer\-\_\-task.\-h}\end{DoxyCompactItemize}

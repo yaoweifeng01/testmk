@@ -1,0 +1,289 @@
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter}{\section{apollo\-:\-:cyber\-:\-:transport\-:\-:Hybrid\-Transmitter$<$ M $>$ Class Template Reference}
+\label{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter}\index{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter$<$ M $>$@{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter$<$ M $>$}}
+}
+
+
+{\ttfamily \#include $<$hybrid\-\_\-transmitter.\-h$>$}
+
+Inheritance diagram for apollo\-:\-:cyber\-:\-:transport\-:\-:Hybrid\-Transmitter$<$ M $>$\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_ae4da0fb39a90d084d271b8522afc0881}{Message\-Ptr} = std\-::shared\-\_\-ptr$<$ M $>$
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_aee5ef32dcbaab6fcd68459e5f5afd6d8}{History\-Ptr} = std\-::shared\-\_\-ptr$<$ \hyperlink{classapollo_1_1cyber_1_1transport_1_1History}{History}$<$ M $>$$>$
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_ab5d6589b441adbb0aeebde895b21c569}{Transmitter\-Ptr} = std\-::shared\-\_\-ptr$<$ \hyperlink{classapollo_1_1cyber_1_1transport_1_1Transmitter}{Transmitter}$<$ M $>$$>$
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_a79fe84264b152838a2a921ca7c428d31}{Transmitter\-Map} = std\-::unordered\-\_\-map$<$ Optional\-Mode, \hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_ab5d6589b441adbb0aeebde895b21c569}{Transmitter\-Ptr}, std\-::hash$<$ int $>$$>$
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_a57d8d230cedd2328577b9789ab964a5c}{Receiver\-Map} = std\-::unordered\-\_\-map$<$ Optional\-Mode, std\-::set$<$ uint64\-\_\-t $>$, std\-::hash$<$ int $>$$>$
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_aebca8e1bc93bfde3563c0c8b8c92bfa9}{Communication\-Mode\-Ptr} = std\-::shared\-\_\-ptr$<$ proto\-::\-Communication\-Mode $>$
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_a7073fcd5fe2232785a883a3f494d00ed}{Mapping\-Table} = std\-::unordered\-\_\-map$<$ \hyperlink{namespaceapollo_1_1cyber_a688ac951fd0a3965da4acdc34c92e50f}{Relation}, Optional\-Mode, std\-::hash$<$ int $>$$>$
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_a90dae149351190abc01613a5a251e1df}{Hybrid\-Transmitter} (const Role\-Attributes \&attr, const \hyperlink{namespaceapollo_1_1cyber_1_1transport_a4214d0780331276d0384d0b57e3bc688}{Participant\-Ptr} \&participant)
+\item 
+virtual \hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_acc4dd5cb2c487025c98495418e892839}{$\sim$\-Hybrid\-Transmitter} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_af1d4c607ebc0c0fd5c28d0c3644ba333}{Enable} () override
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_a6bd7f1c0477247a80f79e6a845d7b3cd}{Disable} () override
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_a164dfe249d1bd676ccdeedd8eb1a9722}{Enable} (const Role\-Attributes \&opposite\-\_\-attr) override
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_affb916656d7c94753bc1fba374c0cc3c}{Disable} (const Role\-Attributes \&opposite\-\_\-attr) override
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_a322bcb6a0b2fcff5ddb41b682605e333}{Transmit} (const \hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_ae4da0fb39a90d084d271b8522afc0881}{Message\-Ptr} \&msg, const \hyperlink{classapollo_1_1cyber_1_1transport_1_1MessageInfo}{Message\-Info} \&msg\-\_\-info) override
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_a112c505ec2d012c405518a8d26221886}{Init\-Mode} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_ad69e5147bff4f23df4c58ff0866d440b}{Obtain\-Config} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_aafab9b42792093c316ac32c181e7d9ba}{Init\-History} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_a9ee522016a1cedfc360067d759b0b04b}{Init\-Transmitters} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_ad8fa4eec069e0ceb98273c50fe3ef00f}{Clear\-Transmitters} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_a3b28ba5a4581e098d607d58d86002d20}{Init\-Receivers} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_a138a7e206a9d937836dc3ee6f2bd0bdd}{Clear\-Receivers} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_a6ba2d63c5a73fefbd628bef77951f8f0}{Transmit\-History\-Msg} (const Role\-Attributes \&opposite\-\_\-attr)
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_a03357a2fe13777d6c6408e49b6c9bb01}{Thread\-Func} (const Role\-Attributes \&opposite\-\_\-attr, const std\-::vector$<$ typename \hyperlink{classapollo_1_1cyber_1_1transport_1_1History}{History}$<$ M $>$\-::Cached\-Message $>$ \&msgs)
+\item 
+\hyperlink{namespaceapollo_1_1cyber_a688ac951fd0a3965da4acdc34c92e50f}{Relation} \hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_ad71f1d4b5095d514a18e9efd2d249c9b}{Get\-Relation} (const Role\-Attributes \&opposite\-\_\-attr)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_aee5ef32dcbaab6fcd68459e5f5afd6d8}{History\-Ptr} \hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_a1017c9487fef9eabf20b6b6b29eda7a1}{history\-\_\-}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_a79fe84264b152838a2a921ca7c428d31}{Transmitter\-Map} \hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_af892972e289032b86439449acb60fffe}{transmitters\-\_\-}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_a57d8d230cedd2328577b9789ab964a5c}{Receiver\-Map} \hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_aa6ef011a6f48194c1472ed77694df9e2}{receivers\-\_\-}
+\item 
+std\-::mutex \hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_a176663880b7f2fad09dfca0bbadd00bf}{mutex\-\_\-}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_aebca8e1bc93bfde3563c0c8b8c92bfa9}{Communication\-Mode\-Ptr} \hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_a81a8c87167bf743445c97e903e3bffd1}{mode\-\_\-}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_a7073fcd5fe2232785a883a3f494d00ed}{Mapping\-Table} \hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_a8002d94e9c7b130cc68cc7721e96a5e7}{mapping\-\_\-table\-\_\-}
+\item 
+\hyperlink{namespaceapollo_1_1cyber_1_1transport_a4214d0780331276d0384d0b57e3bc688}{Participant\-Ptr} \hyperlink{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_a7edc04c43198a2ff400e7ef9d41c5e18}{participant\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_aebca8e1bc93bfde3563c0c8b8c92bfa9}{\index{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter@{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}!Communication\-Mode\-Ptr@{Communication\-Mode\-Ptr}}
+\index{Communication\-Mode\-Ptr@{Communication\-Mode\-Ptr}!apollo::cyber::transport::HybridTransmitter@{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}}
+\subsubsection[{Communication\-Mode\-Ptr}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ using {\bf apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}$<$ M $>$\-::{\bf Communication\-Mode\-Ptr} =  std\-::shared\-\_\-ptr$<$proto\-::\-Communication\-Mode$>$}}\label{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_aebca8e1bc93bfde3563c0c8b8c92bfa9}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_aee5ef32dcbaab6fcd68459e5f5afd6d8}{\index{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter@{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}!History\-Ptr@{History\-Ptr}}
+\index{History\-Ptr@{History\-Ptr}!apollo::cyber::transport::HybridTransmitter@{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}}
+\subsubsection[{History\-Ptr}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ using {\bf apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}$<$ M $>$\-::{\bf History\-Ptr} =  std\-::shared\-\_\-ptr$<${\bf History}$<$M$>$$>$}}\label{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_aee5ef32dcbaab6fcd68459e5f5afd6d8}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_a7073fcd5fe2232785a883a3f494d00ed}{\index{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter@{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}!Mapping\-Table@{Mapping\-Table}}
+\index{Mapping\-Table@{Mapping\-Table}!apollo::cyber::transport::HybridTransmitter@{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}}
+\subsubsection[{Mapping\-Table}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ using {\bf apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}$<$ M $>$\-::{\bf Mapping\-Table} =  std\-::unordered\-\_\-map$<${\bf Relation}, Optional\-Mode, std\-::hash$<$int$>$$>$}}\label{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_a7073fcd5fe2232785a883a3f494d00ed}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_ae4da0fb39a90d084d271b8522afc0881}{\index{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter@{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}!Message\-Ptr@{Message\-Ptr}}
+\index{Message\-Ptr@{Message\-Ptr}!apollo::cyber::transport::HybridTransmitter@{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}}
+\subsubsection[{Message\-Ptr}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ using {\bf apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}$<$ M $>$\-::{\bf Message\-Ptr} =  std\-::shared\-\_\-ptr$<$M$>$}}\label{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_ae4da0fb39a90d084d271b8522afc0881}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_a57d8d230cedd2328577b9789ab964a5c}{\index{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter@{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}!Receiver\-Map@{Receiver\-Map}}
+\index{Receiver\-Map@{Receiver\-Map}!apollo::cyber::transport::HybridTransmitter@{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}}
+\subsubsection[{Receiver\-Map}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ using {\bf apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}$<$ M $>$\-::{\bf Receiver\-Map} =  std\-::unordered\-\_\-map$<$Optional\-Mode, std\-::set$<$uint64\-\_\-t$>$, std\-::hash$<$int$>$$>$}}\label{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_a57d8d230cedd2328577b9789ab964a5c}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_a79fe84264b152838a2a921ca7c428d31}{\index{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter@{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}!Transmitter\-Map@{Transmitter\-Map}}
+\index{Transmitter\-Map@{Transmitter\-Map}!apollo::cyber::transport::HybridTransmitter@{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}}
+\subsubsection[{Transmitter\-Map}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ using {\bf apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}$<$ M $>$\-::{\bf Transmitter\-Map} =  std\-::unordered\-\_\-map$<$Optional\-Mode, {\bf Transmitter\-Ptr}, std\-::hash$<$int$>$$>$}}\label{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_a79fe84264b152838a2a921ca7c428d31}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_ab5d6589b441adbb0aeebde895b21c569}{\index{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter@{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}!Transmitter\-Ptr@{Transmitter\-Ptr}}
+\index{Transmitter\-Ptr@{Transmitter\-Ptr}!apollo::cyber::transport::HybridTransmitter@{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}}
+\subsubsection[{Transmitter\-Ptr}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ using {\bf apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}$<$ M $>$\-::{\bf Transmitter\-Ptr} =  std\-::shared\-\_\-ptr$<${\bf Transmitter}$<$M$>$$>$}}\label{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_ab5d6589b441adbb0aeebde895b21c569}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_a90dae149351190abc01613a5a251e1df}{\index{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter@{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}!Hybrid\-Transmitter@{Hybrid\-Transmitter}}
+\index{Hybrid\-Transmitter@{Hybrid\-Transmitter}!apollo::cyber::transport::HybridTransmitter@{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}}
+\subsubsection[{Hybrid\-Transmitter}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ {\bf apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}$<$ M $>$\-::{\bf Hybrid\-Transmitter} (
+\begin{DoxyParamCaption}
+\item[{const Role\-Attributes \&}]{attr, }
+\item[{const {\bf Participant\-Ptr} \&}]{participant}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_a90dae149351190abc01613a5a251e1df}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_acc4dd5cb2c487025c98495418e892839}{\index{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter@{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}!$\sim$\-Hybrid\-Transmitter@{$\sim$\-Hybrid\-Transmitter}}
+\index{$\sim$\-Hybrid\-Transmitter@{$\sim$\-Hybrid\-Transmitter}!apollo::cyber::transport::HybridTransmitter@{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}}
+\subsubsection[{$\sim$\-Hybrid\-Transmitter}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ {\bf apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}$<$ M $>$\-::$\sim${\bf Hybrid\-Transmitter} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_acc4dd5cb2c487025c98495418e892839}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_a138a7e206a9d937836dc3ee6f2bd0bdd}{\index{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter@{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}!Clear\-Receivers@{Clear\-Receivers}}
+\index{Clear\-Receivers@{Clear\-Receivers}!apollo::cyber::transport::HybridTransmitter@{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}}
+\subsubsection[{Clear\-Receivers}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ void {\bf apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}$<$ M $>$\-::Clear\-Receivers (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_a138a7e206a9d937836dc3ee6f2bd0bdd}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_ad8fa4eec069e0ceb98273c50fe3ef00f}{\index{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter@{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}!Clear\-Transmitters@{Clear\-Transmitters}}
+\index{Clear\-Transmitters@{Clear\-Transmitters}!apollo::cyber::transport::HybridTransmitter@{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}}
+\subsubsection[{Clear\-Transmitters}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ void {\bf apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}$<$ M $>$\-::Clear\-Transmitters (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_ad8fa4eec069e0ceb98273c50fe3ef00f}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_a6bd7f1c0477247a80f79e6a845d7b3cd}{\index{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter@{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}!Disable@{Disable}}
+\index{Disable@{Disable}!apollo::cyber::transport::HybridTransmitter@{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}}
+\subsubsection[{Disable}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ void {\bf apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}$<$ M $>$\-::Disable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_a6bd7f1c0477247a80f79e6a845d7b3cd}
+
+
+Implements \hyperlink{classapollo_1_1cyber_1_1transport_1_1Transmitter_a24bc426b201239fceff22535351a1903}{apollo\-::cyber\-::transport\-::\-Transmitter$<$ M $>$}.
+
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_affb916656d7c94753bc1fba374c0cc3c}{\index{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter@{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}!Disable@{Disable}}
+\index{Disable@{Disable}!apollo::cyber::transport::HybridTransmitter@{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}}
+\subsubsection[{Disable}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ void {\bf apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}$<$ M $>$\-::Disable (
+\begin{DoxyParamCaption}
+\item[{const Role\-Attributes \&}]{opposite\-\_\-attr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_affb916656d7c94753bc1fba374c0cc3c}
+
+
+Reimplemented from \hyperlink{classapollo_1_1cyber_1_1transport_1_1Transmitter_ad467f468e0a7e078d36cb294c838377f}{apollo\-::cyber\-::transport\-::\-Transmitter$<$ M $>$}.
+
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_af1d4c607ebc0c0fd5c28d0c3644ba333}{\index{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter@{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}!Enable@{Enable}}
+\index{Enable@{Enable}!apollo::cyber::transport::HybridTransmitter@{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}}
+\subsubsection[{Enable}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ void {\bf apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}$<$ M $>$\-::Enable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_af1d4c607ebc0c0fd5c28d0c3644ba333}
+
+
+Implements \hyperlink{classapollo_1_1cyber_1_1transport_1_1Transmitter_aa4fd1ee72a6ba751226570e4ff54920d}{apollo\-::cyber\-::transport\-::\-Transmitter$<$ M $>$}.
+
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_a164dfe249d1bd676ccdeedd8eb1a9722}{\index{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter@{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}!Enable@{Enable}}
+\index{Enable@{Enable}!apollo::cyber::transport::HybridTransmitter@{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}}
+\subsubsection[{Enable}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ void {\bf apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}$<$ M $>$\-::Enable (
+\begin{DoxyParamCaption}
+\item[{const Role\-Attributes \&}]{opposite\-\_\-attr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_a164dfe249d1bd676ccdeedd8eb1a9722}
+
+
+Reimplemented from \hyperlink{classapollo_1_1cyber_1_1transport_1_1Transmitter_a4217ea4d53f13ef59252feea3e621397}{apollo\-::cyber\-::transport\-::\-Transmitter$<$ M $>$}.
+
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_ad71f1d4b5095d514a18e9efd2d249c9b}{\index{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter@{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}!Get\-Relation@{Get\-Relation}}
+\index{Get\-Relation@{Get\-Relation}!apollo::cyber::transport::HybridTransmitter@{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}}
+\subsubsection[{Get\-Relation}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ {\bf Relation} {\bf apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}$<$ M $>$\-::Get\-Relation (
+\begin{DoxyParamCaption}
+\item[{const Role\-Attributes \&}]{opposite\-\_\-attr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_ad71f1d4b5095d514a18e9efd2d249c9b}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_aafab9b42792093c316ac32c181e7d9ba}{\index{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter@{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}!Init\-History@{Init\-History}}
+\index{Init\-History@{Init\-History}!apollo::cyber::transport::HybridTransmitter@{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}}
+\subsubsection[{Init\-History}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ void {\bf apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}$<$ M $>$\-::Init\-History (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_aafab9b42792093c316ac32c181e7d9ba}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_a112c505ec2d012c405518a8d26221886}{\index{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter@{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}!Init\-Mode@{Init\-Mode}}
+\index{Init\-Mode@{Init\-Mode}!apollo::cyber::transport::HybridTransmitter@{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}}
+\subsubsection[{Init\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ void {\bf apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}$<$ M $>$\-::Init\-Mode (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_a112c505ec2d012c405518a8d26221886}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_a3b28ba5a4581e098d607d58d86002d20}{\index{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter@{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}!Init\-Receivers@{Init\-Receivers}}
+\index{Init\-Receivers@{Init\-Receivers}!apollo::cyber::transport::HybridTransmitter@{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}}
+\subsubsection[{Init\-Receivers}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ void {\bf apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}$<$ M $>$\-::Init\-Receivers (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_a3b28ba5a4581e098d607d58d86002d20}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_a9ee522016a1cedfc360067d759b0b04b}{\index{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter@{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}!Init\-Transmitters@{Init\-Transmitters}}
+\index{Init\-Transmitters@{Init\-Transmitters}!apollo::cyber::transport::HybridTransmitter@{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}}
+\subsubsection[{Init\-Transmitters}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ void {\bf apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}$<$ M $>$\-::Init\-Transmitters (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_a9ee522016a1cedfc360067d759b0b04b}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_ad69e5147bff4f23df4c58ff0866d440b}{\index{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter@{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}!Obtain\-Config@{Obtain\-Config}}
+\index{Obtain\-Config@{Obtain\-Config}!apollo::cyber::transport::HybridTransmitter@{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}}
+\subsubsection[{Obtain\-Config}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ void {\bf apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}$<$ M $>$\-::Obtain\-Config (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_ad69e5147bff4f23df4c58ff0866d440b}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_a03357a2fe13777d6c6408e49b6c9bb01}{\index{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter@{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}!Thread\-Func@{Thread\-Func}}
+\index{Thread\-Func@{Thread\-Func}!apollo::cyber::transport::HybridTransmitter@{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}}
+\subsubsection[{Thread\-Func}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ void {\bf apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}$<$ M $>$\-::Thread\-Func (
+\begin{DoxyParamCaption}
+\item[{const Role\-Attributes \&}]{opposite\-\_\-attr, }
+\item[{const std\-::vector$<$ typename {\bf History}$<$ M $>$\-::Cached\-Message $>$ \&}]{msgs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_a03357a2fe13777d6c6408e49b6c9bb01}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_a322bcb6a0b2fcff5ddb41b682605e333}{\index{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter@{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}!Transmit@{Transmit}}
+\index{Transmit@{Transmit}!apollo::cyber::transport::HybridTransmitter@{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}}
+\subsubsection[{Transmit}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ bool {\bf apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}$<$ M $>$\-::Transmit (
+\begin{DoxyParamCaption}
+\item[{const {\bf Message\-Ptr} \&}]{msg, }
+\item[{const {\bf Message\-Info} \&}]{msg\-\_\-info}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_a322bcb6a0b2fcff5ddb41b682605e333}
+
+
+Implements \hyperlink{classapollo_1_1cyber_1_1transport_1_1Transmitter_af3a4b7fb0a6dcc1bd00437c121b18e19}{apollo\-::cyber\-::transport\-::\-Transmitter$<$ M $>$}.
+
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_a6ba2d63c5a73fefbd628bef77951f8f0}{\index{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter@{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}!Transmit\-History\-Msg@{Transmit\-History\-Msg}}
+\index{Transmit\-History\-Msg@{Transmit\-History\-Msg}!apollo::cyber::transport::HybridTransmitter@{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}}
+\subsubsection[{Transmit\-History\-Msg}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ void {\bf apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}$<$ M $>$\-::Transmit\-History\-Msg (
+\begin{DoxyParamCaption}
+\item[{const Role\-Attributes \&}]{opposite\-\_\-attr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_a6ba2d63c5a73fefbd628bef77951f8f0}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_a1017c9487fef9eabf20b6b6b29eda7a1}{\index{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter@{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}!history\-\_\-@{history\-\_\-}}
+\index{history\-\_\-@{history\-\_\-}!apollo::cyber::transport::HybridTransmitter@{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}}
+\subsubsection[{history\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ {\bf History\-Ptr} {\bf apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}$<$ M $>$\-::history\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_a1017c9487fef9eabf20b6b6b29eda7a1}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_a8002d94e9c7b130cc68cc7721e96a5e7}{\index{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter@{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}!mapping\-\_\-table\-\_\-@{mapping\-\_\-table\-\_\-}}
+\index{mapping\-\_\-table\-\_\-@{mapping\-\_\-table\-\_\-}!apollo::cyber::transport::HybridTransmitter@{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}}
+\subsubsection[{mapping\-\_\-table\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ {\bf Mapping\-Table} {\bf apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}$<$ M $>$\-::mapping\-\_\-table\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_a8002d94e9c7b130cc68cc7721e96a5e7}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_a81a8c87167bf743445c97e903e3bffd1}{\index{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter@{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}!mode\-\_\-@{mode\-\_\-}}
+\index{mode\-\_\-@{mode\-\_\-}!apollo::cyber::transport::HybridTransmitter@{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}}
+\subsubsection[{mode\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ {\bf Communication\-Mode\-Ptr} {\bf apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}$<$ M $>$\-::mode\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_a81a8c87167bf743445c97e903e3bffd1}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_a176663880b7f2fad09dfca0bbadd00bf}{\index{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter@{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}!mutex\-\_\-@{mutex\-\_\-}}
+\index{mutex\-\_\-@{mutex\-\_\-}!apollo::cyber::transport::HybridTransmitter@{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}}
+\subsubsection[{mutex\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ std\-::mutex {\bf apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}$<$ M $>$\-::mutex\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_a176663880b7f2fad09dfca0bbadd00bf}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_a7edc04c43198a2ff400e7ef9d41c5e18}{\index{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter@{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}!participant\-\_\-@{participant\-\_\-}}
+\index{participant\-\_\-@{participant\-\_\-}!apollo::cyber::transport::HybridTransmitter@{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}}
+\subsubsection[{participant\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ {\bf Participant\-Ptr} {\bf apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}$<$ M $>$\-::participant\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_a7edc04c43198a2ff400e7ef9d41c5e18}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_aa6ef011a6f48194c1472ed77694df9e2}{\index{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter@{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}!receivers\-\_\-@{receivers\-\_\-}}
+\index{receivers\-\_\-@{receivers\-\_\-}!apollo::cyber::transport::HybridTransmitter@{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}}
+\subsubsection[{receivers\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ {\bf Receiver\-Map} {\bf apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}$<$ M $>$\-::receivers\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_aa6ef011a6f48194c1472ed77694df9e2}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_af892972e289032b86439449acb60fffe}{\index{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter@{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}!transmitters\-\_\-@{transmitters\-\_\-}}
+\index{transmitters\-\_\-@{transmitters\-\_\-}!apollo::cyber::transport::HybridTransmitter@{apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}}
+\subsubsection[{transmitters\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ {\bf Transmitter\-Map} {\bf apollo\-::cyber\-::transport\-::\-Hybrid\-Transmitter}$<$ M $>$\-::transmitters\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_af892972e289032b86439449acb60fffe}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+transport/transmitter/\hyperlink{hybrid__transmitter_8h}{hybrid\-\_\-transmitter.\-h}\end{DoxyCompactItemize}

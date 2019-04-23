@@ -1,0 +1,329 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classapollo_1_1cyber_1_1transport_1_1Transmitter" kind="class" prot="public" abstract="yes">
+    <compoundname>apollo::cyber::transport::Transmitter</compoundname>
+    <basecompoundref refid="classapollo_1_1cyber_1_1transport_1_1Endpoint" prot="public" virt="non-virtual">apollo::cyber::transport::Endpoint</basecompoundref>
+    <derivedcompoundref refid="classapollo_1_1cyber_1_1transport_1_1HybridTransmitter" prot="public" virt="non-virtual">apollo::cyber::transport::HybridTransmitter&lt; M &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classapollo_1_1cyber_1_1transport_1_1IntraTransmitter" prot="public" virt="non-virtual">apollo::cyber::transport::IntraTransmitter&lt; M &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classapollo_1_1cyber_1_1transport_1_1RtpsTransmitter" prot="public" virt="non-virtual">apollo::cyber::transport::RtpsTransmitter&lt; M &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classapollo_1_1cyber_1_1transport_1_1ShmTransmitter" prot="public" virt="non-virtual">apollo::cyber::transport::ShmTransmitter&lt; M &gt;</derivedcompoundref>
+    <includes refid="transmitter_8h" local="no">transmitter.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename M</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classapollo_1_1cyber_1_1transport_1_1Transmitter_1a1c068aab2db2d0a5ba7a26ed228b7c65" prot="public" static="no">
+        <type>std::shared_ptr&lt; M &gt;</type>
+        <definition>using apollo::cyber::transport::Transmitter&lt; M &gt;::MessagePtr =  std::shared_ptr&lt;M&gt;</definition>
+        <argsstring></argsstring>
+        <name>MessagePtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/transmitter/transmitter.h" line="38" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/transmitter/transmitter.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1transport_1_1Transmitter_1a4250ef0529279ee67dfa47ef4b9e2e3c" prot="protected" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t apollo::cyber::transport::Transmitter&lt; M &gt;::seq_num_</definition>
+        <argsstring></argsstring>
+        <name>seq_num_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/transmitter/transmitter.h" line="57" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/transmitter/transmitter.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1transport_1_1Transmitter_1a21d38f3801379a33ed3d032b5c092763" prot="protected" static="no" mutable="no">
+        <type><ref refid="classapollo_1_1cyber_1_1transport_1_1MessageInfo" kindref="compound">MessageInfo</ref></type>
+        <definition>MessageInfo apollo::cyber::transport::Transmitter&lt; M &gt;::msg_info_</definition>
+        <argsstring></argsstring>
+        <name>msg_info_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/transmitter/transmitter.h" line="58" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/transmitter/transmitter.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1Transmitter_1a29e1b4439830ff929defddf22c855e65" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::transport::Transmitter&lt; M &gt;::Transmitter</definition>
+        <argsstring>(const RoleAttributes &amp;attr)</argsstring>
+        <name>Transmitter</name>
+        <param>
+          <type>const RoleAttributes &amp;</type>
+          <declname>attr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/transmitter/transmitter.h" line="40" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/transmitter/transmitter.h" bodystart="62" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1Transmitter_1a9394eae94d32def86c0a4dc623c97800" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>apollo::cyber::transport::Transmitter&lt; M &gt;::~Transmitter</definition>
+        <argsstring>()</argsstring>
+        <name>~Transmitter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/transmitter/transmitter.h" line="41" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/transmitter/transmitter.h" bodystart="69" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1Transmitter_1aa4fd1ee72a6ba751226570e4ff54920d" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void apollo::cyber::transport::Transmitter&lt; M &gt;::Enable</definition>
+        <argsstring>()=0</argsstring>
+        <name>Enable</name>
+        <reimplementedby refid="classapollo_1_1cyber_1_1transport_1_1IntraTransmitter_1ae8fec0fd79775a79e8998ec87b83e9b8">Enable</reimplementedby>
+        <reimplementedby refid="classapollo_1_1cyber_1_1transport_1_1ShmTransmitter_1ae47bc5dc313f901843600ca23ae51926">Enable</reimplementedby>
+        <reimplementedby refid="classapollo_1_1cyber_1_1transport_1_1RtpsTransmitter_1ad07be793652401a452cea8eaa6bdbfd4">Enable</reimplementedby>
+        <reimplementedby refid="classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_1af1d4c607ebc0c0fd5c28d0c3644ba333">Enable</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/transmitter/transmitter.h" line="43" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1Transmitter_1a24bc426b201239fceff22535351a1903" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void apollo::cyber::transport::Transmitter&lt; M &gt;::Disable</definition>
+        <argsstring>()=0</argsstring>
+        <name>Disable</name>
+        <reimplementedby refid="classapollo_1_1cyber_1_1transport_1_1IntraTransmitter_1ad6bb7e42eb0486f755a64a555f3e9727">Disable</reimplementedby>
+        <reimplementedby refid="classapollo_1_1cyber_1_1transport_1_1ShmTransmitter_1a5f4559decbf0802768bcf7f9a083e202">Disable</reimplementedby>
+        <reimplementedby refid="classapollo_1_1cyber_1_1transport_1_1RtpsTransmitter_1acbbdfe917b0b8a3e6906db9898925c06">Disable</reimplementedby>
+        <reimplementedby refid="classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_1a6bd7f1c0477247a80f79e6a845d7b3cd">Disable</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/transmitter/transmitter.h" line="44" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1Transmitter_1a4217ea4d53f13ef59252feea3e621397" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::transport::Transmitter&lt; M &gt;::Enable</definition>
+        <argsstring>(const RoleAttributes &amp;opposite_attr)</argsstring>
+        <name>Enable</name>
+        <reimplementedby refid="classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_1a164dfe249d1bd676ccdeedd8eb1a9722">Enable</reimplementedby>
+        <param>
+          <type>const RoleAttributes &amp;</type>
+          <declname>opposite_attr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/transmitter/transmitter.h" line="46" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/transmitter/transmitter.h" bodystart="80" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1Transmitter_1ad467f468e0a7e078d36cb294c838377f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::transport::Transmitter&lt; M &gt;::Disable</definition>
+        <argsstring>(const RoleAttributes &amp;opposite_attr)</argsstring>
+        <name>Disable</name>
+        <reimplementedby refid="classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_1affb916656d7c94753bc1fba374c0cc3c">Disable</reimplementedby>
+        <param>
+          <type>const RoleAttributes &amp;</type>
+          <declname>opposite_attr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/transmitter/transmitter.h" line="47" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/transmitter/transmitter.h" bodystart="86" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1Transmitter_1a63e433e62701d173f0ceffb41c028b9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::transport::Transmitter&lt; M &gt;::Transmit</definition>
+        <argsstring>(const MessagePtr &amp;msg)</argsstring>
+        <name>Transmit</name>
+        <param>
+          <type>const <ref refid="classapollo_1_1cyber_1_1transport_1_1Transmitter_1a1c068aab2db2d0a5ba7a26ed228b7c65" kindref="member">MessagePtr</ref> &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/transmitter/transmitter.h" line="49" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/transmitter/transmitter.h" bodystart="72" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1Transmitter_1af3a4b7fb0a6dcc1bd00437c121b18e19" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool apollo::cyber::transport::Transmitter&lt; M &gt;::Transmit</definition>
+        <argsstring>(const MessagePtr &amp;msg, const MessageInfo &amp;msg_info)=0</argsstring>
+        <name>Transmit</name>
+        <reimplementedby refid="classapollo_1_1cyber_1_1transport_1_1IntraTransmitter_1a230dcd2a4cd7582326a1a21050b9b298">Transmit</reimplementedby>
+        <reimplementedby refid="classapollo_1_1cyber_1_1transport_1_1ShmTransmitter_1aed9d36fd9aba98640a4acfbcbe2610fb">Transmit</reimplementedby>
+        <reimplementedby refid="classapollo_1_1cyber_1_1transport_1_1RtpsTransmitter_1a0cb0df26a9ba248ed95a25d0bf4e8bb3">Transmit</reimplementedby>
+        <reimplementedby refid="classapollo_1_1cyber_1_1transport_1_1HybridTransmitter_1a322bcb6a0b2fcff5ddb41b682605e333">Transmit</reimplementedby>
+        <param>
+          <type>const <ref refid="classapollo_1_1cyber_1_1transport_1_1Transmitter_1a1c068aab2db2d0a5ba7a26ed228b7c65" kindref="member">MessagePtr</ref> &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classapollo_1_1cyber_1_1transport_1_1MessageInfo" kindref="compound">MessageInfo</ref> &amp;</type>
+          <declname>msg_info</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/transmitter/transmitter.h" line="50" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1Transmitter_1a3a20f5e40d1a28ed1269eb78ea4249b3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t apollo::cyber::transport::Transmitter&lt; M &gt;::NextSeqNum</definition>
+        <argsstring>()</argsstring>
+        <name>NextSeqNum</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/transmitter/transmitter.h" line="52" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/transmitter/transmitter.h" bodystart="52" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1Transmitter_1afe57d8a5a4de892a837c4eab055e222c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t apollo::cyber::transport::Transmitter&lt; M &gt;::seq_num</definition>
+        <argsstring>() const </argsstring>
+        <name>seq_num</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/transmitter/transmitter.h" line="54" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/transmitter/transmitter.h" bodystart="54" bodyend="54"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="973">
+        <label>apollo::cyber::transport::ShmTransmitter&lt; M &gt;</label>
+        <link refid="classapollo_1_1cyber_1_1transport_1_1ShmTransmitter"/>
+        <childnode refid="968" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="971">
+        <label>apollo::cyber::transport::IntraTransmitter&lt; M &gt;</label>
+        <link refid="classapollo_1_1cyber_1_1transport_1_1IntraTransmitter"/>
+        <childnode refid="968" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="969">
+        <label>apollo::cyber::transport::Endpoint</label>
+        <link refid="classapollo_1_1cyber_1_1transport_1_1Endpoint"/>
+      </node>
+      <node id="972">
+        <label>apollo::cyber::transport::RtpsTransmitter&lt; M &gt;</label>
+        <link refid="classapollo_1_1cyber_1_1transport_1_1RtpsTransmitter"/>
+        <childnode refid="968" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="968">
+        <label>apollo::cyber::transport::Transmitter&lt; M &gt;</label>
+        <link refid="classapollo_1_1cyber_1_1transport_1_1Transmitter"/>
+        <childnode refid="969" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="970">
+        <label>apollo::cyber::transport::HybridTransmitter&lt; M &gt;</label>
+        <link refid="classapollo_1_1cyber_1_1transport_1_1HybridTransmitter"/>
+        <childnode refid="968" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="976">
+        <label>RoleAttributes</label>
+      </node>
+      <node id="975">
+        <label>apollo::cyber::transport::Endpoint</label>
+        <link refid="classapollo_1_1cyber_1_1transport_1_1Endpoint"/>
+        <childnode refid="976" relation="usage">
+          <edgelabel>attr_</edgelabel>
+        </childnode>
+        <childnode refid="977" relation="usage">
+          <edgelabel>id_</edgelabel>
+        </childnode>
+      </node>
+      <node id="977">
+        <label>apollo::cyber::transport::Identity</label>
+        <link refid="classapollo_1_1cyber_1_1transport_1_1Identity"/>
+      </node>
+      <node id="974">
+        <label>apollo::cyber::transport::Transmitter&lt; M &gt;</label>
+        <link refid="classapollo_1_1cyber_1_1transport_1_1Transmitter"/>
+        <childnode refid="975" relation="public-inheritance">
+        </childnode>
+        <childnode refid="978" relation="usage">
+          <edgelabel>msg_info_</edgelabel>
+        </childnode>
+      </node>
+      <node id="978">
+        <label>apollo::cyber::transport::MessageInfo</label>
+        <link refid="classapollo_1_1cyber_1_1transport_1_1MessageInfo"/>
+        <childnode refid="977" relation="usage">
+          <edgelabel>sender_id_</edgelabel>
+          <edgelabel>spare_id_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/work/apollo-fork/apollo/cyber/transport/transmitter/transmitter.h" line="36" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/transmitter/transmitter.h" bodystart="36" bodyend="59"/>
+    <listofallmembers>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Endpoint_1ae5eef9d783a55addf75c73f3b2d3d922" prot="protected" virt="non-virtual"><scope>apollo::cyber::transport::Transmitter</scope><name>attr_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Endpoint_1a618711f01e375eab74b46845b193fa77" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::Transmitter</scope><name>attributes</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Transmitter_1a24bc426b201239fceff22535351a1903" prot="public" virt="pure-virtual"><scope>apollo::cyber::transport::Transmitter</scope><name>Disable</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Transmitter_1ad467f468e0a7e078d36cb294c838377f" prot="public" virt="virtual"><scope>apollo::cyber::transport::Transmitter</scope><name>Disable</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Transmitter_1aa4fd1ee72a6ba751226570e4ff54920d" prot="public" virt="pure-virtual"><scope>apollo::cyber::transport::Transmitter</scope><name>Enable</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Transmitter_1a4217ea4d53f13ef59252feea3e621397" prot="public" virt="virtual"><scope>apollo::cyber::transport::Transmitter</scope><name>Enable</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Endpoint_1a018bd12d292d6f46e97bb34d3054d5d2" prot="protected" virt="non-virtual"><scope>apollo::cyber::transport::Transmitter</scope><name>enabled_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Endpoint_1a9ac289b2b1952934f326ab80bc63beb2" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::Transmitter</scope><name>Endpoint</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Endpoint_1aa362f1ca16c50755e20e6f59362a37fc" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::Transmitter</scope><name>id</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Endpoint_1ab13e5b3e9b7b614f687159ad7ff07655" prot="protected" virt="non-virtual"><scope>apollo::cyber::transport::Transmitter</scope><name>id_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Transmitter_1a1c068aab2db2d0a5ba7a26ed228b7c65" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::Transmitter</scope><name>MessagePtr</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Transmitter_1a21d38f3801379a33ed3d032b5c092763" prot="protected" virt="non-virtual"><scope>apollo::cyber::transport::Transmitter</scope><name>msg_info_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Transmitter_1a3a20f5e40d1a28ed1269eb78ea4249b3" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::Transmitter</scope><name>NextSeqNum</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Transmitter_1afe57d8a5a4de892a837c4eab055e222c" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::Transmitter</scope><name>seq_num</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Transmitter_1a4250ef0529279ee67dfa47ef4b9e2e3c" prot="protected" virt="non-virtual"><scope>apollo::cyber::transport::Transmitter</scope><name>seq_num_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Transmitter_1a63e433e62701d173f0ceffb41c028b9f" prot="public" virt="virtual"><scope>apollo::cyber::transport::Transmitter</scope><name>Transmit</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Transmitter_1af3a4b7fb0a6dcc1bd00437c121b18e19" prot="public" virt="pure-virtual"><scope>apollo::cyber::transport::Transmitter</scope><name>Transmit</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Transmitter_1a29e1b4439830ff929defddf22c855e65" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::Transmitter</scope><name>Transmitter</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Endpoint_1ace4552dd897f8ec3a8276529061c2ca4" prot="public" virt="virtual"><scope>apollo::cyber::transport::Transmitter</scope><name>~Endpoint</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Transmitter_1a9394eae94d32def86c0a4dc623c97800" prot="public" virt="virtual"><scope>apollo::cyber::transport::Transmitter</scope><name>~Transmitter</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

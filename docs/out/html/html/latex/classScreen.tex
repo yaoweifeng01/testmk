@@ -1,0 +1,343 @@
+\hypertarget{classScreen}{\section{Screen Class Reference}
+\label{classScreen}\index{Screen@{Screen}}
+}
+
+
+{\ttfamily \#include $<$screen.\-h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classScreen_ade5d330a53244ab5e204c9fc2a8ab235}{Color\-Pair} \{ \\*
+\hyperlink{classScreen_ade5d330a53244ab5e204c9fc2a8ab235a8f6f59447dce1fb81c648d8674d6b6d2}{I\-N\-V\-A\-L\-I\-D} = 0, 
+\hyperlink{classScreen_ade5d330a53244ab5e204c9fc2a8ab235aa979e0b275ebd1d03e934974ac04806a}{G\-R\-E\-E\-N\-\_\-\-B\-L\-A\-C\-K} = 1, 
+\hyperlink{classScreen_ade5d330a53244ab5e204c9fc2a8ab235ad296b80c3ff583dfc66fd69be3bfa177}{Y\-E\-L\-L\-O\-W\-\_\-\-B\-L\-A\-C\-K}, 
+\hyperlink{classScreen_ade5d330a53244ab5e204c9fc2a8ab235aeb2de5cf606cc15deec28e5ed6d94f1d}{R\-E\-D\-\_\-\-B\-L\-A\-C\-K}, 
+\\*
+\hyperlink{classScreen_ade5d330a53244ab5e204c9fc2a8ab235a970004d17898edd8718ff21e795b9d39}{W\-H\-I\-T\-E\-\_\-\-B\-L\-A\-C\-K}, 
+\hyperlink{classScreen_ade5d330a53244ab5e204c9fc2a8ab235a710df85d2ceefb42c12694fda0682fee}{B\-L\-A\-C\-K\-\_\-\-W\-H\-I\-T\-E}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classScreen_aca8e6d405d54bd0ea318564f11a68f00}{$\sim$\-Screen} (void)
+\item 
+void \hyperlink{classScreen_a383837c8034bc40ce87e96898d5be0cc}{Init} (void)
+\item 
+void \hyperlink{classScreen_a48842cd1df5d4117dee21a028da74a40}{Run} (void)
+\item 
+void \hyperlink{classScreen_a69154a73511bc8620803fa8f646ddd86}{Resize} ()
+\item 
+void \hyperlink{classScreen_aadce9111b1acb69bd0e6f788ae2bbd1b}{Stop} (void)
+\item 
+int \hyperlink{classScreen_a40b0a6eabbfe785a379388064ccea5c3}{Width} (void) const 
+\item 
+int \hyperlink{classScreen_abb048c10e10b8c375e64d52137a9d279}{Height} (void) const 
+\item 
+void \hyperlink{classScreen_a1274f1b8ed227c757d390cd764fb16d0}{Add\-Str} (int x, int y, \hyperlink{classScreen_ade5d330a53244ab5e204c9fc2a8ab235}{Color\-Pair} color, const char $\ast$c\-Str) const 
+\item 
+\hyperlink{classScreen_ade5d330a53244ab5e204c9fc2a8ab235}{Color\-Pair} \hyperlink{classScreen_a09e8fb5148385cb5b9f9b0402617ae80}{Color} (void) const 
+\item 
+void \hyperlink{classScreen_a1237833b525a279bccec474488f49220}{Set\-Current\-Color} (\hyperlink{classScreen_ade5d330a53244ab5e204c9fc2a8ab235}{Color\-Pair} color) const 
+\item 
+void \hyperlink{classScreen_a2195b9634c45b2d3158c7b6f749b910c}{Add\-Str} (int x, int y, const char $\ast$str) const 
+\item 
+void \hyperlink{classScreen_aa2940a795d5a7b2ef7ce7321bb8e31e3}{Add\-Str} (const char $\ast$str) const 
+\item 
+void \hyperlink{classScreen_aee7ca5e081d29f87a75d83932bace80f}{Move\-Offset\-X\-Y} (int offset\-X, int offset\-Y) const 
+\item 
+void \hyperlink{classScreen_a93d9bd83f95acec95ab695cfa8ed7230}{Clear\-Current\-Color} (void) const 
+\item 
+void \hyperlink{classScreen_ade6282ee71fe718c5a46c96578a7e00e}{Set\-Current\-Render\-Message} (\hyperlink{classRenderableMessage}{Renderable\-Message} $\ast$const render\-Obj)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classScreen}{Screen} $\ast$ \hyperlink{classScreen_a737e0e6d802ff6c6f3055c94432fd062}{Instance} (void)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const char \hyperlink{classScreen_aeaa4372d83cf381da26b0f06be0c08f2}{Interactive\-Cmd\-Str} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+\subsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classScreen_a3b2273cea4444624a4fb6542ee2ce44e}{State} \{ \hyperlink{classScreen_a3b2273cea4444624a4fb6542ee2ce44ea0c1142ba26a81392fece35ae71e5bb31}{State\-::\-Render\-Message}, 
+\hyperlink{classScreen_a3b2273cea4444624a4fb6542ee2ce44ea08a6b92dc8c413bc10fdce91fdc730ad}{State\-::\-Render\-Inter\-Cmd\-Info}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classScreen_ae7576476fc6e6a6eaa66389fdc41fe72}{Screen} ()
+\item 
+\hyperlink{classScreen_a0e756e6d8543c7efe051beb0f757ca38}{Screen} (const \hyperlink{classScreen}{Screen} \&)=delete
+\item 
+\hyperlink{classScreen}{Screen} \& \hyperlink{classScreen_a6e3bc79495fd0a10b19c2bb19b6d0d85}{operator=} (const \hyperlink{classScreen}{Screen} \&)=delete
+\item 
+int \hyperlink{classScreen_affe4f3c4fa6ed3a0ee953f1a75eee09e}{Switch\-State} (int ch)
+\item 
+void \hyperlink{classScreen_ac23986bc6e46e1d1565fec76da3a12fe}{Highlight\-Line} (int line\-No)
+\item 
+void \hyperlink{classScreen_a1957413647a5858f2c8324124c247ba2}{Show\-Interactive\-Cmd} (int ch)
+\item 
+void \hyperlink{classScreen_a27912037b26e33f45f0d5b7cfca777b3}{Show\-Render\-Message} (int ch)
+\item 
+bool \hyperlink{classScreen_a0e172a443241197f50216c532be093df}{Is\-Init} (void) const 
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classScreen_ade5d330a53244ab5e204c9fc2a8ab235}{Color\-Pair} \hyperlink{classScreen_a806b6c5ad380d84aa7457d06e1eb98f8}{current\-\_\-color\-\_\-pair\-\_\-}
+\item 
+bool \hyperlink{classScreen_a7282ffbd67e23dfec94cc1a7f0a7a7e9}{can\-Run\-\_\-}
+\item 
+\hyperlink{classScreen_a3b2273cea4444624a4fb6542ee2ce44e}{State} \hyperlink{classScreen_a0ea09ea5eadc990cdcd32068c377287d}{current\-\_\-state\-\_\-}
+\item 
+int \hyperlink{classScreen_a69a30640ab25485d9f769e3a37bf8639}{highlight\-\_\-direction\-\_\-}
+\item 
+\hyperlink{classRenderableMessage}{Renderable\-Message} $\ast$ \hyperlink{classScreen_a404ae55aee99b0d10ccd46387ccac02e}{current\-\_\-render\-\_\-obj\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classScreen_ade5d330a53244ab5e204c9fc2a8ab235}{\index{Screen@{Screen}!Color\-Pair@{Color\-Pair}}
+\index{Color\-Pair@{Color\-Pair}!Screen@{Screen}}
+\subsubsection[{Color\-Pair}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Screen\-::\-Color\-Pair}}}\label{classScreen_ade5d330a53244ab5e204c9fc2a8ab235}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{I\-N\-V\-A\-L\-I\-D@{I\-N\-V\-A\-L\-I\-D}!Screen@{Screen}}\index{Screen@{Screen}!I\-N\-V\-A\-L\-I\-D@{I\-N\-V\-A\-L\-I\-D}}\item[{\em 
+\hypertarget{classScreen_ade5d330a53244ab5e204c9fc2a8ab235a8f6f59447dce1fb81c648d8674d6b6d2}{I\-N\-V\-A\-L\-I\-D}\label{classScreen_ade5d330a53244ab5e204c9fc2a8ab235a8f6f59447dce1fb81c648d8674d6b6d2}
+}]\index{G\-R\-E\-E\-N\-\_\-\-B\-L\-A\-C\-K@{G\-R\-E\-E\-N\-\_\-\-B\-L\-A\-C\-K}!Screen@{Screen}}\index{Screen@{Screen}!G\-R\-E\-E\-N\-\_\-\-B\-L\-A\-C\-K@{G\-R\-E\-E\-N\-\_\-\-B\-L\-A\-C\-K}}\item[{\em 
+\hypertarget{classScreen_ade5d330a53244ab5e204c9fc2a8ab235aa979e0b275ebd1d03e934974ac04806a}{G\-R\-E\-E\-N\-\_\-\-B\-L\-A\-C\-K}\label{classScreen_ade5d330a53244ab5e204c9fc2a8ab235aa979e0b275ebd1d03e934974ac04806a}
+}]\index{Y\-E\-L\-L\-O\-W\-\_\-\-B\-L\-A\-C\-K@{Y\-E\-L\-L\-O\-W\-\_\-\-B\-L\-A\-C\-K}!Screen@{Screen}}\index{Screen@{Screen}!Y\-E\-L\-L\-O\-W\-\_\-\-B\-L\-A\-C\-K@{Y\-E\-L\-L\-O\-W\-\_\-\-B\-L\-A\-C\-K}}\item[{\em 
+\hypertarget{classScreen_ade5d330a53244ab5e204c9fc2a8ab235ad296b80c3ff583dfc66fd69be3bfa177}{Y\-E\-L\-L\-O\-W\-\_\-\-B\-L\-A\-C\-K}\label{classScreen_ade5d330a53244ab5e204c9fc2a8ab235ad296b80c3ff583dfc66fd69be3bfa177}
+}]\index{R\-E\-D\-\_\-\-B\-L\-A\-C\-K@{R\-E\-D\-\_\-\-B\-L\-A\-C\-K}!Screen@{Screen}}\index{Screen@{Screen}!R\-E\-D\-\_\-\-B\-L\-A\-C\-K@{R\-E\-D\-\_\-\-B\-L\-A\-C\-K}}\item[{\em 
+\hypertarget{classScreen_ade5d330a53244ab5e204c9fc2a8ab235aeb2de5cf606cc15deec28e5ed6d94f1d}{R\-E\-D\-\_\-\-B\-L\-A\-C\-K}\label{classScreen_ade5d330a53244ab5e204c9fc2a8ab235aeb2de5cf606cc15deec28e5ed6d94f1d}
+}]\index{W\-H\-I\-T\-E\-\_\-\-B\-L\-A\-C\-K@{W\-H\-I\-T\-E\-\_\-\-B\-L\-A\-C\-K}!Screen@{Screen}}\index{Screen@{Screen}!W\-H\-I\-T\-E\-\_\-\-B\-L\-A\-C\-K@{W\-H\-I\-T\-E\-\_\-\-B\-L\-A\-C\-K}}\item[{\em 
+\hypertarget{classScreen_ade5d330a53244ab5e204c9fc2a8ab235a970004d17898edd8718ff21e795b9d39}{W\-H\-I\-T\-E\-\_\-\-B\-L\-A\-C\-K}\label{classScreen_ade5d330a53244ab5e204c9fc2a8ab235a970004d17898edd8718ff21e795b9d39}
+}]\index{B\-L\-A\-C\-K\-\_\-\-W\-H\-I\-T\-E@{B\-L\-A\-C\-K\-\_\-\-W\-H\-I\-T\-E}!Screen@{Screen}}\index{Screen@{Screen}!B\-L\-A\-C\-K\-\_\-\-W\-H\-I\-T\-E@{B\-L\-A\-C\-K\-\_\-\-W\-H\-I\-T\-E}}\item[{\em 
+\hypertarget{classScreen_ade5d330a53244ab5e204c9fc2a8ab235a710df85d2ceefb42c12694fda0682fee}{B\-L\-A\-C\-K\-\_\-\-W\-H\-I\-T\-E}\label{classScreen_ade5d330a53244ab5e204c9fc2a8ab235a710df85d2ceefb42c12694fda0682fee}
+}]\end{description}
+\end{Desc}
+\hypertarget{classScreen_a3b2273cea4444624a4fb6542ee2ce44e}{\index{Screen@{Screen}!State@{State}}
+\index{State@{State}!Screen@{Screen}}
+\subsubsection[{State}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Screen\-::\-State}\hspace{0.3cm}{\ttfamily [strong]}, {\ttfamily [private]}}}\label{classScreen_a3b2273cea4444624a4fb6542ee2ce44e}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Render\-Message@{Render\-Message}!Screen@{Screen}}\index{Screen@{Screen}!Render\-Message@{Render\-Message}}\item[{\em 
+\hypertarget{classScreen_a3b2273cea4444624a4fb6542ee2ce44ea0c1142ba26a81392fece35ae71e5bb31}{Render\-Message}\label{classScreen_a3b2273cea4444624a4fb6542ee2ce44ea0c1142ba26a81392fece35ae71e5bb31}
+}]\index{Render\-Inter\-Cmd\-Info@{Render\-Inter\-Cmd\-Info}!Screen@{Screen}}\index{Screen@{Screen}!Render\-Inter\-Cmd\-Info@{Render\-Inter\-Cmd\-Info}}\item[{\em 
+\hypertarget{classScreen_a3b2273cea4444624a4fb6542ee2ce44ea08a6b92dc8c413bc10fdce91fdc730ad}{Render\-Inter\-Cmd\-Info}\label{classScreen_a3b2273cea4444624a4fb6542ee2ce44ea08a6b92dc8c413bc10fdce91fdc730ad}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classScreen_aca8e6d405d54bd0ea318564f11a68f00}{\index{Screen@{Screen}!$\sim$\-Screen@{$\sim$\-Screen}}
+\index{$\sim$\-Screen@{$\sim$\-Screen}!Screen@{Screen}}
+\subsubsection[{$\sim$\-Screen}]{\setlength{\rightskip}{0pt plus 5cm}Screen\-::$\sim$\-Screen (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classScreen_aca8e6d405d54bd0ea318564f11a68f00}
+\hypertarget{classScreen_ae7576476fc6e6a6eaa66389fdc41fe72}{\index{Screen@{Screen}!Screen@{Screen}}
+\index{Screen@{Screen}!Screen@{Screen}}
+\subsubsection[{Screen}]{\setlength{\rightskip}{0pt plus 5cm}Screen\-::\-Screen (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [private]}}}\label{classScreen_ae7576476fc6e6a6eaa66389fdc41fe72}
+\hypertarget{classScreen_a0e756e6d8543c7efe051beb0f757ca38}{\index{Screen@{Screen}!Screen@{Screen}}
+\index{Screen@{Screen}!Screen@{Screen}}
+\subsubsection[{Screen}]{\setlength{\rightskip}{0pt plus 5cm}Screen\-::\-Screen (
+\begin{DoxyParamCaption}
+\item[{const {\bf Screen} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}}\label{classScreen_a0e756e6d8543c7efe051beb0f757ca38}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classScreen_a1274f1b8ed227c757d390cd764fb16d0}{\index{Screen@{Screen}!Add\-Str@{Add\-Str}}
+\index{Add\-Str@{Add\-Str}!Screen@{Screen}}
+\subsubsection[{Add\-Str}]{\setlength{\rightskip}{0pt plus 5cm}void Screen\-::\-Add\-Str (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{{\bf Color\-Pair}}]{color, }
+\item[{const char $\ast$}]{c\-Str}
+\end{DoxyParamCaption}
+) const}}\label{classScreen_a1274f1b8ed227c757d390cd764fb16d0}
+\hypertarget{classScreen_a2195b9634c45b2d3158c7b6f749b910c}{\index{Screen@{Screen}!Add\-Str@{Add\-Str}}
+\index{Add\-Str@{Add\-Str}!Screen@{Screen}}
+\subsubsection[{Add\-Str}]{\setlength{\rightskip}{0pt plus 5cm}void Screen\-::\-Add\-Str (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{const char $\ast$}]{str}
+\end{DoxyParamCaption}
+) const}}\label{classScreen_a2195b9634c45b2d3158c7b6f749b910c}
+\hypertarget{classScreen_aa2940a795d5a7b2ef7ce7321bb8e31e3}{\index{Screen@{Screen}!Add\-Str@{Add\-Str}}
+\index{Add\-Str@{Add\-Str}!Screen@{Screen}}
+\subsubsection[{Add\-Str}]{\setlength{\rightskip}{0pt plus 5cm}void Screen\-::\-Add\-Str (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{str}
+\end{DoxyParamCaption}
+) const}}\label{classScreen_aa2940a795d5a7b2ef7ce7321bb8e31e3}
+\hypertarget{classScreen_a93d9bd83f95acec95ab695cfa8ed7230}{\index{Screen@{Screen}!Clear\-Current\-Color@{Clear\-Current\-Color}}
+\index{Clear\-Current\-Color@{Clear\-Current\-Color}!Screen@{Screen}}
+\subsubsection[{Clear\-Current\-Color}]{\setlength{\rightskip}{0pt plus 5cm}void Screen\-::\-Clear\-Current\-Color (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}}\label{classScreen_a93d9bd83f95acec95ab695cfa8ed7230}
+\hypertarget{classScreen_a09e8fb5148385cb5b9f9b0402617ae80}{\index{Screen@{Screen}!Color@{Color}}
+\index{Color@{Color}!Screen@{Screen}}
+\subsubsection[{Color}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Color\-Pair} Screen\-::\-Color (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classScreen_a09e8fb5148385cb5b9f9b0402617ae80}
+\hypertarget{classScreen_abb048c10e10b8c375e64d52137a9d279}{\index{Screen@{Screen}!Height@{Height}}
+\index{Height@{Height}!Screen@{Screen}}
+\subsubsection[{Height}]{\setlength{\rightskip}{0pt plus 5cm}int Screen\-::\-Height (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}}\label{classScreen_abb048c10e10b8c375e64d52137a9d279}
+\hypertarget{classScreen_ac23986bc6e46e1d1565fec76da3a12fe}{\index{Screen@{Screen}!Highlight\-Line@{Highlight\-Line}}
+\index{Highlight\-Line@{Highlight\-Line}!Screen@{Screen}}
+\subsubsection[{Highlight\-Line}]{\setlength{\rightskip}{0pt plus 5cm}void Screen\-::\-Highlight\-Line (
+\begin{DoxyParamCaption}
+\item[{int}]{line\-No}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classScreen_ac23986bc6e46e1d1565fec76da3a12fe}
+\hypertarget{classScreen_a383837c8034bc40ce87e96898d5be0cc}{\index{Screen@{Screen}!Init@{Init}}
+\index{Init@{Init}!Screen@{Screen}}
+\subsubsection[{Init}]{\setlength{\rightskip}{0pt plus 5cm}void Screen\-::\-Init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classScreen_a383837c8034bc40ce87e96898d5be0cc}
+\hypertarget{classScreen_a737e0e6d802ff6c6f3055c94432fd062}{\index{Screen@{Screen}!Instance@{Instance}}
+\index{Instance@{Instance}!Screen@{Screen}}
+\subsubsection[{Instance}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Screen}$\ast$ Screen\-::\-Instance (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classScreen_a737e0e6d802ff6c6f3055c94432fd062}
+\hypertarget{classScreen_a0e172a443241197f50216c532be093df}{\index{Screen@{Screen}!Is\-Init@{Is\-Init}}
+\index{Is\-Init@{Is\-Init}!Screen@{Screen}}
+\subsubsection[{Is\-Init}]{\setlength{\rightskip}{0pt plus 5cm}bool Screen\-::\-Is\-Init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [private]}}}\label{classScreen_a0e172a443241197f50216c532be093df}
+\hypertarget{classScreen_aee7ca5e081d29f87a75d83932bace80f}{\index{Screen@{Screen}!Move\-Offset\-X\-Y@{Move\-Offset\-X\-Y}}
+\index{Move\-Offset\-X\-Y@{Move\-Offset\-X\-Y}!Screen@{Screen}}
+\subsubsection[{Move\-Offset\-X\-Y}]{\setlength{\rightskip}{0pt plus 5cm}void Screen\-::\-Move\-Offset\-X\-Y (
+\begin{DoxyParamCaption}
+\item[{int}]{offset\-X, }
+\item[{int}]{offset\-Y}
+\end{DoxyParamCaption}
+) const}}\label{classScreen_aee7ca5e081d29f87a75d83932bace80f}
+\hypertarget{classScreen_a6e3bc79495fd0a10b19c2bb19b6d0d85}{\index{Screen@{Screen}!operator=@{operator=}}
+\index{operator=@{operator=}!Screen@{Screen}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Screen}\& Screen\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Screen} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}}\label{classScreen_a6e3bc79495fd0a10b19c2bb19b6d0d85}
+\hypertarget{classScreen_a69154a73511bc8620803fa8f646ddd86}{\index{Screen@{Screen}!Resize@{Resize}}
+\index{Resize@{Resize}!Screen@{Screen}}
+\subsubsection[{Resize}]{\setlength{\rightskip}{0pt plus 5cm}void Screen\-::\-Resize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classScreen_a69154a73511bc8620803fa8f646ddd86}
+\hypertarget{classScreen_a48842cd1df5d4117dee21a028da74a40}{\index{Screen@{Screen}!Run@{Run}}
+\index{Run@{Run}!Screen@{Screen}}
+\subsubsection[{Run}]{\setlength{\rightskip}{0pt plus 5cm}void Screen\-::\-Run (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classScreen_a48842cd1df5d4117dee21a028da74a40}
+\hypertarget{classScreen_a1237833b525a279bccec474488f49220}{\index{Screen@{Screen}!Set\-Current\-Color@{Set\-Current\-Color}}
+\index{Set\-Current\-Color@{Set\-Current\-Color}!Screen@{Screen}}
+\subsubsection[{Set\-Current\-Color}]{\setlength{\rightskip}{0pt plus 5cm}void Screen\-::\-Set\-Current\-Color (
+\begin{DoxyParamCaption}
+\item[{{\bf Color\-Pair}}]{color}
+\end{DoxyParamCaption}
+) const}}\label{classScreen_a1237833b525a279bccec474488f49220}
+\hypertarget{classScreen_ade6282ee71fe718c5a46c96578a7e00e}{\index{Screen@{Screen}!Set\-Current\-Render\-Message@{Set\-Current\-Render\-Message}}
+\index{Set\-Current\-Render\-Message@{Set\-Current\-Render\-Message}!Screen@{Screen}}
+\subsubsection[{Set\-Current\-Render\-Message}]{\setlength{\rightskip}{0pt plus 5cm}void Screen\-::\-Set\-Current\-Render\-Message (
+\begin{DoxyParamCaption}
+\item[{{\bf Renderable\-Message} $\ast$const}]{render\-Obj}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classScreen_ade6282ee71fe718c5a46c96578a7e00e}
+\hypertarget{classScreen_a1957413647a5858f2c8324124c247ba2}{\index{Screen@{Screen}!Show\-Interactive\-Cmd@{Show\-Interactive\-Cmd}}
+\index{Show\-Interactive\-Cmd@{Show\-Interactive\-Cmd}!Screen@{Screen}}
+\subsubsection[{Show\-Interactive\-Cmd}]{\setlength{\rightskip}{0pt plus 5cm}void Screen\-::\-Show\-Interactive\-Cmd (
+\begin{DoxyParamCaption}
+\item[{int}]{ch}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classScreen_a1957413647a5858f2c8324124c247ba2}
+\hypertarget{classScreen_a27912037b26e33f45f0d5b7cfca777b3}{\index{Screen@{Screen}!Show\-Render\-Message@{Show\-Render\-Message}}
+\index{Show\-Render\-Message@{Show\-Render\-Message}!Screen@{Screen}}
+\subsubsection[{Show\-Render\-Message}]{\setlength{\rightskip}{0pt plus 5cm}void Screen\-::\-Show\-Render\-Message (
+\begin{DoxyParamCaption}
+\item[{int}]{ch}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classScreen_a27912037b26e33f45f0d5b7cfca777b3}
+\hypertarget{classScreen_aadce9111b1acb69bd0e6f788ae2bbd1b}{\index{Screen@{Screen}!Stop@{Stop}}
+\index{Stop@{Stop}!Screen@{Screen}}
+\subsubsection[{Stop}]{\setlength{\rightskip}{0pt plus 5cm}void Screen\-::\-Stop (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classScreen_aadce9111b1acb69bd0e6f788ae2bbd1b}
+\hypertarget{classScreen_affe4f3c4fa6ed3a0ee953f1a75eee09e}{\index{Screen@{Screen}!Switch\-State@{Switch\-State}}
+\index{Switch\-State@{Switch\-State}!Screen@{Screen}}
+\subsubsection[{Switch\-State}]{\setlength{\rightskip}{0pt plus 5cm}int Screen\-::\-Switch\-State (
+\begin{DoxyParamCaption}
+\item[{int}]{ch}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classScreen_affe4f3c4fa6ed3a0ee953f1a75eee09e}
+\hypertarget{classScreen_a40b0a6eabbfe785a379388064ccea5c3}{\index{Screen@{Screen}!Width@{Width}}
+\index{Width@{Width}!Screen@{Screen}}
+\subsubsection[{Width}]{\setlength{\rightskip}{0pt plus 5cm}int Screen\-::\-Width (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}}\label{classScreen_a40b0a6eabbfe785a379388064ccea5c3}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classScreen_a7282ffbd67e23dfec94cc1a7f0a7a7e9}{\index{Screen@{Screen}!can\-Run\-\_\-@{can\-Run\-\_\-}}
+\index{can\-Run\-\_\-@{can\-Run\-\_\-}!Screen@{Screen}}
+\subsubsection[{can\-Run\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}bool Screen\-::can\-Run\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classScreen_a7282ffbd67e23dfec94cc1a7f0a7a7e9}
+\hypertarget{classScreen_a806b6c5ad380d84aa7457d06e1eb98f8}{\index{Screen@{Screen}!current\-\_\-color\-\_\-pair\-\_\-@{current\-\_\-color\-\_\-pair\-\_\-}}
+\index{current\-\_\-color\-\_\-pair\-\_\-@{current\-\_\-color\-\_\-pair\-\_\-}!Screen@{Screen}}
+\subsubsection[{current\-\_\-color\-\_\-pair\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Color\-Pair} Screen\-::current\-\_\-color\-\_\-pair\-\_\-\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}}\label{classScreen_a806b6c5ad380d84aa7457d06e1eb98f8}
+\hypertarget{classScreen_a404ae55aee99b0d10ccd46387ccac02e}{\index{Screen@{Screen}!current\-\_\-render\-\_\-obj\-\_\-@{current\-\_\-render\-\_\-obj\-\_\-}}
+\index{current\-\_\-render\-\_\-obj\-\_\-@{current\-\_\-render\-\_\-obj\-\_\-}!Screen@{Screen}}
+\subsubsection[{current\-\_\-render\-\_\-obj\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Renderable\-Message}$\ast$ Screen\-::current\-\_\-render\-\_\-obj\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classScreen_a404ae55aee99b0d10ccd46387ccac02e}
+\hypertarget{classScreen_a0ea09ea5eadc990cdcd32068c377287d}{\index{Screen@{Screen}!current\-\_\-state\-\_\-@{current\-\_\-state\-\_\-}}
+\index{current\-\_\-state\-\_\-@{current\-\_\-state\-\_\-}!Screen@{Screen}}
+\subsubsection[{current\-\_\-state\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf State} Screen\-::current\-\_\-state\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classScreen_a0ea09ea5eadc990cdcd32068c377287d}
+\hypertarget{classScreen_a69a30640ab25485d9f769e3a37bf8639}{\index{Screen@{Screen}!highlight\-\_\-direction\-\_\-@{highlight\-\_\-direction\-\_\-}}
+\index{highlight\-\_\-direction\-\_\-@{highlight\-\_\-direction\-\_\-}!Screen@{Screen}}
+\subsubsection[{highlight\-\_\-direction\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int Screen\-::highlight\-\_\-direction\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classScreen_a69a30640ab25485d9f769e3a37bf8639}
+\hypertarget{classScreen_aeaa4372d83cf381da26b0f06be0c08f2}{\index{Screen@{Screen}!Interactive\-Cmd\-Str@{Interactive\-Cmd\-Str}}
+\index{Interactive\-Cmd\-Str@{Interactive\-Cmd\-Str}!Screen@{Screen}}
+\subsubsection[{Interactive\-Cmd\-Str}]{\setlength{\rightskip}{0pt plus 5cm}const char Screen\-::\-Interactive\-Cmd\-Str\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}}\label{classScreen_aeaa4372d83cf381da26b0f06be0c08f2}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+tools/cyber\-\_\-monitor/\hyperlink{screen_8h}{screen.\-h}\end{DoxyCompactItemize}

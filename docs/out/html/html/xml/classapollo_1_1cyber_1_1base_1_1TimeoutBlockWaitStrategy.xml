@@ -1,0 +1,181 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classapollo_1_1cyber_1_1base_1_1TimeoutBlockWaitStrategy" kind="class" prot="public">
+    <compoundname>apollo::cyber::base::TimeoutBlockWaitStrategy</compoundname>
+    <basecompoundref refid="classapollo_1_1cyber_1_1base_1_1WaitStrategy" prot="public" virt="non-virtual">apollo::cyber::base::WaitStrategy</basecompoundref>
+    <includes refid="wait__strategy_8h" local="no">wait_strategy.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1base_1_1TimeoutBlockWaitStrategy_1a80b1e0c8b1eafa79aaf84b6bb1ff444e" prot="private" static="no" mutable="no">
+        <type>std::mutex</type>
+        <definition>std::mutex apollo::cyber::base::TimeoutBlockWaitStrategy::mutex_</definition>
+        <argsstring></argsstring>
+        <name>mutex_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/wait_strategy.h" line="113" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/wait_strategy.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1base_1_1TimeoutBlockWaitStrategy_1a8ca443c25600262b45e9edbb16b1d317" prot="private" static="no" mutable="no">
+        <type>std::condition_variable</type>
+        <definition>std::condition_variable apollo::cyber::base::TimeoutBlockWaitStrategy::cv_</definition>
+        <argsstring></argsstring>
+        <name>cv_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/wait_strategy.h" line="114" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/wait_strategy.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1base_1_1TimeoutBlockWaitStrategy_1a9dc28b4322af9a5dda67979eb1af0404" prot="private" static="no" mutable="no">
+        <type>std::chrono::milliseconds</type>
+        <definition>std::chrono::milliseconds apollo::cyber::base::TimeoutBlockWaitStrategy::time_out_</definition>
+        <argsstring></argsstring>
+        <name>time_out_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/wait_strategy.h" line="115" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/wait_strategy.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1base_1_1TimeoutBlockWaitStrategy_1ac2250cd47422b7a04fa90d1f01b64df7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::base::TimeoutBlockWaitStrategy::TimeoutBlockWaitStrategy</definition>
+        <argsstring>()</argsstring>
+        <name>TimeoutBlockWaitStrategy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/wait_strategy.h" line="92" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/wait_strategy.h" bodystart="92" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1base_1_1TimeoutBlockWaitStrategy_1ab44d7baaa734ad8b03c049c225c017ae" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::base::TimeoutBlockWaitStrategy::TimeoutBlockWaitStrategy</definition>
+        <argsstring>(uint64_t timeout)</argsstring>
+        <name>TimeoutBlockWaitStrategy</name>
+        <param>
+          <type>uint64_t</type>
+          <declname>timeout</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/wait_strategy.h" line="93" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/wait_strategy.h" bodystart="93" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1base_1_1TimeoutBlockWaitStrategy_1a4041a8f72141780fdd6e805c793dcc51" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::base::TimeoutBlockWaitStrategy::NotifyOne</definition>
+        <argsstring>() override</argsstring>
+        <name>NotifyOne</name>
+        <reimplements refid="classapollo_1_1cyber_1_1base_1_1WaitStrategy_1aec07f0b6c8f19538c324c7b1e3296dc3">NotifyOne</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/wait_strategy.h" line="96" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/wait_strategy.h" bodystart="96" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1base_1_1TimeoutBlockWaitStrategy_1a044671ac4289fdf17fc961a4919c8c7f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::base::TimeoutBlockWaitStrategy::EmptyWait</definition>
+        <argsstring>() override</argsstring>
+        <name>EmptyWait</name>
+        <reimplements refid="classapollo_1_1cyber_1_1base_1_1WaitStrategy_1a5801f343cd1567ec6ee586b9845446e3">EmptyWait</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/wait_strategy.h" line="98" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/wait_strategy.h" bodystart="98" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1base_1_1TimeoutBlockWaitStrategy_1afbd51fc01be0cee88a3218e559d4fe81" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::base::TimeoutBlockWaitStrategy::BreakAllWait</definition>
+        <argsstring>()</argsstring>
+        <name>BreakAllWait</name>
+        <reimplements refid="classapollo_1_1cyber_1_1base_1_1WaitStrategy_1a521db3e728b67be1b89e16207dce014f">BreakAllWait</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/wait_strategy.h" line="106" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/wait_strategy.h" bodystart="106" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1base_1_1TimeoutBlockWaitStrategy_1a431a2d9c252544b0b8264d13c7db8ab1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::base::TimeoutBlockWaitStrategy::SetTimeout</definition>
+        <argsstring>(uint64_t timeout)</argsstring>
+        <name>SetTimeout</name>
+        <param>
+          <type>uint64_t</type>
+          <declname>timeout</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/wait_strategy.h" line="108" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/wait_strategy.h" bodystart="108" bodyend="110"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="915">
+        <label>apollo::cyber::base::WaitStrategy</label>
+        <link refid="classapollo_1_1cyber_1_1base_1_1WaitStrategy"/>
+      </node>
+      <node id="914">
+        <label>apollo::cyber::base::TimeoutBlockWaitStrategy</label>
+        <link refid="classapollo_1_1cyber_1_1base_1_1TimeoutBlockWaitStrategy"/>
+        <childnode refid="915" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="917">
+        <label>apollo::cyber::base::WaitStrategy</label>
+        <link refid="classapollo_1_1cyber_1_1base_1_1WaitStrategy"/>
+      </node>
+      <node id="916">
+        <label>apollo::cyber::base::TimeoutBlockWaitStrategy</label>
+        <link refid="classapollo_1_1cyber_1_1base_1_1TimeoutBlockWaitStrategy"/>
+        <childnode refid="917" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/work/apollo-fork/apollo/cyber/base/wait_strategy.h" line="90" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/wait_strategy.h" bodystart="90" bodyend="116"/>
+    <listofallmembers>
+      <member refid="classapollo_1_1cyber_1_1base_1_1TimeoutBlockWaitStrategy_1afbd51fc01be0cee88a3218e559d4fe81" prot="public" virt="virtual"><scope>apollo::cyber::base::TimeoutBlockWaitStrategy</scope><name>BreakAllWait</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1TimeoutBlockWaitStrategy_1a8ca443c25600262b45e9edbb16b1d317" prot="private" virt="non-virtual"><scope>apollo::cyber::base::TimeoutBlockWaitStrategy</scope><name>cv_</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1TimeoutBlockWaitStrategy_1a044671ac4289fdf17fc961a4919c8c7f" prot="public" virt="virtual"><scope>apollo::cyber::base::TimeoutBlockWaitStrategy</scope><name>EmptyWait</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1TimeoutBlockWaitStrategy_1a80b1e0c8b1eafa79aaf84b6bb1ff444e" prot="private" virt="non-virtual"><scope>apollo::cyber::base::TimeoutBlockWaitStrategy</scope><name>mutex_</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1TimeoutBlockWaitStrategy_1a4041a8f72141780fdd6e805c793dcc51" prot="public" virt="virtual"><scope>apollo::cyber::base::TimeoutBlockWaitStrategy</scope><name>NotifyOne</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1TimeoutBlockWaitStrategy_1a431a2d9c252544b0b8264d13c7db8ab1" prot="public" virt="non-virtual"><scope>apollo::cyber::base::TimeoutBlockWaitStrategy</scope><name>SetTimeout</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1TimeoutBlockWaitStrategy_1a9dc28b4322af9a5dda67979eb1af0404" prot="private" virt="non-virtual"><scope>apollo::cyber::base::TimeoutBlockWaitStrategy</scope><name>time_out_</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1TimeoutBlockWaitStrategy_1ac2250cd47422b7a04fa90d1f01b64df7" prot="public" virt="non-virtual"><scope>apollo::cyber::base::TimeoutBlockWaitStrategy</scope><name>TimeoutBlockWaitStrategy</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1TimeoutBlockWaitStrategy_1ab44d7baaa734ad8b03c049c225c017ae" prot="public" virt="non-virtual"><scope>apollo::cyber::base::TimeoutBlockWaitStrategy</scope><name>TimeoutBlockWaitStrategy</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1WaitStrategy_1ad6d1289ee9a7a5a6412d93c55f974f85" prot="public" virt="virtual"><scope>apollo::cyber::base::TimeoutBlockWaitStrategy</scope><name>~WaitStrategy</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

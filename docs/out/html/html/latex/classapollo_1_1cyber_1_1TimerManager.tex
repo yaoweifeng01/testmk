@@ -1,0 +1,120 @@
+\hypertarget{classapollo_1_1cyber_1_1TimerManager}{\section{apollo\-:\-:cyber\-:\-:Timer\-Manager Class Reference}
+\label{classapollo_1_1cyber_1_1TimerManager}\index{apollo\-::cyber\-::\-Timer\-Manager@{apollo\-::cyber\-::\-Timer\-Manager}}
+}
+
+
+{\ttfamily \#include $<$timer\-\_\-manager.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classapollo_1_1cyber_1_1TimerManager_a7c24c08a81c56e17af7de3f659ada622}{$\sim$\-Timer\-Manager} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1TimerManager_a3b12ca83b1b0fcfe1247a1d46d922a3f}{Start} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1TimerManager_a5f6375a4c10e451707198d193f98ba1b}{Shutdown} ()
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1TimerManager_ab179408a45f0ad08c6405b05af897941}{Is\-Running} ()
+\item 
+uint64\-\_\-t \hyperlink{classapollo_1_1cyber_1_1TimerManager_aefcab6d469d9f0f4eb4420a3df73df44}{Add} (uint64\-\_\-t interval, std\-::function$<$ void()$>$ handler, bool oneshot)
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1TimerManager_a76046da749392382bb30b90a98d7f5eb}{Remove} (uint64\-\_\-t timer\-\_\-id)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1TimerManager_a8492669c4feb18223792ab5878eb9fa2}{Thread\-Func\-Impl} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1TimingWheel}{Timing\-Wheel} \hyperlink{classapollo_1_1cyber_1_1TimerManager_a7ef5c0dcaa6340f1590f0f6e4c018a99}{timing\-\_\-wheel\-\_\-}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1Duration}{Duration} \hyperlink{classapollo_1_1cyber_1_1TimerManager_a94b3f5901c040151003c31996e38325f}{time\-\_\-gran\-\_\-}
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1TimerManager_a982a2e8e7d6afbc4ec91ea53f490e999}{running\-\_\-} = false
+\item 
+std\-::mutex \hyperlink{classapollo_1_1cyber_1_1TimerManager_aed436a70f5511f8be98e8d8c4a99c441}{running\-\_\-mutex\-\_\-}
+\item 
+std\-::thread \hyperlink{classapollo_1_1cyber_1_1TimerManager_ab929e9aa71508413660e55de8704028e}{scheduler\-\_\-thread\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classapollo_1_1cyber_1_1TimerManager_a7c24c08a81c56e17af7de3f659ada622}{\index{apollo\-::cyber\-::\-Timer\-Manager@{apollo\-::cyber\-::\-Timer\-Manager}!$\sim$\-Timer\-Manager@{$\sim$\-Timer\-Manager}}
+\index{$\sim$\-Timer\-Manager@{$\sim$\-Timer\-Manager}!apollo::cyber::TimerManager@{apollo\-::cyber\-::\-Timer\-Manager}}
+\subsubsection[{$\sim$\-Timer\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}virtual apollo\-::cyber\-::\-Timer\-Manager\-::$\sim$\-Timer\-Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1TimerManager_a7c24c08a81c56e17af7de3f659ada622}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1TimerManager_aefcab6d469d9f0f4eb4420a3df73df44}{\index{apollo\-::cyber\-::\-Timer\-Manager@{apollo\-::cyber\-::\-Timer\-Manager}!Add@{Add}}
+\index{Add@{Add}!apollo::cyber::TimerManager@{apollo\-::cyber\-::\-Timer\-Manager}}
+\subsubsection[{Add}]{\setlength{\rightskip}{0pt plus 5cm}uint64\-\_\-t apollo\-::cyber\-::\-Timer\-Manager\-::\-Add (
+\begin{DoxyParamCaption}
+\item[{uint64\-\_\-t}]{interval, }
+\item[{std\-::function$<$ void()$>$}]{handler, }
+\item[{bool}]{oneshot}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1TimerManager_aefcab6d469d9f0f4eb4420a3df73df44}
+\hypertarget{classapollo_1_1cyber_1_1TimerManager_ab179408a45f0ad08c6405b05af897941}{\index{apollo\-::cyber\-::\-Timer\-Manager@{apollo\-::cyber\-::\-Timer\-Manager}!Is\-Running@{Is\-Running}}
+\index{Is\-Running@{Is\-Running}!apollo::cyber::TimerManager@{apollo\-::cyber\-::\-Timer\-Manager}}
+\subsubsection[{Is\-Running}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::\-Timer\-Manager\-::\-Is\-Running (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1TimerManager_ab179408a45f0ad08c6405b05af897941}
+\hypertarget{classapollo_1_1cyber_1_1TimerManager_a76046da749392382bb30b90a98d7f5eb}{\index{apollo\-::cyber\-::\-Timer\-Manager@{apollo\-::cyber\-::\-Timer\-Manager}!Remove@{Remove}}
+\index{Remove@{Remove}!apollo::cyber::TimerManager@{apollo\-::cyber\-::\-Timer\-Manager}}
+\subsubsection[{Remove}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::\-Timer\-Manager\-::\-Remove (
+\begin{DoxyParamCaption}
+\item[{uint64\-\_\-t}]{timer\-\_\-id}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1TimerManager_a76046da749392382bb30b90a98d7f5eb}
+\hypertarget{classapollo_1_1cyber_1_1TimerManager_a5f6375a4c10e451707198d193f98ba1b}{\index{apollo\-::cyber\-::\-Timer\-Manager@{apollo\-::cyber\-::\-Timer\-Manager}!Shutdown@{Shutdown}}
+\index{Shutdown@{Shutdown}!apollo::cyber::TimerManager@{apollo\-::cyber\-::\-Timer\-Manager}}
+\subsubsection[{Shutdown}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::\-Timer\-Manager\-::\-Shutdown (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1TimerManager_a5f6375a4c10e451707198d193f98ba1b}
+\hypertarget{classapollo_1_1cyber_1_1TimerManager_a3b12ca83b1b0fcfe1247a1d46d922a3f}{\index{apollo\-::cyber\-::\-Timer\-Manager@{apollo\-::cyber\-::\-Timer\-Manager}!Start@{Start}}
+\index{Start@{Start}!apollo::cyber::TimerManager@{apollo\-::cyber\-::\-Timer\-Manager}}
+\subsubsection[{Start}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::\-Timer\-Manager\-::\-Start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1TimerManager_a3b12ca83b1b0fcfe1247a1d46d922a3f}
+\hypertarget{classapollo_1_1cyber_1_1TimerManager_a8492669c4feb18223792ab5878eb9fa2}{\index{apollo\-::cyber\-::\-Timer\-Manager@{apollo\-::cyber\-::\-Timer\-Manager}!Thread\-Func\-Impl@{Thread\-Func\-Impl}}
+\index{Thread\-Func\-Impl@{Thread\-Func\-Impl}!apollo::cyber::TimerManager@{apollo\-::cyber\-::\-Timer\-Manager}}
+\subsubsection[{Thread\-Func\-Impl}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::\-Timer\-Manager\-::\-Thread\-Func\-Impl (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1TimerManager_a8492669c4feb18223792ab5878eb9fa2}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classapollo_1_1cyber_1_1TimerManager_a982a2e8e7d6afbc4ec91ea53f490e999}{\index{apollo\-::cyber\-::\-Timer\-Manager@{apollo\-::cyber\-::\-Timer\-Manager}!running\-\_\-@{running\-\_\-}}
+\index{running\-\_\-@{running\-\_\-}!apollo::cyber::TimerManager@{apollo\-::cyber\-::\-Timer\-Manager}}
+\subsubsection[{running\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::\-Timer\-Manager\-::running\-\_\- = false\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1TimerManager_a982a2e8e7d6afbc4ec91ea53f490e999}
+\hypertarget{classapollo_1_1cyber_1_1TimerManager_aed436a70f5511f8be98e8d8c4a99c441}{\index{apollo\-::cyber\-::\-Timer\-Manager@{apollo\-::cyber\-::\-Timer\-Manager}!running\-\_\-mutex\-\_\-@{running\-\_\-mutex\-\_\-}}
+\index{running\-\_\-mutex\-\_\-@{running\-\_\-mutex\-\_\-}!apollo::cyber::TimerManager@{apollo\-::cyber\-::\-Timer\-Manager}}
+\subsubsection[{running\-\_\-mutex\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::mutex apollo\-::cyber\-::\-Timer\-Manager\-::running\-\_\-mutex\-\_\-\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1TimerManager_aed436a70f5511f8be98e8d8c4a99c441}
+\hypertarget{classapollo_1_1cyber_1_1TimerManager_ab929e9aa71508413660e55de8704028e}{\index{apollo\-::cyber\-::\-Timer\-Manager@{apollo\-::cyber\-::\-Timer\-Manager}!scheduler\-\_\-thread\-\_\-@{scheduler\-\_\-thread\-\_\-}}
+\index{scheduler\-\_\-thread\-\_\-@{scheduler\-\_\-thread\-\_\-}!apollo::cyber::TimerManager@{apollo\-::cyber\-::\-Timer\-Manager}}
+\subsubsection[{scheduler\-\_\-thread\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::thread apollo\-::cyber\-::\-Timer\-Manager\-::scheduler\-\_\-thread\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1TimerManager_ab929e9aa71508413660e55de8704028e}
+\hypertarget{classapollo_1_1cyber_1_1TimerManager_a94b3f5901c040151003c31996e38325f}{\index{apollo\-::cyber\-::\-Timer\-Manager@{apollo\-::cyber\-::\-Timer\-Manager}!time\-\_\-gran\-\_\-@{time\-\_\-gran\-\_\-}}
+\index{time\-\_\-gran\-\_\-@{time\-\_\-gran\-\_\-}!apollo::cyber::TimerManager@{apollo\-::cyber\-::\-Timer\-Manager}}
+\subsubsection[{time\-\_\-gran\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Duration} apollo\-::cyber\-::\-Timer\-Manager\-::time\-\_\-gran\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1TimerManager_a94b3f5901c040151003c31996e38325f}
+\hypertarget{classapollo_1_1cyber_1_1TimerManager_a7ef5c0dcaa6340f1590f0f6e4c018a99}{\index{apollo\-::cyber\-::\-Timer\-Manager@{apollo\-::cyber\-::\-Timer\-Manager}!timing\-\_\-wheel\-\_\-@{timing\-\_\-wheel\-\_\-}}
+\index{timing\-\_\-wheel\-\_\-@{timing\-\_\-wheel\-\_\-}!apollo::cyber::TimerManager@{apollo\-::cyber\-::\-Timer\-Manager}}
+\subsubsection[{timing\-\_\-wheel\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Timing\-Wheel} apollo\-::cyber\-::\-Timer\-Manager\-::timing\-\_\-wheel\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1TimerManager_a7ef5c0dcaa6340f1590f0f6e4c018a99}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+timer/\hyperlink{timer__manager_8h}{timer\-\_\-manager.\-h}\end{DoxyCompactItemize}

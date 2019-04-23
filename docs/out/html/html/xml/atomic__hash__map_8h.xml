@@ -1,0 +1,856 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="atomic__hash__map_8h" kind="file">
+    <compoundname>atomic_hash_map.h</compoundname>
+    <includes local="no">stdint.h</includes>
+    <includes local="no">atomic</includes>
+    <includes local="no">type_traits</includes>
+    <includes local="no">utility</includes>
+    <includedby refid="global__data_8h" local="yes">common/global_data.h</includedby>
+    <includedby refid="scheduler_8h" local="yes">scheduler/scheduler.h</includedby>
+    <includedby refid="dispatcher_8h" local="yes">transport/dispatcher/dispatcher.h</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>atomic</label>
+      </node>
+      <node id="1">
+        <label>stdint.h</label>
+      </node>
+      <node id="0">
+        <label>base/atomic_hash_map.h</label>
+        <link refid="atomic_hash_map.h"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>utility</label>
+      </node>
+      <node id="3">
+        <label>type_traits</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="12">
+        <label>py_wrapper/py_timer.h</label>
+        <link refid="py__timer_8h"/>
+      </node>
+      <node id="10">
+        <label>py_wrapper/py_node.h</label>
+        <link refid="py__node_8h"/>
+      </node>
+      <node id="29">
+        <label>tools/cyber_recorder/player/player.h</label>
+        <link refid="player_8h"/>
+      </node>
+      <node id="23">
+        <label>blocker/intra_reader.h</label>
+        <link refid="intra__reader_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>tools/cyber_monitor/general_message_base.h</label>
+        <link refid="general__message__base_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>examples/timer_component_example/timer_component_example.h</label>
+        <link refid="timer__component__example_8h"/>
+      </node>
+      <node id="69">
+        <label>transport/dispatcher/shm_dispatcher.h</label>
+        <link refid="shm__dispatcher_8h"/>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>common/global_data.h</label>
+        <link refid="global__data_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>py_wrapper/py_init.h</label>
+        <link refid="py__init_8h"/>
+      </node>
+      <node id="17">
+        <label>tools/cyber_recorder/recorder.h</label>
+        <link refid="recorder_8h"/>
+      </node>
+      <node id="45">
+        <label>tools/cyber_recorder/player/play_task.h</label>
+        <link refid="play__task_8h"/>
+        <childnode refid="46" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>node/node.h</label>
+        <link refid="node_8h"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>scheduler/scheduler.h</label>
+        <link refid="scheduler_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>node/node_channel_impl.h</label>
+        <link refid="node__channel__impl_8h"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>node/reader_base.h</label>
+        <link refid="reader__base_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>cyber.h</label>
+        <link refid="cyber_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="53">
+        <label>data/fusion/all_latest.h</label>
+        <link refid="all__latest_8h"/>
+        <childnode refid="52" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>parameter/parameter_client.h</label>
+        <link refid="parameter__client_8h"/>
+      </node>
+      <node id="49">
+        <label>scheduler/policy/scheduler_classic.h</label>
+        <link refid="scheduler__classic_8h"/>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>croutine/routine_factory.h</label>
+        <link refid="routine__factory_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="57">
+        <label>data/data_notifier.h</label>
+        <link refid="data__notifier_8h"/>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+      </node>
+      <node id="60">
+        <label>transport/transmitter/rtps_transmitter.h</label>
+        <link refid="rtps__transmitter_8h"/>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>tools/cyber_recorder/player/play_task_producer.h</label>
+        <link refid="play__task__producer_8h"/>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="62">
+        <label>logger/logger_util.h</label>
+        <link refid="logger__util_8h"/>
+      </node>
+      <node id="55">
+        <label>event/perf_event.h</label>
+        <link refid="perf__event_8h"/>
+        <childnode refid="56" relation="include">
+        </childnode>
+      </node>
+      <node id="59">
+        <label>transport/transmitter/intra_transmitter.h</label>
+        <link refid="intra__transmitter_8h"/>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+      </node>
+      <node id="65">
+        <label>transport/dispatcher/intra_dispatcher.h</label>
+        <link refid="intra__dispatcher_8h"/>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>base/atomic_hash_map.h</label>
+        <link refid="atomic_hash_map.h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+      </node>
+      <node id="54">
+        <label>data/data_visitor_base.h</label>
+        <link refid="data__visitor__base_8h"/>
+        <childnode refid="52" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>py_wrapper/py_topology_manager.h</label>
+        <link refid="py__topology__manager_8h"/>
+      </node>
+      <node id="72">
+        <label>transport/receiver/receiver.h</label>
+        <link refid="receiver_8h"/>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>component/component.h</label>
+        <link refid="component_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>scheduler/scheduler_factory.h</label>
+        <link refid="scheduler__factory_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="67">
+        <label>transport/dispatcher/rtps_dispatcher.h</label>
+        <link refid="rtps__dispatcher_8h"/>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+      </node>
+      <node id="51">
+        <label>data/data_dispatcher.h</label>
+        <link refid="data__dispatcher_8h"/>
+        <childnode refid="52" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>transport/receiver/hybrid_receiver.h</label>
+        <link refid="hybrid__receiver_8h"/>
+        <childnode refid="41" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>node/node_service_impl.h</label>
+        <link refid="node__service__impl_8h"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="47">
+        <label>tools/cyber_recorder/player/play_task_consumer.h</label>
+        <link refid="play__task__consumer_8h"/>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>parameter/parameter_server.h</label>
+        <link refid="parameter__server_8h"/>
+      </node>
+      <node id="16">
+        <label>tools/cyber_monitor/general_message.h</label>
+        <link refid="general__message_8h"/>
+      </node>
+      <node id="20">
+        <label>mainboard/module_controller.h</label>
+        <link refid="module__controller_8h"/>
+      </node>
+      <node id="26">
+        <label>component/component_base.h</label>
+        <link refid="component__base_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>task/task_manager.h</label>
+        <link refid="task__manager_8h"/>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="58">
+        <label>transport/transmitter/transmitter.h</label>
+        <link refid="transmitter_8h"/>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+      </node>
+      <node id="63">
+        <label>mainboard/module_argument.h</label>
+        <link refid="module__argument_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="70">
+        <label>transport/receiver/shm_receiver.h</label>
+        <link refid="shm__receiver_8h"/>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>tools/cyber_monitor/general_channel_message.h</label>
+        <link refid="general__channel__message_8h"/>
+      </node>
+      <node id="56">
+        <label>event/perf_event_cache.h</label>
+        <link refid="perf__event__cache_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+      </node>
+      <node id="61">
+        <label>transport/transmitter/shm_transmitter.h</label>
+        <link refid="shm__transmitter_8h"/>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>node/writer.h</label>
+        <link refid="writer_8h"/>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="52">
+        <label>data/data_visitor.h</label>
+        <link refid="data__visitor_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>component/timer_component.h</label>
+        <link refid="timer__component_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>node/reader.h</label>
+        <link refid="reader_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="68">
+        <label>transport/receiver/rtps_receiver.h</label>
+        <link refid="rtps__receiver_8h"/>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>service/client.h</label>
+        <link refid="client_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>blocker/intra_writer.h</label>
+        <link refid="intra__writer_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="64">
+        <label>transport/dispatcher/dispatcher.h</label>
+        <link refid="dispatcher_8h"/>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>transport/transport.h</label>
+        <link refid="transport_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+      </node>
+      <node id="71">
+        <label>transport/message/history.h</label>
+        <link refid="history_8h"/>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>examples/common_component_example/common_component_example.h</label>
+        <link refid="common__component__example_8h"/>
+      </node>
+      <node id="48">
+        <label>transport/transmitter/hybrid_transmitter.h</label>
+        <link refid="hybrid__transmitter_8h"/>
+        <childnode refid="41" relation="include">
+        </childnode>
+      </node>
+      <node id="50">
+        <label>data/channel_buffer.h</label>
+        <link refid="channel__buffer_8h"/>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+      </node>
+      <node id="66">
+        <label>transport/receiver/intra_receiver.h</label>
+        <link refid="intra__receiver_8h"/>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>service/service.h</label>
+        <link refid="service_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>scheduler/policy/scheduler_choreography.h</label>
+        <link refid="scheduler__choreography_8h"/>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>task/task.h</label>
+        <link refid="task_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>py_wrapper/py_time.h</label>
+        <link refid="py__time_8h"/>
+      </node>
+      <node id="46">
+        <label>tools/cyber_recorder/player/play_task_buffer.h</label>
+        <link refid="play__task__buffer_8h"/>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap" prot="public">apollo::cyber::base::AtomicHashMap</innerclass>
+    <innerclass refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry" prot="private">apollo::cyber::base::AtomicHashMap::Entry</innerclass>
+    <innerclass refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Bucket" prot="private">apollo::cyber::base::AtomicHashMap::Bucket</innerclass>
+    <innernamespace refid="namespaceapollo">apollo</innernamespace>
+    <innernamespace refid="namespaceapollo_1_1cyber">apollo::cyber</innernamespace>
+    <innernamespace refid="namespaceapollo_1_1cyber_1_1base">apollo::cyber::base</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2018<sp/>The<sp/>Apollo<sp/>Authors.<sp/>All<sp/>Rights<sp/>Reserved.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CYBER_BASE_ATOMIC_HASH_MAP_H_</highlight></codeline>
+<codeline lineno="18"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CYBER_BASE_ATOMIC_HASH_MAP_H_</highlight></codeline>
+<codeline lineno="19"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;atomic&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;type_traits&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;utility&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="namespaceapollo" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">apollo<sp/>{</highlight></codeline>
+<codeline lineno="26" refid="namespaceapollo_1_1cyber" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">cyber<sp/>{</highlight></codeline>
+<codeline lineno="27" refid="namespaceapollo_1_1cyber_1_1base" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">base<sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>K,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>V,<sp/>std::size_t<sp/>TableSize<sp/>=<sp/>128,</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="namespaceapollo_1_1cyber_1_1base_1aa3e2fff9b18a1214af4a70546fb7120f" kindref="member">std::enable_if&lt;std::is_integral&lt;K&gt;::value</ref><sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(TableSize<sp/>&amp;<sp/>(TableSize<sp/>-<sp/>1))<sp/>==<sp/>0,</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&gt;::type<sp/>=<sp/>0&gt;</highlight></codeline>
+<codeline lineno="40" refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap" kindref="compound">AtomicHashMap</ref><sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="42" refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1aa1a83359c21d93a096e806382f03e129" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1aa1a83359c21d93a096e806382f03e129" kindref="member">AtomicHashMap</ref>()<sp/>:<sp/><ref refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1ada585ac9c1211917c1d08bf3ef77281f" kindref="member">capacity_</ref>(TableSize),<sp/><ref refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1adb15b0fce4c41fa3b25a32b5ba7e23bc" kindref="member">mode_num_</ref>(<ref refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1ada585ac9c1211917c1d08bf3ef77281f" kindref="member">capacity_</ref><sp/>-<sp/>1)<sp/>{}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1aa1a83359c21d93a096e806382f03e129" kindref="member">AtomicHashMap</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap" kindref="compound">AtomicHashMap</ref><sp/>&amp;other)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap" kindref="compound">AtomicHashMap</ref><sp/>&amp;<ref refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1a780be857f6f6d0330da564afd8266620" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap" kindref="compound">AtomicHashMap</ref><sp/>&amp;other)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1ac038ea2f8018172914fcadb807a970a8" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1ac038ea2f8018172914fcadb807a970a8" kindref="member">Has</ref>(K<sp/>key)<sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64_t<sp/>index<sp/>=<sp/>key<sp/>&amp;<sp/><ref refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1adb15b0fce4c41fa3b25a32b5ba7e23bc" kindref="member">mode_num_</ref>;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1aab575e13b07e0465956aeb1aaef42e22" kindref="member">table_</ref>[index].<ref refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Bucket_1a2d8891754500ca4192856a7f7614829a" kindref="member">Has</ref>(key);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1a0cffa9d1d855e4733f18071b0d7a077d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1a0cffa9d1d855e4733f18071b0d7a077d" kindref="member">Get</ref>(K<sp/>key,<sp/>V<sp/>**<ref refid="namespaceapollo_1_1cyber_1_1base_1aa3e2fff9b18a1214af4a70546fb7120f" kindref="member">value</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64_t<sp/>index<sp/>=<sp/>key<sp/>&amp;<sp/><ref refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1adb15b0fce4c41fa3b25a32b5ba7e23bc" kindref="member">mode_num_</ref>;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1aab575e13b07e0465956aeb1aaef42e22" kindref="member">table_</ref>[index].<ref refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Bucket_1a0de1875c51ca5d8692e8055f5da7d54c" kindref="member">Get</ref>(key,<sp/>value);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1a3b8fc8d906e4e6c116c991cd178c8655" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1a3b8fc8d906e4e6c116c991cd178c8655" kindref="member">Get</ref>(K<sp/>key,<sp/>V<sp/>*<ref refid="namespaceapollo_1_1cyber_1_1base_1aa3e2fff9b18a1214af4a70546fb7120f" kindref="member">value</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64_t<sp/>index<sp/>=<sp/>key<sp/>&amp;<sp/><ref refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1adb15b0fce4c41fa3b25a32b5ba7e23bc" kindref="member">mode_num_</ref>;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>V<sp/>*val<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>res<sp/>=<sp/><ref refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1aab575e13b07e0465956aeb1aaef42e22" kindref="member">table_</ref>[index].<ref refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Bucket_1a0de1875c51ca5d8692e8055f5da7d54c" kindref="member">Get</ref>(key,<sp/>&amp;val);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(res)<sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>*value<sp/>=<sp/>*val;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>res;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1a9ed2851c909e8ac9662f92d81df18efe" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1a9ed2851c909e8ac9662f92d81df18efe" kindref="member">Set</ref>(K<sp/>key)<sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64_t<sp/>index<sp/>=<sp/>key<sp/>&amp;<sp/><ref refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1adb15b0fce4c41fa3b25a32b5ba7e23bc" kindref="member">mode_num_</ref>;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1aab575e13b07e0465956aeb1aaef42e22" kindref="member">table_</ref>[index].<ref refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Bucket_1aa3cba2cbce1ff70d05aeee20b85ef496" kindref="member">Insert</ref>(key);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1a595719e722207e09c63feb85b505ef36" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1a595719e722207e09c63feb85b505ef36" kindref="member">Set</ref>(K<sp/>key,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>V<sp/>&amp;<ref refid="namespaceapollo_1_1cyber_1_1base_1aa3e2fff9b18a1214af4a70546fb7120f" kindref="member">value</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64_t<sp/>index<sp/>=<sp/>key<sp/>&amp;<sp/><ref refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1adb15b0fce4c41fa3b25a32b5ba7e23bc" kindref="member">mode_num_</ref>;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1aab575e13b07e0465956aeb1aaef42e22" kindref="member">table_</ref>[index].<ref refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Bucket_1aa3cba2cbce1ff70d05aeee20b85ef496" kindref="member">Insert</ref>(key,<sp/>value);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76" refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1ac4c44e27832b4965f999eeed068938d1" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1ac4c44e27832b4965f999eeed068938d1" kindref="member">Set</ref>(K<sp/>key,<sp/>V<sp/>&amp;&amp;<ref refid="namespaceapollo_1_1cyber_1_1base_1aa3e2fff9b18a1214af4a70546fb7120f" kindref="member">value</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64_t<sp/>index<sp/>=<sp/>key<sp/>&amp;<sp/><ref refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1adb15b0fce4c41fa3b25a32b5ba7e23bc" kindref="member">mode_num_</ref>;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1aab575e13b07e0465956aeb1aaef42e22" kindref="member">table_</ref>[index].<ref refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Bucket_1aa3cba2cbce1ff70d05aeee20b85ef496" kindref="member">Insert</ref>(key,<sp/>std::forward&lt;V&gt;(<ref refid="namespaceapollo_1_1cyber_1_1base_1aa3e2fff9b18a1214af4a70546fb7120f" kindref="member">value</ref>));</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="82" refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry" kindref="compound">Entry</ref><sp/>{</highlight></codeline>
+<codeline lineno="83" refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry_1ae852819828fc6a7b68db072dea8640b9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry_1ae852819828fc6a7b68db072dea8640b9" kindref="member">Entry</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="84" refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry_1a325c68fbf78f04f185fdf7b69f893917" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry_1a325c68fbf78f04f185fdf7b69f893917" kindref="member">Entry</ref>(K<sp/><ref refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry_1a92d89dfd94973438aa8db43a8bbebee6" kindref="member">key</ref>)<sp/>:<sp/>key(key)<sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry_1ac717cbc0d8b0e10085e6458790f2a30f" kindref="member">value_ptr</ref>.store(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>V(),<sp/>std::memory_order_release);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87" refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry_1aa9d4d2fcabc83b9969e2d56336afcf52" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry_1aa9d4d2fcabc83b9969e2d56336afcf52" kindref="member">Entry</ref>(K<sp/><ref refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry_1a92d89dfd94973438aa8db43a8bbebee6" kindref="member">key</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>V<sp/>&amp;<ref refid="namespaceapollo_1_1cyber_1_1base_1aa3e2fff9b18a1214af4a70546fb7120f" kindref="member">value</ref>)<sp/>:<sp/>key(key)<sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry_1ac717cbc0d8b0e10085e6458790f2a30f" kindref="member">value_ptr</ref>.store(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>V(value),<sp/>std::memory_order_release);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="90" refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry_1af5776001b463532d197e002e411ed8f1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry_1af5776001b463532d197e002e411ed8f1" kindref="member">Entry</ref>(K<sp/><ref refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry_1a92d89dfd94973438aa8db43a8bbebee6" kindref="member">key</ref>,<sp/>V<sp/>&amp;&amp;<ref refid="namespaceapollo_1_1cyber_1_1base_1aa3e2fff9b18a1214af4a70546fb7120f" kindref="member">value</ref>)<sp/>:<sp/>key(key)<sp/>{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry_1ac717cbc0d8b0e10085e6458790f2a30f" kindref="member">value_ptr</ref>.store(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>V(std::forward&lt;V&gt;(<ref refid="namespaceapollo_1_1cyber_1_1base_1aa3e2fff9b18a1214af4a70546fb7120f" kindref="member">value</ref>)),<sp/>std::memory_order_release);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93" refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry_1a70be561c45093c3010e8d08a12aaafa8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry_1a70be561c45093c3010e8d08a12aaafa8" kindref="member">~Entry</ref>()<sp/>{<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/><ref refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry_1ac717cbc0d8b0e10085e6458790f2a30f" kindref="member">value_ptr</ref>.load(std::memory_order_acquire);<sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry_1a92d89dfd94973438aa8db43a8bbebee6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>K<sp/><ref refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry_1a92d89dfd94973438aa8db43a8bbebee6" kindref="member">key</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="96" refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry_1ac717cbc0d8b0e10085e6458790f2a30f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::atomic&lt;V<sp/>*&gt;<sp/><ref refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry_1ac717cbc0d8b0e10085e6458790f2a30f" kindref="member">value_ptr</ref><sp/>=<sp/>{</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="97" refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry_1af0f925e9c620cb000999d0dafd872e0f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::atomic&lt;Entry<sp/>*&gt;<sp/><ref refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry_1af0f925e9c620cb000999d0dafd872e0f" kindref="member">next</ref><sp/>=<sp/>{</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Bucket" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Bucket" kindref="compound">Bucket</ref><sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="102" refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Bucket_1a6d7968e613f57c1f45c687e937002def" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Bucket_1a6d7968e613f57c1f45c687e937002def" kindref="member">Bucket</ref>()<sp/>:<sp/><ref refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Bucket_1a4564f028e20a090f229c18968c4636b5" kindref="member">head_</ref>(new<sp/><ref refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry" kindref="compound">Entry</ref>())<sp/>{}</highlight></codeline>
+<codeline lineno="103" refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Bucket_1ab8588807dff84dee88f5a7ee18724d4c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Bucket_1ab8588807dff84dee88f5a7ee18724d4c" kindref="member">~Bucket</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry" kindref="compound">Entry</ref><sp/>*ite<sp/>=<sp/><ref refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Bucket_1a4564f028e20a090f229c18968c4636b5" kindref="member">head_</ref>;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(ite)<sp/>{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>tmp<sp/>=<sp/>ite-&gt;<ref refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry_1af0f925e9c620cb000999d0dafd872e0f" kindref="member">next</ref>.load(std::memory_order_acquire);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>ite;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ite<sp/>=<sp/>tmp;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112" refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Bucket_1a2d8891754500ca4192856a7f7614829a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Bucket_1a2d8891754500ca4192856a7f7614829a" kindref="member">Has</ref>(K<sp/>key)<sp/>{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry" kindref="compound">Entry</ref><sp/>*m_target<sp/>=<sp/><ref refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Bucket_1a4564f028e20a090f229c18968c4636b5" kindref="member">head_</ref>-&gt;<ref refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry_1af0f925e9c620cb000999d0dafd872e0f" kindref="member">next</ref>.load(std::memory_order_acquire);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<ref refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry" kindref="compound">Entry</ref><sp/>*target<sp/>=<sp/>m_target)<sp/>{</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(target-&gt;key<sp/>&lt;<sp/>key)<sp/>{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_target<sp/>=<sp/>target-&gt;<ref refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry_1af0f925e9c620cb000999d0dafd872e0f" kindref="member">next</ref>.load(std::memory_order_acquire);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>target-&gt;key<sp/>==<sp/>key;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125" refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Bucket_1ac221662e95bf2d7c5589cab2766cd788" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Bucket_1ac221662e95bf2d7c5589cab2766cd788" kindref="member">Find</ref>(K<sp/>key,<sp/><ref refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry" kindref="compound">Entry</ref><sp/>**prev_ptr,<sp/><ref refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry" kindref="compound">Entry</ref><sp/>**target_ptr)<sp/>{</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry" kindref="compound">Entry</ref><sp/>*prev<sp/>=<sp/><ref refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Bucket_1a4564f028e20a090f229c18968c4636b5" kindref="member">head_</ref>;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry" kindref="compound">Entry</ref><sp/>*m_target<sp/>=<sp/><ref refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Bucket_1a4564f028e20a090f229c18968c4636b5" kindref="member">head_</ref>-&gt;<ref refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry_1af0f925e9c620cb000999d0dafd872e0f" kindref="member">next</ref>.load(std::memory_order_acquire);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<ref refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry" kindref="compound">Entry</ref><sp/>*target<sp/>=<sp/>m_target)<sp/>{</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(target-&gt;key<sp/>==<sp/>key)<sp/>{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*prev_ptr<sp/>=<sp/>prev;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*target_ptr<sp/>=<sp/>target;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(target-&gt;key<sp/>&gt;<sp/>key)<sp/>{</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*prev_ptr<sp/>=<sp/>prev;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*target_ptr<sp/>=<sp/>target;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>prev<sp/>=<sp/>target;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_target<sp/>=<sp/>target-&gt;<ref refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry_1af0f925e9c620cb000999d0dafd872e0f" kindref="member">next</ref>.load(std::memory_order_acquire);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>*prev_ptr<sp/>=<sp/>prev;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>*target_ptr<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147" refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Bucket_1aa3cba2cbce1ff70d05aeee20b85ef496" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Bucket_1aa3cba2cbce1ff70d05aeee20b85ef496" kindref="member">Insert</ref>(K<sp/>key,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>V<sp/>&amp;<ref refid="namespaceapollo_1_1cyber_1_1base_1aa3e2fff9b18a1214af4a70546fb7120f" kindref="member">value</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry" kindref="compound">Entry</ref><sp/>*prev<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry" kindref="compound">Entry</ref><sp/>*target<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry" kindref="compound">Entry</ref><sp/>*new_entry<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry" kindref="compound">Entry</ref>(key,<sp/>value);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>V<sp/>*new_value<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>V(value);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Bucket_1ac221662e95bf2d7c5589cab2766cd788" kindref="member">Find</ref>(key,<sp/>&amp;prev,<sp/>&amp;target))<sp/>{</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>key<sp/>exists,<sp/>update<sp/>value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>old_val_ptr<sp/>=<sp/>target-&gt;<ref refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry_1ac717cbc0d8b0e10085e6458790f2a30f" kindref="member">value_ptr</ref>.load(std::memory_order_acquire);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(target-&gt;<ref refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry_1ac717cbc0d8b0e10085e6458790f2a30f" kindref="member">value_ptr</ref>.compare_exchange_strong(</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>old_val_ptr,<sp/>new_value,<sp/>std::memory_order_acq_rel,</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::memory_order_relaxed))<sp/>{</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>new_entry;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>new_entry-&gt;<ref refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry_1af0f925e9c620cb000999d0dafd872e0f" kindref="member">next</ref>.store(target,<sp/>std::memory_order_release);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(prev-&gt;<ref refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry_1af0f925e9c620cb000999d0dafd872e0f" kindref="member">next</ref>.compare_exchange_strong(target,<sp/>new_entry,</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::memory_order_acq_rel,</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::memory_order_relaxed))<sp/>{</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Insert<sp/>success</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>new_value;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>another<sp/>entry<sp/>has<sp/>been<sp/>inserted,<sp/>retry</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177" refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Bucket_1a54408f179b728a7e7928443d57a034dc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Bucket_1a54408f179b728a7e7928443d57a034dc" kindref="member">Insert</ref>(K<sp/>key,<sp/>V<sp/>&amp;&amp;<ref refid="namespaceapollo_1_1cyber_1_1base_1aa3e2fff9b18a1214af4a70546fb7120f" kindref="member">value</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry" kindref="compound">Entry</ref><sp/>*prev<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry" kindref="compound">Entry</ref><sp/>*target<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry" kindref="compound">Entry</ref><sp/>*new_entry<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry" kindref="compound">Entry</ref>(key,<sp/><ref refid="namespaceapollo_1_1cyber_1_1base_1aa3e2fff9b18a1214af4a70546fb7120f" kindref="member">value</ref>);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>new_value<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>V(std::forward&lt;V&gt;(<ref refid="namespaceapollo_1_1cyber_1_1base_1aa3e2fff9b18a1214af4a70546fb7120f" kindref="member">value</ref>));</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Bucket_1ac221662e95bf2d7c5589cab2766cd788" kindref="member">Find</ref>(key,<sp/>&amp;prev,<sp/>&amp;target))<sp/>{</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>key<sp/>exists,<sp/>update<sp/>value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>old_val_ptr<sp/>=<sp/>target-&gt;<ref refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry_1ac717cbc0d8b0e10085e6458790f2a30f" kindref="member">value_ptr</ref>.load(std::memory_order_acquire);</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(target-&gt;<ref refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry_1ac717cbc0d8b0e10085e6458790f2a30f" kindref="member">value_ptr</ref>.compare_exchange_strong(</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>old_val_ptr,<sp/>new_value,<sp/>std::memory_order_acq_rel,</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::memory_order_relaxed))<sp/>{</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>new_entry;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>new_entry-&gt;<ref refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry_1af0f925e9c620cb000999d0dafd872e0f" kindref="member">next</ref>.store(target,<sp/>std::memory_order_release);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(prev-&gt;<ref refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry_1af0f925e9c620cb000999d0dafd872e0f" kindref="member">next</ref>.compare_exchange_strong(target,<sp/>new_entry,</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::memory_order_acq_rel,</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::memory_order_relaxed))<sp/>{</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Insert<sp/>success</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>new_value;</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>another<sp/>entry<sp/>has<sp/>been<sp/>inserted,<sp/>retry</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207" refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Bucket_1ae363c6757f59ff0031776577e4bb7c03" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Bucket_1ae363c6757f59ff0031776577e4bb7c03" kindref="member">Insert</ref>(K<sp/>key)<sp/>{</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry" kindref="compound">Entry</ref><sp/>*prev<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry" kindref="compound">Entry</ref><sp/>*target<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry" kindref="compound">Entry</ref><sp/>*new_entry<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry" kindref="compound">Entry</ref>(key);</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>new_value<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>V();</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Bucket_1ac221662e95bf2d7c5589cab2766cd788" kindref="member">Find</ref>(key,<sp/>&amp;prev,<sp/>&amp;target))<sp/>{</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>key<sp/>exists,<sp/>update<sp/>value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>old_val_ptr<sp/>=<sp/>target-&gt;<ref refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry_1ac717cbc0d8b0e10085e6458790f2a30f" kindref="member">value_ptr</ref>.load(std::memory_order_acquire);</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(target-&gt;<ref refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry_1ac717cbc0d8b0e10085e6458790f2a30f" kindref="member">value_ptr</ref>.compare_exchange_strong(</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>old_val_ptr,<sp/>new_value,<sp/>std::memory_order_acq_rel,</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::memory_order_relaxed))<sp/>{</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>new_entry;</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>new_entry-&gt;<ref refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry_1af0f925e9c620cb000999d0dafd872e0f" kindref="member">next</ref>.store(target,<sp/>std::memory_order_release);</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(prev-&gt;<ref refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry_1af0f925e9c620cb000999d0dafd872e0f" kindref="member">next</ref>.compare_exchange_strong(target,<sp/>new_entry,</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::memory_order_acq_rel,</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::memory_order_relaxed))<sp/>{</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Insert<sp/>success</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>new_value;</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>another<sp/>entry<sp/>has<sp/>been<sp/>inserted,<sp/>retry</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight></codeline>
+<codeline lineno="237" refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Bucket_1a0de1875c51ca5d8692e8055f5da7d54c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Bucket_1a0de1875c51ca5d8692e8055f5da7d54c" kindref="member">Get</ref>(K<sp/>key,<sp/>V<sp/>**<ref refid="namespaceapollo_1_1cyber_1_1base_1aa3e2fff9b18a1214af4a70546fb7120f" kindref="member">value</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry" kindref="compound">Entry</ref><sp/>*prev<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry" kindref="compound">Entry</ref><sp/>*target<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Bucket_1ac221662e95bf2d7c5589cab2766cd788" kindref="member">Find</ref>(key,<sp/>&amp;prev,<sp/>&amp;target))<sp/>{</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*value<sp/>=<sp/>target-&gt;<ref refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry_1ac717cbc0d8b0e10085e6458790f2a30f" kindref="member">value_ptr</ref>.load(std::memory_order_acquire);</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247" refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Bucket_1a4564f028e20a090f229c18968c4636b5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry" kindref="compound">Entry</ref><sp/>*<ref refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Bucket_1a4564f028e20a090f229c18968c4636b5" kindref="member">head_</ref>;</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="251" refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1aab575e13b07e0465956aeb1aaef42e22" refkind="member"><highlight class="normal"><sp/><sp/>Bucket<sp/><ref refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1aab575e13b07e0465956aeb1aaef42e22" kindref="member">table_</ref>[TableSize];</highlight></codeline>
+<codeline lineno="252" refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1ada585ac9c1211917c1d08bf3ef77281f" refkind="member"><highlight class="normal"><sp/><sp/>uint64_t<sp/><ref refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1ada585ac9c1211917c1d08bf3ef77281f" kindref="member">capacity_</ref>;</highlight></codeline>
+<codeline lineno="253" refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1adb15b0fce4c41fa3b25a32b5ba7e23bc" refkind="member"><highlight class="normal"><sp/><sp/>uint64_t<sp/><ref refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1adb15b0fce4c41fa3b25a32b5ba7e23bc" kindref="member">mode_num_</ref>;</highlight></codeline>
+<codeline lineno="254"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>base</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>cyber</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>apollo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>CYBER_BASE_ATOMIC_HASH_MAP_H_</highlight></codeline>
+    </programlisting>
+    <location file="/home/work/apollo-fork/apollo/cyber/base/atomic_hash_map.h"/>
+  </compounddef>
+</doxygen>

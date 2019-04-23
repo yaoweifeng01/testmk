@@ -1,0 +1,211 @@
+\hypertarget{classapollo_1_1cyber_1_1message_1_1ProtobufFactory}{\section{apollo\-:\-:cyber\-:\-:message\-:\-:Protobuf\-Factory Class Reference}
+\label{classapollo_1_1cyber_1_1message_1_1ProtobufFactory}\index{apollo\-::cyber\-::message\-::\-Protobuf\-Factory@{apollo\-::cyber\-::message\-::\-Protobuf\-Factory}}
+}
+
+
+{\ttfamily \#include $<$protobuf\-\_\-factory.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1message_1_1ProtobufFactory_a3fab943f6f9d2c5d7bc14aea1e1bb02f}{$\sim$\-Protobuf\-Factory} ()
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1message_1_1ProtobufFactory_a28e6888421ed69854760067707251132}{Register\-Message} (const std\-::string \&proto\-\_\-desc\-\_\-str)
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1message_1_1ProtobufFactory_a7447830ef927a587f5a61e43db290116}{Register\-Python\-Message} (const std\-::string \&proto\-\_\-str)
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1message_1_1ProtobufFactory_a9c66829001d077097204caa85a256f35}{Register\-Message} (const google\-::protobuf\-::\-Message \&message)
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1message_1_1ProtobufFactory_a812fef889296b4c1c16adf73bb0c37d3}{Register\-Message} (const Descriptor \&desc)
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1message_1_1ProtobufFactory_a9a496ef71145954a1a473bc6443c294d}{Register\-Message} (const File\-Descriptor\-Proto \&file\-\_\-desc\-\_\-proto)
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1message_1_1ProtobufFactory_a36b7f4ba5945f4c89d157a51bc8539fd}{Get\-Descriptor\-String} (const std\-::string \&type, std\-::string $\ast$desc\-\_\-str)
+\item 
+google\-::protobuf\-::\-Message $\ast$ \hyperlink{classapollo_1_1cyber_1_1message_1_1ProtobufFactory_a07a04ac066aa60627656b90f49d07daa}{Generate\-Message\-By\-Type} (const std\-::string \&type) const 
+\item 
+const Descriptor $\ast$ \hyperlink{classapollo_1_1cyber_1_1message_1_1ProtobufFactory_a374b2b507e4eba3f9eb0ce9c192242a8}{Find\-Message\-Type\-By\-Name} (const std\-::string \&type) const 
+\item 
+const \\*
+google\-::protobuf\-::\-Service\-Descriptor $\ast$ \hyperlink{classapollo_1_1cyber_1_1message_1_1ProtobufFactory_a665ea192ef367b2a89a769dd4f9192e6}{Find\-Service\-By\-Name} (const std\-::string \&name) const 
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1message_1_1ProtobufFactory_a8124a5e604099823afed63e56f68a8ee}{Get\-Python\-Desc} (const std\-::string \&type, std\-::string $\ast$desc\-\_\-str)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classapollo_1_1cyber_1_1message_1_1ProtobufFactory_aebba7fa34a0530ec76cf2fd33b3e6e3b}{Get\-Descriptor\-String} (const google\-::protobuf\-::\-Message \&message, std\-::string $\ast$desc\-\_\-str)
+\item 
+static void \hyperlink{classapollo_1_1cyber_1_1message_1_1ProtobufFactory_af86aa18822ec4d6bcc3fa0c3e44aa1ca}{Get\-Descriptor\-String} (const Descriptor $\ast$desc, std\-::string $\ast$desc\-\_\-str)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1message_1_1ProtobufFactory_adb2411e8d12351e71fbfd58c3dfbc1fa}{Register\-Message} (const Proto\-Desc \&proto\-\_\-desc)
+\item 
+google\-::protobuf\-::\-Message $\ast$ \hyperlink{classapollo_1_1cyber_1_1message_1_1ProtobufFactory_a136d095376f83008b148dce9e58e1c78}{Get\-Message\-By\-Generated\-Type} (const std\-::string \&type) const 
+\item 
+\hyperlink{classapollo_1_1cyber_1_1message_1_1ProtobufFactory_a20badc63425053336d32c5db3eae9bbb}{D\-E\-C\-L\-A\-R\-E\-\_\-\-S\-I\-N\-G\-L\-E\-T\-O\-N} (\hyperlink{classapollo_1_1cyber_1_1message_1_1ProtobufFactory}{Protobuf\-Factory})
+\end{DoxyCompactItemize}
+\subsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \hyperlink{classapollo_1_1cyber_1_1message_1_1ProtobufFactory_a23536f75415803f0cbe42de8294a9799}{Get\-Proto\-Desc} (const File\-Descriptor $\ast$file\-\_\-desc, Proto\-Desc $\ast$proto\-\_\-desc)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\-::mutex \hyperlink{classapollo_1_1cyber_1_1message_1_1ProtobufFactory_a9acd5bbdb9ef74852b7d89fa6863f109}{register\-\_\-mutex\-\_\-}
+\item 
+std\-::unique\-\_\-ptr$<$ Descriptor\-Pool $>$ \hyperlink{classapollo_1_1cyber_1_1message_1_1ProtobufFactory_ad6c3d990545216334e424c5bb6f00d65}{pool\-\_\-} = nullptr
+\item 
+std\-::unique\-\_\-ptr\\*
+$<$ Dynamic\-Message\-Factory $>$ \hyperlink{classapollo_1_1cyber_1_1message_1_1ProtobufFactory_a2c4114fa07c22295e0e79f00ce02daca}{factory\-\_\-} = nullptr
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classapollo_1_1cyber_1_1message_1_1ProtobufFactory_a3fab943f6f9d2c5d7bc14aea1e1bb02f}{\index{apollo\-::cyber\-::message\-::\-Protobuf\-Factory@{apollo\-::cyber\-::message\-::\-Protobuf\-Factory}!$\sim$\-Protobuf\-Factory@{$\sim$\-Protobuf\-Factory}}
+\index{$\sim$\-Protobuf\-Factory@{$\sim$\-Protobuf\-Factory}!apollo::cyber::message::ProtobufFactory@{apollo\-::cyber\-::message\-::\-Protobuf\-Factory}}
+\subsubsection[{$\sim$\-Protobuf\-Factory}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::message\-::\-Protobuf\-Factory\-::$\sim$\-Protobuf\-Factory (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1message_1_1ProtobufFactory_a3fab943f6f9d2c5d7bc14aea1e1bb02f}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1message_1_1ProtobufFactory_a20badc63425053336d32c5db3eae9bbb}{\index{apollo\-::cyber\-::message\-::\-Protobuf\-Factory@{apollo\-::cyber\-::message\-::\-Protobuf\-Factory}!D\-E\-C\-L\-A\-R\-E\-\_\-\-S\-I\-N\-G\-L\-E\-T\-O\-N@{D\-E\-C\-L\-A\-R\-E\-\_\-\-S\-I\-N\-G\-L\-E\-T\-O\-N}}
+\index{D\-E\-C\-L\-A\-R\-E\-\_\-\-S\-I\-N\-G\-L\-E\-T\-O\-N@{D\-E\-C\-L\-A\-R\-E\-\_\-\-S\-I\-N\-G\-L\-E\-T\-O\-N}!apollo::cyber::message::ProtobufFactory@{apollo\-::cyber\-::message\-::\-Protobuf\-Factory}}
+\subsubsection[{D\-E\-C\-L\-A\-R\-E\-\_\-\-S\-I\-N\-G\-L\-E\-T\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::message\-::\-Protobuf\-Factory\-::\-D\-E\-C\-L\-A\-R\-E\-\_\-\-S\-I\-N\-G\-L\-E\-T\-O\-N (
+\begin{DoxyParamCaption}
+\item[{{\bf Protobuf\-Factory}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1message_1_1ProtobufFactory_a20badc63425053336d32c5db3eae9bbb}
+\hypertarget{classapollo_1_1cyber_1_1message_1_1ProtobufFactory_a374b2b507e4eba3f9eb0ce9c192242a8}{\index{apollo\-::cyber\-::message\-::\-Protobuf\-Factory@{apollo\-::cyber\-::message\-::\-Protobuf\-Factory}!Find\-Message\-Type\-By\-Name@{Find\-Message\-Type\-By\-Name}}
+\index{Find\-Message\-Type\-By\-Name@{Find\-Message\-Type\-By\-Name}!apollo::cyber::message::ProtobufFactory@{apollo\-::cyber\-::message\-::\-Protobuf\-Factory}}
+\subsubsection[{Find\-Message\-Type\-By\-Name}]{\setlength{\rightskip}{0pt plus 5cm}const Descriptor$\ast$ apollo\-::cyber\-::message\-::\-Protobuf\-Factory\-::\-Find\-Message\-Type\-By\-Name (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{type}
+\end{DoxyParamCaption}
+) const}}\label{classapollo_1_1cyber_1_1message_1_1ProtobufFactory_a374b2b507e4eba3f9eb0ce9c192242a8}
+\hypertarget{classapollo_1_1cyber_1_1message_1_1ProtobufFactory_a665ea192ef367b2a89a769dd4f9192e6}{\index{apollo\-::cyber\-::message\-::\-Protobuf\-Factory@{apollo\-::cyber\-::message\-::\-Protobuf\-Factory}!Find\-Service\-By\-Name@{Find\-Service\-By\-Name}}
+\index{Find\-Service\-By\-Name@{Find\-Service\-By\-Name}!apollo::cyber::message::ProtobufFactory@{apollo\-::cyber\-::message\-::\-Protobuf\-Factory}}
+\subsubsection[{Find\-Service\-By\-Name}]{\setlength{\rightskip}{0pt plus 5cm}const google\-::protobuf\-::\-Service\-Descriptor$\ast$ apollo\-::cyber\-::message\-::\-Protobuf\-Factory\-::\-Find\-Service\-By\-Name (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{name}
+\end{DoxyParamCaption}
+) const}}\label{classapollo_1_1cyber_1_1message_1_1ProtobufFactory_a665ea192ef367b2a89a769dd4f9192e6}
+\hypertarget{classapollo_1_1cyber_1_1message_1_1ProtobufFactory_a07a04ac066aa60627656b90f49d07daa}{\index{apollo\-::cyber\-::message\-::\-Protobuf\-Factory@{apollo\-::cyber\-::message\-::\-Protobuf\-Factory}!Generate\-Message\-By\-Type@{Generate\-Message\-By\-Type}}
+\index{Generate\-Message\-By\-Type@{Generate\-Message\-By\-Type}!apollo::cyber::message::ProtobufFactory@{apollo\-::cyber\-::message\-::\-Protobuf\-Factory}}
+\subsubsection[{Generate\-Message\-By\-Type}]{\setlength{\rightskip}{0pt plus 5cm}google\-::protobuf\-::\-Message$\ast$ apollo\-::cyber\-::message\-::\-Protobuf\-Factory\-::\-Generate\-Message\-By\-Type (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{type}
+\end{DoxyParamCaption}
+) const}}\label{classapollo_1_1cyber_1_1message_1_1ProtobufFactory_a07a04ac066aa60627656b90f49d07daa}
+\hypertarget{classapollo_1_1cyber_1_1message_1_1ProtobufFactory_aebba7fa34a0530ec76cf2fd33b3e6e3b}{\index{apollo\-::cyber\-::message\-::\-Protobuf\-Factory@{apollo\-::cyber\-::message\-::\-Protobuf\-Factory}!Get\-Descriptor\-String@{Get\-Descriptor\-String}}
+\index{Get\-Descriptor\-String@{Get\-Descriptor\-String}!apollo::cyber::message::ProtobufFactory@{apollo\-::cyber\-::message\-::\-Protobuf\-Factory}}
+\subsubsection[{Get\-Descriptor\-String}]{\setlength{\rightskip}{0pt plus 5cm}static void apollo\-::cyber\-::message\-::\-Protobuf\-Factory\-::\-Get\-Descriptor\-String (
+\begin{DoxyParamCaption}
+\item[{const google\-::protobuf\-::\-Message \&}]{message, }
+\item[{std\-::string $\ast$}]{desc\-\_\-str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classapollo_1_1cyber_1_1message_1_1ProtobufFactory_aebba7fa34a0530ec76cf2fd33b3e6e3b}
+\hypertarget{classapollo_1_1cyber_1_1message_1_1ProtobufFactory_af86aa18822ec4d6bcc3fa0c3e44aa1ca}{\index{apollo\-::cyber\-::message\-::\-Protobuf\-Factory@{apollo\-::cyber\-::message\-::\-Protobuf\-Factory}!Get\-Descriptor\-String@{Get\-Descriptor\-String}}
+\index{Get\-Descriptor\-String@{Get\-Descriptor\-String}!apollo::cyber::message::ProtobufFactory@{apollo\-::cyber\-::message\-::\-Protobuf\-Factory}}
+\subsubsection[{Get\-Descriptor\-String}]{\setlength{\rightskip}{0pt plus 5cm}static void apollo\-::cyber\-::message\-::\-Protobuf\-Factory\-::\-Get\-Descriptor\-String (
+\begin{DoxyParamCaption}
+\item[{const Descriptor $\ast$}]{desc, }
+\item[{std\-::string $\ast$}]{desc\-\_\-str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classapollo_1_1cyber_1_1message_1_1ProtobufFactory_af86aa18822ec4d6bcc3fa0c3e44aa1ca}
+\hypertarget{classapollo_1_1cyber_1_1message_1_1ProtobufFactory_a36b7f4ba5945f4c89d157a51bc8539fd}{\index{apollo\-::cyber\-::message\-::\-Protobuf\-Factory@{apollo\-::cyber\-::message\-::\-Protobuf\-Factory}!Get\-Descriptor\-String@{Get\-Descriptor\-String}}
+\index{Get\-Descriptor\-String@{Get\-Descriptor\-String}!apollo::cyber::message::ProtobufFactory@{apollo\-::cyber\-::message\-::\-Protobuf\-Factory}}
+\subsubsection[{Get\-Descriptor\-String}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::message\-::\-Protobuf\-Factory\-::\-Get\-Descriptor\-String (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{type, }
+\item[{std\-::string $\ast$}]{desc\-\_\-str}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1message_1_1ProtobufFactory_a36b7f4ba5945f4c89d157a51bc8539fd}
+\hypertarget{classapollo_1_1cyber_1_1message_1_1ProtobufFactory_a136d095376f83008b148dce9e58e1c78}{\index{apollo\-::cyber\-::message\-::\-Protobuf\-Factory@{apollo\-::cyber\-::message\-::\-Protobuf\-Factory}!Get\-Message\-By\-Generated\-Type@{Get\-Message\-By\-Generated\-Type}}
+\index{Get\-Message\-By\-Generated\-Type@{Get\-Message\-By\-Generated\-Type}!apollo::cyber::message::ProtobufFactory@{apollo\-::cyber\-::message\-::\-Protobuf\-Factory}}
+\subsubsection[{Get\-Message\-By\-Generated\-Type}]{\setlength{\rightskip}{0pt plus 5cm}google\-::protobuf\-::\-Message$\ast$ apollo\-::cyber\-::message\-::\-Protobuf\-Factory\-::\-Get\-Message\-By\-Generated\-Type (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{type}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1message_1_1ProtobufFactory_a136d095376f83008b148dce9e58e1c78}
+\hypertarget{classapollo_1_1cyber_1_1message_1_1ProtobufFactory_a23536f75415803f0cbe42de8294a9799}{\index{apollo\-::cyber\-::message\-::\-Protobuf\-Factory@{apollo\-::cyber\-::message\-::\-Protobuf\-Factory}!Get\-Proto\-Desc@{Get\-Proto\-Desc}}
+\index{Get\-Proto\-Desc@{Get\-Proto\-Desc}!apollo::cyber::message::ProtobufFactory@{apollo\-::cyber\-::message\-::\-Protobuf\-Factory}}
+\subsubsection[{Get\-Proto\-Desc}]{\setlength{\rightskip}{0pt plus 5cm}static bool apollo\-::cyber\-::message\-::\-Protobuf\-Factory\-::\-Get\-Proto\-Desc (
+\begin{DoxyParamCaption}
+\item[{const File\-Descriptor $\ast$}]{file\-\_\-desc, }
+\item[{Proto\-Desc $\ast$}]{proto\-\_\-desc}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1message_1_1ProtobufFactory_a23536f75415803f0cbe42de8294a9799}
+\hypertarget{classapollo_1_1cyber_1_1message_1_1ProtobufFactory_a8124a5e604099823afed63e56f68a8ee}{\index{apollo\-::cyber\-::message\-::\-Protobuf\-Factory@{apollo\-::cyber\-::message\-::\-Protobuf\-Factory}!Get\-Python\-Desc@{Get\-Python\-Desc}}
+\index{Get\-Python\-Desc@{Get\-Python\-Desc}!apollo::cyber::message::ProtobufFactory@{apollo\-::cyber\-::message\-::\-Protobuf\-Factory}}
+\subsubsection[{Get\-Python\-Desc}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::message\-::\-Protobuf\-Factory\-::\-Get\-Python\-Desc (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{type, }
+\item[{std\-::string $\ast$}]{desc\-\_\-str}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1message_1_1ProtobufFactory_a8124a5e604099823afed63e56f68a8ee}
+\hypertarget{classapollo_1_1cyber_1_1message_1_1ProtobufFactory_a28e6888421ed69854760067707251132}{\index{apollo\-::cyber\-::message\-::\-Protobuf\-Factory@{apollo\-::cyber\-::message\-::\-Protobuf\-Factory}!Register\-Message@{Register\-Message}}
+\index{Register\-Message@{Register\-Message}!apollo::cyber::message::ProtobufFactory@{apollo\-::cyber\-::message\-::\-Protobuf\-Factory}}
+\subsubsection[{Register\-Message}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::message\-::\-Protobuf\-Factory\-::\-Register\-Message (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{proto\-\_\-desc\-\_\-str}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1message_1_1ProtobufFactory_a28e6888421ed69854760067707251132}
+\hypertarget{classapollo_1_1cyber_1_1message_1_1ProtobufFactory_a9c66829001d077097204caa85a256f35}{\index{apollo\-::cyber\-::message\-::\-Protobuf\-Factory@{apollo\-::cyber\-::message\-::\-Protobuf\-Factory}!Register\-Message@{Register\-Message}}
+\index{Register\-Message@{Register\-Message}!apollo::cyber::message::ProtobufFactory@{apollo\-::cyber\-::message\-::\-Protobuf\-Factory}}
+\subsubsection[{Register\-Message}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::message\-::\-Protobuf\-Factory\-::\-Register\-Message (
+\begin{DoxyParamCaption}
+\item[{const google\-::protobuf\-::\-Message \&}]{message}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1message_1_1ProtobufFactory_a9c66829001d077097204caa85a256f35}
+\hypertarget{classapollo_1_1cyber_1_1message_1_1ProtobufFactory_a812fef889296b4c1c16adf73bb0c37d3}{\index{apollo\-::cyber\-::message\-::\-Protobuf\-Factory@{apollo\-::cyber\-::message\-::\-Protobuf\-Factory}!Register\-Message@{Register\-Message}}
+\index{Register\-Message@{Register\-Message}!apollo::cyber::message::ProtobufFactory@{apollo\-::cyber\-::message\-::\-Protobuf\-Factory}}
+\subsubsection[{Register\-Message}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::message\-::\-Protobuf\-Factory\-::\-Register\-Message (
+\begin{DoxyParamCaption}
+\item[{const Descriptor \&}]{desc}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1message_1_1ProtobufFactory_a812fef889296b4c1c16adf73bb0c37d3}
+\hypertarget{classapollo_1_1cyber_1_1message_1_1ProtobufFactory_a9a496ef71145954a1a473bc6443c294d}{\index{apollo\-::cyber\-::message\-::\-Protobuf\-Factory@{apollo\-::cyber\-::message\-::\-Protobuf\-Factory}!Register\-Message@{Register\-Message}}
+\index{Register\-Message@{Register\-Message}!apollo::cyber::message::ProtobufFactory@{apollo\-::cyber\-::message\-::\-Protobuf\-Factory}}
+\subsubsection[{Register\-Message}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::message\-::\-Protobuf\-Factory\-::\-Register\-Message (
+\begin{DoxyParamCaption}
+\item[{const File\-Descriptor\-Proto \&}]{file\-\_\-desc\-\_\-proto}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1message_1_1ProtobufFactory_a9a496ef71145954a1a473bc6443c294d}
+\hypertarget{classapollo_1_1cyber_1_1message_1_1ProtobufFactory_adb2411e8d12351e71fbfd58c3dfbc1fa}{\index{apollo\-::cyber\-::message\-::\-Protobuf\-Factory@{apollo\-::cyber\-::message\-::\-Protobuf\-Factory}!Register\-Message@{Register\-Message}}
+\index{Register\-Message@{Register\-Message}!apollo::cyber::message::ProtobufFactory@{apollo\-::cyber\-::message\-::\-Protobuf\-Factory}}
+\subsubsection[{Register\-Message}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::message\-::\-Protobuf\-Factory\-::\-Register\-Message (
+\begin{DoxyParamCaption}
+\item[{const Proto\-Desc \&}]{proto\-\_\-desc}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1message_1_1ProtobufFactory_adb2411e8d12351e71fbfd58c3dfbc1fa}
+\hypertarget{classapollo_1_1cyber_1_1message_1_1ProtobufFactory_a7447830ef927a587f5a61e43db290116}{\index{apollo\-::cyber\-::message\-::\-Protobuf\-Factory@{apollo\-::cyber\-::message\-::\-Protobuf\-Factory}!Register\-Python\-Message@{Register\-Python\-Message}}
+\index{Register\-Python\-Message@{Register\-Python\-Message}!apollo::cyber::message::ProtobufFactory@{apollo\-::cyber\-::message\-::\-Protobuf\-Factory}}
+\subsubsection[{Register\-Python\-Message}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::message\-::\-Protobuf\-Factory\-::\-Register\-Python\-Message (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{proto\-\_\-str}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1message_1_1ProtobufFactory_a7447830ef927a587f5a61e43db290116}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classapollo_1_1cyber_1_1message_1_1ProtobufFactory_a2c4114fa07c22295e0e79f00ce02daca}{\index{apollo\-::cyber\-::message\-::\-Protobuf\-Factory@{apollo\-::cyber\-::message\-::\-Protobuf\-Factory}!factory\-\_\-@{factory\-\_\-}}
+\index{factory\-\_\-@{factory\-\_\-}!apollo::cyber::message::ProtobufFactory@{apollo\-::cyber\-::message\-::\-Protobuf\-Factory}}
+\subsubsection[{factory\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::unique\-\_\-ptr$<$Dynamic\-Message\-Factory$>$ apollo\-::cyber\-::message\-::\-Protobuf\-Factory\-::factory\-\_\- = nullptr\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1message_1_1ProtobufFactory_a2c4114fa07c22295e0e79f00ce02daca}
+\hypertarget{classapollo_1_1cyber_1_1message_1_1ProtobufFactory_ad6c3d990545216334e424c5bb6f00d65}{\index{apollo\-::cyber\-::message\-::\-Protobuf\-Factory@{apollo\-::cyber\-::message\-::\-Protobuf\-Factory}!pool\-\_\-@{pool\-\_\-}}
+\index{pool\-\_\-@{pool\-\_\-}!apollo::cyber::message::ProtobufFactory@{apollo\-::cyber\-::message\-::\-Protobuf\-Factory}}
+\subsubsection[{pool\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::unique\-\_\-ptr$<$Descriptor\-Pool$>$ apollo\-::cyber\-::message\-::\-Protobuf\-Factory\-::pool\-\_\- = nullptr\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1message_1_1ProtobufFactory_ad6c3d990545216334e424c5bb6f00d65}
+\hypertarget{classapollo_1_1cyber_1_1message_1_1ProtobufFactory_a9acd5bbdb9ef74852b7d89fa6863f109}{\index{apollo\-::cyber\-::message\-::\-Protobuf\-Factory@{apollo\-::cyber\-::message\-::\-Protobuf\-Factory}!register\-\_\-mutex\-\_\-@{register\-\_\-mutex\-\_\-}}
+\index{register\-\_\-mutex\-\_\-@{register\-\_\-mutex\-\_\-}!apollo::cyber::message::ProtobufFactory@{apollo\-::cyber\-::message\-::\-Protobuf\-Factory}}
+\subsubsection[{register\-\_\-mutex\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::mutex apollo\-::cyber\-::message\-::\-Protobuf\-Factory\-::register\-\_\-mutex\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1message_1_1ProtobufFactory_a9acd5bbdb9ef74852b7d89fa6863f109}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+message/\hyperlink{protobuf__factory_8h}{protobuf\-\_\-factory.\-h}\end{DoxyCompactItemize}

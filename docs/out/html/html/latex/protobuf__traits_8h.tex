@@ -1,0 +1,29 @@
+\hypertarget{protobuf__traits_8h}{\section{message/protobuf\-\_\-traits.h File Reference}
+\label{protobuf__traits_8h}\index{message/protobuf\-\_\-traits.\-h@{message/protobuf\-\_\-traits.\-h}}
+}
+{\ttfamily \#include $<$cassert$>$}\\*
+{\ttfamily \#include $<$memory$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include \char`\"{}cyber/message/protobuf\-\_\-factory.\-h\char`\"{}}\\*
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespaceapollo}{apollo}
+\item 
+\hyperlink{namespaceapollo_1_1cyber}{apollo\-::cyber}
+\item 
+\hyperlink{namespaceapollo_1_1cyber_1_1message}{apollo\-::cyber\-::message}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T , typename std\-::enable\-\_\-if$<$ Has\-Type$<$ T $>$\-::value \&\&!std\-::is\-\_\-member\-\_\-function\-\_\-pointer$<$ decltype(\&\-T\-::\-Type\-Name)$>$\-::value, bool $>$\-::type  = 0$>$ }\\std\-::string \hyperlink{namespaceapollo_1_1cyber_1_1message_a9804d294759658408491c5b8929e8cb5}{apollo\-::cyber\-::message\-::\-Message\-Type} ()
+\item 
+{\footnotesize template$<$typename Message\-T , typename std\-::enable\-\_\-if$<$ std\-::is\-\_\-base\-\_\-of$<$ google\-::protobuf\-::\-Message, Message\-T $>$\-::value, int $>$\-::type  = 0$>$ }\\std\-::string \hyperlink{namespaceapollo_1_1cyber_1_1message_a2d8177d4cd8dd056aaad524b1cb4137a}{apollo\-::cyber\-::message\-::\-Message\-Type} (const Message\-T \&message)
+\item 
+{\footnotesize template$<$typename Message\-T , typename std\-::enable\-\_\-if$<$ !std\-::is\-\_\-base\-\_\-of$<$ google\-::protobuf\-::\-Message, Message\-T $>$\-::value, int $>$\-::type  = 0$>$ }\\void \hyperlink{namespaceapollo_1_1cyber_1_1message_ab794defc8952601237ff80cd187ecec1}{apollo\-::cyber\-::message\-::\-Get\-Descriptor\-String} (const Message\-T \&message, std\-::string $\ast$desc\-\_\-str)
+\item 
+{\footnotesize template$<$typename T , typename std\-::enable\-\_\-if$<$ Has\-Descriptor$<$ T $>$\-::value, bool $>$\-::type  = 0$>$ }\\void \hyperlink{namespaceapollo_1_1cyber_1_1message_adaa75b444b0befc8527210cfc29b1049}{apollo\-::cyber\-::message\-::\-Get\-Descriptor\-String} (const std\-::string \&type, std\-::string $\ast$desc\-\_\-str)
+\item 
+{\footnotesize template$<$typename Message\-T , typename std\-::enable\-\_\-if$<$ std\-::is\-\_\-base\-\_\-of$<$ google\-::protobuf\-::\-Message, Message\-T $>$\-::value, int $>$\-::type  = 0$>$ }\\bool \hyperlink{namespaceapollo_1_1cyber_1_1message_a186f9efe80c75467002d7f76509b96a9}{apollo\-::cyber\-::message\-::\-Register\-Message} (const Message\-T \&message)
+\end{DoxyCompactItemize}

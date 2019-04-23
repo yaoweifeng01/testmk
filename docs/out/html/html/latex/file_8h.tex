@@ -1,0 +1,68 @@
+\hypertarget{file_8h}{\section{common/file.h File Reference}
+\label{file_8h}\index{common/file.\-h@{common/file.\-h}}
+}
+{\ttfamily \#include $<$dirent.\-h$>$}\\*
+{\ttfamily \#include $<$fcntl.\-h$>$}\\*
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$sys/stat.\-h$>$}\\*
+{\ttfamily \#include $<$sys/types.\-h$>$}\\*
+{\ttfamily \#include $<$unistd.\-h$>$}\\*
+{\ttfamily \#include $<$cstdio$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include \char`\"{}cyber/common/log.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}google/protobuf/io/zero\-\_\-copy\-\_\-stream\-\_\-impl.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}google/protobuf/text\-\_\-format.\-h\char`\"{}}\\*
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespaceapollo_1_1common_1_1util}{apollo\-::common\-::util}
+\begin{DoxyCompactList}\small\item\em \hyperlink{namespaceapollo_1_1common_1_1util}{apollo\-::common\-::util} \end{DoxyCompactList}\item 
+\hyperlink{namespaceapollo}{apollo}
+\item 
+\hyperlink{namespaceapollo_1_1cyber}{apollo\-::cyber}
+\item 
+\hyperlink{namespaceapollo_1_1cyber_1_1common}{apollo\-::cyber\-::common}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{namespaceapollo_1_1cyber_1_1common_a88247de6540a5a213e6f78f62ce60872}{apollo\-::cyber\-::common\-::\-Set\-Proto\-To\-A\-S\-C\-I\-I\-File} (const google\-::protobuf\-::\-Message \&message, int file\-\_\-descriptor)
+\item 
+bool \hyperlink{namespaceapollo_1_1cyber_1_1common_a0eb160d53ebe7c2f6b215f95081fb0ab}{apollo\-::cyber\-::common\-::\-Set\-Proto\-To\-A\-S\-C\-I\-I\-File} (const google\-::protobuf\-::\-Message \&message, const std\-::string \&file\-\_\-name)
+\begin{DoxyCompactList}\small\item\em Sets the content of the file specified by the file\-\_\-name to be the ascii representation of the input protobuf. \end{DoxyCompactList}\item 
+bool \hyperlink{namespaceapollo_1_1cyber_1_1common_a1d5f4e053ba687197ebdaf4eb7cf8aa1}{apollo\-::cyber\-::common\-::\-Get\-Proto\-From\-A\-S\-C\-I\-I\-File} (const std\-::string \&file\-\_\-name, google\-::protobuf\-::\-Message $\ast$message)
+\begin{DoxyCompactList}\small\item\em Parses the content of the file specified by the file\-\_\-name as ascii representation of protobufs, and merges the parsed content to the proto. \end{DoxyCompactList}\item 
+bool \hyperlink{namespaceapollo_1_1cyber_1_1common_a70ff11d21d9657f5d4b8be612cac79f0}{apollo\-::cyber\-::common\-::\-Set\-Proto\-To\-Binary\-File} (const google\-::protobuf\-::\-Message \&message, const std\-::string \&file\-\_\-name)
+\begin{DoxyCompactList}\small\item\em Sets the content of the file specified by the file\-\_\-name to be the binary representation of the input protobuf. \end{DoxyCompactList}\item 
+bool \hyperlink{namespaceapollo_1_1cyber_1_1common_ac40b1321abdcb5bee04ecc5a1754996e}{apollo\-::cyber\-::common\-::\-Get\-Proto\-From\-Binary\-File} (const std\-::string \&file\-\_\-name, google\-::protobuf\-::\-Message $\ast$message)
+\begin{DoxyCompactList}\small\item\em Parses the content of the file specified by the file\-\_\-name as binary representation of protobufs, and merges the parsed content to the proto. \end{DoxyCompactList}\item 
+bool \hyperlink{namespaceapollo_1_1cyber_1_1common_a26b275efbad46e735071e540445b19a9}{apollo\-::cyber\-::common\-::\-Get\-Proto\-From\-File} (const std\-::string \&file\-\_\-name, google\-::protobuf\-::\-Message $\ast$message)
+\begin{DoxyCompactList}\small\item\em Parses the content of the file specified by the file\-\_\-name as a representation of protobufs, and merges the parsed content to the proto. \end{DoxyCompactList}\item 
+bool \hyperlink{namespaceapollo_1_1cyber_1_1common_acd43c697ce645990ee9373683f10b1bd}{apollo\-::cyber\-::common\-::\-Get\-Content} (const std\-::string \&file\-\_\-name, std\-::string $\ast$content)
+\begin{DoxyCompactList}\small\item\em Get file content as string. \end{DoxyCompactList}\item 
+std\-::string \hyperlink{namespaceapollo_1_1cyber_1_1common_a8948fca1037f8256c7c62ac2dbc378c3}{apollo\-::cyber\-::common\-::\-Get\-Absolute\-Path} (const std\-::string \&prefix, const std\-::string \&relative\-\_\-path)
+\begin{DoxyCompactList}\small\item\em Get absolute path by concatenating prefix and relative\-\_\-path. \end{DoxyCompactList}\item 
+bool \hyperlink{namespaceapollo_1_1cyber_1_1common_a2461aa999fa88dc32c4ef41a9fae95ae}{apollo\-::cyber\-::common\-::\-Path\-Exists} (const std\-::string \&path)
+\begin{DoxyCompactList}\small\item\em Check if the path exists. \end{DoxyCompactList}\item 
+bool \hyperlink{namespaceapollo_1_1cyber_1_1common_ac3aa31e012b08343b8d71f7c1d68ee79}{apollo\-::cyber\-::common\-::\-Directory\-Exists} (const std\-::string \&directory\-\_\-path)
+\begin{DoxyCompactList}\small\item\em Check if the directory specified by directory\-\_\-path exists and is indeed a directory. \end{DoxyCompactList}\item 
+std\-::vector$<$ std\-::string $>$ \hyperlink{namespaceapollo_1_1cyber_1_1common_a9641469fee4f575ee274054d5f3efd73}{apollo\-::cyber\-::common\-::\-Glob} (const std\-::string \&pattern)
+\begin{DoxyCompactList}\small\item\em Expand path pattern to matched pathes. \end{DoxyCompactList}\item 
+bool \hyperlink{namespaceapollo_1_1cyber_1_1common_a222bd281a29c75f00ed9e66a986ed674}{apollo\-::cyber\-::common\-::\-Copy\-File} (const std\-::string \&from, const std\-::string \&to)
+\begin{DoxyCompactList}\small\item\em Copy a file. \end{DoxyCompactList}\item 
+bool \hyperlink{namespaceapollo_1_1cyber_1_1common_a327d27353ef7e5d2f50c809c3b05648c}{apollo\-::cyber\-::common\-::\-Copy\-Dir} (const std\-::string \&from, const std\-::string \&to)
+\begin{DoxyCompactList}\small\item\em Copy a directory. \end{DoxyCompactList}\item 
+bool \hyperlink{namespaceapollo_1_1cyber_1_1common_a6eb038dc356389e7f1d1e6ab4932c4f0}{apollo\-::cyber\-::common\-::\-Copy} (const std\-::string \&from, const std\-::string \&to)
+\begin{DoxyCompactList}\small\item\em Copy a file or directory. \end{DoxyCompactList}\item 
+bool \hyperlink{namespaceapollo_1_1cyber_1_1common_ada31727aa6860a122a2f6876e84ae950}{apollo\-::cyber\-::common\-::\-Ensure\-Directory} (const std\-::string \&directory\-\_\-path)
+\begin{DoxyCompactList}\small\item\em Check if a specified directory specified by directory\-\_\-path exists. If not, recursively create the directory (and its parents). \end{DoxyCompactList}\item 
+bool \hyperlink{namespaceapollo_1_1cyber_1_1common_aa18872a33740ca001df7cf11bdf1d891}{apollo\-::cyber\-::common\-::\-Remove\-All\-Files} (const std\-::string \&directory\-\_\-path)
+\begin{DoxyCompactList}\small\item\em Remove all the files under a specified directory. Note that sub-\/directories are N\-O\-T affected. \end{DoxyCompactList}\item 
+std\-::vector$<$ std\-::string $>$ \hyperlink{namespaceapollo_1_1cyber_1_1common_a785184e21861f27284d8531610b550ae}{apollo\-::cyber\-::common\-::\-List\-Sub\-Paths} (const std\-::string \&directory\-\_\-path, const unsigned char d\-\_\-type=D\-T\-\_\-\-D\-I\-R)
+\begin{DoxyCompactList}\small\item\em List sub-\/paths. \end{DoxyCompactList}\item 
+std\-::string \hyperlink{namespaceapollo_1_1cyber_1_1common_abf75455f4ea35d3113ed616ccec49974}{apollo\-::cyber\-::common\-::\-Get\-File\-Name} (const std\-::string \&path, const bool remove\-\_\-extension=false)
+\item 
+std\-::string \hyperlink{namespaceapollo_1_1cyber_1_1common_a3c4f6eae973c96a359e8620a45943a13}{apollo\-::cyber\-::common\-::\-Get\-Current\-Path} ()
+\end{DoxyCompactItemize}

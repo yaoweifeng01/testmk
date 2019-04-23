@@ -1,0 +1,147 @@
+\hypertarget{classapollo_1_1cyber_1_1base_1_1Signal}{\section{apollo\-:\-:cyber\-:\-:base\-:\-:Signal$<$ Args $>$ Class Template Reference}
+\label{classapollo_1_1cyber_1_1base_1_1Signal}\index{apollo\-::cyber\-::base\-::\-Signal$<$ Args $>$@{apollo\-::cyber\-::base\-::\-Signal$<$ Args $>$}}
+}
+
+
+{\ttfamily \#include $<$signal.\-h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1base_1_1Signal_a85f3c9d95bb2885c4d09cce1542ab049}{Callback} = std\-::function$<$ void(Args...)$>$
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1base_1_1Signal_a3d4274b14dd47e0a5186b3c8005fe676}{Slot\-Ptr} = std\-::shared\-\_\-ptr$<$ \hyperlink{classapollo_1_1cyber_1_1base_1_1Slot}{Slot}$<$ Args...$>$$>$
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1base_1_1Signal_a902c7f3a2c9bd9debeb0d7a52dc501bf}{Slot\-List} = std\-::list$<$ \hyperlink{classapollo_1_1cyber_1_1base_1_1Signal_a3d4274b14dd47e0a5186b3c8005fe676}{Slot\-Ptr} $>$
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1base_1_1Signal_a4fb76535f693654bd1afd5d338d85193}{Connection\-Type} = \hyperlink{classapollo_1_1cyber_1_1base_1_1Connection}{Connection}$<$ Args...$>$
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1base_1_1Signal_ad62083ac992903de39e23a596fc8c10a}{Signal} ()
+\item 
+virtual \hyperlink{classapollo_1_1cyber_1_1base_1_1Signal_a222c79147fd7b564d9da73804d31821e}{$\sim$\-Signal} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1base_1_1Signal_a212ad3069a927d4aaf4be3d920c6b30a}{operator()} (Args...\-args)
+\item 
+\hyperlink{classapollo_1_1cyber_1_1base_1_1Signal_a4fb76535f693654bd1afd5d338d85193}{Connection\-Type} \hyperlink{classapollo_1_1cyber_1_1base_1_1Signal_aff67dfcf03742f69ae2defe42a478c71}{Connect} (const \hyperlink{classapollo_1_1cyber_1_1base_1_1Signal_a85f3c9d95bb2885c4d09cce1542ab049}{Callback} \&cb)
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1base_1_1Signal_ada03325f51ddc97a90711251c2515f72}{Disconnect} (const \hyperlink{classapollo_1_1cyber_1_1base_1_1Signal_a4fb76535f693654bd1afd5d338d85193}{Connection\-Type} \&conn)
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1base_1_1Signal_aa5df08abb7f3da658fc08fcf1b637b04}{Disconnect\-All\-Slots} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1base_1_1Signal_accb1330b6b277f4979543db20b971082}{Signal} (const \hyperlink{classapollo_1_1cyber_1_1base_1_1Signal}{Signal} \&)=delete
+\item 
+\hyperlink{classapollo_1_1cyber_1_1base_1_1Signal}{Signal} \& \hyperlink{classapollo_1_1cyber_1_1base_1_1Signal_a9b0552bc732401ecedcd025df6928dbe}{operator=} (const \hyperlink{classapollo_1_1cyber_1_1base_1_1Signal}{Signal} \&)=delete
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1base_1_1Signal_a3162fed83a227091be77f8cd9cd537e8}{Clear\-Disconnected\-Slots} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1base_1_1Signal_a902c7f3a2c9bd9debeb0d7a52dc501bf}{Slot\-List} \hyperlink{classapollo_1_1cyber_1_1base_1_1Signal_a8b2235cb5214ea2dde45e5b2f678112b}{slots\-\_\-}
+\item 
+std\-::mutex \hyperlink{classapollo_1_1cyber_1_1base_1_1Signal_ae4fbfc9ce2e69ed7fb06aca207f44c70}{mutex\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1Signal_a85f3c9d95bb2885c4d09cce1542ab049}{\index{apollo\-::cyber\-::base\-::\-Signal@{apollo\-::cyber\-::base\-::\-Signal}!Callback@{Callback}}
+\index{Callback@{Callback}!apollo::cyber::base::Signal@{apollo\-::cyber\-::base\-::\-Signal}}
+\subsubsection[{Callback}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename... Args$>$ using {\bf apollo\-::cyber\-::base\-::\-Signal}$<$ Args $>$\-::{\bf Callback} =  std\-::function$<$void(Args...)$>$}}\label{classapollo_1_1cyber_1_1base_1_1Signal_a85f3c9d95bb2885c4d09cce1542ab049}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1Signal_a4fb76535f693654bd1afd5d338d85193}{\index{apollo\-::cyber\-::base\-::\-Signal@{apollo\-::cyber\-::base\-::\-Signal}!Connection\-Type@{Connection\-Type}}
+\index{Connection\-Type@{Connection\-Type}!apollo::cyber::base::Signal@{apollo\-::cyber\-::base\-::\-Signal}}
+\subsubsection[{Connection\-Type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename... Args$>$ using {\bf apollo\-::cyber\-::base\-::\-Signal}$<$ Args $>$\-::{\bf Connection\-Type} =  {\bf Connection}$<$Args...$>$}}\label{classapollo_1_1cyber_1_1base_1_1Signal_a4fb76535f693654bd1afd5d338d85193}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1Signal_a902c7f3a2c9bd9debeb0d7a52dc501bf}{\index{apollo\-::cyber\-::base\-::\-Signal@{apollo\-::cyber\-::base\-::\-Signal}!Slot\-List@{Slot\-List}}
+\index{Slot\-List@{Slot\-List}!apollo::cyber::base::Signal@{apollo\-::cyber\-::base\-::\-Signal}}
+\subsubsection[{Slot\-List}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename... Args$>$ using {\bf apollo\-::cyber\-::base\-::\-Signal}$<$ Args $>$\-::{\bf Slot\-List} =  std\-::list$<${\bf Slot\-Ptr}$>$}}\label{classapollo_1_1cyber_1_1base_1_1Signal_a902c7f3a2c9bd9debeb0d7a52dc501bf}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1Signal_a3d4274b14dd47e0a5186b3c8005fe676}{\index{apollo\-::cyber\-::base\-::\-Signal@{apollo\-::cyber\-::base\-::\-Signal}!Slot\-Ptr@{Slot\-Ptr}}
+\index{Slot\-Ptr@{Slot\-Ptr}!apollo::cyber::base::Signal@{apollo\-::cyber\-::base\-::\-Signal}}
+\subsubsection[{Slot\-Ptr}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename... Args$>$ using {\bf apollo\-::cyber\-::base\-::\-Signal}$<$ Args $>$\-::{\bf Slot\-Ptr} =  std\-::shared\-\_\-ptr$<${\bf Slot}$<$Args...$>$$>$}}\label{classapollo_1_1cyber_1_1base_1_1Signal_a3d4274b14dd47e0a5186b3c8005fe676}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1Signal_ad62083ac992903de39e23a596fc8c10a}{\index{apollo\-::cyber\-::base\-::\-Signal@{apollo\-::cyber\-::base\-::\-Signal}!Signal@{Signal}}
+\index{Signal@{Signal}!apollo::cyber::base::Signal@{apollo\-::cyber\-::base\-::\-Signal}}
+\subsubsection[{Signal}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename... Args$>$ {\bf apollo\-::cyber\-::base\-::\-Signal}$<$ Args $>$\-::{\bf Signal} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1base_1_1Signal_ad62083ac992903de39e23a596fc8c10a}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1Signal_a222c79147fd7b564d9da73804d31821e}{\index{apollo\-::cyber\-::base\-::\-Signal@{apollo\-::cyber\-::base\-::\-Signal}!$\sim$\-Signal@{$\sim$\-Signal}}
+\index{$\sim$\-Signal@{$\sim$\-Signal}!apollo::cyber::base::Signal@{apollo\-::cyber\-::base\-::\-Signal}}
+\subsubsection[{$\sim$\-Signal}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename... Args$>$ virtual {\bf apollo\-::cyber\-::base\-::\-Signal}$<$ Args $>$\-::$\sim${\bf Signal} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1base_1_1Signal_a222c79147fd7b564d9da73804d31821e}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1Signal_accb1330b6b277f4979543db20b971082}{\index{apollo\-::cyber\-::base\-::\-Signal@{apollo\-::cyber\-::base\-::\-Signal}!Signal@{Signal}}
+\index{Signal@{Signal}!apollo::cyber::base::Signal@{apollo\-::cyber\-::base\-::\-Signal}}
+\subsubsection[{Signal}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename... Args$>$ {\bf apollo\-::cyber\-::base\-::\-Signal}$<$ Args $>$\-::{\bf Signal} (
+\begin{DoxyParamCaption}
+\item[{const {\bf Signal}$<$ Args $>$ \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}}\label{classapollo_1_1cyber_1_1base_1_1Signal_accb1330b6b277f4979543db20b971082}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1Signal_a3162fed83a227091be77f8cd9cd537e8}{\index{apollo\-::cyber\-::base\-::\-Signal@{apollo\-::cyber\-::base\-::\-Signal}!Clear\-Disconnected\-Slots@{Clear\-Disconnected\-Slots}}
+\index{Clear\-Disconnected\-Slots@{Clear\-Disconnected\-Slots}!apollo::cyber::base::Signal@{apollo\-::cyber\-::base\-::\-Signal}}
+\subsubsection[{Clear\-Disconnected\-Slots}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename... Args$>$ void {\bf apollo\-::cyber\-::base\-::\-Signal}$<$ Args $>$\-::Clear\-Disconnected\-Slots (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1base_1_1Signal_a3162fed83a227091be77f8cd9cd537e8}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1Signal_aff67dfcf03742f69ae2defe42a478c71}{\index{apollo\-::cyber\-::base\-::\-Signal@{apollo\-::cyber\-::base\-::\-Signal}!Connect@{Connect}}
+\index{Connect@{Connect}!apollo::cyber::base::Signal@{apollo\-::cyber\-::base\-::\-Signal}}
+\subsubsection[{Connect}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename... Args$>$ {\bf Connection\-Type} {\bf apollo\-::cyber\-::base\-::\-Signal}$<$ Args $>$\-::Connect (
+\begin{DoxyParamCaption}
+\item[{const {\bf Callback} \&}]{cb}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1base_1_1Signal_aff67dfcf03742f69ae2defe42a478c71}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1Signal_ada03325f51ddc97a90711251c2515f72}{\index{apollo\-::cyber\-::base\-::\-Signal@{apollo\-::cyber\-::base\-::\-Signal}!Disconnect@{Disconnect}}
+\index{Disconnect@{Disconnect}!apollo::cyber::base::Signal@{apollo\-::cyber\-::base\-::\-Signal}}
+\subsubsection[{Disconnect}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename... Args$>$ bool {\bf apollo\-::cyber\-::base\-::\-Signal}$<$ Args $>$\-::Disconnect (
+\begin{DoxyParamCaption}
+\item[{const {\bf Connection\-Type} \&}]{conn}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1base_1_1Signal_ada03325f51ddc97a90711251c2515f72}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1Signal_aa5df08abb7f3da658fc08fcf1b637b04}{\index{apollo\-::cyber\-::base\-::\-Signal@{apollo\-::cyber\-::base\-::\-Signal}!Disconnect\-All\-Slots@{Disconnect\-All\-Slots}}
+\index{Disconnect\-All\-Slots@{Disconnect\-All\-Slots}!apollo::cyber::base::Signal@{apollo\-::cyber\-::base\-::\-Signal}}
+\subsubsection[{Disconnect\-All\-Slots}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename... Args$>$ void {\bf apollo\-::cyber\-::base\-::\-Signal}$<$ Args $>$\-::Disconnect\-All\-Slots (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1base_1_1Signal_aa5df08abb7f3da658fc08fcf1b637b04}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1Signal_a212ad3069a927d4aaf4be3d920c6b30a}{\index{apollo\-::cyber\-::base\-::\-Signal@{apollo\-::cyber\-::base\-::\-Signal}!operator()@{operator()}}
+\index{operator()@{operator()}!apollo::cyber::base::Signal@{apollo\-::cyber\-::base\-::\-Signal}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename... Args$>$ void {\bf apollo\-::cyber\-::base\-::\-Signal}$<$ Args $>$\-::operator() (
+\begin{DoxyParamCaption}
+\item[{Args...}]{args}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1base_1_1Signal_a212ad3069a927d4aaf4be3d920c6b30a}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1Signal_a9b0552bc732401ecedcd025df6928dbe}{\index{apollo\-::cyber\-::base\-::\-Signal@{apollo\-::cyber\-::base\-::\-Signal}!operator=@{operator=}}
+\index{operator=@{operator=}!apollo::cyber::base::Signal@{apollo\-::cyber\-::base\-::\-Signal}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename... Args$>$ {\bf Signal}\& {\bf apollo\-::cyber\-::base\-::\-Signal}$<$ Args $>$\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Signal}$<$ Args $>$ \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}}\label{classapollo_1_1cyber_1_1base_1_1Signal_a9b0552bc732401ecedcd025df6928dbe}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1Signal_ae4fbfc9ce2e69ed7fb06aca207f44c70}{\index{apollo\-::cyber\-::base\-::\-Signal@{apollo\-::cyber\-::base\-::\-Signal}!mutex\-\_\-@{mutex\-\_\-}}
+\index{mutex\-\_\-@{mutex\-\_\-}!apollo::cyber::base::Signal@{apollo\-::cyber\-::base\-::\-Signal}}
+\subsubsection[{mutex\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename... Args$>$ std\-::mutex {\bf apollo\-::cyber\-::base\-::\-Signal}$<$ Args $>$\-::mutex\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1base_1_1Signal_ae4fbfc9ce2e69ed7fb06aca207f44c70}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1Signal_a8b2235cb5214ea2dde45e5b2f678112b}{\index{apollo\-::cyber\-::base\-::\-Signal@{apollo\-::cyber\-::base\-::\-Signal}!slots\-\_\-@{slots\-\_\-}}
+\index{slots\-\_\-@{slots\-\_\-}!apollo::cyber::base::Signal@{apollo\-::cyber\-::base\-::\-Signal}}
+\subsubsection[{slots\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename... Args$>$ {\bf Slot\-List} {\bf apollo\-::cyber\-::base\-::\-Signal}$<$ Args $>$\-::slots\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1base_1_1Signal_a8b2235cb5214ea2dde45e5b2f678112b}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+base/\hyperlink{signal_8h}{signal.\-h}\end{DoxyCompactItemize}

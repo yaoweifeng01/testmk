@@ -1,0 +1,127 @@
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1RtpsTransmitter}{\section{apollo\-:\-:cyber\-:\-:transport\-:\-:Rtps\-Transmitter$<$ M $>$ Class Template Reference}
+\label{classapollo_1_1cyber_1_1transport_1_1RtpsTransmitter}\index{apollo\-::cyber\-::transport\-::\-Rtps\-Transmitter$<$ M $>$@{apollo\-::cyber\-::transport\-::\-Rtps\-Transmitter$<$ M $>$}}
+}
+
+
+{\ttfamily \#include $<$rtps\-\_\-transmitter.\-h$>$}
+
+Inheritance diagram for apollo\-:\-:cyber\-:\-:transport\-:\-:Rtps\-Transmitter$<$ M $>$\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classapollo_1_1cyber_1_1transport_1_1RtpsTransmitter}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1transport_1_1RtpsTransmitter_a28d14859d872c87fc358036e87487663}{Message\-Ptr} = std\-::shared\-\_\-ptr$<$ M $>$
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1transport_1_1RtpsTransmitter_a2376cdaa9fdd993c38667a649ed8d0f3}{Rtps\-Transmitter} (const Role\-Attributes \&attr, const \hyperlink{namespaceapollo_1_1cyber_1_1transport_a4214d0780331276d0384d0b57e3bc688}{Participant\-Ptr} \&participant)
+\item 
+virtual \hyperlink{classapollo_1_1cyber_1_1transport_1_1RtpsTransmitter_ad66434208a05c95a1ee81e45a2ee800d}{$\sim$\-Rtps\-Transmitter} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1transport_1_1RtpsTransmitter_ad07be793652401a452cea8eaa6bdbfd4}{Enable} () override
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1transport_1_1RtpsTransmitter_acbbdfe917b0b8a3e6906db9898925c06}{Disable} () override
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1transport_1_1RtpsTransmitter_a0cb0df26a9ba248ed95a25d0bf4e8bb3}{Transmit} (const \hyperlink{classapollo_1_1cyber_1_1transport_1_1RtpsTransmitter_a28d14859d872c87fc358036e87487663}{Message\-Ptr} \&msg, const \hyperlink{classapollo_1_1cyber_1_1transport_1_1MessageInfo}{Message\-Info} \&msg\-\_\-info) override
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1transport_1_1RtpsTransmitter_a6ec79fc9ea9654baa55ee235972946ac}{Transmit} (const M \&msg, const \hyperlink{classapollo_1_1cyber_1_1transport_1_1MessageInfo}{Message\-Info} \&msg\-\_\-info)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespaceapollo_1_1cyber_1_1transport_a4214d0780331276d0384d0b57e3bc688}{Participant\-Ptr} \hyperlink{classapollo_1_1cyber_1_1transport_1_1RtpsTransmitter_a6f79ba7787f01af33bb5f5b08af0a16c}{participant\-\_\-}
+\item 
+eprosima\-::fastrtps\-::\-Publisher $\ast$ \hyperlink{classapollo_1_1cyber_1_1transport_1_1RtpsTransmitter_a4a5d225edef1b0e744450f1043fa3ab8}{publisher\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1RtpsTransmitter_a28d14859d872c87fc358036e87487663}{\index{apollo\-::cyber\-::transport\-::\-Rtps\-Transmitter@{apollo\-::cyber\-::transport\-::\-Rtps\-Transmitter}!Message\-Ptr@{Message\-Ptr}}
+\index{Message\-Ptr@{Message\-Ptr}!apollo::cyber::transport::RtpsTransmitter@{apollo\-::cyber\-::transport\-::\-Rtps\-Transmitter}}
+\subsubsection[{Message\-Ptr}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ using {\bf apollo\-::cyber\-::transport\-::\-Rtps\-Transmitter}$<$ M $>$\-::{\bf Message\-Ptr} =  std\-::shared\-\_\-ptr$<$M$>$}}\label{classapollo_1_1cyber_1_1transport_1_1RtpsTransmitter_a28d14859d872c87fc358036e87487663}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1RtpsTransmitter_a2376cdaa9fdd993c38667a649ed8d0f3}{\index{apollo\-::cyber\-::transport\-::\-Rtps\-Transmitter@{apollo\-::cyber\-::transport\-::\-Rtps\-Transmitter}!Rtps\-Transmitter@{Rtps\-Transmitter}}
+\index{Rtps\-Transmitter@{Rtps\-Transmitter}!apollo::cyber::transport::RtpsTransmitter@{apollo\-::cyber\-::transport\-::\-Rtps\-Transmitter}}
+\subsubsection[{Rtps\-Transmitter}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ {\bf apollo\-::cyber\-::transport\-::\-Rtps\-Transmitter}$<$ M $>$\-::{\bf Rtps\-Transmitter} (
+\begin{DoxyParamCaption}
+\item[{const Role\-Attributes \&}]{attr, }
+\item[{const {\bf Participant\-Ptr} \&}]{participant}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1transport_1_1RtpsTransmitter_a2376cdaa9fdd993c38667a649ed8d0f3}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1RtpsTransmitter_ad66434208a05c95a1ee81e45a2ee800d}{\index{apollo\-::cyber\-::transport\-::\-Rtps\-Transmitter@{apollo\-::cyber\-::transport\-::\-Rtps\-Transmitter}!$\sim$\-Rtps\-Transmitter@{$\sim$\-Rtps\-Transmitter}}
+\index{$\sim$\-Rtps\-Transmitter@{$\sim$\-Rtps\-Transmitter}!apollo::cyber::transport::RtpsTransmitter@{apollo\-::cyber\-::transport\-::\-Rtps\-Transmitter}}
+\subsubsection[{$\sim$\-Rtps\-Transmitter}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ {\bf apollo\-::cyber\-::transport\-::\-Rtps\-Transmitter}$<$ M $>$\-::$\sim${\bf Rtps\-Transmitter} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1transport_1_1RtpsTransmitter_ad66434208a05c95a1ee81e45a2ee800d}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1RtpsTransmitter_acbbdfe917b0b8a3e6906db9898925c06}{\index{apollo\-::cyber\-::transport\-::\-Rtps\-Transmitter@{apollo\-::cyber\-::transport\-::\-Rtps\-Transmitter}!Disable@{Disable}}
+\index{Disable@{Disable}!apollo::cyber::transport::RtpsTransmitter@{apollo\-::cyber\-::transport\-::\-Rtps\-Transmitter}}
+\subsubsection[{Disable}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ void {\bf apollo\-::cyber\-::transport\-::\-Rtps\-Transmitter}$<$ M $>$\-::Disable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1transport_1_1RtpsTransmitter_acbbdfe917b0b8a3e6906db9898925c06}
+
+
+Implements \hyperlink{classapollo_1_1cyber_1_1transport_1_1Transmitter_a24bc426b201239fceff22535351a1903}{apollo\-::cyber\-::transport\-::\-Transmitter$<$ M $>$}.
+
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1RtpsTransmitter_ad07be793652401a452cea8eaa6bdbfd4}{\index{apollo\-::cyber\-::transport\-::\-Rtps\-Transmitter@{apollo\-::cyber\-::transport\-::\-Rtps\-Transmitter}!Enable@{Enable}}
+\index{Enable@{Enable}!apollo::cyber::transport::RtpsTransmitter@{apollo\-::cyber\-::transport\-::\-Rtps\-Transmitter}}
+\subsubsection[{Enable}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ void {\bf apollo\-::cyber\-::transport\-::\-Rtps\-Transmitter}$<$ M $>$\-::Enable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1transport_1_1RtpsTransmitter_ad07be793652401a452cea8eaa6bdbfd4}
+
+
+Implements \hyperlink{classapollo_1_1cyber_1_1transport_1_1Transmitter_aa4fd1ee72a6ba751226570e4ff54920d}{apollo\-::cyber\-::transport\-::\-Transmitter$<$ M $>$}.
+
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1RtpsTransmitter_a0cb0df26a9ba248ed95a25d0bf4e8bb3}{\index{apollo\-::cyber\-::transport\-::\-Rtps\-Transmitter@{apollo\-::cyber\-::transport\-::\-Rtps\-Transmitter}!Transmit@{Transmit}}
+\index{Transmit@{Transmit}!apollo::cyber::transport::RtpsTransmitter@{apollo\-::cyber\-::transport\-::\-Rtps\-Transmitter}}
+\subsubsection[{Transmit}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ bool {\bf apollo\-::cyber\-::transport\-::\-Rtps\-Transmitter}$<$ M $>$\-::Transmit (
+\begin{DoxyParamCaption}
+\item[{const {\bf Message\-Ptr} \&}]{msg, }
+\item[{const {\bf Message\-Info} \&}]{msg\-\_\-info}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1transport_1_1RtpsTransmitter_a0cb0df26a9ba248ed95a25d0bf4e8bb3}
+
+
+Implements \hyperlink{classapollo_1_1cyber_1_1transport_1_1Transmitter_af3a4b7fb0a6dcc1bd00437c121b18e19}{apollo\-::cyber\-::transport\-::\-Transmitter$<$ M $>$}.
+
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1RtpsTransmitter_a6ec79fc9ea9654baa55ee235972946ac}{\index{apollo\-::cyber\-::transport\-::\-Rtps\-Transmitter@{apollo\-::cyber\-::transport\-::\-Rtps\-Transmitter}!Transmit@{Transmit}}
+\index{Transmit@{Transmit}!apollo::cyber::transport::RtpsTransmitter@{apollo\-::cyber\-::transport\-::\-Rtps\-Transmitter}}
+\subsubsection[{Transmit}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ bool {\bf apollo\-::cyber\-::transport\-::\-Rtps\-Transmitter}$<$ M $>$\-::Transmit (
+\begin{DoxyParamCaption}
+\item[{const M \&}]{msg, }
+\item[{const {\bf Message\-Info} \&}]{msg\-\_\-info}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1RtpsTransmitter_a6ec79fc9ea9654baa55ee235972946ac}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1RtpsTransmitter_a6f79ba7787f01af33bb5f5b08af0a16c}{\index{apollo\-::cyber\-::transport\-::\-Rtps\-Transmitter@{apollo\-::cyber\-::transport\-::\-Rtps\-Transmitter}!participant\-\_\-@{participant\-\_\-}}
+\index{participant\-\_\-@{participant\-\_\-}!apollo::cyber::transport::RtpsTransmitter@{apollo\-::cyber\-::transport\-::\-Rtps\-Transmitter}}
+\subsubsection[{participant\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ {\bf Participant\-Ptr} {\bf apollo\-::cyber\-::transport\-::\-Rtps\-Transmitter}$<$ M $>$\-::participant\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1RtpsTransmitter_a6f79ba7787f01af33bb5f5b08af0a16c}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1RtpsTransmitter_a4a5d225edef1b0e744450f1043fa3ab8}{\index{apollo\-::cyber\-::transport\-::\-Rtps\-Transmitter@{apollo\-::cyber\-::transport\-::\-Rtps\-Transmitter}!publisher\-\_\-@{publisher\-\_\-}}
+\index{publisher\-\_\-@{publisher\-\_\-}!apollo::cyber::transport::RtpsTransmitter@{apollo\-::cyber\-::transport\-::\-Rtps\-Transmitter}}
+\subsubsection[{publisher\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ eprosima\-::fastrtps\-::\-Publisher$\ast$ {\bf apollo\-::cyber\-::transport\-::\-Rtps\-Transmitter}$<$ M $>$\-::publisher\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1RtpsTransmitter_a4a5d225edef1b0e744450f1043fa3ab8}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+transport/transmitter/\hyperlink{rtps__transmitter_8h}{rtps\-\_\-transmitter.\-h}\end{DoxyCompactItemize}

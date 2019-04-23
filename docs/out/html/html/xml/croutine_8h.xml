@@ -1,0 +1,703 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="croutine_8h" kind="file">
+    <compoundname>croutine.h</compoundname>
+    <includes local="no">atomic</includes>
+    <includes local="no">chrono</includes>
+    <includes local="no">functional</includes>
+    <includes local="no">memory</includes>
+    <includes local="no">mutex</includes>
+    <includes local="no">set</includes>
+    <includes local="no">string</includes>
+    <includes refid="log_8h" local="yes">cyber/common/log.h</includes>
+    <includes refid="routine__context_8h" local="yes">cyber/croutine/detail/routine_context.h</includes>
+    <includedby refid="routine__factory_8h" local="yes">croutine/routine_factory.h</includedby>
+    <includedby refid="poll__handler_8h" local="yes">io/poll_handler.h</includedby>
+    <includedby refid="choreography__context_8h" local="yes">scheduler/policy/choreography_context.h</includedby>
+    <includedby refid="classic__context_8h" local="yes">scheduler/policy/classic_context.h</includedby>
+    <includedby refid="scheduler__choreography_8h" local="yes">scheduler/policy/scheduler_choreography.h</includedby>
+    <includedby refid="scheduler__classic_8h" local="yes">scheduler/policy/scheduler_classic.h</includedby>
+    <includedby refid="processor_8h" local="yes">scheduler/processor.h</includedby>
+    <includedby refid="processor__context_8h" local="yes">scheduler/processor_context.h</includedby>
+    <includedby refid="scheduler_8h" local="yes">scheduler/scheduler.h</includedby>
+    <incdepgraph>
+      <node id="2536">
+        <label>atomic</label>
+      </node>
+      <node id="2544">
+        <label>stdarg.h</label>
+      </node>
+      <node id="2538">
+        <label>functional</label>
+      </node>
+      <node id="2545">
+        <label>cyber/binary.h</label>
+        <link refid="binary_8h"/>
+        <childnode refid="2542" relation="include">
+        </childnode>
+      </node>
+      <node id="2546">
+        <label>glog/logging.h</label>
+      </node>
+      <node id="2542">
+        <label>string</label>
+      </node>
+      <node id="2548">
+        <label>cyber/croutine/detail/routine_context.h</label>
+        <link refid="routine__context_8h"/>
+        <childnode refid="2549" relation="include">
+        </childnode>
+        <childnode refid="2550" relation="include">
+        </childnode>
+        <childnode refid="2551" relation="include">
+        </childnode>
+        <childnode refid="2543" relation="include">
+        </childnode>
+      </node>
+      <node id="2543">
+        <label>cyber/common/log.h</label>
+        <link refid="log_8h"/>
+        <childnode refid="2544" relation="include">
+        </childnode>
+        <childnode refid="2545" relation="include">
+        </childnode>
+        <childnode refid="2546" relation="include">
+        </childnode>
+        <childnode refid="2547" relation="include">
+        </childnode>
+      </node>
+      <node id="2549">
+        <label>cstdlib</label>
+      </node>
+      <node id="2551">
+        <label>iostream</label>
+      </node>
+      <node id="2540">
+        <label>mutex</label>
+      </node>
+      <node id="2537">
+        <label>chrono</label>
+      </node>
+      <node id="2547">
+        <label>glog/raw_logging.h</label>
+      </node>
+      <node id="2541">
+        <label>set</label>
+      </node>
+      <node id="2550">
+        <label>cstring</label>
+      </node>
+      <node id="2539">
+        <label>memory</label>
+      </node>
+      <node id="2535">
+        <label>croutine/croutine.h</label>
+        <link refid="croutine.h"/>
+        <childnode refid="2536" relation="include">
+        </childnode>
+        <childnode refid="2537" relation="include">
+        </childnode>
+        <childnode refid="2538" relation="include">
+        </childnode>
+        <childnode refid="2539" relation="include">
+        </childnode>
+        <childnode refid="2540" relation="include">
+        </childnode>
+        <childnode refid="2541" relation="include">
+        </childnode>
+        <childnode refid="2542" relation="include">
+        </childnode>
+        <childnode refid="2543" relation="include">
+        </childnode>
+        <childnode refid="2548" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2599">
+        <label>scheduler/policy/classic_context.h</label>
+        <link refid="classic__context_8h"/>
+      </node>
+      <node id="2559">
+        <label>py_wrapper/py_timer.h</label>
+        <link refid="py__timer_8h"/>
+      </node>
+      <node id="2557">
+        <label>py_wrapper/py_node.h</label>
+        <link refid="py__node_8h"/>
+      </node>
+      <node id="2575">
+        <label>tools/cyber_recorder/player/player.h</label>
+        <link refid="player_8h"/>
+      </node>
+      <node id="2569">
+        <label>blocker/intra_reader.h</label>
+        <link refid="intra__reader_8h"/>
+        <childnode refid="2570" relation="include">
+        </childnode>
+      </node>
+      <node id="2561">
+        <label>tools/cyber_monitor/general_message_base.h</label>
+        <link refid="general__message__base_8h"/>
+        <childnode refid="2562" relation="include">
+        </childnode>
+        <childnode refid="2563" relation="include">
+        </childnode>
+      </node>
+      <node id="2566">
+        <label>examples/timer_component_example/timer_component_example.h</label>
+        <link refid="timer__component__example_8h"/>
+      </node>
+      <node id="2556">
+        <label>py_wrapper/py_init.h</label>
+        <link refid="py__init_8h"/>
+      </node>
+      <node id="2598">
+        <label>scheduler/policy/choreography_context.h</label>
+        <link refid="choreography__context_8h"/>
+      </node>
+      <node id="2564">
+        <label>tools/cyber_recorder/recorder.h</label>
+        <link refid="recorder_8h"/>
+      </node>
+      <node id="2591">
+        <label>tools/cyber_recorder/player/play_task.h</label>
+        <link refid="play__task_8h"/>
+        <childnode refid="2592" relation="include">
+        </childnode>
+      </node>
+      <node id="2571">
+        <label>node/node.h</label>
+        <link refid="node_8h"/>
+        <childnode refid="2572" relation="include">
+        </childnode>
+        <childnode refid="2555" relation="include">
+        </childnode>
+        <childnode refid="2557" relation="include">
+        </childnode>
+        <childnode refid="2574" relation="include">
+        </childnode>
+      </node>
+      <node id="2581">
+        <label>scheduler/scheduler.h</label>
+        <link refid="scheduler_8h"/>
+        <childnode refid="2554" relation="include">
+        </childnode>
+        <childnode refid="2572" relation="include">
+        </childnode>
+        <childnode refid="2582" relation="include">
+        </childnode>
+        <childnode refid="2595" relation="include">
+        </childnode>
+        <childnode refid="2583" relation="include">
+        </childnode>
+        <childnode refid="2579" relation="include">
+        </childnode>
+      </node>
+      <node id="2570">
+        <label>node/node_channel_impl.h</label>
+        <link refid="node__channel__impl_8h"/>
+        <childnode refid="2571" relation="include">
+        </childnode>
+        <childnode refid="2576" relation="include">
+        </childnode>
+        <childnode refid="2579" relation="include">
+        </childnode>
+      </node>
+      <node id="2588">
+        <label>node/reader_base.h</label>
+        <link refid="reader__base_8h"/>
+        <childnode refid="2568" relation="include">
+        </childnode>
+      </node>
+      <node id="2555">
+        <label>cyber.h</label>
+        <link refid="cyber_8h"/>
+        <childnode refid="2556" relation="include">
+        </childnode>
+        <childnode refid="2557" relation="include">
+        </childnode>
+        <childnode refid="2558" relation="include">
+        </childnode>
+        <childnode refid="2559" relation="include">
+        </childnode>
+        <childnode refid="2560" relation="include">
+        </childnode>
+        <childnode refid="2561" relation="include">
+        </childnode>
+        <childnode refid="2563" relation="include">
+        </childnode>
+        <childnode refid="2564" relation="include">
+        </childnode>
+      </node>
+      <node id="2601">
+        <label>scheduler/processor_context.h</label>
+        <link refid="processor__context_8h"/>
+        <childnode refid="2598" relation="include">
+        </childnode>
+        <childnode refid="2599" relation="include">
+        </childnode>
+      </node>
+      <node id="2578">
+        <label>parameter/parameter_client.h</label>
+        <link refid="parameter__client_8h"/>
+      </node>
+      <node id="2595">
+        <label>scheduler/policy/scheduler_classic.h</label>
+        <link refid="scheduler__classic_8h"/>
+        <childnode refid="2583" relation="include">
+        </childnode>
+      </node>
+      <node id="2553">
+        <label>croutine/routine_factory.h</label>
+        <link refid="routine__factory_8h"/>
+        <childnode refid="2554" relation="include">
+        </childnode>
+        <childnode refid="2568" relation="include">
+        </childnode>
+        <childnode refid="2581" relation="include">
+        </childnode>
+      </node>
+      <node id="2574">
+        <label>tools/cyber_recorder/player/play_task_producer.h</label>
+        <link refid="play__task__producer_8h"/>
+        <childnode refid="2575" relation="include">
+        </childnode>
+      </node>
+      <node id="2560">
+        <label>py_wrapper/py_topology_manager.h</label>
+        <link refid="py__topology__manager_8h"/>
+      </node>
+      <node id="2554">
+        <label>component/component.h</label>
+        <link refid="component_8h"/>
+        <childnode refid="2555" relation="include">
+        </childnode>
+        <childnode refid="2565" relation="include">
+        </childnode>
+        <childnode refid="2566" relation="include">
+        </childnode>
+        <childnode refid="2567" relation="include">
+        </childnode>
+      </node>
+      <node id="2583">
+        <label>scheduler/scheduler_factory.h</label>
+        <link refid="scheduler__factory_8h"/>
+        <childnode refid="2568" relation="include">
+        </childnode>
+        <childnode refid="2584" relation="include">
+        </childnode>
+      </node>
+      <node id="2586">
+        <label>transport/receiver/hybrid_receiver.h</label>
+        <link refid="hybrid__receiver_8h"/>
+        <childnode refid="2587" relation="include">
+        </childnode>
+      </node>
+      <node id="2577">
+        <label>node/node_service_impl.h</label>
+        <link refid="node__service__impl_8h"/>
+        <childnode refid="2571" relation="include">
+        </childnode>
+      </node>
+      <node id="2593">
+        <label>tools/cyber_recorder/player/play_task_consumer.h</label>
+        <link refid="play__task__consumer_8h"/>
+        <childnode refid="2575" relation="include">
+        </childnode>
+      </node>
+      <node id="2580">
+        <label>parameter/parameter_server.h</label>
+        <link refid="parameter__server_8h"/>
+      </node>
+      <node id="2563">
+        <label>tools/cyber_monitor/general_message.h</label>
+        <link refid="general__message_8h"/>
+      </node>
+      <node id="2567">
+        <label>mainboard/module_controller.h</label>
+        <link refid="module__controller_8h"/>
+      </node>
+      <node id="2572">
+        <label>component/component_base.h</label>
+        <link refid="component__base_8h"/>
+        <childnode refid="2554" relation="include">
+        </childnode>
+        <childnode refid="2573" relation="include">
+        </childnode>
+      </node>
+      <node id="2584">
+        <label>task/task_manager.h</label>
+        <link refid="task__manager_8h"/>
+        <childnode refid="2585" relation="include">
+        </childnode>
+      </node>
+      <node id="2600">
+        <label>scheduler/processor.h</label>
+        <link refid="processor_8h"/>
+      </node>
+      <node id="2597">
+        <label>io/session.h</label>
+        <link refid="session_8h"/>
+      </node>
+      <node id="2596">
+        <label>io/poll_handler.h</label>
+        <link refid="poll__handler_8h"/>
+        <childnode refid="2597" relation="include">
+        </childnode>
+      </node>
+      <node id="2562">
+        <label>tools/cyber_monitor/general_channel_message.h</label>
+        <link refid="general__channel__message_8h"/>
+      </node>
+      <node id="2589">
+        <label>node/writer.h</label>
+        <link refid="writer_8h"/>
+        <childnode refid="2590" relation="include">
+        </childnode>
+        <childnode refid="2570" relation="include">
+        </childnode>
+        <childnode refid="2557" relation="include">
+        </childnode>
+        <childnode refid="2591" relation="include">
+        </childnode>
+        <childnode refid="2574" relation="include">
+        </childnode>
+      </node>
+      <node id="2573">
+        <label>component/timer_component.h</label>
+        <link refid="timer__component_8h"/>
+        <childnode refid="2566" relation="include">
+        </childnode>
+      </node>
+      <node id="2568">
+        <label>node/reader.h</label>
+        <link refid="reader_8h"/>
+        <childnode refid="2569" relation="include">
+        </childnode>
+        <childnode refid="2570" relation="include">
+        </childnode>
+        <childnode refid="2557" relation="include">
+        </childnode>
+      </node>
+      <node id="2576">
+        <label>service/client.h</label>
+        <link refid="client_8h"/>
+        <childnode refid="2577" relation="include">
+        </childnode>
+        <childnode refid="2578" relation="include">
+        </childnode>
+      </node>
+      <node id="2590">
+        <label>blocker/intra_writer.h</label>
+        <link refid="intra__writer_8h"/>
+        <childnode refid="2570" relation="include">
+        </childnode>
+      </node>
+      <node id="2587">
+        <label>transport/transport.h</label>
+        <link refid="transport_8h"/>
+        <childnode refid="2568" relation="include">
+        </childnode>
+        <childnode refid="2588" relation="include">
+        </childnode>
+        <childnode refid="2589" relation="include">
+        </childnode>
+      </node>
+      <node id="2565">
+        <label>examples/common_component_example/common_component_example.h</label>
+        <link refid="common__component__example_8h"/>
+      </node>
+      <node id="2594">
+        <label>transport/transmitter/hybrid_transmitter.h</label>
+        <link refid="hybrid__transmitter_8h"/>
+        <childnode refid="2587" relation="include">
+        </childnode>
+      </node>
+      <node id="2579">
+        <label>service/service.h</label>
+        <link refid="service_8h"/>
+        <childnode refid="2577" relation="include">
+        </childnode>
+        <childnode refid="2580" relation="include">
+        </childnode>
+      </node>
+      <node id="2582">
+        <label>scheduler/policy/scheduler_choreography.h</label>
+        <link refid="scheduler__choreography_8h"/>
+        <childnode refid="2583" relation="include">
+        </childnode>
+      </node>
+      <node id="2585">
+        <label>task/task.h</label>
+        <link refid="task_8h"/>
+        <childnode refid="2555" relation="include">
+        </childnode>
+        <childnode refid="2586" relation="include">
+        </childnode>
+        <childnode refid="2594" relation="include">
+        </childnode>
+      </node>
+      <node id="2558">
+        <label>py_wrapper/py_time.h</label>
+        <link refid="py__time_8h"/>
+      </node>
+      <node id="2552">
+        <label>croutine/croutine.h</label>
+        <link refid="croutine.h"/>
+        <childnode refid="2553" relation="include">
+        </childnode>
+        <childnode refid="2596" relation="include">
+        </childnode>
+        <childnode refid="2598" relation="include">
+        </childnode>
+        <childnode refid="2599" relation="include">
+        </childnode>
+        <childnode refid="2582" relation="include">
+        </childnode>
+        <childnode refid="2595" relation="include">
+        </childnode>
+        <childnode refid="2600" relation="include">
+        </childnode>
+        <childnode refid="2601" relation="include">
+        </childnode>
+        <childnode refid="2581" relation="include">
+        </childnode>
+      </node>
+      <node id="2592">
+        <label>tools/cyber_recorder/player/play_task_buffer.h</label>
+        <link refid="play__task__buffer_8h"/>
+        <childnode refid="2593" relation="include">
+        </childnode>
+        <childnode refid="2574" relation="include">
+        </childnode>
+        <childnode refid="2575" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine" prot="public">apollo::cyber::croutine::CRoutine</innerclass>
+    <innernamespace refid="namespaceapollo">apollo</innernamespace>
+    <innernamespace refid="namespaceapollo_1_1cyber">apollo::cyber</innernamespace>
+    <innernamespace refid="namespaceapollo_1_1cyber_1_1croutine">apollo::cyber::croutine</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2018<sp/>The<sp/>Apollo<sp/>Authors.<sp/>All<sp/>Rights<sp/>Reserved.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CYBER_CROUTINE_CROUTINE_H_</highlight></codeline>
+<codeline lineno="18"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CYBER_CROUTINE_CROUTINE_H_</highlight></codeline>
+<codeline lineno="19"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;atomic&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;chrono&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;functional&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;mutex&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;set&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="log_8h" kindref="compound">cyber/common/log.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="routine__context_8h" kindref="compound">cyber/croutine/detail/routine_context.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">apollo<sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">cyber<sp/>{</highlight></codeline>
+<codeline lineno="33" refid="namespaceapollo_1_1cyber_1_1croutine" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">croutine<sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="namespaceapollo_1_1cyber_1_1croutine_1a5c1d994c8a08504b270fd8c4ba57d282" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespaceapollo_1_1cyber_1_1croutine_1a5c1d994c8a08504b270fd8c4ba57d282" kindref="member">RoutineFunc</ref><sp/>=<sp/>std::function&lt;void()&gt;;</highlight></codeline>
+<codeline lineno="36" refid="namespaceapollo_1_1cyber_1_1croutine_1aae31aee73e46be40ab635496b4d9d1e2" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespaceapollo_1_1cyber_1_1croutine_1aae31aee73e46be40ab635496b4d9d1e2" kindref="member">Duration</ref><sp/>=<sp/>std::chrono::microseconds;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="namespaceapollo_1_1cyber_1_1croutine_1a9b2ec600d9734ed2e857a7235cec5e48" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="namespaceapollo_1_1cyber_1_1croutine_1a9b2ec600d9734ed2e857a7235cec5e48" kindref="member">RoutineState</ref><sp/>{<sp/><ref refid="namespaceapollo_1_1cyber_1_1croutine_1a9b2ec600d9734ed2e857a7235cec5e48a2baa69eafc7204f3bd8648eba580c489" kindref="member">READY</ref>,<sp/><ref refid="namespaceapollo_1_1cyber_1_1croutine_1a9b2ec600d9734ed2e857a7235cec5e48a2c616b2713e2e0aed04b4c4752c88133" kindref="member">FINISHED</ref>,<sp/><ref refid="namespaceapollo_1_1cyber_1_1croutine_1a9b2ec600d9734ed2e857a7235cec5e48ab32bd403b93dc6deffdab7af55e82596" kindref="member">SLEEP</ref>,<sp/><ref refid="namespaceapollo_1_1cyber_1_1croutine_1a9b2ec600d9734ed2e857a7235cec5e48a1314a216c30bb655a0e767e250bbecd1" kindref="member">IO_WAIT</ref>,<sp/><ref refid="namespaceapollo_1_1cyber_1_1croutine_1a9b2ec600d9734ed2e857a7235cec5e48aa561d434eca3762c4cfbaee9b7dfc26c" kindref="member">DATA_WAIT</ref><sp/>};</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine" kindref="compound">CRoutine</ref><sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a975b0f29db65bec8b2e333610da3c0bc" kindref="member">CRoutine</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespaceapollo_1_1cyber_1_1croutine_1a5c1d994c8a08504b270fd8c4ba57d282" kindref="member">RoutineFunc</ref><sp/>&amp;<ref refid="namespaceapollo_1_1cyber_1_1croutine_1a10b1486257a9f9174f905a6f4a54523f" kindref="member">func</ref>);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a2a69d0e45efb1b84b591adf8cd2c7212" kindref="member">~CRoutine</ref>();</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>static<sp/>interfaces</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a095302ea55cd7dc4809aa4b151b8a6e2" kindref="member">Yield</ref>();</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a095302ea55cd7dc4809aa4b151b8a6e2" kindref="member">Yield</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespaceapollo_1_1cyber_1_1croutine_1a9b2ec600d9734ed2e857a7235cec5e48" kindref="member">RoutineState</ref><sp/>&amp;<ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a457b30f1df6a1f3970b9e547bd6bb5e7" kindref="member">state</ref>);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1aed7766993950c35cf0e16cc114b4c43d" kindref="member">SetMainContext</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;RoutineContext&gt;<sp/>&amp;context);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine" kindref="compound">CRoutine</ref><sp/>*<ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a5dcf3f88f2e1d959ef71e92bc34a18be" kindref="member">GetCurrentRoutine</ref>();</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**<ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a6c69c023c597b85b4bf74d4f871f2f61" kindref="member">GetMainStack</ref>();</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>public<sp/>interfaces</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1ada6c072e791b4f0ee01fc4e41bffebfb" kindref="member">Acquire</ref>();</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1af4f0281b87b2b0f37bf2526c1073143b" kindref="member">Release</ref>();</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>It<sp/>is<sp/>caller&apos;s<sp/>responsibility<sp/>to<sp/>check<sp/>if<sp/>state_<sp/>is<sp/>valid<sp/>before<sp/>calling</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>SetUpdateFlag().</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1aab4da1d64d40ce35e4054b867bfdeab9" kindref="member">SetUpdateFlag</ref>();</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>acquire<sp/>&amp;&amp;<sp/>release<sp/>should<sp/>be<sp/>called<sp/>before<sp/>Resume</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>when<sp/>work-steal<sp/>like<sp/>mechanism<sp/>used</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><ref refid="namespaceapollo_1_1cyber_1_1croutine_1a9b2ec600d9734ed2e857a7235cec5e48" kindref="member">RoutineState</ref><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1af0e8e2d8bd5e06088951633585e770e4" kindref="member">Resume</ref>();</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><ref refid="namespaceapollo_1_1cyber_1_1croutine_1a9b2ec600d9734ed2e857a7235cec5e48" kindref="member">RoutineState</ref><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1abe2081e7ccc944e14a13ee5140f6dc3f" kindref="member">UpdateState</ref>();</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><ref refid="structapollo_1_1cyber_1_1croutine_1_1RoutineContext" kindref="compound">RoutineContext</ref><sp/>*<ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1adc87070b8f79e63163e7aff885e84e84" kindref="member">GetContext</ref>();</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**<ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a13151bd71806ca69ff7c13317ec9ff61" kindref="member">GetStack</ref>();</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a194bf92eb5b29da955f41cfaa1c6f3d1" kindref="member">Run</ref>();</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1acbf7f66f0ef56449837e02eb74a2feb3" kindref="member">Stop</ref>();</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1aa2872097862baf607809ebe793f04920" kindref="member">Wake</ref>();</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a47ba7e433c0ca462eaafa87b78150c27" kindref="member">HangUp</ref>();</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a7a7a609b9eea30ff016c79fd7e57b9e6" kindref="member">Sleep</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespaceapollo_1_1cyber_1_1croutine_1aae31aee73e46be40ab635496b4d9d1e2" kindref="member">Duration</ref><sp/>&amp;sleep_duration);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>getter<sp/>and<sp/>setter</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><ref refid="namespaceapollo_1_1cyber_1_1croutine_1a9b2ec600d9734ed2e857a7235cec5e48" kindref="member">RoutineState</ref><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a457b30f1df6a1f3970b9e547bd6bb5e7" kindref="member">state</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a4e8b6724f43265bed0f7dba494e9edaa" kindref="member">set_state</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespaceapollo_1_1cyber_1_1croutine_1a9b2ec600d9734ed2e857a7235cec5e48" kindref="member">RoutineState</ref><sp/>&amp;state);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>uint64_t<sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a4903bd33854f6b3e17d6be0b54c5109b" kindref="member">id</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a2551eee849d330a804bbf9216c2abf5d" kindref="member">set_id</ref>(uint64_t<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1aa147ad950a110afa069542a1ca0a2386" kindref="member">name</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1acc9e6fb1cab74150a16b145eec95b1df" kindref="member">set_name</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;name);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a3ef77a24e406fb936236856157e9a876" kindref="member">processor_id</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a9c32b9446e3ac3f804e488be62277256" kindref="member">set_processor_id</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>processor_id);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/>uint32_t<sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a4da6e71a8af8ead34f7b33e62825f2c9" kindref="member">priority</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a1756e023222be1144a8f361583b3ea71" kindref="member">set_priority</ref>(uint32_t<sp/>priority);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/>std::chrono::steady_clock::time_point<sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a0251da00fee4d7419cd3049665ef8a8d" kindref="member">wake_time</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a4a9d689d0c9e0a7d610803eadee9f1c5" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a4a9d689d0c9e0a7d610803eadee9f1c5" kindref="member">set_group_name</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1ac249fb0aa8d4ba70ffa8d7743186981e" kindref="member">group_name</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1ada07af0832975eb46a12f4b84ff022d0" kindref="member">group_name_</ref><sp/>=<sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1ac249fb0aa8d4ba70ffa8d7743186981e" kindref="member">group_name</ref>;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1ac249fb0aa8d4ba70ffa8d7743186981e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1ac249fb0aa8d4ba70ffa8d7743186981e" kindref="member">group_name</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1ada07af0832975eb46a12f4b84ff022d0" kindref="member">group_name_</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a975b0f29db65bec8b2e333610da3c0bc" kindref="member">CRoutine</ref>(<ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine" kindref="compound">CRoutine</ref><sp/>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine" kindref="compound">CRoutine</ref><sp/>&amp;<ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1addd133a708f590f95e39df3fb8cb10f2" kindref="member">operator=</ref>(<ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine" kindref="compound">CRoutine</ref><sp/>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a1a5fc3c9a9e30f211a92a89763d2cbab" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a1a5fc3c9a9e30f211a92a89763d2cbab" kindref="member">name_</ref>;</highlight></codeline>
+<codeline lineno="102" refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1abd2684b9c1a6fcbbe4afcc1b5f8b6ccc" refkind="member"><highlight class="normal"><sp/><sp/>std::chrono::steady_clock::time_point<sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1abd2684b9c1a6fcbbe4afcc1b5f8b6ccc" kindref="member">wake_time_</ref><sp/>=</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::chrono::steady_clock::now();</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105" refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a35c97acd271cbe079df11e4b4490b729" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespaceapollo_1_1cyber_1_1croutine_1a5c1d994c8a08504b270fd8c4ba57d282" kindref="member">RoutineFunc</ref><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a35c97acd271cbe079df11e4b4490b729" kindref="member">func_</ref>;</highlight></codeline>
+<codeline lineno="106" refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a50f7996bfdacc4455012d2701b91890e" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespaceapollo_1_1cyber_1_1croutine_1a9b2ec600d9734ed2e857a7235cec5e48" kindref="member">RoutineState</ref><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a50f7996bfdacc4455012d2701b91890e" kindref="member">state_</ref>;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108" refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a68165b138d7cfc1b200e830970ad3289" refkind="member"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;RoutineContext&gt;<sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a68165b138d7cfc1b200e830970ad3289" kindref="member">context_</ref>;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110" refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a1fc4d2d426dba2b0e4381e67348869ae" refkind="member"><highlight class="normal"><sp/><sp/>std::atomic_flag<sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a1fc4d2d426dba2b0e4381e67348869ae" kindref="member">lock_</ref><sp/>=<sp/>ATOMIC_FLAG_INIT;</highlight></codeline>
+<codeline lineno="111" refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a1f4f88bf13f02aa9d963159db66570ad" refkind="member"><highlight class="normal"><sp/><sp/>std::atomic_flag<sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a1f4f88bf13f02aa9d963159db66570ad" kindref="member">updated_</ref><sp/>=<sp/>ATOMIC_FLAG_INIT;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113" refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1ae4784009fb5e1cc2ea1c71739af50fd5" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1ae4784009fb5e1cc2ea1c71739af50fd5" kindref="member">force_stop_</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115" refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a9d05239ef9bdf626d9044a2cbae13485" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a9d05239ef9bdf626d9044a2cbae13485" kindref="member">processor_id_</ref><sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="116" refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a0e6d7a63a90b8c53f1001d9e75015fdc" refkind="member"><highlight class="normal"><sp/><sp/>uint32_t<sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a0e6d7a63a90b8c53f1001d9e75015fdc" kindref="member">priority_</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="117" refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1abbd791fd6d8e2aa9a996fdd2bf221cf7" refkind="member"><highlight class="normal"><sp/><sp/>uint64_t<sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1abbd791fd6d8e2aa9a996fdd2bf221cf7" kindref="member">id_</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119" refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1ada07af0832975eb46a12f4b84ff022d0" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1ada07af0832975eb46a12f4b84ff022d0" kindref="member">group_name_</ref>;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121" refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1ac73dddcfe8792f48c26ed08e1b8101f8" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>thread_local<sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine" kindref="compound">CRoutine</ref><sp/>*<ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1ac73dddcfe8792f48c26ed08e1b8101f8" kindref="member">current_routine_</ref>;</highlight></codeline>
+<codeline lineno="122" refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a9466601d9e5d320bf651bc896e9c6fcb" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>thread_local<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a9466601d9e5d320bf651bc896e9c6fcb" kindref="member">main_stack_</ref>;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125" refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1aa54aaa31c0df232da81e2824ba3410d8" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a095302ea55cd7dc4809aa4b151b8a6e2" kindref="member">CRoutine::Yield</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespaceapollo_1_1cyber_1_1croutine_1a9b2ec600d9734ed2e857a7235cec5e48" kindref="member">RoutineState</ref><sp/>&amp;state)<sp/>{</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>routine<sp/>=<sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a5dcf3f88f2e1d959ef71e92bc34a18be" kindref="member">GetCurrentRoutine</ref>();</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/>routine-&gt;set_state(state);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><ref refid="namespaceapollo_1_1cyber_1_1croutine_1a909857eec1b9f6f963de7dc22bf7cc92" kindref="member">SwapContext</ref>(<ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a5dcf3f88f2e1d959ef71e92bc34a18be" kindref="member">GetCurrentRoutine</ref>()-&gt;<ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a13151bd71806ca69ff7c13317ec9ff61" kindref="member">GetStack</ref>(),<sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a6c69c023c597b85b4bf74d4f871f2f61" kindref="member">GetMainStack</ref>());</highlight></codeline>
+<codeline lineno="129"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131" refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a095302ea55cd7dc4809aa4b151b8a6e2" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a095302ea55cd7dc4809aa4b151b8a6e2" kindref="member">CRoutine::Yield</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><ref refid="namespaceapollo_1_1cyber_1_1croutine_1a909857eec1b9f6f963de7dc22bf7cc92" kindref="member">SwapContext</ref>(<ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a5dcf3f88f2e1d959ef71e92bc34a18be" kindref="member">GetCurrentRoutine</ref>()-&gt;<ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a13151bd71806ca69ff7c13317ec9ff61" kindref="member">GetStack</ref>(),<sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a6c69c023c597b85b4bf74d4f871f2f61" kindref="member">GetMainStack</ref>());</highlight></codeline>
+<codeline lineno="133"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135" refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a5dcf3f88f2e1d959ef71e92bc34a18be" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine" kindref="compound">CRoutine</ref><sp/>*<ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a5dcf3f88f2e1d959ef71e92bc34a18be" kindref="member">CRoutine::GetCurrentRoutine</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1ac73dddcfe8792f48c26ed08e1b8101f8" kindref="member">current_routine_</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137" refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a6c69c023c597b85b4bf74d4f871f2f61" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**<ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a6c69c023c597b85b4bf74d4f871f2f61" kindref="member">CRoutine::GetMainStack</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>&amp;<ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a9466601d9e5d320bf651bc896e9c6fcb" kindref="member">main_stack_</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139" refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1adc87070b8f79e63163e7aff885e84e84" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="structapollo_1_1cyber_1_1croutine_1_1RoutineContext" kindref="compound">RoutineContext</ref><sp/>*<ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1adc87070b8f79e63163e7aff885e84e84" kindref="member">CRoutine::GetContext</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a68165b138d7cfc1b200e830970ad3289" kindref="member">context_</ref>.get();<sp/>}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141" refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a13151bd71806ca69ff7c13317ec9ff61" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**<ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a13151bd71806ca69ff7c13317ec9ff61" kindref="member">CRoutine::GetStack</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>&amp;(<ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a68165b138d7cfc1b200e830970ad3289" kindref="member">context_</ref>-&gt;sp);<sp/>}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143" refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a194bf92eb5b29da955f41cfaa1c6f3d1" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a194bf92eb5b29da955f41cfaa1c6f3d1" kindref="member">CRoutine::Run</ref>()<sp/>{<sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a35c97acd271cbe079df11e4b4490b729" kindref="member">func_</ref>();<sp/>}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145" refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a4e8b6724f43265bed0f7dba494e9edaa" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a4e8b6724f43265bed0f7dba494e9edaa" kindref="member">CRoutine::set_state</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespaceapollo_1_1cyber_1_1croutine_1a9b2ec600d9734ed2e857a7235cec5e48" kindref="member">RoutineState</ref><sp/>&amp;state)<sp/>{<sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a50f7996bfdacc4455012d2701b91890e" kindref="member">state_</ref><sp/>=<sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a457b30f1df6a1f3970b9e547bd6bb5e7" kindref="member">state</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147" refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a457b30f1df6a1f3970b9e547bd6bb5e7" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="namespaceapollo_1_1cyber_1_1croutine_1a9b2ec600d9734ed2e857a7235cec5e48" kindref="member">RoutineState</ref><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a457b30f1df6a1f3970b9e547bd6bb5e7" kindref="member">CRoutine::state</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a50f7996bfdacc4455012d2701b91890e" kindref="member">state_</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149" refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a0251da00fee4d7419cd3049665ef8a8d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>std::chrono::steady_clock::time_point<sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a0251da00fee4d7419cd3049665ef8a8d" kindref="member">CRoutine::wake_time</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1abd2684b9c1a6fcbbe4afcc1b5f8b6ccc" kindref="member">wake_time_</ref>;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153" refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1aa2872097862baf607809ebe793f04920" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1aa2872097862baf607809ebe793f04920" kindref="member">CRoutine::Wake</ref>()<sp/>{<sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a50f7996bfdacc4455012d2701b91890e" kindref="member">state_</ref><sp/>=<sp/><ref refid="namespaceapollo_1_1cyber_1_1croutine_1a9b2ec600d9734ed2e857a7235cec5e48a2baa69eafc7204f3bd8648eba580c489" kindref="member">RoutineState::READY</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155" refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a47ba7e433c0ca462eaafa87b78150c27" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a47ba7e433c0ca462eaafa87b78150c27" kindref="member">CRoutine::HangUp</ref>()<sp/>{<sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a095302ea55cd7dc4809aa4b151b8a6e2" kindref="member">CRoutine::Yield</ref>(<ref refid="namespaceapollo_1_1cyber_1_1croutine_1a9b2ec600d9734ed2e857a7235cec5e48aa561d434eca3762c4cfbaee9b7dfc26c" kindref="member">RoutineState::DATA_WAIT</ref>);<sp/>}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157" refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a7a7a609b9eea30ff016c79fd7e57b9e6" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a7a7a609b9eea30ff016c79fd7e57b9e6" kindref="member">CRoutine::Sleep</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespaceapollo_1_1cyber_1_1croutine_1aae31aee73e46be40ab635496b4d9d1e2" kindref="member">Duration</ref><sp/>&amp;sleep_duration)<sp/>{</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1abd2684b9c1a6fcbbe4afcc1b5f8b6ccc" kindref="member">wake_time_</ref><sp/>=<sp/>std::chrono::steady_clock::now()<sp/>+<sp/>sleep_duration;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a095302ea55cd7dc4809aa4b151b8a6e2" kindref="member">CRoutine::Yield</ref>(<ref refid="namespaceapollo_1_1cyber_1_1croutine_1a9b2ec600d9734ed2e857a7235cec5e48ab32bd403b93dc6deffdab7af55e82596" kindref="member">RoutineState::SLEEP</ref>);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162" refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a4903bd33854f6b3e17d6be0b54c5109b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>uint64_t<sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a4903bd33854f6b3e17d6be0b54c5109b" kindref="member">CRoutine::id</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1abbd791fd6d8e2aa9a996fdd2bf221cf7" kindref="member">id_</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164" refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a2551eee849d330a804bbf9216c2abf5d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a2551eee849d330a804bbf9216c2abf5d" kindref="member">CRoutine::set_id</ref>(uint64_t<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)<sp/>{<sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1abbd791fd6d8e2aa9a996fdd2bf221cf7" kindref="member">id_</ref><sp/>=<sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a4903bd33854f6b3e17d6be0b54c5109b" kindref="member">id</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166" refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1aa147ad950a110afa069542a1ca0a2386" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1aa147ad950a110afa069542a1ca0a2386" kindref="member">CRoutine::name</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a1a5fc3c9a9e30f211a92a89763d2cbab" kindref="member">name_</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168" refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1acc9e6fb1cab74150a16b145eec95b1df" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1acc9e6fb1cab74150a16b145eec95b1df" kindref="member">CRoutine::set_name</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;name)<sp/>{<sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a1a5fc3c9a9e30f211a92a89763d2cbab" kindref="member">name_</ref><sp/>=<sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1aa147ad950a110afa069542a1ca0a2386" kindref="member">name</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170" refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a3ef77a24e406fb936236856157e9a876" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a3ef77a24e406fb936236856157e9a876" kindref="member">CRoutine::processor_id</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a9d05239ef9bdf626d9044a2cbae13485" kindref="member">processor_id_</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172" refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a9c32b9446e3ac3f804e488be62277256" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a9c32b9446e3ac3f804e488be62277256" kindref="member">CRoutine::set_processor_id</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>processor_id)<sp/>{</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a9d05239ef9bdf626d9044a2cbae13485" kindref="member">processor_id_</ref><sp/>=<sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a3ef77a24e406fb936236856157e9a876" kindref="member">processor_id</ref>;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176" refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1abe2081e7ccc944e14a13ee5140f6dc3f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="namespaceapollo_1_1cyber_1_1croutine_1a9b2ec600d9734ed2e857a7235cec5e48" kindref="member">RoutineState</ref><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1abe2081e7ccc944e14a13ee5140f6dc3f" kindref="member">CRoutine::UpdateState</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Synchronous<sp/>Event<sp/>Mechanism</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a50f7996bfdacc4455012d2701b91890e" kindref="member">state_</ref><sp/>==<sp/><ref refid="namespaceapollo_1_1cyber_1_1croutine_1a9b2ec600d9734ed2e857a7235cec5e48ab32bd403b93dc6deffdab7af55e82596" kindref="member">RoutineState::SLEEP</ref><sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::chrono::steady_clock::now()<sp/>&gt;<sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1abd2684b9c1a6fcbbe4afcc1b5f8b6ccc" kindref="member">wake_time_</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a50f7996bfdacc4455012d2701b91890e" kindref="member">state_</ref><sp/>=<sp/><ref refid="namespaceapollo_1_1cyber_1_1croutine_1a9b2ec600d9734ed2e857a7235cec5e48a2baa69eafc7204f3bd8648eba580c489" kindref="member">RoutineState::READY</ref>;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a50f7996bfdacc4455012d2701b91890e" kindref="member">state_</ref>;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Asynchronous<sp/>Event<sp/>Mechanism</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a1f4f88bf13f02aa9d963159db66570ad" kindref="member">updated_</ref>.test_and_set(std::memory_order_release))<sp/>{</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a50f7996bfdacc4455012d2701b91890e" kindref="member">state_</ref><sp/>==<sp/><ref refid="namespaceapollo_1_1cyber_1_1croutine_1a9b2ec600d9734ed2e857a7235cec5e48aa561d434eca3762c4cfbaee9b7dfc26c" kindref="member">RoutineState::DATA_WAIT</ref><sp/>||<sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a50f7996bfdacc4455012d2701b91890e" kindref="member">state_</ref><sp/>==<sp/><ref refid="namespaceapollo_1_1cyber_1_1croutine_1a9b2ec600d9734ed2e857a7235cec5e48a1314a216c30bb655a0e767e250bbecd1" kindref="member">RoutineState::IO_WAIT</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a50f7996bfdacc4455012d2701b91890e" kindref="member">state_</ref><sp/>=<sp/><ref refid="namespaceapollo_1_1cyber_1_1croutine_1a9b2ec600d9734ed2e857a7235cec5e48a2baa69eafc7204f3bd8648eba580c489" kindref="member">RoutineState::READY</ref>;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a50f7996bfdacc4455012d2701b91890e" kindref="member">state_</ref>;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193" refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a4da6e71a8af8ead34f7b33e62825f2c9" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>uint32_t<sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a4da6e71a8af8ead34f7b33e62825f2c9" kindref="member">CRoutine::priority</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a0e6d7a63a90b8c53f1001d9e75015fdc" kindref="member">priority_</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195" refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a1756e023222be1144a8f361583b3ea71" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a1756e023222be1144a8f361583b3ea71" kindref="member">CRoutine::set_priority</ref>(uint32_t<sp/>priority)<sp/>{<sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a0e6d7a63a90b8c53f1001d9e75015fdc" kindref="member">priority_</ref><sp/>=<sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a4da6e71a8af8ead34f7b33e62825f2c9" kindref="member">priority</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197" refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1ada6c072e791b4f0ee01fc4e41bffebfb" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1ada6c072e791b4f0ee01fc4e41bffebfb" kindref="member">CRoutine::Acquire</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>!<ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a1fc4d2d426dba2b0e4381e67348869ae" kindref="member">lock_</ref>.test_and_set(std::memory_order_acquire);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201" refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1af4f0281b87b2b0f37bf2526c1073143b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1af4f0281b87b2b0f37bf2526c1073143b" kindref="member">CRoutine::Release</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a1fc4d2d426dba2b0e4381e67348869ae" kindref="member">lock_</ref>.clear(std::memory_order_release);</highlight></codeline>
+<codeline lineno="203"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205" refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1aab4da1d64d40ce35e4054b867bfdeab9" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1aab4da1d64d40ce35e4054b867bfdeab9" kindref="member">CRoutine::SetUpdateFlag</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a1f4f88bf13f02aa9d963159db66570ad" kindref="member">updated_</ref>.clear(std::memory_order_release);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>croutine</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>cyber</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>apollo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>CYBER_CROUTINE_CROUTINE_H_</highlight></codeline>
+    </programlisting>
+    <location file="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h"/>
+  </compounddef>
+</doxygen>

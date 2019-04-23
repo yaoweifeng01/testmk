@@ -1,0 +1,157 @@
+\hypertarget{classapollo_1_1cyber_1_1base_1_1AtomicHashMap}{\section{apollo\-:\-:cyber\-:\-:base\-:\-:Atomic\-Hash\-Map$<$ K, V, Table\-Size, std\-:\-:enable\-\_\-if$<$ std\-:\-:is\-\_\-integral$<$ K $>$\-:\-:value \&\&(Table\-Size \&(Table\-Size-\/1))==0, int $>$\-:\-:type $>$ Class Template Reference}
+\label{classapollo_1_1cyber_1_1base_1_1AtomicHashMap}\index{apollo\-::cyber\-::base\-::\-Atomic\-Hash\-Map$<$ K, V, Table\-Size, std\-::enable\-\_\-if$<$ std\-::is\-\_\-integral$<$ K $>$\-::value \&\&(\-Table\-Size \&(\-Table\-Size-\/1))==0, int $>$\-::type $>$@{apollo\-::cyber\-::base\-::\-Atomic\-Hash\-Map$<$ K, V, Table\-Size, std\-::enable\-\_\-if$<$ std\-::is\-\_\-integral$<$ K $>$\-::value \&\&(\-Table\-Size \&(\-Table\-Size-\/1))==0, int $>$\-::type $>$}}
+}
+
+
+A implementation of lock-\/free fixed size hash map.  
+
+
+
+
+{\ttfamily \#include $<$atomic\-\_\-hash\-\_\-map.\-h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Bucket}{Bucket}
+\item 
+struct \hyperlink{structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry}{Entry}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1base_1_1AtomicHashMap_aa1a83359c21d93a096e806382f03e129}{Atomic\-Hash\-Map} ()
+\item 
+\hyperlink{classapollo_1_1cyber_1_1base_1_1AtomicHashMap_aa27dda760cfb4332fe043d5c23242c20}{Atomic\-Hash\-Map} (const \hyperlink{classapollo_1_1cyber_1_1base_1_1AtomicHashMap}{Atomic\-Hash\-Map} \&other)=delete
+\item 
+\hyperlink{classapollo_1_1cyber_1_1base_1_1AtomicHashMap}{Atomic\-Hash\-Map} \& \hyperlink{classapollo_1_1cyber_1_1base_1_1AtomicHashMap_a780be857f6f6d0330da564afd8266620}{operator=} (const \hyperlink{classapollo_1_1cyber_1_1base_1_1AtomicHashMap}{Atomic\-Hash\-Map} \&other)=delete
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1base_1_1AtomicHashMap_ac038ea2f8018172914fcadb807a970a8}{Has} (K key)
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1base_1_1AtomicHashMap_a0cffa9d1d855e4733f18071b0d7a077d}{Get} (K key, V $\ast$$\ast$\hyperlink{namespaceapollo_1_1cyber_1_1base_aa3e2fff9b18a1214af4a70546fb7120f}{value})
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1base_1_1AtomicHashMap_a3b8fc8d906e4e6c116c991cd178c8655}{Get} (K key, V $\ast$\hyperlink{namespaceapollo_1_1cyber_1_1base_aa3e2fff9b18a1214af4a70546fb7120f}{value})
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1base_1_1AtomicHashMap_a9ed2851c909e8ac9662f92d81df18efe}{Set} (K key)
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1base_1_1AtomicHashMap_a595719e722207e09c63feb85b505ef36}{Set} (K key, const V \&\hyperlink{namespaceapollo_1_1cyber_1_1base_aa3e2fff9b18a1214af4a70546fb7120f}{value})
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1base_1_1AtomicHashMap_ac4c44e27832b4965f999eeed068938d1}{Set} (K key, V \&\&\hyperlink{namespaceapollo_1_1cyber_1_1base_aa3e2fff9b18a1214af4a70546fb7120f}{value})
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Bucket}{Bucket} \hyperlink{classapollo_1_1cyber_1_1base_1_1AtomicHashMap_aab575e13b07e0465956aeb1aaef42e22}{table\-\_\-} \mbox{[}Table\-Size\mbox{]}
+\item 
+uint64\-\_\-t \hyperlink{classapollo_1_1cyber_1_1base_1_1AtomicHashMap_ada585ac9c1211917c1d08bf3ef77281f}{capacity\-\_\-}
+\item 
+uint64\-\_\-t \hyperlink{classapollo_1_1cyber_1_1base_1_1AtomicHashMap_adb15b0fce4c41fa3b25a32b5ba7e23bc}{mode\-\_\-num\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename K, typename V, std\-::size\-\_\-t Table\-Size = 128, typename std\-::enable\-\_\-if$<$ std\-::is\-\_\-integral$<$ K $>$\-::value \&\&(\-Table\-Size \&(\-Table\-Size-\/1))==0, int $>$\-::type = 0$>$class apollo\-::cyber\-::base\-::\-Atomic\-Hash\-Map$<$ K, V, Table\-Size, std\-::enable\-\_\-if$<$ std\-::is\-\_\-integral$<$ K $>$\-::value \&\&(\-Table\-Size \&(\-Table\-Size-\/1))==0, int $>$\-::type $>$}
+
+A implementation of lock-\/free fixed size hash map. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em K} & Type of key, must be integral \\
+\hline
+{\em V} & Type of value \\
+\hline
+{\em 128} & Size of hash table \\
+\hline
+{\em 0} & Type traits, use for checking types of key \& value \\
+\hline
+\end{DoxyTemplParams}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1AtomicHashMap_aa1a83359c21d93a096e806382f03e129}{\index{apollo\-::cyber\-::base\-::\-Atomic\-Hash\-Map@{apollo\-::cyber\-::base\-::\-Atomic\-Hash\-Map}!Atomic\-Hash\-Map@{Atomic\-Hash\-Map}}
+\index{Atomic\-Hash\-Map@{Atomic\-Hash\-Map}!apollo::cyber::base::AtomicHashMap@{apollo\-::cyber\-::base\-::\-Atomic\-Hash\-Map}}
+\subsubsection[{Atomic\-Hash\-Map}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K, typename V, std\-::size\-\_\-t Table\-Size = 128, typename std\-::enable\-\_\-if$<$ std\-::is\-\_\-integral$<$ K $>$\-::value \&\&(\-Table\-Size \&(\-Table\-Size-\/1))==0, int $>$\-::type = 0$>$ {\bf apollo\-::cyber\-::base\-::\-Atomic\-Hash\-Map}$<$ K, V, Table\-Size, type $>$\-::{\bf Atomic\-Hash\-Map} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1base_1_1AtomicHashMap_aa1a83359c21d93a096e806382f03e129}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1AtomicHashMap_aa27dda760cfb4332fe043d5c23242c20}{\index{apollo\-::cyber\-::base\-::\-Atomic\-Hash\-Map@{apollo\-::cyber\-::base\-::\-Atomic\-Hash\-Map}!Atomic\-Hash\-Map@{Atomic\-Hash\-Map}}
+\index{Atomic\-Hash\-Map@{Atomic\-Hash\-Map}!apollo::cyber::base::AtomicHashMap@{apollo\-::cyber\-::base\-::\-Atomic\-Hash\-Map}}
+\subsubsection[{Atomic\-Hash\-Map}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K, typename V, std\-::size\-\_\-t Table\-Size = 128, typename std\-::enable\-\_\-if$<$ std\-::is\-\_\-integral$<$ K $>$\-::value \&\&(\-Table\-Size \&(\-Table\-Size-\/1))==0, int $>$\-::type = 0$>$ {\bf apollo\-::cyber\-::base\-::\-Atomic\-Hash\-Map}$<$ K, V, Table\-Size, type $>$\-::{\bf Atomic\-Hash\-Map} (
+\begin{DoxyParamCaption}
+\item[{const {\bf Atomic\-Hash\-Map}$<$ K, V, Table\-Size, std\-::enable\-\_\-if$<$ std\-::is\-\_\-integral$<$ K $>$\-::{\bf value} \&\&(Table\-Size \&(Table\-Size-\/1))==0, int $>$\-::type $>$ \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}}\label{classapollo_1_1cyber_1_1base_1_1AtomicHashMap_aa27dda760cfb4332fe043d5c23242c20}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1AtomicHashMap_a0cffa9d1d855e4733f18071b0d7a077d}{\index{apollo\-::cyber\-::base\-::\-Atomic\-Hash\-Map@{apollo\-::cyber\-::base\-::\-Atomic\-Hash\-Map}!Get@{Get}}
+\index{Get@{Get}!apollo::cyber::base::AtomicHashMap@{apollo\-::cyber\-::base\-::\-Atomic\-Hash\-Map}}
+\subsubsection[{Get}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K, typename V, std\-::size\-\_\-t Table\-Size = 128, typename std\-::enable\-\_\-if$<$ std\-::is\-\_\-integral$<$ K $>$\-::value \&\&(\-Table\-Size \&(\-Table\-Size-\/1))==0, int $>$\-::type = 0$>$ bool {\bf apollo\-::cyber\-::base\-::\-Atomic\-Hash\-Map}$<$ K, V, Table\-Size, type $>$\-::Get (
+\begin{DoxyParamCaption}
+\item[{K}]{key, }
+\item[{V $\ast$$\ast$}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1base_1_1AtomicHashMap_a0cffa9d1d855e4733f18071b0d7a077d}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1AtomicHashMap_a3b8fc8d906e4e6c116c991cd178c8655}{\index{apollo\-::cyber\-::base\-::\-Atomic\-Hash\-Map@{apollo\-::cyber\-::base\-::\-Atomic\-Hash\-Map}!Get@{Get}}
+\index{Get@{Get}!apollo::cyber::base::AtomicHashMap@{apollo\-::cyber\-::base\-::\-Atomic\-Hash\-Map}}
+\subsubsection[{Get}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K, typename V, std\-::size\-\_\-t Table\-Size = 128, typename std\-::enable\-\_\-if$<$ std\-::is\-\_\-integral$<$ K $>$\-::value \&\&(\-Table\-Size \&(\-Table\-Size-\/1))==0, int $>$\-::type = 0$>$ bool {\bf apollo\-::cyber\-::base\-::\-Atomic\-Hash\-Map}$<$ K, V, Table\-Size, type $>$\-::Get (
+\begin{DoxyParamCaption}
+\item[{K}]{key, }
+\item[{V $\ast$}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1base_1_1AtomicHashMap_a3b8fc8d906e4e6c116c991cd178c8655}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1AtomicHashMap_ac038ea2f8018172914fcadb807a970a8}{\index{apollo\-::cyber\-::base\-::\-Atomic\-Hash\-Map@{apollo\-::cyber\-::base\-::\-Atomic\-Hash\-Map}!Has@{Has}}
+\index{Has@{Has}!apollo::cyber::base::AtomicHashMap@{apollo\-::cyber\-::base\-::\-Atomic\-Hash\-Map}}
+\subsubsection[{Has}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K, typename V, std\-::size\-\_\-t Table\-Size = 128, typename std\-::enable\-\_\-if$<$ std\-::is\-\_\-integral$<$ K $>$\-::value \&\&(\-Table\-Size \&(\-Table\-Size-\/1))==0, int $>$\-::type = 0$>$ bool {\bf apollo\-::cyber\-::base\-::\-Atomic\-Hash\-Map}$<$ K, V, Table\-Size, type $>$\-::Has (
+\begin{DoxyParamCaption}
+\item[{K}]{key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1base_1_1AtomicHashMap_ac038ea2f8018172914fcadb807a970a8}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1AtomicHashMap_a780be857f6f6d0330da564afd8266620}{\index{apollo\-::cyber\-::base\-::\-Atomic\-Hash\-Map@{apollo\-::cyber\-::base\-::\-Atomic\-Hash\-Map}!operator=@{operator=}}
+\index{operator=@{operator=}!apollo::cyber::base::AtomicHashMap@{apollo\-::cyber\-::base\-::\-Atomic\-Hash\-Map}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K, typename V, std\-::size\-\_\-t Table\-Size = 128, typename std\-::enable\-\_\-if$<$ std\-::is\-\_\-integral$<$ K $>$\-::value \&\&(\-Table\-Size \&(\-Table\-Size-\/1))==0, int $>$\-::type = 0$>$ {\bf Atomic\-Hash\-Map}\& {\bf apollo\-::cyber\-::base\-::\-Atomic\-Hash\-Map}$<$ K, V, Table\-Size, type $>$\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Atomic\-Hash\-Map}$<$ K, V, Table\-Size, std\-::enable\-\_\-if$<$ std\-::is\-\_\-integral$<$ K $>$\-::{\bf value} \&\&(Table\-Size \&(Table\-Size-\/1))==0, int $>$\-::type $>$ \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}}\label{classapollo_1_1cyber_1_1base_1_1AtomicHashMap_a780be857f6f6d0330da564afd8266620}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1AtomicHashMap_a9ed2851c909e8ac9662f92d81df18efe}{\index{apollo\-::cyber\-::base\-::\-Atomic\-Hash\-Map@{apollo\-::cyber\-::base\-::\-Atomic\-Hash\-Map}!Set@{Set}}
+\index{Set@{Set}!apollo::cyber::base::AtomicHashMap@{apollo\-::cyber\-::base\-::\-Atomic\-Hash\-Map}}
+\subsubsection[{Set}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K, typename V, std\-::size\-\_\-t Table\-Size = 128, typename std\-::enable\-\_\-if$<$ std\-::is\-\_\-integral$<$ K $>$\-::value \&\&(\-Table\-Size \&(\-Table\-Size-\/1))==0, int $>$\-::type = 0$>$ void {\bf apollo\-::cyber\-::base\-::\-Atomic\-Hash\-Map}$<$ K, V, Table\-Size, type $>$\-::Set (
+\begin{DoxyParamCaption}
+\item[{K}]{key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1base_1_1AtomicHashMap_a9ed2851c909e8ac9662f92d81df18efe}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1AtomicHashMap_a595719e722207e09c63feb85b505ef36}{\index{apollo\-::cyber\-::base\-::\-Atomic\-Hash\-Map@{apollo\-::cyber\-::base\-::\-Atomic\-Hash\-Map}!Set@{Set}}
+\index{Set@{Set}!apollo::cyber::base::AtomicHashMap@{apollo\-::cyber\-::base\-::\-Atomic\-Hash\-Map}}
+\subsubsection[{Set}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K, typename V, std\-::size\-\_\-t Table\-Size = 128, typename std\-::enable\-\_\-if$<$ std\-::is\-\_\-integral$<$ K $>$\-::value \&\&(\-Table\-Size \&(\-Table\-Size-\/1))==0, int $>$\-::type = 0$>$ void {\bf apollo\-::cyber\-::base\-::\-Atomic\-Hash\-Map}$<$ K, V, Table\-Size, type $>$\-::Set (
+\begin{DoxyParamCaption}
+\item[{K}]{key, }
+\item[{const V \&}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1base_1_1AtomicHashMap_a595719e722207e09c63feb85b505ef36}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1AtomicHashMap_ac4c44e27832b4965f999eeed068938d1}{\index{apollo\-::cyber\-::base\-::\-Atomic\-Hash\-Map@{apollo\-::cyber\-::base\-::\-Atomic\-Hash\-Map}!Set@{Set}}
+\index{Set@{Set}!apollo::cyber::base::AtomicHashMap@{apollo\-::cyber\-::base\-::\-Atomic\-Hash\-Map}}
+\subsubsection[{Set}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K, typename V, std\-::size\-\_\-t Table\-Size = 128, typename std\-::enable\-\_\-if$<$ std\-::is\-\_\-integral$<$ K $>$\-::value \&\&(\-Table\-Size \&(\-Table\-Size-\/1))==0, int $>$\-::type = 0$>$ void {\bf apollo\-::cyber\-::base\-::\-Atomic\-Hash\-Map}$<$ K, V, Table\-Size, type $>$\-::Set (
+\begin{DoxyParamCaption}
+\item[{K}]{key, }
+\item[{V \&\&}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1base_1_1AtomicHashMap_ac4c44e27832b4965f999eeed068938d1}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1AtomicHashMap_ada585ac9c1211917c1d08bf3ef77281f}{\index{apollo\-::cyber\-::base\-::\-Atomic\-Hash\-Map@{apollo\-::cyber\-::base\-::\-Atomic\-Hash\-Map}!capacity\-\_\-@{capacity\-\_\-}}
+\index{capacity\-\_\-@{capacity\-\_\-}!apollo::cyber::base::AtomicHashMap@{apollo\-::cyber\-::base\-::\-Atomic\-Hash\-Map}}
+\subsubsection[{capacity\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K, typename V, std\-::size\-\_\-t Table\-Size = 128, typename std\-::enable\-\_\-if$<$ std\-::is\-\_\-integral$<$ K $>$\-::value \&\&(\-Table\-Size \&(\-Table\-Size-\/1))==0, int $>$\-::type = 0$>$ uint64\-\_\-t {\bf apollo\-::cyber\-::base\-::\-Atomic\-Hash\-Map}$<$ K, V, Table\-Size, type $>$\-::capacity\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1base_1_1AtomicHashMap_ada585ac9c1211917c1d08bf3ef77281f}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1AtomicHashMap_adb15b0fce4c41fa3b25a32b5ba7e23bc}{\index{apollo\-::cyber\-::base\-::\-Atomic\-Hash\-Map@{apollo\-::cyber\-::base\-::\-Atomic\-Hash\-Map}!mode\-\_\-num\-\_\-@{mode\-\_\-num\-\_\-}}
+\index{mode\-\_\-num\-\_\-@{mode\-\_\-num\-\_\-}!apollo::cyber::base::AtomicHashMap@{apollo\-::cyber\-::base\-::\-Atomic\-Hash\-Map}}
+\subsubsection[{mode\-\_\-num\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K, typename V, std\-::size\-\_\-t Table\-Size = 128, typename std\-::enable\-\_\-if$<$ std\-::is\-\_\-integral$<$ K $>$\-::value \&\&(\-Table\-Size \&(\-Table\-Size-\/1))==0, int $>$\-::type = 0$>$ uint64\-\_\-t {\bf apollo\-::cyber\-::base\-::\-Atomic\-Hash\-Map}$<$ K, V, Table\-Size, type $>$\-::mode\-\_\-num\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1base_1_1AtomicHashMap_adb15b0fce4c41fa3b25a32b5ba7e23bc}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1AtomicHashMap_aab575e13b07e0465956aeb1aaef42e22}{\index{apollo\-::cyber\-::base\-::\-Atomic\-Hash\-Map@{apollo\-::cyber\-::base\-::\-Atomic\-Hash\-Map}!table\-\_\-@{table\-\_\-}}
+\index{table\-\_\-@{table\-\_\-}!apollo::cyber::base::AtomicHashMap@{apollo\-::cyber\-::base\-::\-Atomic\-Hash\-Map}}
+\subsubsection[{table\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K, typename V, std\-::size\-\_\-t Table\-Size = 128, typename std\-::enable\-\_\-if$<$ std\-::is\-\_\-integral$<$ K $>$\-::value \&\&(\-Table\-Size \&(\-Table\-Size-\/1))==0, int $>$\-::type = 0$>$ {\bf Bucket} {\bf apollo\-::cyber\-::base\-::\-Atomic\-Hash\-Map}$<$ K, V, Table\-Size, type $>$\-::table\-\_\-\mbox{[}Table\-Size\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1base_1_1AtomicHashMap_aab575e13b07e0465956aeb1aaef42e22}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+base/\hyperlink{atomic__hash__map_8h}{atomic\-\_\-hash\-\_\-map.\-h}\end{DoxyCompactItemize}

@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="cyber__topology__message_8h" kind="file">
+    <compoundname>cyber_topology_message.h</compoundname>
+    <includes local="no">map</includes>
+    <includes local="no">string</includes>
+    <includes refid="renderable__message_8h" local="yes">./renderable_message.h</includes>
+    <incdepgraph>
+      <node id="10728">
+        <label>string</label>
+      </node>
+      <node id="10729">
+        <label>./renderable_message.h</label>
+        <link refid="renderable__message_8h"/>
+        <childnode refid="10728" relation="include">
+        </childnode>
+      </node>
+      <node id="10727">
+        <label>map</label>
+      </node>
+      <node id="10726">
+        <label>tools/cyber_monitor/cyber_topology_message.h</label>
+        <link refid="cyber_topology_message.h"/>
+        <childnode refid="10727" relation="include">
+        </childnode>
+        <childnode refid="10728" relation="include">
+        </childnode>
+        <childnode refid="10729" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classCyberTopologyMessage" prot="public">CyberTopologyMessage</innerclass>
+    <innernamespace refid="namespaceapollo">apollo</innernamespace>
+    <innernamespace refid="namespaceapollo_1_1cyber">apollo::cyber</innernamespace>
+    <innernamespace refid="namespaceapollo_1_1cyber_1_1proto">apollo::cyber::proto</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2018<sp/>The<sp/>Apollo<sp/>Authors.<sp/>All<sp/>Rights<sp/>Reserved.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>TOOLS_CVT_MONITOR_CYBER_TOPOLOGY_MESSAGE_H_</highlight></codeline>
+<codeline lineno="18"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>TOOLS_CVT_MONITOR_CYBER_TOPOLOGY_MESSAGE_H_</highlight></codeline>
+<codeline lineno="19"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="renderable__message_8h" kindref="compound">./renderable_message.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">apollo<sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">cyber<sp/>{</highlight></codeline>
+<codeline lineno="27" refid="namespaceapollo_1_1cyber_1_1proto" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">proto<sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">ChangeMsg;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">RoleAttributes;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>proto</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>cyber</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>apollo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classGeneralChannelMessage" kindref="compound">GeneralChannelMessage</ref>;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">//<sp/>class<sp/>GeneralMessage;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="classCyberTopologyMessage" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classCyberTopologyMessage" kindref="compound">CyberTopologyMessage</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classRenderableMessage" kindref="compound">RenderableMessage</ref><sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classCyberTopologyMessage_1ad29cc7035f525cb12cf25f0925656f74" kindref="member">CyberTopologyMessage</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>channel);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><ref refid="classCyberTopologyMessage_1a79e7cc8a9ae14ac907c987131f86153e" kindref="member">~CyberTopologyMessage</ref>();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCyberTopologyMessage_1aed410d8532bc9230d35f61cebcee4824" kindref="member">Render</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classScreen" kindref="compound">Screen</ref>*<sp/>s,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>key)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><ref refid="classRenderableMessage" kindref="compound">RenderableMessage</ref>*<sp/><ref refid="classCyberTopologyMessage_1afc36cda612863d6a940bef1509f39f16" kindref="member">Child</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index)<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCyberTopologyMessage_1aeb57388a8b56c68681ab48f8ea5e5ea7" kindref="member">TopologyChanged</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>apollo::cyber::proto::ChangeMsg&amp;<sp/>change_msg);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCyberTopologyMessage_1a7ebd8b12a5e56099a2aec1aac9c1825e" kindref="member">AddReaderWriter</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>apollo::cyber::proto::RoleAttributes&amp;<sp/>role,</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isWriter);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><ref refid="classCyberTopologyMessage_1ad29cc7035f525cb12cf25f0925656f74" kindref="member">CyberTopologyMessage</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classCyberTopologyMessage" kindref="compound">CyberTopologyMessage</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><ref refid="classCyberTopologyMessage" kindref="compound">CyberTopologyMessage</ref>&amp;<sp/><ref refid="classCyberTopologyMessage_1a9783107b7c5254325ecf6d6f59a22d4e" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classCyberTopologyMessage" kindref="compound">CyberTopologyMessage</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCyberTopologyMessage_1a4a61d42621d8db354727a18e9495a190" kindref="member">ChangeState</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classScreen" kindref="compound">Screen</ref>*<sp/>s,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>key);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classCyberTopologyMessage_1a2c775a5c10fce9c33f5316f877c9f018" kindref="member">isFromHere</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>nodeName);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/>std::map&lt;std::string,<sp/>GeneralChannelMessage*&gt;::const_iterator<sp/><ref refid="classCyberTopologyMessage_1ade141cee6b72beee0a1255292bfa5124" kindref="member">findChild</ref>(</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="classCyberTopologyMessage_1a19a78ae56d2bd909e1b1403b3db83c52" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="classCyberTopologyMessage_1a19a78ae56d2bd909e1b1403b3db83c52" kindref="member">SecondColumnType</ref><sp/>{<sp/><ref refid="classCyberTopologyMessage_1a19a78ae56d2bd909e1b1403b3db83c52a20b67ff6d86442b20819a3cd48bfc603" kindref="member">MessageType</ref>,<sp/><ref refid="classCyberTopologyMessage_1a19a78ae56d2bd909e1b1403b3db83c52ace684cd329278d8b9193d22926686db5" kindref="member">MessageFrameRatio</ref><sp/>};</highlight></codeline>
+<codeline lineno="60" refid="classCyberTopologyMessage_1a1154eec678920dfada21e1f406dc28d0" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classCyberTopologyMessage_1a19a78ae56d2bd909e1b1403b3db83c52" kindref="member">SecondColumnType</ref><sp/><ref refid="classCyberTopologyMessage_1a1154eec678920dfada21e1f406dc28d0" kindref="member">second_column_</ref>;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="classCyberTopologyMessage_1a3cc7dce72601c852f9f602f242b72e73" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classCyberTopologyMessage_1a3cc7dce72601c852f9f602f242b72e73" kindref="member">pid_</ref>;</highlight></codeline>
+<codeline lineno="63" refid="classCyberTopologyMessage_1ac3a5fef5a512872150261b3c32fafc60" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classCyberTopologyMessage_1ac3a5fef5a512872150261b3c32fafc60" kindref="member">col1_width_</ref>;</highlight></codeline>
+<codeline lineno="64" refid="classCyberTopologyMessage_1a5896a556d8bfbe583d112690f025a063" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/><ref refid="classCyberTopologyMessage_1a5896a556d8bfbe583d112690f025a063" kindref="member">specified_channel_</ref>;</highlight></codeline>
+<codeline lineno="65" refid="classCyberTopologyMessage_1a982b69f726e8f42a1c3a0389865d84f8" refkind="member"><highlight class="normal"><sp/><sp/>std::map&lt;std::string,<sp/>GeneralChannelMessage*&gt;<sp/><ref refid="classCyberTopologyMessage_1a982b69f726e8f42a1c3a0389865d84f8" kindref="member">all_channels_map_</ref>;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>TOOLS_CVT_MONITOR_CYBER_TOPOLOGY_MESSAGE_H_</highlight></codeline>
+    </programlisting>
+    <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/cyber_topology_message.h"/>
+  </compounddef>
+</doxygen>

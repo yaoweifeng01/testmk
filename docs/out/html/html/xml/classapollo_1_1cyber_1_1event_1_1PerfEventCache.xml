@@ -1,0 +1,265 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classapollo_1_1cyber_1_1event_1_1PerfEventCache" kind="class" prot="public">
+    <compoundname>apollo::cyber::event::PerfEventCache</compoundname>
+    <includes refid="perf__event__cache_8h" local="no">perf_event_cache.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classapollo_1_1cyber_1_1event_1_1PerfEventCache_1a97c9a532fd89d72c664547eba0f39525" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="classapollo_1_1cyber_1_1event_1_1EventBase" kindref="compound">EventBase</ref> &gt;</type>
+        <definition>using apollo::cyber::event::PerfEventCache::EventBasePtr =  std::shared_ptr&lt;EventBase&gt;</definition>
+        <argsstring></argsstring>
+        <name>EventBasePtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/event/perf_event_cache.h" line="35" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/event/perf_event_cache.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1event_1_1PerfEventCache_1a72da8ae6b3a52a0533c5df4398f7463a" prot="private" static="no" mutable="no">
+        <type>std::thread</type>
+        <definition>std::thread apollo::cyber::event::PerfEventCache::io_thread_</definition>
+        <argsstring></argsstring>
+        <name>io_thread_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/event/perf_event_cache.h" line="47" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/event/perf_event_cache.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1event_1_1PerfEventCache_1ad190a19395906ca0eede7b1526b64964" prot="private" static="no" mutable="no">
+        <type>std::ofstream</type>
+        <definition>std::ofstream apollo::cyber::event::PerfEventCache::of_</definition>
+        <argsstring></argsstring>
+        <name>of_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/event/perf_event_cache.h" line="48" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/event/perf_event_cache.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1event_1_1PerfEventCache_1a91a46c1094cff4af13c2af59c884ccbc" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool apollo::cyber::event::PerfEventCache::enable_trans_perf_</definition>
+        <argsstring></argsstring>
+        <name>enable_trans_perf_</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/event/perf_event_cache.h" line="50" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/event/perf_event_cache.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1event_1_1PerfEventCache_1af4b2ddc5105d2d75a2aca49a219bced4" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool apollo::cyber::event::PerfEventCache::enable_sched_perf_</definition>
+        <argsstring></argsstring>
+        <name>enable_sched_perf_</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/event/perf_event_cache.h" line="51" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/event/perf_event_cache.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1event_1_1PerfEventCache_1a4f064542c80809a3d11e8d274e01a0f2" prot="private" static="no" mutable="no">
+        <type>std::atomic&lt; bool &gt;</type>
+        <definition>std::atomic&lt;bool&gt; apollo::cyber::event::PerfEventCache::shutdown_</definition>
+        <argsstring></argsstring>
+        <name>shutdown_</name>
+        <initializer>= {false}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/event/perf_event_cache.h" line="52" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/event/perf_event_cache.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1event_1_1PerfEventCache_1a0c19917b6624f25f5519d3d3383bcdf7" prot="private" static="no" mutable="no">
+        <type><ref refid="classapollo_1_1cyber_1_1base_1_1BoundedQueue" kindref="compound">base::BoundedQueue</ref>&lt; <ref refid="classapollo_1_1cyber_1_1event_1_1PerfEventCache_1a97c9a532fd89d72c664547eba0f39525" kindref="member">EventBasePtr</ref> &gt;</type>
+        <definition>base::BoundedQueue&lt;EventBasePtr&gt; apollo::cyber::event::PerfEventCache::event_queue_</definition>
+        <argsstring></argsstring>
+        <name>event_queue_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/event/perf_event_cache.h" line="54" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/event/perf_event_cache.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1event_1_1PerfEventCache_1a3eededccf54705415c8bde9035aa21f0" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int apollo::cyber::event::PerfEventCache::kFlushSize</definition>
+        <argsstring></argsstring>
+        <name>kFlushSize</name>
+        <initializer>= 512</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/event/perf_event_cache.h" line="56" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/event/perf_event_cache.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1event_1_1PerfEventCache_1a2722b97e9e3d6712ffca9cee99b6fe22" prot="private" static="no" mutable="no">
+        <type>const uint64_t</type>
+        <definition>const uint64_t apollo::cyber::event::PerfEventCache::kEventQueueSize</definition>
+        <argsstring></argsstring>
+        <name>kEventQueueSize</name>
+        <initializer>= 8192</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/event/perf_event_cache.h" line="57" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/event/perf_event_cache.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1event_1_1PerfEventCache_1a5225c72f643d172f8a02beeb6eb84b51" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::event::PerfEventCache::~PerfEventCache</definition>
+        <argsstring>()</argsstring>
+        <name>~PerfEventCache</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/event/perf_event_cache.h" line="37" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1event_1_1PerfEventCache_1a8046148fae61146484ce98d2694c0a0c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::event::PerfEventCache::AddSchedEvent</definition>
+        <argsstring>(const SchedPerf event_id, const uint64_t cr_id, const int proc_id, const int cr_state=-1)</argsstring>
+        <name>AddSchedEvent</name>
+        <param>
+          <type>const <ref refid="namespaceapollo_1_1cyber_1_1event_1ab72445ee0247295d6699d5f251e11b83" kindref="member">SchedPerf</ref></type>
+          <declname>event_id</declname>
+        </param>
+        <param>
+          <type>const uint64_t</type>
+          <declname>cr_id</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>proc_id</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>cr_state</declname>
+          <defval>-1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/event/perf_event_cache.h" line="38" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1event_1_1PerfEventCache_1a2d915a242d915c6247de01cd54086488" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::event::PerfEventCache::AddTransportEvent</definition>
+        <argsstring>(const TransPerf event_id, const uint64_t channel_id, const uint64_t msg_seq)</argsstring>
+        <name>AddTransportEvent</name>
+        <param>
+          <type>const <ref refid="namespaceapollo_1_1cyber_1_1event_1a2918dc8c778172bc4a921da7fe02ad84" kindref="member">TransPerf</ref></type>
+          <declname>event_id</declname>
+        </param>
+        <param>
+          <type>const uint64_t</type>
+          <declname>channel_id</declname>
+        </param>
+        <param>
+          <type>const uint64_t</type>
+          <declname>msg_seq</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/event/perf_event_cache.h" line="40" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1event_1_1PerfEventCache_1aadc41f95023b4a56b5d119a08a69ffd5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::event::PerfEventCache::Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/event/perf_event_cache.h" line="44" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1event_1_1PerfEventCache_1ad981b82b1aa24d850346eb9ec1307aec" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::event::PerfEventCache::Run</definition>
+        <argsstring>()</argsstring>
+        <name>Run</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/event/perf_event_cache.h" line="45" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="549">
+        <label>apollo::cyber::event::PerfEventCache</label>
+        <link refid="classapollo_1_1cyber_1_1event_1_1PerfEventCache"/>
+        <childnode refid="550" relation="usage">
+          <edgelabel>event_queue_</edgelabel>
+        </childnode>
+      </node>
+      <node id="550">
+        <label>apollo::cyber::base::BoundedQueue&lt; EventBasePtr &gt;</label>
+        <link refid="classapollo_1_1cyber_1_1base_1_1BoundedQueue"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/work/apollo-fork/apollo/cyber/event/perf_event_cache.h" line="33" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/event/perf_event_cache.h" bodystart="33" bodyend="60"/>
+    <listofallmembers>
+      <member refid="classapollo_1_1cyber_1_1event_1_1PerfEventCache_1a8046148fae61146484ce98d2694c0a0c" prot="public" virt="non-virtual"><scope>apollo::cyber::event::PerfEventCache</scope><name>AddSchedEvent</name></member>
+      <member refid="classapollo_1_1cyber_1_1event_1_1PerfEventCache_1a2d915a242d915c6247de01cd54086488" prot="public" virt="non-virtual"><scope>apollo::cyber::event::PerfEventCache</scope><name>AddTransportEvent</name></member>
+      <member refid="classapollo_1_1cyber_1_1event_1_1PerfEventCache_1af4b2ddc5105d2d75a2aca49a219bced4" prot="private" virt="non-virtual"><scope>apollo::cyber::event::PerfEventCache</scope><name>enable_sched_perf_</name></member>
+      <member refid="classapollo_1_1cyber_1_1event_1_1PerfEventCache_1a91a46c1094cff4af13c2af59c884ccbc" prot="private" virt="non-virtual"><scope>apollo::cyber::event::PerfEventCache</scope><name>enable_trans_perf_</name></member>
+      <member refid="classapollo_1_1cyber_1_1event_1_1PerfEventCache_1a0c19917b6624f25f5519d3d3383bcdf7" prot="private" virt="non-virtual"><scope>apollo::cyber::event::PerfEventCache</scope><name>event_queue_</name></member>
+      <member refid="classapollo_1_1cyber_1_1event_1_1PerfEventCache_1a97c9a532fd89d72c664547eba0f39525" prot="public" virt="non-virtual"><scope>apollo::cyber::event::PerfEventCache</scope><name>EventBasePtr</name></member>
+      <member refid="classapollo_1_1cyber_1_1event_1_1PerfEventCache_1a72da8ae6b3a52a0533c5df4398f7463a" prot="private" virt="non-virtual"><scope>apollo::cyber::event::PerfEventCache</scope><name>io_thread_</name></member>
+      <member refid="classapollo_1_1cyber_1_1event_1_1PerfEventCache_1a2722b97e9e3d6712ffca9cee99b6fe22" prot="private" virt="non-virtual"><scope>apollo::cyber::event::PerfEventCache</scope><name>kEventQueueSize</name></member>
+      <member refid="classapollo_1_1cyber_1_1event_1_1PerfEventCache_1a3eededccf54705415c8bde9035aa21f0" prot="private" virt="non-virtual"><scope>apollo::cyber::event::PerfEventCache</scope><name>kFlushSize</name></member>
+      <member refid="classapollo_1_1cyber_1_1event_1_1PerfEventCache_1ad190a19395906ca0eede7b1526b64964" prot="private" virt="non-virtual"><scope>apollo::cyber::event::PerfEventCache</scope><name>of_</name></member>
+      <member refid="classapollo_1_1cyber_1_1event_1_1PerfEventCache_1ad981b82b1aa24d850346eb9ec1307aec" prot="private" virt="non-virtual"><scope>apollo::cyber::event::PerfEventCache</scope><name>Run</name></member>
+      <member refid="classapollo_1_1cyber_1_1event_1_1PerfEventCache_1a4f064542c80809a3d11e8d274e01a0f2" prot="private" virt="non-virtual"><scope>apollo::cyber::event::PerfEventCache</scope><name>shutdown_</name></member>
+      <member refid="classapollo_1_1cyber_1_1event_1_1PerfEventCache_1aadc41f95023b4a56b5d119a08a69ffd5" prot="private" virt="non-virtual"><scope>apollo::cyber::event::PerfEventCache</scope><name>Start</name></member>
+      <member refid="classapollo_1_1cyber_1_1event_1_1PerfEventCache_1a5225c72f643d172f8a02beeb6eb84b51" prot="public" virt="non-virtual"><scope>apollo::cyber::event::PerfEventCache</scope><name>~PerfEventCache</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

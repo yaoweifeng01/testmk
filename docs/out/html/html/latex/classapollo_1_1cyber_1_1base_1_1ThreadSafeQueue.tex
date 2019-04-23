@@ -1,0 +1,137 @@
+\hypertarget{classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue}{\section{apollo\-:\-:cyber\-:\-:base\-:\-:Thread\-Safe\-Queue$<$ T $>$ Class Template Reference}
+\label{classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue}\index{apollo\-::cyber\-::base\-::\-Thread\-Safe\-Queue$<$ T $>$@{apollo\-::cyber\-::base\-::\-Thread\-Safe\-Queue$<$ T $>$}}
+}
+
+
+{\ttfamily \#include $<$thread\-\_\-safe\-\_\-queue.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_a53faa68b0280565bc0bf19a33fc27116}{Thread\-Safe\-Queue} ()
+\item 
+\hyperlink{classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue}{Thread\-Safe\-Queue} \& \hyperlink{classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_aa6d4c30efe955f33df9f71edcf6b1925}{operator=} (const \hyperlink{classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue}{Thread\-Safe\-Queue} \&other)=delete
+\item 
+\hyperlink{classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_a658904b7d330cbe47d394449eb0ad19f}{Thread\-Safe\-Queue} (const \hyperlink{classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue}{Thread\-Safe\-Queue} \&other)=delete
+\item 
+\hyperlink{classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_a37ff6193b7dad424f4dd16725fa9bd94}{$\sim$\-Thread\-Safe\-Queue} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_a5addc88d4aa0df085f4ca3192f2bae84}{Enqueue} (const T \&element)
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_a3509bdfe83511676d1ee791909f255d5}{Dequeue} (T $\ast$element)
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_abe3c4fe75f0f4f375d77a35a6f84ce22}{Wait\-Dequeue} (T $\ast$element)
+\item 
+std\-::queue$<$ T $>$\-::size\-\_\-type \hyperlink{classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_a00b7d801b1e3ab4ac30800640ff8ff92}{Size} ()
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_a30f40e14eaf493d221c0a1a3f11fc8ca}{Empty} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_a7bd0c67a33cb0b2bd0530370c13dc046}{Break\-All\-Wait} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+volatile bool \hyperlink{classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_a30e80687183f6d6eab2ec9cb77637666}{break\-\_\-all\-\_\-wait\-\_\-} = false
+\item 
+std\-::mutex \hyperlink{classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_ada372a404c6d74035a9c603cfe2a004f}{mutex\-\_\-}
+\item 
+std\-::queue$<$ T $>$ \hyperlink{classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_a8e0f3ac13d5adcdc05c4973594fbee27}{queue\-\_\-}
+\item 
+std\-::condition\-\_\-variable \hyperlink{classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_ad75c7d1bbe77c6c19112dee2208e16df}{cv\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_a53faa68b0280565bc0bf19a33fc27116}{\index{apollo\-::cyber\-::base\-::\-Thread\-Safe\-Queue@{apollo\-::cyber\-::base\-::\-Thread\-Safe\-Queue}!Thread\-Safe\-Queue@{Thread\-Safe\-Queue}}
+\index{Thread\-Safe\-Queue@{Thread\-Safe\-Queue}!apollo::cyber::base::ThreadSafeQueue@{apollo\-::cyber\-::base\-::\-Thread\-Safe\-Queue}}
+\subsubsection[{Thread\-Safe\-Queue}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf apollo\-::cyber\-::base\-::\-Thread\-Safe\-Queue}$<$ T $>$\-::{\bf Thread\-Safe\-Queue} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_a53faa68b0280565bc0bf19a33fc27116}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_a658904b7d330cbe47d394449eb0ad19f}{\index{apollo\-::cyber\-::base\-::\-Thread\-Safe\-Queue@{apollo\-::cyber\-::base\-::\-Thread\-Safe\-Queue}!Thread\-Safe\-Queue@{Thread\-Safe\-Queue}}
+\index{Thread\-Safe\-Queue@{Thread\-Safe\-Queue}!apollo::cyber::base::ThreadSafeQueue@{apollo\-::cyber\-::base\-::\-Thread\-Safe\-Queue}}
+\subsubsection[{Thread\-Safe\-Queue}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf apollo\-::cyber\-::base\-::\-Thread\-Safe\-Queue}$<$ T $>$\-::{\bf Thread\-Safe\-Queue} (
+\begin{DoxyParamCaption}
+\item[{const {\bf Thread\-Safe\-Queue}$<$ T $>$ \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}}\label{classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_a658904b7d330cbe47d394449eb0ad19f}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_a37ff6193b7dad424f4dd16725fa9bd94}{\index{apollo\-::cyber\-::base\-::\-Thread\-Safe\-Queue@{apollo\-::cyber\-::base\-::\-Thread\-Safe\-Queue}!$\sim$\-Thread\-Safe\-Queue@{$\sim$\-Thread\-Safe\-Queue}}
+\index{$\sim$\-Thread\-Safe\-Queue@{$\sim$\-Thread\-Safe\-Queue}!apollo::cyber::base::ThreadSafeQueue@{apollo\-::cyber\-::base\-::\-Thread\-Safe\-Queue}}
+\subsubsection[{$\sim$\-Thread\-Safe\-Queue}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf apollo\-::cyber\-::base\-::\-Thread\-Safe\-Queue}$<$ T $>$\-::$\sim${\bf Thread\-Safe\-Queue} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_a37ff6193b7dad424f4dd16725fa9bd94}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_a7bd0c67a33cb0b2bd0530370c13dc046}{\index{apollo\-::cyber\-::base\-::\-Thread\-Safe\-Queue@{apollo\-::cyber\-::base\-::\-Thread\-Safe\-Queue}!Break\-All\-Wait@{Break\-All\-Wait}}
+\index{Break\-All\-Wait@{Break\-All\-Wait}!apollo::cyber::base::ThreadSafeQueue@{apollo\-::cyber\-::base\-::\-Thread\-Safe\-Queue}}
+\subsubsection[{Break\-All\-Wait}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf apollo\-::cyber\-::base\-::\-Thread\-Safe\-Queue}$<$ T $>$\-::Break\-All\-Wait (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_a7bd0c67a33cb0b2bd0530370c13dc046}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_a3509bdfe83511676d1ee791909f255d5}{\index{apollo\-::cyber\-::base\-::\-Thread\-Safe\-Queue@{apollo\-::cyber\-::base\-::\-Thread\-Safe\-Queue}!Dequeue@{Dequeue}}
+\index{Dequeue@{Dequeue}!apollo::cyber::base::ThreadSafeQueue@{apollo\-::cyber\-::base\-::\-Thread\-Safe\-Queue}}
+\subsubsection[{Dequeue}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool {\bf apollo\-::cyber\-::base\-::\-Thread\-Safe\-Queue}$<$ T $>$\-::Dequeue (
+\begin{DoxyParamCaption}
+\item[{T $\ast$}]{element}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_a3509bdfe83511676d1ee791909f255d5}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_a30f40e14eaf493d221c0a1a3f11fc8ca}{\index{apollo\-::cyber\-::base\-::\-Thread\-Safe\-Queue@{apollo\-::cyber\-::base\-::\-Thread\-Safe\-Queue}!Empty@{Empty}}
+\index{Empty@{Empty}!apollo::cyber::base::ThreadSafeQueue@{apollo\-::cyber\-::base\-::\-Thread\-Safe\-Queue}}
+\subsubsection[{Empty}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool {\bf apollo\-::cyber\-::base\-::\-Thread\-Safe\-Queue}$<$ T $>$\-::Empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_a30f40e14eaf493d221c0a1a3f11fc8ca}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_a5addc88d4aa0df085f4ca3192f2bae84}{\index{apollo\-::cyber\-::base\-::\-Thread\-Safe\-Queue@{apollo\-::cyber\-::base\-::\-Thread\-Safe\-Queue}!Enqueue@{Enqueue}}
+\index{Enqueue@{Enqueue}!apollo::cyber::base::ThreadSafeQueue@{apollo\-::cyber\-::base\-::\-Thread\-Safe\-Queue}}
+\subsubsection[{Enqueue}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf apollo\-::cyber\-::base\-::\-Thread\-Safe\-Queue}$<$ T $>$\-::Enqueue (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{element}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_a5addc88d4aa0df085f4ca3192f2bae84}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_aa6d4c30efe955f33df9f71edcf6b1925}{\index{apollo\-::cyber\-::base\-::\-Thread\-Safe\-Queue@{apollo\-::cyber\-::base\-::\-Thread\-Safe\-Queue}!operator=@{operator=}}
+\index{operator=@{operator=}!apollo::cyber::base::ThreadSafeQueue@{apollo\-::cyber\-::base\-::\-Thread\-Safe\-Queue}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Thread\-Safe\-Queue}\& {\bf apollo\-::cyber\-::base\-::\-Thread\-Safe\-Queue}$<$ T $>$\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Thread\-Safe\-Queue}$<$ T $>$ \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}}\label{classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_aa6d4c30efe955f33df9f71edcf6b1925}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_a00b7d801b1e3ab4ac30800640ff8ff92}{\index{apollo\-::cyber\-::base\-::\-Thread\-Safe\-Queue@{apollo\-::cyber\-::base\-::\-Thread\-Safe\-Queue}!Size@{Size}}
+\index{Size@{Size}!apollo::cyber::base::ThreadSafeQueue@{apollo\-::cyber\-::base\-::\-Thread\-Safe\-Queue}}
+\subsubsection[{Size}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\-::queue$<$T$>$\-::size\-\_\-type {\bf apollo\-::cyber\-::base\-::\-Thread\-Safe\-Queue}$<$ T $>$\-::Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_a00b7d801b1e3ab4ac30800640ff8ff92}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_abe3c4fe75f0f4f375d77a35a6f84ce22}{\index{apollo\-::cyber\-::base\-::\-Thread\-Safe\-Queue@{apollo\-::cyber\-::base\-::\-Thread\-Safe\-Queue}!Wait\-Dequeue@{Wait\-Dequeue}}
+\index{Wait\-Dequeue@{Wait\-Dequeue}!apollo::cyber::base::ThreadSafeQueue@{apollo\-::cyber\-::base\-::\-Thread\-Safe\-Queue}}
+\subsubsection[{Wait\-Dequeue}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool {\bf apollo\-::cyber\-::base\-::\-Thread\-Safe\-Queue}$<$ T $>$\-::Wait\-Dequeue (
+\begin{DoxyParamCaption}
+\item[{T $\ast$}]{element}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_abe3c4fe75f0f4f375d77a35a6f84ce22}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_a30e80687183f6d6eab2ec9cb77637666}{\index{apollo\-::cyber\-::base\-::\-Thread\-Safe\-Queue@{apollo\-::cyber\-::base\-::\-Thread\-Safe\-Queue}!break\-\_\-all\-\_\-wait\-\_\-@{break\-\_\-all\-\_\-wait\-\_\-}}
+\index{break\-\_\-all\-\_\-wait\-\_\-@{break\-\_\-all\-\_\-wait\-\_\-}!apollo::cyber::base::ThreadSafeQueue@{apollo\-::cyber\-::base\-::\-Thread\-Safe\-Queue}}
+\subsubsection[{break\-\_\-all\-\_\-wait\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ volatile bool {\bf apollo\-::cyber\-::base\-::\-Thread\-Safe\-Queue}$<$ T $>$\-::break\-\_\-all\-\_\-wait\-\_\- = false\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_a30e80687183f6d6eab2ec9cb77637666}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_ad75c7d1bbe77c6c19112dee2208e16df}{\index{apollo\-::cyber\-::base\-::\-Thread\-Safe\-Queue@{apollo\-::cyber\-::base\-::\-Thread\-Safe\-Queue}!cv\-\_\-@{cv\-\_\-}}
+\index{cv\-\_\-@{cv\-\_\-}!apollo::cyber::base::ThreadSafeQueue@{apollo\-::cyber\-::base\-::\-Thread\-Safe\-Queue}}
+\subsubsection[{cv\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\-::condition\-\_\-variable {\bf apollo\-::cyber\-::base\-::\-Thread\-Safe\-Queue}$<$ T $>$\-::cv\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_ad75c7d1bbe77c6c19112dee2208e16df}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_ada372a404c6d74035a9c603cfe2a004f}{\index{apollo\-::cyber\-::base\-::\-Thread\-Safe\-Queue@{apollo\-::cyber\-::base\-::\-Thread\-Safe\-Queue}!mutex\-\_\-@{mutex\-\_\-}}
+\index{mutex\-\_\-@{mutex\-\_\-}!apollo::cyber::base::ThreadSafeQueue@{apollo\-::cyber\-::base\-::\-Thread\-Safe\-Queue}}
+\subsubsection[{mutex\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\-::mutex {\bf apollo\-::cyber\-::base\-::\-Thread\-Safe\-Queue}$<$ T $>$\-::mutex\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_ada372a404c6d74035a9c603cfe2a004f}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_a8e0f3ac13d5adcdc05c4973594fbee27}{\index{apollo\-::cyber\-::base\-::\-Thread\-Safe\-Queue@{apollo\-::cyber\-::base\-::\-Thread\-Safe\-Queue}!queue\-\_\-@{queue\-\_\-}}
+\index{queue\-\_\-@{queue\-\_\-}!apollo::cyber::base::ThreadSafeQueue@{apollo\-::cyber\-::base\-::\-Thread\-Safe\-Queue}}
+\subsubsection[{queue\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\-::queue$<$T$>$ {\bf apollo\-::cyber\-::base\-::\-Thread\-Safe\-Queue}$<$ T $>$\-::queue\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1base_1_1ThreadSafeQueue_a8e0f3ac13d5adcdc05c4973594fbee27}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+base/\hyperlink{thread__safe__queue_8h}{thread\-\_\-safe\-\_\-queue.\-h}\end{DoxyCompactItemize}

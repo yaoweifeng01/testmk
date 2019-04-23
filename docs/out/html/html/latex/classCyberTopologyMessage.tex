@@ -1,0 +1,197 @@
+\hypertarget{classCyberTopologyMessage}{\section{Cyber\-Topology\-Message Class Reference}
+\label{classCyberTopologyMessage}\index{Cyber\-Topology\-Message@{Cyber\-Topology\-Message}}
+}
+
+
+{\ttfamily \#include $<$cyber\-\_\-topology\-\_\-message.\-h$>$}
+
+Inheritance diagram for Cyber\-Topology\-Message\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classCyberTopologyMessage}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCyberTopologyMessage_ad29cc7035f525cb12cf25f0925656f74}{Cyber\-Topology\-Message} (const std\-::string \&channel)
+\item 
+\hyperlink{classCyberTopologyMessage_a79e7cc8a9ae14ac907c987131f86153e}{$\sim$\-Cyber\-Topology\-Message} ()
+\item 
+void \hyperlink{classCyberTopologyMessage_aed410d8532bc9230d35f61cebcee4824}{Render} (const \hyperlink{classScreen}{Screen} $\ast$s, int key) override
+\item 
+\hyperlink{classRenderableMessage}{Renderable\-Message} $\ast$ \hyperlink{classCyberTopologyMessage_afc36cda612863d6a940bef1509f39f16}{Child} (int index) const override
+\item 
+void \hyperlink{classCyberTopologyMessage_aeb57388a8b56c68681ab48f8ea5e5ea7}{Topology\-Changed} (const apollo\-::cyber\-::proto\-::\-Change\-Msg \&change\-\_\-msg)
+\item 
+void \hyperlink{classCyberTopologyMessage_a7ebd8b12a5e56099a2aec1aac9c1825e}{Add\-Reader\-Writer} (const apollo\-::cyber\-::proto\-::\-Role\-Attributes \&role, bool is\-Writer)
+\end{DoxyCompactItemize}
+\subsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classCyberTopologyMessage_a19a78ae56d2bd909e1b1403b3db83c52}{Second\-Column\-Type} \{ \hyperlink{classCyberTopologyMessage_a19a78ae56d2bd909e1b1403b3db83c52a20b67ff6d86442b20819a3cd48bfc603}{Second\-Column\-Type\-::\-Message\-Type}, 
+\hyperlink{classCyberTopologyMessage_a19a78ae56d2bd909e1b1403b3db83c52ace684cd329278d8b9193d22926686db5}{Second\-Column\-Type\-::\-Message\-Frame\-Ratio}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCyberTopologyMessage_acd5200e9387d9d989177b64deb426b17}{Cyber\-Topology\-Message} (const \hyperlink{classCyberTopologyMessage}{Cyber\-Topology\-Message} \&)=delete
+\item 
+\hyperlink{classCyberTopologyMessage}{Cyber\-Topology\-Message} \& \hyperlink{classCyberTopologyMessage_a9783107b7c5254325ecf6d6f59a22d4e}{operator=} (const \hyperlink{classCyberTopologyMessage}{Cyber\-Topology\-Message} \&)=delete
+\item 
+void \hyperlink{classCyberTopologyMessage_a4a61d42621d8db354727a18e9495a190}{Change\-State} (const \hyperlink{classScreen}{Screen} $\ast$s, int key)
+\item 
+bool \hyperlink{classCyberTopologyMessage_a2c775a5c10fce9c33f5316f877c9f018}{is\-From\-Here} (const std\-::string \&node\-Name)
+\item 
+std\-::map$<$ std\-::string, \\*
+\hyperlink{classGeneralChannelMessage}{General\-Channel\-Message} $\ast$ $>$\\*
+\-::const\-\_\-iterator \hyperlink{classCyberTopologyMessage_ade141cee6b72beee0a1255292bfa5124}{find\-Child} (int index) const 
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCyberTopologyMessage_a19a78ae56d2bd909e1b1403b3db83c52}{Second\-Column\-Type} \hyperlink{classCyberTopologyMessage_a1154eec678920dfada21e1f406dc28d0}{second\-\_\-column\-\_\-}
+\item 
+int \hyperlink{classCyberTopologyMessage_a3cc7dce72601c852f9f602f242b72e73}{pid\-\_\-}
+\item 
+int \hyperlink{classCyberTopologyMessage_ac3a5fef5a512872150261b3c32fafc60}{col1\-\_\-width\-\_\-}
+\item 
+const std\-::string \& \hyperlink{classCyberTopologyMessage_a5896a556d8bfbe583d112690f025a063}{specified\-\_\-channel\-\_\-}
+\item 
+std\-::map$<$ std\-::string, \\*
+\hyperlink{classGeneralChannelMessage}{General\-Channel\-Message} $\ast$ $>$ \hyperlink{classCyberTopologyMessage_a982b69f726e8f42a1c3a0389865d84f8}{all\-\_\-channels\-\_\-map\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classCyberTopologyMessage_a19a78ae56d2bd909e1b1403b3db83c52}{\index{Cyber\-Topology\-Message@{Cyber\-Topology\-Message}!Second\-Column\-Type@{Second\-Column\-Type}}
+\index{Second\-Column\-Type@{Second\-Column\-Type}!CyberTopologyMessage@{Cyber\-Topology\-Message}}
+\subsubsection[{Second\-Column\-Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Cyber\-Topology\-Message\-::\-Second\-Column\-Type}\hspace{0.3cm}{\ttfamily [strong]}, {\ttfamily [private]}}}\label{classCyberTopologyMessage_a19a78ae56d2bd909e1b1403b3db83c52}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Message\-Type@{Message\-Type}!Cyber\-Topology\-Message@{Cyber\-Topology\-Message}}\index{Cyber\-Topology\-Message@{Cyber\-Topology\-Message}!Message\-Type@{Message\-Type}}\item[{\em 
+\hypertarget{classCyberTopologyMessage_a19a78ae56d2bd909e1b1403b3db83c52a20b67ff6d86442b20819a3cd48bfc603}{Message\-Type}\label{classCyberTopologyMessage_a19a78ae56d2bd909e1b1403b3db83c52a20b67ff6d86442b20819a3cd48bfc603}
+}]\index{Message\-Frame\-Ratio@{Message\-Frame\-Ratio}!Cyber\-Topology\-Message@{Cyber\-Topology\-Message}}\index{Cyber\-Topology\-Message@{Cyber\-Topology\-Message}!Message\-Frame\-Ratio@{Message\-Frame\-Ratio}}\item[{\em 
+\hypertarget{classCyberTopologyMessage_a19a78ae56d2bd909e1b1403b3db83c52ace684cd329278d8b9193d22926686db5}{Message\-Frame\-Ratio}\label{classCyberTopologyMessage_a19a78ae56d2bd909e1b1403b3db83c52ace684cd329278d8b9193d22926686db5}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCyberTopologyMessage_ad29cc7035f525cb12cf25f0925656f74}{\index{Cyber\-Topology\-Message@{Cyber\-Topology\-Message}!Cyber\-Topology\-Message@{Cyber\-Topology\-Message}}
+\index{Cyber\-Topology\-Message@{Cyber\-Topology\-Message}!CyberTopologyMessage@{Cyber\-Topology\-Message}}
+\subsubsection[{Cyber\-Topology\-Message}]{\setlength{\rightskip}{0pt plus 5cm}Cyber\-Topology\-Message\-::\-Cyber\-Topology\-Message (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{channel}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}}\label{classCyberTopologyMessage_ad29cc7035f525cb12cf25f0925656f74}
+\hypertarget{classCyberTopologyMessage_a79e7cc8a9ae14ac907c987131f86153e}{\index{Cyber\-Topology\-Message@{Cyber\-Topology\-Message}!$\sim$\-Cyber\-Topology\-Message@{$\sim$\-Cyber\-Topology\-Message}}
+\index{$\sim$\-Cyber\-Topology\-Message@{$\sim$\-Cyber\-Topology\-Message}!CyberTopologyMessage@{Cyber\-Topology\-Message}}
+\subsubsection[{$\sim$\-Cyber\-Topology\-Message}]{\setlength{\rightskip}{0pt plus 5cm}Cyber\-Topology\-Message\-::$\sim$\-Cyber\-Topology\-Message (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classCyberTopologyMessage_a79e7cc8a9ae14ac907c987131f86153e}
+\hypertarget{classCyberTopologyMessage_acd5200e9387d9d989177b64deb426b17}{\index{Cyber\-Topology\-Message@{Cyber\-Topology\-Message}!Cyber\-Topology\-Message@{Cyber\-Topology\-Message}}
+\index{Cyber\-Topology\-Message@{Cyber\-Topology\-Message}!CyberTopologyMessage@{Cyber\-Topology\-Message}}
+\subsubsection[{Cyber\-Topology\-Message}]{\setlength{\rightskip}{0pt plus 5cm}Cyber\-Topology\-Message\-::\-Cyber\-Topology\-Message (
+\begin{DoxyParamCaption}
+\item[{const {\bf Cyber\-Topology\-Message} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}}\label{classCyberTopologyMessage_acd5200e9387d9d989177b64deb426b17}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCyberTopologyMessage_a7ebd8b12a5e56099a2aec1aac9c1825e}{\index{Cyber\-Topology\-Message@{Cyber\-Topology\-Message}!Add\-Reader\-Writer@{Add\-Reader\-Writer}}
+\index{Add\-Reader\-Writer@{Add\-Reader\-Writer}!CyberTopologyMessage@{Cyber\-Topology\-Message}}
+\subsubsection[{Add\-Reader\-Writer}]{\setlength{\rightskip}{0pt plus 5cm}void Cyber\-Topology\-Message\-::\-Add\-Reader\-Writer (
+\begin{DoxyParamCaption}
+\item[{const apollo\-::cyber\-::proto\-::\-Role\-Attributes \&}]{role, }
+\item[{bool}]{is\-Writer}
+\end{DoxyParamCaption}
+)}}\label{classCyberTopologyMessage_a7ebd8b12a5e56099a2aec1aac9c1825e}
+\hypertarget{classCyberTopologyMessage_a4a61d42621d8db354727a18e9495a190}{\index{Cyber\-Topology\-Message@{Cyber\-Topology\-Message}!Change\-State@{Change\-State}}
+\index{Change\-State@{Change\-State}!CyberTopologyMessage@{Cyber\-Topology\-Message}}
+\subsubsection[{Change\-State}]{\setlength{\rightskip}{0pt plus 5cm}void Cyber\-Topology\-Message\-::\-Change\-State (
+\begin{DoxyParamCaption}
+\item[{const {\bf Screen} $\ast$}]{s, }
+\item[{int}]{key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classCyberTopologyMessage_a4a61d42621d8db354727a18e9495a190}
+\hypertarget{classCyberTopologyMessage_afc36cda612863d6a940bef1509f39f16}{\index{Cyber\-Topology\-Message@{Cyber\-Topology\-Message}!Child@{Child}}
+\index{Child@{Child}!CyberTopologyMessage@{Cyber\-Topology\-Message}}
+\subsubsection[{Child}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Renderable\-Message}$\ast$ Cyber\-Topology\-Message\-::\-Child (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classCyberTopologyMessage_afc36cda612863d6a940bef1509f39f16}
+
+
+Implements \hyperlink{classRenderableMessage_a0f933ad0befd4d3cf3a95e205c7398d6}{Renderable\-Message}.
+
+\hypertarget{classCyberTopologyMessage_ade141cee6b72beee0a1255292bfa5124}{\index{Cyber\-Topology\-Message@{Cyber\-Topology\-Message}!find\-Child@{find\-Child}}
+\index{find\-Child@{find\-Child}!CyberTopologyMessage@{Cyber\-Topology\-Message}}
+\subsubsection[{find\-Child}]{\setlength{\rightskip}{0pt plus 5cm}std\-::map$<$std\-::string, {\bf General\-Channel\-Message}$\ast$$>$\-::const\-\_\-iterator Cyber\-Topology\-Message\-::find\-Child (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [private]}}}\label{classCyberTopologyMessage_ade141cee6b72beee0a1255292bfa5124}
+\hypertarget{classCyberTopologyMessage_a2c775a5c10fce9c33f5316f877c9f018}{\index{Cyber\-Topology\-Message@{Cyber\-Topology\-Message}!is\-From\-Here@{is\-From\-Here}}
+\index{is\-From\-Here@{is\-From\-Here}!CyberTopologyMessage@{Cyber\-Topology\-Message}}
+\subsubsection[{is\-From\-Here}]{\setlength{\rightskip}{0pt plus 5cm}bool Cyber\-Topology\-Message\-::is\-From\-Here (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{node\-Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classCyberTopologyMessage_a2c775a5c10fce9c33f5316f877c9f018}
+\hypertarget{classCyberTopologyMessage_a9783107b7c5254325ecf6d6f59a22d4e}{\index{Cyber\-Topology\-Message@{Cyber\-Topology\-Message}!operator=@{operator=}}
+\index{operator=@{operator=}!CyberTopologyMessage@{Cyber\-Topology\-Message}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Cyber\-Topology\-Message}\& Cyber\-Topology\-Message\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Cyber\-Topology\-Message} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}}\label{classCyberTopologyMessage_a9783107b7c5254325ecf6d6f59a22d4e}
+\hypertarget{classCyberTopologyMessage_aed410d8532bc9230d35f61cebcee4824}{\index{Cyber\-Topology\-Message@{Cyber\-Topology\-Message}!Render@{Render}}
+\index{Render@{Render}!CyberTopologyMessage@{Cyber\-Topology\-Message}}
+\subsubsection[{Render}]{\setlength{\rightskip}{0pt plus 5cm}void Cyber\-Topology\-Message\-::\-Render (
+\begin{DoxyParamCaption}
+\item[{const {\bf Screen} $\ast$}]{s, }
+\item[{int}]{key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classCyberTopologyMessage_aed410d8532bc9230d35f61cebcee4824}
+
+
+Implements \hyperlink{classRenderableMessage_a3f65c247f5db9bb4918bca7d665bbdc6}{Renderable\-Message}.
+
+\hypertarget{classCyberTopologyMessage_aeb57388a8b56c68681ab48f8ea5e5ea7}{\index{Cyber\-Topology\-Message@{Cyber\-Topology\-Message}!Topology\-Changed@{Topology\-Changed}}
+\index{Topology\-Changed@{Topology\-Changed}!CyberTopologyMessage@{Cyber\-Topology\-Message}}
+\subsubsection[{Topology\-Changed}]{\setlength{\rightskip}{0pt plus 5cm}void Cyber\-Topology\-Message\-::\-Topology\-Changed (
+\begin{DoxyParamCaption}
+\item[{const apollo\-::cyber\-::proto\-::\-Change\-Msg \&}]{change\-\_\-msg}
+\end{DoxyParamCaption}
+)}}\label{classCyberTopologyMessage_aeb57388a8b56c68681ab48f8ea5e5ea7}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classCyberTopologyMessage_a982b69f726e8f42a1c3a0389865d84f8}{\index{Cyber\-Topology\-Message@{Cyber\-Topology\-Message}!all\-\_\-channels\-\_\-map\-\_\-@{all\-\_\-channels\-\_\-map\-\_\-}}
+\index{all\-\_\-channels\-\_\-map\-\_\-@{all\-\_\-channels\-\_\-map\-\_\-}!CyberTopologyMessage@{Cyber\-Topology\-Message}}
+\subsubsection[{all\-\_\-channels\-\_\-map\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::map$<$std\-::string, {\bf General\-Channel\-Message}$\ast$$>$ Cyber\-Topology\-Message\-::all\-\_\-channels\-\_\-map\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classCyberTopologyMessage_a982b69f726e8f42a1c3a0389865d84f8}
+\hypertarget{classCyberTopologyMessage_ac3a5fef5a512872150261b3c32fafc60}{\index{Cyber\-Topology\-Message@{Cyber\-Topology\-Message}!col1\-\_\-width\-\_\-@{col1\-\_\-width\-\_\-}}
+\index{col1\-\_\-width\-\_\-@{col1\-\_\-width\-\_\-}!CyberTopologyMessage@{Cyber\-Topology\-Message}}
+\subsubsection[{col1\-\_\-width\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int Cyber\-Topology\-Message\-::col1\-\_\-width\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classCyberTopologyMessage_ac3a5fef5a512872150261b3c32fafc60}
+\hypertarget{classCyberTopologyMessage_a3cc7dce72601c852f9f602f242b72e73}{\index{Cyber\-Topology\-Message@{Cyber\-Topology\-Message}!pid\-\_\-@{pid\-\_\-}}
+\index{pid\-\_\-@{pid\-\_\-}!CyberTopologyMessage@{Cyber\-Topology\-Message}}
+\subsubsection[{pid\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int Cyber\-Topology\-Message\-::pid\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classCyberTopologyMessage_a3cc7dce72601c852f9f602f242b72e73}
+\hypertarget{classCyberTopologyMessage_a1154eec678920dfada21e1f406dc28d0}{\index{Cyber\-Topology\-Message@{Cyber\-Topology\-Message}!second\-\_\-column\-\_\-@{second\-\_\-column\-\_\-}}
+\index{second\-\_\-column\-\_\-@{second\-\_\-column\-\_\-}!CyberTopologyMessage@{Cyber\-Topology\-Message}}
+\subsubsection[{second\-\_\-column\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Second\-Column\-Type} Cyber\-Topology\-Message\-::second\-\_\-column\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classCyberTopologyMessage_a1154eec678920dfada21e1f406dc28d0}
+\hypertarget{classCyberTopologyMessage_a5896a556d8bfbe583d112690f025a063}{\index{Cyber\-Topology\-Message@{Cyber\-Topology\-Message}!specified\-\_\-channel\-\_\-@{specified\-\_\-channel\-\_\-}}
+\index{specified\-\_\-channel\-\_\-@{specified\-\_\-channel\-\_\-}!CyberTopologyMessage@{Cyber\-Topology\-Message}}
+\subsubsection[{specified\-\_\-channel\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::string\& Cyber\-Topology\-Message\-::specified\-\_\-channel\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classCyberTopologyMessage_a5896a556d8bfbe583d112690f025a063}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+tools/cyber\-\_\-monitor/\hyperlink{cyber__topology__message_8h}{cyber\-\_\-topology\-\_\-message.\-h}\end{DoxyCompactItemize}

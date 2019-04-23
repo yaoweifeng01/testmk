@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classapollo_1_1cyber_1_1transport_1_1IntraDispatcher" kind="class" prot="public">
+    <compoundname>apollo::cyber::transport::IntraDispatcher</compoundname>
+    <basecompoundref refid="classapollo_1_1cyber_1_1transport_1_1Dispatcher" prot="public" virt="non-virtual">apollo::cyber::transport::Dispatcher</basecompoundref>
+    <includes refid="intra__dispatcher_8h" local="no">intra_dispatcher.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1IntraDispatcher_1a2eee7291beff361006efd6d3dbfb26c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual apollo::cyber::transport::IntraDispatcher::~IntraDispatcher</definition>
+        <argsstring>()</argsstring>
+        <name>~IntraDispatcher</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/dispatcher/intra_dispatcher.h" line="40" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1IntraDispatcher_1a458c68701438bdcb83c3c7745200201f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename MessageT</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void apollo::cyber::transport::IntraDispatcher::OnMessage</definition>
+        <argsstring>(uint64_t channel_id, const std::shared_ptr&lt; MessageT &gt; &amp;message, const MessageInfo &amp;message_info)</argsstring>
+        <name>OnMessage</name>
+        <param>
+          <type>uint64_t</type>
+          <declname>channel_id</declname>
+        </param>
+        <param>
+          <type>const std::shared_ptr&lt; MessageT &gt; &amp;</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classapollo_1_1cyber_1_1transport_1_1MessageInfo" kindref="compound">MessageInfo</ref> &amp;</type>
+          <declname>message_info</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/dispatcher/intra_dispatcher.h" line="43" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/dispatcher/intra_dispatcher.h" bodystart="50" bodyend="79"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="379">
+        <label>apollo::cyber::transport::Dispatcher</label>
+        <link refid="classapollo_1_1cyber_1_1transport_1_1Dispatcher"/>
+      </node>
+      <node id="378">
+        <label>apollo::cyber::transport::IntraDispatcher</label>
+        <link refid="classapollo_1_1cyber_1_1transport_1_1IntraDispatcher"/>
+        <childnode refid="379" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="383">
+        <label>apollo::cyber::base::AtomicHashMap&lt; uint64_t, ListenerHandlerBasePtr &gt;</label>
+        <link refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap"/>
+        <childnode refid="384" relation="usage">
+          <edgelabel>table_</edgelabel>
+        </childnode>
+      </node>
+      <node id="385">
+        <label>apollo::cyber::base::AtomicHashMap&lt; K, V, TableSize, std::enable_if&lt; std::is_integral&lt; K &gt;::value &amp;&amp;(TableSize &amp;(TableSize-1))==0, int &gt;::type &gt;::Entry</label>
+        <link refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry"/>
+      </node>
+      <node id="381">
+        <label>apollo::cyber::transport::Dispatcher</label>
+        <link refid="classapollo_1_1cyber_1_1transport_1_1Dispatcher"/>
+        <childnode refid="382" relation="usage">
+          <edgelabel>rw_lock_</edgelabel>
+        </childnode>
+        <childnode refid="383" relation="usage">
+          <edgelabel>msg_listeners_</edgelabel>
+        </childnode>
+      </node>
+      <node id="382">
+        <label>apollo::cyber::base::AtomicRWLock</label>
+        <link refid="classapollo_1_1cyber_1_1base_1_1AtomicRWLock"/>
+      </node>
+      <node id="380">
+        <label>apollo::cyber::transport::IntraDispatcher</label>
+        <link refid="classapollo_1_1cyber_1_1transport_1_1IntraDispatcher"/>
+        <childnode refid="381" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="384">
+        <label>apollo::cyber::base::AtomicHashMap&lt; K, V, TableSize, std::enable_if&lt; std::is_integral&lt; K &gt;::value &amp;&amp;(TableSize &amp;(TableSize-1))==0, int &gt;::type &gt;::Bucket</label>
+        <link refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Bucket"/>
+        <childnode refid="385" relation="usage">
+          <edgelabel>head_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/work/apollo-fork/apollo/cyber/transport/dispatcher/intra_dispatcher.h" line="38" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/dispatcher/intra_dispatcher.h" bodystart="38" bodyend="47"/>
+    <listofallmembers>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Dispatcher_1a0e145dae91537eb77d7b09745b08bd97" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::IntraDispatcher</scope><name>AddListener</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Dispatcher_1a57032c00ea89222e65f3c3c5ce2ca498" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::IntraDispatcher</scope><name>AddListener</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Dispatcher_1a7b740666b178815f3bef327a223fe39f" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::IntraDispatcher</scope><name>Dispatcher</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Dispatcher_1a7bea7181659fa46204434dbdba90e00f" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::IntraDispatcher</scope><name>HasChannel</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Dispatcher_1a014ad0d3a3d8830aec03c8a47a00b385" prot="protected" virt="non-virtual"><scope>apollo::cyber::transport::IntraDispatcher</scope><name>is_shutdown_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Dispatcher_1aec5b13dcc35013468812f0ea0bd0dd89" prot="protected" virt="non-virtual"><scope>apollo::cyber::transport::IntraDispatcher</scope><name>msg_listeners_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1IntraDispatcher_1a458c68701438bdcb83c3c7745200201f" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::IntraDispatcher</scope><name>OnMessage</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Dispatcher_1a24ced235e749abc47265d6ffade4f8bc" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::IntraDispatcher</scope><name>RemoveListener</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Dispatcher_1af81d7e383f5cb1c4b92ab4dd84125997" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::IntraDispatcher</scope><name>RemoveListener</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Dispatcher_1a93d037058df25c609f9d2e24f62bd67e" prot="protected" virt="non-virtual"><scope>apollo::cyber::transport::IntraDispatcher</scope><name>rw_lock_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Dispatcher_1a87c80d37d0b6218218ad888888ad0d08" prot="public" virt="virtual"><scope>apollo::cyber::transport::IntraDispatcher</scope><name>Shutdown</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Dispatcher_1a6d28df2005ee5409e4dedb0e80a6bb91" prot="public" virt="virtual"><scope>apollo::cyber::transport::IntraDispatcher</scope><name>~Dispatcher</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1IntraDispatcher_1a2eee7291beff361006efd6d3dbfb26c5" prot="public" virt="virtual"><scope>apollo::cyber::transport::IntraDispatcher</scope><name>~IntraDispatcher</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

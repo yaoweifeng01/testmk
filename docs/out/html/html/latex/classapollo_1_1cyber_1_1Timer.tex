@@ -1,0 +1,151 @@
+\hypertarget{classapollo_1_1cyber_1_1Timer}{\section{apollo\-:\-:cyber\-:\-:Timer Class Reference}
+\label{classapollo_1_1cyber_1_1Timer}\index{apollo\-::cyber\-::\-Timer@{apollo\-::cyber\-::\-Timer}}
+}
+
+
+{\ttfamily \#include $<$timer.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1Timer_a433f8bd6376d0a3d8cac529998052f6e}{Timer} ()
+\item 
+\hyperlink{classapollo_1_1cyber_1_1Timer_afdd6c9fe9bb5b5d48d4061e82197daae}{Timer} (\hyperlink{structapollo_1_1cyber_1_1TimerOption}{Timer\-Option} opt)
+\begin{DoxyCompactList}\small\item\em Construct a new \hyperlink{classapollo_1_1cyber_1_1Timer}{Timer} object. \end{DoxyCompactList}\item 
+\hyperlink{classapollo_1_1cyber_1_1Timer_a1c3d651afac72fe0370485dcb07c13e6}{Timer} (uint32\-\_\-t period, std\-::function$<$ void()$>$ callback, bool oneshot)
+\begin{DoxyCompactList}\small\item\em Construct a new \hyperlink{classapollo_1_1cyber_1_1Timer}{Timer} object. \end{DoxyCompactList}\item 
+\hyperlink{classapollo_1_1cyber_1_1Timer_a31c3aa1ad7acc8a20afb1ef6839b1b0c}{$\sim$\-Timer} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1Timer_aa56aad6720943db62e3d59475d400b24}{Set\-Timer\-Option} (\hyperlink{structapollo_1_1cyber_1_1TimerOption}{Timer\-Option} opt)
+\begin{DoxyCompactList}\small\item\em Set the \hyperlink{classapollo_1_1cyber_1_1Timer}{Timer} Option object. \end{DoxyCompactList}\item 
+void \hyperlink{classapollo_1_1cyber_1_1Timer_acfee595a5b142ce443e1b37427e2efc5}{Start} ()
+\begin{DoxyCompactList}\small\item\em Start the timer. \end{DoxyCompactList}\item 
+void \hyperlink{classapollo_1_1cyber_1_1Timer_a350a69e04b943f960ca992de21b676cf}{Stop} ()
+\begin{DoxyCompactList}\small\item\em Stop the timer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structapollo_1_1cyber_1_1TimerOption}{Timer\-Option} \hyperlink{classapollo_1_1cyber_1_1Timer_ac72f9500a21b1f8011de877da8840d9f}{timer\-\_\-opt\-\_\-}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1TimerManager}{Timer\-Manager} $\ast$ \hyperlink{classapollo_1_1cyber_1_1Timer_a005fea5fb48bdee66ef0032d47f79714}{tm\-\_\-} = nullptr
+\item 
+uint64\-\_\-t \hyperlink{classapollo_1_1cyber_1_1Timer_acd0cde31c5d7213a99bb688b0d06ee66}{timer\-\_\-id\-\_\-} = 0
+\item 
+std\-::atomic$<$ bool $>$ \hyperlink{classapollo_1_1cyber_1_1Timer_abd2d33f780bda0a1f1fa36e52deb26ef}{started\-\_\-} = \{false\}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classapollo_1_1cyber_1_1Timer_a433f8bd6376d0a3d8cac529998052f6e}{\index{apollo\-::cyber\-::\-Timer@{apollo\-::cyber\-::\-Timer}!Timer@{Timer}}
+\index{Timer@{Timer}!apollo::cyber::Timer@{apollo\-::cyber\-::\-Timer}}
+\subsubsection[{Timer}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::\-Timer\-::\-Timer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1Timer_a433f8bd6376d0a3d8cac529998052f6e}
+\hypertarget{classapollo_1_1cyber_1_1Timer_afdd6c9fe9bb5b5d48d4061e82197daae}{\index{apollo\-::cyber\-::\-Timer@{apollo\-::cyber\-::\-Timer}!Timer@{Timer}}
+\index{Timer@{Timer}!apollo::cyber::Timer@{apollo\-::cyber\-::\-Timer}}
+\subsubsection[{Timer}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::\-Timer\-::\-Timer (
+\begin{DoxyParamCaption}
+\item[{{\bf Timer\-Option}}]{opt}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}}\label{classapollo_1_1cyber_1_1Timer_afdd6c9fe9bb5b5d48d4061e82197daae}
+
+
+Construct a new \hyperlink{classapollo_1_1cyber_1_1Timer}{Timer} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em opt} & \hyperlink{classapollo_1_1cyber_1_1Timer}{Timer} option \\
+\hline
+\end{DoxyParams}
+\hypertarget{classapollo_1_1cyber_1_1Timer_a1c3d651afac72fe0370485dcb07c13e6}{\index{apollo\-::cyber\-::\-Timer@{apollo\-::cyber\-::\-Timer}!Timer@{Timer}}
+\index{Timer@{Timer}!apollo::cyber::Timer@{apollo\-::cyber\-::\-Timer}}
+\subsubsection[{Timer}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::\-Timer\-::\-Timer (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{period, }
+\item[{std\-::function$<$ void()$>$}]{callback, }
+\item[{bool}]{oneshot}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1Timer_a1c3d651afac72fe0370485dcb07c13e6}
+
+
+Construct a new \hyperlink{classapollo_1_1cyber_1_1Timer}{Timer} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em period} & The period of the timer, unit is ms \\
+\hline
+{\em callback} & The tasks that the timer needs to perform \\
+\hline
+{\em oneshot} & True\-: perform the callback only after the first timing cycle False\-: perform the callback every timed period \\
+\hline
+\end{DoxyParams}
+\hypertarget{classapollo_1_1cyber_1_1Timer_a31c3aa1ad7acc8a20afb1ef6839b1b0c}{\index{apollo\-::cyber\-::\-Timer@{apollo\-::cyber\-::\-Timer}!$\sim$\-Timer@{$\sim$\-Timer}}
+\index{$\sim$\-Timer@{$\sim$\-Timer}!apollo::cyber::Timer@{apollo\-::cyber\-::\-Timer}}
+\subsubsection[{$\sim$\-Timer}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::\-Timer\-::$\sim$\-Timer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1Timer_a31c3aa1ad7acc8a20afb1ef6839b1b0c}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1Timer_aa56aad6720943db62e3d59475d400b24}{\index{apollo\-::cyber\-::\-Timer@{apollo\-::cyber\-::\-Timer}!Set\-Timer\-Option@{Set\-Timer\-Option}}
+\index{Set\-Timer\-Option@{Set\-Timer\-Option}!apollo::cyber::Timer@{apollo\-::cyber\-::\-Timer}}
+\subsubsection[{Set\-Timer\-Option}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::\-Timer\-::\-Set\-Timer\-Option (
+\begin{DoxyParamCaption}
+\item[{{\bf Timer\-Option}}]{opt}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1Timer_aa56aad6720943db62e3d59475d400b24}
+
+
+Set the \hyperlink{classapollo_1_1cyber_1_1Timer}{Timer} Option object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em opt} & The timer option will be set \\
+\hline
+\end{DoxyParams}
+\hypertarget{classapollo_1_1cyber_1_1Timer_acfee595a5b142ce443e1b37427e2efc5}{\index{apollo\-::cyber\-::\-Timer@{apollo\-::cyber\-::\-Timer}!Start@{Start}}
+\index{Start@{Start}!apollo::cyber::Timer@{apollo\-::cyber\-::\-Timer}}
+\subsubsection[{Start}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::\-Timer\-::\-Start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1Timer_acfee595a5b142ce443e1b37427e2efc5}
+
+
+Start the timer. 
+
+\hypertarget{classapollo_1_1cyber_1_1Timer_a350a69e04b943f960ca992de21b676cf}{\index{apollo\-::cyber\-::\-Timer@{apollo\-::cyber\-::\-Timer}!Stop@{Stop}}
+\index{Stop@{Stop}!apollo::cyber::Timer@{apollo\-::cyber\-::\-Timer}}
+\subsubsection[{Stop}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::\-Timer\-::\-Stop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1Timer_a350a69e04b943f960ca992de21b676cf}
+
+
+Stop the timer. 
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classapollo_1_1cyber_1_1Timer_abd2d33f780bda0a1f1fa36e52deb26ef}{\index{apollo\-::cyber\-::\-Timer@{apollo\-::cyber\-::\-Timer}!started\-\_\-@{started\-\_\-}}
+\index{started\-\_\-@{started\-\_\-}!apollo::cyber::Timer@{apollo\-::cyber\-::\-Timer}}
+\subsubsection[{started\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::atomic$<$bool$>$ apollo\-::cyber\-::\-Timer\-::started\-\_\- = \{false\}\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1Timer_abd2d33f780bda0a1f1fa36e52deb26ef}
+\hypertarget{classapollo_1_1cyber_1_1Timer_acd0cde31c5d7213a99bb688b0d06ee66}{\index{apollo\-::cyber\-::\-Timer@{apollo\-::cyber\-::\-Timer}!timer\-\_\-id\-\_\-@{timer\-\_\-id\-\_\-}}
+\index{timer\-\_\-id\-\_\-@{timer\-\_\-id\-\_\-}!apollo::cyber::Timer@{apollo\-::cyber\-::\-Timer}}
+\subsubsection[{timer\-\_\-id\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}uint64\-\_\-t apollo\-::cyber\-::\-Timer\-::timer\-\_\-id\-\_\- = 0\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1Timer_acd0cde31c5d7213a99bb688b0d06ee66}
+\hypertarget{classapollo_1_1cyber_1_1Timer_ac72f9500a21b1f8011de877da8840d9f}{\index{apollo\-::cyber\-::\-Timer@{apollo\-::cyber\-::\-Timer}!timer\-\_\-opt\-\_\-@{timer\-\_\-opt\-\_\-}}
+\index{timer\-\_\-opt\-\_\-@{timer\-\_\-opt\-\_\-}!apollo::cyber::Timer@{apollo\-::cyber\-::\-Timer}}
+\subsubsection[{timer\-\_\-opt\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Timer\-Option} apollo\-::cyber\-::\-Timer\-::timer\-\_\-opt\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1Timer_ac72f9500a21b1f8011de877da8840d9f}
+\hypertarget{classapollo_1_1cyber_1_1Timer_a005fea5fb48bdee66ef0032d47f79714}{\index{apollo\-::cyber\-::\-Timer@{apollo\-::cyber\-::\-Timer}!tm\-\_\-@{tm\-\_\-}}
+\index{tm\-\_\-@{tm\-\_\-}!apollo::cyber::Timer@{apollo\-::cyber\-::\-Timer}}
+\subsubsection[{tm\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Timer\-Manager}$\ast$ apollo\-::cyber\-::\-Timer\-::tm\-\_\- = nullptr\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1Timer_a005fea5fb48bdee66ef0032d47f79714}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+timer/\hyperlink{timer_8h}{timer.\-h}\end{DoxyCompactItemize}

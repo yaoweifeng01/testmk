@@ -1,0 +1,168 @@
+\hypertarget{classapollo_1_1cyber_1_1scheduler_1_1ClassicContext}{\section{apollo\-:\-:cyber\-:\-:scheduler\-:\-:Classic\-Context Class Reference}
+\label{classapollo_1_1cyber_1_1scheduler_1_1ClassicContext}\index{apollo\-::cyber\-::scheduler\-::\-Classic\-Context@{apollo\-::cyber\-::scheduler\-::\-Classic\-Context}}
+}
+
+
+{\ttfamily \#include $<$classic\-\_\-context.\-h$>$}
+
+Inheritance diagram for apollo\-:\-:cyber\-:\-:scheduler\-:\-:Classic\-Context\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classapollo_1_1cyber_1_1scheduler_1_1ClassicContext}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_a663924838acb75ef7c041bc435a8142f}{Classic\-Context} ()
+\item 
+\hyperlink{classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_aeaaa88d1cab549ab2800f5e229c1244a}{Classic\-Context} (const std\-::string \&group\-\_\-name)
+\item 
+std\-::shared\-\_\-ptr$<$ \hyperlink{classapollo_1_1cyber_1_1croutine_1_1CRoutine}{C\-Routine} $>$ \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_a6a9ffd7b5fb645a97b7daf93d4973025}{Next\-Routine} () override
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_ac32e655ea3689a0bc06c9003852fd0a3}{Wait} () override
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_aa6c94b93d17fb4f546c8f2f7e74f832a}{Shutdown} () override
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_afaa6f92a7ea305b55cd96763cbdd2a90}{Notify} (const std\-::string \&group\-\_\-name)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{namespaceapollo_1_1cyber_1_1scheduler_ad4f939996840b0f02dafc9a779dfefd7}{R\-Q\-\_\-\-L\-O\-C\-K\-\_\-\-G\-R\-O\-U\-P} \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_a10adfb1632c4cb5049273262cb997333}{rq\-\_\-locks\-\_\-}
+\item 
+static \hyperlink{namespaceapollo_1_1cyber_1_1scheduler_aea5742ba3cc52566de1eeeeaac1a8714}{C\-R\-\_\-\-G\-R\-O\-U\-P} \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_a22519e2ac14bf14f0b81e4a3a3befcfb}{cr\-\_\-group\-\_\-}
+\item 
+static \hyperlink{namespaceapollo_1_1cyber_1_1scheduler_a38dec21bb0dcc34727c9a215020abb70}{G\-R\-P\-\_\-\-W\-Q\-\_\-\-M\-U\-T\-E\-X} \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_a48ad41105f3adbc71ca925a08ff987ee}{mtx\-\_\-wq\-\_\-}
+\item 
+static \hyperlink{namespaceapollo_1_1cyber_1_1scheduler_aaaf29077b955c494a8b6ef756e02ed4d}{G\-R\-P\-\_\-\-W\-Q\-\_\-\-C\-V} \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_abc70c8c180700b17f5048020f21b6fd0}{cv\-\_\-wq\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_a2f4f0b6749ceb22e645c8ca2567f903a}{Init\-Group} (const std\-::string \&group\-\_\-name)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\-::chrono\-::steady\-\_\-clock\-::time\-\_\-point \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_abc30359d23f986f35b0c01ff81d6ccc1}{wake\-\_\-time\-\_\-}
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_a094e0d83afedbb7530649d54b17f9e65}{need\-\_\-sleep\-\_\-} = false
+\item 
+\hyperlink{namespaceapollo_1_1cyber_1_1scheduler_ac66e3c3cdda21d9be8ea0692401913a2}{M\-U\-L\-T\-I\-\_\-\-P\-R\-I\-O\-\_\-\-Q\-U\-E\-U\-E} $\ast$ \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_aa3ed67cfe2876f8fd1e1388867cad234}{multi\-\_\-pri\-\_\-rq\-\_\-} = nullptr
+\item 
+\hyperlink{namespaceapollo_1_1cyber_1_1scheduler_a714aab7bf591e6d2f48fafdbbb1dda02}{L\-O\-C\-K\-\_\-\-Q\-U\-E\-U\-E} $\ast$ \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_af6e0adf912a3056950ded3660aabb9ec}{lq\-\_\-} = nullptr
+\item 
+\hyperlink{classapollo_1_1cyber_1_1scheduler_1_1MutexWrapper}{Mutex\-Wrapper} $\ast$ \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_a12aaac26d8fbeea3ac3124eb08528409}{mtx\-\_\-wrapper\-\_\-} = nullptr
+\item 
+\hyperlink{classapollo_1_1cyber_1_1scheduler_1_1CvWrapper}{Cv\-Wrapper} $\ast$ \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_a39f22a14b1997f761659f2fe8cbade8b}{cw\-\_\-} = nullptr
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_a663924838acb75ef7c041bc435a8142f}{\index{apollo\-::cyber\-::scheduler\-::\-Classic\-Context@{apollo\-::cyber\-::scheduler\-::\-Classic\-Context}!Classic\-Context@{Classic\-Context}}
+\index{Classic\-Context@{Classic\-Context}!apollo::cyber::scheduler::ClassicContext@{apollo\-::cyber\-::scheduler\-::\-Classic\-Context}}
+\subsubsection[{Classic\-Context}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::scheduler\-::\-Classic\-Context\-::\-Classic\-Context (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_a663924838acb75ef7c041bc435a8142f}
+\hypertarget{classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_aeaaa88d1cab549ab2800f5e229c1244a}{\index{apollo\-::cyber\-::scheduler\-::\-Classic\-Context@{apollo\-::cyber\-::scheduler\-::\-Classic\-Context}!Classic\-Context@{Classic\-Context}}
+\index{Classic\-Context@{Classic\-Context}!apollo::cyber::scheduler::ClassicContext@{apollo\-::cyber\-::scheduler\-::\-Classic\-Context}}
+\subsubsection[{Classic\-Context}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::scheduler\-::\-Classic\-Context\-::\-Classic\-Context (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{group\-\_\-name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}}\label{classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_aeaaa88d1cab549ab2800f5e229c1244a}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_a2f4f0b6749ceb22e645c8ca2567f903a}{\index{apollo\-::cyber\-::scheduler\-::\-Classic\-Context@{apollo\-::cyber\-::scheduler\-::\-Classic\-Context}!Init\-Group@{Init\-Group}}
+\index{Init\-Group@{Init\-Group}!apollo::cyber::scheduler::ClassicContext@{apollo\-::cyber\-::scheduler\-::\-Classic\-Context}}
+\subsubsection[{Init\-Group}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::scheduler\-::\-Classic\-Context\-::\-Init\-Group (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{group\-\_\-name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_a2f4f0b6749ceb22e645c8ca2567f903a}
+\hypertarget{classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_a6a9ffd7b5fb645a97b7daf93d4973025}{\index{apollo\-::cyber\-::scheduler\-::\-Classic\-Context@{apollo\-::cyber\-::scheduler\-::\-Classic\-Context}!Next\-Routine@{Next\-Routine}}
+\index{Next\-Routine@{Next\-Routine}!apollo::cyber::scheduler::ClassicContext@{apollo\-::cyber\-::scheduler\-::\-Classic\-Context}}
+\subsubsection[{Next\-Routine}]{\setlength{\rightskip}{0pt plus 5cm}std\-::shared\-\_\-ptr$<${\bf C\-Routine}$>$ apollo\-::cyber\-::scheduler\-::\-Classic\-Context\-::\-Next\-Routine (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_a6a9ffd7b5fb645a97b7daf93d4973025}
+
+
+Implements \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1ProcessorContext_a0923b50903b11612234355566ab573e0}{apollo\-::cyber\-::scheduler\-::\-Processor\-Context}.
+
+\hypertarget{classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_afaa6f92a7ea305b55cd96763cbdd2a90}{\index{apollo\-::cyber\-::scheduler\-::\-Classic\-Context@{apollo\-::cyber\-::scheduler\-::\-Classic\-Context}!Notify@{Notify}}
+\index{Notify@{Notify}!apollo::cyber::scheduler::ClassicContext@{apollo\-::cyber\-::scheduler\-::\-Classic\-Context}}
+\subsubsection[{Notify}]{\setlength{\rightskip}{0pt plus 5cm}static void apollo\-::cyber\-::scheduler\-::\-Classic\-Context\-::\-Notify (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{group\-\_\-name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_afaa6f92a7ea305b55cd96763cbdd2a90}
+\hypertarget{classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_aa6c94b93d17fb4f546c8f2f7e74f832a}{\index{apollo\-::cyber\-::scheduler\-::\-Classic\-Context@{apollo\-::cyber\-::scheduler\-::\-Classic\-Context}!Shutdown@{Shutdown}}
+\index{Shutdown@{Shutdown}!apollo::cyber::scheduler::ClassicContext@{apollo\-::cyber\-::scheduler\-::\-Classic\-Context}}
+\subsubsection[{Shutdown}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::scheduler\-::\-Classic\-Context\-::\-Shutdown (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_aa6c94b93d17fb4f546c8f2f7e74f832a}
+
+
+Reimplemented from \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1ProcessorContext_ab36b8e9524ea0e02cba88b7d4e0e3079}{apollo\-::cyber\-::scheduler\-::\-Processor\-Context}.
+
+\hypertarget{classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_ac32e655ea3689a0bc06c9003852fd0a3}{\index{apollo\-::cyber\-::scheduler\-::\-Classic\-Context@{apollo\-::cyber\-::scheduler\-::\-Classic\-Context}!Wait@{Wait}}
+\index{Wait@{Wait}!apollo::cyber::scheduler::ClassicContext@{apollo\-::cyber\-::scheduler\-::\-Classic\-Context}}
+\subsubsection[{Wait}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::scheduler\-::\-Classic\-Context\-::\-Wait (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_ac32e655ea3689a0bc06c9003852fd0a3}
+
+
+Implements \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1ProcessorContext_a0a2e1914277be7a5fe81f459c83b6644}{apollo\-::cyber\-::scheduler\-::\-Processor\-Context}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_a22519e2ac14bf14f0b81e4a3a3befcfb}{\index{apollo\-::cyber\-::scheduler\-::\-Classic\-Context@{apollo\-::cyber\-::scheduler\-::\-Classic\-Context}!cr\-\_\-group\-\_\-@{cr\-\_\-group\-\_\-}}
+\index{cr\-\_\-group\-\_\-@{cr\-\_\-group\-\_\-}!apollo::cyber::scheduler::ClassicContext@{apollo\-::cyber\-::scheduler\-::\-Classic\-Context}}
+\subsubsection[{cr\-\_\-group\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-R\-\_\-\-G\-R\-O\-U\-P} apollo\-::cyber\-::scheduler\-::\-Classic\-Context\-::cr\-\_\-group\-\_\-\hspace{0.3cm}{\ttfamily [static]}}}\label{classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_a22519e2ac14bf14f0b81e4a3a3befcfb}
+\hypertarget{classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_abc70c8c180700b17f5048020f21b6fd0}{\index{apollo\-::cyber\-::scheduler\-::\-Classic\-Context@{apollo\-::cyber\-::scheduler\-::\-Classic\-Context}!cv\-\_\-wq\-\_\-@{cv\-\_\-wq\-\_\-}}
+\index{cv\-\_\-wq\-\_\-@{cv\-\_\-wq\-\_\-}!apollo::cyber::scheduler::ClassicContext@{apollo\-::cyber\-::scheduler\-::\-Classic\-Context}}
+\subsubsection[{cv\-\_\-wq\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\-R\-P\-\_\-\-W\-Q\-\_\-\-C\-V} apollo\-::cyber\-::scheduler\-::\-Classic\-Context\-::cv\-\_\-wq\-\_\-\hspace{0.3cm}{\ttfamily [static]}}}\label{classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_abc70c8c180700b17f5048020f21b6fd0}
+\hypertarget{classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_a39f22a14b1997f761659f2fe8cbade8b}{\index{apollo\-::cyber\-::scheduler\-::\-Classic\-Context@{apollo\-::cyber\-::scheduler\-::\-Classic\-Context}!cw\-\_\-@{cw\-\_\-}}
+\index{cw\-\_\-@{cw\-\_\-}!apollo::cyber::scheduler::ClassicContext@{apollo\-::cyber\-::scheduler\-::\-Classic\-Context}}
+\subsubsection[{cw\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Cv\-Wrapper}$\ast$ apollo\-::cyber\-::scheduler\-::\-Classic\-Context\-::cw\-\_\- = nullptr\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_a39f22a14b1997f761659f2fe8cbade8b}
+\hypertarget{classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_af6e0adf912a3056950ded3660aabb9ec}{\index{apollo\-::cyber\-::scheduler\-::\-Classic\-Context@{apollo\-::cyber\-::scheduler\-::\-Classic\-Context}!lq\-\_\-@{lq\-\_\-}}
+\index{lq\-\_\-@{lq\-\_\-}!apollo::cyber::scheduler::ClassicContext@{apollo\-::cyber\-::scheduler\-::\-Classic\-Context}}
+\subsubsection[{lq\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-O\-C\-K\-\_\-\-Q\-U\-E\-U\-E}$\ast$ apollo\-::cyber\-::scheduler\-::\-Classic\-Context\-::lq\-\_\- = nullptr\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_af6e0adf912a3056950ded3660aabb9ec}
+\hypertarget{classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_a48ad41105f3adbc71ca925a08ff987ee}{\index{apollo\-::cyber\-::scheduler\-::\-Classic\-Context@{apollo\-::cyber\-::scheduler\-::\-Classic\-Context}!mtx\-\_\-wq\-\_\-@{mtx\-\_\-wq\-\_\-}}
+\index{mtx\-\_\-wq\-\_\-@{mtx\-\_\-wq\-\_\-}!apollo::cyber::scheduler::ClassicContext@{apollo\-::cyber\-::scheduler\-::\-Classic\-Context}}
+\subsubsection[{mtx\-\_\-wq\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\-R\-P\-\_\-\-W\-Q\-\_\-\-M\-U\-T\-E\-X} apollo\-::cyber\-::scheduler\-::\-Classic\-Context\-::mtx\-\_\-wq\-\_\-\hspace{0.3cm}{\ttfamily [static]}}}\label{classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_a48ad41105f3adbc71ca925a08ff987ee}
+\hypertarget{classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_a12aaac26d8fbeea3ac3124eb08528409}{\index{apollo\-::cyber\-::scheduler\-::\-Classic\-Context@{apollo\-::cyber\-::scheduler\-::\-Classic\-Context}!mtx\-\_\-wrapper\-\_\-@{mtx\-\_\-wrapper\-\_\-}}
+\index{mtx\-\_\-wrapper\-\_\-@{mtx\-\_\-wrapper\-\_\-}!apollo::cyber::scheduler::ClassicContext@{apollo\-::cyber\-::scheduler\-::\-Classic\-Context}}
+\subsubsection[{mtx\-\_\-wrapper\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Mutex\-Wrapper}$\ast$ apollo\-::cyber\-::scheduler\-::\-Classic\-Context\-::mtx\-\_\-wrapper\-\_\- = nullptr\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_a12aaac26d8fbeea3ac3124eb08528409}
+\hypertarget{classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_aa3ed67cfe2876f8fd1e1388867cad234}{\index{apollo\-::cyber\-::scheduler\-::\-Classic\-Context@{apollo\-::cyber\-::scheduler\-::\-Classic\-Context}!multi\-\_\-pri\-\_\-rq\-\_\-@{multi\-\_\-pri\-\_\-rq\-\_\-}}
+\index{multi\-\_\-pri\-\_\-rq\-\_\-@{multi\-\_\-pri\-\_\-rq\-\_\-}!apollo::cyber::scheduler::ClassicContext@{apollo\-::cyber\-::scheduler\-::\-Classic\-Context}}
+\subsubsection[{multi\-\_\-pri\-\_\-rq\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\-U\-L\-T\-I\-\_\-\-P\-R\-I\-O\-\_\-\-Q\-U\-E\-U\-E}$\ast$ apollo\-::cyber\-::scheduler\-::\-Classic\-Context\-::multi\-\_\-pri\-\_\-rq\-\_\- = nullptr\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_aa3ed67cfe2876f8fd1e1388867cad234}
+\hypertarget{classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_a094e0d83afedbb7530649d54b17f9e65}{\index{apollo\-::cyber\-::scheduler\-::\-Classic\-Context@{apollo\-::cyber\-::scheduler\-::\-Classic\-Context}!need\-\_\-sleep\-\_\-@{need\-\_\-sleep\-\_\-}}
+\index{need\-\_\-sleep\-\_\-@{need\-\_\-sleep\-\_\-}!apollo::cyber::scheduler::ClassicContext@{apollo\-::cyber\-::scheduler\-::\-Classic\-Context}}
+\subsubsection[{need\-\_\-sleep\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::scheduler\-::\-Classic\-Context\-::need\-\_\-sleep\-\_\- = false\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_a094e0d83afedbb7530649d54b17f9e65}
+\hypertarget{classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_a10adfb1632c4cb5049273262cb997333}{\index{apollo\-::cyber\-::scheduler\-::\-Classic\-Context@{apollo\-::cyber\-::scheduler\-::\-Classic\-Context}!rq\-\_\-locks\-\_\-@{rq\-\_\-locks\-\_\-}}
+\index{rq\-\_\-locks\-\_\-@{rq\-\_\-locks\-\_\-}!apollo::cyber::scheduler::ClassicContext@{apollo\-::cyber\-::scheduler\-::\-Classic\-Context}}
+\subsubsection[{rq\-\_\-locks\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\-Q\-\_\-\-L\-O\-C\-K\-\_\-\-G\-R\-O\-U\-P} apollo\-::cyber\-::scheduler\-::\-Classic\-Context\-::rq\-\_\-locks\-\_\-\hspace{0.3cm}{\ttfamily [static]}}}\label{classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_a10adfb1632c4cb5049273262cb997333}
+\hypertarget{classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_abc30359d23f986f35b0c01ff81d6ccc1}{\index{apollo\-::cyber\-::scheduler\-::\-Classic\-Context@{apollo\-::cyber\-::scheduler\-::\-Classic\-Context}!wake\-\_\-time\-\_\-@{wake\-\_\-time\-\_\-}}
+\index{wake\-\_\-time\-\_\-@{wake\-\_\-time\-\_\-}!apollo::cyber::scheduler::ClassicContext@{apollo\-::cyber\-::scheduler\-::\-Classic\-Context}}
+\subsubsection[{wake\-\_\-time\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::chrono\-::steady\-\_\-clock\-::time\-\_\-point apollo\-::cyber\-::scheduler\-::\-Classic\-Context\-::wake\-\_\-time\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1scheduler_1_1ClassicContext_abc30359d23f986f35b0c01ff81d6ccc1}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+scheduler/policy/\hyperlink{classic__context_8h}{classic\-\_\-context.\-h}\end{DoxyCompactItemize}

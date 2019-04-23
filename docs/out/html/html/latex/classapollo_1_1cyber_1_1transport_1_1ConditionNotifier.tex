@@ -1,0 +1,177 @@
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1ConditionNotifier}{\section{apollo\-:\-:cyber\-:\-:transport\-:\-:Condition\-Notifier Class Reference}
+\label{classapollo_1_1cyber_1_1transport_1_1ConditionNotifier}\index{apollo\-::cyber\-::transport\-::\-Condition\-Notifier@{apollo\-::cyber\-::transport\-::\-Condition\-Notifier}}
+}
+
+
+{\ttfamily \#include $<$condition\-\_\-notifier.\-h$>$}
+
+Inheritance diagram for apollo\-:\-:cyber\-:\-:transport\-:\-:Condition\-Notifier\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classapollo_1_1cyber_1_1transport_1_1ConditionNotifier}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1_1Indicator}{Indicator}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_a7e4bd95c4da5a8d1e6194c255ee75eb3}{$\sim$\-Condition\-Notifier} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_a057d3f71a69a9913107416166a01a81b}{Shutdown} () override
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_ad9d938243de75dc7b015ca2ca9819f01}{Notify} (const \hyperlink{classapollo_1_1cyber_1_1transport_1_1ReadableInfo}{Readable\-Info} \&info) override
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_a961bd6d94fdae4ffa6a7413a95932db5}{Listen} (int timeout\-\_\-ms, \hyperlink{classapollo_1_1cyber_1_1transport_1_1ReadableInfo}{Readable\-Info} $\ast$info) override
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static const char $\ast$ \hyperlink{classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_a176c1ca8f3cbc3c15ff2fba4eb0280e2}{Type} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_a822ee78c2f903e366f3c58cc9a9eafa1}{Init} ()
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_a506f0777ddba9729af366d6df37b40ad}{Open\-Or\-Create} ()
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_afaf6b12a6030861f6ad009b6cfd42f27}{Open\-Only} ()
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_aa72b3769316e25e2d4faee6eac8c30a2}{Remove} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_a5094406c9605ef19b646208ae6036d77}{Reset} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+key\-\_\-t \hyperlink{classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_aa5d9958e7a5c7abc7f04ce84f0385c9a}{key\-\_\-} = 0
+\item 
+void $\ast$ \hyperlink{classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_a22cba07e5cce1d0a782c51f3bcbb09c8}{managed\-\_\-shm\-\_\-} = nullptr
+\item 
+size\-\_\-t \hyperlink{classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_a48fcd814d133e570bcaaed0527e72edc}{shm\-\_\-size\-\_\-} = 0
+\item 
+\hyperlink{structapollo_1_1cyber_1_1transport_1_1ConditionNotifier_1_1Indicator}{Indicator} $\ast$ \hyperlink{classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_ac9867419135c8a5484cc1296a69ee7e0}{indicator\-\_\-} = nullptr
+\item 
+uint64\-\_\-t \hyperlink{classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_a55460f4f3c02cd6cb0d5e0dcabd7576e}{next\-\_\-listen\-\_\-num\-\_\-} = 0
+\item 
+std\-::atomic$<$ bool $>$ \hyperlink{classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_af8e320c5121acbb3b50956ac7519fdb8}{is\-\_\-shutdown\-\_\-} = \{false\}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_a7e4bd95c4da5a8d1e6194c255ee75eb3}{\index{apollo\-::cyber\-::transport\-::\-Condition\-Notifier@{apollo\-::cyber\-::transport\-::\-Condition\-Notifier}!$\sim$\-Condition\-Notifier@{$\sim$\-Condition\-Notifier}}
+\index{$\sim$\-Condition\-Notifier@{$\sim$\-Condition\-Notifier}!apollo::cyber::transport::ConditionNotifier@{apollo\-::cyber\-::transport\-::\-Condition\-Notifier}}
+\subsubsection[{$\sim$\-Condition\-Notifier}]{\setlength{\rightskip}{0pt plus 5cm}virtual apollo\-::cyber\-::transport\-::\-Condition\-Notifier\-::$\sim$\-Condition\-Notifier (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_a7e4bd95c4da5a8d1e6194c255ee75eb3}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_a822ee78c2f903e366f3c58cc9a9eafa1}{\index{apollo\-::cyber\-::transport\-::\-Condition\-Notifier@{apollo\-::cyber\-::transport\-::\-Condition\-Notifier}!Init@{Init}}
+\index{Init@{Init}!apollo::cyber::transport::ConditionNotifier@{apollo\-::cyber\-::transport\-::\-Condition\-Notifier}}
+\subsubsection[{Init}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::transport\-::\-Condition\-Notifier\-::\-Init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_a822ee78c2f903e366f3c58cc9a9eafa1}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_a961bd6d94fdae4ffa6a7413a95932db5}{\index{apollo\-::cyber\-::transport\-::\-Condition\-Notifier@{apollo\-::cyber\-::transport\-::\-Condition\-Notifier}!Listen@{Listen}}
+\index{Listen@{Listen}!apollo::cyber::transport::ConditionNotifier@{apollo\-::cyber\-::transport\-::\-Condition\-Notifier}}
+\subsubsection[{Listen}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::transport\-::\-Condition\-Notifier\-::\-Listen (
+\begin{DoxyParamCaption}
+\item[{int}]{timeout\-\_\-ms, }
+\item[{{\bf Readable\-Info} $\ast$}]{info}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_a961bd6d94fdae4ffa6a7413a95932db5}
+
+
+Implements \hyperlink{classapollo_1_1cyber_1_1transport_1_1NotifierBase_aa42f5b65d60d3b61a919f09b7605775b}{apollo\-::cyber\-::transport\-::\-Notifier\-Base}.
+
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_ad9d938243de75dc7b015ca2ca9819f01}{\index{apollo\-::cyber\-::transport\-::\-Condition\-Notifier@{apollo\-::cyber\-::transport\-::\-Condition\-Notifier}!Notify@{Notify}}
+\index{Notify@{Notify}!apollo::cyber::transport::ConditionNotifier@{apollo\-::cyber\-::transport\-::\-Condition\-Notifier}}
+\subsubsection[{Notify}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::transport\-::\-Condition\-Notifier\-::\-Notify (
+\begin{DoxyParamCaption}
+\item[{const {\bf Readable\-Info} \&}]{info}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_ad9d938243de75dc7b015ca2ca9819f01}
+
+
+Implements \hyperlink{classapollo_1_1cyber_1_1transport_1_1NotifierBase_aef2741bc38fa6b7aca8c1cfb012975dd}{apollo\-::cyber\-::transport\-::\-Notifier\-Base}.
+
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_afaf6b12a6030861f6ad009b6cfd42f27}{\index{apollo\-::cyber\-::transport\-::\-Condition\-Notifier@{apollo\-::cyber\-::transport\-::\-Condition\-Notifier}!Open\-Only@{Open\-Only}}
+\index{Open\-Only@{Open\-Only}!apollo::cyber::transport::ConditionNotifier@{apollo\-::cyber\-::transport\-::\-Condition\-Notifier}}
+\subsubsection[{Open\-Only}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::transport\-::\-Condition\-Notifier\-::\-Open\-Only (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_afaf6b12a6030861f6ad009b6cfd42f27}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_a506f0777ddba9729af366d6df37b40ad}{\index{apollo\-::cyber\-::transport\-::\-Condition\-Notifier@{apollo\-::cyber\-::transport\-::\-Condition\-Notifier}!Open\-Or\-Create@{Open\-Or\-Create}}
+\index{Open\-Or\-Create@{Open\-Or\-Create}!apollo::cyber::transport::ConditionNotifier@{apollo\-::cyber\-::transport\-::\-Condition\-Notifier}}
+\subsubsection[{Open\-Or\-Create}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::transport\-::\-Condition\-Notifier\-::\-Open\-Or\-Create (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_a506f0777ddba9729af366d6df37b40ad}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_aa72b3769316e25e2d4faee6eac8c30a2}{\index{apollo\-::cyber\-::transport\-::\-Condition\-Notifier@{apollo\-::cyber\-::transport\-::\-Condition\-Notifier}!Remove@{Remove}}
+\index{Remove@{Remove}!apollo::cyber::transport::ConditionNotifier@{apollo\-::cyber\-::transport\-::\-Condition\-Notifier}}
+\subsubsection[{Remove}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::transport\-::\-Condition\-Notifier\-::\-Remove (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_aa72b3769316e25e2d4faee6eac8c30a2}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_a5094406c9605ef19b646208ae6036d77}{\index{apollo\-::cyber\-::transport\-::\-Condition\-Notifier@{apollo\-::cyber\-::transport\-::\-Condition\-Notifier}!Reset@{Reset}}
+\index{Reset@{Reset}!apollo::cyber::transport::ConditionNotifier@{apollo\-::cyber\-::transport\-::\-Condition\-Notifier}}
+\subsubsection[{Reset}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::transport\-::\-Condition\-Notifier\-::\-Reset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_a5094406c9605ef19b646208ae6036d77}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_a057d3f71a69a9913107416166a01a81b}{\index{apollo\-::cyber\-::transport\-::\-Condition\-Notifier@{apollo\-::cyber\-::transport\-::\-Condition\-Notifier}!Shutdown@{Shutdown}}
+\index{Shutdown@{Shutdown}!apollo::cyber::transport::ConditionNotifier@{apollo\-::cyber\-::transport\-::\-Condition\-Notifier}}
+\subsubsection[{Shutdown}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::transport\-::\-Condition\-Notifier\-::\-Shutdown (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_a057d3f71a69a9913107416166a01a81b}
+
+
+Implements \hyperlink{classapollo_1_1cyber_1_1transport_1_1NotifierBase_a48e05bdc97d573893234846fcbd9be46}{apollo\-::cyber\-::transport\-::\-Notifier\-Base}.
+
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_a176c1ca8f3cbc3c15ff2fba4eb0280e2}{\index{apollo\-::cyber\-::transport\-::\-Condition\-Notifier@{apollo\-::cyber\-::transport\-::\-Condition\-Notifier}!Type@{Type}}
+\index{Type@{Type}!apollo::cyber::transport::ConditionNotifier@{apollo\-::cyber\-::transport\-::\-Condition\-Notifier}}
+\subsubsection[{Type}]{\setlength{\rightskip}{0pt plus 5cm}static const char$\ast$ apollo\-::cyber\-::transport\-::\-Condition\-Notifier\-::\-Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_a176c1ca8f3cbc3c15ff2fba4eb0280e2}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_ac9867419135c8a5484cc1296a69ee7e0}{\index{apollo\-::cyber\-::transport\-::\-Condition\-Notifier@{apollo\-::cyber\-::transport\-::\-Condition\-Notifier}!indicator\-\_\-@{indicator\-\_\-}}
+\index{indicator\-\_\-@{indicator\-\_\-}!apollo::cyber::transport::ConditionNotifier@{apollo\-::cyber\-::transport\-::\-Condition\-Notifier}}
+\subsubsection[{indicator\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Indicator}$\ast$ apollo\-::cyber\-::transport\-::\-Condition\-Notifier\-::indicator\-\_\- = nullptr\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_ac9867419135c8a5484cc1296a69ee7e0}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_af8e320c5121acbb3b50956ac7519fdb8}{\index{apollo\-::cyber\-::transport\-::\-Condition\-Notifier@{apollo\-::cyber\-::transport\-::\-Condition\-Notifier}!is\-\_\-shutdown\-\_\-@{is\-\_\-shutdown\-\_\-}}
+\index{is\-\_\-shutdown\-\_\-@{is\-\_\-shutdown\-\_\-}!apollo::cyber::transport::ConditionNotifier@{apollo\-::cyber\-::transport\-::\-Condition\-Notifier}}
+\subsubsection[{is\-\_\-shutdown\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::atomic$<$bool$>$ apollo\-::cyber\-::transport\-::\-Condition\-Notifier\-::is\-\_\-shutdown\-\_\- = \{false\}\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_af8e320c5121acbb3b50956ac7519fdb8}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_aa5d9958e7a5c7abc7f04ce84f0385c9a}{\index{apollo\-::cyber\-::transport\-::\-Condition\-Notifier@{apollo\-::cyber\-::transport\-::\-Condition\-Notifier}!key\-\_\-@{key\-\_\-}}
+\index{key\-\_\-@{key\-\_\-}!apollo::cyber::transport::ConditionNotifier@{apollo\-::cyber\-::transport\-::\-Condition\-Notifier}}
+\subsubsection[{key\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}key\-\_\-t apollo\-::cyber\-::transport\-::\-Condition\-Notifier\-::key\-\_\- = 0\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_aa5d9958e7a5c7abc7f04ce84f0385c9a}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_a22cba07e5cce1d0a782c51f3bcbb09c8}{\index{apollo\-::cyber\-::transport\-::\-Condition\-Notifier@{apollo\-::cyber\-::transport\-::\-Condition\-Notifier}!managed\-\_\-shm\-\_\-@{managed\-\_\-shm\-\_\-}}
+\index{managed\-\_\-shm\-\_\-@{managed\-\_\-shm\-\_\-}!apollo::cyber::transport::ConditionNotifier@{apollo\-::cyber\-::transport\-::\-Condition\-Notifier}}
+\subsubsection[{managed\-\_\-shm\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ apollo\-::cyber\-::transport\-::\-Condition\-Notifier\-::managed\-\_\-shm\-\_\- = nullptr\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_a22cba07e5cce1d0a782c51f3bcbb09c8}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_a55460f4f3c02cd6cb0d5e0dcabd7576e}{\index{apollo\-::cyber\-::transport\-::\-Condition\-Notifier@{apollo\-::cyber\-::transport\-::\-Condition\-Notifier}!next\-\_\-listen\-\_\-num\-\_\-@{next\-\_\-listen\-\_\-num\-\_\-}}
+\index{next\-\_\-listen\-\_\-num\-\_\-@{next\-\_\-listen\-\_\-num\-\_\-}!apollo::cyber::transport::ConditionNotifier@{apollo\-::cyber\-::transport\-::\-Condition\-Notifier}}
+\subsubsection[{next\-\_\-listen\-\_\-num\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}uint64\-\_\-t apollo\-::cyber\-::transport\-::\-Condition\-Notifier\-::next\-\_\-listen\-\_\-num\-\_\- = 0\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_a55460f4f3c02cd6cb0d5e0dcabd7576e}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_a48fcd814d133e570bcaaed0527e72edc}{\index{apollo\-::cyber\-::transport\-::\-Condition\-Notifier@{apollo\-::cyber\-::transport\-::\-Condition\-Notifier}!shm\-\_\-size\-\_\-@{shm\-\_\-size\-\_\-}}
+\index{shm\-\_\-size\-\_\-@{shm\-\_\-size\-\_\-}!apollo::cyber::transport::ConditionNotifier@{apollo\-::cyber\-::transport\-::\-Condition\-Notifier}}
+\subsubsection[{shm\-\_\-size\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t apollo\-::cyber\-::transport\-::\-Condition\-Notifier\-::shm\-\_\-size\-\_\- = 0\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1ConditionNotifier_a48fcd814d133e570bcaaed0527e72edc}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+transport/shm/\hyperlink{condition__notifier_8h}{condition\-\_\-notifier.\-h}\end{DoxyCompactItemize}

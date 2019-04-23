@@ -1,0 +1,128 @@
+\hypertarget{classapollo_1_1cyber_1_1base_1_1UnboundedQueue}{\section{apollo\-:\-:cyber\-:\-:base\-:\-:Unbounded\-Queue$<$ T $>$ Class Template Reference}
+\label{classapollo_1_1cyber_1_1base_1_1UnboundedQueue}\index{apollo\-::cyber\-::base\-::\-Unbounded\-Queue$<$ T $>$@{apollo\-::cyber\-::base\-::\-Unbounded\-Queue$<$ T $>$}}
+}
+
+
+{\ttfamily \#include $<$unbounded\-\_\-queue.\-h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structapollo_1_1cyber_1_1base_1_1UnboundedQueue_1_1Node}{Node}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1base_1_1UnboundedQueue_a4ed05702de2a1380547b9db09439ca86}{Unbounded\-Queue} ()
+\item 
+\hyperlink{classapollo_1_1cyber_1_1base_1_1UnboundedQueue}{Unbounded\-Queue} \& \hyperlink{classapollo_1_1cyber_1_1base_1_1UnboundedQueue_a9121ebd82ee007ec07d9bc7ab201f00a}{operator=} (const \hyperlink{classapollo_1_1cyber_1_1base_1_1UnboundedQueue}{Unbounded\-Queue} \&other)=delete
+\item 
+\hyperlink{classapollo_1_1cyber_1_1base_1_1UnboundedQueue_a3ee4d400be23a70630a08487abef1f2c}{Unbounded\-Queue} (const \hyperlink{classapollo_1_1cyber_1_1base_1_1UnboundedQueue}{Unbounded\-Queue} \&other)=delete
+\item 
+\hyperlink{classapollo_1_1cyber_1_1base_1_1UnboundedQueue_aa2801eb47524124080686b11a207a074}{$\sim$\-Unbounded\-Queue} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1base_1_1UnboundedQueue_a4fae8d8e2b261d505a303086e3907bf6}{Clear} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1base_1_1UnboundedQueue_a449aa1a73e6a33cd8e1a5506fc2b2334}{Enqueue} (const T \&element)
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1base_1_1UnboundedQueue_a59dfffdb79da27f745c2bf067190d360}{Dequeue} (T $\ast$element)
+\item 
+size\-\_\-t \hyperlink{classapollo_1_1cyber_1_1base_1_1UnboundedQueue_a3eb8bea3e74d61667516d5984288a4d8}{Size} ()
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1base_1_1UnboundedQueue_a7ba37a0f3d6c5b6c7a9f8881af947635}{Empty} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\-::atomic$<$ \hyperlink{structapollo_1_1cyber_1_1base_1_1UnboundedQueue_1_1Node}{Node} $\ast$ $>$ \hyperlink{classapollo_1_1cyber_1_1base_1_1UnboundedQueue_a7c0a5f75842513dc8d24006b1b8a3eae}{head\-\_\-}
+\item 
+std\-::atomic$<$ \hyperlink{structapollo_1_1cyber_1_1base_1_1UnboundedQueue_1_1Node}{Node} $\ast$ $>$ \hyperlink{classapollo_1_1cyber_1_1base_1_1UnboundedQueue_a80ad0d76375f5c6d12108e93eaecb315}{tail\-\_\-}
+\item 
+std\-::atomic$<$ size\-\_\-t $>$ \hyperlink{classapollo_1_1cyber_1_1base_1_1UnboundedQueue_af8a71c42222607d17ed82706ca166e08}{size\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1UnboundedQueue_a4ed05702de2a1380547b9db09439ca86}{\index{apollo\-::cyber\-::base\-::\-Unbounded\-Queue@{apollo\-::cyber\-::base\-::\-Unbounded\-Queue}!Unbounded\-Queue@{Unbounded\-Queue}}
+\index{Unbounded\-Queue@{Unbounded\-Queue}!apollo::cyber::base::UnboundedQueue@{apollo\-::cyber\-::base\-::\-Unbounded\-Queue}}
+\subsubsection[{Unbounded\-Queue}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf apollo\-::cyber\-::base\-::\-Unbounded\-Queue}$<$ T $>$\-::{\bf Unbounded\-Queue} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1base_1_1UnboundedQueue_a4ed05702de2a1380547b9db09439ca86}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1UnboundedQueue_a3ee4d400be23a70630a08487abef1f2c}{\index{apollo\-::cyber\-::base\-::\-Unbounded\-Queue@{apollo\-::cyber\-::base\-::\-Unbounded\-Queue}!Unbounded\-Queue@{Unbounded\-Queue}}
+\index{Unbounded\-Queue@{Unbounded\-Queue}!apollo::cyber::base::UnboundedQueue@{apollo\-::cyber\-::base\-::\-Unbounded\-Queue}}
+\subsubsection[{Unbounded\-Queue}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf apollo\-::cyber\-::base\-::\-Unbounded\-Queue}$<$ T $>$\-::{\bf Unbounded\-Queue} (
+\begin{DoxyParamCaption}
+\item[{const {\bf Unbounded\-Queue}$<$ T $>$ \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}}\label{classapollo_1_1cyber_1_1base_1_1UnboundedQueue_a3ee4d400be23a70630a08487abef1f2c}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1UnboundedQueue_aa2801eb47524124080686b11a207a074}{\index{apollo\-::cyber\-::base\-::\-Unbounded\-Queue@{apollo\-::cyber\-::base\-::\-Unbounded\-Queue}!$\sim$\-Unbounded\-Queue@{$\sim$\-Unbounded\-Queue}}
+\index{$\sim$\-Unbounded\-Queue@{$\sim$\-Unbounded\-Queue}!apollo::cyber::base::UnboundedQueue@{apollo\-::cyber\-::base\-::\-Unbounded\-Queue}}
+\subsubsection[{$\sim$\-Unbounded\-Queue}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf apollo\-::cyber\-::base\-::\-Unbounded\-Queue}$<$ T $>$\-::$\sim${\bf Unbounded\-Queue} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1base_1_1UnboundedQueue_aa2801eb47524124080686b11a207a074}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1UnboundedQueue_a4fae8d8e2b261d505a303086e3907bf6}{\index{apollo\-::cyber\-::base\-::\-Unbounded\-Queue@{apollo\-::cyber\-::base\-::\-Unbounded\-Queue}!Clear@{Clear}}
+\index{Clear@{Clear}!apollo::cyber::base::UnboundedQueue@{apollo\-::cyber\-::base\-::\-Unbounded\-Queue}}
+\subsubsection[{Clear}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf apollo\-::cyber\-::base\-::\-Unbounded\-Queue}$<$ T $>$\-::Clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1base_1_1UnboundedQueue_a4fae8d8e2b261d505a303086e3907bf6}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1UnboundedQueue_a59dfffdb79da27f745c2bf067190d360}{\index{apollo\-::cyber\-::base\-::\-Unbounded\-Queue@{apollo\-::cyber\-::base\-::\-Unbounded\-Queue}!Dequeue@{Dequeue}}
+\index{Dequeue@{Dequeue}!apollo::cyber::base::UnboundedQueue@{apollo\-::cyber\-::base\-::\-Unbounded\-Queue}}
+\subsubsection[{Dequeue}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool {\bf apollo\-::cyber\-::base\-::\-Unbounded\-Queue}$<$ T $>$\-::Dequeue (
+\begin{DoxyParamCaption}
+\item[{T $\ast$}]{element}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1base_1_1UnboundedQueue_a59dfffdb79da27f745c2bf067190d360}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1UnboundedQueue_a7ba37a0f3d6c5b6c7a9f8881af947635}{\index{apollo\-::cyber\-::base\-::\-Unbounded\-Queue@{apollo\-::cyber\-::base\-::\-Unbounded\-Queue}!Empty@{Empty}}
+\index{Empty@{Empty}!apollo::cyber::base::UnboundedQueue@{apollo\-::cyber\-::base\-::\-Unbounded\-Queue}}
+\subsubsection[{Empty}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool {\bf apollo\-::cyber\-::base\-::\-Unbounded\-Queue}$<$ T $>$\-::Empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1base_1_1UnboundedQueue_a7ba37a0f3d6c5b6c7a9f8881af947635}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1UnboundedQueue_a449aa1a73e6a33cd8e1a5506fc2b2334}{\index{apollo\-::cyber\-::base\-::\-Unbounded\-Queue@{apollo\-::cyber\-::base\-::\-Unbounded\-Queue}!Enqueue@{Enqueue}}
+\index{Enqueue@{Enqueue}!apollo::cyber::base::UnboundedQueue@{apollo\-::cyber\-::base\-::\-Unbounded\-Queue}}
+\subsubsection[{Enqueue}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf apollo\-::cyber\-::base\-::\-Unbounded\-Queue}$<$ T $>$\-::Enqueue (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{element}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1base_1_1UnboundedQueue_a449aa1a73e6a33cd8e1a5506fc2b2334}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1UnboundedQueue_a9121ebd82ee007ec07d9bc7ab201f00a}{\index{apollo\-::cyber\-::base\-::\-Unbounded\-Queue@{apollo\-::cyber\-::base\-::\-Unbounded\-Queue}!operator=@{operator=}}
+\index{operator=@{operator=}!apollo::cyber::base::UnboundedQueue@{apollo\-::cyber\-::base\-::\-Unbounded\-Queue}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Unbounded\-Queue}\& {\bf apollo\-::cyber\-::base\-::\-Unbounded\-Queue}$<$ T $>$\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Unbounded\-Queue}$<$ T $>$ \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}}\label{classapollo_1_1cyber_1_1base_1_1UnboundedQueue_a9121ebd82ee007ec07d9bc7ab201f00a}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1UnboundedQueue_a3eb8bea3e74d61667516d5984288a4d8}{\index{apollo\-::cyber\-::base\-::\-Unbounded\-Queue@{apollo\-::cyber\-::base\-::\-Unbounded\-Queue}!Size@{Size}}
+\index{Size@{Size}!apollo::cyber::base::UnboundedQueue@{apollo\-::cyber\-::base\-::\-Unbounded\-Queue}}
+\subsubsection[{Size}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ size\-\_\-t {\bf apollo\-::cyber\-::base\-::\-Unbounded\-Queue}$<$ T $>$\-::Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1base_1_1UnboundedQueue_a3eb8bea3e74d61667516d5984288a4d8}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1UnboundedQueue_a7c0a5f75842513dc8d24006b1b8a3eae}{\index{apollo\-::cyber\-::base\-::\-Unbounded\-Queue@{apollo\-::cyber\-::base\-::\-Unbounded\-Queue}!head\-\_\-@{head\-\_\-}}
+\index{head\-\_\-@{head\-\_\-}!apollo::cyber::base::UnboundedQueue@{apollo\-::cyber\-::base\-::\-Unbounded\-Queue}}
+\subsubsection[{head\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\-::atomic$<${\bf Node}$\ast$$>$ {\bf apollo\-::cyber\-::base\-::\-Unbounded\-Queue}$<$ T $>$\-::head\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1base_1_1UnboundedQueue_a7c0a5f75842513dc8d24006b1b8a3eae}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1UnboundedQueue_af8a71c42222607d17ed82706ca166e08}{\index{apollo\-::cyber\-::base\-::\-Unbounded\-Queue@{apollo\-::cyber\-::base\-::\-Unbounded\-Queue}!size\-\_\-@{size\-\_\-}}
+\index{size\-\_\-@{size\-\_\-}!apollo::cyber::base::UnboundedQueue@{apollo\-::cyber\-::base\-::\-Unbounded\-Queue}}
+\subsubsection[{size\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\-::atomic$<$size\-\_\-t$>$ {\bf apollo\-::cyber\-::base\-::\-Unbounded\-Queue}$<$ T $>$\-::size\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1base_1_1UnboundedQueue_af8a71c42222607d17ed82706ca166e08}
+\hypertarget{classapollo_1_1cyber_1_1base_1_1UnboundedQueue_a80ad0d76375f5c6d12108e93eaecb315}{\index{apollo\-::cyber\-::base\-::\-Unbounded\-Queue@{apollo\-::cyber\-::base\-::\-Unbounded\-Queue}!tail\-\_\-@{tail\-\_\-}}
+\index{tail\-\_\-@{tail\-\_\-}!apollo::cyber::base::UnboundedQueue@{apollo\-::cyber\-::base\-::\-Unbounded\-Queue}}
+\subsubsection[{tail\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\-::atomic$<${\bf Node}$\ast$$>$ {\bf apollo\-::cyber\-::base\-::\-Unbounded\-Queue}$<$ T $>$\-::tail\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1base_1_1UnboundedQueue_a80ad0d76375f5c6d12108e93eaecb315}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+base/\hyperlink{unbounded__queue_8h}{unbounded\-\_\-queue.\-h}\end{DoxyCompactItemize}

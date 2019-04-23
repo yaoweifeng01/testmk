@@ -1,0 +1,159 @@
+\hypertarget{classapollo_1_1cyber_1_1class__loader_1_1ClassLoaderManager}{\section{apollo\-:\-:cyber\-:\-:class\-\_\-loader\-:\-:Class\-Loader\-Manager Class Reference}
+\label{classapollo_1_1cyber_1_1class__loader_1_1ClassLoaderManager}\index{apollo\-::cyber\-::class\-\_\-loader\-::\-Class\-Loader\-Manager@{apollo\-::cyber\-::class\-\_\-loader\-::\-Class\-Loader\-Manager}}
+}
+
+
+{\ttfamily \#include $<$class\-\_\-loader\-\_\-manager.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1class__loader_1_1ClassLoaderManager_ae67511bbe6bee61a082c339a53532ca8}{Class\-Loader\-Manager} ()
+\item 
+virtual \hyperlink{classapollo_1_1cyber_1_1class__loader_1_1ClassLoaderManager_aea360adf2529cb95b9590b7c1565a3e9}{$\sim$\-Class\-Loader\-Manager} ()
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1class__loader_1_1ClassLoaderManager_a9953c5cfabd0852891dcb6699d8e3dd1}{Load\-Library} (const std\-::string \&library\-\_\-path)
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1class__loader_1_1ClassLoaderManager_a73f7454c0410084137a927ad49b75104}{Unload\-All\-Library} ()
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1class__loader_1_1ClassLoaderManager_a62b76f761a0e500f93f075387300eccb}{Is\-Library\-Valid} (const std\-::string \&library\-\_\-path)
+\item 
+{\footnotesize template$<$typename Base $>$ }\\std\-::shared\-\_\-ptr$<$ Base $>$ \hyperlink{classapollo_1_1cyber_1_1class__loader_1_1ClassLoaderManager_a9679e70f73c8215e99fb1ecc7fa10043}{Create\-Class\-Obj} (const std\-::string \&class\-\_\-name)
+\item 
+{\footnotesize template$<$typename Base $>$ }\\std\-::shared\-\_\-ptr$<$ Base $>$ \hyperlink{classapollo_1_1cyber_1_1class__loader_1_1ClassLoaderManager_a3f52ab9d057116be16cd2dc92efa48f5}{Create\-Class\-Obj} (const std\-::string \&class\-\_\-name, const std\-::string \&library\-\_\-path)
+\item 
+{\footnotesize template$<$typename Base $>$ }\\bool \hyperlink{classapollo_1_1cyber_1_1class__loader_1_1ClassLoaderManager_a4bd67245e45cf40d99681139fb48d04f}{Is\-Class\-Valid} (const std\-::string \&class\-\_\-name)
+\item 
+{\footnotesize template$<$typename Base $>$ }\\std\-::vector$<$ std\-::string $>$ \hyperlink{classapollo_1_1cyber_1_1class__loader_1_1ClassLoaderManager_ab75b7537616bf990a4b0008fac17bb69}{Get\-Valid\-Class\-Names} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1class__loader_1_1ClassLoader}{Class\-Loader} $\ast$ \hyperlink{classapollo_1_1cyber_1_1class__loader_1_1ClassLoaderManager_a3d06e6d3f449f7430061b22f61a01f9a}{Get\-Class\-Loader\-By\-Lib\-Path} (const std\-::string \&library\-\_\-path)
+\item 
+std\-::vector$<$ \hyperlink{classapollo_1_1cyber_1_1class__loader_1_1ClassLoader}{Class\-Loader} $\ast$ $>$ \hyperlink{classapollo_1_1cyber_1_1class__loader_1_1ClassLoaderManager_a5bed06b0e19310694bd5016868c72fe3}{Get\-All\-Valid\-Class\-Loaders} ()
+\item 
+std\-::vector$<$ std\-::string $>$ \hyperlink{classapollo_1_1cyber_1_1class__loader_1_1ClassLoaderManager_a82d6543d465a5fd2e19d46a1b9842a59}{Get\-All\-Valid\-Lib\-Path} ()
+\item 
+int \hyperlink{classapollo_1_1cyber_1_1class__loader_1_1ClassLoaderManager_a6cd6ba7d38e395d61353058d7eebc26d}{Unload\-Library} (const std\-::string \&library\-\_\-path)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\-::mutex \hyperlink{classapollo_1_1cyber_1_1class__loader_1_1ClassLoaderManager_a994b015a75ed982747df24c95fbae762}{libpath\-\_\-loader\-\_\-map\-\_\-mutex\-\_\-}
+\item 
+std\-::map$<$ std\-::string, \\*
+\hyperlink{classapollo_1_1cyber_1_1class__loader_1_1ClassLoader}{Class\-Loader} $\ast$ $>$ \hyperlink{classapollo_1_1cyber_1_1class__loader_1_1ClassLoaderManager_a22bbb1ede2aa1ebe5e80650df9bdba7f}{libpath\-\_\-loader\-\_\-map\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classapollo_1_1cyber_1_1class__loader_1_1ClassLoaderManager_ae67511bbe6bee61a082c339a53532ca8}{\index{apollo\-::cyber\-::class\-\_\-loader\-::\-Class\-Loader\-Manager@{apollo\-::cyber\-::class\-\_\-loader\-::\-Class\-Loader\-Manager}!Class\-Loader\-Manager@{Class\-Loader\-Manager}}
+\index{Class\-Loader\-Manager@{Class\-Loader\-Manager}!apollo::cyber::class_loader::ClassLoaderManager@{apollo\-::cyber\-::class\-\_\-loader\-::\-Class\-Loader\-Manager}}
+\subsubsection[{Class\-Loader\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::class\-\_\-loader\-::\-Class\-Loader\-Manager\-::\-Class\-Loader\-Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1class__loader_1_1ClassLoaderManager_ae67511bbe6bee61a082c339a53532ca8}
+\hypertarget{classapollo_1_1cyber_1_1class__loader_1_1ClassLoaderManager_aea360adf2529cb95b9590b7c1565a3e9}{\index{apollo\-::cyber\-::class\-\_\-loader\-::\-Class\-Loader\-Manager@{apollo\-::cyber\-::class\-\_\-loader\-::\-Class\-Loader\-Manager}!$\sim$\-Class\-Loader\-Manager@{$\sim$\-Class\-Loader\-Manager}}
+\index{$\sim$\-Class\-Loader\-Manager@{$\sim$\-Class\-Loader\-Manager}!apollo::cyber::class_loader::ClassLoaderManager@{apollo\-::cyber\-::class\-\_\-loader\-::\-Class\-Loader\-Manager}}
+\subsubsection[{$\sim$\-Class\-Loader\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}virtual apollo\-::cyber\-::class\-\_\-loader\-::\-Class\-Loader\-Manager\-::$\sim$\-Class\-Loader\-Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1class__loader_1_1ClassLoaderManager_aea360adf2529cb95b9590b7c1565a3e9}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1class__loader_1_1ClassLoaderManager_a9679e70f73c8215e99fb1ecc7fa10043}{\index{apollo\-::cyber\-::class\-\_\-loader\-::\-Class\-Loader\-Manager@{apollo\-::cyber\-::class\-\_\-loader\-::\-Class\-Loader\-Manager}!Create\-Class\-Obj@{Create\-Class\-Obj}}
+\index{Create\-Class\-Obj@{Create\-Class\-Obj}!apollo::cyber::class_loader::ClassLoaderManager@{apollo\-::cyber\-::class\-\_\-loader\-::\-Class\-Loader\-Manager}}
+\subsubsection[{Create\-Class\-Obj}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Base $>$ std\-::shared\-\_\-ptr$<$ Base $>$ apollo\-::cyber\-::class\-\_\-loader\-::\-Class\-Loader\-Manager\-::\-Create\-Class\-Obj (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{class\-\_\-name}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1class__loader_1_1ClassLoaderManager_a9679e70f73c8215e99fb1ecc7fa10043}
+\hypertarget{classapollo_1_1cyber_1_1class__loader_1_1ClassLoaderManager_a3f52ab9d057116be16cd2dc92efa48f5}{\index{apollo\-::cyber\-::class\-\_\-loader\-::\-Class\-Loader\-Manager@{apollo\-::cyber\-::class\-\_\-loader\-::\-Class\-Loader\-Manager}!Create\-Class\-Obj@{Create\-Class\-Obj}}
+\index{Create\-Class\-Obj@{Create\-Class\-Obj}!apollo::cyber::class_loader::ClassLoaderManager@{apollo\-::cyber\-::class\-\_\-loader\-::\-Class\-Loader\-Manager}}
+\subsubsection[{Create\-Class\-Obj}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Base $>$ std\-::shared\-\_\-ptr$<$ Base $>$ apollo\-::cyber\-::class\-\_\-loader\-::\-Class\-Loader\-Manager\-::\-Create\-Class\-Obj (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{class\-\_\-name, }
+\item[{const std\-::string \&}]{library\-\_\-path}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1class__loader_1_1ClassLoaderManager_a3f52ab9d057116be16cd2dc92efa48f5}
+\hypertarget{classapollo_1_1cyber_1_1class__loader_1_1ClassLoaderManager_a5bed06b0e19310694bd5016868c72fe3}{\index{apollo\-::cyber\-::class\-\_\-loader\-::\-Class\-Loader\-Manager@{apollo\-::cyber\-::class\-\_\-loader\-::\-Class\-Loader\-Manager}!Get\-All\-Valid\-Class\-Loaders@{Get\-All\-Valid\-Class\-Loaders}}
+\index{Get\-All\-Valid\-Class\-Loaders@{Get\-All\-Valid\-Class\-Loaders}!apollo::cyber::class_loader::ClassLoaderManager@{apollo\-::cyber\-::class\-\_\-loader\-::\-Class\-Loader\-Manager}}
+\subsubsection[{Get\-All\-Valid\-Class\-Loaders}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<${\bf Class\-Loader}$\ast$$>$ apollo\-::cyber\-::class\-\_\-loader\-::\-Class\-Loader\-Manager\-::\-Get\-All\-Valid\-Class\-Loaders (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1class__loader_1_1ClassLoaderManager_a5bed06b0e19310694bd5016868c72fe3}
+\hypertarget{classapollo_1_1cyber_1_1class__loader_1_1ClassLoaderManager_a82d6543d465a5fd2e19d46a1b9842a59}{\index{apollo\-::cyber\-::class\-\_\-loader\-::\-Class\-Loader\-Manager@{apollo\-::cyber\-::class\-\_\-loader\-::\-Class\-Loader\-Manager}!Get\-All\-Valid\-Lib\-Path@{Get\-All\-Valid\-Lib\-Path}}
+\index{Get\-All\-Valid\-Lib\-Path@{Get\-All\-Valid\-Lib\-Path}!apollo::cyber::class_loader::ClassLoaderManager@{apollo\-::cyber\-::class\-\_\-loader\-::\-Class\-Loader\-Manager}}
+\subsubsection[{Get\-All\-Valid\-Lib\-Path}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$std\-::string$>$ apollo\-::cyber\-::class\-\_\-loader\-::\-Class\-Loader\-Manager\-::\-Get\-All\-Valid\-Lib\-Path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1class__loader_1_1ClassLoaderManager_a82d6543d465a5fd2e19d46a1b9842a59}
+\hypertarget{classapollo_1_1cyber_1_1class__loader_1_1ClassLoaderManager_a3d06e6d3f449f7430061b22f61a01f9a}{\index{apollo\-::cyber\-::class\-\_\-loader\-::\-Class\-Loader\-Manager@{apollo\-::cyber\-::class\-\_\-loader\-::\-Class\-Loader\-Manager}!Get\-Class\-Loader\-By\-Lib\-Path@{Get\-Class\-Loader\-By\-Lib\-Path}}
+\index{Get\-Class\-Loader\-By\-Lib\-Path@{Get\-Class\-Loader\-By\-Lib\-Path}!apollo::cyber::class_loader::ClassLoaderManager@{apollo\-::cyber\-::class\-\_\-loader\-::\-Class\-Loader\-Manager}}
+\subsubsection[{Get\-Class\-Loader\-By\-Lib\-Path}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Class\-Loader}$\ast$ apollo\-::cyber\-::class\-\_\-loader\-::\-Class\-Loader\-Manager\-::\-Get\-Class\-Loader\-By\-Lib\-Path (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{library\-\_\-path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1class__loader_1_1ClassLoaderManager_a3d06e6d3f449f7430061b22f61a01f9a}
+\hypertarget{classapollo_1_1cyber_1_1class__loader_1_1ClassLoaderManager_ab75b7537616bf990a4b0008fac17bb69}{\index{apollo\-::cyber\-::class\-\_\-loader\-::\-Class\-Loader\-Manager@{apollo\-::cyber\-::class\-\_\-loader\-::\-Class\-Loader\-Manager}!Get\-Valid\-Class\-Names@{Get\-Valid\-Class\-Names}}
+\index{Get\-Valid\-Class\-Names@{Get\-Valid\-Class\-Names}!apollo::cyber::class_loader::ClassLoaderManager@{apollo\-::cyber\-::class\-\_\-loader\-::\-Class\-Loader\-Manager}}
+\subsubsection[{Get\-Valid\-Class\-Names}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Base $>$ std\-::vector$<$ std\-::string $>$ apollo\-::cyber\-::class\-\_\-loader\-::\-Class\-Loader\-Manager\-::\-Get\-Valid\-Class\-Names (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1class__loader_1_1ClassLoaderManager_ab75b7537616bf990a4b0008fac17bb69}
+\hypertarget{classapollo_1_1cyber_1_1class__loader_1_1ClassLoaderManager_a4bd67245e45cf40d99681139fb48d04f}{\index{apollo\-::cyber\-::class\-\_\-loader\-::\-Class\-Loader\-Manager@{apollo\-::cyber\-::class\-\_\-loader\-::\-Class\-Loader\-Manager}!Is\-Class\-Valid@{Is\-Class\-Valid}}
+\index{Is\-Class\-Valid@{Is\-Class\-Valid}!apollo::cyber::class_loader::ClassLoaderManager@{apollo\-::cyber\-::class\-\_\-loader\-::\-Class\-Loader\-Manager}}
+\subsubsection[{Is\-Class\-Valid}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Base $>$ bool apollo\-::cyber\-::class\-\_\-loader\-::\-Class\-Loader\-Manager\-::\-Is\-Class\-Valid (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{class\-\_\-name}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1class__loader_1_1ClassLoaderManager_a4bd67245e45cf40d99681139fb48d04f}
+\hypertarget{classapollo_1_1cyber_1_1class__loader_1_1ClassLoaderManager_a62b76f761a0e500f93f075387300eccb}{\index{apollo\-::cyber\-::class\-\_\-loader\-::\-Class\-Loader\-Manager@{apollo\-::cyber\-::class\-\_\-loader\-::\-Class\-Loader\-Manager}!Is\-Library\-Valid@{Is\-Library\-Valid}}
+\index{Is\-Library\-Valid@{Is\-Library\-Valid}!apollo::cyber::class_loader::ClassLoaderManager@{apollo\-::cyber\-::class\-\_\-loader\-::\-Class\-Loader\-Manager}}
+\subsubsection[{Is\-Library\-Valid}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::class\-\_\-loader\-::\-Class\-Loader\-Manager\-::\-Is\-Library\-Valid (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{library\-\_\-path}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1class__loader_1_1ClassLoaderManager_a62b76f761a0e500f93f075387300eccb}
+\hypertarget{classapollo_1_1cyber_1_1class__loader_1_1ClassLoaderManager_a9953c5cfabd0852891dcb6699d8e3dd1}{\index{apollo\-::cyber\-::class\-\_\-loader\-::\-Class\-Loader\-Manager@{apollo\-::cyber\-::class\-\_\-loader\-::\-Class\-Loader\-Manager}!Load\-Library@{Load\-Library}}
+\index{Load\-Library@{Load\-Library}!apollo::cyber::class_loader::ClassLoaderManager@{apollo\-::cyber\-::class\-\_\-loader\-::\-Class\-Loader\-Manager}}
+\subsubsection[{Load\-Library}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::class\-\_\-loader\-::\-Class\-Loader\-Manager\-::\-Load\-Library (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{library\-\_\-path}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1class__loader_1_1ClassLoaderManager_a9953c5cfabd0852891dcb6699d8e3dd1}
+\hypertarget{classapollo_1_1cyber_1_1class__loader_1_1ClassLoaderManager_a73f7454c0410084137a927ad49b75104}{\index{apollo\-::cyber\-::class\-\_\-loader\-::\-Class\-Loader\-Manager@{apollo\-::cyber\-::class\-\_\-loader\-::\-Class\-Loader\-Manager}!Unload\-All\-Library@{Unload\-All\-Library}}
+\index{Unload\-All\-Library@{Unload\-All\-Library}!apollo::cyber::class_loader::ClassLoaderManager@{apollo\-::cyber\-::class\-\_\-loader\-::\-Class\-Loader\-Manager}}
+\subsubsection[{Unload\-All\-Library}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::class\-\_\-loader\-::\-Class\-Loader\-Manager\-::\-Unload\-All\-Library (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1class__loader_1_1ClassLoaderManager_a73f7454c0410084137a927ad49b75104}
+\hypertarget{classapollo_1_1cyber_1_1class__loader_1_1ClassLoaderManager_a6cd6ba7d38e395d61353058d7eebc26d}{\index{apollo\-::cyber\-::class\-\_\-loader\-::\-Class\-Loader\-Manager@{apollo\-::cyber\-::class\-\_\-loader\-::\-Class\-Loader\-Manager}!Unload\-Library@{Unload\-Library}}
+\index{Unload\-Library@{Unload\-Library}!apollo::cyber::class_loader::ClassLoaderManager@{apollo\-::cyber\-::class\-\_\-loader\-::\-Class\-Loader\-Manager}}
+\subsubsection[{Unload\-Library}]{\setlength{\rightskip}{0pt plus 5cm}int apollo\-::cyber\-::class\-\_\-loader\-::\-Class\-Loader\-Manager\-::\-Unload\-Library (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{library\-\_\-path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1class__loader_1_1ClassLoaderManager_a6cd6ba7d38e395d61353058d7eebc26d}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classapollo_1_1cyber_1_1class__loader_1_1ClassLoaderManager_a22bbb1ede2aa1ebe5e80650df9bdba7f}{\index{apollo\-::cyber\-::class\-\_\-loader\-::\-Class\-Loader\-Manager@{apollo\-::cyber\-::class\-\_\-loader\-::\-Class\-Loader\-Manager}!libpath\-\_\-loader\-\_\-map\-\_\-@{libpath\-\_\-loader\-\_\-map\-\_\-}}
+\index{libpath\-\_\-loader\-\_\-map\-\_\-@{libpath\-\_\-loader\-\_\-map\-\_\-}!apollo::cyber::class_loader::ClassLoaderManager@{apollo\-::cyber\-::class\-\_\-loader\-::\-Class\-Loader\-Manager}}
+\subsubsection[{libpath\-\_\-loader\-\_\-map\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::map$<$std\-::string, {\bf Class\-Loader}$\ast$$>$ apollo\-::cyber\-::class\-\_\-loader\-::\-Class\-Loader\-Manager\-::libpath\-\_\-loader\-\_\-map\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1class__loader_1_1ClassLoaderManager_a22bbb1ede2aa1ebe5e80650df9bdba7f}
+\hypertarget{classapollo_1_1cyber_1_1class__loader_1_1ClassLoaderManager_a994b015a75ed982747df24c95fbae762}{\index{apollo\-::cyber\-::class\-\_\-loader\-::\-Class\-Loader\-Manager@{apollo\-::cyber\-::class\-\_\-loader\-::\-Class\-Loader\-Manager}!libpath\-\_\-loader\-\_\-map\-\_\-mutex\-\_\-@{libpath\-\_\-loader\-\_\-map\-\_\-mutex\-\_\-}}
+\index{libpath\-\_\-loader\-\_\-map\-\_\-mutex\-\_\-@{libpath\-\_\-loader\-\_\-map\-\_\-mutex\-\_\-}!apollo::cyber::class_loader::ClassLoaderManager@{apollo\-::cyber\-::class\-\_\-loader\-::\-Class\-Loader\-Manager}}
+\subsubsection[{libpath\-\_\-loader\-\_\-map\-\_\-mutex\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::mutex apollo\-::cyber\-::class\-\_\-loader\-::\-Class\-Loader\-Manager\-::libpath\-\_\-loader\-\_\-map\-\_\-mutex\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1class__loader_1_1ClassLoaderManager_a994b015a75ed982747df24c95fbae762}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+class\-\_\-loader/\hyperlink{class__loader__manager_8h}{class\-\_\-loader\-\_\-manager.\-h}\end{DoxyCompactItemize}

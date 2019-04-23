@@ -1,0 +1,977 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classGeneralChannelMessage" kind="class" prot="public">
+    <compoundname>GeneralChannelMessage</compoundname>
+    <basecompoundref refid="classGeneralMessageBase" prot="public" virt="non-virtual">GeneralMessageBase</basecompoundref>
+    <includes refid="general__channel__message_8h" local="no">general_channel_message.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classGeneralChannelMessage_1a4273153a78b91f1bbc1005c7fc83a42b" prot="public" static="no">
+        <name>ErrorCode</name>
+        <enumvalue id="classGeneralChannelMessage_1a4273153a78b91f1bbc1005c7fc83a42ba2f11a39e60eea72e5258966863e92dbb" prot="public">
+          <name>NewSubClassFailed</name>
+          <initializer>= -1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classGeneralChannelMessage_1a4273153a78b91f1bbc1005c7fc83a42ba6e17b68c7b260823b72268f4abaa63d8" prot="public">
+          <name>CreateNodeFailed</name>
+          <initializer>= -2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classGeneralChannelMessage_1a4273153a78b91f1bbc1005c7fc83a42baf3e17a336aaf0ce3288af8cc88f84acd" prot="public">
+          <name>CreateReaderFailed</name>
+          <initializer>= -3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classGeneralChannelMessage_1a4273153a78b91f1bbc1005c7fc83a42ba2bce9ea8de55f42d5c705d31d88b580c" prot="public">
+          <name>MessageTypeIsEmpty</name>
+          <initializer>= -4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classGeneralChannelMessage_1a4273153a78b91f1bbc1005c7fc83a42ba1c1458480e4efd15e595dd35828d389d" prot="public">
+          <name>ChannelNameOrNodeNameIsEmpty</name>
+          <initializer>= -5</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classGeneralChannelMessage_1a4273153a78b91f1bbc1005c7fc83a42bae125b94e8445980203008e098f9c713f" prot="public">
+          <name>NoCloseChannel</name>
+          <initializer>= -6</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" line="30" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" bodystart="30" bodyend="37"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="classGeneralChannelMessage_1aa051da5753574d8fe644fdbcc2cd2412" prot="private" static="no">
+        <name>State</name>
+        <enumvalue id="classGeneralChannelMessage_1aa051da5753574d8fe644fdbcc2cd2412ad528eed6edec05921bab7a484e1f48f0" prot="public">
+          <name>ShowDebugString</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classGeneralChannelMessage_1aa051da5753574d8fe644fdbcc2cd2412ae43857c44f7a3268c1a71df7a2150cca" prot="public">
+          <name>ShowInfo</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" line="167" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" bodystart="167" bodyend="167"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classGeneralChannelMessage_1a7b1412a227a2ec0d3baedc0938f931df" prot="private" static="no" mutable="no">
+        <type>enum <ref refid="classGeneralChannelMessage_1aa051da5753574d8fe644fdbcc2cd2412" kindref="member">GeneralChannelMessage::State</ref></type>
+        <definition>enum GeneralChannelMessage::State  GeneralChannelMessage::current_state_</definition>
+        <argsstring></argsstring>
+        <name>current_state_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" line="167" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGeneralChannelMessage_1af5e386e99b7a8722b485d027e2ed75bd" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool GeneralChannelMessage::has_message_come_</definition>
+        <argsstring></argsstring>
+        <name>has_message_come_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" line="169" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" bodystart="169" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGeneralChannelMessage_1a1d25120dc72e5010565823a544783efc" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string GeneralChannelMessage::message_type_</definition>
+        <argsstring></argsstring>
+        <name>message_type_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" line="170" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGeneralChannelMessage_1a3da8072e2c9d5ed6b510378384d2dc4f" prot="private" static="no" mutable="no">
+        <type>std::atomic&lt; int &gt;</type>
+        <definition>std::atomic&lt;int&gt; GeneralChannelMessage::frame_counter_</definition>
+        <argsstring></argsstring>
+        <name>frame_counter_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" line="171" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" bodystart="171" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGeneralChannelMessage_1a8ff50746033122e3479db0cd923a8860" prot="private" static="no" mutable="no">
+        <type><ref refid="classapollo_1_1cyber_1_1Time" kindref="compound">apollo::cyber::Time</ref></type>
+        <definition>apollo::cyber::Time GeneralChannelMessage::last_time_</definition>
+        <argsstring></argsstring>
+        <name>last_time_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" line="172" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGeneralChannelMessage_1a10a1b559a2fd9741bb268fbe1c4290d2" prot="private" static="no" mutable="no">
+        <type><ref refid="classapollo_1_1cyber_1_1Time" kindref="compound">apollo::cyber::Time</ref></type>
+        <definition>apollo::cyber::Time GeneralChannelMessage::msg_time_</definition>
+        <argsstring></argsstring>
+        <name>msg_time_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" line="173" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" bodystart="173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGeneralChannelMessage_1ad1f7f60900caf4cc8cfba0fb83961a43" prot="private" static="no" mutable="no">
+        <type><ref refid="classapollo_1_1cyber_1_1Time" kindref="compound">apollo::cyber::Time</ref></type>
+        <definition>apollo::cyber::Time GeneralChannelMessage::time_last_calc_</definition>
+        <argsstring></argsstring>
+        <name>time_last_calc_</name>
+        <initializer>= <ref refid="classapollo_1_1cyber_1_1Time_1abb3f07caa00e1e76d3040e9f725afc09" kindref="member">apollo::cyber::Time::MonoTime</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" line="174" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGeneralChannelMessage_1a9663241eded60406a25281d650713ec5" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; <ref refid="classapollo_1_1cyber_1_1Node" kindref="compound">apollo::cyber::Node</ref> &gt;</type>
+        <definition>std::unique_ptr&lt;apollo::cyber::Node&gt; GeneralChannelMessage::channel_node_</definition>
+        <argsstring></argsstring>
+        <name>channel_node_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" line="176" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGeneralChannelMessage_1a123a419e25302adacba1f1984bc70b22" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string GeneralChannelMessage::node_name_</definition>
+        <argsstring></argsstring>
+        <name>node_name_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" line="178" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGeneralChannelMessage_1a2839fca91027887bdb8c7e9df077c105" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; GeneralChannelMessage::readers_</definition>
+        <argsstring></argsstring>
+        <name>readers_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" line="180" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" bodystart="180" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGeneralChannelMessage_1aff8aed1cdbd9bfebcea0b2bb5f5c6c5b" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; GeneralChannelMessage::writers_</definition>
+        <argsstring></argsstring>
+        <name>writers_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" line="181" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" bodystart="181" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGeneralChannelMessage_1a6b288701779537fb1a9846214d9ebeac" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="structapollo_1_1cyber_1_1message_1_1RawMessage" kindref="compound">apollo::cyber::message::RawMessage</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;apollo::cyber::message::RawMessage&gt; GeneralChannelMessage::channel_message_</definition>
+        <argsstring></argsstring>
+        <name>channel_message_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" line="183" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" bodystart="183" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGeneralChannelMessage_1a6fbe63b8ee339b6bbf99736aa6a873cf" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="classapollo_1_1cyber_1_1Reader" kindref="compound">apollo::cyber::Reader</ref>&lt; <ref refid="structapollo_1_1cyber_1_1message_1_1RawMessage" kindref="compound">apollo::cyber::message::RawMessage</ref> &gt; &gt;</type>
+        <definition>std::shared_ptr&lt;apollo::cyber::Reader&lt;apollo::cyber::message::RawMessage&gt; &gt; GeneralChannelMessage::channel_reader_</definition>
+        <argsstring></argsstring>
+        <name>channel_reader_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" line="185" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGeneralChannelMessage_1a58d9c04f21d27bcbcce36073f4325c7e" prot="private" static="no" mutable="yes">
+        <type>std::mutex</type>
+        <definition>std::mutex GeneralChannelMessage::inner_lock_</definition>
+        <argsstring></argsstring>
+        <name>inner_lock_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" line="186" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" bodystart="186" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGeneralChannelMessage_1ab150e16ccbb7e536a0b6e6276e3eca7a" prot="private" static="no" mutable="no">
+        <type>google::protobuf::Message *</type>
+        <definition>google::protobuf::Message* GeneralChannelMessage::raw_msg_class_</definition>
+        <argsstring></argsstring>
+        <name>raw_msg_class_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" line="188" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" bodystart="188" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classGeneralChannelMessage_1ae90c7f27bec878186a229b7b314512f6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class CyberTopologyMessage</definition>
+        <argsstring></argsstring>
+        <name>CyberTopologyMessage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" line="190" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" bodystart="190" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classGeneralChannelMessage_1abcf2c2516937d8e5700b72b878385bb2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class GeneralMessage</definition>
+        <argsstring></argsstring>
+        <name>GeneralMessage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" line="191" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" bodystart="191" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classGeneralChannelMessage_1aacef197db8365b40ebc65d33874831a2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>static const char* GeneralChannelMessage::errCode2Str</definition>
+        <argsstring>(ErrorCode errCode)</argsstring>
+        <name>errCode2Str</name>
+        <param>
+          <type><ref refid="classGeneralChannelMessage_1a4273153a78b91f1bbc1005c7fc83a42b" kindref="member">ErrorCode</ref></type>
+          <declname>errCode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" line="39" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classGeneralChannelMessage_1a78584063709d67ee1cd73ce4e3a5e152" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool GeneralChannelMessage::isErrorCode</definition>
+        <argsstring>(void *ptr)</argsstring>
+        <name>isErrorCode</name>
+        <param>
+          <type>void *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" line="40" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classGeneralChannelMessage_1aa2a46a58ecfda4b9e6277f8d48101d5a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classGeneralChannelMessage_1a4273153a78b91f1bbc1005c7fc83a42b" kindref="member">ErrorCode</ref></type>
+        <definition>static ErrorCode GeneralChannelMessage::castPtr2ErrorCode</definition>
+        <argsstring>(void *ptr)</argsstring>
+        <name>castPtr2ErrorCode</name>
+        <param>
+          <type>void *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" line="42" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" bodystart="42" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classGeneralChannelMessage_1ae54666aaf4da7e77fedfaf9c6d0f4966" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classGeneralChannelMessage" kindref="compound">GeneralChannelMessage</ref> *</type>
+        <definition>static GeneralChannelMessage* GeneralChannelMessage::castErrorCode2Ptr</definition>
+        <argsstring>(ErrorCode errCode)</argsstring>
+        <name>castErrorCode2Ptr</name>
+        <param>
+          <type><ref refid="classGeneralChannelMessage_1a4273153a78b91f1bbc1005c7fc83a42b" kindref="member">ErrorCode</ref></type>
+          <declname>errCode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" line="46" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" bodystart="46" bodyend="49"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classGeneralChannelMessage_1a4b4051170a0227f18d3807b3da6290c8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>GeneralChannelMessage::~GeneralChannelMessage</definition>
+        <argsstring>()</argsstring>
+        <name>~GeneralChannelMessage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" line="51" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" bodystart="51" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="classGeneralChannelMessage_1acd67da9cdc84072627c42879469b2095" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string GeneralChannelMessage::GetChannelName</definition>
+        <argsstring>(void) const </argsstring>
+        <name>GetChannelName</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" line="61" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" bodystart="61" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="classGeneralChannelMessage_1ac8732e4bbf847a2218d78d57d0b9565b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GeneralChannelMessage::set_message_type</definition>
+        <argsstring>(const std::string &amp;msgTypeName)</argsstring>
+        <name>set_message_type</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>msgTypeName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" line="65" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" bodystart="65" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classGeneralChannelMessage_1acffb0de01ee3fd896df64f7caed59ae3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::string &amp;</type>
+        <definition>const std::string&amp; GeneralChannelMessage::message_type</definition>
+        <argsstring>(void) const </argsstring>
+        <name>message_type</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" line="68" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" bodystart="68" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classGeneralChannelMessage_1a112d3c8d26558666a5ee296c7e890699" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool GeneralChannelMessage::is_enabled</definition>
+        <argsstring>(void) const </argsstring>
+        <name>is_enabled</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" line="70" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" bodystart="70" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="classGeneralChannelMessage_1aa62162c570cfc990be7b5045406ea2ee" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool GeneralChannelMessage::has_message_come</definition>
+        <argsstring>(void) const </argsstring>
+        <name>has_message_come</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" line="71" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" bodystart="71" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classGeneralChannelMessage_1ae607e8278605ccb88ea541965a2ff4bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double GeneralChannelMessage::frame_ratio</definition>
+        <argsstring>(void) override</argsstring>
+        <name>frame_ratio</name>
+        <reimplements refid="classRenderableMessage_1a7b8a1627a96d0b0658be68c1ad6b99a5">frame_ratio</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" line="73" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classGeneralChannelMessage_1a3df832daecc2a56b91c1a4165668a699" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::string &amp;</type>
+        <definition>const std::string&amp; GeneralChannelMessage::NodeName</definition>
+        <argsstring>(void) const </argsstring>
+        <name>NodeName</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" line="75" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" bodystart="75" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="classGeneralChannelMessage_1afa6acec81e88dbc16cfcb06651462da3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GeneralChannelMessage::add_reader</definition>
+        <argsstring>(const std::string &amp;reader)</argsstring>
+        <name>add_reader</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>reader</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" line="77" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" bodystart="77" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="classGeneralChannelMessage_1a54d35b4c1a5a2d042266fe7ef1591c42" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GeneralChannelMessage::del_reader</definition>
+        <argsstring>(const std::string &amp;reader)</argsstring>
+        <name>del_reader</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>reader</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" line="78" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" bodystart="78" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="classGeneralChannelMessage_1aa9c664e67c018d7ddee6287a15972971" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GeneralChannelMessage::add_writer</definition>
+        <argsstring>(const std::string &amp;writer)</argsstring>
+        <name>add_writer</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>writer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" line="80" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" bodystart="80" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classGeneralChannelMessage_1aedf08c4b88d2662a627f22b5a20c4ba9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GeneralChannelMessage::del_writer</definition>
+        <argsstring>(const std::string &amp;writer)</argsstring>
+        <name>del_writer</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>writer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" line="81" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" bodystart="81" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="classGeneralChannelMessage_1af7f60b4c6e275dbfd0347aa2f8a2ac14" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void GeneralChannelMessage::Render</definition>
+        <argsstring>(const Screen *s, int key) override</argsstring>
+        <name>Render</name>
+        <reimplements refid="classRenderableMessage_1a3f65c247f5db9bb4918bca7d665bbdc6">Render</reimplements>
+        <param>
+          <type>const <ref refid="classScreen" kindref="compound">Screen</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" line="88" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classGeneralChannelMessage_1a8ff914f416cc8684335a58b56f17c54d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GeneralChannelMessage::CloseChannel</definition>
+        <argsstring>(void)</argsstring>
+        <name>CloseChannel</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" line="90" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" bodystart="90" bodyend="98"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classGeneralChannelMessage_1a390e8b45e9b980c6cc6e2f3c1d36ece9" prot="private" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>GeneralChannelMessage::GeneralChannelMessage</definition>
+        <argsstring>(const std::string &amp;nodeName, RenderableMessage *parent=nullptr)</argsstring>
+        <name>GeneralChannelMessage</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>nodeName</declname>
+        </param>
+        <param>
+          <type><ref refid="classRenderableMessage" kindref="compound">RenderableMessage</ref> *</type>
+          <declname>parent</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" line="101" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" bodystart="101" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="classGeneralChannelMessage_1ac6269c5ac192942c72566f2a6399e465" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GeneralChannelMessage::GeneralChannelMessage</definition>
+        <argsstring>(const GeneralChannelMessage &amp;)=delete</argsstring>
+        <name>GeneralChannelMessage</name>
+        <param>
+          <type>const <ref refid="classGeneralChannelMessage" kindref="compound">GeneralChannelMessage</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" line="119" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classGeneralChannelMessage_1ab6a1a17b601ac4b41e687022ff0ec434" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classGeneralChannelMessage" kindref="compound">GeneralChannelMessage</ref> &amp;</type>
+        <definition>GeneralChannelMessage&amp; GeneralChannelMessage::operator=</definition>
+        <argsstring>(const GeneralChannelMessage &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classGeneralChannelMessage" kindref="compound">GeneralChannelMessage</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" line="120" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classGeneralChannelMessage_1aefdf77ab4c8e43b86af7128aaaa5ccac" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GeneralChannelMessage::updateRawMessage</definition>
+        <argsstring>(const std::shared_ptr&lt; apollo::cyber::message::RawMessage &gt; &amp;rawMsg)</argsstring>
+        <name>updateRawMessage</name>
+        <param>
+          <type>const std::shared_ptr&lt; <ref refid="structapollo_1_1cyber_1_1message_1_1RawMessage" kindref="compound">apollo::cyber::message::RawMessage</ref> &gt; &amp;</type>
+          <declname>rawMsg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" line="141" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" bodystart="141" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="function" id="classGeneralChannelMessage_1a347060b4136af1997b77ac6671dbb860" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="structapollo_1_1cyber_1_1message_1_1RawMessage" kindref="compound">apollo::cyber::message::RawMessage</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;apollo::cyber::message::RawMessage&gt; GeneralChannelMessage::CopyMsgPtr</definition>
+        <argsstring>(void) const </argsstring>
+        <name>CopyMsgPtr</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" line="151" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" bodystart="151" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="classGeneralChannelMessage_1ae1bc06baa0d31bb6757fb5d27f034da9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classGeneralChannelMessage" kindref="compound">GeneralChannelMessage</ref> *</type>
+        <definition>GeneralChannelMessage* GeneralChannelMessage::OpenChannel</definition>
+        <argsstring>(const std::string &amp;channelName)</argsstring>
+        <name>OpenChannel</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>channelName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" line="160" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classGeneralChannelMessage_1a47717a3ab362e45cad05f94495168386" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GeneralChannelMessage::RenderDebugString</definition>
+        <argsstring>(const Screen *s, int key, unsigned lineNo)</argsstring>
+        <name>RenderDebugString</name>
+        <param>
+          <type>const <ref refid="classScreen" kindref="compound">Screen</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <declname>lineNo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" line="162" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classGeneralChannelMessage_1a15801ad66f9891d77cb9dbe3e606803e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GeneralChannelMessage::RenderInfo</definition>
+        <argsstring>(const Screen *s, int key, unsigned lineNo)</argsstring>
+        <name>RenderInfo</name>
+        <param>
+          <type>const <ref refid="classScreen" kindref="compound">Screen</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <declname>lineNo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" line="163" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classGeneralChannelMessage_1ac5344c725f27ad9bd126cc67a8a2238a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GeneralChannelMessage::set_has_message_come</definition>
+        <argsstring>(bool b)</argsstring>
+        <name>set_has_message_come</name>
+        <param>
+          <type>bool</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" line="165" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" bodystart="165" bodyend="165"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classGeneralChannelMessage_1a1427cf97f758b92c79262934bab20e28" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void GeneralChannelMessage::DoDelete</definition>
+        <argsstring>(std::vector&lt; std::string &gt; &amp;vec, const std::string &amp;str)</argsstring>
+        <name>DoDelete</name>
+        <param>
+          <type>std::vector&lt; std::string &gt; &amp;</type>
+          <declname>vec</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" line="122" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" bodystart="122" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="classGeneralChannelMessage_1a4795285b54ebe85294e2b9ce4ce8440c" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void GeneralChannelMessage::DoAdd</definition>
+        <argsstring>(std::vector&lt; std::string &gt; &amp;vec, const std::string &amp;str)</argsstring>
+        <name>DoAdd</name>
+        <param>
+          <type>std::vector&lt; std::string &gt; &amp;</type>
+          <declname>vec</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" line="131" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" bodystart="131" bodyend="139"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="315">
+        <label>GeneralChannelMessage</label>
+        <link refid="classGeneralChannelMessage"/>
+        <childnode refid="316" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="317">
+        <label>RenderableMessage</label>
+        <link refid="classRenderableMessage"/>
+      </node>
+      <node id="316">
+        <label>GeneralMessageBase</label>
+        <link refid="classGeneralMessageBase"/>
+        <childnode refid="317" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="318">
+        <label>GeneralChannelMessage</label>
+        <link refid="classGeneralChannelMessage"/>
+        <childnode refid="319" relation="public-inheritance">
+        </childnode>
+        <childnode refid="321" relation="usage">
+          <edgelabel>time_last_calc_</edgelabel>
+          <edgelabel>msg_time_</edgelabel>
+          <edgelabel>last_time_</edgelabel>
+        </childnode>
+      </node>
+      <node id="321">
+        <label>apollo::cyber::Time</label>
+        <link refid="classapollo_1_1cyber_1_1Time"/>
+        <childnode refid="321" relation="usage">
+          <edgelabel>MIN</edgelabel>
+          <edgelabel>MAX</edgelabel>
+        </childnode>
+      </node>
+      <node id="320">
+        <label>RenderableMessage</label>
+        <link refid="classRenderableMessage"/>
+        <childnode refid="320" relation="usage">
+          <edgelabel>parent_</edgelabel>
+        </childnode>
+      </node>
+      <node id="319">
+        <label>GeneralMessageBase</label>
+        <link refid="classGeneralMessageBase"/>
+        <childnode refid="320" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" line="28" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_monitor/general_channel_message.h" bodystart="28" bodyend="192"/>
+    <listofallmembers>
+      <member refid="classGeneralChannelMessage_1afa6acec81e88dbc16cfcb06651462da3" prot="public" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>add_reader</name></member>
+      <member refid="classGeneralChannelMessage_1aa9c664e67c018d7ddee6287a15972971" prot="public" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>add_writer</name></member>
+      <member refid="classGeneralChannelMessage_1ae54666aaf4da7e77fedfaf9c6d0f4966" prot="public" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>castErrorCode2Ptr</name></member>
+      <member refid="classGeneralChannelMessage_1aa2a46a58ecfda4b9e6277f8d48101d5a" prot="public" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>castPtr2ErrorCode</name></member>
+      <member refid="classGeneralChannelMessage_1a6b288701779537fb1a9846214d9ebeac" prot="private" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>channel_message_</name></member>
+      <member refid="classGeneralChannelMessage_1a9663241eded60406a25281d650713ec5" prot="private" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>channel_node_</name></member>
+      <member refid="classGeneralChannelMessage_1a6fbe63b8ee339b6bbf99736aa6a873cf" prot="private" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>channel_reader_</name></member>
+      <member refid="classGeneralMessageBase_1a9ab394f1176382bbef06e1b7c37e35ee" prot="protected" virt="virtual"><scope>GeneralChannelMessage</scope><name>Child</name></member>
+      <member refid="classGeneralMessageBase_1a5ff98bf477e95204ca2021be372d3eba" prot="protected" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>children_map_</name></member>
+      <member refid="classGeneralMessageBase_1a30f39896e2bb072ac8f67e46e6c95e41" prot="protected" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>clear</name></member>
+      <member refid="classGeneralChannelMessage_1a8ff914f416cc8684335a58b56f17c54d" prot="public" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>CloseChannel</name></member>
+      <member refid="classGeneralChannelMessage_1a347060b4136af1997b77ac6671dbb860" prot="private" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>CopyMsgPtr</name></member>
+      <member refid="classGeneralChannelMessage_1a7b1412a227a2ec0d3baedc0938f931df" prot="private" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>current_state_</name></member>
+      <member refid="classGeneralChannelMessage_1ae90c7f27bec878186a229b7b314512f6" prot="private" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>CyberTopologyMessage</name></member>
+      <member refid="classGeneralChannelMessage_1a54d35b4c1a5a2d042266fe7ef1591c42" prot="public" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>del_reader</name></member>
+      <member refid="classGeneralChannelMessage_1aedf08c4b88d2662a627f22b5a20c4ba9" prot="public" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>del_writer</name></member>
+      <member refid="classGeneralChannelMessage_1a4795285b54ebe85294e2b9ce4ce8440c" prot="private" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>DoAdd</name></member>
+      <member refid="classGeneralChannelMessage_1a1427cf97f758b92c79262934bab20e28" prot="private" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>DoDelete</name></member>
+      <member refid="classGeneralChannelMessage_1aacef197db8365b40ebc65d33874831a2" prot="public" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>errCode2Str</name></member>
+      <member refid="classGeneralChannelMessage_1a4273153a78b91f1bbc1005c7fc83a42b" prot="public" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>ErrorCode</name></member>
+      <member refid="classGeneralChannelMessage_1a3da8072e2c9d5ed6b510378384d2dc4f" prot="private" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>frame_counter_</name></member>
+      <member refid="classGeneralChannelMessage_1ae607e8278605ccb88ea541965a2ff4bd" prot="public" virt="virtual"><scope>GeneralChannelMessage</scope><name>frame_ratio</name></member>
+      <member refid="classRenderableMessage_1a41d8fd1e6b5f8dee768ee227783c6913" prot="protected" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>frame_ratio_</name></member>
+      <member refid="classRenderableMessage_1af8a50adc6f5e10a890eb435390e4e8a6" prot="public" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>FrameRatio_Precision</name></member>
+      <member refid="classGeneralChannelMessage_1a390e8b45e9b980c6cc6e2f3c1d36ece9" prot="private" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>GeneralChannelMessage</name></member>
+      <member refid="classGeneralChannelMessage_1ac6269c5ac192942c72566f2a6399e465" prot="private" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>GeneralChannelMessage</name></member>
+      <member refid="classGeneralChannelMessage_1abcf2c2516937d8e5700b72b878385bb2" prot="private" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>GeneralMessage</name></member>
+      <member refid="classGeneralMessageBase_1a94b72a6e3f9cfe7204bd17f589840a77" prot="protected" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>GeneralMessageBase</name></member>
+      <member refid="classGeneralMessageBase_1af9e00565fe280e45a0155f583057ddbd" prot="protected" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>GeneralMessageBase</name></member>
+      <member refid="classGeneralChannelMessage_1acd67da9cdc84072627c42879469b2095" prot="public" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>GetChannelName</name></member>
+      <member refid="classGeneralChannelMessage_1aa62162c570cfc990be7b5045406ea2ee" prot="public" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>has_message_come</name></member>
+      <member refid="classGeneralChannelMessage_1af5e386e99b7a8722b485d027e2ed75bd" prot="private" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>has_message_come_</name></member>
+      <member refid="classGeneralChannelMessage_1a58d9c04f21d27bcbcce36073f4325c7e" prot="private" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>inner_lock_</name></member>
+      <member refid="classGeneralMessageBase_1a7b063ed053799b40e65b4fc36d53ffe8" prot="protected" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>insertRepeatedMessage</name></member>
+      <member refid="classGeneralChannelMessage_1a112d3c8d26558666a5ee296c7e890699" prot="public" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>is_enabled</name></member>
+      <member refid="classGeneralChannelMessage_1a78584063709d67ee1cd73ce4e3a5e152" prot="public" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>isErrorCode</name></member>
+      <member refid="classGeneralChannelMessage_1a8ff50746033122e3479db0cd923a8860" prot="private" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>last_time_</name></member>
+      <member refid="classRenderableMessage_1a88b81ff1a8da326284fb4732b3d33f46" prot="protected" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>line_no</name></member>
+      <member refid="classRenderableMessage_1ae3a742ebe02b5a7f547e97921464e8b5" prot="protected" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>line_no_</name></member>
+      <member refid="classGeneralMessageBase_1a3b3feba460a716d68348a54d274dd675" prot="protected" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>lineCount</name></member>
+      <member refid="classGeneralMessageBase_1a4af9e501c26db8741b458ab477fe9aaa" prot="protected" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>lineCountOfField</name></member>
+      <member refid="classGeneralChannelMessage_1acffb0de01ee3fd896df64f7caed59ae3" prot="public" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>message_type</name></member>
+      <member refid="classGeneralChannelMessage_1a1d25120dc72e5010565823a544783efc" prot="private" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>message_type_</name></member>
+      <member refid="classGeneralChannelMessage_1a10a1b559a2fd9741bb268fbe1c4290d2" prot="private" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>msg_time_</name></member>
+      <member refid="classGeneralChannelMessage_1a123a419e25302adacba1f1984bc70b22" prot="private" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>node_name_</name></member>
+      <member refid="classGeneralChannelMessage_1a3df832daecc2a56b91c1a4165668a699" prot="public" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>NodeName</name></member>
+      <member refid="classGeneralChannelMessage_1ae1bc06baa0d31bb6757fb5d27f034da9" prot="private" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>OpenChannel</name></member>
+      <member refid="classGeneralChannelMessage_1ab6a1a17b601ac4b41e687022ff0ec434" prot="private" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>operator=</name></member>
+      <member refid="classGeneralMessageBase_1aa360714a5ea853427bfd7662f8928d8c" prot="protected" virt="non-virtual" ambiguityscope="GeneralMessageBase::"><scope>GeneralChannelMessage</scope><name>operator=</name></member>
+      <member refid="classRenderableMessage_1a1d6dcb391ac3d77b8b38c5e926d58375" prot="protected" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>page_index_</name></member>
+      <member refid="classRenderableMessage_1a6ada5869afedf204cc031e3345624017" prot="public" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>page_item_count</name></member>
+      <member refid="classRenderableMessage_1ac013cc75fdc393be5bf3c8e95d1b5430" prot="protected" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>page_item_count_</name></member>
+      <member refid="classRenderableMessage_1ac3a01804a7e180672c2a34fe2b8b0a8c" prot="protected" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>pages_</name></member>
+      <member refid="classRenderableMessage_1ab23728d14d9aff3efa0af7639ec6059c" prot="public" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>parent</name></member>
+      <member refid="classRenderableMessage_1a4745527c9b4cf149bfeccee669fd3aa8" prot="protected" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>parent_</name></member>
+      <member refid="classGeneralMessageBase_1abb2b6d5c8a9399cc6e3eab14a0bec0c7" prot="protected" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>PrintField</name></member>
+      <member refid="classGeneralMessageBase_1acb22b24b458fbb199de702736e136be3" prot="protected" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>PrintMessage</name></member>
+      <member refid="classGeneralChannelMessage_1ab150e16ccbb7e536a0b6e6276e3eca7a" prot="private" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>raw_msg_class_</name></member>
+      <member refid="classGeneralChannelMessage_1a2839fca91027887bdb8c7e9df077c105" prot="private" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>readers_</name></member>
+      <member refid="classGeneralChannelMessage_1af7f60b4c6e275dbfd0347aa2f8a2ac14" prot="public" virt="virtual"><scope>GeneralChannelMessage</scope><name>Render</name></member>
+      <member refid="classRenderableMessage_1afdf4e7a3ff674f72bc6c9bba9997a422" prot="public" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>RenderableMessage</name></member>
+      <member refid="classGeneralChannelMessage_1a47717a3ab362e45cad05f94495168386" prot="private" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>RenderDebugString</name></member>
+      <member refid="classGeneralChannelMessage_1a15801ad66f9891d77cb9dbe3e606803e" prot="private" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>RenderInfo</name></member>
+      <member refid="classRenderableMessage_1af2cbc010cd97044dee4ebb42c46ff340" prot="protected" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>reset_line_page</name></member>
+      <member refid="classGeneralChannelMessage_1ac5344c725f27ad9bd126cc67a8a2238a" prot="private" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>set_has_message_come</name></member>
+      <member refid="classRenderableMessage_1aa6685f59c0d7a11b7510aa0f822d1a03" prot="protected" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>set_line_no</name></member>
+      <member refid="classGeneralChannelMessage_1ac8732e4bbf847a2218d78d57d0b9565b" prot="public" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>set_message_type</name></member>
+      <member refid="classRenderableMessage_1a3313d82739bb1dc2da225a40aacfc9b6" prot="public" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>set_parent</name></member>
+      <member refid="classRenderableMessage_1a6ca2c5740e208cb4062fbe021ce72853" prot="protected" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>SplitPages</name></member>
+      <member refid="classGeneralChannelMessage_1aa051da5753574d8fe644fdbcc2cd2412" prot="private" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>State</name></member>
+      <member refid="classGeneralChannelMessage_1ad1f7f60900caf4cc8cfba0fb83961a43" prot="private" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>time_last_calc_</name></member>
+      <member refid="classGeneralChannelMessage_1aefdf77ab4c8e43b86af7128aaaa5ccac" prot="private" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>updateRawMessage</name></member>
+      <member refid="classGeneralChannelMessage_1aff8aed1cdbd9bfebcea0b2bb5f5c6c5b" prot="private" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>writers_</name></member>
+      <member refid="classGeneralChannelMessage_1a4b4051170a0227f18d3807b3da6290c8" prot="public" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>~GeneralChannelMessage</name></member>
+      <member refid="classGeneralMessageBase_1ab50f085176c924a1d08a805419499a6d" prot="protected" virt="non-virtual"><scope>GeneralChannelMessage</scope><name>~GeneralMessageBase</name></member>
+      <member refid="classRenderableMessage_1a2a539566921f83ea97eed0ea8965d842" prot="public" virt="virtual"><scope>GeneralChannelMessage</scope><name>~RenderableMessage</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

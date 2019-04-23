@@ -1,0 +1,980 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="shm__dispatcher_8h" kind="file">
+    <compoundname>shm_dispatcher.h</compoundname>
+    <includes local="no">cstring</includes>
+    <includes local="no">memory</includes>
+    <includes local="no">string</includes>
+    <includes local="no">thread</includes>
+    <includes local="no">unordered_map</includes>
+    <includes refid="atomic__rw__lock_8h" local="yes">cyber/base/atomic_rw_lock.h</includes>
+    <includes refid="global__data_8h" local="yes">cyber/common/global_data.h</includes>
+    <includes refid="log_8h" local="yes">cyber/common/log.h</includes>
+    <includes refid="common_2macros_8h" local="yes">cyber/common/macros.h</includes>
+    <includes refid="message__traits_8h" local="yes">cyber/message/message_traits.h</includes>
+    <includes refid="dispatcher_8h" local="yes">cyber/transport/dispatcher/dispatcher.h</includes>
+    <includes refid="notifier__factory_8h" local="yes">cyber/transport/shm/notifier_factory.h</includes>
+    <includes refid="segment_8h" local="yes">cyber/transport/shm/segment.h</includes>
+    <includedby refid="shm__receiver_8h" local="yes">transport/receiver/shm_receiver.h</includedby>
+    <includedby refid="transport_8h" local="yes">transport/transport.h</includedby>
+    <incdepgraph>
+      <node id="13101">
+        <label>list</label>
+      </node>
+      <node id="13057">
+        <label>atomic</label>
+      </node>
+      <node id="13068">
+        <label>stdarg.h</label>
+      </node>
+      <node id="13100">
+        <label>cyber/base/signal.h</label>
+        <link refid="signal_8h"/>
+        <childnode refid="13083" relation="include">
+        </childnode>
+        <childnode refid="13097" relation="include">
+        </childnode>
+        <childnode refid="13101" relation="include">
+        </childnode>
+        <childnode refid="13050" relation="include">
+        </childnode>
+        <childnode refid="13061" relation="include">
+        </childnode>
+      </node>
+      <node id="13081">
+        <label>arpa/inet.h</label>
+      </node>
+      <node id="13097">
+        <label>functional</label>
+      </node>
+      <node id="13098">
+        <label>cyber/proto/role_attributes.pb.h</label>
+      </node>
+      <node id="13069">
+        <label>cyber/binary.h</label>
+        <link refid="binary_8h"/>
+        <childnode refid="13051" relation="include">
+        </childnode>
+      </node>
+      <node id="13070">
+        <label>glog/logging.h</label>
+      </node>
+      <node id="13048">
+        <label>transport/dispatcher/shm_dispatcher.h</label>
+        <link refid="shm_dispatcher.h"/>
+        <childnode refid="13049" relation="include">
+        </childnode>
+        <childnode refid="13050" relation="include">
+        </childnode>
+        <childnode refid="13051" relation="include">
+        </childnode>
+        <childnode refid="13052" relation="include">
+        </childnode>
+        <childnode refid="13053" relation="include">
+        </childnode>
+        <childnode refid="13054" relation="include">
+        </childnode>
+        <childnode refid="13063" relation="include">
+        </childnode>
+        <childnode refid="13067" relation="include">
+        </childnode>
+        <childnode refid="13072" relation="include">
+        </childnode>
+        <childnode refid="13077" relation="include">
+        </childnode>
+        <childnode refid="13096" relation="include">
+        </childnode>
+        <childnode refid="13106" relation="include">
+        </childnode>
+        <childnode refid="13109" relation="include">
+        </childnode>
+      </node>
+      <node id="13104">
+        <label>cstdint</label>
+      </node>
+      <node id="13094">
+        <label>cyber/message/raw_message_traits.h</label>
+        <link refid="raw__message__traits_8h"/>
+        <childnode refid="13079" relation="include">
+        </childnode>
+        <childnode refid="13050" relation="include">
+        </childnode>
+        <childnode refid="13051" relation="include">
+        </childnode>
+        <childnode refid="13095" relation="include">
+        </childnode>
+      </node>
+      <node id="13084">
+        <label>cyber/message/protobuf_traits.h</label>
+        <link refid="protobuf__traits_8h"/>
+        <childnode refid="13079" relation="include">
+        </childnode>
+        <childnode refid="13050" relation="include">
+        </childnode>
+        <childnode refid="13051" relation="include">
+        </childnode>
+        <childnode refid="13085" relation="include">
+        </childnode>
+      </node>
+      <node id="13063">
+        <label>cyber/common/global_data.h</label>
+        <link refid="global__data_8h"/>
+        <childnode refid="13051" relation="include">
+        </childnode>
+        <childnode refid="13053" relation="include">
+        </childnode>
+        <childnode refid="13064" relation="include">
+        </childnode>
+        <childnode refid="13054" relation="include">
+        </childnode>
+        <childnode refid="13067" relation="include">
+        </childnode>
+        <childnode refid="13072" relation="include">
+        </childnode>
+        <childnode refid="13075" relation="include">
+        </childnode>
+        <childnode refid="13076" relation="include">
+        </childnode>
+      </node>
+      <node id="13055">
+        <label>stdint.h</label>
+      </node>
+      <node id="13062">
+        <label>cyber/base/rw_lock_guard.h</label>
+        <link refid="rw__lock__guard_8h"/>
+        <childnode refid="13055" relation="include">
+        </childnode>
+        <childnode refid="13056" relation="include">
+        </childnode>
+        <childnode refid="13057" relation="include">
+        </childnode>
+        <childnode refid="13058" relation="include">
+        </childnode>
+        <childnode refid="13059" relation="include">
+        </childnode>
+        <childnode refid="13060" relation="include">
+        </childnode>
+        <childnode refid="13061" relation="include">
+        </childnode>
+        <childnode refid="13052" relation="include">
+        </childnode>
+      </node>
+      <node id="13111">
+        <label>sys/shm.h</label>
+      </node>
+      <node id="13115">
+        <label>cyber/transport/shm/state.h</label>
+        <link refid="transport_2shm_2state_8h"/>
+        <childnode refid="13057" relation="include">
+        </childnode>
+        <childnode refid="13104" relation="include">
+        </childnode>
+        <childnode refid="13061" relation="include">
+        </childnode>
+        <childnode refid="13051" relation="include">
+        </childnode>
+      </node>
+      <node id="13113">
+        <label>cyber/transport/shm/block.h</label>
+        <link refid="block_8h"/>
+        <childnode refid="13057" relation="include">
+        </childnode>
+        <childnode refid="13104" relation="include">
+        </childnode>
+      </node>
+      <node id="13087">
+        <label>google/protobuf/compiler/parser.h</label>
+      </node>
+      <node id="13079">
+        <label>cassert</label>
+      </node>
+      <node id="13099">
+        <label>cyber/transport/message/listener_handler.h</label>
+        <link refid="listener__handler_8h"/>
+        <childnode refid="13097" relation="include">
+        </childnode>
+        <childnode refid="13050" relation="include">
+        </childnode>
+        <childnode refid="13051" relation="include">
+        </childnode>
+        <childnode refid="13053" relation="include">
+        </childnode>
+        <childnode refid="13054" relation="include">
+        </childnode>
+        <childnode refid="13100" relation="include">
+        </childnode>
+        <childnode refid="13067" relation="include">
+        </childnode>
+        <childnode refid="13095" relation="include">
+        </childnode>
+        <childnode refid="13102" relation="include">
+        </childnode>
+      </node>
+      <node id="13076">
+        <label>cyber/proto/cyber_conf.pb.h</label>
+      </node>
+      <node id="13072">
+        <label>cyber/common/macros.h</label>
+        <link refid="common_2macros_8h"/>
+        <childnode refid="13060" relation="include">
+        </childnode>
+        <childnode refid="13050" relation="include">
+        </childnode>
+        <childnode refid="13061" relation="include">
+        </childnode>
+        <childnode refid="13065" relation="include">
+        </childnode>
+        <childnode refid="13066" relation="include">
+        </childnode>
+        <childnode refid="13073" relation="include">
+        </childnode>
+      </node>
+      <node id="13051">
+        <label>string</label>
+      </node>
+      <node id="13078">
+        <label>cyber/message/intra_message.h</label>
+        <link refid="intra__message_8h"/>
+        <childnode refid="13079" relation="include">
+        </childnode>
+        <childnode refid="13050" relation="include">
+        </childnode>
+        <childnode refid="13051" relation="include">
+        </childnode>
+      </node>
+      <node id="13095">
+        <label>cyber/message/raw_message.h</label>
+        <link refid="raw__message_8h"/>
+        <childnode refid="13082" relation="include">
+        </childnode>
+        <childnode refid="13079" relation="include">
+        </childnode>
+        <childnode refid="13050" relation="include">
+        </childnode>
+        <childnode refid="13051" relation="include">
+        </childnode>
+        <childnode refid="13085" relation="include">
+        </childnode>
+      </node>
+      <node id="13090">
+        <label>google/protobuf/io/tokenizer.h</label>
+      </node>
+      <node id="13108">
+        <label>cyber/transport/shm/readable_info.h</label>
+        <link refid="readable__info_8h"/>
+        <childnode refid="13103" relation="include">
+        </childnode>
+        <childnode refid="13104" relation="include">
+        </childnode>
+        <childnode refid="13050" relation="include">
+        </childnode>
+        <childnode refid="13051" relation="include">
+        </childnode>
+      </node>
+      <node id="13085">
+        <label>cyber/message/protobuf_factory.h</label>
+        <link refid="protobuf__factory_8h"/>
+        <childnode refid="13060" relation="include">
+        </childnode>
+        <childnode refid="13050" relation="include">
+        </childnode>
+        <childnode refid="13061" relation="include">
+        </childnode>
+        <childnode refid="13051" relation="include">
+        </childnode>
+        <childnode refid="13072" relation="include">
+        </childnode>
+        <childnode refid="13086" relation="include">
+        </childnode>
+        <childnode refid="13087" relation="include">
+        </childnode>
+        <childnode refid="13088" relation="include">
+        </childnode>
+        <childnode refid="13089" relation="include">
+        </childnode>
+        <childnode refid="13090" relation="include">
+        </childnode>
+      </node>
+      <node id="13089">
+        <label>google/protobuf/dynamic_message.h</label>
+      </node>
+      <node id="13102">
+        <label>cyber/transport/message/message_info.h</label>
+        <link refid="message__info_8h"/>
+        <childnode refid="13103" relation="include">
+        </childnode>
+        <childnode refid="13104" relation="include">
+        </childnode>
+        <childnode refid="13051" relation="include">
+        </childnode>
+        <childnode refid="13105" relation="include">
+        </childnode>
+      </node>
+      <node id="13064">
+        <label>cyber/base/atomic_hash_map.h</label>
+        <link refid="atomic__hash__map_8h"/>
+        <childnode refid="13055" relation="include">
+        </childnode>
+        <childnode refid="13057" relation="include">
+        </childnode>
+        <childnode refid="13065" relation="include">
+        </childnode>
+        <childnode refid="13066" relation="include">
+        </childnode>
+      </node>
+      <node id="13058">
+        <label>condition_variable</label>
+      </node>
+      <node id="13112">
+        <label>sys/types.h</label>
+      </node>
+      <node id="13082">
+        <label>string.h</label>
+      </node>
+      <node id="13054">
+        <label>cyber/base/atomic_rw_lock.h</label>
+        <link refid="atomic__rw__lock_8h"/>
+        <childnode refid="13055" relation="include">
+        </childnode>
+        <childnode refid="13056" relation="include">
+        </childnode>
+        <childnode refid="13057" relation="include">
+        </childnode>
+        <childnode refid="13058" relation="include">
+        </childnode>
+        <childnode refid="13059" relation="include">
+        </childnode>
+        <childnode refid="13060" relation="include">
+        </childnode>
+        <childnode refid="13061" relation="include">
+        </childnode>
+        <childnode refid="13052" relation="include">
+        </childnode>
+        <childnode refid="13062" relation="include">
+        </childnode>
+      </node>
+      <node id="13109">
+        <label>cyber/transport/shm/segment.h</label>
+        <link refid="segment_8h"/>
+        <childnode refid="13055" relation="include">
+        </childnode>
+        <childnode refid="13110" relation="include">
+        </childnode>
+        <childnode refid="13111" relation="include">
+        </childnode>
+        <childnode refid="13112" relation="include">
+        </childnode>
+        <childnode refid="13103" relation="include">
+        </childnode>
+        <childnode refid="13050" relation="include">
+        </childnode>
+        <childnode refid="13061" relation="include">
+        </childnode>
+        <childnode refid="13051" relation="include">
+        </childnode>
+        <childnode refid="13053" relation="include">
+        </childnode>
+        <childnode refid="13113" relation="include">
+        </childnode>
+        <childnode refid="13114" relation="include">
+        </childnode>
+        <childnode refid="13115" relation="include">
+        </childnode>
+      </node>
+      <node id="13056">
+        <label>unistd.h</label>
+      </node>
+      <node id="13088">
+        <label>google/protobuf/descriptor.h</label>
+      </node>
+      <node id="13086">
+        <label>cyber/proto/proto_desc.pb.h</label>
+      </node>
+      <node id="13074">
+        <label>new</label>
+      </node>
+      <node id="13067">
+        <label>cyber/common/log.h</label>
+        <link refid="log_8h"/>
+        <childnode refid="13068" relation="include">
+        </childnode>
+        <childnode refid="13069" relation="include">
+        </childnode>
+        <childnode refid="13070" relation="include">
+        </childnode>
+        <childnode refid="13071" relation="include">
+        </childnode>
+      </node>
+      <node id="13066">
+        <label>utility</label>
+      </node>
+      <node id="13093">
+        <label>sstream</label>
+      </node>
+      <node id="13106">
+        <label>cyber/transport/shm/notifier_factory.h</label>
+        <link refid="notifier__factory_8h"/>
+        <childnode refid="13050" relation="include">
+        </childnode>
+        <childnode refid="13107" relation="include">
+        </childnode>
+      </node>
+      <node id="13105">
+        <label>cyber/transport/common/identity.h</label>
+        <link refid="identity_8h"/>
+        <childnode refid="13104" relation="include">
+        </childnode>
+        <childnode refid="13049" relation="include">
+        </childnode>
+        <childnode refid="13051" relation="include">
+        </childnode>
+      </node>
+      <node id="13110">
+        <label>sys/ipc.h</label>
+      </node>
+      <node id="13059">
+        <label>cstdlib</label>
+      </node>
+      <node id="13060">
+        <label>iostream</label>
+      </node>
+      <node id="13103">
+        <label>cstddef</label>
+      </node>
+      <node id="13053">
+        <label>unordered_map</label>
+      </node>
+      <node id="13114">
+        <label>cyber/transport/shm/shm_conf.h</label>
+        <link refid="shm__conf_8h"/>
+        <childnode refid="13055" relation="include">
+        </childnode>
+        <childnode refid="13051" relation="include">
+        </childnode>
+      </node>
+      <node id="13091">
+        <label>cyber/message/py_message_traits.h</label>
+        <link refid="py__message__traits_8h"/>
+        <childnode refid="13079" relation="include">
+        </childnode>
+        <childnode refid="13050" relation="include">
+        </childnode>
+        <childnode refid="13051" relation="include">
+        </childnode>
+        <childnode refid="13092" relation="include">
+        </childnode>
+      </node>
+      <node id="13061">
+        <label>mutex</label>
+      </node>
+      <node id="13080">
+        <label>cyber/message/message_header.h</label>
+        <link refid="message__header_8h"/>
+        <childnode refid="13081" relation="include">
+        </childnode>
+        <childnode refid="13055" relation="include">
+        </childnode>
+        <childnode refid="13082" relation="include">
+        </childnode>
+        <childnode refid="13083" relation="include">
+        </childnode>
+        <childnode refid="13051" relation="include">
+        </childnode>
+      </node>
+      <node id="13096">
+        <label>cyber/transport/dispatcher/dispatcher.h</label>
+        <link refid="dispatcher_8h"/>
+        <childnode refid="13057" relation="include">
+        </childnode>
+        <childnode refid="13097" relation="include">
+        </childnode>
+        <childnode refid="13060" relation="include">
+        </childnode>
+        <childnode refid="13050" relation="include">
+        </childnode>
+        <childnode refid="13061" relation="include">
+        </childnode>
+        <childnode refid="13051" relation="include">
+        </childnode>
+        <childnode refid="13053" relation="include">
+        </childnode>
+        <childnode refid="13064" relation="include">
+        </childnode>
+        <childnode refid="13054" relation="include">
+        </childnode>
+        <childnode refid="13063" relation="include">
+        </childnode>
+        <childnode refid="13067" relation="include">
+        </childnode>
+        <childnode refid="13098" relation="include">
+        </childnode>
+        <childnode refid="13099" relation="include">
+        </childnode>
+        <childnode refid="13102" relation="include">
+        </childnode>
+      </node>
+      <node id="13092">
+        <label>cyber/message/py_message.h</label>
+        <link refid="py__message_8h"/>
+        <childnode refid="13060" relation="include">
+        </childnode>
+        <childnode refid="13093" relation="include">
+        </childnode>
+        <childnode refid="13051" relation="include">
+        </childnode>
+        <childnode refid="13072" relation="include">
+        </childnode>
+        <childnode refid="13085" relation="include">
+        </childnode>
+      </node>
+      <node id="13071">
+        <label>glog/raw_logging.h</label>
+      </node>
+      <node id="13052">
+        <label>thread</label>
+      </node>
+      <node id="13107">
+        <label>cyber/transport/shm/notifier_base.h</label>
+        <link refid="notifier__base_8h"/>
+        <childnode refid="13050" relation="include">
+        </childnode>
+        <childnode refid="13108" relation="include">
+        </childnode>
+      </node>
+      <node id="13077">
+        <label>cyber/message/message_traits.h</label>
+        <link refid="message__traits_8h"/>
+        <childnode refid="13051" relation="include">
+        </childnode>
+        <childnode refid="13073" relation="include">
+        </childnode>
+        <childnode refid="13067" relation="include">
+        </childnode>
+        <childnode refid="13078" relation="include">
+        </childnode>
+        <childnode refid="13080" relation="include">
+        </childnode>
+        <childnode refid="13084" relation="include">
+        </childnode>
+        <childnode refid="13091" relation="include">
+        </childnode>
+        <childnode refid="13094" relation="include">
+        </childnode>
+      </node>
+      <node id="13065">
+        <label>type_traits</label>
+      </node>
+      <node id="13075">
+        <label>cyber/common/util.h</label>
+        <link refid="util_8h"/>
+        <childnode refid="13051" relation="include">
+        </childnode>
+      </node>
+      <node id="13083">
+        <label>algorithm</label>
+      </node>
+      <node id="13049">
+        <label>cstring</label>
+      </node>
+      <node id="13073">
+        <label>cyber/base/macros.h</label>
+        <link refid="base_2macros_8h"/>
+        <childnode refid="13059" relation="include">
+        </childnode>
+        <childnode refid="13074" relation="include">
+        </childnode>
+      </node>
+      <node id="13050">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="13130">
+        <label>py_wrapper/py_timer.h</label>
+        <link refid="py__timer_8h"/>
+      </node>
+      <node id="13128">
+        <label>py_wrapper/py_node.h</label>
+        <link refid="py__node_8h"/>
+      </node>
+      <node id="13141">
+        <label>tools/cyber_recorder/player/player.h</label>
+        <link refid="player_8h"/>
+      </node>
+      <node id="13121">
+        <label>blocker/intra_reader.h</label>
+        <link refid="intra__reader_8h"/>
+        <childnode refid="13122" relation="include">
+        </childnode>
+      </node>
+      <node id="13132">
+        <label>tools/cyber_monitor/general_message_base.h</label>
+        <link refid="general__message__base_8h"/>
+        <childnode refid="13133" relation="include">
+        </childnode>
+        <childnode refid="13134" relation="include">
+        </childnode>
+      </node>
+      <node id="13137">
+        <label>examples/timer_component_example/timer_component_example.h</label>
+        <link refid="timer__component__example_8h"/>
+      </node>
+      <node id="13116">
+        <label>transport/dispatcher/shm_dispatcher.h</label>
+        <link refid="shm_dispatcher.h"/>
+        <childnode refid="13117" relation="include">
+        </childnode>
+        <childnode refid="13119" relation="include">
+        </childnode>
+      </node>
+      <node id="13127">
+        <label>py_wrapper/py_init.h</label>
+        <link refid="py__init_8h"/>
+      </node>
+      <node id="13135">
+        <label>tools/cyber_recorder/recorder.h</label>
+        <link refid="recorder_8h"/>
+      </node>
+      <node id="13150">
+        <label>tools/cyber_recorder/player/play_task.h</label>
+        <link refid="play__task_8h"/>
+        <childnode refid="13151" relation="include">
+        </childnode>
+      </node>
+      <node id="13123">
+        <label>node/node.h</label>
+        <link refid="node_8h"/>
+        <childnode refid="13124" relation="include">
+        </childnode>
+        <childnode refid="13126" relation="include">
+        </childnode>
+        <childnode refid="13128" relation="include">
+        </childnode>
+        <childnode refid="13140" relation="include">
+        </childnode>
+      </node>
+      <node id="13122">
+        <label>node/node_channel_impl.h</label>
+        <link refid="node__channel__impl_8h"/>
+        <childnode refid="13123" relation="include">
+        </childnode>
+        <childnode refid="13142" relation="include">
+        </childnode>
+        <childnode refid="13145" relation="include">
+        </childnode>
+      </node>
+      <node id="13147">
+        <label>node/reader_base.h</label>
+        <link refid="reader__base_8h"/>
+        <childnode refid="13120" relation="include">
+        </childnode>
+      </node>
+      <node id="13126">
+        <label>cyber.h</label>
+        <link refid="cyber_8h"/>
+        <childnode refid="13127" relation="include">
+        </childnode>
+        <childnode refid="13128" relation="include">
+        </childnode>
+        <childnode refid="13129" relation="include">
+        </childnode>
+        <childnode refid="13130" relation="include">
+        </childnode>
+        <childnode refid="13131" relation="include">
+        </childnode>
+        <childnode refid="13132" relation="include">
+        </childnode>
+        <childnode refid="13134" relation="include">
+        </childnode>
+        <childnode refid="13135" relation="include">
+        </childnode>
+      </node>
+      <node id="13144">
+        <label>parameter/parameter_client.h</label>
+        <link refid="parameter__client_8h"/>
+      </node>
+      <node id="13140">
+        <label>tools/cyber_recorder/player/play_task_producer.h</label>
+        <link refid="play__task__producer_8h"/>
+        <childnode refid="13141" relation="include">
+        </childnode>
+      </node>
+      <node id="13131">
+        <label>py_wrapper/py_topology_manager.h</label>
+        <link refid="py__topology__manager_8h"/>
+      </node>
+      <node id="13125">
+        <label>component/component.h</label>
+        <link refid="component_8h"/>
+        <childnode refid="13126" relation="include">
+        </childnode>
+        <childnode refid="13136" relation="include">
+        </childnode>
+        <childnode refid="13137" relation="include">
+        </childnode>
+        <childnode refid="13138" relation="include">
+        </childnode>
+      </node>
+      <node id="13143">
+        <label>node/node_service_impl.h</label>
+        <link refid="node__service__impl_8h"/>
+        <childnode refid="13123" relation="include">
+        </childnode>
+      </node>
+      <node id="13118">
+        <label>transport/receiver/hybrid_receiver.h</label>
+        <link refid="hybrid__receiver_8h"/>
+        <childnode refid="13119" relation="include">
+        </childnode>
+      </node>
+      <node id="13152">
+        <label>tools/cyber_recorder/player/play_task_consumer.h</label>
+        <link refid="play__task__consumer_8h"/>
+        <childnode refid="13141" relation="include">
+        </childnode>
+      </node>
+      <node id="13146">
+        <label>parameter/parameter_server.h</label>
+        <link refid="parameter__server_8h"/>
+      </node>
+      <node id="13134">
+        <label>tools/cyber_monitor/general_message.h</label>
+        <link refid="general__message_8h"/>
+      </node>
+      <node id="13138">
+        <label>mainboard/module_controller.h</label>
+        <link refid="module__controller_8h"/>
+      </node>
+      <node id="13124">
+        <label>component/component_base.h</label>
+        <link refid="component__base_8h"/>
+        <childnode refid="13125" relation="include">
+        </childnode>
+        <childnode refid="13139" relation="include">
+        </childnode>
+      </node>
+      <node id="13117">
+        <label>transport/receiver/shm_receiver.h</label>
+        <link refid="shm__receiver_8h"/>
+        <childnode refid="13118" relation="include">
+        </childnode>
+        <childnode refid="13119" relation="include">
+        </childnode>
+      </node>
+      <node id="13133">
+        <label>tools/cyber_monitor/general_channel_message.h</label>
+        <link refid="general__channel__message_8h"/>
+      </node>
+      <node id="13148">
+        <label>node/writer.h</label>
+        <link refid="writer_8h"/>
+        <childnode refid="13149" relation="include">
+        </childnode>
+        <childnode refid="13122" relation="include">
+        </childnode>
+        <childnode refid="13128" relation="include">
+        </childnode>
+        <childnode refid="13150" relation="include">
+        </childnode>
+        <childnode refid="13140" relation="include">
+        </childnode>
+      </node>
+      <node id="13139">
+        <label>component/timer_component.h</label>
+        <link refid="timer__component_8h"/>
+        <childnode refid="13137" relation="include">
+        </childnode>
+      </node>
+      <node id="13120">
+        <label>node/reader.h</label>
+        <link refid="reader_8h"/>
+        <childnode refid="13121" relation="include">
+        </childnode>
+        <childnode refid="13122" relation="include">
+        </childnode>
+        <childnode refid="13128" relation="include">
+        </childnode>
+      </node>
+      <node id="13142">
+        <label>service/client.h</label>
+        <link refid="client_8h"/>
+        <childnode refid="13143" relation="include">
+        </childnode>
+        <childnode refid="13144" relation="include">
+        </childnode>
+      </node>
+      <node id="13149">
+        <label>blocker/intra_writer.h</label>
+        <link refid="intra__writer_8h"/>
+        <childnode refid="13122" relation="include">
+        </childnode>
+      </node>
+      <node id="13119">
+        <label>transport/transport.h</label>
+        <link refid="transport_8h"/>
+        <childnode refid="13120" relation="include">
+        </childnode>
+        <childnode refid="13147" relation="include">
+        </childnode>
+        <childnode refid="13148" relation="include">
+        </childnode>
+      </node>
+      <node id="13136">
+        <label>examples/common_component_example/common_component_example.h</label>
+        <link refid="common__component__example_8h"/>
+      </node>
+      <node id="13145">
+        <label>service/service.h</label>
+        <link refid="service_8h"/>
+        <childnode refid="13143" relation="include">
+        </childnode>
+        <childnode refid="13146" relation="include">
+        </childnode>
+      </node>
+      <node id="13129">
+        <label>py_wrapper/py_time.h</label>
+        <link refid="py__time_8h"/>
+      </node>
+      <node id="13151">
+        <label>tools/cyber_recorder/player/play_task_buffer.h</label>
+        <link refid="play__task__buffer_8h"/>
+        <childnode refid="13152" relation="include">
+        </childnode>
+        <childnode refid="13140" relation="include">
+        </childnode>
+        <childnode refid="13141" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher" prot="public">apollo::cyber::transport::ShmDispatcher</innerclass>
+    <innernamespace refid="namespaceapollo">apollo</innernamespace>
+    <innernamespace refid="namespaceapollo_1_1cyber">apollo::cyber</innernamespace>
+    <innernamespace refid="namespaceapollo_1_1cyber_1_1transport">apollo::cyber::transport</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2018<sp/>The<sp/>Apollo<sp/>Authors.<sp/>All<sp/>Rights<sp/>Reserved.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CYBER_TRANSPORT_DISPATCHER_SHM_DISPATCHER_H_</highlight></codeline>
+<codeline lineno="18"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CYBER_TRANSPORT_DISPATCHER_SHM_DISPATCHER_H_</highlight></codeline>
+<codeline lineno="19"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstring&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;thread&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;unordered_map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="atomic__rw__lock_8h" kindref="compound">cyber/base/atomic_rw_lock.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="global__data_8h" kindref="compound">cyber/common/global_data.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="log_8h" kindref="compound">cyber/common/log.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="common_2macros_8h" kindref="compound">cyber/common/macros.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="message__traits_8h" kindref="compound">cyber/message/message_traits.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="dispatcher_8h" kindref="compound">cyber/transport/dispatcher/dispatcher.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="notifier__factory_8h" kindref="compound">cyber/transport/shm/notifier_factory.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="segment_8h" kindref="compound">cyber/transport/shm/segment.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">apollo<sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">cyber<sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">transport<sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">ShmDispatcher;</highlight></codeline>
+<codeline lineno="40" refid="namespaceapollo_1_1cyber_1_1transport_1ad2181d36e971d8b74b322f8e2e3b36de" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher" kindref="compound">ShmDispatcherPtr</ref><sp/>=<sp/><ref refid="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher" kindref="compound">ShmDispatcher</ref>*;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1AtomicRWLock" kindref="compound">apollo::cyber::base::AtomicRWLock</ref>;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1ReadLockGuard" kindref="compound">apollo::cyber::base::ReadLockGuard</ref>;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1WriteLockGuard" kindref="compound">apollo::cyber::base::WriteLockGuard</ref>;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher" kindref="compound">ShmDispatcher</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1transport_1_1Dispatcher" kindref="compound">Dispatcher</ref><sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>key:<sp/>channel_id</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_1af4b802d682732bf22e6f0d04fe0bb620" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_1af4b802d682732bf22e6f0d04fe0bb620" kindref="member">SegmentContainer</ref><sp/>=<sp/>std::unordered_map&lt;uint64_t,<sp/>SegmentPtr&gt;;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_1a10fe3a6434f0385a11ca390dc7037503" kindref="member">~ShmDispatcher</ref>();</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_1a8924e420134ea725eb03a680bb98abd7" kindref="member">Shutdown</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>MessageT&gt;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_1a752dd5b2c4f1b566d32160937161063d" kindref="member">AddListener</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>RoleAttributes&amp;<sp/>self_attr,</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespaceapollo_1_1cyber_1_1transport_1aade3f4d41770972ae44166cdde27e2d8" kindref="member">MessageListener&lt;MessageT&gt;</ref>&amp;<sp/>listener);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>MessageT&gt;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_1a752dd5b2c4f1b566d32160937161063d" kindref="member">AddListener</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>RoleAttributes&amp;<sp/>self_attr,</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>RoleAttributes&amp;<sp/>opposite_attr,</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespaceapollo_1_1cyber_1_1transport_1aade3f4d41770972ae44166cdde27e2d8" kindref="member">MessageListener&lt;MessageT&gt;</ref>&amp;<sp/>listener);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_1a30b5a72d09a9f2e490011763bc434ef4" kindref="member">AddSegment</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>RoleAttributes&amp;<sp/>self_attr);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_1a379e1e4f7c592f606b3f1e0e39333c64" kindref="member">ReadMessage</ref>(uint64_t<sp/>channel_id,<sp/>uint32_t<sp/>block_index);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_1ac91a401dc4c06f6e00cb33c5be24ab20" kindref="member">OnMessage</ref>(uint64_t<sp/>channel_id,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;ReadableBlock&gt;&amp;<sp/>rb,</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1transport_1_1MessageInfo" kindref="compound">MessageInfo</ref>&amp;<sp/>msg_info);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_1a7d6e4e96c0604330fb2aea3284d5d362" kindref="member">ThreadFunc</ref>();</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_1affe533d42be32ee45ffc80630c24111a" kindref="member">Init</ref>();</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_1a82f0599420023c170f75a7416d64cbae" refkind="member"><highlight class="normal"><sp/><sp/>uint64_t<sp/><ref refid="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_1a82f0599420023c170f75a7416d64cbae" kindref="member">host_id_</ref>;</highlight></codeline>
+<codeline lineno="72" refid="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_1a8b86c460d2e97b8930092bb6ab340e8c" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_1af4b802d682732bf22e6f0d04fe0bb620" kindref="member">SegmentContainer</ref><sp/><ref refid="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_1a8b86c460d2e97b8930092bb6ab340e8c" kindref="member">segments_</ref>;</highlight></codeline>
+<codeline lineno="73" refid="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_1a47df1c1d054a9cc0c90c7d01233eee1f" refkind="member"><highlight class="normal"><sp/><sp/>std::unordered_map&lt;uint64_t,<sp/>uint32_t&gt;<sp/><ref refid="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_1a47df1c1d054a9cc0c90c7d01233eee1f" kindref="member">previous_indexes_</ref>;</highlight></codeline>
+<codeline lineno="74" refid="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_1a23aa8263a8498b815f2b60afff385abd" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1AtomicRWLock" kindref="compound">AtomicRWLock</ref><sp/><ref refid="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_1a23aa8263a8498b815f2b60afff385abd" kindref="member">segments_lock_</ref>;</highlight></codeline>
+<codeline lineno="75" refid="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_1a88cab9f1044db26107a7e44fb9a7955b" refkind="member"><highlight class="normal"><sp/><sp/>std::thread<sp/><ref refid="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_1a88cab9f1044db26107a7e44fb9a7955b" kindref="member">thread_</ref>;</highlight></codeline>
+<codeline lineno="76" refid="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_1a2ca1a561c8b73f6f41f32422eb466eaa" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classapollo_1_1cyber_1_1transport_1_1NotifierBase" kindref="compound">NotifierPtr</ref><sp/><ref refid="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_1a2ca1a561c8b73f6f41f32422eb466eaa" kindref="member">notifier_</ref>;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><ref refid="common_2macros_8h_1ae064c360d998527ea6031d4e129b709d" kindref="member">DECLARE_SINGLETON</ref>(<ref refid="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher" kindref="compound">ShmDispatcher</ref>)</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>MessageT&gt;</highlight></codeline>
+<codeline lineno="82" refid="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_1a752dd5b2c4f1b566d32160937161063d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_1a752dd5b2c4f1b566d32160937161063d" kindref="member">ShmDispatcher::AddListener</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>RoleAttributes&amp;<sp/>self_attr,</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespaceapollo_1_1cyber_1_1transport_1aade3f4d41770972ae44166cdde27e2d8" kindref="member">MessageListener&lt;MessageT&gt;</ref>&amp;<sp/>listener)<sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>FIXME:<sp/>make<sp/>it<sp/>more<sp/>clean</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>listener_adapter<sp/>=<sp/>[listener](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;ReadableBlock&gt;&amp;<sp/>rb,</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1transport_1_1MessageInfo" kindref="compound">MessageInfo</ref>&amp;<sp/>msg_info)<sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>msg<sp/>=<sp/>std::make_shared&lt;MessageT&gt;();</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="log_8h_1a7268d48c9ee6c4a4389adb69283ed28c" kindref="member">RETURN_IF</ref>(!<ref refid="namespaceapollo_1_1cyber_1_1message_1aeb045f496b533d2e1f405d8588f9b279" kindref="member">message::ParseFromArray</ref>(</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rb-&gt;buf,<sp/>static_cast&lt;int&gt;(rb-&gt;block-&gt;msg_size()),<sp/>msg.get()));</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>listener(msg,<sp/>msg_info);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/>Dispatcher::AddListener&lt;ReadableBlock&gt;(self_attr,<sp/>listener_adapter);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><ref refid="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_1a30b5a72d09a9f2e490011763bc434ef4" kindref="member">AddSegment</ref>(self_attr);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>MessageT&gt;</highlight></codeline>
+<codeline lineno="98" refid="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_1a5f2ee158930e0225422f75d5e72c71b6" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_1a752dd5b2c4f1b566d32160937161063d" kindref="member">ShmDispatcher::AddListener</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>RoleAttributes&amp;<sp/>self_attr,</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>RoleAttributes&amp;<sp/>opposite_attr,</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespaceapollo_1_1cyber_1_1transport_1aade3f4d41770972ae44166cdde27e2d8" kindref="member">MessageListener&lt;MessageT&gt;</ref>&amp;<sp/>listener)<sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>FIXME:<sp/>make<sp/>it<sp/>more<sp/>clean</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>listener_adapter<sp/>=<sp/>[listener](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;ReadableBlock&gt;&amp;<sp/>rb,</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1transport_1_1MessageInfo" kindref="compound">MessageInfo</ref>&amp;<sp/>msg_info)<sp/>{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>msg<sp/>=<sp/>std::make_shared&lt;MessageT&gt;();</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="log_8h_1a7268d48c9ee6c4a4389adb69283ed28c" kindref="member">RETURN_IF</ref>(!<ref refid="namespaceapollo_1_1cyber_1_1message_1aeb045f496b533d2e1f405d8588f9b279" kindref="member">message::ParseFromArray</ref>(</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rb-&gt;buf,<sp/>static_cast&lt;int&gt;(rb-&gt;block-&gt;msg_size()),<sp/>msg.get()));</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>listener(msg,<sp/>msg_info);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/>Dispatcher::AddListener&lt;ReadableBlock&gt;(self_attr,<sp/>opposite_attr,</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>listener_adapter);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><ref refid="classapollo_1_1cyber_1_1transport_1_1ShmDispatcher_1a30b5a72d09a9f2e490011763bc434ef4" kindref="member">AddSegment</ref>(self_attr);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>transport</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>cyber</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>apollo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>CYBER_TRANSPORT_DISPATCHER_SHM_DISPATCHER_H_</highlight></codeline>
+    </programlisting>
+    <location file="/home/work/apollo-fork/apollo/cyber/transport/dispatcher/shm_dispatcher.h"/>
+  </compounddef>
+</doxygen>

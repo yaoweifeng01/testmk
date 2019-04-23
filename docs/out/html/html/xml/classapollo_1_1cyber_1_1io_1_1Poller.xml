@@ -1,0 +1,388 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classapollo_1_1cyber_1_1io_1_1Poller" kind="class" prot="public">
+    <compoundname>apollo::cyber::io::Poller</compoundname>
+    <includes refid="poller_8h" local="no">poller.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classapollo_1_1cyber_1_1io_1_1Poller_1afca2e09142da5f57cfca966402953bf2" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="structapollo_1_1cyber_1_1io_1_1PollRequest" kindref="compound">PollRequest</ref> &gt;</type>
+        <definition>using apollo::cyber::io::Poller::RequestPtr =  std::shared_ptr&lt;PollRequest&gt;</definition>
+        <argsstring></argsstring>
+        <name>RequestPtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/io/poller.h" line="38" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/io/poller.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classapollo_1_1cyber_1_1io_1_1Poller_1a46cf3c8b1cd0c34c0daf7dd076cddc63" prot="public" static="no">
+        <type>std::unordered_map&lt; int, <ref refid="classapollo_1_1cyber_1_1io_1_1Poller_1afca2e09142da5f57cfca966402953bf2" kindref="member">RequestPtr</ref> &gt;</type>
+        <definition>using apollo::cyber::io::Poller::RequestMap =  std::unordered_map&lt;int, RequestPtr&gt;</definition>
+        <argsstring></argsstring>
+        <name>RequestMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/io/poller.h" line="39" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/io/poller.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classapollo_1_1cyber_1_1io_1_1Poller_1a8b5069a91f056c7b473bcfd02ff2aaad" prot="public" static="no">
+        <type>std::unordered_map&lt; int, <ref refid="structapollo_1_1cyber_1_1io_1_1PollCtrlParam" kindref="compound">PollCtrlParam</ref> &gt;</type>
+        <definition>using apollo::cyber::io::Poller::CtrlParamMap =  std::unordered_map&lt;int, PollCtrlParam&gt;</definition>
+        <argsstring></argsstring>
+        <name>CtrlParamMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/io/poller.h" line="40" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/io/poller.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1io_1_1Poller_1af669bb62157becf9016f69df5b1b5660" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int apollo::cyber::io::Poller::epoll_fd_</definition>
+        <argsstring></argsstring>
+        <name>epoll_fd_</name>
+        <initializer>= -1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/io/poller.h" line="58" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/io/poller.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1io_1_1Poller_1a2145143a3849794f4faf3aa7c5c0b841" prot="private" static="no" mutable="no">
+        <type>std::thread</type>
+        <definition>std::thread apollo::cyber::io::Poller::thread_</definition>
+        <argsstring></argsstring>
+        <name>thread_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/io/poller.h" line="59" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/io/poller.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1io_1_1Poller_1a5792d1208ae12538fe5b26d40fd6ca45" prot="private" static="no" mutable="no">
+        <type>std::atomic&lt; bool &gt;</type>
+        <definition>std::atomic&lt;bool&gt; apollo::cyber::io::Poller::is_shutdown_</definition>
+        <argsstring></argsstring>
+        <name>is_shutdown_</name>
+        <initializer>= {true}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/io/poller.h" line="60" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/io/poller.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1io_1_1Poller_1aa75b020f05c88884f277c2f2e7d7e6be" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int apollo::cyber::io::Poller::pipe_fd_[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>pipe_fd_</name>
+        <initializer>= {-1, -1}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/io/poller.h" line="62" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/io/poller.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1io_1_1Poller_1a3df124c7d788692895df721bc51cc70e" prot="private" static="no" mutable="no">
+        <type>std::mutex</type>
+        <definition>std::mutex apollo::cyber::io::Poller::pipe_mutex_</definition>
+        <argsstring></argsstring>
+        <name>pipe_mutex_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/io/poller.h" line="63" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/io/poller.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1io_1_1Poller_1a23832294a91e3659fd279314aa351612" prot="private" static="no" mutable="no">
+        <type><ref refid="classapollo_1_1cyber_1_1io_1_1Poller_1a46cf3c8b1cd0c34c0daf7dd076cddc63" kindref="member">RequestMap</ref></type>
+        <definition>RequestMap apollo::cyber::io::Poller::requests_</definition>
+        <argsstring></argsstring>
+        <name>requests_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/io/poller.h" line="65" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/io/poller.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1io_1_1Poller_1a4f0f2b3d4c68325fc3cefb0a4cdddfa9" prot="private" static="no" mutable="no">
+        <type><ref refid="classapollo_1_1cyber_1_1io_1_1Poller_1a8b5069a91f056c7b473bcfd02ff2aaad" kindref="member">CtrlParamMap</ref></type>
+        <definition>CtrlParamMap apollo::cyber::io::Poller::ctrl_params_</definition>
+        <argsstring></argsstring>
+        <name>ctrl_params_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/io/poller.h" line="66" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/io/poller.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1io_1_1Poller_1a3f852093b8de045b394577a4c8a833eb" prot="private" static="no" mutable="no">
+        <type><ref refid="classapollo_1_1cyber_1_1base_1_1AtomicRWLock" kindref="compound">base::AtomicRWLock</ref></type>
+        <definition>base::AtomicRWLock apollo::cyber::io::Poller::poll_data_lock_</definition>
+        <argsstring></argsstring>
+        <name>poll_data_lock_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/io/poller.h" line="67" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/io/poller.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1io_1_1Poller_1a68e2ded7a858f416c9bd248e61af1b66" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int apollo::cyber::io::Poller::kPollSize</definition>
+        <argsstring></argsstring>
+        <name>kPollSize</name>
+        <initializer>= 32</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/io/poller.h" line="69" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/io/poller.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1io_1_1Poller_1ad4c45237b9d3db1d4efb8d1cc7fe5a6d" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int apollo::cyber::io::Poller::kPollTimeoutMs</definition>
+        <argsstring></argsstring>
+        <name>kPollTimeoutMs</name>
+        <initializer>= 100</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/io/poller.h" line="70" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/io/poller.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1io_1_1Poller_1a3d4410cd424c87e76f258e3b41d37ab5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual apollo::cyber::io::Poller::~Poller</definition>
+        <argsstring>()</argsstring>
+        <name>~Poller</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/io/poller.h" line="42" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1io_1_1Poller_1a0eec83658cd929f9c2515d5779e3e129" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::io::Poller::Shutdown</definition>
+        <argsstring>()</argsstring>
+        <name>Shutdown</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/io/poller.h" line="44" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1io_1_1Poller_1ae403021b629890022daceda8640c5a9c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::io::Poller::Register</definition>
+        <argsstring>(const PollRequest &amp;req)</argsstring>
+        <name>Register</name>
+        <param>
+          <type>const <ref refid="structapollo_1_1cyber_1_1io_1_1PollRequest" kindref="compound">PollRequest</ref> &amp;</type>
+          <declname>req</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/io/poller.h" line="46" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1io_1_1Poller_1a3a1f73729383b8840bc797f83e3f9518" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::io::Poller::Unregister</definition>
+        <argsstring>(const PollRequest &amp;req)</argsstring>
+        <name>Unregister</name>
+        <param>
+          <type>const <ref refid="structapollo_1_1cyber_1_1io_1_1PollRequest" kindref="compound">PollRequest</ref> &amp;</type>
+          <declname>req</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/io/poller.h" line="47" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1io_1_1Poller_1a3d904d64d3a2f4f0a29695a0263f9f82" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::io::Poller::Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/io/poller.h" line="50" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1io_1_1Poller_1aa3e2338ecaeb8cb5ce0cbfdb15d7eb79" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::io::Poller::Clear</definition>
+        <argsstring>()</argsstring>
+        <name>Clear</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/io/poller.h" line="51" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1io_1_1Poller_1ae2d156bf9966263391597b959c9515ab" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::io::Poller::Poll</definition>
+        <argsstring>(int timeout_ms)</argsstring>
+        <name>Poll</name>
+        <param>
+          <type>int</type>
+          <declname>timeout_ms</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/io/poller.h" line="52" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1io_1_1Poller_1ab5de085f3ce0d9030d02a81b17f21d7e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::io::Poller::ThreadFunc</definition>
+        <argsstring>()</argsstring>
+        <name>ThreadFunc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/io/poller.h" line="53" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1io_1_1Poller_1a32b96845dcf187f57eb322ceb8b76c89" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::io::Poller::HandleChanges</definition>
+        <argsstring>()</argsstring>
+        <name>HandleChanges</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/io/poller.h" line="54" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1io_1_1Poller_1ad106607e755fc50c05d81a91fccca9d8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int apollo::cyber::io::Poller::GetTimeoutMs</definition>
+        <argsstring>()</argsstring>
+        <name>GetTimeoutMs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/io/poller.h" line="55" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1io_1_1Poller_1a5a8bb1e33405acb498772bc02fa816bf" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::io::Poller::Notify</definition>
+        <argsstring>()</argsstring>
+        <name>Notify</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/io/poller.h" line="56" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="567">
+        <label>apollo::cyber::io::Poller</label>
+        <link refid="classapollo_1_1cyber_1_1io_1_1Poller"/>
+        <childnode refid="568" relation="usage">
+          <edgelabel>poll_data_lock_</edgelabel>
+        </childnode>
+      </node>
+      <node id="568">
+        <label>apollo::cyber::base::AtomicRWLock</label>
+        <link refid="classapollo_1_1cyber_1_1base_1_1AtomicRWLock"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/work/apollo-fork/apollo/cyber/io/poller.h" line="36" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/io/poller.h" bodystart="36" bodyend="73"/>
+    <listofallmembers>
+      <member refid="classapollo_1_1cyber_1_1io_1_1Poller_1aa3e2338ecaeb8cb5ce0cbfdb15d7eb79" prot="private" virt="non-virtual"><scope>apollo::cyber::io::Poller</scope><name>Clear</name></member>
+      <member refid="classapollo_1_1cyber_1_1io_1_1Poller_1a4f0f2b3d4c68325fc3cefb0a4cdddfa9" prot="private" virt="non-virtual"><scope>apollo::cyber::io::Poller</scope><name>ctrl_params_</name></member>
+      <member refid="classapollo_1_1cyber_1_1io_1_1Poller_1a8b5069a91f056c7b473bcfd02ff2aaad" prot="public" virt="non-virtual"><scope>apollo::cyber::io::Poller</scope><name>CtrlParamMap</name></member>
+      <member refid="classapollo_1_1cyber_1_1io_1_1Poller_1af669bb62157becf9016f69df5b1b5660" prot="private" virt="non-virtual"><scope>apollo::cyber::io::Poller</scope><name>epoll_fd_</name></member>
+      <member refid="classapollo_1_1cyber_1_1io_1_1Poller_1ad106607e755fc50c05d81a91fccca9d8" prot="private" virt="non-virtual"><scope>apollo::cyber::io::Poller</scope><name>GetTimeoutMs</name></member>
+      <member refid="classapollo_1_1cyber_1_1io_1_1Poller_1a32b96845dcf187f57eb322ceb8b76c89" prot="private" virt="non-virtual"><scope>apollo::cyber::io::Poller</scope><name>HandleChanges</name></member>
+      <member refid="classapollo_1_1cyber_1_1io_1_1Poller_1a3d904d64d3a2f4f0a29695a0263f9f82" prot="private" virt="non-virtual"><scope>apollo::cyber::io::Poller</scope><name>Init</name></member>
+      <member refid="classapollo_1_1cyber_1_1io_1_1Poller_1a5792d1208ae12538fe5b26d40fd6ca45" prot="private" virt="non-virtual"><scope>apollo::cyber::io::Poller</scope><name>is_shutdown_</name></member>
+      <member refid="classapollo_1_1cyber_1_1io_1_1Poller_1a68e2ded7a858f416c9bd248e61af1b66" prot="private" virt="non-virtual"><scope>apollo::cyber::io::Poller</scope><name>kPollSize</name></member>
+      <member refid="classapollo_1_1cyber_1_1io_1_1Poller_1ad4c45237b9d3db1d4efb8d1cc7fe5a6d" prot="private" virt="non-virtual"><scope>apollo::cyber::io::Poller</scope><name>kPollTimeoutMs</name></member>
+      <member refid="classapollo_1_1cyber_1_1io_1_1Poller_1a5a8bb1e33405acb498772bc02fa816bf" prot="private" virt="non-virtual"><scope>apollo::cyber::io::Poller</scope><name>Notify</name></member>
+      <member refid="classapollo_1_1cyber_1_1io_1_1Poller_1aa75b020f05c88884f277c2f2e7d7e6be" prot="private" virt="non-virtual"><scope>apollo::cyber::io::Poller</scope><name>pipe_fd_</name></member>
+      <member refid="classapollo_1_1cyber_1_1io_1_1Poller_1a3df124c7d788692895df721bc51cc70e" prot="private" virt="non-virtual"><scope>apollo::cyber::io::Poller</scope><name>pipe_mutex_</name></member>
+      <member refid="classapollo_1_1cyber_1_1io_1_1Poller_1ae2d156bf9966263391597b959c9515ab" prot="private" virt="non-virtual"><scope>apollo::cyber::io::Poller</scope><name>Poll</name></member>
+      <member refid="classapollo_1_1cyber_1_1io_1_1Poller_1a3f852093b8de045b394577a4c8a833eb" prot="private" virt="non-virtual"><scope>apollo::cyber::io::Poller</scope><name>poll_data_lock_</name></member>
+      <member refid="classapollo_1_1cyber_1_1io_1_1Poller_1ae403021b629890022daceda8640c5a9c" prot="public" virt="non-virtual"><scope>apollo::cyber::io::Poller</scope><name>Register</name></member>
+      <member refid="classapollo_1_1cyber_1_1io_1_1Poller_1a46cf3c8b1cd0c34c0daf7dd076cddc63" prot="public" virt="non-virtual"><scope>apollo::cyber::io::Poller</scope><name>RequestMap</name></member>
+      <member refid="classapollo_1_1cyber_1_1io_1_1Poller_1afca2e09142da5f57cfca966402953bf2" prot="public" virt="non-virtual"><scope>apollo::cyber::io::Poller</scope><name>RequestPtr</name></member>
+      <member refid="classapollo_1_1cyber_1_1io_1_1Poller_1a23832294a91e3659fd279314aa351612" prot="private" virt="non-virtual"><scope>apollo::cyber::io::Poller</scope><name>requests_</name></member>
+      <member refid="classapollo_1_1cyber_1_1io_1_1Poller_1a0eec83658cd929f9c2515d5779e3e129" prot="public" virt="non-virtual"><scope>apollo::cyber::io::Poller</scope><name>Shutdown</name></member>
+      <member refid="classapollo_1_1cyber_1_1io_1_1Poller_1a2145143a3849794f4faf3aa7c5c0b841" prot="private" virt="non-virtual"><scope>apollo::cyber::io::Poller</scope><name>thread_</name></member>
+      <member refid="classapollo_1_1cyber_1_1io_1_1Poller_1ab5de085f3ce0d9030d02a81b17f21d7e" prot="private" virt="non-virtual"><scope>apollo::cyber::io::Poller</scope><name>ThreadFunc</name></member>
+      <member refid="classapollo_1_1cyber_1_1io_1_1Poller_1a3a1f73729383b8840bc797f83e3f9518" prot="public" virt="non-virtual"><scope>apollo::cyber::io::Poller</scope><name>Unregister</name></member>
+      <member refid="classapollo_1_1cyber_1_1io_1_1Poller_1a3d4410cd424c87e76f258e3b41d37ab5" prot="public" virt="virtual"><scope>apollo::cyber::io::Poller</scope><name>~Poller</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

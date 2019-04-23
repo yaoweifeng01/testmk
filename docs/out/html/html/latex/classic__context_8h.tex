@@ -1,0 +1,62 @@
+\hypertarget{classic__context_8h}{\section{scheduler/policy/classic\-\_\-context.h File Reference}
+\label{classic__context_8h}\index{scheduler/policy/classic\-\_\-context.\-h@{scheduler/policy/classic\-\_\-context.\-h}}
+}
+{\ttfamily \#include $<$array$>$}\\*
+{\ttfamily \#include $<$functional$>$}\\*
+{\ttfamily \#include $<$memory$>$}\\*
+{\ttfamily \#include $<$mutex$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$unordered\-\_\-map$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include \char`\"{}cyber/base/atomic\-\_\-rw\-\_\-lock.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}cyber/croutine/croutine.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}cyber/scheduler/common/cv\-\_\-wrapper.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}cyber/scheduler/common/mutex\-\_\-wrapper.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}cyber/scheduler/processor\-\_\-context.\-h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1ClassicContext}{apollo\-::cyber\-::scheduler\-::\-Classic\-Context}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespaceapollo}{apollo}
+\item 
+\hyperlink{namespaceapollo_1_1cyber}{apollo\-::cyber}
+\item 
+\hyperlink{namespaceapollo_1_1cyber_1_1scheduler}{apollo\-::cyber\-::scheduler}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{classic__context_8h_afa9a1c649ae7abe306ece1dea0e1aeef}{D\-E\-F\-A\-U\-L\-T\-\_\-\-G\-R\-O\-U\-P\-\_\-\-N\-A\-M\-E}~\char`\"{}default\-\_\-grp\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \hyperlink{namespaceapollo_1_1cyber_1_1scheduler_a9785cbbdaf553a63e7ecb89e007326e5}{apollo\-::cyber\-::scheduler\-::\-C\-R\-O\-U\-T\-I\-N\-E\-\_\-\-Q\-U\-E\-U\-E} = std\-::vector$<$ std\-::shared\-\_\-ptr$<$ C\-Routine $>$$>$
+\item 
+using \hyperlink{namespaceapollo_1_1cyber_1_1scheduler_ac66e3c3cdda21d9be8ea0692401913a2}{apollo\-::cyber\-::scheduler\-::\-M\-U\-L\-T\-I\-\_\-\-P\-R\-I\-O\-\_\-\-Q\-U\-E\-U\-E} = std\-::array$<$ C\-R\-O\-U\-T\-I\-N\-E\-\_\-\-Q\-U\-E\-U\-E, M\-A\-X\-\_\-\-P\-R\-I\-O $>$
+\item 
+using \hyperlink{namespaceapollo_1_1cyber_1_1scheduler_aea5742ba3cc52566de1eeeeaac1a8714}{apollo\-::cyber\-::scheduler\-::\-C\-R\-\_\-\-G\-R\-O\-U\-P} = std\-::unordered\-\_\-map$<$ std\-::string, M\-U\-L\-T\-I\-\_\-\-P\-R\-I\-O\-\_\-\-Q\-U\-E\-U\-E $>$
+\item 
+using \hyperlink{namespaceapollo_1_1cyber_1_1scheduler_a714aab7bf591e6d2f48fafdbbb1dda02}{apollo\-::cyber\-::scheduler\-::\-L\-O\-C\-K\-\_\-\-Q\-U\-E\-U\-E} = std\-::array$<$ base\-::\-Atomic\-R\-W\-Lock, M\-A\-X\-\_\-\-P\-R\-I\-O $>$
+\item 
+using \hyperlink{namespaceapollo_1_1cyber_1_1scheduler_ad4f939996840b0f02dafc9a779dfefd7}{apollo\-::cyber\-::scheduler\-::\-R\-Q\-\_\-\-L\-O\-C\-K\-\_\-\-G\-R\-O\-U\-P} = std\-::unordered\-\_\-map$<$ std\-::string, L\-O\-C\-K\-\_\-\-Q\-U\-E\-U\-E $>$
+\item 
+using \hyperlink{namespaceapollo_1_1cyber_1_1scheduler_a38dec21bb0dcc34727c9a215020abb70}{apollo\-::cyber\-::scheduler\-::\-G\-R\-P\-\_\-\-W\-Q\-\_\-\-M\-U\-T\-E\-X} = std\-::unordered\-\_\-map$<$ std\-::string, Mutex\-Wrapper $>$
+\item 
+using \hyperlink{namespaceapollo_1_1cyber_1_1scheduler_aaaf29077b955c494a8b6ef756e02ed4d}{apollo\-::cyber\-::scheduler\-::\-G\-R\-P\-\_\-\-W\-Q\-\_\-\-C\-V} = std\-::unordered\-\_\-map$<$ std\-::string, Cv\-Wrapper $>$
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr uint32\-\_\-t \hyperlink{namespaceapollo_1_1cyber_1_1scheduler_a9bc4ff591ee6d0710ed99d197b4ce9d2}{apollo\-::cyber\-::scheduler\-::\-M\-A\-X\-\_\-\-P\-R\-I\-O} = 20
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{classic__context_8h_afa9a1c649ae7abe306ece1dea0e1aeef}{\index{classic\-\_\-context.\-h@{classic\-\_\-context.\-h}!D\-E\-F\-A\-U\-L\-T\-\_\-\-G\-R\-O\-U\-P\-\_\-\-N\-A\-M\-E@{D\-E\-F\-A\-U\-L\-T\-\_\-\-G\-R\-O\-U\-P\-\_\-\-N\-A\-M\-E}}
+\index{D\-E\-F\-A\-U\-L\-T\-\_\-\-G\-R\-O\-U\-P\-\_\-\-N\-A\-M\-E@{D\-E\-F\-A\-U\-L\-T\-\_\-\-G\-R\-O\-U\-P\-\_\-\-N\-A\-M\-E}!classic_context.h@{classic\-\_\-context.\-h}}
+\subsubsection[{D\-E\-F\-A\-U\-L\-T\-\_\-\-G\-R\-O\-U\-P\-\_\-\-N\-A\-M\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-E\-F\-A\-U\-L\-T\-\_\-\-G\-R\-O\-U\-P\-\_\-\-N\-A\-M\-E~\char`\"{}default\-\_\-grp\char`\"{}}}\label{classic__context_8h_afa9a1c649ae7abe306ece1dea0e1aeef}

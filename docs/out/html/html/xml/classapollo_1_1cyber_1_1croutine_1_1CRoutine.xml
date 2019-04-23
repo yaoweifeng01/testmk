@@ -1,0 +1,759 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classapollo_1_1cyber_1_1croutine_1_1CRoutine" kind="class" prot="public">
+    <compoundname>apollo::cyber::croutine::CRoutine</compoundname>
+    <includes refid="croutine_8h" local="no">croutine.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a1a5fc3c9a9e30f211a92a89763d2cbab" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string apollo::cyber::croutine::CRoutine::name_</definition>
+        <argsstring></argsstring>
+        <name>name_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" line="101" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1abd2684b9c1a6fcbbe4afcc1b5f8b6ccc" prot="private" static="no" mutable="no">
+        <type>std::chrono::steady_clock::time_point</type>
+        <definition>std::chrono::steady_clock::time_point apollo::cyber::croutine::CRoutine::wake_time_</definition>
+        <argsstring></argsstring>
+        <name>wake_time_</name>
+        <initializer>=
+      std::chrono::steady_clock::now()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" line="102" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a35c97acd271cbe079df11e4b4490b729" prot="private" static="no" mutable="no">
+        <type><ref refid="namespaceapollo_1_1cyber_1_1croutine_1a5c1d994c8a08504b270fd8c4ba57d282" kindref="member">RoutineFunc</ref></type>
+        <definition>RoutineFunc apollo::cyber::croutine::CRoutine::func_</definition>
+        <argsstring></argsstring>
+        <name>func_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" line="105" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a50f7996bfdacc4455012d2701b91890e" prot="private" static="no" mutable="no">
+        <type><ref refid="namespaceapollo_1_1cyber_1_1croutine_1a9b2ec600d9734ed2e857a7235cec5e48" kindref="member">RoutineState</ref></type>
+        <definition>RoutineState apollo::cyber::croutine::CRoutine::state_</definition>
+        <argsstring></argsstring>
+        <name>state_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" line="106" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a68165b138d7cfc1b200e830970ad3289" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="structapollo_1_1cyber_1_1croutine_1_1RoutineContext" kindref="compound">RoutineContext</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;RoutineContext&gt; apollo::cyber::croutine::CRoutine::context_</definition>
+        <argsstring></argsstring>
+        <name>context_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" line="108" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a1fc4d2d426dba2b0e4381e67348869ae" prot="private" static="no" mutable="no">
+        <type>std::atomic_flag</type>
+        <definition>std::atomic_flag apollo::cyber::croutine::CRoutine::lock_</definition>
+        <argsstring></argsstring>
+        <name>lock_</name>
+        <initializer>= ATOMIC_FLAG_INIT</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" line="110" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a1f4f88bf13f02aa9d963159db66570ad" prot="private" static="no" mutable="no">
+        <type>std::atomic_flag</type>
+        <definition>std::atomic_flag apollo::cyber::croutine::CRoutine::updated_</definition>
+        <argsstring></argsstring>
+        <name>updated_</name>
+        <initializer>= ATOMIC_FLAG_INIT</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" line="111" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1ae4784009fb5e1cc2ea1c71739af50fd5" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool apollo::cyber::croutine::CRoutine::force_stop_</definition>
+        <argsstring></argsstring>
+        <name>force_stop_</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" line="113" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a9d05239ef9bdf626d9044a2cbae13485" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int apollo::cyber::croutine::CRoutine::processor_id_</definition>
+        <argsstring></argsstring>
+        <name>processor_id_</name>
+        <initializer>= -1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" line="115" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a0e6d7a63a90b8c53f1001d9e75015fdc" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t apollo::cyber::croutine::CRoutine::priority_</definition>
+        <argsstring></argsstring>
+        <name>priority_</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" line="116" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1abbd791fd6d8e2aa9a996fdd2bf221cf7" prot="private" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t apollo::cyber::croutine::CRoutine::id_</definition>
+        <argsstring></argsstring>
+        <name>id_</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" line="117" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1ada07af0832975eb46a12f4b84ff022d0" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string apollo::cyber::croutine::CRoutine::group_name_</definition>
+        <argsstring></argsstring>
+        <name>group_name_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" line="119" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1ac73dddcfe8792f48c26ed08e1b8101f8" prot="private" static="yes" mutable="no">
+        <type>thread_local <ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine" kindref="compound">CRoutine</ref> *</type>
+        <definition>thread_local CRoutine* apollo::cyber::croutine::CRoutine::current_routine_</definition>
+        <argsstring></argsstring>
+        <name>current_routine_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" line="121" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a9466601d9e5d320bf651bc896e9c6fcb" prot="private" static="yes" mutable="no">
+        <type>thread_local char *</type>
+        <definition>thread_local char* apollo::cyber::croutine::CRoutine::main_stack_</definition>
+        <argsstring></argsstring>
+        <name>main_stack_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" line="122" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a975b0f29db65bec8b2e333610da3c0bc" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::croutine::CRoutine::CRoutine</definition>
+        <argsstring>(const RoutineFunc &amp;func)</argsstring>
+        <name>CRoutine</name>
+        <param>
+          <type>const <ref refid="namespaceapollo_1_1cyber_1_1croutine_1a5c1d994c8a08504b270fd8c4ba57d282" kindref="member">RoutineFunc</ref> &amp;</type>
+          <declname>func</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" line="42" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a2a69d0e45efb1b84b591adf8cd2c7212" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual apollo::cyber::croutine::CRoutine::~CRoutine</definition>
+        <argsstring>()</argsstring>
+        <name>~CRoutine</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" line="43" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1ada6c072e791b4f0ee01fc4e41bffebfb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::croutine::CRoutine::Acquire</definition>
+        <argsstring>()</argsstring>
+        <name>Acquire</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" line="53" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" bodystart="197" bodyend="199"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1af4f0281b87b2b0f37bf2526c1073143b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::croutine::CRoutine::Release</definition>
+        <argsstring>()</argsstring>
+        <name>Release</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" line="54" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" bodystart="201" bodyend="203"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1aab4da1d64d40ce35e4054b867bfdeab9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::croutine::CRoutine::SetUpdateFlag</definition>
+        <argsstring>()</argsstring>
+        <name>SetUpdateFlag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" line="58" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" bodystart="205" bodyend="207"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1af0e8e2d8bd5e06088951633585e770e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespaceapollo_1_1cyber_1_1croutine_1a9b2ec600d9734ed2e857a7235cec5e48" kindref="member">RoutineState</ref></type>
+        <definition>RoutineState apollo::cyber::croutine::CRoutine::Resume</definition>
+        <argsstring>()</argsstring>
+        <name>Resume</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" line="62" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1abe2081e7ccc944e14a13ee5140f6dc3f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespaceapollo_1_1cyber_1_1croutine_1a9b2ec600d9734ed2e857a7235cec5e48" kindref="member">RoutineState</ref></type>
+        <definition>RoutineState apollo::cyber::croutine::CRoutine::UpdateState</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" line="63" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" bodystart="176" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1adc87070b8f79e63163e7aff885e84e84" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structapollo_1_1cyber_1_1croutine_1_1RoutineContext" kindref="compound">RoutineContext</ref> *</type>
+        <definition>RoutineContext * apollo::cyber::croutine::CRoutine::GetContext</definition>
+        <argsstring>()</argsstring>
+        <name>GetContext</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" line="64" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" bodystart="139" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a13151bd71806ca69ff7c13317ec9ff61" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>char **</type>
+        <definition>char ** apollo::cyber::croutine::CRoutine::GetStack</definition>
+        <argsstring>()</argsstring>
+        <name>GetStack</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" line="65" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" bodystart="141" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a194bf92eb5b29da955f41cfaa1c6f3d1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::croutine::CRoutine::Run</definition>
+        <argsstring>()</argsstring>
+        <name>Run</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" line="67" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" bodystart="143" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1acbf7f66f0ef56449837e02eb74a2feb3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::croutine::CRoutine::Stop</definition>
+        <argsstring>()</argsstring>
+        <name>Stop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" line="68" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1aa2872097862baf607809ebe793f04920" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::croutine::CRoutine::Wake</definition>
+        <argsstring>()</argsstring>
+        <name>Wake</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" line="69" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" bodystart="153" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a47ba7e433c0ca462eaafa87b78150c27" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::croutine::CRoutine::HangUp</definition>
+        <argsstring>()</argsstring>
+        <name>HangUp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" line="70" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" bodystart="155" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a7a7a609b9eea30ff016c79fd7e57b9e6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::croutine::CRoutine::Sleep</definition>
+        <argsstring>(const Duration &amp;sleep_duration)</argsstring>
+        <name>Sleep</name>
+        <param>
+          <type>const <ref refid="namespaceapollo_1_1cyber_1_1croutine_1aae31aee73e46be40ab635496b4d9d1e2" kindref="member">Duration</ref> &amp;</type>
+          <declname>sleep_duration</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" line="71" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" bodystart="157" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a457b30f1df6a1f3970b9e547bd6bb5e7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespaceapollo_1_1cyber_1_1croutine_1a9b2ec600d9734ed2e857a7235cec5e48" kindref="member">RoutineState</ref></type>
+        <definition>RoutineState apollo::cyber::croutine::CRoutine::state</definition>
+        <argsstring>() const </argsstring>
+        <name>state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" line="74" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" bodystart="147" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a4e8b6724f43265bed0f7dba494e9edaa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::croutine::CRoutine::set_state</definition>
+        <argsstring>(const RoutineState &amp;state)</argsstring>
+        <name>set_state</name>
+        <param>
+          <type>const <ref refid="namespaceapollo_1_1cyber_1_1croutine_1a9b2ec600d9734ed2e857a7235cec5e48" kindref="member">RoutineState</ref> &amp;</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" line="75" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" bodystart="145" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a4903bd33854f6b3e17d6be0b54c5109b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t apollo::cyber::croutine::CRoutine::id</definition>
+        <argsstring>() const </argsstring>
+        <name>id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" line="77" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" bodystart="162" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a2551eee849d330a804bbf9216c2abf5d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::croutine::CRoutine::set_id</definition>
+        <argsstring>(uint64_t id)</argsstring>
+        <name>set_id</name>
+        <param>
+          <type>uint64_t</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" line="78" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" bodystart="164" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1aa147ad950a110afa069542a1ca0a2386" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::string &amp;</type>
+        <definition>const std::string &amp; apollo::cyber::croutine::CRoutine::name</definition>
+        <argsstring>() const </argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" line="80" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" bodystart="166" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1acc9e6fb1cab74150a16b145eec95b1df" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::croutine::CRoutine::set_name</definition>
+        <argsstring>(const std::string &amp;name)</argsstring>
+        <name>set_name</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" line="81" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" bodystart="168" bodyend="168"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a3ef77a24e406fb936236856157e9a876" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int apollo::cyber::croutine::CRoutine::processor_id</definition>
+        <argsstring>() const </argsstring>
+        <name>processor_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" line="83" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" bodystart="170" bodyend="170"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a9c32b9446e3ac3f804e488be62277256" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::croutine::CRoutine::set_processor_id</definition>
+        <argsstring>(int processor_id)</argsstring>
+        <name>set_processor_id</name>
+        <param>
+          <type>int</type>
+          <declname>processor_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" line="84" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" bodystart="172" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a4da6e71a8af8ead34f7b33e62825f2c9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t apollo::cyber::croutine::CRoutine::priority</definition>
+        <argsstring>() const </argsstring>
+        <name>priority</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" line="86" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" bodystart="193" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a1756e023222be1144a8f361583b3ea71" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::croutine::CRoutine::set_priority</definition>
+        <argsstring>(uint32_t priority)</argsstring>
+        <name>set_priority</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>priority</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" line="87" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" bodystart="195" bodyend="195"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a0251da00fee4d7419cd3049665ef8a8d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::chrono::steady_clock::time_point</type>
+        <definition>std::chrono::steady_clock::time_point apollo::cyber::croutine::CRoutine::wake_time</definition>
+        <argsstring>() const </argsstring>
+        <name>wake_time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" line="89" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" bodystart="149" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a4a9d689d0c9e0a7d610803eadee9f1c5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::croutine::CRoutine::set_group_name</definition>
+        <argsstring>(const std::string &amp;group_name)</argsstring>
+        <name>set_group_name</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>group_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" line="91" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" bodystart="91" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1ac249fb0aa8d4ba70ffa8d7743186981e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::string &amp;</type>
+        <definition>const std::string&amp; apollo::cyber::croutine::CRoutine::group_name</definition>
+        <argsstring>()</argsstring>
+        <name>group_name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" line="95" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" bodystart="95" bodyend="95"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a095302ea55cd7dc4809aa4b151b8a6e2" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::croutine::CRoutine::Yield</definition>
+        <argsstring>()</argsstring>
+        <name>Yield</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" line="46" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" bodystart="131" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1aa54aaa31c0df232da81e2824ba3410d8" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::croutine::CRoutine::Yield</definition>
+        <argsstring>(const RoutineState &amp;state)</argsstring>
+        <name>Yield</name>
+        <param>
+          <type>const <ref refid="namespaceapollo_1_1cyber_1_1croutine_1a9b2ec600d9734ed2e857a7235cec5e48" kindref="member">RoutineState</ref> &amp;</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" line="47" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" bodystart="125" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1aed7766993950c35cf0e16cc114b4c43d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void apollo::cyber::croutine::CRoutine::SetMainContext</definition>
+        <argsstring>(const std::shared_ptr&lt; RoutineContext &gt; &amp;context)</argsstring>
+        <name>SetMainContext</name>
+        <param>
+          <type>const std::shared_ptr&lt; <ref refid="structapollo_1_1cyber_1_1croutine_1_1RoutineContext" kindref="compound">RoutineContext</ref> &gt; &amp;</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" line="48" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a5dcf3f88f2e1d959ef71e92bc34a18be" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine" kindref="compound">CRoutine</ref> *</type>
+        <definition>CRoutine * apollo::cyber::croutine::CRoutine::GetCurrentRoutine</definition>
+        <argsstring>()</argsstring>
+        <name>GetCurrentRoutine</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" line="49" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" bodystart="135" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a6c69c023c597b85b4bf74d4f871f2f61" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>char **</type>
+        <definition>char ** apollo::cyber::croutine::CRoutine::GetMainStack</definition>
+        <argsstring>()</argsstring>
+        <name>GetMainStack</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" line="50" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" bodystart="137" bodyend="137"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a7dc0fef4185513d49373bc93566fc033" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::croutine::CRoutine::CRoutine</definition>
+        <argsstring>(CRoutine &amp;)=delete</argsstring>
+        <name>CRoutine</name>
+        <param>
+          <type><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine" kindref="compound">CRoutine</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" line="98" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1addd133a708f590f95e39df3fb8cb10f2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine" kindref="compound">CRoutine</ref> &amp;</type>
+        <definition>CRoutine&amp; apollo::cyber::croutine::CRoutine::operator=</definition>
+        <argsstring>(CRoutine &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine" kindref="compound">CRoutine</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" line="99" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="195">
+        <label>apollo::cyber::croutine::CRoutine</label>
+        <link refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine"/>
+        <childnode refid="195" relation="usage">
+          <edgelabel>current_routine_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" line="40" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/croutine/croutine.h" bodystart="40" bodyend="123"/>
+    <listofallmembers>
+      <member refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1ada6c072e791b4f0ee01fc4e41bffebfb" prot="public" virt="non-virtual"><scope>apollo::cyber::croutine::CRoutine</scope><name>Acquire</name></member>
+      <member refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a68165b138d7cfc1b200e830970ad3289" prot="private" virt="non-virtual"><scope>apollo::cyber::croutine::CRoutine</scope><name>context_</name></member>
+      <member refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a975b0f29db65bec8b2e333610da3c0bc" prot="public" virt="non-virtual"><scope>apollo::cyber::croutine::CRoutine</scope><name>CRoutine</name></member>
+      <member refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a7dc0fef4185513d49373bc93566fc033" prot="private" virt="non-virtual"><scope>apollo::cyber::croutine::CRoutine</scope><name>CRoutine</name></member>
+      <member refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1ac73dddcfe8792f48c26ed08e1b8101f8" prot="private" virt="non-virtual"><scope>apollo::cyber::croutine::CRoutine</scope><name>current_routine_</name></member>
+      <member refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1ae4784009fb5e1cc2ea1c71739af50fd5" prot="private" virt="non-virtual"><scope>apollo::cyber::croutine::CRoutine</scope><name>force_stop_</name></member>
+      <member refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a35c97acd271cbe079df11e4b4490b729" prot="private" virt="non-virtual"><scope>apollo::cyber::croutine::CRoutine</scope><name>func_</name></member>
+      <member refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1adc87070b8f79e63163e7aff885e84e84" prot="public" virt="non-virtual"><scope>apollo::cyber::croutine::CRoutine</scope><name>GetContext</name></member>
+      <member refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a5dcf3f88f2e1d959ef71e92bc34a18be" prot="public" virt="non-virtual"><scope>apollo::cyber::croutine::CRoutine</scope><name>GetCurrentRoutine</name></member>
+      <member refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a6c69c023c597b85b4bf74d4f871f2f61" prot="public" virt="non-virtual"><scope>apollo::cyber::croutine::CRoutine</scope><name>GetMainStack</name></member>
+      <member refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a13151bd71806ca69ff7c13317ec9ff61" prot="public" virt="non-virtual"><scope>apollo::cyber::croutine::CRoutine</scope><name>GetStack</name></member>
+      <member refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1ac249fb0aa8d4ba70ffa8d7743186981e" prot="public" virt="non-virtual"><scope>apollo::cyber::croutine::CRoutine</scope><name>group_name</name></member>
+      <member refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1ada07af0832975eb46a12f4b84ff022d0" prot="private" virt="non-virtual"><scope>apollo::cyber::croutine::CRoutine</scope><name>group_name_</name></member>
+      <member refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a47ba7e433c0ca462eaafa87b78150c27" prot="public" virt="non-virtual"><scope>apollo::cyber::croutine::CRoutine</scope><name>HangUp</name></member>
+      <member refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a4903bd33854f6b3e17d6be0b54c5109b" prot="public" virt="non-virtual"><scope>apollo::cyber::croutine::CRoutine</scope><name>id</name></member>
+      <member refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1abbd791fd6d8e2aa9a996fdd2bf221cf7" prot="private" virt="non-virtual"><scope>apollo::cyber::croutine::CRoutine</scope><name>id_</name></member>
+      <member refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a1fc4d2d426dba2b0e4381e67348869ae" prot="private" virt="non-virtual"><scope>apollo::cyber::croutine::CRoutine</scope><name>lock_</name></member>
+      <member refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a9466601d9e5d320bf651bc896e9c6fcb" prot="private" virt="non-virtual"><scope>apollo::cyber::croutine::CRoutine</scope><name>main_stack_</name></member>
+      <member refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1aa147ad950a110afa069542a1ca0a2386" prot="public" virt="non-virtual"><scope>apollo::cyber::croutine::CRoutine</scope><name>name</name></member>
+      <member refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a1a5fc3c9a9e30f211a92a89763d2cbab" prot="private" virt="non-virtual"><scope>apollo::cyber::croutine::CRoutine</scope><name>name_</name></member>
+      <member refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1addd133a708f590f95e39df3fb8cb10f2" prot="private" virt="non-virtual"><scope>apollo::cyber::croutine::CRoutine</scope><name>operator=</name></member>
+      <member refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a4da6e71a8af8ead34f7b33e62825f2c9" prot="public" virt="non-virtual"><scope>apollo::cyber::croutine::CRoutine</scope><name>priority</name></member>
+      <member refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a0e6d7a63a90b8c53f1001d9e75015fdc" prot="private" virt="non-virtual"><scope>apollo::cyber::croutine::CRoutine</scope><name>priority_</name></member>
+      <member refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a3ef77a24e406fb936236856157e9a876" prot="public" virt="non-virtual"><scope>apollo::cyber::croutine::CRoutine</scope><name>processor_id</name></member>
+      <member refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a9d05239ef9bdf626d9044a2cbae13485" prot="private" virt="non-virtual"><scope>apollo::cyber::croutine::CRoutine</scope><name>processor_id_</name></member>
+      <member refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1af4f0281b87b2b0f37bf2526c1073143b" prot="public" virt="non-virtual"><scope>apollo::cyber::croutine::CRoutine</scope><name>Release</name></member>
+      <member refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1af0e8e2d8bd5e06088951633585e770e4" prot="public" virt="non-virtual"><scope>apollo::cyber::croutine::CRoutine</scope><name>Resume</name></member>
+      <member refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a194bf92eb5b29da955f41cfaa1c6f3d1" prot="public" virt="non-virtual"><scope>apollo::cyber::croutine::CRoutine</scope><name>Run</name></member>
+      <member refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a4a9d689d0c9e0a7d610803eadee9f1c5" prot="public" virt="non-virtual"><scope>apollo::cyber::croutine::CRoutine</scope><name>set_group_name</name></member>
+      <member refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a2551eee849d330a804bbf9216c2abf5d" prot="public" virt="non-virtual"><scope>apollo::cyber::croutine::CRoutine</scope><name>set_id</name></member>
+      <member refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1acc9e6fb1cab74150a16b145eec95b1df" prot="public" virt="non-virtual"><scope>apollo::cyber::croutine::CRoutine</scope><name>set_name</name></member>
+      <member refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a1756e023222be1144a8f361583b3ea71" prot="public" virt="non-virtual"><scope>apollo::cyber::croutine::CRoutine</scope><name>set_priority</name></member>
+      <member refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a9c32b9446e3ac3f804e488be62277256" prot="public" virt="non-virtual"><scope>apollo::cyber::croutine::CRoutine</scope><name>set_processor_id</name></member>
+      <member refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a4e8b6724f43265bed0f7dba494e9edaa" prot="public" virt="non-virtual"><scope>apollo::cyber::croutine::CRoutine</scope><name>set_state</name></member>
+      <member refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1aed7766993950c35cf0e16cc114b4c43d" prot="public" virt="non-virtual"><scope>apollo::cyber::croutine::CRoutine</scope><name>SetMainContext</name></member>
+      <member refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1aab4da1d64d40ce35e4054b867bfdeab9" prot="public" virt="non-virtual"><scope>apollo::cyber::croutine::CRoutine</scope><name>SetUpdateFlag</name></member>
+      <member refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a7a7a609b9eea30ff016c79fd7e57b9e6" prot="public" virt="non-virtual"><scope>apollo::cyber::croutine::CRoutine</scope><name>Sleep</name></member>
+      <member refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a457b30f1df6a1f3970b9e547bd6bb5e7" prot="public" virt="non-virtual"><scope>apollo::cyber::croutine::CRoutine</scope><name>state</name></member>
+      <member refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a50f7996bfdacc4455012d2701b91890e" prot="private" virt="non-virtual"><scope>apollo::cyber::croutine::CRoutine</scope><name>state_</name></member>
+      <member refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1acbf7f66f0ef56449837e02eb74a2feb3" prot="public" virt="non-virtual"><scope>apollo::cyber::croutine::CRoutine</scope><name>Stop</name></member>
+      <member refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a1f4f88bf13f02aa9d963159db66570ad" prot="private" virt="non-virtual"><scope>apollo::cyber::croutine::CRoutine</scope><name>updated_</name></member>
+      <member refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1abe2081e7ccc944e14a13ee5140f6dc3f" prot="public" virt="non-virtual"><scope>apollo::cyber::croutine::CRoutine</scope><name>UpdateState</name></member>
+      <member refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1aa2872097862baf607809ebe793f04920" prot="public" virt="non-virtual"><scope>apollo::cyber::croutine::CRoutine</scope><name>Wake</name></member>
+      <member refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a0251da00fee4d7419cd3049665ef8a8d" prot="public" virt="non-virtual"><scope>apollo::cyber::croutine::CRoutine</scope><name>wake_time</name></member>
+      <member refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1abd2684b9c1a6fcbbe4afcc1b5f8b6ccc" prot="private" virt="non-virtual"><scope>apollo::cyber::croutine::CRoutine</scope><name>wake_time_</name></member>
+      <member refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a095302ea55cd7dc4809aa4b151b8a6e2" prot="public" virt="non-virtual"><scope>apollo::cyber::croutine::CRoutine</scope><name>Yield</name></member>
+      <member refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1aa54aaa31c0df232da81e2824ba3410d8" prot="public" virt="non-virtual"><scope>apollo::cyber::croutine::CRoutine</scope><name>Yield</name></member>
+      <member refid="classapollo_1_1cyber_1_1croutine_1_1CRoutine_1a2a69d0e45efb1b84b591adf8cd2c7212" prot="public" virt="virtual"><scope>apollo::cyber::croutine::CRoutine</scope><name>~CRoutine</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

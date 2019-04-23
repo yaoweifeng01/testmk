@@ -1,0 +1,117 @@
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1Transport}{\section{apollo\-:\-:cyber\-:\-:transport\-:\-:Transport Class Reference}
+\label{classapollo_1_1cyber_1_1transport_1_1Transport}\index{apollo\-::cyber\-::transport\-::\-Transport@{apollo\-::cyber\-::transport\-::\-Transport}}
+}
+
+
+{\ttfamily \#include $<$transport.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classapollo_1_1cyber_1_1transport_1_1Transport_a549c846a9b3b12b6ee2d7660c6557eba}{$\sim$\-Transport} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1transport_1_1Transport_a0f2be2c5c615131524b3222b2af4a0bd}{Shutdown} ()
+\item 
+{\footnotesize template$<$typename M $>$ }\\auto \hyperlink{classapollo_1_1cyber_1_1transport_1_1Transport_abaa70188baae499bd7b253232add0d79}{Create\-Transmitter} (const Role\-Attributes \&attr, const Optional\-Mode \&mode=Optional\-Mode\-::\-H\-Y\-B\-R\-I\-D) -\/$>$ typename std\-::shared\-\_\-ptr$<$ \hyperlink{classapollo_1_1cyber_1_1transport_1_1Transmitter}{Transmitter}$<$ M $>$$>$
+\item 
+{\footnotesize template$<$typename M $>$ }\\auto \hyperlink{classapollo_1_1cyber_1_1transport_1_1Transport_aca8d88aff9d498c0aaf5e98cbe842371}{Create\-Receiver} (const Role\-Attributes \&attr, const typename \hyperlink{classapollo_1_1cyber_1_1transport_1_1Receiver}{Receiver}$<$ M $>$\-::\hyperlink{namespaceapollo_1_1cyber_1_1transport_aade3f4d41770972ae44166cdde27e2d8}{Message\-Listener} \&msg\-\_\-listener, const Optional\-Mode \&mode=Optional\-Mode\-::\-H\-Y\-B\-R\-I\-D) -\/$>$ typename std\-::shared\-\_\-ptr$<$ \hyperlink{classapollo_1_1cyber_1_1transport_1_1Receiver}{Receiver}$<$ M $>$$>$
+\item 
+\hyperlink{namespaceapollo_1_1cyber_1_1transport_a4214d0780331276d0384d0b57e3bc688}{Participant\-Ptr} \hyperlink{classapollo_1_1cyber_1_1transport_1_1Transport_a4214cebf15d20ad3de4e122a3d712e52}{participant} () const 
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1transport_1_1Transport_a8587279f59fd40163a4b46842aad0fa0}{Create\-Participant} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\-::atomic$<$ bool $>$ \hyperlink{classapollo_1_1cyber_1_1transport_1_1Transport_aab6247d56f7301a97020294cd832429a}{is\-\_\-shutdown\-\_\-}
+\item 
+\hyperlink{namespaceapollo_1_1cyber_1_1transport_a4214d0780331276d0384d0b57e3bc688}{Participant\-Ptr} \hyperlink{classapollo_1_1cyber_1_1transport_1_1Transport_ad486ca0fb050e24358b278bf3f876828}{participant\-\_\-}
+\item 
+\hyperlink{namespaceapollo_1_1cyber_1_1transport_ad7de1bbf34457c17c4d04b9bbfe152b4}{Notifier\-Ptr} \hyperlink{classapollo_1_1cyber_1_1transport_1_1Transport_a4236e93d0039e1232f5df7f2fda36dfc}{notifier\-\_\-}
+\item 
+\hyperlink{namespaceapollo_1_1cyber_1_1transport_af059bf179d7ece8cb6ee52f0157568de}{Intra\-Dispatcher\-Ptr} \hyperlink{classapollo_1_1cyber_1_1transport_1_1Transport_ab4674c4a21310d94d764e7ce44f2ac0f}{intra\-\_\-dispatcher\-\_\-}
+\item 
+\hyperlink{namespaceapollo_1_1cyber_1_1transport_ad2181d36e971d8b74b322f8e2e3b36de}{Shm\-Dispatcher\-Ptr} \hyperlink{classapollo_1_1cyber_1_1transport_1_1Transport_a1000844ba1b39e20071ff12b2a13ed02}{shm\-\_\-dispatcher\-\_\-}
+\item 
+\hyperlink{namespaceapollo_1_1cyber_1_1transport_a52a5f048384d7613248f6b93957ca0be}{Rtps\-Dispatcher\-Ptr} \hyperlink{classapollo_1_1cyber_1_1transport_1_1Transport_a9415e50770db5e09cae7767c28e6836b}{rtps\-\_\-dispatcher\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1Transport_a549c846a9b3b12b6ee2d7660c6557eba}{\index{apollo\-::cyber\-::transport\-::\-Transport@{apollo\-::cyber\-::transport\-::\-Transport}!$\sim$\-Transport@{$\sim$\-Transport}}
+\index{$\sim$\-Transport@{$\sim$\-Transport}!apollo::cyber::transport::Transport@{apollo\-::cyber\-::transport\-::\-Transport}}
+\subsubsection[{$\sim$\-Transport}]{\setlength{\rightskip}{0pt plus 5cm}virtual apollo\-::cyber\-::transport\-::\-Transport\-::$\sim$\-Transport (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1transport_1_1Transport_a549c846a9b3b12b6ee2d7660c6557eba}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1Transport_a8587279f59fd40163a4b46842aad0fa0}{\index{apollo\-::cyber\-::transport\-::\-Transport@{apollo\-::cyber\-::transport\-::\-Transport}!Create\-Participant@{Create\-Participant}}
+\index{Create\-Participant@{Create\-Participant}!apollo::cyber::transport::Transport@{apollo\-::cyber\-::transport\-::\-Transport}}
+\subsubsection[{Create\-Participant}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::transport\-::\-Transport\-::\-Create\-Participant (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1Transport_a8587279f59fd40163a4b46842aad0fa0}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1Transport_aca8d88aff9d498c0aaf5e98cbe842371}{\index{apollo\-::cyber\-::transport\-::\-Transport@{apollo\-::cyber\-::transport\-::\-Transport}!Create\-Receiver@{Create\-Receiver}}
+\index{Create\-Receiver@{Create\-Receiver}!apollo::cyber::transport::Transport@{apollo\-::cyber\-::transport\-::\-Transport}}
+\subsubsection[{Create\-Receiver}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ auto apollo\-::cyber\-::transport\-::\-Transport\-::\-Create\-Receiver (
+\begin{DoxyParamCaption}
+\item[{const Role\-Attributes \&}]{attr, }
+\item[{const typename {\bf Receiver}$<$ M $>$\-::{\bf Message\-Listener} \&}]{msg\-\_\-listener, }
+\item[{const Optional\-Mode \&}]{mode = {\ttfamily OptionalMode\-:\-:HYBRID}}
+\end{DoxyParamCaption}
+) -\/$>$ typename std\-::shared\-\_\-ptr$<${\bf Receiver}$<$M$>$$>$}}\label{classapollo_1_1cyber_1_1transport_1_1Transport_aca8d88aff9d498c0aaf5e98cbe842371}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1Transport_abaa70188baae499bd7b253232add0d79}{\index{apollo\-::cyber\-::transport\-::\-Transport@{apollo\-::cyber\-::transport\-::\-Transport}!Create\-Transmitter@{Create\-Transmitter}}
+\index{Create\-Transmitter@{Create\-Transmitter}!apollo::cyber::transport::Transport@{apollo\-::cyber\-::transport\-::\-Transport}}
+\subsubsection[{Create\-Transmitter}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ auto apollo\-::cyber\-::transport\-::\-Transport\-::\-Create\-Transmitter (
+\begin{DoxyParamCaption}
+\item[{const Role\-Attributes \&}]{attr, }
+\item[{const Optional\-Mode \&}]{mode = {\ttfamily OptionalMode\-:\-:HYBRID}}
+\end{DoxyParamCaption}
+) -\/$>$ typename std\-::shared\-\_\-ptr$<${\bf Transmitter}$<$M$>$$>$}}\label{classapollo_1_1cyber_1_1transport_1_1Transport_abaa70188baae499bd7b253232add0d79}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1Transport_a4214cebf15d20ad3de4e122a3d712e52}{\index{apollo\-::cyber\-::transport\-::\-Transport@{apollo\-::cyber\-::transport\-::\-Transport}!participant@{participant}}
+\index{participant@{participant}!apollo::cyber::transport::Transport@{apollo\-::cyber\-::transport\-::\-Transport}}
+\subsubsection[{participant}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Participant\-Ptr} apollo\-::cyber\-::transport\-::\-Transport\-::participant (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1transport_1_1Transport_a4214cebf15d20ad3de4e122a3d712e52}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1Transport_a0f2be2c5c615131524b3222b2af4a0bd}{\index{apollo\-::cyber\-::transport\-::\-Transport@{apollo\-::cyber\-::transport\-::\-Transport}!Shutdown@{Shutdown}}
+\index{Shutdown@{Shutdown}!apollo::cyber::transport::Transport@{apollo\-::cyber\-::transport\-::\-Transport}}
+\subsubsection[{Shutdown}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::transport\-::\-Transport\-::\-Shutdown (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1transport_1_1Transport_a0f2be2c5c615131524b3222b2af4a0bd}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1Transport_ab4674c4a21310d94d764e7ce44f2ac0f}{\index{apollo\-::cyber\-::transport\-::\-Transport@{apollo\-::cyber\-::transport\-::\-Transport}!intra\-\_\-dispatcher\-\_\-@{intra\-\_\-dispatcher\-\_\-}}
+\index{intra\-\_\-dispatcher\-\_\-@{intra\-\_\-dispatcher\-\_\-}!apollo::cyber::transport::Transport@{apollo\-::cyber\-::transport\-::\-Transport}}
+\subsubsection[{intra\-\_\-dispatcher\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Intra\-Dispatcher\-Ptr} apollo\-::cyber\-::transport\-::\-Transport\-::intra\-\_\-dispatcher\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1Transport_ab4674c4a21310d94d764e7ce44f2ac0f}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1Transport_aab6247d56f7301a97020294cd832429a}{\index{apollo\-::cyber\-::transport\-::\-Transport@{apollo\-::cyber\-::transport\-::\-Transport}!is\-\_\-shutdown\-\_\-@{is\-\_\-shutdown\-\_\-}}
+\index{is\-\_\-shutdown\-\_\-@{is\-\_\-shutdown\-\_\-}!apollo::cyber::transport::Transport@{apollo\-::cyber\-::transport\-::\-Transport}}
+\subsubsection[{is\-\_\-shutdown\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::atomic$<$bool$>$ apollo\-::cyber\-::transport\-::\-Transport\-::is\-\_\-shutdown\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1Transport_aab6247d56f7301a97020294cd832429a}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1Transport_a4236e93d0039e1232f5df7f2fda36dfc}{\index{apollo\-::cyber\-::transport\-::\-Transport@{apollo\-::cyber\-::transport\-::\-Transport}!notifier\-\_\-@{notifier\-\_\-}}
+\index{notifier\-\_\-@{notifier\-\_\-}!apollo::cyber::transport::Transport@{apollo\-::cyber\-::transport\-::\-Transport}}
+\subsubsection[{notifier\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Notifier\-Ptr} apollo\-::cyber\-::transport\-::\-Transport\-::notifier\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1Transport_a4236e93d0039e1232f5df7f2fda36dfc}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1Transport_ad486ca0fb050e24358b278bf3f876828}{\index{apollo\-::cyber\-::transport\-::\-Transport@{apollo\-::cyber\-::transport\-::\-Transport}!participant\-\_\-@{participant\-\_\-}}
+\index{participant\-\_\-@{participant\-\_\-}!apollo::cyber::transport::Transport@{apollo\-::cyber\-::transport\-::\-Transport}}
+\subsubsection[{participant\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Participant\-Ptr} apollo\-::cyber\-::transport\-::\-Transport\-::participant\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1Transport_ad486ca0fb050e24358b278bf3f876828}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1Transport_a9415e50770db5e09cae7767c28e6836b}{\index{apollo\-::cyber\-::transport\-::\-Transport@{apollo\-::cyber\-::transport\-::\-Transport}!rtps\-\_\-dispatcher\-\_\-@{rtps\-\_\-dispatcher\-\_\-}}
+\index{rtps\-\_\-dispatcher\-\_\-@{rtps\-\_\-dispatcher\-\_\-}!apollo::cyber::transport::Transport@{apollo\-::cyber\-::transport\-::\-Transport}}
+\subsubsection[{rtps\-\_\-dispatcher\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Rtps\-Dispatcher\-Ptr} apollo\-::cyber\-::transport\-::\-Transport\-::rtps\-\_\-dispatcher\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1Transport_a9415e50770db5e09cae7767c28e6836b}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1Transport_a1000844ba1b39e20071ff12b2a13ed02}{\index{apollo\-::cyber\-::transport\-::\-Transport@{apollo\-::cyber\-::transport\-::\-Transport}!shm\-\_\-dispatcher\-\_\-@{shm\-\_\-dispatcher\-\_\-}}
+\index{shm\-\_\-dispatcher\-\_\-@{shm\-\_\-dispatcher\-\_\-}!apollo::cyber::transport::Transport@{apollo\-::cyber\-::transport\-::\-Transport}}
+\subsubsection[{shm\-\_\-dispatcher\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Shm\-Dispatcher\-Ptr} apollo\-::cyber\-::transport\-::\-Transport\-::shm\-\_\-dispatcher\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1Transport_a1000844ba1b39e20071ff12b2a13ed02}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+transport/\hyperlink{transport_8h}{transport.\-h}\end{DoxyCompactItemize}

@@ -1,0 +1,178 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer" kind="class" prot="public">
+    <compoundname>apollo::cyber::record::PlayTaskBuffer</compoundname>
+    <includes refid="play__task__buffer_8h" local="no">play_task_buffer.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer_1abdab9410dfa9e3ea1ff24159f2def04f" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="classapollo_1_1cyber_1_1record_1_1PlayTask" kindref="compound">PlayTask</ref> &gt;</type>
+        <definition>using apollo::cyber::record::PlayTaskBuffer::TaskPtr =  std::shared_ptr&lt;PlayTask&gt;</definition>
+        <argsstring></argsstring>
+        <name>TaskPtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/player/play_task_buffer.h" line="33" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/player/play_task_buffer.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer_1a86f981e02cc0d763c58afdd89b0db510" prot="public" static="no">
+        <type>std::multimap&lt; uint64_t, <ref refid="classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer_1abdab9410dfa9e3ea1ff24159f2def04f" kindref="member">TaskPtr</ref> &gt;</type>
+        <definition>using apollo::cyber::record::PlayTaskBuffer::TaskMap =  std::multimap&lt;uint64_t, TaskPtr&gt;</definition>
+        <argsstring></argsstring>
+        <name>TaskMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/player/play_task_buffer.h" line="35" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/player/play_task_buffer.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer_1a4d96a5bc32297ceb367780f555d323d8" prot="private" static="no" mutable="no">
+        <type><ref refid="classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer_1a86f981e02cc0d763c58afdd89b0db510" kindref="member">TaskMap</ref></type>
+        <definition>TaskMap apollo::cyber::record::PlayTaskBuffer::tasks_</definition>
+        <argsstring></argsstring>
+        <name>tasks_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/player/play_task_buffer.h" line="48" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/player/play_task_buffer.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer_1a1ffbe36785389d7f80ee266898ab1348" prot="private" static="no" mutable="yes">
+        <type>std::mutex</type>
+        <definition>std::mutex apollo::cyber::record::PlayTaskBuffer::mutex_</definition>
+        <argsstring></argsstring>
+        <name>mutex_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/player/play_task_buffer.h" line="49" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/player/play_task_buffer.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer_1a04dad02bd480aa696e9cb8f1c7df2775" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::record::PlayTaskBuffer::PlayTaskBuffer</definition>
+        <argsstring>()</argsstring>
+        <name>PlayTaskBuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/player/play_task_buffer.h" line="37" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer_1a66a4e421a23fc3e67fd332197fa12c43" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual apollo::cyber::record::PlayTaskBuffer::~PlayTaskBuffer</definition>
+        <argsstring>()</argsstring>
+        <name>~PlayTaskBuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/player/play_task_buffer.h" line="38" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer_1ac55eb5a8ce38f8d2bed2c900ac8b8b42" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t apollo::cyber::record::PlayTaskBuffer::Size</definition>
+        <argsstring>() const </argsstring>
+        <name>Size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/player/play_task_buffer.h" line="40" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer_1acc53cf6e820900208d155d4bce82467e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::record::PlayTaskBuffer::Empty</definition>
+        <argsstring>() const </argsstring>
+        <name>Empty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/player/play_task_buffer.h" line="41" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer_1af25951447b2d3aaccad81200ff465280" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::record::PlayTaskBuffer::Push</definition>
+        <argsstring>(const TaskPtr &amp;task)</argsstring>
+        <name>Push</name>
+        <param>
+          <type>const <ref refid="classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer_1abdab9410dfa9e3ea1ff24159f2def04f" kindref="member">TaskPtr</ref> &amp;</type>
+          <declname>task</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/player/play_task_buffer.h" line="43" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer_1ab62f0719b82c466efd5f22785b4f8c22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer_1abdab9410dfa9e3ea1ff24159f2def04f" kindref="member">TaskPtr</ref></type>
+        <definition>TaskPtr apollo::cyber::record::PlayTaskBuffer::Front</definition>
+        <argsstring>()</argsstring>
+        <name>Front</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/player/play_task_buffer.h" line="44" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer_1ac0b92aa25c06c8ffd6f04756ea4daea9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::record::PlayTaskBuffer::PopFront</definition>
+        <argsstring>()</argsstring>
+        <name>PopFront</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/player/play_task_buffer.h" line="45" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/player/play_task_buffer.h" line="31" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/tools/cyber_recorder/player/play_task_buffer.h" bodystart="31" bodyend="50"/>
+    <listofallmembers>
+      <member refid="classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer_1acc53cf6e820900208d155d4bce82467e" prot="public" virt="non-virtual"><scope>apollo::cyber::record::PlayTaskBuffer</scope><name>Empty</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer_1ab62f0719b82c466efd5f22785b4f8c22" prot="public" virt="non-virtual"><scope>apollo::cyber::record::PlayTaskBuffer</scope><name>Front</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer_1a1ffbe36785389d7f80ee266898ab1348" prot="private" virt="non-virtual"><scope>apollo::cyber::record::PlayTaskBuffer</scope><name>mutex_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer_1a04dad02bd480aa696e9cb8f1c7df2775" prot="public" virt="non-virtual"><scope>apollo::cyber::record::PlayTaskBuffer</scope><name>PlayTaskBuffer</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer_1ac0b92aa25c06c8ffd6f04756ea4daea9" prot="public" virt="non-virtual"><scope>apollo::cyber::record::PlayTaskBuffer</scope><name>PopFront</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer_1af25951447b2d3aaccad81200ff465280" prot="public" virt="non-virtual"><scope>apollo::cyber::record::PlayTaskBuffer</scope><name>Push</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer_1ac55eb5a8ce38f8d2bed2c900ac8b8b42" prot="public" virt="non-virtual"><scope>apollo::cyber::record::PlayTaskBuffer</scope><name>Size</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer_1a86f981e02cc0d763c58afdd89b0db510" prot="public" virt="non-virtual"><scope>apollo::cyber::record::PlayTaskBuffer</scope><name>TaskMap</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer_1abdab9410dfa9e3ea1ff24159f2def04f" prot="public" virt="non-virtual"><scope>apollo::cyber::record::PlayTaskBuffer</scope><name>TaskPtr</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer_1a4d96a5bc32297ceb367780f555d323d8" prot="private" virt="non-virtual"><scope>apollo::cyber::record::PlayTaskBuffer</scope><name>tasks_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1PlayTaskBuffer_1a66a4e421a23fc3e67fd332197fa12c43" prot="public" virt="virtual"><scope>apollo::cyber::record::PlayTaskBuffer</scope><name>~PlayTaskBuffer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

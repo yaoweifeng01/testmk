@@ -1,0 +1,109 @@
+\hypertarget{classapollo_1_1cyber_1_1NodeServiceImpl}{\section{apollo\-:\-:cyber\-:\-:Node\-Service\-Impl Class Reference}
+\label{classapollo_1_1cyber_1_1NodeServiceImpl}\index{apollo\-::cyber\-::\-Node\-Service\-Impl@{apollo\-::cyber\-::\-Node\-Service\-Impl}}
+}
+
+
+{\ttfamily \#include $<$node\-\_\-service\-\_\-impl.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1NodeServiceImpl_ac518c6b95388e87a0243c53e4cdab402}{Node\-Service\-Impl} (const std\-::string \&node\-\_\-name)
+\item 
+\hyperlink{classapollo_1_1cyber_1_1NodeServiceImpl_a559f15a34d47e87450f8366242f699c2}{Node\-Service\-Impl} ()=delete
+\item 
+\hyperlink{classapollo_1_1cyber_1_1NodeServiceImpl_a80eba07a61bf286d23b547e8ad5fe07a}{$\sim$\-Node\-Service\-Impl} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Request , typename Response $>$ }\\auto \hyperlink{classapollo_1_1cyber_1_1NodeServiceImpl_a617b7fee0b96d3115e70143745004935}{Create\-Service} (const std\-::string \&service\-\_\-name, const typename \hyperlink{classapollo_1_1cyber_1_1Service}{Service}$<$ Request, Response $>$\-::Service\-Callback \&service\-\_\-calllback) -\/$>$ typename std\-::shared\-\_\-ptr$<$ \hyperlink{classapollo_1_1cyber_1_1Service}{Service}$<$ Request, Response $>$$>$
+\item 
+{\footnotesize template$<$typename Request , typename Response $>$ }\\auto \hyperlink{classapollo_1_1cyber_1_1NodeServiceImpl_ae5e61b7a241ded9d370fef484abb0064}{Create\-Client} (const std\-::string \&service\-\_\-name) -\/$>$ typename std\-::shared\-\_\-ptr$<$ \hyperlink{classapollo_1_1cyber_1_1Client}{Client}$<$ Request, Response $>$$>$
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\-::vector$<$ std\-::weak\-\_\-ptr\\*
+$<$ \hyperlink{classapollo_1_1cyber_1_1ServiceBase}{Service\-Base} $>$ $>$ \hyperlink{classapollo_1_1cyber_1_1NodeServiceImpl_a5c763412befbe5299c797e670d4be36d}{service\-\_\-list\-\_\-}
+\item 
+std\-::vector$<$ std\-::weak\-\_\-ptr\\*
+$<$ \hyperlink{classapollo_1_1cyber_1_1ClientBase}{Client\-Base} $>$ $>$ \hyperlink{classapollo_1_1cyber_1_1NodeServiceImpl_a6b9e4bdf90743f8ae324ef1a44ed883f}{client\-\_\-list\-\_\-}
+\item 
+std\-::string \hyperlink{classapollo_1_1cyber_1_1NodeServiceImpl_a8f9533d4f5e1f460bd8ee0e76644c912}{node\-\_\-name\-\_\-}
+\item 
+proto\-::\-Role\-Attributes \hyperlink{classapollo_1_1cyber_1_1NodeServiceImpl_a762c2be3d310b7af1c0da1b83df54349}{attr\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classapollo_1_1cyber_1_1NodeServiceImpl_a6db9d28bd448a131448276ee03de1e6d}{Node}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classapollo_1_1cyber_1_1NodeServiceImpl_ac518c6b95388e87a0243c53e4cdab402}{\index{apollo\-::cyber\-::\-Node\-Service\-Impl@{apollo\-::cyber\-::\-Node\-Service\-Impl}!Node\-Service\-Impl@{Node\-Service\-Impl}}
+\index{Node\-Service\-Impl@{Node\-Service\-Impl}!apollo::cyber::NodeServiceImpl@{apollo\-::cyber\-::\-Node\-Service\-Impl}}
+\subsubsection[{Node\-Service\-Impl}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::\-Node\-Service\-Impl\-::\-Node\-Service\-Impl (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{node\-\_\-name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}}\label{classapollo_1_1cyber_1_1NodeServiceImpl_ac518c6b95388e87a0243c53e4cdab402}
+\hypertarget{classapollo_1_1cyber_1_1NodeServiceImpl_a559f15a34d47e87450f8366242f699c2}{\index{apollo\-::cyber\-::\-Node\-Service\-Impl@{apollo\-::cyber\-::\-Node\-Service\-Impl}!Node\-Service\-Impl@{Node\-Service\-Impl}}
+\index{Node\-Service\-Impl@{Node\-Service\-Impl}!apollo::cyber::NodeServiceImpl@{apollo\-::cyber\-::\-Node\-Service\-Impl}}
+\subsubsection[{Node\-Service\-Impl}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::\-Node\-Service\-Impl\-::\-Node\-Service\-Impl (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}}\label{classapollo_1_1cyber_1_1NodeServiceImpl_a559f15a34d47e87450f8366242f699c2}
+\hypertarget{classapollo_1_1cyber_1_1NodeServiceImpl_a80eba07a61bf286d23b547e8ad5fe07a}{\index{apollo\-::cyber\-::\-Node\-Service\-Impl@{apollo\-::cyber\-::\-Node\-Service\-Impl}!$\sim$\-Node\-Service\-Impl@{$\sim$\-Node\-Service\-Impl}}
+\index{$\sim$\-Node\-Service\-Impl@{$\sim$\-Node\-Service\-Impl}!apollo::cyber::NodeServiceImpl@{apollo\-::cyber\-::\-Node\-Service\-Impl}}
+\subsubsection[{$\sim$\-Node\-Service\-Impl}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::\-Node\-Service\-Impl\-::$\sim$\-Node\-Service\-Impl (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1NodeServiceImpl_a80eba07a61bf286d23b547e8ad5fe07a}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1NodeServiceImpl_ae5e61b7a241ded9d370fef484abb0064}{\index{apollo\-::cyber\-::\-Node\-Service\-Impl@{apollo\-::cyber\-::\-Node\-Service\-Impl}!Create\-Client@{Create\-Client}}
+\index{Create\-Client@{Create\-Client}!apollo::cyber::NodeServiceImpl@{apollo\-::cyber\-::\-Node\-Service\-Impl}}
+\subsubsection[{Create\-Client}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Request , typename Response $>$ auto apollo\-::cyber\-::\-Node\-Service\-Impl\-::\-Create\-Client (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{service\-\_\-name}
+\end{DoxyParamCaption}
+) -\/$>$ typename std\-::shared\-\_\-ptr$<${\bf Client}$<$Request, Response$>$$>$\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1NodeServiceImpl_ae5e61b7a241ded9d370fef484abb0064}
+\hypertarget{classapollo_1_1cyber_1_1NodeServiceImpl_a617b7fee0b96d3115e70143745004935}{\index{apollo\-::cyber\-::\-Node\-Service\-Impl@{apollo\-::cyber\-::\-Node\-Service\-Impl}!Create\-Service@{Create\-Service}}
+\index{Create\-Service@{Create\-Service}!apollo::cyber::NodeServiceImpl@{apollo\-::cyber\-::\-Node\-Service\-Impl}}
+\subsubsection[{Create\-Service}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Request , typename Response $>$ auto apollo\-::cyber\-::\-Node\-Service\-Impl\-::\-Create\-Service (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{service\-\_\-name, }
+\item[{const typename {\bf Service}$<$ Request, Response $>$\-::Service\-Callback \&}]{service\-\_\-calllback}
+\end{DoxyParamCaption}
+) -\/$>$ typename std\-::shared\-\_\-ptr$<${\bf Service}$<$Request, Response$>$$>$\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1NodeServiceImpl_a617b7fee0b96d3115e70143745004935}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1NodeServiceImpl_a6db9d28bd448a131448276ee03de1e6d}{\index{apollo\-::cyber\-::\-Node\-Service\-Impl@{apollo\-::cyber\-::\-Node\-Service\-Impl}!Node@{Node}}
+\index{Node@{Node}!apollo::cyber::NodeServiceImpl@{apollo\-::cyber\-::\-Node\-Service\-Impl}}
+\subsubsection[{Node}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Node}\hspace{0.3cm}{\ttfamily [friend]}}}\label{classapollo_1_1cyber_1_1NodeServiceImpl_a6db9d28bd448a131448276ee03de1e6d}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classapollo_1_1cyber_1_1NodeServiceImpl_a762c2be3d310b7af1c0da1b83df54349}{\index{apollo\-::cyber\-::\-Node\-Service\-Impl@{apollo\-::cyber\-::\-Node\-Service\-Impl}!attr\-\_\-@{attr\-\_\-}}
+\index{attr\-\_\-@{attr\-\_\-}!apollo::cyber::NodeServiceImpl@{apollo\-::cyber\-::\-Node\-Service\-Impl}}
+\subsubsection[{attr\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}proto\-::\-Role\-Attributes apollo\-::cyber\-::\-Node\-Service\-Impl\-::attr\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1NodeServiceImpl_a762c2be3d310b7af1c0da1b83df54349}
+\hypertarget{classapollo_1_1cyber_1_1NodeServiceImpl_a6b9e4bdf90743f8ae324ef1a44ed883f}{\index{apollo\-::cyber\-::\-Node\-Service\-Impl@{apollo\-::cyber\-::\-Node\-Service\-Impl}!client\-\_\-list\-\_\-@{client\-\_\-list\-\_\-}}
+\index{client\-\_\-list\-\_\-@{client\-\_\-list\-\_\-}!apollo::cyber::NodeServiceImpl@{apollo\-::cyber\-::\-Node\-Service\-Impl}}
+\subsubsection[{client\-\_\-list\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$std\-::weak\-\_\-ptr$<${\bf Client\-Base}$>$ $>$ apollo\-::cyber\-::\-Node\-Service\-Impl\-::client\-\_\-list\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1NodeServiceImpl_a6b9e4bdf90743f8ae324ef1a44ed883f}
+\hypertarget{classapollo_1_1cyber_1_1NodeServiceImpl_a8f9533d4f5e1f460bd8ee0e76644c912}{\index{apollo\-::cyber\-::\-Node\-Service\-Impl@{apollo\-::cyber\-::\-Node\-Service\-Impl}!node\-\_\-name\-\_\-@{node\-\_\-name\-\_\-}}
+\index{node\-\_\-name\-\_\-@{node\-\_\-name\-\_\-}!apollo::cyber::NodeServiceImpl@{apollo\-::cyber\-::\-Node\-Service\-Impl}}
+\subsubsection[{node\-\_\-name\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string apollo\-::cyber\-::\-Node\-Service\-Impl\-::node\-\_\-name\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1NodeServiceImpl_a8f9533d4f5e1f460bd8ee0e76644c912}
+\hypertarget{classapollo_1_1cyber_1_1NodeServiceImpl_a5c763412befbe5299c797e670d4be36d}{\index{apollo\-::cyber\-::\-Node\-Service\-Impl@{apollo\-::cyber\-::\-Node\-Service\-Impl}!service\-\_\-list\-\_\-@{service\-\_\-list\-\_\-}}
+\index{service\-\_\-list\-\_\-@{service\-\_\-list\-\_\-}!apollo::cyber::NodeServiceImpl@{apollo\-::cyber\-::\-Node\-Service\-Impl}}
+\subsubsection[{service\-\_\-list\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$std\-::weak\-\_\-ptr$<${\bf Service\-Base}$>$ $>$ apollo\-::cyber\-::\-Node\-Service\-Impl\-::service\-\_\-list\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1NodeServiceImpl_a5c763412befbe5299c797e670d4be36d}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+node/\hyperlink{node__service__impl_8h}{node\-\_\-service\-\_\-impl.\-h}\end{DoxyCompactItemize}

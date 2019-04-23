@@ -1,0 +1,183 @@
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1ServiceManager}{\section{apollo\-:\-:cyber\-:\-:service\-\_\-discovery\-:\-:Service\-Manager Class Reference}
+\label{classapollo_1_1cyber_1_1service__discovery_1_1ServiceManager}\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Service\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Service\-Manager}}
+}
+
+
+{\ttfamily \#include $<$service\-\_\-manager.\-h$>$}
+
+Inheritance diagram for apollo\-:\-:cyber\-:\-:service\-\_\-discovery\-:\-:Service\-Manager\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classapollo_1_1cyber_1_1service__discovery_1_1ServiceManager}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ServiceManager_a1174fd4b721d2e18eb30b9e1530109b1}{Role\-Attr\-Vec} = std\-::vector$<$ Role\-Attributes $>$
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ServiceManager_a23a901a01fc5e61a4f6cc9aaac84dd24}{Server\-Warehouse} = \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1SingleValueWarehouse}{Single\-Value\-Warehouse}
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ServiceManager_af4e900ffa8e34995b8a6bca9bdfc6f9d}{Client\-Warehouse} = \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse}{Multi\-Value\-Warehouse}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ServiceManager_aa4ccadb8e7aace23d6c02031f460a90d}{Service\-Manager} ()
+\item 
+virtual \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ServiceManager_a658db5d81844d87269d285ef2fb364fe}{$\sim$\-Service\-Manager} ()
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ServiceManager_a12024c4c93e51ad067f94bdc0591a8c3}{Has\-Service} (const std\-::string \&service\-\_\-name)
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ServiceManager_af38ca75ea50d5e1bdd40b4cbb6c5f7d1}{Get\-Servers} (\hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ServiceManager_a1174fd4b721d2e18eb30b9e1530109b1}{Role\-Attr\-Vec} $\ast$servers)
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ServiceManager_a97196cc509625f9fd5376043f4381bb3}{Get\-Clients} (const std\-::string \&service\-\_\-name, \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ServiceManager_a1174fd4b721d2e18eb30b9e1530109b1}{Role\-Attr\-Vec} $\ast$clients)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ServiceManager_aba4d8350c1f20a9b07084a714fe87428}{Check} (const Role\-Attributes \&attr) override
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ServiceManager_a8a1117b41cc2e7f5620ad62639fb0fe8}{Dispose} (const Change\-Msg \&msg) override
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ServiceManager_a1b154f0679b49c2ee378f8d7e591b222}{On\-Topo\-Module\-Leave} (const std\-::string \&host\-\_\-name, int process\-\_\-id) override
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ServiceManager_a42cbaad2583152fd8e75f3c26580ea9e}{Dispose\-Join} (const Change\-Msg \&msg)
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ServiceManager_ad3b28db1ef69252f7de78392d6d3d74d}{Dispose\-Leave} (const Change\-Msg \&msg)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ServiceManager_a23a901a01fc5e61a4f6cc9aaac84dd24}{Server\-Warehouse} \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ServiceManager_ac27c445960f7199217715a38325c490d}{servers\-\_\-}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ServiceManager_af4e900ffa8e34995b8a6bca9bdfc6f9d}{Client\-Warehouse} \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ServiceManager_ae2d14ffd418fd7a75576eca529b9b277}{clients\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1ServiceManager_ae83aaddaeb682129a07c148e01291cdd}{Topology\-Manager}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1ServiceManager_af4e900ffa8e34995b8a6bca9bdfc6f9d}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Service\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Service\-Manager}!Client\-Warehouse@{Client\-Warehouse}}
+\index{Client\-Warehouse@{Client\-Warehouse}!apollo::cyber::service_discovery::ServiceManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Service\-Manager}}
+\subsubsection[{Client\-Warehouse}]{\setlength{\rightskip}{0pt plus 5cm}using {\bf apollo\-::cyber\-::service\-\_\-discovery\-::\-Service\-Manager\-::\-Client\-Warehouse} =  {\bf Multi\-Value\-Warehouse}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1ServiceManager_af4e900ffa8e34995b8a6bca9bdfc6f9d}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1ServiceManager_a1174fd4b721d2e18eb30b9e1530109b1}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Service\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Service\-Manager}!Role\-Attr\-Vec@{Role\-Attr\-Vec}}
+\index{Role\-Attr\-Vec@{Role\-Attr\-Vec}!apollo::cyber::service_discovery::ServiceManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Service\-Manager}}
+\subsubsection[{Role\-Attr\-Vec}]{\setlength{\rightskip}{0pt plus 5cm}using {\bf apollo\-::cyber\-::service\-\_\-discovery\-::\-Service\-Manager\-::\-Role\-Attr\-Vec} =  std\-::vector$<$Role\-Attributes$>$}}\label{classapollo_1_1cyber_1_1service__discovery_1_1ServiceManager_a1174fd4b721d2e18eb30b9e1530109b1}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1ServiceManager_a23a901a01fc5e61a4f6cc9aaac84dd24}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Service\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Service\-Manager}!Server\-Warehouse@{Server\-Warehouse}}
+\index{Server\-Warehouse@{Server\-Warehouse}!apollo::cyber::service_discovery::ServiceManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Service\-Manager}}
+\subsubsection[{Server\-Warehouse}]{\setlength{\rightskip}{0pt plus 5cm}using {\bf apollo\-::cyber\-::service\-\_\-discovery\-::\-Service\-Manager\-::\-Server\-Warehouse} =  {\bf Single\-Value\-Warehouse}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1ServiceManager_a23a901a01fc5e61a4f6cc9aaac84dd24}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1ServiceManager_aa4ccadb8e7aace23d6c02031f460a90d}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Service\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Service\-Manager}!Service\-Manager@{Service\-Manager}}
+\index{Service\-Manager@{Service\-Manager}!apollo::cyber::service_discovery::ServiceManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Service\-Manager}}
+\subsubsection[{Service\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::service\-\_\-discovery\-::\-Service\-Manager\-::\-Service\-Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1service__discovery_1_1ServiceManager_aa4ccadb8e7aace23d6c02031f460a90d}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1ServiceManager_a658db5d81844d87269d285ef2fb364fe}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Service\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Service\-Manager}!$\sim$\-Service\-Manager@{$\sim$\-Service\-Manager}}
+\index{$\sim$\-Service\-Manager@{$\sim$\-Service\-Manager}!apollo::cyber::service_discovery::ServiceManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Service\-Manager}}
+\subsubsection[{$\sim$\-Service\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}virtual apollo\-::cyber\-::service\-\_\-discovery\-::\-Service\-Manager\-::$\sim$\-Service\-Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1ServiceManager_a658db5d81844d87269d285ef2fb364fe}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1ServiceManager_aba4d8350c1f20a9b07084a714fe87428}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Service\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Service\-Manager}!Check@{Check}}
+\index{Check@{Check}!apollo::cyber::service_discovery::ServiceManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Service\-Manager}}
+\subsubsection[{Check}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::service\-\_\-discovery\-::\-Service\-Manager\-::\-Check (
+\begin{DoxyParamCaption}
+\item[{const Role\-Attributes \&}]{attr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1ServiceManager_aba4d8350c1f20a9b07084a714fe87428}
+
+
+Implements \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1Manager_acfa0224581a6722daf4861f34e4c11ef}{apollo\-::cyber\-::service\-\_\-discovery\-::\-Manager}.
+
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1ServiceManager_a8a1117b41cc2e7f5620ad62639fb0fe8}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Service\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Service\-Manager}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!apollo::cyber::service_discovery::ServiceManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Service\-Manager}}
+\subsubsection[{Dispose}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::service\-\_\-discovery\-::\-Service\-Manager\-::\-Dispose (
+\begin{DoxyParamCaption}
+\item[{const Change\-Msg \&}]{msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1ServiceManager_a8a1117b41cc2e7f5620ad62639fb0fe8}
+
+
+Implements \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1Manager_a6e36e4095291597364ce4b37ee1c897b}{apollo\-::cyber\-::service\-\_\-discovery\-::\-Manager}.
+
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1ServiceManager_a42cbaad2583152fd8e75f3c26580ea9e}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Service\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Service\-Manager}!Dispose\-Join@{Dispose\-Join}}
+\index{Dispose\-Join@{Dispose\-Join}!apollo::cyber::service_discovery::ServiceManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Service\-Manager}}
+\subsubsection[{Dispose\-Join}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::service\-\_\-discovery\-::\-Service\-Manager\-::\-Dispose\-Join (
+\begin{DoxyParamCaption}
+\item[{const Change\-Msg \&}]{msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1ServiceManager_a42cbaad2583152fd8e75f3c26580ea9e}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1ServiceManager_ad3b28db1ef69252f7de78392d6d3d74d}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Service\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Service\-Manager}!Dispose\-Leave@{Dispose\-Leave}}
+\index{Dispose\-Leave@{Dispose\-Leave}!apollo::cyber::service_discovery::ServiceManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Service\-Manager}}
+\subsubsection[{Dispose\-Leave}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::service\-\_\-discovery\-::\-Service\-Manager\-::\-Dispose\-Leave (
+\begin{DoxyParamCaption}
+\item[{const Change\-Msg \&}]{msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1ServiceManager_ad3b28db1ef69252f7de78392d6d3d74d}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1ServiceManager_a97196cc509625f9fd5376043f4381bb3}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Service\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Service\-Manager}!Get\-Clients@{Get\-Clients}}
+\index{Get\-Clients@{Get\-Clients}!apollo::cyber::service_discovery::ServiceManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Service\-Manager}}
+\subsubsection[{Get\-Clients}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::service\-\_\-discovery\-::\-Service\-Manager\-::\-Get\-Clients (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{service\-\_\-name, }
+\item[{{\bf Role\-Attr\-Vec} $\ast$}]{clients}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1service__discovery_1_1ServiceManager_a97196cc509625f9fd5376043f4381bb3}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1ServiceManager_af38ca75ea50d5e1bdd40b4cbb6c5f7d1}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Service\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Service\-Manager}!Get\-Servers@{Get\-Servers}}
+\index{Get\-Servers@{Get\-Servers}!apollo::cyber::service_discovery::ServiceManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Service\-Manager}}
+\subsubsection[{Get\-Servers}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::service\-\_\-discovery\-::\-Service\-Manager\-::\-Get\-Servers (
+\begin{DoxyParamCaption}
+\item[{{\bf Role\-Attr\-Vec} $\ast$}]{servers}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1service__discovery_1_1ServiceManager_af38ca75ea50d5e1bdd40b4cbb6c5f7d1}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1ServiceManager_a12024c4c93e51ad067f94bdc0591a8c3}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Service\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Service\-Manager}!Has\-Service@{Has\-Service}}
+\index{Has\-Service@{Has\-Service}!apollo::cyber::service_discovery::ServiceManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Service\-Manager}}
+\subsubsection[{Has\-Service}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::service\-\_\-discovery\-::\-Service\-Manager\-::\-Has\-Service (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{service\-\_\-name}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1service__discovery_1_1ServiceManager_a12024c4c93e51ad067f94bdc0591a8c3}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1ServiceManager_a1b154f0679b49c2ee378f8d7e591b222}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Service\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Service\-Manager}!On\-Topo\-Module\-Leave@{On\-Topo\-Module\-Leave}}
+\index{On\-Topo\-Module\-Leave@{On\-Topo\-Module\-Leave}!apollo::cyber::service_discovery::ServiceManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Service\-Manager}}
+\subsubsection[{On\-Topo\-Module\-Leave}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::service\-\_\-discovery\-::\-Service\-Manager\-::\-On\-Topo\-Module\-Leave (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{host\-\_\-name, }
+\item[{int}]{process\-\_\-id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1ServiceManager_a1b154f0679b49c2ee378f8d7e591b222}
+
+
+Implements \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1Manager_a95a679e0fc7904e6f1a8b2fdd139cc03}{apollo\-::cyber\-::service\-\_\-discovery\-::\-Manager}.
+
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1ServiceManager_ae83aaddaeb682129a07c148e01291cdd}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Service\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Service\-Manager}!Topology\-Manager@{Topology\-Manager}}
+\index{Topology\-Manager@{Topology\-Manager}!apollo::cyber::service_discovery::ServiceManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Service\-Manager}}
+\subsubsection[{Topology\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Topology\-Manager}\hspace{0.3cm}{\ttfamily [friend]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1ServiceManager_ae83aaddaeb682129a07c148e01291cdd}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1ServiceManager_ae2d14ffd418fd7a75576eca529b9b277}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Service\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Service\-Manager}!clients\-\_\-@{clients\-\_\-}}
+\index{clients\-\_\-@{clients\-\_\-}!apollo::cyber::service_discovery::ServiceManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Service\-Manager}}
+\subsubsection[{clients\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Client\-Warehouse} apollo\-::cyber\-::service\-\_\-discovery\-::\-Service\-Manager\-::clients\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1ServiceManager_ae2d14ffd418fd7a75576eca529b9b277}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1ServiceManager_ac27c445960f7199217715a38325c490d}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Service\-Manager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Service\-Manager}!servers\-\_\-@{servers\-\_\-}}
+\index{servers\-\_\-@{servers\-\_\-}!apollo::cyber::service_discovery::ServiceManager@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Service\-Manager}}
+\subsubsection[{servers\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Server\-Warehouse} apollo\-::cyber\-::service\-\_\-discovery\-::\-Service\-Manager\-::servers\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1ServiceManager_ac27c445960f7199217715a38325c490d}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+service\-\_\-discovery/specific\-\_\-manager/\hyperlink{service__manager_8h}{service\-\_\-manager.\-h}\end{DoxyCompactItemize}

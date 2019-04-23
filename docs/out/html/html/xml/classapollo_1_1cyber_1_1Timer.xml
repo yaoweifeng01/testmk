@@ -1,0 +1,296 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classapollo_1_1cyber_1_1Timer" kind="class" prot="public">
+    <compoundname>apollo::cyber::Timer</compoundname>
+    <includes refid="timer_8h" local="no">timer.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1Timer_1ac72f9500a21b1f8011de877da8840d9f" prot="private" static="no" mutable="no">
+        <type><ref refid="structapollo_1_1cyber_1_1TimerOption" kindref="compound">TimerOption</ref></type>
+        <definition>TimerOption apollo::cyber::Timer::timer_opt_</definition>
+        <argsstring></argsstring>
+        <name>timer_opt_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/timer/timer.h" line="77" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/timer/timer.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1Timer_1a005fea5fb48bdee66ef0032d47f79714" prot="private" static="no" mutable="no">
+        <type><ref refid="classapollo_1_1cyber_1_1TimerManager" kindref="compound">TimerManager</ref> *</type>
+        <definition>TimerManager* apollo::cyber::Timer::tm_</definition>
+        <argsstring></argsstring>
+        <name>tm_</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/timer/timer.h" line="78" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/timer/timer.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1Timer_1acd0cde31c5d7213a99bb688b0d06ee66" prot="private" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t apollo::cyber::Timer::timer_id_</definition>
+        <argsstring></argsstring>
+        <name>timer_id_</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/timer/timer.h" line="79" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/timer/timer.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1Timer_1abd2d33f780bda0a1f1fa36e52deb26ef" prot="private" static="no" mutable="no">
+        <type>std::atomic&lt; bool &gt;</type>
+        <definition>std::atomic&lt;bool&gt; apollo::cyber::Timer::started_</definition>
+        <argsstring></argsstring>
+        <name>started_</name>
+        <initializer>= {false}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/timer/timer.h" line="80" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/timer/timer.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1Timer_1a433f8bd6376d0a3d8cac529998052f6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::Timer::Timer</definition>
+        <argsstring>()</argsstring>
+        <name>Timer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/timer/timer.h" line="37" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1Timer_1afdd6c9fe9bb5b5d48d4061e82197daae" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::Timer::Timer</definition>
+        <argsstring>(TimerOption opt)</argsstring>
+        <name>Timer</name>
+        <param>
+          <type><ref refid="structapollo_1_1cyber_1_1TimerOption" kindref="compound">TimerOption</ref></type>
+          <declname>opt</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="classapollo_1_1cyber_1_1Timer" kindref="compound">Timer</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>opt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classapollo_1_1cyber_1_1Timer" kindref="compound">Timer</ref> option </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/timer/timer.h" line="44" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1Timer_1a1c3d651afac72fe0370485dcb07c13e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::Timer::Timer</definition>
+        <argsstring>(uint32_t period, std::function&lt; void()&gt; callback, bool oneshot)</argsstring>
+        <name>Timer</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>period</declname>
+        </param>
+        <param>
+          <type>std::function&lt; void()&gt;</type>
+          <declname>callback</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>oneshot</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="classapollo_1_1cyber_1_1Timer" kindref="compound">Timer</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>period</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The period of the timer, unit is ms </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>callback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The tasks that the timer needs to perform </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>oneshot</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True: perform the callback only after the first timing cycle False: perform the callback every timed period </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/timer/timer.h" line="54" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1Timer_1a31c3aa1ad7acc8a20afb1ef6839b1b0c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::Timer::~Timer</definition>
+        <argsstring>()</argsstring>
+        <name>~Timer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/timer/timer.h" line="55" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1Timer_1aa56aad6720943db62e3d59475d400b24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::Timer::SetTimerOption</definition>
+        <argsstring>(TimerOption opt)</argsstring>
+        <name>SetTimerOption</name>
+        <param>
+          <type><ref refid="structapollo_1_1cyber_1_1TimerOption" kindref="compound">TimerOption</ref></type>
+          <declname>opt</declname>
+        </param>
+        <briefdescription>
+<para>Set the <ref refid="classapollo_1_1cyber_1_1Timer" kindref="compound">Timer</ref> Option object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>opt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The timer option will be set </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/timer/timer.h" line="62" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1Timer_1acfee595a5b142ce443e1b37427e2efc5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::Timer::Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <briefdescription>
+<para>Start the timer. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/timer/timer.h" line="68" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1Timer_1a350a69e04b943f960ca992de21b676cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::Timer::Stop</definition>
+        <argsstring>()</argsstring>
+        <name>Stop</name>
+        <briefdescription>
+<para>Stop the timer. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/timer/timer.h" line="74" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="927">
+        <label>apollo::cyber::Duration</label>
+        <link refid="classapollo_1_1cyber_1_1Duration"/>
+      </node>
+      <node id="923">
+        <label>apollo::cyber::base::BoundedQueue&lt; std::shared_ptr&lt; apollo::cyber::TimerTask &gt; &gt;</label>
+        <link refid="classapollo_1_1cyber_1_1base_1_1BoundedQueue"/>
+      </node>
+      <node id="919">
+        <label>apollo::cyber::Timer</label>
+        <link refid="classapollo_1_1cyber_1_1Timer"/>
+        <childnode refid="920" relation="usage">
+          <edgelabel>timer_opt_</edgelabel>
+        </childnode>
+        <childnode refid="921" relation="usage">
+          <edgelabel>tm_</edgelabel>
+        </childnode>
+      </node>
+      <node id="922">
+        <label>apollo::cyber::TimingWheel</label>
+        <link refid="classapollo_1_1cyber_1_1TimingWheel"/>
+        <childnode refid="923" relation="usage">
+          <edgelabel>repeat_queue_</edgelabel>
+          <edgelabel>add_queue_</edgelabel>
+        </childnode>
+        <childnode refid="924" relation="usage">
+          <edgelabel>handler_queue_</edgelabel>
+        </childnode>
+        <childnode refid="926" relation="usage">
+          <edgelabel>time_slots_</edgelabel>
+        </childnode>
+      </node>
+      <node id="921">
+        <label>apollo::cyber::TimerManager</label>
+        <link refid="classapollo_1_1cyber_1_1TimerManager"/>
+        <childnode refid="922" relation="usage">
+          <edgelabel>timing_wheel_</edgelabel>
+        </childnode>
+        <childnode refid="927" relation="usage">
+          <edgelabel>time_gran_</edgelabel>
+        </childnode>
+      </node>
+      <node id="925">
+        <label>apollo::cyber::HandlePackage</label>
+        <link refid="structapollo_1_1cyber_1_1HandlePackage"/>
+      </node>
+      <node id="920">
+        <label>apollo::cyber::TimerOption</label>
+        <link refid="structapollo_1_1cyber_1_1TimerOption"/>
+      </node>
+      <node id="924">
+        <label>apollo::cyber::base::BoundedQueue&lt; apollo::cyber::HandlePackage &gt;</label>
+        <link refid="classapollo_1_1cyber_1_1base_1_1BoundedQueue"/>
+        <childnode refid="925" relation="usage">
+          <edgelabel>pool_</edgelabel>
+        </childnode>
+      </node>
+      <node id="926">
+        <label>apollo::cyber::TimingSlot</label>
+        <link refid="classapollo_1_1cyber_1_1TimingSlot"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/work/apollo-fork/apollo/cyber/timer/timer.h" line="35" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/timer/timer.h" bodystart="35" bodyend="81"/>
+    <listofallmembers>
+      <member refid="classapollo_1_1cyber_1_1Timer_1aa56aad6720943db62e3d59475d400b24" prot="public" virt="non-virtual"><scope>apollo::cyber::Timer</scope><name>SetTimerOption</name></member>
+      <member refid="classapollo_1_1cyber_1_1Timer_1acfee595a5b142ce443e1b37427e2efc5" prot="public" virt="non-virtual"><scope>apollo::cyber::Timer</scope><name>Start</name></member>
+      <member refid="classapollo_1_1cyber_1_1Timer_1abd2d33f780bda0a1f1fa36e52deb26ef" prot="private" virt="non-virtual"><scope>apollo::cyber::Timer</scope><name>started_</name></member>
+      <member refid="classapollo_1_1cyber_1_1Timer_1a350a69e04b943f960ca992de21b676cf" prot="public" virt="non-virtual"><scope>apollo::cyber::Timer</scope><name>Stop</name></member>
+      <member refid="classapollo_1_1cyber_1_1Timer_1a433f8bd6376d0a3d8cac529998052f6e" prot="public" virt="non-virtual"><scope>apollo::cyber::Timer</scope><name>Timer</name></member>
+      <member refid="classapollo_1_1cyber_1_1Timer_1afdd6c9fe9bb5b5d48d4061e82197daae" prot="public" virt="non-virtual"><scope>apollo::cyber::Timer</scope><name>Timer</name></member>
+      <member refid="classapollo_1_1cyber_1_1Timer_1a1c3d651afac72fe0370485dcb07c13e6" prot="public" virt="non-virtual"><scope>apollo::cyber::Timer</scope><name>Timer</name></member>
+      <member refid="classapollo_1_1cyber_1_1Timer_1acd0cde31c5d7213a99bb688b0d06ee66" prot="private" virt="non-virtual"><scope>apollo::cyber::Timer</scope><name>timer_id_</name></member>
+      <member refid="classapollo_1_1cyber_1_1Timer_1ac72f9500a21b1f8011de877da8840d9f" prot="private" virt="non-virtual"><scope>apollo::cyber::Timer</scope><name>timer_opt_</name></member>
+      <member refid="classapollo_1_1cyber_1_1Timer_1a005fea5fb48bdee66ef0032d47f79714" prot="private" virt="non-virtual"><scope>apollo::cyber::Timer</scope><name>tm_</name></member>
+      <member refid="classapollo_1_1cyber_1_1Timer_1a31c3aa1ad7acc8a20afb1ef6839b1b0c" prot="public" virt="non-virtual"><scope>apollo::cyber::Timer</scope><name>~Timer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

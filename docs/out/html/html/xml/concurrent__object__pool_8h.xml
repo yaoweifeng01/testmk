@@ -1,0 +1,249 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="concurrent__object__pool_8h" kind="file">
+    <compoundname>concurrent_object_pool.h</compoundname>
+    <includes local="no">atomic</includes>
+    <includes local="no">cstdlib</includes>
+    <includes local="no">cstring</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">memory</includes>
+    <includes local="no">stdexcept</includes>
+    <includes local="no">utility</includes>
+    <includes refid="for__each_8h" local="yes">cyber/base/for_each.h</includes>
+    <includes refid="base_2macros_8h" local="yes">cyber/base/macros.h</includes>
+    <incdepgraph>
+      <node id="238">
+        <label>atomic</label>
+      </node>
+      <node id="243">
+        <label>stdexcept</label>
+      </node>
+      <node id="248">
+        <label>new</label>
+      </node>
+      <node id="244">
+        <label>utility</label>
+      </node>
+      <node id="239">
+        <label>cstdlib</label>
+      </node>
+      <node id="241">
+        <label>iostream</label>
+      </node>
+      <node id="245">
+        <label>cyber/base/for_each.h</label>
+        <link refid="for__each_8h"/>
+        <childnode refid="246" relation="include">
+        </childnode>
+        <childnode refid="247" relation="include">
+        </childnode>
+      </node>
+      <node id="246">
+        <label>type_traits</label>
+      </node>
+      <node id="240">
+        <label>cstring</label>
+      </node>
+      <node id="237">
+        <label>base/concurrent_object_pool.h</label>
+        <link refid="concurrent_object_pool.h"/>
+        <childnode refid="238" relation="include">
+        </childnode>
+        <childnode refid="239" relation="include">
+        </childnode>
+        <childnode refid="240" relation="include">
+        </childnode>
+        <childnode refid="241" relation="include">
+        </childnode>
+        <childnode refid="242" relation="include">
+        </childnode>
+        <childnode refid="243" relation="include">
+        </childnode>
+        <childnode refid="244" relation="include">
+        </childnode>
+        <childnode refid="245" relation="include">
+        </childnode>
+        <childnode refid="247" relation="include">
+        </childnode>
+      </node>
+      <node id="247">
+        <label>cyber/base/macros.h</label>
+        <link refid="base_2macros_8h"/>
+        <childnode refid="239" relation="include">
+        </childnode>
+        <childnode refid="248" relation="include">
+        </childnode>
+      </node>
+      <node id="242">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classapollo_1_1cyber_1_1base_1_1CCObjectPool" prot="public">apollo::cyber::base::CCObjectPool</innerclass>
+    <innerclass refid="structapollo_1_1cyber_1_1base_1_1CCObjectPool_1_1Node" prot="private">apollo::cyber::base::CCObjectPool::Node</innerclass>
+    <innerclass refid="structapollo_1_1cyber_1_1base_1_1CCObjectPool_1_1Head" prot="private">apollo::cyber::base::CCObjectPool::Head</innerclass>
+    <innernamespace refid="namespaceapollo">apollo</innernamespace>
+    <innernamespace refid="namespaceapollo_1_1cyber">apollo::cyber</innernamespace>
+    <innernamespace refid="namespaceapollo_1_1cyber_1_1base">apollo::cyber::base</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2018<sp/>The<sp/>Apollo<sp/>Authors.<sp/>All<sp/>Rights<sp/>Reserved.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CYBER_BASE_CONCURRENT_OBJECT_POOL_H_</highlight></codeline>
+<codeline lineno="18"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CYBER_BASE_CONCURRENT_OBJECT_POOL_H_</highlight></codeline>
+<codeline lineno="19"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;atomic&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdlib&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstring&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdexcept&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;utility&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="for__each_8h" kindref="compound">cyber/base/for_each.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="base_2macros_8h" kindref="compound">cyber/base/macros.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">apollo<sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">cyber<sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">base<sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="36" refid="classapollo_1_1cyber_1_1base_1_1CCObjectPool" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classapollo_1_1cyber_1_1base_1_1CCObjectPool" kindref="compound">CCObjectPool</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>std::enable_shared_from_this&lt;CCObjectPool&lt;T&gt;&gt;<sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1CCObjectPool_1aef6bb40c0a7105fcafa6f36eec1990f1" kindref="member">CCObjectPool</ref>(uint32_t<sp/><ref refid="classapollo_1_1cyber_1_1base_1_1CCObjectPool_1a60a5ad05a90e7c32542454162b46b2cc" kindref="member">size</ref>);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1CCObjectPool_1a66e73519d6e04f2575f474132677cd65" kindref="member">~CCObjectPool</ref>();</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>Args&gt;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1CCObjectPool_1ab92a199f84762cd01e980c960c8d0990" kindref="member">ConstructAll</ref>(Args<sp/>&amp;&amp;...<sp/>args);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>Args&gt;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;T&gt;<sp/><ref refid="classapollo_1_1cyber_1_1base_1_1CCObjectPool_1aa0be7adc9df9571d064f0d0f85c99398" kindref="member">ConstructObject</ref>(Args<sp/>&amp;&amp;...<sp/>args);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;T&gt;<sp/><ref refid="classapollo_1_1cyber_1_1base_1_1CCObjectPool_1a2185323d56b9150be49dd891fa9823bd" kindref="member">GetObject</ref>();</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1CCObjectPool_1a32587174920cbf5b3ff400bb2870b49d" kindref="member">ReleaseObject</ref>(T<sp/>*);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/>uint32_t<sp/><ref refid="classapollo_1_1cyber_1_1base_1_1CCObjectPool_1a60a5ad05a90e7c32542454162b46b2cc" kindref="member">size</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="52" refid="structapollo_1_1cyber_1_1base_1_1CCObjectPool_1_1Node" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structapollo_1_1cyber_1_1base_1_1CCObjectPool_1_1Node" kindref="compound">Node</ref><sp/>{</highlight></codeline>
+<codeline lineno="53" refid="structapollo_1_1cyber_1_1base_1_1CCObjectPool_1_1Node_1a1a77b93787b4f6a76e3af7e59c48d331" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>T<sp/><ref refid="structapollo_1_1cyber_1_1base_1_1CCObjectPool_1_1Node_1a1a77b93787b4f6a76e3af7e59c48d331" kindref="member">object</ref>;</highlight></codeline>
+<codeline lineno="54" refid="structapollo_1_1cyber_1_1base_1_1CCObjectPool_1_1Node_1ab9cffe2cbaba864c115a0ee01572f4d6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structapollo_1_1cyber_1_1base_1_1CCObjectPool_1_1Node" kindref="compound">Node</ref><sp/>*<ref refid="structapollo_1_1cyber_1_1base_1_1CCObjectPool_1_1Node_1ab9cffe2cbaba864c115a0ee01572f4d6" kindref="member">next</ref>;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="structapollo_1_1cyber_1_1base_1_1CCObjectPool_1_1Head" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="keyword">alignas</highlight><highlight class="normal">(2<sp/>*<sp/>sizeof(Node<sp/>*))<sp/><ref refid="structapollo_1_1cyber_1_1base_1_1CCObjectPool_1_1Head" kindref="compound">Head</ref><sp/>{</highlight></codeline>
+<codeline lineno="58" refid="structapollo_1_1cyber_1_1base_1_1CCObjectPool_1_1Head_1a634e0d4acbff58d1f9484f90eccfc56a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uintptr_t<sp/><ref refid="structapollo_1_1cyber_1_1base_1_1CCObjectPool_1_1Head_1a634e0d4acbff58d1f9484f90eccfc56a" kindref="member">count</ref>;</highlight></codeline>
+<codeline lineno="59" refid="structapollo_1_1cyber_1_1base_1_1CCObjectPool_1_1Head_1a069db95d820e82efff968314caf2b737" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structapollo_1_1cyber_1_1base_1_1CCObjectPool_1_1Node" kindref="compound">Node</ref><sp/>*<ref refid="structapollo_1_1cyber_1_1base_1_1CCObjectPool_1_1Head_1a069db95d820e82efff968314caf2b737" kindref="member">node</ref>;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1CCObjectPool_1aef6bb40c0a7105fcafa6f36eec1990f1" kindref="member">CCObjectPool</ref>(<ref refid="classapollo_1_1cyber_1_1base_1_1CCObjectPool" kindref="compound">CCObjectPool</ref><sp/>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1CCObjectPool" kindref="compound">CCObjectPool</ref><sp/>&amp;<ref refid="classapollo_1_1cyber_1_1base_1_1CCObjectPool_1ac870b2539ea47c8ae31fc27c4e3bc8d8" kindref="member">operator=</ref>(<ref refid="classapollo_1_1cyber_1_1base_1_1CCObjectPool" kindref="compound">CCObjectPool</ref><sp/>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1CCObjectPool_1acbaa170bbe0171d605f3f640626685ba" kindref="member">FindFreeHead</ref>(<ref refid="structapollo_1_1cyber_1_1base_1_1CCObjectPool_1_1Head" kindref="compound">Head</ref><sp/>*head);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="classapollo_1_1cyber_1_1base_1_1CCObjectPool_1a40fd41481676d2e6ddac5d3237e7f234" refkind="member"><highlight class="normal"><sp/><sp/>std::atomic&lt;Head&gt;<sp/><ref refid="classapollo_1_1cyber_1_1base_1_1CCObjectPool_1a40fd41481676d2e6ddac5d3237e7f234" kindref="member">free_head_</ref>;</highlight></codeline>
+<codeline lineno="68" refid="classapollo_1_1cyber_1_1base_1_1CCObjectPool_1ad5fdd44b05eac5aa18d54fdec5928dfb" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structapollo_1_1cyber_1_1base_1_1CCObjectPool_1_1Node" kindref="compound">Node</ref><sp/>*<ref refid="classapollo_1_1cyber_1_1base_1_1CCObjectPool_1ad5fdd44b05eac5aa18d54fdec5928dfb" kindref="member">node_arena_</ref><sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="69" refid="classapollo_1_1cyber_1_1base_1_1CCObjectPool_1a3aaed740b510502df0ac4190b8e1734f" refkind="member"><highlight class="normal"><sp/><sp/>uint32_t<sp/><ref refid="classapollo_1_1cyber_1_1base_1_1CCObjectPool_1a3aaed740b510502df0ac4190b8e1734f" kindref="member">capacity_</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="73" refid="classapollo_1_1cyber_1_1base_1_1CCObjectPool_1aef6bb40c0a7105fcafa6f36eec1990f1" refkind="member"><highlight class="normal"><ref refid="classapollo_1_1cyber_1_1base_1_1CCObjectPool_1aef6bb40c0a7105fcafa6f36eec1990f1" kindref="member">CCObjectPool&lt;T&gt;::CCObjectPool</ref>(uint32_t<sp/>size)<sp/>:<sp/>capacity_(size)<sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1CCObjectPool_1ad5fdd44b05eac5aa18d54fdec5928dfb" kindref="member">node_arena_</ref><sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal"><ref refid="structapollo_1_1cyber_1_1base_1_1CCObjectPool_1_1Node" kindref="compound">Node</ref><sp/>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="base_2macros_8h_1a0e7fc2e10b57be4534b77c0e6d4e4d93" kindref="member">CheckedCalloc</ref>(<ref refid="classapollo_1_1cyber_1_1base_1_1CCObjectPool_1a3aaed740b510502df0ac4190b8e1734f" kindref="member">capacity_</ref>,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structapollo_1_1cyber_1_1base_1_1CCObjectPool_1_1Node" kindref="compound">Node</ref>)));</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><ref refid="for__each_8h_1aa34cc41b14223834b057cbfd0f2a67db" kindref="member">FOR_EACH</ref>(i,<sp/>0,<sp/><ref refid="classapollo_1_1cyber_1_1base_1_1CCObjectPool_1a3aaed740b510502df0ac4190b8e1734f" kindref="member">capacity_</ref><sp/>-<sp/>1)<sp/>{<sp/><ref refid="classapollo_1_1cyber_1_1base_1_1CCObjectPool_1ad5fdd44b05eac5aa18d54fdec5928dfb" kindref="member">node_arena_</ref>[i].<ref refid="structapollo_1_1cyber_1_1base_1_1CCObjectPool_1_1Node_1ab9cffe2cbaba864c115a0ee01572f4d6" kindref="member">next</ref><sp/>=<sp/><ref refid="classapollo_1_1cyber_1_1base_1_1CCObjectPool_1ad5fdd44b05eac5aa18d54fdec5928dfb" kindref="member">node_arena_</ref><sp/>+<sp/>1<sp/>+<sp/>i;<sp/>}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1CCObjectPool_1ad5fdd44b05eac5aa18d54fdec5928dfb" kindref="member">node_arena_</ref>[<ref refid="classapollo_1_1cyber_1_1base_1_1CCObjectPool_1a3aaed740b510502df0ac4190b8e1734f" kindref="member">capacity_</ref><sp/>-<sp/>1].<ref refid="structapollo_1_1cyber_1_1base_1_1CCObjectPool_1_1Node_1ab9cffe2cbaba864c115a0ee01572f4d6" kindref="member">next</ref><sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1CCObjectPool_1a40fd41481676d2e6ddac5d3237e7f234" kindref="member">free_head_</ref>.store({0,<sp/><ref refid="classapollo_1_1cyber_1_1base_1_1CCObjectPool_1ad5fdd44b05eac5aa18d54fdec5928dfb" kindref="member">node_arena_</ref>},<sp/>std::memory_order_relaxed);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>Args&gt;</highlight></codeline>
+<codeline lineno="82" refid="classapollo_1_1cyber_1_1base_1_1CCObjectPool_1ab92a199f84762cd01e980c960c8d0990" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1CCObjectPool_1ab92a199f84762cd01e980c960c8d0990" kindref="member">CCObjectPool&lt;T&gt;::ConstructAll</ref>(Args<sp/>&amp;&amp;...<sp/>args)<sp/>{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><ref refid="for__each_8h_1aa34cc41b14223834b057cbfd0f2a67db" kindref="member">FOR_EACH</ref>(i,<sp/>0,<sp/>capacity_)<sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>(node_arena_<sp/>+<sp/>i)<sp/>T(std::forward&lt;Args&gt;(args)...);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="89" refid="classapollo_1_1cyber_1_1base_1_1CCObjectPool_1a66e73519d6e04f2575f474132677cd65" refkind="member"><highlight class="normal"><ref refid="classapollo_1_1cyber_1_1base_1_1CCObjectPool_1a66e73519d6e04f2575f474132677cd65" kindref="member">CCObjectPool&lt;T&gt;::~CCObjectPool</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/>std::free(node_arena_);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="94" refid="classapollo_1_1cyber_1_1base_1_1CCObjectPool_1acbaa170bbe0171d605f3f640626685ba" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1CCObjectPool_1acbaa170bbe0171d605f3f640626685ba" kindref="member">CCObjectPool&lt;T&gt;::FindFreeHead</ref>(<ref refid="structapollo_1_1cyber_1_1base_1_1CCObjectPool_1_1Head" kindref="compound">Head</ref><sp/>*head)<sp/>{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><ref refid="structapollo_1_1cyber_1_1base_1_1CCObjectPool_1_1Head" kindref="compound">Head</ref><sp/>new_head;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><ref refid="structapollo_1_1cyber_1_1base_1_1CCObjectPool_1_1Head" kindref="compound">Head</ref><sp/>old_head<sp/>=<sp/>free_head_.load(std::memory_order_acquire);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="base_2macros_8h_1ac6c45889010c1bd68631771b64f18101" kindref="member">unlikely</ref>(old_head.<ref refid="structapollo_1_1cyber_1_1base_1_1CCObjectPool_1_1Head_1a069db95d820e82efff968314caf2b737" kindref="member">node</ref><sp/>==<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>new_head.<ref refid="structapollo_1_1cyber_1_1base_1_1CCObjectPool_1_1Head_1a069db95d820e82efff968314caf2b737" kindref="member">node</ref><sp/>=<sp/>old_head.<ref refid="structapollo_1_1cyber_1_1base_1_1CCObjectPool_1_1Head_1a069db95d820e82efff968314caf2b737" kindref="member">node</ref>-&gt;<ref refid="structapollo_1_1cyber_1_1base_1_1CCObjectPool_1_1Node_1ab9cffe2cbaba864c115a0ee01572f4d6" kindref="member">next</ref>;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>new_head.<ref refid="structapollo_1_1cyber_1_1base_1_1CCObjectPool_1_1Head_1a634e0d4acbff58d1f9484f90eccfc56a" kindref="member">count</ref><sp/>=<sp/>old_head.<ref refid="structapollo_1_1cyber_1_1base_1_1CCObjectPool_1_1Head_1a634e0d4acbff58d1f9484f90eccfc56a" kindref="member">count</ref><sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!free_head_.compare_exchange_weak(old_head,<sp/>new_head,</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::memory_order_acq_rel,</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::memory_order_acquire));</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/>*head<sp/>=<sp/>old_head;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="111" refid="classapollo_1_1cyber_1_1base_1_1CCObjectPool_1a2185323d56b9150be49dd891fa9823bd" refkind="member"><highlight class="normal">std::shared_ptr&lt;T&gt;<sp/><ref refid="classapollo_1_1cyber_1_1base_1_1CCObjectPool_1a2185323d56b9150be49dd891fa9823bd" kindref="member">CCObjectPool&lt;T&gt;::GetObject</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><ref refid="structapollo_1_1cyber_1_1base_1_1CCObjectPool_1_1Head" kindref="compound">Head</ref><sp/>free_head;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="base_2macros_8h_1ac6c45889010c1bd68631771b64f18101" kindref="member">unlikely</ref>(!FindFreeHead(&amp;free_head)))<sp/>{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>=<sp/>this-&gt;shared_from_this();</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;T&gt;(</highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="normal">T<sp/>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(free_head.<ref refid="structapollo_1_1cyber_1_1base_1_1CCObjectPool_1_1Head_1a069db95d820e82efff968314caf2b737" kindref="member">node</ref>),</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal">](T<sp/>*</highlight><highlight class="keywordtype">object</highlight><highlight class="normal">)<sp/>{<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">-&gt;ReleaseObject(</highlight><highlight class="keywordtype">object</highlight><highlight class="normal">);<sp/>});</highlight></codeline>
+<codeline lineno="119"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>Args&gt;</highlight></codeline>
+<codeline lineno="123" refid="classapollo_1_1cyber_1_1base_1_1CCObjectPool_1aa0be7adc9df9571d064f0d0f85c99398" refkind="member"><highlight class="normal">std::shared_ptr&lt;T&gt;<sp/><ref refid="classapollo_1_1cyber_1_1base_1_1CCObjectPool_1aa0be7adc9df9571d064f0d0f85c99398" kindref="member">CCObjectPool&lt;T&gt;::ConstructObject</ref>(Args<sp/>&amp;&amp;...<sp/>args)<sp/>{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><ref refid="structapollo_1_1cyber_1_1base_1_1CCObjectPool_1_1Head" kindref="compound">Head</ref><sp/>free_head;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="base_2macros_8h_1ac6c45889010c1bd68631771b64f18101" kindref="member">unlikely</ref>(!FindFreeHead(&amp;free_head)))<sp/>{</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>=<sp/>this-&gt;shared_from_this();</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/>T<sp/>*ptr<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>(free_head.<ref refid="structapollo_1_1cyber_1_1base_1_1CCObjectPool_1_1Head_1a069db95d820e82efff968314caf2b737" kindref="member">node</ref>)<sp/>T(std::forward&lt;Args&gt;(args)...);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;T&gt;(ptr,<sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal">](T<sp/>*object)<sp/>{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">object</highlight><highlight class="normal">-&gt;~T();</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">-&gt;ReleaseObject(</highlight><highlight class="keywordtype">object</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/>});</highlight></codeline>
+<codeline lineno="134"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="137" refid="classapollo_1_1cyber_1_1base_1_1CCObjectPool_1a32587174920cbf5b3ff400bb2870b49d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1base_1_1CCObjectPool_1a32587174920cbf5b3ff400bb2870b49d" kindref="member">CCObjectPool&lt;T&gt;::ReleaseObject</ref>(T<sp/>*</highlight><highlight class="keywordtype">object</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><ref refid="structapollo_1_1cyber_1_1base_1_1CCObjectPool_1_1Head" kindref="compound">Head</ref><sp/>new_head;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><ref refid="structapollo_1_1cyber_1_1base_1_1CCObjectPool_1_1Node" kindref="compound">Node</ref><sp/>*node<sp/>=<sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="normal"><ref refid="structapollo_1_1cyber_1_1base_1_1CCObjectPool_1_1Node" kindref="compound">Node</ref><sp/>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(object);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><ref refid="structapollo_1_1cyber_1_1base_1_1CCObjectPool_1_1Head" kindref="compound">Head</ref><sp/>old_head<sp/>=<sp/>free_head_.load(std::memory_order_acquire);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>node-&gt;<ref refid="structapollo_1_1cyber_1_1base_1_1CCObjectPool_1_1Node_1ab9cffe2cbaba864c115a0ee01572f4d6" kindref="member">next</ref><sp/>=<sp/>old_head.<ref refid="structapollo_1_1cyber_1_1base_1_1CCObjectPool_1_1Head_1a069db95d820e82efff968314caf2b737" kindref="member">node</ref>;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>new_head.<ref refid="structapollo_1_1cyber_1_1base_1_1CCObjectPool_1_1Head_1a069db95d820e82efff968314caf2b737" kindref="member">node</ref><sp/>=<sp/>node;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>new_head.<ref refid="structapollo_1_1cyber_1_1base_1_1CCObjectPool_1_1Head_1a634e0d4acbff58d1f9484f90eccfc56a" kindref="member">count</ref><sp/>=<sp/>old_head.<ref refid="structapollo_1_1cyber_1_1base_1_1CCObjectPool_1_1Head_1a634e0d4acbff58d1f9484f90eccfc56a" kindref="member">count</ref><sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!free_head_.compare_exchange_weak(old_head,<sp/>new_head,</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::memory_order_acq_rel,</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::memory_order_acquire));</highlight></codeline>
+<codeline lineno="148"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>base</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>cyber</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>apollo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>CYBER_BASE_CONCURRENT_OBJECT_POOL_H_</highlight></codeline>
+    </programlisting>
+    <location file="/home/work/apollo-fork/apollo/cyber/base/concurrent_object_pool.h"/>
+  </compounddef>
+</doxygen>

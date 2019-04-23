@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="log__file__object_8h" kind="file">
+    <compoundname>log_file_object.h</compoundname>
+    <includes local="no">cstdint</includes>
+    <includes local="no">mutex</includes>
+    <includes local="no">string</includes>
+    <includes local="yes">glog/logging.h</includes>
+    <incdepgraph>
+      <node id="4382">
+        <label>logger/log_file_object.h</label>
+        <link refid="log_file_object.h"/>
+        <childnode refid="4383" relation="include">
+        </childnode>
+        <childnode refid="4384" relation="include">
+        </childnode>
+        <childnode refid="4385" relation="include">
+        </childnode>
+        <childnode refid="4386" relation="include">
+        </childnode>
+      </node>
+      <node id="4386">
+        <label>glog/logging.h</label>
+      </node>
+      <node id="4383">
+        <label>cstdint</label>
+      </node>
+      <node id="4385">
+        <label>string</label>
+      </node>
+      <node id="4384">
+        <label>mutex</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject" prot="public">apollo::cyber::logger::LogFileObject</innerclass>
+    <innernamespace refid="namespaceapollo">apollo</innernamespace>
+    <innernamespace refid="namespaceapollo_1_1cyber">apollo::cyber</innernamespace>
+    <innernamespace refid="namespaceapollo_1_1cyber_1_1logger">apollo::cyber::logger</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2018<sp/>The<sp/>Apollo<sp/>Authors.<sp/>All<sp/>Rights<sp/>Reserved.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CYBER_LOGGER_LOG_FILE_OBJECT_H_</highlight></codeline>
+<codeline lineno="18"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CYBER_LOGGER_LOG_FILE_OBJECT_H_</highlight></codeline>
+<codeline lineno="19"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;mutex&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;glog/logging.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">apollo<sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">cyber<sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">logger<sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject" kindref="compound">LogFileObject</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>google::base::Logger<sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><ref refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a833a101b1328a34ff04b98c85f191721" kindref="member">LogFileObject</ref>(google::LogSeverity<sp/>severity,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>base_filename);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><ref refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a03a476423210920b568648da3f80d3f2" kindref="member">~LogFileObject</ref>();</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a9ba7a234cc8702170c305e0de970b012" kindref="member">Write</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>force_flush,<sp/>time_t<sp/>timestamp,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>message,</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>message_len)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a7757684686f25c4ad6b552eb8d2d7457" kindref="member">SetBasename</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>basename);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a5d4e55c263bd8e49b4882360cec74f78" kindref="member">SetExtension</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>ext);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1ae04342c963cd10bdc5bb2bbec192144f" kindref="member">SetSymlinkBasename</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>symlink_basename);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1ab398b6843a9302ef00b2817687d61f27" kindref="member">Flush</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>It<sp/>is<sp/>the<sp/>actual<sp/>file<sp/>length<sp/>for<sp/>the<sp/>system<sp/>loggers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a380638b75320fe715433f87d522c543d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>uint32_t<sp/><ref refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a380638b75320fe715433f87d522c543d" kindref="member">LogSize</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>std::lock_guard&lt;std::mutex&gt;<sp/>lock(<ref refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a963d7f19da516b4ef514e37c4d926761" kindref="member">lock_</ref>);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1acadfc2b256c6c7f1d06ea76e406379eb" kindref="member">file_length_</ref>;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a50388bac680858687619b981a42dc502" kindref="member">FlushUnlocked</ref>();</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1abbb5038197a577095037fac0e621a54b" kindref="member">CreateLogfile</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>time_pid_string);</highlight></codeline>
+<codeline lineno="54" refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a22a58c8d3d04ab9beaf28e5aa28601c9" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t<sp/><ref refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a22a58c8d3d04ab9beaf28e5aa28601c9" kindref="member">kRolloverAttemptFrequency</ref><sp/>=<sp/>0x20;</highlight></codeline>
+<codeline lineno="55" refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a963d7f19da516b4ef514e37c4d926761" refkind="member"><highlight class="normal"><sp/><sp/>std::mutex<sp/><ref refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a963d7f19da516b4ef514e37c4d926761" kindref="member">lock_</ref>;</highlight></codeline>
+<codeline lineno="56" refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1aaa83cf494797e8bcfaf70ba841890628" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1aaa83cf494797e8bcfaf70ba841890628" kindref="member">base_filename_selected_</ref>;</highlight></codeline>
+<codeline lineno="57" refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a2ddb3d2bcce49c4367a18eb59bdced97" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a2ddb3d2bcce49c4367a18eb59bdced97" kindref="member">base_filename_</ref>;</highlight></codeline>
+<codeline lineno="58" refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a74857bfefb3231e64de3c43c05e6609d" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a74857bfefb3231e64de3c43c05e6609d" kindref="member">base_filepath_</ref>;</highlight></codeline>
+<codeline lineno="59" refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a5eab9f067f8b03af6d6fad057e85d063" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a5eab9f067f8b03af6d6fad057e85d063" kindref="member">symlink_basename_</ref>;</highlight></codeline>
+<codeline lineno="60" refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a90ef513fcb9261914726fc5481725dcc" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a90ef513fcb9261914726fc5481725dcc" kindref="member">filename_extension_</ref>;</highlight></codeline>
+<codeline lineno="61" refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a76d70145494f68e1aa844f7013d5a7b2" refkind="member"><highlight class="normal"><sp/><sp/>FILE*<sp/><ref refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a76d70145494f68e1aa844f7013d5a7b2" kindref="member">file_</ref>;</highlight></codeline>
+<codeline lineno="62" refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a55b503945f312ba3315099707efee8c4" refkind="member"><highlight class="normal"><sp/><sp/>google::LogSeverity<sp/><ref refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a55b503945f312ba3315099707efee8c4" kindref="member">severity_</ref>;</highlight></codeline>
+<codeline lineno="63" refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a29647683fc52c6fb388f4662b5248805" refkind="member"><highlight class="normal"><sp/><sp/>uint32_t<sp/><ref refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a29647683fc52c6fb388f4662b5248805" kindref="member">bytes_since_flush_</ref>;</highlight></codeline>
+<codeline lineno="64" refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a7edba80c0f9d4b4fd4c38a775ffe8416" refkind="member"><highlight class="normal"><sp/><sp/>uint32_t<sp/><ref refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a7edba80c0f9d4b4fd4c38a775ffe8416" kindref="member">dropped_mem_length_</ref>;</highlight></codeline>
+<codeline lineno="65" refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1acadfc2b256c6c7f1d06ea76e406379eb" refkind="member"><highlight class="normal"><sp/><sp/>uint32_t<sp/><ref refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1acadfc2b256c6c7f1d06ea76e406379eb" kindref="member">file_length_</ref>;</highlight></codeline>
+<codeline lineno="66" refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a6a8883b31139aeaf0473eeaff7a71e3a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a6a8883b31139aeaf0473eeaff7a71e3a" kindref="member">rollover_attempt_</ref>;</highlight></codeline>
+<codeline lineno="67" refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a3b16662e6a2caf874be92e22ee1cb706" refkind="member"><highlight class="normal"><sp/><sp/>int64_t<sp/><ref refid="classapollo_1_1cyber_1_1logger_1_1LogFileObject_1a3b16662e6a2caf874be92e22ee1cb706" kindref="member">next_flush_time_</ref>;<sp/><sp/></highlight><highlight class="comment">//<sp/>cycle<sp/>count<sp/>of<sp/>which<sp/>to<sp/>flush<sp/>log</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>logger</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>cyber</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>apollo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>CYBER_LOGGER_LOG_FILE_OBJECT_H_</highlight></codeline>
+    </programlisting>
+    <location file="/home/work/apollo-fork/apollo/cyber/logger/log_file_object.h"/>
+  </compounddef>
+</doxygen>

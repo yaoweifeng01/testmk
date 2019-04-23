@@ -1,0 +1,133 @@
+\hypertarget{classapollo_1_1cyber_1_1scheduler_1_1SchedulerClassic}{\section{apollo\-:\-:cyber\-:\-:scheduler\-:\-:Scheduler\-Classic Class Reference}
+\label{classapollo_1_1cyber_1_1scheduler_1_1SchedulerClassic}\index{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Classic@{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Classic}}
+}
+
+
+{\ttfamily \#include $<$scheduler\-\_\-classic.\-h$>$}
+
+Inheritance diagram for apollo\-:\-:cyber\-:\-:scheduler\-:\-:Scheduler\-Classic\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classapollo_1_1cyber_1_1scheduler_1_1SchedulerClassic}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1SchedulerClassic_a36977cfac2337a44dc4eca5126f2e690}{Remove\-C\-Routine} (uint64\-\_\-t crid) override
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1SchedulerClassic_a2988b835fccbbe8bc55b08cc1d90c5a6}{Remove\-Task} (const std\-::string \&name) override
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1SchedulerClassic_a83d92042c58df50cbfe52d70dbd72e36}{Dispatch\-Task} (const std\-::shared\-\_\-ptr$<$ \hyperlink{classapollo_1_1cyber_1_1croutine_1_1CRoutine}{C\-Routine} $>$ \&) override
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1scheduler_1_1SchedulerClassic_a065fbff2c20da2d3679134a97a363b1c}{Scheduler\-Classic} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1SchedulerClassic_a5dff717e036c226ef39a50e5cc5c8b56}{Create\-Processor} ()
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1SchedulerClassic_aa6b90709d9b5cc4228a4cade6e22cada}{Notify\-Processor} (uint64\-\_\-t crid) override
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\-::unordered\-\_\-map\\*
+$<$ std\-::string, Classic\-Task $>$ \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1SchedulerClassic_ae7586c7e1b5c30cb2d8b28833bc5a3e7}{cr\-\_\-confs\-\_\-}
+\item 
+Classic\-Conf \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1SchedulerClassic_a03f2b19c90967ebc0d348d3e52912481}{classic\-\_\-conf\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1scheduler_1_1Scheduler}{Scheduler} $\ast$ \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1SchedulerClassic_a2ea2bb1f09fecdd726f87c09b726461e}{Instance} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classapollo_1_1cyber_1_1scheduler_1_1SchedulerClassic_a065fbff2c20da2d3679134a97a363b1c}{\index{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Classic@{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Classic}!Scheduler\-Classic@{Scheduler\-Classic}}
+\index{Scheduler\-Classic@{Scheduler\-Classic}!apollo::cyber::scheduler::SchedulerClassic@{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Classic}}
+\subsubsection[{Scheduler\-Classic}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::scheduler\-::\-Scheduler\-Classic\-::\-Scheduler\-Classic (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1scheduler_1_1SchedulerClassic_a065fbff2c20da2d3679134a97a363b1c}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1scheduler_1_1SchedulerClassic_a5dff717e036c226ef39a50e5cc5c8b56}{\index{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Classic@{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Classic}!Create\-Processor@{Create\-Processor}}
+\index{Create\-Processor@{Create\-Processor}!apollo::cyber::scheduler::SchedulerClassic@{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Classic}}
+\subsubsection[{Create\-Processor}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::scheduler\-::\-Scheduler\-Classic\-::\-Create\-Processor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1scheduler_1_1SchedulerClassic_a5dff717e036c226ef39a50e5cc5c8b56}
+\hypertarget{classapollo_1_1cyber_1_1scheduler_1_1SchedulerClassic_a83d92042c58df50cbfe52d70dbd72e36}{\index{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Classic@{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Classic}!Dispatch\-Task@{Dispatch\-Task}}
+\index{Dispatch\-Task@{Dispatch\-Task}!apollo::cyber::scheduler::SchedulerClassic@{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Classic}}
+\subsubsection[{Dispatch\-Task}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::scheduler\-::\-Scheduler\-Classic\-::\-Dispatch\-Task (
+\begin{DoxyParamCaption}
+\item[{const std\-::shared\-\_\-ptr$<$ {\bf C\-Routine} $>$ \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1scheduler_1_1SchedulerClassic_a83d92042c58df50cbfe52d70dbd72e36}
+
+
+Implements \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1Scheduler_a71ac4be0a8f632a931a92680eb935774}{apollo\-::cyber\-::scheduler\-::\-Scheduler}.
+
+\hypertarget{classapollo_1_1cyber_1_1scheduler_1_1SchedulerClassic_aa6b90709d9b5cc4228a4cade6e22cada}{\index{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Classic@{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Classic}!Notify\-Processor@{Notify\-Processor}}
+\index{Notify\-Processor@{Notify\-Processor}!apollo::cyber::scheduler::SchedulerClassic@{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Classic}}
+\subsubsection[{Notify\-Processor}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::scheduler\-::\-Scheduler\-Classic\-::\-Notify\-Processor (
+\begin{DoxyParamCaption}
+\item[{uint64\-\_\-t}]{crid}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1scheduler_1_1SchedulerClassic_aa6b90709d9b5cc4228a4cade6e22cada}
+
+
+Implements \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1Scheduler_abfcfe864b071e5c7d1a5a80706c11671}{apollo\-::cyber\-::scheduler\-::\-Scheduler}.
+
+\hypertarget{classapollo_1_1cyber_1_1scheduler_1_1SchedulerClassic_a36977cfac2337a44dc4eca5126f2e690}{\index{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Classic@{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Classic}!Remove\-C\-Routine@{Remove\-C\-Routine}}
+\index{Remove\-C\-Routine@{Remove\-C\-Routine}!apollo::cyber::scheduler::SchedulerClassic@{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Classic}}
+\subsubsection[{Remove\-C\-Routine}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::scheduler\-::\-Scheduler\-Classic\-::\-Remove\-C\-Routine (
+\begin{DoxyParamCaption}
+\item[{uint64\-\_\-t}]{crid}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1scheduler_1_1SchedulerClassic_a36977cfac2337a44dc4eca5126f2e690}
+
+
+Implements \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1Scheduler_aeebbc8587d53f187d46016100fb67dc5}{apollo\-::cyber\-::scheduler\-::\-Scheduler}.
+
+\hypertarget{classapollo_1_1cyber_1_1scheduler_1_1SchedulerClassic_a2988b835fccbbe8bc55b08cc1d90c5a6}{\index{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Classic@{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Classic}!Remove\-Task@{Remove\-Task}}
+\index{Remove\-Task@{Remove\-Task}!apollo::cyber::scheduler::SchedulerClassic@{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Classic}}
+\subsubsection[{Remove\-Task}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::scheduler\-::\-Scheduler\-Classic\-::\-Remove\-Task (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1scheduler_1_1SchedulerClassic_a2988b835fccbbe8bc55b08cc1d90c5a6}
+
+
+Implements \hyperlink{classapollo_1_1cyber_1_1scheduler_1_1Scheduler_ad605b692e0e776ab95a19fa2ea0229e7}{apollo\-::cyber\-::scheduler\-::\-Scheduler}.
+
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1scheduler_1_1SchedulerClassic_a2ea2bb1f09fecdd726f87c09b726461e}{\index{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Classic@{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Classic}!Instance@{Instance}}
+\index{Instance@{Instance}!apollo::cyber::scheduler::SchedulerClassic@{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Classic}}
+\subsubsection[{Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Scheduler}$\ast$ Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{classapollo_1_1cyber_1_1scheduler_1_1SchedulerClassic_a2ea2bb1f09fecdd726f87c09b726461e}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classapollo_1_1cyber_1_1scheduler_1_1SchedulerClassic_a03f2b19c90967ebc0d348d3e52912481}{\index{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Classic@{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Classic}!classic\-\_\-conf\-\_\-@{classic\-\_\-conf\-\_\-}}
+\index{classic\-\_\-conf\-\_\-@{classic\-\_\-conf\-\_\-}!apollo::cyber::scheduler::SchedulerClassic@{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Classic}}
+\subsubsection[{classic\-\_\-conf\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}Classic\-Conf apollo\-::cyber\-::scheduler\-::\-Scheduler\-Classic\-::classic\-\_\-conf\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1scheduler_1_1SchedulerClassic_a03f2b19c90967ebc0d348d3e52912481}
+\hypertarget{classapollo_1_1cyber_1_1scheduler_1_1SchedulerClassic_ae7586c7e1b5c30cb2d8b28833bc5a3e7}{\index{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Classic@{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Classic}!cr\-\_\-confs\-\_\-@{cr\-\_\-confs\-\_\-}}
+\index{cr\-\_\-confs\-\_\-@{cr\-\_\-confs\-\_\-}!apollo::cyber::scheduler::SchedulerClassic@{apollo\-::cyber\-::scheduler\-::\-Scheduler\-Classic}}
+\subsubsection[{cr\-\_\-confs\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::unordered\-\_\-map$<$std\-::string, Classic\-Task$>$ apollo\-::cyber\-::scheduler\-::\-Scheduler\-Classic\-::cr\-\_\-confs\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1scheduler_1_1SchedulerClassic_ae7586c7e1b5c30cb2d8b28833bc5a3e7}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+scheduler/policy/\hyperlink{scheduler__classic_8h}{scheduler\-\_\-classic.\-h}\end{DoxyCompactItemize}

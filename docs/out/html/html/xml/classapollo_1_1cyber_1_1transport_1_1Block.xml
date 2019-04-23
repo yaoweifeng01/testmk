@@ -1,0 +1,271 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classapollo_1_1cyber_1_1transport_1_1Block" kind="class" prot="public">
+    <compoundname>apollo::cyber::transport::Block</compoundname>
+    <includes refid="block_8h" local="no">block.h</includes>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classapollo_1_1cyber_1_1transport_1_1Block_1a3686fc7786dbff5d4f068e021ebacdca" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class Segment</definition>
+        <argsstring></argsstring>
+        <name>Segment</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/block.h" line="28" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/shm/block.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1transport_1_1Block_1a4c116708012944222d2085da107ef9e9" prot="public" static="yes" mutable="no">
+        <type>const int32_t</type>
+        <definition>const int32_t apollo::cyber::transport::Block::kRWLockFree</definition>
+        <argsstring></argsstring>
+        <name>kRWLockFree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/block.h" line="42" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/shm/block.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1transport_1_1Block_1aae8790e464c9baf1dcfbaa5e836dd3bb" prot="public" static="yes" mutable="no">
+        <type>const int32_t</type>
+        <definition>const int32_t apollo::cyber::transport::Block::kWriteExclusive</definition>
+        <argsstring></argsstring>
+        <name>kWriteExclusive</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/block.h" line="43" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/shm/block.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1transport_1_1Block_1ab6478a1a49b3f2edbfb4355d16d19ec2" prot="public" static="yes" mutable="no">
+        <type>const int32_t</type>
+        <definition>const int32_t apollo::cyber::transport::Block::kMaxTryLockTimes</definition>
+        <argsstring></argsstring>
+        <name>kMaxTryLockTimes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/block.h" line="44" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/shm/block.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1transport_1_1Block_1a8bf07ade84f828523975c578bf354021" prot="private" static="no" mutable="no">
+        <type>std::atomic&lt; int32_t &gt;</type>
+        <definition>volatile std::atomic&lt;int32_t&gt; apollo::cyber::transport::Block::lock_num_</definition>
+        <argsstring></argsstring>
+        <name>lock_num_</name>
+        <initializer>= {0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/block.h" line="52" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/shm/block.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1transport_1_1Block_1a2626f093e96f3b5697753e4b6f561507" prot="private" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t apollo::cyber::transport::Block::msg_size_</definition>
+        <argsstring></argsstring>
+        <name>msg_size_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/block.h" line="54" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/shm/block.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1transport_1_1Block_1a7ee8f352a21a677cb194ca109056a762" prot="private" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t apollo::cyber::transport::Block::msg_info_size_</definition>
+        <argsstring></argsstring>
+        <name>msg_info_size_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/block.h" line="55" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/shm/block.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1Block_1a9069d5ba3265d520033ffdccf5d42467" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::transport::Block::Block</definition>
+        <argsstring>()</argsstring>
+        <name>Block</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/block.h" line="31" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1Block_1a4bea887c31217d39b284cc606d7f62b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual apollo::cyber::transport::Block::~Block</definition>
+        <argsstring>()</argsstring>
+        <name>~Block</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/block.h" line="32" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1Block_1a94adc49b2be3c61768a567ed38578a91" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t apollo::cyber::transport::Block::msg_size</definition>
+        <argsstring>() const </argsstring>
+        <name>msg_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/block.h" line="34" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/shm/block.h" bodystart="34" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1Block_1a31948abbf6b568069943e4b3001a2b3f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::transport::Block::set_msg_size</definition>
+        <argsstring>(uint64_t msg_size)</argsstring>
+        <name>set_msg_size</name>
+        <param>
+          <type>uint64_t</type>
+          <declname>msg_size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/block.h" line="35" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/shm/block.h" bodystart="35" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1Block_1af4572d31a030678c23048cafbdaae546" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t apollo::cyber::transport::Block::msg_info_size</definition>
+        <argsstring>() const </argsstring>
+        <name>msg_info_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/block.h" line="37" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/shm/block.h" bodystart="37" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1Block_1a529dec981a8273703c565063b9d74378" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::transport::Block::set_msg_info_size</definition>
+        <argsstring>(uint64_t msg_info_size)</argsstring>
+        <name>set_msg_info_size</name>
+        <param>
+          <type>uint64_t</type>
+          <declname>msg_info_size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/block.h" line="38" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/shm/block.h" bodystart="38" bodyend="40"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1Block_1a79e0b61814fdd0ba55734d0017b06ec9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::transport::Block::TryLockForWrite</definition>
+        <argsstring>()</argsstring>
+        <name>TryLockForWrite</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/block.h" line="47" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1Block_1ad4236c6e29aad911ce47530bf8e04b5d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::transport::Block::TryLockForRead</definition>
+        <argsstring>()</argsstring>
+        <name>TryLockForRead</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/block.h" line="48" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1Block_1a65798da9b41997e646e49e32258ba6cd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::transport::Block::ReleaseWriteLock</definition>
+        <argsstring>()</argsstring>
+        <name>ReleaseWriteLock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/block.h" line="49" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1transport_1_1Block_1aacbf18bfaa062a1e9be733c8342af79b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::transport::Block::ReleaseReadLock</definition>
+        <argsstring>()</argsstring>
+        <name>ReleaseReadLock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/block.h" line="50" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/work/apollo-fork/apollo/cyber/transport/shm/block.h" line="27" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/transport/shm/block.h" bodystart="27" bodyend="56"/>
+    <listofallmembers>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Block_1a9069d5ba3265d520033ffdccf5d42467" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::Block</scope><name>Block</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Block_1ab6478a1a49b3f2edbfb4355d16d19ec2" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::Block</scope><name>kMaxTryLockTimes</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Block_1a4c116708012944222d2085da107ef9e9" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::Block</scope><name>kRWLockFree</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Block_1aae8790e464c9baf1dcfbaa5e836dd3bb" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::Block</scope><name>kWriteExclusive</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Block_1a8bf07ade84f828523975c578bf354021" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::Block</scope><name>lock_num_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Block_1af4572d31a030678c23048cafbdaae546" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::Block</scope><name>msg_info_size</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Block_1a7ee8f352a21a677cb194ca109056a762" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::Block</scope><name>msg_info_size_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Block_1a94adc49b2be3c61768a567ed38578a91" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::Block</scope><name>msg_size</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Block_1a2626f093e96f3b5697753e4b6f561507" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::Block</scope><name>msg_size_</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Block_1aacbf18bfaa062a1e9be733c8342af79b" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::Block</scope><name>ReleaseReadLock</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Block_1a65798da9b41997e646e49e32258ba6cd" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::Block</scope><name>ReleaseWriteLock</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Block_1a3686fc7786dbff5d4f068e021ebacdca" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::Block</scope><name>Segment</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Block_1a529dec981a8273703c565063b9d74378" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::Block</scope><name>set_msg_info_size</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Block_1a31948abbf6b568069943e4b3001a2b3f" prot="public" virt="non-virtual"><scope>apollo::cyber::transport::Block</scope><name>set_msg_size</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Block_1ad4236c6e29aad911ce47530bf8e04b5d" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::Block</scope><name>TryLockForRead</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Block_1a79e0b61814fdd0ba55734d0017b06ec9" prot="private" virt="non-virtual"><scope>apollo::cyber::transport::Block</scope><name>TryLockForWrite</name></member>
+      <member refid="classapollo_1_1cyber_1_1transport_1_1Block_1a4bea887c31217d39b284cc606d7f62b0" prot="public" virt="virtual"><scope>apollo::cyber::transport::Block</scope><name>~Block</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

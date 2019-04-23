@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classapollo_1_1cyber_1_1data_1_1DataNotifier" kind="class" prot="public">
+    <compoundname>apollo::cyber::data::DataNotifier</compoundname>
+    <includes refid="data__notifier_8h" local="no">data_notifier.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classapollo_1_1cyber_1_1data_1_1DataNotifier_1a32a6a858ae70632d5a6533fb1f16ed2a" prot="public" static="no">
+        <type>std::vector&lt; std::shared_ptr&lt; <ref refid="structapollo_1_1cyber_1_1data_1_1Notifier" kindref="compound">Notifier</ref> &gt;&gt;</type>
+        <definition>using apollo::cyber::data::DataNotifier::NotifyVector =  std::vector&lt;std::shared_ptr&lt;Notifier&gt;&gt;</definition>
+        <argsstring></argsstring>
+        <name>NotifyVector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/data/data_notifier.h" line="44" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/data/data_notifier.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1data_1_1DataNotifier_1a6e73bd4fadc7ed461f4077ea905e50f6" prot="private" static="no" mutable="no">
+        <type>std::mutex</type>
+        <definition>std::mutex apollo::cyber::data::DataNotifier::notifies_map_mutex_</definition>
+        <argsstring></argsstring>
+        <name>notifies_map_mutex_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/data/data_notifier.h" line="53" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/data/data_notifier.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1data_1_1DataNotifier_1acbb98cccf2b075c3c455b9bc2b16013c" prot="private" static="no" mutable="no">
+        <type><ref refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap" kindref="compound">AtomicHashMap</ref>&lt; uint64_t, <ref refid="classapollo_1_1cyber_1_1data_1_1DataNotifier_1a32a6a858ae70632d5a6533fb1f16ed2a" kindref="member">NotifyVector</ref> &gt;</type>
+        <definition>AtomicHashMap&lt;uint64_t, NotifyVector&gt; apollo::cyber::data::DataNotifier::notifies_map_</definition>
+        <argsstring></argsstring>
+        <name>notifies_map_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/data/data_notifier.h" line="54" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/data/data_notifier.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1data_1_1DataNotifier_1ae1b83ee9238a49eb78876ed5da759c8f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::data::DataNotifier::~DataNotifier</definition>
+        <argsstring>()</argsstring>
+        <name>~DataNotifier</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/data/data_notifier.h" line="45" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/data/data_notifier.h" bodystart="45" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1data_1_1DataNotifier_1a7d08646b3ac8758b2021d24bbc7dabb8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::data::DataNotifier::AddNotifier</definition>
+        <argsstring>(uint64_t channel_id, const std::shared_ptr&lt; Notifier &gt; &amp;notifier)</argsstring>
+        <name>AddNotifier</name>
+        <param>
+          <type>uint64_t</type>
+          <declname>channel_id</declname>
+        </param>
+        <param>
+          <type>const std::shared_ptr&lt; <ref refid="structapollo_1_1cyber_1_1data_1_1Notifier" kindref="compound">Notifier</ref> &gt; &amp;</type>
+          <declname>notifier</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/data/data_notifier.h" line="47" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/data/data_notifier.h" bodystart="61" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1data_1_1DataNotifier_1a28ae002832e1c7c35a26888b0b5417f9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::data::DataNotifier::Notify</definition>
+        <argsstring>(const uint64_t channel_id)</argsstring>
+        <name>Notify</name>
+        <param>
+          <type>const uint64_t</type>
+          <declname>channel_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/data/data_notifier.h" line="50" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/data/data_notifier.h" bodystart="73" bodyend="84"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="218">
+        <label>apollo::cyber::base::AtomicHashMap&lt; uint64_t, NotifyVector &gt;</label>
+        <link refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap"/>
+        <childnode refid="219" relation="usage">
+          <edgelabel>table_</edgelabel>
+        </childnode>
+      </node>
+      <node id="220">
+        <label>apollo::cyber::base::AtomicHashMap&lt; K, V, TableSize, std::enable_if&lt; std::is_integral&lt; K &gt;::value &amp;&amp;(TableSize &amp;(TableSize-1))==0, int &gt;::type &gt;::Entry</label>
+        <link refid="structapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Entry"/>
+      </node>
+      <node id="219">
+        <label>apollo::cyber::base::AtomicHashMap&lt; K, V, TableSize, std::enable_if&lt; std::is_integral&lt; K &gt;::value &amp;&amp;(TableSize &amp;(TableSize-1))==0, int &gt;::type &gt;::Bucket</label>
+        <link refid="classapollo_1_1cyber_1_1base_1_1AtomicHashMap_1_1Bucket"/>
+        <childnode refid="220" relation="usage">
+          <edgelabel>head_</edgelabel>
+        </childnode>
+      </node>
+      <node id="217">
+        <label>apollo::cyber::data::DataNotifier</label>
+        <link refid="classapollo_1_1cyber_1_1data_1_1DataNotifier"/>
+        <childnode refid="218" relation="usage">
+          <edgelabel>notifies_map_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/work/apollo-fork/apollo/cyber/data/data_notifier.h" line="42" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/data/data_notifier.h" bodystart="42" bodyend="57"/>
+    <listofallmembers>
+      <member refid="classapollo_1_1cyber_1_1data_1_1DataNotifier_1a7d08646b3ac8758b2021d24bbc7dabb8" prot="public" virt="non-virtual"><scope>apollo::cyber::data::DataNotifier</scope><name>AddNotifier</name></member>
+      <member refid="classapollo_1_1cyber_1_1data_1_1DataNotifier_1acbb98cccf2b075c3c455b9bc2b16013c" prot="private" virt="non-virtual"><scope>apollo::cyber::data::DataNotifier</scope><name>notifies_map_</name></member>
+      <member refid="classapollo_1_1cyber_1_1data_1_1DataNotifier_1a6e73bd4fadc7ed461f4077ea905e50f6" prot="private" virt="non-virtual"><scope>apollo::cyber::data::DataNotifier</scope><name>notifies_map_mutex_</name></member>
+      <member refid="classapollo_1_1cyber_1_1data_1_1DataNotifier_1a28ae002832e1c7c35a26888b0b5417f9" prot="public" virt="non-virtual"><scope>apollo::cyber::data::DataNotifier</scope><name>Notify</name></member>
+      <member refid="classapollo_1_1cyber_1_1data_1_1DataNotifier_1a32a6a858ae70632d5a6533fb1f16ed2a" prot="public" virt="non-virtual"><scope>apollo::cyber::data::DataNotifier</scope><name>NotifyVector</name></member>
+      <member refid="classapollo_1_1cyber_1_1data_1_1DataNotifier_1ae1b83ee9238a49eb78876ed5da759c8f" prot="public" virt="non-virtual"><scope>apollo::cyber::data::DataNotifier</scope><name>~DataNotifier</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

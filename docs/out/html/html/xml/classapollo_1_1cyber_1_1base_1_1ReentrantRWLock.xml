@@ -1,0 +1,293 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock" kind="class" prot="public">
+    <compoundname>apollo::cyber::base::ReentrantRWLock</compoundname>
+    <includes refid="reentrant__rw__lock_8h" local="no">reentrant_rw_lock.h</includes>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1a44206ff51a59b832c2629a9d04803c1b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class ReadLockGuard&lt; ReentrantRWLock &gt;</definition>
+        <argsstring></argsstring>
+        <name>ReadLockGuard&lt; ReentrantRWLock &gt;</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/reentrant_rw_lock.h" line="132" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/reentrant_rw_lock.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1ae0e3e9a45b2e096b2706f0845459eb01" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class WriteLockGuard&lt; ReentrantRWLock &gt;</definition>
+        <argsstring></argsstring>
+        <name>WriteLockGuard&lt; ReentrantRWLock &gt;</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/reentrant_rw_lock.h" line="132" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/reentrant_rw_lock.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1a1ea3a1cbc79ba78a79fbf965b74d03e5" prot="public" static="yes" mutable="no">
+        <type>const int32_t</type>
+        <definition>const int32_t apollo::cyber::base::ReentrantRWLock::RW_LOCK_FREE</definition>
+        <argsstring></argsstring>
+        <name>RW_LOCK_FREE</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/reentrant_rw_lock.h" line="41" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/reentrant_rw_lock.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1af20aa8c75a72b20ab6863f77e436b04d" prot="public" static="yes" mutable="no">
+        <type>const int32_t</type>
+        <definition>const int32_t apollo::cyber::base::ReentrantRWLock::WRITE_EXCLUSIVE</definition>
+        <argsstring></argsstring>
+        <name>WRITE_EXCLUSIVE</name>
+        <initializer>= -1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/reentrant_rw_lock.h" line="42" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/reentrant_rw_lock.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1ad21e7730e6c0803b54bb17d409de3991" prot="public" static="yes" mutable="no">
+        <type>const uint32_t</type>
+        <definition>const uint32_t apollo::cyber::base::ReentrantRWLock::MAX_RETRY_TIMES</definition>
+        <argsstring></argsstring>
+        <name>MAX_RETRY_TIMES</name>
+        <initializer>= 5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/reentrant_rw_lock.h" line="43" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/reentrant_rw_lock.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1a77a2185c1f0ba187bd45e3fd51dd4425" prot="public" static="yes" mutable="no">
+        <type>const std::thread::id</type>
+        <definition>const std::thread::id apollo::cyber::base::ReentrantRWLock::null_thread</definition>
+        <argsstring></argsstring>
+        <name>null_thread</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/reentrant_rw_lock.h" line="44" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/reentrant_rw_lock.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1ad9ffc19935a572a671f094c612581473" prot="private" static="no" mutable="no">
+        <type>std::thread::id</type>
+        <definition>std::thread::id apollo::cyber::base::ReentrantRWLock::write_thread_id_</definition>
+        <argsstring></argsstring>
+        <name>write_thread_id_</name>
+        <initializer>= {<ref refid="namespaceapollo_1_1cyber_1_1base_1a3aa2d654ab213ffe2d37fd81e951094b" kindref="member">NULL_THREAD_ID</ref>}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/reentrant_rw_lock.h" line="58" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/reentrant_rw_lock.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1a374944a50ed1bb9997bfd1665ae7c3fc" prot="private" static="no" mutable="no">
+        <type>std::atomic&lt; uint32_t &gt;</type>
+        <definition>std::atomic&lt;uint32_t&gt; apollo::cyber::base::ReentrantRWLock::write_lock_wait_num_</definition>
+        <argsstring></argsstring>
+        <name>write_lock_wait_num_</name>
+        <initializer>= {0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/reentrant_rw_lock.h" line="59" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/reentrant_rw_lock.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1a5ca32abf747615ddcd8d52d46ad434db" prot="private" static="no" mutable="no">
+        <type>std::atomic&lt; int32_t &gt;</type>
+        <definition>std::atomic&lt;int32_t&gt; apollo::cyber::base::ReentrantRWLock::lock_num_</definition>
+        <argsstring></argsstring>
+        <name>lock_num_</name>
+        <initializer>= {0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/reentrant_rw_lock.h" line="60" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/reentrant_rw_lock.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1ab986769842dcde3e2dc152ee206bd16a" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool apollo::cyber::base::ReentrantRWLock::write_first_</definition>
+        <argsstring></argsstring>
+        <name>write_first_</name>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/reentrant_rw_lock.h" line="61" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/reentrant_rw_lock.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1afb5cf9b3147e418d7ea56bd95faef907" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::base::ReentrantRWLock::ReentrantRWLock</definition>
+        <argsstring>()</argsstring>
+        <name>ReentrantRWLock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/reentrant_rw_lock.h" line="45" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/reentrant_rw_lock.h" bodystart="45" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1a54c6a03f86a85c28ac1b98affd4c6c77" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::base::ReentrantRWLock::ReentrantRWLock</definition>
+        <argsstring>(bool write_first)</argsstring>
+        <name>ReentrantRWLock</name>
+        <param>
+          <type>bool</type>
+          <declname>write_first</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/reentrant_rw_lock.h" line="46" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/reentrant_rw_lock.h" bodystart="46" bodyend="46"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1a8549e924ba3f76d1fb517f736a358d64" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::base::ReentrantRWLock::ReadLock</definition>
+        <argsstring>()</argsstring>
+        <name>ReadLock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/reentrant_rw_lock.h" line="50" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/reentrant_rw_lock.h" bodystart="64" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1a02f8bf0029382f9887e7e3f9c8c3051a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::base::ReentrantRWLock::WriteLock</definition>
+        <argsstring>()</argsstring>
+        <name>WriteLock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/reentrant_rw_lock.h" line="51" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/reentrant_rw_lock.h" bodystart="101" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1a07699e427dcd60975968712cdfd9bf0b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::base::ReentrantRWLock::ReadUnlock</definition>
+        <argsstring>()</argsstring>
+        <name>ReadUnlock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/reentrant_rw_lock.h" line="53" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/reentrant_rw_lock.h" bodystart="125" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1af8f6e3508b02328dcc081d72639097f4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::base::ReentrantRWLock::WriteUnlock</definition>
+        <argsstring>()</argsstring>
+        <name>WriteUnlock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/reentrant_rw_lock.h" line="54" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/reentrant_rw_lock.h" bodystart="132" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1a9669ea9047b7b86ed6093fbe149fa833" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::base::ReentrantRWLock::ReentrantRWLock</definition>
+        <argsstring>(const ReentrantRWLock &amp;)=delete</argsstring>
+        <name>ReentrantRWLock</name>
+        <param>
+          <type>const <ref refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock" kindref="compound">ReentrantRWLock</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/reentrant_rw_lock.h" line="56" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1ac2862d650cda15e8c6a553ce5fe5ce66" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock" kindref="compound">ReentrantRWLock</ref> &amp;</type>
+        <definition>ReentrantRWLock&amp; apollo::cyber::base::ReentrantRWLock::operator=</definition>
+        <argsstring>(const ReentrantRWLock &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock" kindref="compound">ReentrantRWLock</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/work/apollo-fork/apollo/cyber/base/reentrant_rw_lock.h" line="57" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/work/apollo-fork/apollo/cyber/base/reentrant_rw_lock.h" line="36" column="1" bodyfile="/home/work/apollo-fork/apollo/cyber/base/reentrant_rw_lock.h" bodystart="36" bodyend="62"/>
+    <listofallmembers>
+      <member refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1a5ca32abf747615ddcd8d52d46ad434db" prot="private" virt="non-virtual"><scope>apollo::cyber::base::ReentrantRWLock</scope><name>lock_num_</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1ad21e7730e6c0803b54bb17d409de3991" prot="public" virt="non-virtual"><scope>apollo::cyber::base::ReentrantRWLock</scope><name>MAX_RETRY_TIMES</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1a77a2185c1f0ba187bd45e3fd51dd4425" prot="public" virt="non-virtual"><scope>apollo::cyber::base::ReentrantRWLock</scope><name>null_thread</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1ac2862d650cda15e8c6a553ce5fe5ce66" prot="private" virt="non-virtual"><scope>apollo::cyber::base::ReentrantRWLock</scope><name>operator=</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1a8549e924ba3f76d1fb517f736a358d64" prot="private" virt="non-virtual"><scope>apollo::cyber::base::ReentrantRWLock</scope><name>ReadLock</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1a44206ff51a59b832c2629a9d04803c1b" prot="private" virt="non-virtual"><scope>apollo::cyber::base::ReentrantRWLock</scope><name>ReadLockGuard&lt; ReentrantRWLock &gt;</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1a07699e427dcd60975968712cdfd9bf0b" prot="private" virt="non-virtual"><scope>apollo::cyber::base::ReentrantRWLock</scope><name>ReadUnlock</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1afb5cf9b3147e418d7ea56bd95faef907" prot="public" virt="non-virtual"><scope>apollo::cyber::base::ReentrantRWLock</scope><name>ReentrantRWLock</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1a54c6a03f86a85c28ac1b98affd4c6c77" prot="public" virt="non-virtual"><scope>apollo::cyber::base::ReentrantRWLock</scope><name>ReentrantRWLock</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1a9669ea9047b7b86ed6093fbe149fa833" prot="private" virt="non-virtual"><scope>apollo::cyber::base::ReentrantRWLock</scope><name>ReentrantRWLock</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1a1ea3a1cbc79ba78a79fbf965b74d03e5" prot="public" virt="non-virtual"><scope>apollo::cyber::base::ReentrantRWLock</scope><name>RW_LOCK_FREE</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1af20aa8c75a72b20ab6863f77e436b04d" prot="public" virt="non-virtual"><scope>apollo::cyber::base::ReentrantRWLock</scope><name>WRITE_EXCLUSIVE</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1ab986769842dcde3e2dc152ee206bd16a" prot="private" virt="non-virtual"><scope>apollo::cyber::base::ReentrantRWLock</scope><name>write_first_</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1a374944a50ed1bb9997bfd1665ae7c3fc" prot="private" virt="non-virtual"><scope>apollo::cyber::base::ReentrantRWLock</scope><name>write_lock_wait_num_</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1ad9ffc19935a572a671f094c612581473" prot="private" virt="non-virtual"><scope>apollo::cyber::base::ReentrantRWLock</scope><name>write_thread_id_</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1a02f8bf0029382f9887e7e3f9c8c3051a" prot="private" virt="non-virtual"><scope>apollo::cyber::base::ReentrantRWLock</scope><name>WriteLock</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1ae0e3e9a45b2e096b2706f0845459eb01" prot="private" virt="non-virtual"><scope>apollo::cyber::base::ReentrantRWLock</scope><name>WriteLockGuard&lt; ReentrantRWLock &gt;</name></member>
+      <member refid="classapollo_1_1cyber_1_1base_1_1ReentrantRWLock_1af8f6e3508b02328dcc081d72639097f4" prot="private" virt="non-virtual"><scope>apollo::cyber::base::ReentrantRWLock</scope><name>WriteUnlock</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

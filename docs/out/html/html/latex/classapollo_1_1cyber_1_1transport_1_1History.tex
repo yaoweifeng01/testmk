@@ -1,0 +1,159 @@
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1History}{\section{apollo\-:\-:cyber\-:\-:transport\-:\-:History$<$ Message\-T $>$ Class Template Reference}
+\label{classapollo_1_1cyber_1_1transport_1_1History}\index{apollo\-::cyber\-::transport\-::\-History$<$ Message\-T $>$@{apollo\-::cyber\-::transport\-::\-History$<$ Message\-T $>$}}
+}
+
+
+{\ttfamily \#include $<$history.\-h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structapollo_1_1cyber_1_1transport_1_1History_1_1CachedMessage}{Cached\-Message}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1transport_1_1History_a4c11720b1c1d14eafb9fec5436a0d7c0}{Message\-Ptr} = std\-::shared\-\_\-ptr$<$ Message\-T $>$
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1transport_1_1History_a00fc9a50f3d3f8657c36174ef1b12894}{History} (const \hyperlink{structapollo_1_1cyber_1_1transport_1_1HistoryAttributes}{History\-Attributes} \&attr)
+\item 
+virtual \hyperlink{classapollo_1_1cyber_1_1transport_1_1History_a587dfce1602c9b27c936144d04a95417}{$\sim$\-History} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1transport_1_1History_a47de5fc2f21b1dd17d2a16d530ba613a}{Enable} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1transport_1_1History_a19e4751f0545392b6aeb703c74771318}{Disable} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1transport_1_1History_ad468ac9221d8cd8f647034e302af76f6}{Add} (const \hyperlink{classapollo_1_1cyber_1_1transport_1_1History_a4c11720b1c1d14eafb9fec5436a0d7c0}{Message\-Ptr} \&msg, const \hyperlink{classapollo_1_1cyber_1_1transport_1_1MessageInfo}{Message\-Info} \&msg\-\_\-info)
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1transport_1_1History_a7af63e269651bd78f39ecd80b2d4f548}{Clear} ()
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1transport_1_1History_abd26ece6879ece861fdcbd145a6cb377}{Get\-Cached\-Message} (std\-::vector$<$ \hyperlink{structapollo_1_1cyber_1_1transport_1_1History_1_1CachedMessage}{Cached\-Message} $>$ $\ast$msgs) const 
+\item 
+size\-\_\-t \hyperlink{classapollo_1_1cyber_1_1transport_1_1History_afe153bb3a7b9092f6e5a195b8899d2c7}{Get\-Size} () const 
+\item 
+uint32\-\_\-t \hyperlink{classapollo_1_1cyber_1_1transport_1_1History_ae190a8c127778cfca6d09cf22bbe06dc}{depth} () const 
+\item 
+uint32\-\_\-t \hyperlink{classapollo_1_1cyber_1_1transport_1_1History_a2002e82d861dd993254e04151ec4a97d}{max\-\_\-depth} () const 
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1transport_1_1History_a069e631128a251e29a0c5aa226bf6cf0}{enabled\-\_\-}
+\item 
+uint32\-\_\-t \hyperlink{classapollo_1_1cyber_1_1transport_1_1History_af3e8c06815f54811dbfd8c9ca57a9207}{depth\-\_\-}
+\item 
+uint32\-\_\-t \hyperlink{classapollo_1_1cyber_1_1transport_1_1History_aa9abd9c1faa847d3f1ab18be1915d5a2}{max\-\_\-depth\-\_\-}
+\item 
+std\-::list$<$ \hyperlink{structapollo_1_1cyber_1_1transport_1_1History_1_1CachedMessage}{Cached\-Message} $>$ \hyperlink{classapollo_1_1cyber_1_1transport_1_1History_a6e9ef1bf010e3890b0635309c59fe9ad}{msgs\-\_\-}
+\item 
+std\-::mutex \hyperlink{classapollo_1_1cyber_1_1transport_1_1History_ab0d0a8c6137aad70ce16d99a0bfcf381}{msgs\-\_\-mutex\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1History_a4c11720b1c1d14eafb9fec5436a0d7c0}{\index{apollo\-::cyber\-::transport\-::\-History@{apollo\-::cyber\-::transport\-::\-History}!Message\-Ptr@{Message\-Ptr}}
+\index{Message\-Ptr@{Message\-Ptr}!apollo::cyber::transport::History@{apollo\-::cyber\-::transport\-::\-History}}
+\subsubsection[{Message\-Ptr}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Message\-T $>$ using {\bf apollo\-::cyber\-::transport\-::\-History}$<$ Message\-T $>$\-::{\bf Message\-Ptr} =  std\-::shared\-\_\-ptr$<$Message\-T$>$}}\label{classapollo_1_1cyber_1_1transport_1_1History_a4c11720b1c1d14eafb9fec5436a0d7c0}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1History_a00fc9a50f3d3f8657c36174ef1b12894}{\index{apollo\-::cyber\-::transport\-::\-History@{apollo\-::cyber\-::transport\-::\-History}!History@{History}}
+\index{History@{History}!apollo::cyber::transport::History@{apollo\-::cyber\-::transport\-::\-History}}
+\subsubsection[{History}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Message\-T $>$ {\bf apollo\-::cyber\-::transport\-::\-History}$<$ Message\-T $>$\-::{\bf History} (
+\begin{DoxyParamCaption}
+\item[{const {\bf History\-Attributes} \&}]{attr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}}\label{classapollo_1_1cyber_1_1transport_1_1History_a00fc9a50f3d3f8657c36174ef1b12894}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1History_a587dfce1602c9b27c936144d04a95417}{\index{apollo\-::cyber\-::transport\-::\-History@{apollo\-::cyber\-::transport\-::\-History}!$\sim$\-History@{$\sim$\-History}}
+\index{$\sim$\-History@{$\sim$\-History}!apollo::cyber::transport::History@{apollo\-::cyber\-::transport\-::\-History}}
+\subsubsection[{$\sim$\-History}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Message\-T $>$ {\bf apollo\-::cyber\-::transport\-::\-History}$<$ Message\-T $>$\-::$\sim${\bf History} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1transport_1_1History_a587dfce1602c9b27c936144d04a95417}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1History_ad468ac9221d8cd8f647034e302af76f6}{\index{apollo\-::cyber\-::transport\-::\-History@{apollo\-::cyber\-::transport\-::\-History}!Add@{Add}}
+\index{Add@{Add}!apollo::cyber::transport::History@{apollo\-::cyber\-::transport\-::\-History}}
+\subsubsection[{Add}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Message\-T $>$ void {\bf apollo\-::cyber\-::transport\-::\-History}$<$ Message\-T $>$\-::Add (
+\begin{DoxyParamCaption}
+\item[{const {\bf Message\-Ptr} \&}]{msg, }
+\item[{const {\bf Message\-Info} \&}]{msg\-\_\-info}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1transport_1_1History_ad468ac9221d8cd8f647034e302af76f6}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1History_a7af63e269651bd78f39ecd80b2d4f548}{\index{apollo\-::cyber\-::transport\-::\-History@{apollo\-::cyber\-::transport\-::\-History}!Clear@{Clear}}
+\index{Clear@{Clear}!apollo::cyber::transport::History@{apollo\-::cyber\-::transport\-::\-History}}
+\subsubsection[{Clear}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Message\-T $>$ void {\bf apollo\-::cyber\-::transport\-::\-History}$<$ Message\-T $>$\-::Clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classapollo_1_1cyber_1_1transport_1_1History_a7af63e269651bd78f39ecd80b2d4f548}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1History_ae190a8c127778cfca6d09cf22bbe06dc}{\index{apollo\-::cyber\-::transport\-::\-History@{apollo\-::cyber\-::transport\-::\-History}!depth@{depth}}
+\index{depth@{depth}!apollo::cyber::transport::History@{apollo\-::cyber\-::transport\-::\-History}}
+\subsubsection[{depth}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Message\-T $>$ uint32\-\_\-t {\bf apollo\-::cyber\-::transport\-::\-History}$<$ Message\-T $>$\-::depth (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1transport_1_1History_ae190a8c127778cfca6d09cf22bbe06dc}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1History_a19e4751f0545392b6aeb703c74771318}{\index{apollo\-::cyber\-::transport\-::\-History@{apollo\-::cyber\-::transport\-::\-History}!Disable@{Disable}}
+\index{Disable@{Disable}!apollo::cyber::transport::History@{apollo\-::cyber\-::transport\-::\-History}}
+\subsubsection[{Disable}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Message\-T $>$ void {\bf apollo\-::cyber\-::transport\-::\-History}$<$ Message\-T $>$\-::Disable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1transport_1_1History_a19e4751f0545392b6aeb703c74771318}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1History_a47de5fc2f21b1dd17d2a16d530ba613a}{\index{apollo\-::cyber\-::transport\-::\-History@{apollo\-::cyber\-::transport\-::\-History}!Enable@{Enable}}
+\index{Enable@{Enable}!apollo::cyber::transport::History@{apollo\-::cyber\-::transport\-::\-History}}
+\subsubsection[{Enable}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Message\-T $>$ void {\bf apollo\-::cyber\-::transport\-::\-History}$<$ Message\-T $>$\-::Enable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1transport_1_1History_a47de5fc2f21b1dd17d2a16d530ba613a}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1History_abd26ece6879ece861fdcbd145a6cb377}{\index{apollo\-::cyber\-::transport\-::\-History@{apollo\-::cyber\-::transport\-::\-History}!Get\-Cached\-Message@{Get\-Cached\-Message}}
+\index{Get\-Cached\-Message@{Get\-Cached\-Message}!apollo::cyber::transport::History@{apollo\-::cyber\-::transport\-::\-History}}
+\subsubsection[{Get\-Cached\-Message}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Message\-T $>$ void {\bf apollo\-::cyber\-::transport\-::\-History}$<$ Message\-T $>$\-::Get\-Cached\-Message (
+\begin{DoxyParamCaption}
+\item[{std\-::vector$<$ {\bf Cached\-Message} $>$ $\ast$}]{msgs}
+\end{DoxyParamCaption}
+) const}}\label{classapollo_1_1cyber_1_1transport_1_1History_abd26ece6879ece861fdcbd145a6cb377}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1History_afe153bb3a7b9092f6e5a195b8899d2c7}{\index{apollo\-::cyber\-::transport\-::\-History@{apollo\-::cyber\-::transport\-::\-History}!Get\-Size@{Get\-Size}}
+\index{Get\-Size@{Get\-Size}!apollo::cyber::transport::History@{apollo\-::cyber\-::transport\-::\-History}}
+\subsubsection[{Get\-Size}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Message\-T $>$ size\-\_\-t {\bf apollo\-::cyber\-::transport\-::\-History}$<$ Message\-T $>$\-::Get\-Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classapollo_1_1cyber_1_1transport_1_1History_afe153bb3a7b9092f6e5a195b8899d2c7}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1History_a2002e82d861dd993254e04151ec4a97d}{\index{apollo\-::cyber\-::transport\-::\-History@{apollo\-::cyber\-::transport\-::\-History}!max\-\_\-depth@{max\-\_\-depth}}
+\index{max\-\_\-depth@{max\-\_\-depth}!apollo::cyber::transport::History@{apollo\-::cyber\-::transport\-::\-History}}
+\subsubsection[{max\-\_\-depth}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Message\-T $>$ uint32\-\_\-t {\bf apollo\-::cyber\-::transport\-::\-History}$<$ Message\-T $>$\-::max\-\_\-depth (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1transport_1_1History_a2002e82d861dd993254e04151ec4a97d}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1History_af3e8c06815f54811dbfd8c9ca57a9207}{\index{apollo\-::cyber\-::transport\-::\-History@{apollo\-::cyber\-::transport\-::\-History}!depth\-\_\-@{depth\-\_\-}}
+\index{depth\-\_\-@{depth\-\_\-}!apollo::cyber::transport::History@{apollo\-::cyber\-::transport\-::\-History}}
+\subsubsection[{depth\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Message\-T $>$ uint32\-\_\-t {\bf apollo\-::cyber\-::transport\-::\-History}$<$ Message\-T $>$\-::depth\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1History_af3e8c06815f54811dbfd8c9ca57a9207}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1History_a069e631128a251e29a0c5aa226bf6cf0}{\index{apollo\-::cyber\-::transport\-::\-History@{apollo\-::cyber\-::transport\-::\-History}!enabled\-\_\-@{enabled\-\_\-}}
+\index{enabled\-\_\-@{enabled\-\_\-}!apollo::cyber::transport::History@{apollo\-::cyber\-::transport\-::\-History}}
+\subsubsection[{enabled\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Message\-T $>$ bool {\bf apollo\-::cyber\-::transport\-::\-History}$<$ Message\-T $>$\-::enabled\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1History_a069e631128a251e29a0c5aa226bf6cf0}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1History_aa9abd9c1faa847d3f1ab18be1915d5a2}{\index{apollo\-::cyber\-::transport\-::\-History@{apollo\-::cyber\-::transport\-::\-History}!max\-\_\-depth\-\_\-@{max\-\_\-depth\-\_\-}}
+\index{max\-\_\-depth\-\_\-@{max\-\_\-depth\-\_\-}!apollo::cyber::transport::History@{apollo\-::cyber\-::transport\-::\-History}}
+\subsubsection[{max\-\_\-depth\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Message\-T $>$ uint32\-\_\-t {\bf apollo\-::cyber\-::transport\-::\-History}$<$ Message\-T $>$\-::max\-\_\-depth\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1History_aa9abd9c1faa847d3f1ab18be1915d5a2}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1History_a6e9ef1bf010e3890b0635309c59fe9ad}{\index{apollo\-::cyber\-::transport\-::\-History@{apollo\-::cyber\-::transport\-::\-History}!msgs\-\_\-@{msgs\-\_\-}}
+\index{msgs\-\_\-@{msgs\-\_\-}!apollo::cyber::transport::History@{apollo\-::cyber\-::transport\-::\-History}}
+\subsubsection[{msgs\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Message\-T $>$ std\-::list$<${\bf Cached\-Message}$>$ {\bf apollo\-::cyber\-::transport\-::\-History}$<$ Message\-T $>$\-::msgs\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1History_a6e9ef1bf010e3890b0635309c59fe9ad}
+\hypertarget{classapollo_1_1cyber_1_1transport_1_1History_ab0d0a8c6137aad70ce16d99a0bfcf381}{\index{apollo\-::cyber\-::transport\-::\-History@{apollo\-::cyber\-::transport\-::\-History}!msgs\-\_\-mutex\-\_\-@{msgs\-\_\-mutex\-\_\-}}
+\index{msgs\-\_\-mutex\-\_\-@{msgs\-\_\-mutex\-\_\-}!apollo::cyber::transport::History@{apollo\-::cyber\-::transport\-::\-History}}
+\subsubsection[{msgs\-\_\-mutex\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Message\-T $>$ std\-::mutex {\bf apollo\-::cyber\-::transport\-::\-History}$<$ Message\-T $>$\-::msgs\-\_\-mutex\-\_\-\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1transport_1_1History_ab0d0a8c6137aad70ce16d99a0bfcf381}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+transport/message/\hyperlink{history_8h}{history.\-h}\end{DoxyCompactItemize}

@@ -1,0 +1,317 @@
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse}{\section{apollo\-:\-:cyber\-:\-:service\-\_\-discovery\-:\-:Multi\-Value\-Warehouse Class Reference}
+\label{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse}\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse}}
+}
+
+
+{\ttfamily \#include $<$multi\-\_\-value\-\_\-warehouse.\-h$>$}
+
+Inheritance diagram for apollo\-:\-:cyber\-:\-:service\-\_\-discovery\-:\-:Multi\-Value\-Warehouse\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_ac7825b1126cd0ce4193fb1c6de2e1159}{Role\-Map} = std\-::unordered\-\_\-multimap$<$ uint64\-\_\-t, \hyperlink{namespaceapollo_1_1cyber_1_1service__discovery_a47c65bbb4b41d9ae41bfbd33271df525}{Role\-Ptr} $>$
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_ab137a895871b0a5e9742bb38fea6db7f}{Multi\-Value\-Warehouse} ()
+\item 
+virtual \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_ae1e7e62f8d412dcc5ec93edc94c6fe2f}{$\sim$\-Multi\-Value\-Warehouse} ()
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_accd3db47b675921fd1ac27c224467069}{Add} (uint64\-\_\-t key, const \hyperlink{namespaceapollo_1_1cyber_1_1service__discovery_a47c65bbb4b41d9ae41bfbd33271df525}{Role\-Ptr} \&role, bool ignore\-\_\-if\-\_\-exist=true) override
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_a78118000cb24fb6899cb4dc2f46023de}{Clear} () override
+\item 
+std\-::size\-\_\-t \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_a7fb59c1ab79ba957b0da337ec4488d49}{Size} () override
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_ac96d1a2faf4b62343c565b282d03f036}{Remove} (uint64\-\_\-t key) override
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_ac61b78aa52c1b7115d19ca6a5a419f0b}{Remove} (uint64\-\_\-t key, const \hyperlink{namespaceapollo_1_1cyber_1_1service__discovery_a47c65bbb4b41d9ae41bfbd33271df525}{Role\-Ptr} \&role) override
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_a50032c7ce957cf1d2508b43b6fcf73e2}{Remove} (const proto\-::\-Role\-Attributes \&target\-\_\-attr) override
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_a0d4f03663bf91e70c7b44570085a989b}{Search} (uint64\-\_\-t key) override
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_a6381d4cd1a9b4290ca5b2fafd7238226}{Search} (uint64\-\_\-t key, \hyperlink{namespaceapollo_1_1cyber_1_1service__discovery_a47c65bbb4b41d9ae41bfbd33271df525}{Role\-Ptr} $\ast$first\-\_\-matched\-\_\-role) override
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_a709b52d620cf7b32e47555fc507d79db}{Search} (uint64\-\_\-t key, proto\-::\-Role\-Attributes $\ast$first\-\_\-matched\-\_\-role\-\_\-attr) override
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_aa5330ff3c6788887b1373e6878f1816f}{Search} (uint64\-\_\-t key, std\-::vector$<$ \hyperlink{namespaceapollo_1_1cyber_1_1service__discovery_a47c65bbb4b41d9ae41bfbd33271df525}{Role\-Ptr} $>$ $\ast$matched\-\_\-roles) override
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_acc3ed44f34a5b8736b8a2f3c3ff5593b}{Search} (uint64\-\_\-t key, std\-::vector$<$ proto\-::\-Role\-Attributes $>$ $\ast$matched\-\_\-roles\-\_\-attr) override
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_af5dca21f644c0f2d1d10f5dd68996823}{Search} (const proto\-::\-Role\-Attributes \&target\-\_\-attr) override
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_a1fdf37b96214172a0a9a0f988a6278ec}{Search} (const proto\-::\-Role\-Attributes \&target\-\_\-attr, \hyperlink{namespaceapollo_1_1cyber_1_1service__discovery_a47c65bbb4b41d9ae41bfbd33271df525}{Role\-Ptr} $\ast$first\-\_\-matched) override
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_a4221f9d02cc798048b0273504a9311f8}{Search} (const proto\-::\-Role\-Attributes \&target\-\_\-attr, proto\-::\-Role\-Attributes $\ast$first\-\_\-matched\-\_\-role\-\_\-attr) override
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_acb403c3473dbdf772bd98ed3dc9fcb81}{Search} (const proto\-::\-Role\-Attributes \&target\-\_\-attr, std\-::vector$<$ \hyperlink{namespaceapollo_1_1cyber_1_1service__discovery_a47c65bbb4b41d9ae41bfbd33271df525}{Role\-Ptr} $>$ $\ast$matched\-\_\-roles) override
+\item 
+bool \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_ad82b63e4466fb527f021620c282ed371}{Search} (const proto\-::\-Role\-Attributes \&target\-\_\-attr, std\-::vector$<$ proto\-::\-Role\-Attributes $>$ $\ast$matched\-\_\-roles\-\_\-attr) override
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_a986c2ba47627ee7abfddd86425412eb1}{Get\-All\-Roles} (std\-::vector$<$ \hyperlink{namespaceapollo_1_1cyber_1_1service__discovery_a47c65bbb4b41d9ae41bfbd33271df525}{Role\-Ptr} $>$ $\ast$roles) override
+\item 
+void \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_aa1b70c69f72cd975095b7624a6b83e3f}{Get\-All\-Roles} (std\-::vector$<$ proto\-::\-Role\-Attributes $>$ $\ast$roles\-\_\-attr) override
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_ac7825b1126cd0ce4193fb1c6de2e1159}{Role\-Map} \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_a8c064f1d708e8c0b905454df8efbf00c}{roles\-\_\-}
+\item 
+\hyperlink{classapollo_1_1cyber_1_1base_1_1AtomicRWLock}{base\-::\-Atomic\-R\-W\-Lock} \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_a0b5aad2758df1db3e170337b9775abb6}{rw\-\_\-lock\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_ac7825b1126cd0ce4193fb1c6de2e1159}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse}!Role\-Map@{Role\-Map}}
+\index{Role\-Map@{Role\-Map}!apollo::cyber::service_discovery::MultiValueWarehouse@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse}}
+\subsubsection[{Role\-Map}]{\setlength{\rightskip}{0pt plus 5cm}using {\bf apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse\-::\-Role\-Map} =  std\-::unordered\-\_\-multimap$<$uint64\-\_\-t, {\bf Role\-Ptr}$>$}}\label{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_ac7825b1126cd0ce4193fb1c6de2e1159}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_ab137a895871b0a5e9742bb38fea6db7f}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse}!Multi\-Value\-Warehouse@{Multi\-Value\-Warehouse}}
+\index{Multi\-Value\-Warehouse@{Multi\-Value\-Warehouse}!apollo::cyber::service_discovery::MultiValueWarehouse@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse}}
+\subsubsection[{Multi\-Value\-Warehouse}]{\setlength{\rightskip}{0pt plus 5cm}apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse\-::\-Multi\-Value\-Warehouse (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_ab137a895871b0a5e9742bb38fea6db7f}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_ae1e7e62f8d412dcc5ec93edc94c6fe2f}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse}!$\sim$\-Multi\-Value\-Warehouse@{$\sim$\-Multi\-Value\-Warehouse}}
+\index{$\sim$\-Multi\-Value\-Warehouse@{$\sim$\-Multi\-Value\-Warehouse}!apollo::cyber::service_discovery::MultiValueWarehouse@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse}}
+\subsubsection[{$\sim$\-Multi\-Value\-Warehouse}]{\setlength{\rightskip}{0pt plus 5cm}virtual apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse\-::$\sim$\-Multi\-Value\-Warehouse (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_ae1e7e62f8d412dcc5ec93edc94c6fe2f}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_accd3db47b675921fd1ac27c224467069}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse}!Add@{Add}}
+\index{Add@{Add}!apollo::cyber::service_discovery::MultiValueWarehouse@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse}}
+\subsubsection[{Add}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse\-::\-Add (
+\begin{DoxyParamCaption}
+\item[{uint64\-\_\-t}]{key, }
+\item[{const {\bf Role\-Ptr} \&}]{role, }
+\item[{bool}]{ignore\-\_\-if\-\_\-exist = {\ttfamily true}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_accd3db47b675921fd1ac27c224467069}
+
+
+Implements \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1WarehouseBase_adf9fe2ed8875839b635f701f480504cf}{apollo\-::cyber\-::service\-\_\-discovery\-::\-Warehouse\-Base}.
+
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_a78118000cb24fb6899cb4dc2f46023de}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse}!Clear@{Clear}}
+\index{Clear@{Clear}!apollo::cyber::service_discovery::MultiValueWarehouse@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse}}
+\subsubsection[{Clear}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse\-::\-Clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_a78118000cb24fb6899cb4dc2f46023de}
+
+
+Implements \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1WarehouseBase_a9cecd6e55fc85b08b47eafe9e1205d4d}{apollo\-::cyber\-::service\-\_\-discovery\-::\-Warehouse\-Base}.
+
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_a986c2ba47627ee7abfddd86425412eb1}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse}!Get\-All\-Roles@{Get\-All\-Roles}}
+\index{Get\-All\-Roles@{Get\-All\-Roles}!apollo::cyber::service_discovery::MultiValueWarehouse@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse}}
+\subsubsection[{Get\-All\-Roles}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse\-::\-Get\-All\-Roles (
+\begin{DoxyParamCaption}
+\item[{std\-::vector$<$ {\bf Role\-Ptr} $>$ $\ast$}]{roles}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_a986c2ba47627ee7abfddd86425412eb1}
+
+
+Implements \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1WarehouseBase_a7c1565f4a852da30e331d6354b369ebb}{apollo\-::cyber\-::service\-\_\-discovery\-::\-Warehouse\-Base}.
+
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_aa1b70c69f72cd975095b7624a6b83e3f}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse}!Get\-All\-Roles@{Get\-All\-Roles}}
+\index{Get\-All\-Roles@{Get\-All\-Roles}!apollo::cyber::service_discovery::MultiValueWarehouse@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse}}
+\subsubsection[{Get\-All\-Roles}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse\-::\-Get\-All\-Roles (
+\begin{DoxyParamCaption}
+\item[{std\-::vector$<$ proto\-::\-Role\-Attributes $>$ $\ast$}]{roles\-\_\-attr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_aa1b70c69f72cd975095b7624a6b83e3f}
+
+
+Implements \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1WarehouseBase_a95343b4852d3913c9764f41f0be0fb9e}{apollo\-::cyber\-::service\-\_\-discovery\-::\-Warehouse\-Base}.
+
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_ac96d1a2faf4b62343c565b282d03f036}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse}!Remove@{Remove}}
+\index{Remove@{Remove}!apollo::cyber::service_discovery::MultiValueWarehouse@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse}}
+\subsubsection[{Remove}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse\-::\-Remove (
+\begin{DoxyParamCaption}
+\item[{uint64\-\_\-t}]{key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_ac96d1a2faf4b62343c565b282d03f036}
+
+
+Implements \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1WarehouseBase_a27db5c1c3556b2ac5648dbb732043192}{apollo\-::cyber\-::service\-\_\-discovery\-::\-Warehouse\-Base}.
+
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_ac61b78aa52c1b7115d19ca6a5a419f0b}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse}!Remove@{Remove}}
+\index{Remove@{Remove}!apollo::cyber::service_discovery::MultiValueWarehouse@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse}}
+\subsubsection[{Remove}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse\-::\-Remove (
+\begin{DoxyParamCaption}
+\item[{uint64\-\_\-t}]{key, }
+\item[{const {\bf Role\-Ptr} \&}]{role}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_ac61b78aa52c1b7115d19ca6a5a419f0b}
+
+
+Implements \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1WarehouseBase_a03312166f883df1eb41afa6bb7cf6287}{apollo\-::cyber\-::service\-\_\-discovery\-::\-Warehouse\-Base}.
+
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_a50032c7ce957cf1d2508b43b6fcf73e2}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse}!Remove@{Remove}}
+\index{Remove@{Remove}!apollo::cyber::service_discovery::MultiValueWarehouse@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse}}
+\subsubsection[{Remove}]{\setlength{\rightskip}{0pt plus 5cm}void apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse\-::\-Remove (
+\begin{DoxyParamCaption}
+\item[{const proto\-::\-Role\-Attributes \&}]{target\-\_\-attr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_a50032c7ce957cf1d2508b43b6fcf73e2}
+
+
+Implements \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1WarehouseBase_a2b1a87fa8806f212f5502e2d6fe2f30b}{apollo\-::cyber\-::service\-\_\-discovery\-::\-Warehouse\-Base}.
+
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_a0d4f03663bf91e70c7b44570085a989b}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse}!Search@{Search}}
+\index{Search@{Search}!apollo::cyber::service_discovery::MultiValueWarehouse@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse}}
+\subsubsection[{Search}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse\-::\-Search (
+\begin{DoxyParamCaption}
+\item[{uint64\-\_\-t}]{key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_a0d4f03663bf91e70c7b44570085a989b}
+
+
+Implements \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1WarehouseBase_a6c7a223edc8b3b02666c318c9992be02}{apollo\-::cyber\-::service\-\_\-discovery\-::\-Warehouse\-Base}.
+
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_a6381d4cd1a9b4290ca5b2fafd7238226}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse}!Search@{Search}}
+\index{Search@{Search}!apollo::cyber::service_discovery::MultiValueWarehouse@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse}}
+\subsubsection[{Search}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse\-::\-Search (
+\begin{DoxyParamCaption}
+\item[{uint64\-\_\-t}]{key, }
+\item[{{\bf Role\-Ptr} $\ast$}]{first\-\_\-matched\-\_\-role}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_a6381d4cd1a9b4290ca5b2fafd7238226}
+
+
+Implements \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1WarehouseBase_a2294a1bae82fcb65a1f854a1e3d8f677}{apollo\-::cyber\-::service\-\_\-discovery\-::\-Warehouse\-Base}.
+
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_a709b52d620cf7b32e47555fc507d79db}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse}!Search@{Search}}
+\index{Search@{Search}!apollo::cyber::service_discovery::MultiValueWarehouse@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse}}
+\subsubsection[{Search}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse\-::\-Search (
+\begin{DoxyParamCaption}
+\item[{uint64\-\_\-t}]{key, }
+\item[{proto\-::\-Role\-Attributes $\ast$}]{first\-\_\-matched\-\_\-role\-\_\-attr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_a709b52d620cf7b32e47555fc507d79db}
+
+
+Implements \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1WarehouseBase_aa6b471913855b73127521857a4b2dde5}{apollo\-::cyber\-::service\-\_\-discovery\-::\-Warehouse\-Base}.
+
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_aa5330ff3c6788887b1373e6878f1816f}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse}!Search@{Search}}
+\index{Search@{Search}!apollo::cyber::service_discovery::MultiValueWarehouse@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse}}
+\subsubsection[{Search}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse\-::\-Search (
+\begin{DoxyParamCaption}
+\item[{uint64\-\_\-t}]{key, }
+\item[{std\-::vector$<$ {\bf Role\-Ptr} $>$ $\ast$}]{matched\-\_\-roles}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_aa5330ff3c6788887b1373e6878f1816f}
+
+
+Implements \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1WarehouseBase_a6d5bf47e2d4a438851f7b56c8ecff8c0}{apollo\-::cyber\-::service\-\_\-discovery\-::\-Warehouse\-Base}.
+
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_acc3ed44f34a5b8736b8a2f3c3ff5593b}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse}!Search@{Search}}
+\index{Search@{Search}!apollo::cyber::service_discovery::MultiValueWarehouse@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse}}
+\subsubsection[{Search}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse\-::\-Search (
+\begin{DoxyParamCaption}
+\item[{uint64\-\_\-t}]{key, }
+\item[{std\-::vector$<$ proto\-::\-Role\-Attributes $>$ $\ast$}]{matched\-\_\-roles\-\_\-attr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_acc3ed44f34a5b8736b8a2f3c3ff5593b}
+
+
+Implements \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1WarehouseBase_aad706abb3dfb23ff1c5d10e88fa91940}{apollo\-::cyber\-::service\-\_\-discovery\-::\-Warehouse\-Base}.
+
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_af5dca21f644c0f2d1d10f5dd68996823}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse}!Search@{Search}}
+\index{Search@{Search}!apollo::cyber::service_discovery::MultiValueWarehouse@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse}}
+\subsubsection[{Search}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse\-::\-Search (
+\begin{DoxyParamCaption}
+\item[{const proto\-::\-Role\-Attributes \&}]{target\-\_\-attr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_af5dca21f644c0f2d1d10f5dd68996823}
+
+
+Implements \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1WarehouseBase_a634b5bca3df82e1e86720a36b0bb6acc}{apollo\-::cyber\-::service\-\_\-discovery\-::\-Warehouse\-Base}.
+
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_a1fdf37b96214172a0a9a0f988a6278ec}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse}!Search@{Search}}
+\index{Search@{Search}!apollo::cyber::service_discovery::MultiValueWarehouse@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse}}
+\subsubsection[{Search}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse\-::\-Search (
+\begin{DoxyParamCaption}
+\item[{const proto\-::\-Role\-Attributes \&}]{target\-\_\-attr, }
+\item[{{\bf Role\-Ptr} $\ast$}]{first\-\_\-matched}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_a1fdf37b96214172a0a9a0f988a6278ec}
+
+
+Implements \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1WarehouseBase_a9735a6a80026cd83aa140885ece16233}{apollo\-::cyber\-::service\-\_\-discovery\-::\-Warehouse\-Base}.
+
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_a4221f9d02cc798048b0273504a9311f8}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse}!Search@{Search}}
+\index{Search@{Search}!apollo::cyber::service_discovery::MultiValueWarehouse@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse}}
+\subsubsection[{Search}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse\-::\-Search (
+\begin{DoxyParamCaption}
+\item[{const proto\-::\-Role\-Attributes \&}]{target\-\_\-attr, }
+\item[{proto\-::\-Role\-Attributes $\ast$}]{first\-\_\-matched\-\_\-role\-\_\-attr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_a4221f9d02cc798048b0273504a9311f8}
+
+
+Implements \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1WarehouseBase_a6911eb3141b838250dd281a321a690de}{apollo\-::cyber\-::service\-\_\-discovery\-::\-Warehouse\-Base}.
+
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_acb403c3473dbdf772bd98ed3dc9fcb81}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse}!Search@{Search}}
+\index{Search@{Search}!apollo::cyber::service_discovery::MultiValueWarehouse@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse}}
+\subsubsection[{Search}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse\-::\-Search (
+\begin{DoxyParamCaption}
+\item[{const proto\-::\-Role\-Attributes \&}]{target\-\_\-attr, }
+\item[{std\-::vector$<$ {\bf Role\-Ptr} $>$ $\ast$}]{matched\-\_\-roles}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_acb403c3473dbdf772bd98ed3dc9fcb81}
+
+
+Implements \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1WarehouseBase_a5ad083b13db1921e613a2c6303d0881f}{apollo\-::cyber\-::service\-\_\-discovery\-::\-Warehouse\-Base}.
+
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_ad82b63e4466fb527f021620c282ed371}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse}!Search@{Search}}
+\index{Search@{Search}!apollo::cyber::service_discovery::MultiValueWarehouse@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse}}
+\subsubsection[{Search}]{\setlength{\rightskip}{0pt plus 5cm}bool apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse\-::\-Search (
+\begin{DoxyParamCaption}
+\item[{const proto\-::\-Role\-Attributes \&}]{target\-\_\-attr, }
+\item[{std\-::vector$<$ proto\-::\-Role\-Attributes $>$ $\ast$}]{matched\-\_\-roles\-\_\-attr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_ad82b63e4466fb527f021620c282ed371}
+
+
+Implements \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1WarehouseBase_a06a4eeebfafee845cac5b19a72d2590a}{apollo\-::cyber\-::service\-\_\-discovery\-::\-Warehouse\-Base}.
+
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_a7fb59c1ab79ba957b0da337ec4488d49}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse}!Size@{Size}}
+\index{Size@{Size}!apollo::cyber::service_discovery::MultiValueWarehouse@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse}}
+\subsubsection[{Size}]{\setlength{\rightskip}{0pt plus 5cm}std\-::size\-\_\-t apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse\-::\-Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_a7fb59c1ab79ba957b0da337ec4488d49}
+
+
+Implements \hyperlink{classapollo_1_1cyber_1_1service__discovery_1_1WarehouseBase_ac7af8481d1770471effacbf7b7dd0b64}{apollo\-::cyber\-::service\-\_\-discovery\-::\-Warehouse\-Base}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_a8c064f1d708e8c0b905454df8efbf00c}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse}!roles\-\_\-@{roles\-\_\-}}
+\index{roles\-\_\-@{roles\-\_\-}!apollo::cyber::service_discovery::MultiValueWarehouse@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse}}
+\subsubsection[{roles\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Role\-Map} apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse\-::roles\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_a8c064f1d708e8c0b905454df8efbf00c}
+\hypertarget{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_a0b5aad2758df1db3e170337b9775abb6}{\index{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse}!rw\-\_\-lock\-\_\-@{rw\-\_\-lock\-\_\-}}
+\index{rw\-\_\-lock\-\_\-@{rw\-\_\-lock\-\_\-}!apollo::cyber::service_discovery::MultiValueWarehouse@{apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse}}
+\subsubsection[{rw\-\_\-lock\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf base\-::\-Atomic\-R\-W\-Lock} apollo\-::cyber\-::service\-\_\-discovery\-::\-Multi\-Value\-Warehouse\-::rw\-\_\-lock\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classapollo_1_1cyber_1_1service__discovery_1_1MultiValueWarehouse_a0b5aad2758df1db3e170337b9775abb6}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+service\-\_\-discovery/container/\hyperlink{multi__value__warehouse_8h}{multi\-\_\-value\-\_\-warehouse.\-h}\end{DoxyCompactItemize}
